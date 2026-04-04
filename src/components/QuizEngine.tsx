@@ -2,36 +2,87 @@ import React, { useState } from "react";
 import { calculateMatch } from "../lib/matching";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
+interface Constituency {
+  id: string;
+  name: string;
+}
+
 interface Props {
   questions: QuizQuestion[];
   candidates: Candidate[];
+  constituencies: Constituency[];
   basePath: string;
 }
 
-export default function QuizEngine({ questions, candidates, basePath }: Props) {
+export default function QuizEngine({ questions, candidates, constituencies, basePath }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
+  const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return new URLSearchParams(window.location.search).get("constituency") || "";
+    }
+    return "";
+  });
 
   const answeredCount = Object.keys(answers).length;
 
-  const ranked = candidates
+  const filteredCandidates = selectedConstituency
+    ? candidates.filter((c) => c.constituency === selectedConstituency)
+    : [];
+
+  const ranked = filteredCandidates
     .map((c) => ({
       ...c,
-      match: calculateMatch(answers, c.positions),
+      match: calculateMatch(answers, c.positions!),
     }))
     .sort((a, b) => b.match.percentage - a.match.percentage);
+
+  const selectedConstituencyName = constituencies.find((c) => c.id === selectedConstituency)?.name;
+
+  if (!selectedConstituency) {
+    return (
+      <div className="py-3.5">
+        <h2 className="font-heading text-lg font-black mb-1">Vote Compass</h2>
+        <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+          Select your constituency to get started.
+        </p>
+        <div className="flex flex-col gap-2">
+          {constituencies.map((c) => (
+            <button
+              key={c.id}
+              onClick={() => setSelectedConstituency(c.id)}
+              className="text-left bg-white rounded-lg p-3.5 border border-votescot-border hover:border-votescot-gold transition-colors cursor-pointer font-body text-sm font-bold"
+            >
+              {c.name}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (showResults) {
     return (
       <div className="py-3.5">
         <div className="flex items-center justify-between mb-3 flex-wrap gap-1.5">
-          <h2 className="font-heading text-lg font-black m-0">Your Matches</h2>
-          <button
-            onClick={() => { setShowResults(false); setAnswers({}); }}
-            className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
-          >
-            Reset quiz
-          </button>
+          <div>
+            <h2 className="font-heading text-lg font-black m-0">Your Matches</h2>
+            <div className="font-body text-[11px] text-gray-400">{selectedConstituencyName}</div>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => { setSelectedConstituency(""); setShowResults(false); setAnswers({}); }}
+              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+            >
+              Change constituency
+            </button>
+            <button
+              onClick={() => { setShowResults(false); setAnswers({}); }}
+              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+            >
+              Reset quiz
+            </button>
+          </div>
         </div>
         <p className="font-body text-xs text-gray-400 mb-4">
           Based on {answeredCount} of {questions.length} questions answered. The more you answer, the better the match.
@@ -129,7 +180,15 @@ export default function QuizEngine({ questions, candidates, basePath }: Props) {
 
   return (
     <div className="py-3.5">
-      <h2 className="font-heading text-lg font-black mb-1">Vote Compass</h2>
+      <div className="flex items-center justify-between mb-1 flex-wrap gap-1.5">
+        <h2 className="font-heading text-lg font-black m-0">Vote Compass — {selectedConstituencyName}</h2>
+        <button
+          onClick={() => { setSelectedConstituency(""); setAnswers({}); }}
+          className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+        >
+          Change constituency
+        </button>
+      </div>
       <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
         Answer 8 questions about what matters to you. We'll match you to the candidate closest to your
         views. No data is stored — this runs entirely in your browser.

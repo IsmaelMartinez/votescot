@@ -3,26 +3,61 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import CandidateCard from "../../components/CandidateCard.astro";
-import { loadCandidates } from "../../lib/data";
+import { loadCandidates, loadConstituencies } from "../../lib/data";
 
-const candidates = loadCandidates();
+const constituencies = loadConstituencies();
+const allCandidates = loadCandidates();
 const base = import.meta.env.BASE_URL;
+
+const grouped = constituencies.map((c) => {
+  const candidates = allCandidates.filter((cand) => cand.constituency === c.id);
+  const quizCandidates = candidates.filter((cand) => cand.quizCandidate);
+  const otherCandidates = candidates.filter((cand) => !cand.quizCandidate);
+  return { constituency: c, quizCandidates, otherCandidates };
+});
 ---
 
-<Base title="Candidates" description="All candidates standing in Edinburgh Central for the 2026 Scottish Parliament election">
+<Base title="Candidates" description="All candidates standing in the 2026 Scottish Parliament election">
   <Header slot="header" currentTab="candidates" />
 
   <div class="py-3.5">
-    <h2 class="font-heading text-lg font-black mb-1">Edinburgh Central Candidates</h2>
+    <h2 class="font-heading text-lg font-black mb-1">Candidates</h2>
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
-      5 candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
+      Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {candidates.map((c) => (
-        <CandidateCard candidate={c} basePath={base} />
-      ))}
-    </div>
+    {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
+      <div class="mb-6">
+        <h3 class="font-heading text-base font-black mb-0.5">{constituency.name}</h3>
+        <p class="font-body text-[11px] text-gray-400 leading-snug mb-3">{constituency.context}</p>
+
+        {quizCandidates.length > 0 && (
+          <div class="mb-3">
+            <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+              Quiz candidates
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {quizCandidates.map((c) => (
+                <CandidateCard candidate={c} basePath={base} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {otherCandidates.length > 0 && (
+          <div>
+            <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+              Other candidates
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {otherCandidates.map((c) => (
+                <CandidateCard candidate={c} basePath={base} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    ))}
   </div>
 
   <Footer slot="footer" />

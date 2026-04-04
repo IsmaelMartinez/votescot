@@ -1,11 +1,9 @@
 ---
 interface Props {
-  constituency?: string;
-  postcode?: string;
   currentTab?: string;
 }
 
-const { constituency = "Edinburgh Central", postcode = "EH12 5NR", currentTab } = Astro.props;
+const { currentTab } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const tabs = [
@@ -21,18 +19,13 @@ const tabs = [
     <div class="flex items-center gap-2">
       <span class="text-lg">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
       <div>
-        <h1 class="text-lg font-heading font-black tracking-tight m-0">Scottish Election Helper</h1>
+        <a href={base} class="no-underline text-inherit">
+          <h1 class="text-lg font-heading font-black tracking-tight m-0">VoteScot</h1>
+        </a>
         <div class="font-body text-[9.5px] text-votescot-gold tracking-widest uppercase font-bold">
-          Find your candidate &bull; 7 May 2026
+          Scottish Parliament Election &bull; 7 May 2026
         </div>
       </div>
-    </div>
-    <div class="bg-white/[0.08] rounded-md px-3 py-1.5 mt-2 font-body text-[11.5px] leading-snug text-gray-300">
-      <strong class="text-votescot-gold">{constituency}</strong> — Verified for {postcode} (Roseburn)
-      <br />
-      <span class="text-gray-500 text-[10.5px]">
-        Three-way marginal: SNP (incumbent) vs Green (projected to win) vs Labour &bull; 5 candidates confirmed
-      </span>
     </div>
   </div>
 </header>

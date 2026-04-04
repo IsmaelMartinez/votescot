@@ -3,10 +3,10 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PostcodeLookup from "../components/PostcodeLookup.tsx";
-import { loadPostcodeSectors, loadConstituency } from "../lib/data";
+import { loadConstituencies } from "../lib/data";
 
-const postcodeSectors = loadPostcodeSectors();
-const constituency = loadConstituency("edinburgh-central");
+const constituencies = loadConstituencies();
+const knownConstituencies = constituencies.map((c) => c.id);
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -21,7 +21,7 @@ const base = import.meta.env.BASE_URL;
       No endorsements. No editorial scores. Just your values matched to their positions.
     </p>
 
-    <PostcodeLookup client:load postcodeSectors={postcodeSectors} basePath={base} />
+    <PostcodeLookup client:load knownConstituencies={knownConstituencies} basePath={base} />
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
       <a href={`${base}quiz`} class="bg-white rounded-lg p-4 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
@@ -36,6 +36,15 @@ const base = import.meta.env.BASE_URL;
         <div class="font-heading font-bold text-base mb-1">Research Hub</div>
         <div class="font-body text-xs text-gray-500">Projections, fiscal analysis, and voter info.</div>
       </a>
+    </div>
+
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {constituencies.map((c) => (
+        <a href={`${base}candidates?constituency=${c.id}`} class="bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
+          <div class="font-heading font-bold text-sm mb-0.5">{c.name}</div>
+          <div class="font-body text-[11px] text-gray-500 leading-snug">{c.context}</div>
+        </a>
+      ))}
     </div>
 
     <div class="mt-6 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">

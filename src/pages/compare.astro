@@ -3,14 +3,15 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CandidateComparison from "../components/CandidateComparison.tsx";
-import { loadCandidates, loadQuestions } from "../lib/data";
+import { loadCandidates, loadQuestions, loadConstituencies } from "../lib/data";
 
 const candidates = loadCandidates();
 const questions = loadQuestions();
+const constituencies = loadConstituencies();
 ---
 
-<Base title="Compare Candidates" description="Compare all Edinburgh Central candidates side-by-side on every issue">
+<Base title="Compare Candidates" description="Compare candidates side-by-side on every issue">
   <Header slot="header" currentTab="compare" />
-  <CandidateComparison client:load candidates={candidates} questions={questions} />
+  <CandidateComparison client:load candidates={candidates} questions={questions} constituencies={constituencies} />
   <Footer slot="footer" />
 </Base>
