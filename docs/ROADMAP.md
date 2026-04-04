@@ -60,7 +60,7 @@ Make projection methodology transparent. Currently hardcoded numbers with no sou
 
 ~~Add `robots.txt` and `sitemap.xml`.~~ Done. `@astrojs/sitemap` generates sitemap-index.xml at build time. robots.txt in public/.
 
-Consider making the map the landing page, or at least more prominent. Analysis done — recommended Option A (map as hero, replacing the 73-constituency text grid). Awaiting decision.
+~~Map on the landing page.~~ Done. The 73-constituency text grid replaced with the interactive ConstituencyMap. Postcode lookup also added to the Quiz and Candidates pages via a shared `PostcodeInput` component and `usePostcodeLookup` hook — voters can now enter a postcode anywhere to auto-find their constituency.
 
 ### Medium priority — accessibility and polish
 
