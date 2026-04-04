@@ -1,0 +1,18 @@
+id: "ahmed"
+name: "Irshad Ahmed"
+party: "Scottish Labour"
+partyShort: "Labour"
+color: "#DC241F"
+accent: "#8B0000"
+constituency: "edinburgh-north-western"
+isIncumbent: false
+quizCandidate: false
+bio: "Labour candidate for Edinburgh North Western. Selected in October 2025. Previously stood for election as an SNP and Alba candidate before joining Scottish Labour."
+
+highlights:
+  - "Selected as Labour candidate October 2025"
+  - "Previously stood for SNP and Alba before joining Labour"
+
+sources:
+  - url: "https://scottishlabour.org.uk/"
+    type: "party_website"

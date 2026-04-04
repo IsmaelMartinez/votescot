@@ -1,0 +1,20 @@
+id: "jardine"
+name: "Lyn Jardine"
+party: "Scottish National Party"
+partyShort: "SNP"
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: "edinburgh-north-western"
+isIncumbent: false
+quizCandidate: false
+bio: "East Lothian SNP group leader and councillor since 2022. Rose through ranks to become leader of the opposition on East Lothian Council. First-time Holyrood candidate."
+
+highlights:
+  - "East Lothian SNP group leader"
+  - "Councillor since 2022"
+  - "First-time Holyrood candidate"
+
+sources:
+  - url: "https://www.snp.org/snp-announce-candidates-for-2026-scottish-parliament-elections/"
+    type: "party_website"

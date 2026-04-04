@@ -1,0 +1,17 @@
+id: "cairns"
+name: "Rachel Cairns"
+party: "Scottish Conservatives"
+partyShort: "Tory"
+color: "#0087DC"
+accent: "#005EA5"
+constituency: "edinburgh-north-western"
+isIncumbent: false
+quizCandidate: false
+bio: "Scottish Conservative candidate for Edinburgh North Western."
+
+highlights:
+  - "Conservative candidate for Edinburgh North Western"
+
+sources:
+  - url: "https://www.scottishconservatives.com/2026-scottish-parliament-candidates/"
+    type: "party_website"

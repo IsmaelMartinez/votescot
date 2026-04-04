@@ -1,0 +1,15 @@
+id: "neill"
+name: "Gary Neill"
+party: "Reform UK"
+partyShort: "Reform"
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: "edinburgh-central"
+isIncumbent: false
+quizCandidate: false
+bio: "Reform UK candidate for Edinburgh Central."
+
+highlights:
+  - "Reform UK candidate"
+
+sources: []

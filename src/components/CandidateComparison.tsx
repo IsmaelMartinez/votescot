@@ -7,6 +7,7 @@ interface Props {
 }
 
 export default function CandidateComparison({ candidates, questions }: Props) {
+  const quizCandidates = candidates.filter((c) => c.quizCandidate);
   return (
     <div className="py-3.5">
       <h2 className="font-heading text-base font-black mb-1">Side-by-Side Comparison</h2>
@@ -21,7 +22,7 @@ export default function CandidateComparison({ candidates, questions }: Props) {
               {q.area}
             </div>
             <div className="flex flex-col gap-1">
-              {candidates.map((cand) => (
+              {quizCandidates.map((cand) => (
                 <div
                   key={cand.id}
                   className="bg-white rounded p-2 border border-votescot-border flex gap-2 items-start"

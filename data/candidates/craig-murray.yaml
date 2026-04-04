@@ -1,0 +1,17 @@
+id: "murray"
+name: "Craig Murray"
+party: "Alliance to Liberate Scotland"
+partyShort: "Alliance"
+color: "#2c5f2d"
+accent: "#1a3a1b"
+constituency: "edinburgh-central"
+isIncumbent: false
+quizCandidate: false
+bio: "Alliance to Liberate Scotland candidate for Edinburgh Central. Former British Ambassador to Uzbekistan. Pro-independence campaigner and author."
+
+highlights:
+  - "Former British Ambassador to Uzbekistan"
+  - "Pro-independence campaigner and author"
+  - "Alliance to Liberate Scotland candidate"
+
+sources: []

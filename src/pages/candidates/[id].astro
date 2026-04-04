@@ -33,22 +33,26 @@ const questions = loadQuestions();
       {candidate.bio}
     </div>
 
-    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2">
-      Policy Positions
-    </h3>
-    <div class="flex flex-col gap-1.5">
-      {Object.entries(candidate.stances).map(([key, stance]) => {
-        const q = questions.find((q) => q.id === key);
-        return (
-          <div class="bg-white rounded-md p-2.5 border border-votescot-border">
-            <div class="font-body text-[10px] font-bold uppercase tracking-widest mb-0.5" style={`color: ${candidate.accent || candidate.color}`}>
-              {q?.area || key}
-            </div>
-            <div class="font-body text-[13px] text-gray-700 leading-snug">{stance}</div>
-          </div>
-        );
-      })}
-    </div>
+    {candidate.stances && (
+      <>
+        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2">
+          Policy Positions
+        </h3>
+        <div class="flex flex-col gap-1.5">
+          {Object.entries(candidate.stances).map(([key, stance]) => {
+            const q = questions.find((q) => q.id === key);
+            return (
+              <div class="bg-white rounded-md p-2.5 border border-votescot-border">
+                <div class="font-body text-[10px] font-bold uppercase tracking-widest mb-0.5" style={`color: ${candidate.accent || candidate.color}`}>
+                  {q?.area || key}
+                </div>
+                <div class="font-body text-[13px] text-gray-700 leading-snug">{stance}</div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    )}
 
     <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
       Track Record

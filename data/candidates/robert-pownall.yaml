@@ -1,0 +1,15 @@
+id: "pownall"
+name: "Robert Neill Pownall"
+party: "Independent"
+partyShort: "Ind"
+color: "#888888"
+accent: "#555555"
+constituency: "edinburgh-central"
+isIncumbent: false
+quizCandidate: false
+bio: "Independent candidate for Edinburgh Central."
+
+highlights:
+  - "Independent candidate"
+
+sources: []

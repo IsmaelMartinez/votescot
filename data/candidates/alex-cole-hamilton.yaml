@@ -1,0 +1,45 @@
+id: "cole-hamilton"
+name: "Alex Cole-Hamilton"
+party: "Scottish Liberal Democrats"
+partyShort: "Lib Dem"
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: "edinburgh-north-western"
+isIncumbent: true
+quizCandidate: true
+bio: "Leader of the Scottish Liberal Democrats since 2021. MSP for Edinburgh Western since 2016 — won with the highest vote ever for a single candidate in a Scottish Parliament election. Standing in the redrawn Edinburgh North Western. Campaigns on mental health, children's services, and NHS recovery."
+
+positions:
+  independence: 0
+  nhs: 1
+  housing: 1
+  climate: 1
+  tax: 0
+  economy: 1
+  education: 1
+  equality: 1
+
+stances:
+  independence: "Oppose independence. Support federalism — Scotland within a reformed UK structure."
+  nhs: "Mental health specialists in every GP surgery. £500m care rescue package. Rolling 10-year NHS workforce plan."
+  housing: "Build affordable housing. Protect greenbelt. Balance development with environment."
+  climate: "Net zero by 2045. New national parks. Sewage transparency reform. Rail decarbonisation."
+  tax: "Personal allowance increases. No Scottish rate rises. Modest, targeted approach."
+  economy: "Support SMEs. Budget negotiations track record (secured £178m rates relief). Pragmatic centrism."
+  education: "Mental health counsellor in every school. Play-based learning. Education bounce-back plan."
+  equality: "Liberal approach. Individual rights focus. Moderate progressive position."
+
+highlights:
+  - "Leader of the Scottish Liberal Democrats"
+  - "Won Edinburgh Western 2016 and 2021 with record-breaking vote counts"
+  - "Campaigned on children's mental health and NHS workforce"
+  - "Ruled out serving in any SNP-led administration"
+  - "Frontrunner in Edinburgh North Western"
+
+sources:
+  - url: "https://www.alexcolehamilton.org.uk/"
+    type: "personal_website"
+  - url: "https://www.theyworkforyou.com/msp/25500/alex_cole-hamilton"
+    type: "voting_record"
+  - url: "https://www.scotlibdems.org.uk/about-us/our-team/alex-cole-hamilton"
+    type: "party_website"

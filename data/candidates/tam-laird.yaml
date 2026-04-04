@@ -1,0 +1,16 @@
+id: "laird"
+name: "Tam Laird"
+party: "Scottish Libertarian Party"
+partyShort: "Libertarian"
+color: "#f5d442"
+accent: "#b89e30"
+textColor: "#333"
+constituency: "edinburgh-central"
+isIncumbent: false
+quizCandidate: false
+bio: "Scottish Libertarian Party candidate for Edinburgh Central."
+
+highlights:
+  - "Scottish Libertarian Party candidate"
+
+sources: []
