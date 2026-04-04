@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
 interface Constituency {
@@ -26,6 +26,14 @@ export default function CandidateComparison({ candidates, questions, constituenc
 
   const selectedConstituencyName = constituencies.find((c) => c.id === selectedConstituency)?.name;
 
+  const [constituencyFilter, setConstituencyFilter] = useState("");
+
+  const filteredConstituencies = useMemo(() => {
+    const q = constituencyFilter.toLowerCase().trim();
+    if (!q) return constituencies;
+    return constituencies.filter((c) => c.name.toLowerCase().includes(q));
+  }, [constituencies, constituencyFilter]);
+
   if (!selectedConstituency) {
     return (
       <div className="py-3.5">
@@ -33,8 +41,15 @@ export default function CandidateComparison({ candidates, questions, constituenc
         <p className="font-body text-[11.5px] text-gray-400 mb-3">
           Select your constituency to compare candidates.
         </p>
+        <input
+          type="text"
+          value={constituencyFilter}
+          onChange={(e) => setConstituencyFilter(e.target.value)}
+          placeholder="Filter constituencies…"
+          className="w-full bg-white border border-votescot-border rounded-lg px-3.5 py-2.5 font-body text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-votescot-gold transition-colors mb-3"
+        />
         <div className="flex flex-col gap-2">
-          {constituencies.map((c) => (
+          {filteredConstituencies.map((c) => (
             <button
               key={c.id}
               onClick={() => setSelectedConstituency(c.id)}

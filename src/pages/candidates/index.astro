@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import CandidateCard from "../../components/CandidateCard.astro";
+import CandidatesSearch from "../../components/CandidatesSearch";
 import { loadCandidates, loadConstituencies } from "../../lib/data";
 
 const constituencies = loadConstituencies();
@@ -15,6 +16,19 @@ const grouped = constituencies.map((c) => {
   const otherCandidates = candidates.filter((cand) => !cand.quizCandidate);
   return { constituency: c, quizCandidates, otherCandidates };
 });
+
+const searchItems = [
+  ...constituencies.map((c) => ({
+    id: `constituency:${c.id}`,
+    label: c.name,
+    sublabel: `${allCandidates.filter((cand) => cand.constituency === c.id).length} candidates`,
+  })),
+  ...allCandidates.map((c) => ({
+    id: `candidate:${c.id}`,
+    label: c.name,
+    sublabel: `${c.partyShort} — ${constituencies.find((con) => con.id === c.constituency)?.name || c.constituency}`,
+  })),
+];
 ---
 
 <Base title="Candidates" description="All candidates standing in the 2026 Scottish Parliament election">
@@ -26,8 +40,10 @@ const grouped = constituencies.map((c) => {
       Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
     </p>
 
+    <CandidatesSearch client:load items={searchItems} basePath={base} />
+
     {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
-      <div class="mb-6">
+      <div class="mb-6" id={constituency.id}>
         <h3 class="font-heading text-base font-black mb-0.5">{constituency.name}</h3>
         <p class="font-body text-[11px] text-gray-400 leading-snug mb-3">{constituency.context}</p>
 
