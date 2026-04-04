@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { calculateMatch } from "../lib/matching";
+import PostcodeInput from "./PostcodeInput";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
 interface Constituency {
@@ -11,10 +12,11 @@ interface Props {
   questions: QuizQuestion[];
   candidates: Candidate[];
   constituencies: Constituency[];
+  knownConstituencies: string[];
   basePath: string;
 }
 
-export default function QuizEngine({ questions, candidates, constituencies, basePath }: Props) {
+export default function QuizEngine({ questions, candidates, constituencies, knownConstituencies, basePath }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
   const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
@@ -54,6 +56,14 @@ export default function QuizEngine({ questions, candidates, constituencies, base
         <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
           Select your constituency to get started.
         </p>
+
+        <PostcodeInput
+          knownConstituencies={knownConstituencies}
+          label="Enter your postcode to find your constituency automatically"
+          onResolved={(id) => setSelectedConstituency(id)}
+        />
+
+        <p className="font-body text-xs text-gray-500 mb-2">Or browse constituencies:</p>
         <input
           type="text"
           value={constituencyFilter}

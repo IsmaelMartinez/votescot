@@ -40,7 +40,7 @@ const searchItems = [
       Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
     </p>
 
-    <CandidatesSearch client:load items={searchItems} basePath={base} />
+    <CandidatesSearch client:load items={searchItems} knownConstituencies={constituencies.map((c) => c.id)} basePath={base} />
 
     {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
       <div class="mb-6" id={constituency.id}>
