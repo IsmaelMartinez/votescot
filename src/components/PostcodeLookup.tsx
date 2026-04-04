@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { slugifyConstituency } from "../lib/slugify";
 
 interface Props {
   knownConstituencies: string[];
@@ -52,7 +53,7 @@ export default function PostcodeLookup({ knownConstituencies, basePath }: Props)
       }
 
       // Convert constituency name to our ID format
-      const constituencyId = constituency.name.toLowerCase().replace(/\s+/g, "-");
+      const constituencyId = slugifyConstituency(constituency.name);
       const covered = knownConstituencies.includes(constituencyId);
 
       setResult({

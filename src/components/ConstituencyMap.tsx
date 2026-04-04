@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { slugifyConstituency } from "../lib/slugify";
 import {
   MapContainer,
   TileLayer,
@@ -176,12 +177,7 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
       }
 
       const name = constituency.name;
-      const slug = name
-        .toLowerCase()
-        .replace(/, /g, "-")
-        .replace(/,/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/'/g, "");
+      const slug = slugifyConstituency(name);
       const covered = knownConstituencies.includes(slug);
 
       setPostcodeResult({ found: true, constituencyName: name, slug, covered });
