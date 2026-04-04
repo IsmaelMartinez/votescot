@@ -1,77 +1,99 @@
 # VoteScot Roadmap
 
-Last updated: 3 April 2026
+Last updated: 4 April 2026 (evening)
 
 ## What's live now
 
-The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 439 candidates for the 7 May 2026 election.
+The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 434 candidates for the 7 May 2026 election.
 
-### Core features (complete)
+### Core features
 
-The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 371 candidates from 7 major parties have quiz data based on party-level positions. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown.
+The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 368 candidates from 7 major parties have quiz data based on party-level positions. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
 
-All candidate profiles are accessible with policy stances, track record highlights, and source links. The side-by-side comparison view shows all quiz-ready candidates in a constituency grouped by policy area.
+Every candidate has a profile page with policy stances, track record highlights (where available), and source links to WhoCanIVoteFor, party websites, and TheyWorkForYou. The side-by-side comparison view lets voters compare all quiz-ready candidates in their constituency grouped by policy area.
 
-The interactive map displays all 73 constituency boundaries on a Leaflet map with postcode search via the MapIt API using 2026 SPCF boundary data. Clicking a constituency navigates to its filtered candidate page.
+Search and filter is available on the candidates page (search by candidate name or constituency), the quiz page (filter constituencies), and the comparison page.
 
-The postcode lookup on the landing page calls the MapIt API at runtime to identify the voter's constituency from the 2026 boundaries and links directly to their candidates.
+### Map and postcode lookup
 
-The research hub links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForYou, WhoCanIVoteFor, Electoral Commission, and other resources.
+The interactive map displays all 73 constituency boundaries on a Leaflet map using 2026 SPCF boundary data from MapIt. Postcode search zooms to the voter's constituency and links to their filtered candidate page. The landing page also has a standalone postcode lookup.
 
-An optional AI deep dive (BYOK with Anthropic API key) provides per-candidate analysis with constituency context, hidden behind a `<details>` element.
+### Polling trends
 
-### Data pipeline (configured, not yet active)
+A polling trends page shows national constituency and regional vote polls scraped from the Wikipedia polling tracker (127 polls). SVG line chart with party colours, recent polls table, and constituency/regional toggle. Daily sync via GitHub Actions at 08:00 UTC.
 
-Daily GitHub Actions cron jobs are configured for candidate sync (06:00 UTC from Democracy Club API) and manifesto parsing (07:00 UTC via Gemini). The candidate sync auto-commits additions and opens PRs for withdrawn candidates. The manifesto sync discovers PDFs from party websites, parses them through Gemini, and applies structured positions to candidates.
+### Constituency projections
+
+Each constituency page shows a projection panel with estimated vote shares and "will win / could win / might win" classifications. 73 constituencies have projection data. Specific overrides exist for well-known competitive seats (Edinburgh Central, Edinburgh North Western, Glasgow seats, Lib Dem strongholds, Conservative-held seats). Others use a default based on national polling.
+
+### Research hub and about page
+
+Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForYou, WhoCanIVoteFor, Electoral Commission, voter registration, and polling station finder. An About/Methodology page explains the scoring system, data sources, party-default approach, and privacy policy.
+
+### Data pipeline
+
+Daily GitHub Actions cron jobs are configured for candidate sync (06:00 UTC from Democracy Club API), manifesto parsing (07:00 UTC via Gemini), and polling sync (08:00 UTC from Wikipedia). The candidate sync auto-commits additions and opens PRs for withdrawn candidates. Repo Butler runs at 02:00 UTC for health analysis.
 
 The `GEMINI_API_KEY` GitHub Actions secret needs to be added to activate manifesto sync.
 
-### Infrastructure (complete)
+### Infrastructure
 
-GitHub Pages deployment via GitHub Actions triggers on every push to main. CI runs tests and builds on pull requests. JSON Schema validation catches malformed YAML data. 18 vitest tests cover the matching algorithm, party utilities, candidate transforms, and data validation.
+GitHub Pages deployment via GitHub Actions on every push to main. CI on pull requests. JSON Schema validation. 18 vitest tests. Repo Butler for health dashboards.
 
-## What needs doing before 7 May
+## What needs doing before 7 May (33 days)
 
-### High priority
+### Critical — data accuracy
 
-Slug consistency between PostcodeLookup and ConstituencyMap needs fixing. Both components derive constituency slugs from MapIt constituency names client-side, but use different logic. A shared utility or lookup table would prevent mismatches that could send voters to wrong pages.
+Enrich high-profile candidates with real bios. John Swinney (First Minister), Anas Sarwar (Labour leader), and other party leaders currently show generic template bios like "SNP candidate for Perthshire North." These need substantive biographical information — voters deserve to know who these people are.
 
-Font sizes throughout the site are too small for accessibility. Multiple components use 9-10px text which is below WCAG recommendations. Particularly important for older voters. Minimum should be 12px.
+Fix incumbent status for sitting MSPs. The sync script hardcodes `isIncumbent: false` for everyone. Current MSPs standing again should be marked as incumbents. Cross-reference with the Scottish Parliament members API at `data.parliament.scot/api/members`.
 
-ARIA roles are missing on quiz radio buttons. The custom button elements in QuizEngine need `role="radio"`, `aria-checked`, and `role="radiogroup"` for screen reader support.
+Differentiate Conservative and Reform positions. Both currently score 0 on every issue, making them indistinguishable in the quiz. The Conservatives have specific manifesto positions on NHS, education, and housing that differ from Reform's "scrap everything" approach.
 
-Add `robots.txt` and `sitemap.xml` for SEO. With 518 pages that should be indexed before the election, search engines need to discover them.
+Make projection methodology transparent. Currently hardcoded numbers with no source attribution. Each projection should cite its basis (Ballot Box Scotland notionals, national polling swing, or whatever the source is).
 
-The resources page still has Edinburgh-specific links (WhoCanIVoteFor Edinburgh Central, Edinburgh Council election info). These should be generalised or made dynamic per constituency.
+### High priority — usability
 
-### Medium priority
+Add a "How to Vote" guide. Voters need to know they get TWO ballot papers (constituency and regional list), how AMS works, what the regional list vote means, and where their polling station is. This is essential for first-time voters and 16-17 year olds.
 
-The 1.8MB GeoJSON file for the constituency map could be compressed. TopoJSON would reduce it to roughly 500-600KB. Island constituencies (Na h-Eileanan an Iar, Argyll) dominate the file size.
+Fix slug consistency between PostcodeLookup and ConstituencyMap. Both derive constituency slugs client-side using different logic. A mismatch sends voters to the wrong page.
 
-Retry logic for `fetchBuffer` and `fetchHtml` in the data pipeline. Currently only `fetchJson` has exponential backoff. If a party website is slow during manifesto discovery, the sync fails silently for that party.
+Add `robots.txt` and `sitemap.xml`. 515 pages need to be indexed before the election.
 
-The manifesto sync workflow pushes AI-generated positions directly to main. Since these determine quiz match percentages, it should create a PR for review instead.
+Consider making the map the landing page, or at least more prominent. The current landing page is text-heavy. The map is a more intuitive entry point — click your area, see your candidates.
 
-Build performance: `loadCandidates()` reads and parses all 439 YAML files on every call. With multiple pages calling it, the build parses YAML tens of thousands of times. A module-level cache would speed up builds.
+### Medium priority — accessibility and polish
 
-Consider self-hosting Google Fonts (Crimson Pro, Source Sans 3) to eliminate the render-blocking external request and reduce FOIT.
+Bump font sizes to minimum 12px. Multiple components still use 9-10px text which is below WCAG recommendations.
+
+Add ARIA roles to quiz radio buttons (`role="radio"`, `aria-checked`, `role="radiogroup"`).
+
+Compress the 1.8MB GeoJSON boundary file. TopoJSON would cut it to ~500KB.
+
+Add retry logic to `fetchBuffer` and `fetchHtml` in the pipeline.
+
+Cache `loadCandidates()` at module level to speed up builds (currently parses 434 YAML files on every call).
+
+Self-host Google Fonts to eliminate render-blocking external requests.
 
 ### Low priority
 
-The `textColor` property exists in candidate data but is never used in rendering code. SNP's yellow party dot on white backgrounds has poor contrast.
+Add React error boundaries around interactive components.
 
-The matching algorithm's 3-point scale (0, 1, 2) means all candidates from the same party get identical match scores. This is correct but may confuse voters expecting differentiation within parties. The results page could explain this ("Candidates from the same party share their party's manifesto positions").
+Add tests for slug derivation logic, React components, and the manifesto parsing pipeline.
 
-No tests exist for React components, the `data.ts` loading functions, or the manifesto parsing pipeline. Priority testing targets: slug derivation logic (correctness matters for routing) and edge cases in `calculateMatch`.
+The `textColor` property exists in candidate data but is never used in rendering — SNP's yellow dots have poor contrast on white.
+
+Explain in quiz results that candidates from the same party share identical match scores (party-level positions).
 
 ## After the election
 
-Multi-election support: extend to Scottish local elections (2027), UK general elections, and Welsh Senedd. The architecture supports this — constituency and candidate data are already per-election.
+Multi-election support for Scottish local elections (2027), UK general elections, and Welsh Senedd.
 
-Historical comparison: how did your MSP actually vote vs what they promised? Cross-reference TheyWorkForYou voting records with manifesto positions.
+Historical comparison: how did your MSP actually vote vs what they promised?
 
-Community contributions: moderated submissions of candidate policy positions with source links. Decap CMS (Git-backed) could provide a web editor for non-technical contributors.
+Community contributions via Decap CMS for moderated candidate position submissions.
 
-Custom domain: register `votescot.scot` or `kenyercandidate.scot` and configure GitHub Pages custom domain.
+Custom domain: `votescot.scot` or `kenyercandidate.scot`.
 
-Plausible analytics: privacy-first, cookie-free analytics to understand usage patterns without tracking individuals.
+Plausible analytics for privacy-first usage tracking.
