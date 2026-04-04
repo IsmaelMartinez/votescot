@@ -25,4 +25,8 @@ describe("slugifyConstituency", () => {
       "glasgow-cathcart-and-pollok"
     );
   });
+
+  it("strips apostrophes", () => {
+    expect(slugifyConstituency("King's Park")).toBe("kings-park");
+  });
 });
