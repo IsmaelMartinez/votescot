@@ -5,7 +5,7 @@ positions:
   nhs: 1
   housing: 1
   climate: 1
-  tax: 0
+  tax: 1
   economy: 1
   education: 1
   equality: 1
@@ -14,7 +14,7 @@ stances:
   nhs: Mental health specialists in every GP surgery. £500m care rescue package. Rolling 10-year NHS workforce plan to end staffing crisis.
   housing: Build affordable housing while protecting greenbelt. Balance development needs with environmental quality of communities.
   climate: Net zero by 2045. New national parks to protect nature. Sewage transparency reform. Decarbonise rail and expand public transport.
-  tax: Increase personal tax allowances so low earners pay less. No increases to Scottish income tax rates. Targeted, modest approach.
+  tax: Maintain current Scottish income tax rates. Increase personal allowances so low earners pay less.
   economy: Support small and medium-sized businesses. Track record of negotiating budget concessions (e.g., £178m business rates relief). Pragmatic centrist economics.
   education: Mental health counsellor in every school. Expand play-based learning in early years. Education recovery plan post-pandemic.
   equality: Liberal approach to individual rights. Moderate progressive position. Support for LGBT+ protections within a rights-based framework.

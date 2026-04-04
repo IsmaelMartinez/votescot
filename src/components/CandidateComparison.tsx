@@ -77,6 +77,9 @@ export default function CandidateComparison({ candidates, questions, constituenc
           Change constituency
         </button>
       </div>
+      <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
+        Policy positions shown are based on party platforms. Individual candidates may hold different views.
+      </div>
       <p className="font-body text-[11.5px] text-gray-400 mb-3">
         What each candidate actually stands for on each issue
       </p>

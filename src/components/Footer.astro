@@ -1,5 +1,9 @@
-<footer class="max-w-[920px] mx-auto w-full px-3 py-3.5 mt-3.5 border-t border-gray-300 text-center font-body text-[9.5px] text-gray-400 leading-snug">
+---
+const base = import.meta.env.BASE_URL;
+---
+<footer class="max-w-[920px] mx-auto w-full px-3 py-3.5 mt-3.5 border-t border-gray-300 text-center font-body text-xs text-gray-400 leading-snug">
   <div>All 73 Scottish Parliament constituencies &bull; Data from public sources as of April 2026</div>
-  <div>Quiz matches are based on stated policy positions. Open source — contributions welcome.</div>
-  <div class="mt-0.5 font-bold">This tool does not endorse any candidate or party</div>
+  <div>Quiz matches are based on stated policy positions. <a href="https://github.com/ismaelmartinez/votescot" class="underline hover:text-gray-600">Open source on GitHub</a> — contributions welcome.</div>
+  <div class="mt-0.5 font-black text-gray-600">This tool does not endorse any candidate or party</div>
+  <div class="mt-0.5"><a href={`${base}about`} class="underline hover:text-gray-600">About &amp; Methodology</a></div>
 </footer>

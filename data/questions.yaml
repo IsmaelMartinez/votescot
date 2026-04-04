@@ -23,7 +23,7 @@ questions:
 
   - id: "housing"
     area: "Housing"
-    question: "How should Edinburgh's housing crisis be tackled?"
+    question: "How should Scotland's housing crisis be tackled?"
     options:
       - label: "Stronger rent controls and tenant protections"
         value: 2

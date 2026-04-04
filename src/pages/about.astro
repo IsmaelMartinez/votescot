@@ -1,0 +1,105 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="About & Methodology" description="How VoteScot works, where the data comes from, and how to report errors">
+  <Header slot="header" currentTab="about" />
+
+  <div class="py-3.5 max-w-[680px]">
+    <h2 class="font-heading text-lg font-black mb-1">About VoteScot</h2>
+    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+      VoteScot is an open-source, non-partisan vote compass for the 2026 Scottish Parliament election.
+      It was built as a community project to help voters understand where candidates stand on policy issues.
+      The source code is available on <a href="https://github.com/ismaelmartinez/votescot" class="text-blue-600 underline">GitHub</a> and contributions are welcome.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How the Quiz Works</h3>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      The quiz covers 8 policy areas: Scotland's Future, NHS &amp; Health, Housing, Climate &amp; Transport,
+      Tax &amp; Public Spending, Economy &amp; Jobs, Education &amp; Childcare, and Social Issues.
+      Each question has three options scored on a 0–2 scale. When you answer, the tool compares your
+      responses to each candidate's recorded positions and calculates a match percentage based on the
+      difference across all answered questions. The more questions you answer, the more accurate the match.
+      No data is stored — the entire quiz runs in your browser only.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where the Data Comes From</h3>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      Candidate details (names, parties, constituencies) are sourced from
+      <a href="https://democracyclub.org.uk/" class="text-blue-600 underline">Democracy Club</a> via their public API.
+      Party policy positions are taken from official party platforms and manifestos.
+      Opinion poll data is aggregated from Wikipedia's
+      <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" class="text-blue-600 underline">polling tracker</a>,
+      which compiles British Polling Council member surveys.
+      Constituency boundaries use data from
+      <a href="https://mapit.mysociety.org/" class="text-blue-600 underline">MapIt by mySociety</a>.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Important Caveat: Party Defaults</h3>
+    <div class="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
+      Policy positions shown are based on party platforms. Individual candidates may hold different views.
+    </div>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      For the majority of candidates, policy positions and stances are derived from their party's published platform
+      rather than from the individual candidate's own statements. This is because most candidates — especially those
+      running in seats where their party has little chance of winning — have not published detailed policy positions of
+      their own. Where a candidate has an empty "Track Record" section on their profile page, this is a reliable
+      indicator that their positions are party defaults and have not been individually verified.
+      You should treat these positions as a guide to what the party stands for, not necessarily what the individual
+      candidate personally believes. Always check the candidate's own website and election leaflets where possible.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How to Report Errors</h3>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      If you find a mistake in a candidate's details, a party position that seems wrong, or any other error,
+      please <a href="https://github.com/ismaelmartinez/votescot/issues" class="text-blue-600 underline">open an issue on GitHub</a>.
+      You can also submit a pull request with a correction — data lives in the <code class="bg-gray-100 px-1 rounded text-[11px]">data/</code> directory as YAML files.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Privacy</h3>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      VoteScot does not collect, store, or transmit any personal data. There are no cookies, no analytics,
+      and no tracking of any kind. The quiz runs entirely in your browser — your answers never leave your device.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">License</h3>
+    <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+      VoteScot is released under the <a href="https://github.com/ismaelmartinez/votescot/blob/main/LICENSE" class="text-blue-600 underline">MIT licence</a>.
+      You are free to fork, adapt, and reuse the code and methodology for other elections.
+    </p>
+
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Data Sources</h3>
+    <div class="flex flex-col gap-1.5">
+      <a href="https://democracyclub.org.uk/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+        <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+          <div class="font-body text-[13px] font-bold text-blue-600">Democracy Club</div>
+          <div class="font-body text-[11.5px] text-gray-500">Candidate names, parties, and constituency data</div>
+        </div>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+        <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+          <div class="font-body text-[13px] font-bold text-blue-600">Wikipedia — Polling Tracker</div>
+          <div class="font-body text-[11.5px] text-gray-500">Opinion poll data aggregated from BPC member surveys</div>
+        </div>
+      </a>
+      <a href="https://mapit.mysociety.org/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+        <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+          <div class="font-body text-[13px] font-bold text-blue-600">MapIt by mySociety</div>
+          <div class="font-body text-[11.5px] text-gray-500">Constituency boundary data</div>
+        </div>
+      </a>
+      <a href="https://github.com/ismaelmartinez/votescot" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+        <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+          <div class="font-body text-[13px] font-bold text-blue-600">VoteScot on GitHub</div>
+          <div class="font-body text-[11.5px] text-gray-500">Full source code, data files, and issue tracker</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</Base>

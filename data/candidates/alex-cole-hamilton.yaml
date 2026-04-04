@@ -7,7 +7,10 @@ accent: "#B8860B"
 constituency: edinburgh-north-western
 isIncumbent: false
 quizCandidate: true
-bio: Leader of the Scottish Liberal Democrats since 2021. MSP for Edinburgh Western since 2016 — won with the highest vote ever for a single candidate in a Scottish Parliament election. Standing in the redrawn Edinburgh North Western. Campaigns on mental health, children's services, and NHS recovery.
+bio: Leader of the Scottish Liberal Democrats since 2021. MSP for Edinburgh
+  Western since 2016 — won with the highest vote ever for a single candidate in
+  a Scottish Parliament election. Standing in the redrawn Edinburgh North
+  Western. Campaigns on mental health, children's services, and NHS recovery.
 highlights:
   - Leader of the Scottish Liberal Democrats
   - Won Edinburgh Western 2016 and 2021 with record-breaking vote counts
@@ -26,16 +29,23 @@ positions:
   nhs: 1
   housing: 1
   climate: 1
-  tax: 0
+  tax: 1
   economy: 1
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Support federalism — Scotland within a reformed UK structure.
-  nhs: Mental health specialists in every GP surgery. £500m care rescue package. Rolling 10-year NHS workforce plan.
-  housing: Build affordable housing. Protect greenbelt. Balance development with environment.
-  climate: Net zero by 2045. New national parks. Sewage transparency reform. Rail decarbonisation.
-  tax: Personal allowance increases. No Scottish rate rises. Modest, targeted approach.
-  economy: Support SMEs. Budget negotiations track record (secured £178m rates relief). Pragmatic centrism.
-  education: Mental health counsellor in every school. Play-based learning. Education bounce-back plan.
+  independence: Oppose independence. Support federalism — Scotland within a
+    reformed UK structure.
+  nhs: Mental health specialists in every GP surgery. £500m care rescue package.
+    Rolling 10-year NHS workforce plan.
+  housing: Build affordable housing. Protect greenbelt. Balance development with
+    environment.
+  climate: Net zero by 2045. New national parks. Sewage transparency reform. Rail
+    decarbonisation.
+  tax: Maintain current Scottish income tax rates. Increase personal allowances so
+    low earners pay less.
+  economy: Support SMEs. Budget negotiations track record (secured £178m rates
+    relief). Pragmatic centrism.
+  education: Mental health counsellor in every school. Play-based learning.
+    Education bounce-back plan.
   equality: Liberal approach. Individual rights focus. Moderate progressive position.
