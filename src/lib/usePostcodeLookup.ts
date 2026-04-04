@@ -15,10 +15,10 @@ export function usePostcodeLookup(knownConstituencies: string[]) {
 
   async function lookup() {
     const clean = postcode.replace(/\s/g, "").toUpperCase();
+    setResult(null);
     if (clean.length < 5) return;
 
     setLoading(true);
-    setResult(null);
 
     try {
       const response = await fetch(
@@ -27,32 +27,18 @@ export function usePostcodeLookup(knownConstituencies: string[]) {
       if (!response.ok) throw new Error("Postcode not found");
 
       const data = await response.json();
+      const areas = Object.values(data.areas) as any[];
+      const area = areas.find((a) => a.type === "SPCF") || areas.find((a) => a.type === "SPC");
 
-      let constituency: { name: string; id: string } | null = null;
-      for (const area of Object.values(data.areas) as any[]) {
-        if (area.type === "SPCF") {
-          constituency = { name: area.name, id: area.codes?.gss || "" };
-          break;
-        }
-      }
-      if (!constituency) {
-        for (const area of Object.values(data.areas) as any[]) {
-          if (area.type === "SPC") {
-            constituency = { name: area.name, id: area.codes?.gss || "" };
-            break;
-          }
-        }
-      }
-
-      if (!constituency) {
+      if (!area) {
         setResult({ found: false });
         return;
       }
 
-      const constituencyId = slugifyConstituency(constituency.name);
+      const constituencyId = slugifyConstituency(area.name);
       const covered = knownConstituencies.includes(constituencyId);
 
-      setResult({ found: true, constituencyId, constituencyName: constituency.name, covered });
+      setResult({ found: true, constituencyId, constituencyName: area.name, covered });
     } catch {
       setResult({ found: false });
     } finally {

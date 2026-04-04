@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { calculateMatch } from "../lib/matching";
-import { usePostcodeLookup } from "../lib/usePostcodeLookup";
+import PostcodeInput from "./PostcodeInput";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
 interface Constituency {
@@ -42,14 +42,6 @@ export default function QuizEngine({ questions, candidates, constituencies, know
   const selectedConstituencyName = constituencies.find((c) => c.id === selectedConstituency)?.name;
 
   const [constituencyFilter, setConstituencyFilter] = useState("");
-  const pc = usePostcodeLookup(knownConstituencies);
-
-  // Auto-select constituency when postcode resolves
-  React.useEffect(() => {
-    if (pc.result?.found && pc.result.covered && pc.result.constituencyId) {
-      setSelectedConstituency(pc.result.constituencyId);
-    }
-  }, [pc.result]);
 
   const filteredConstituencies = useMemo(() => {
     const q = constituencyFilter.toLowerCase().trim();
@@ -65,38 +57,11 @@ export default function QuizEngine({ questions, candidates, constituencies, know
           Select your constituency to get started.
         </p>
 
-        <div className="mb-4">
-          <p className="font-body text-xs text-gray-500 mb-2">
-            Enter your postcode to find your constituency automatically
-          </p>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={pc.postcode}
-              onChange={(e) => { pc.setPostcode(e.target.value); }}
-              onKeyDown={(e) => e.key === "Enter" && pc.lookup()}
-              placeholder="e.g. EH1 1BB"
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md font-body text-sm focus:outline-none focus:border-votescot-gold"
-            />
-            <button
-              onClick={pc.lookup}
-              disabled={pc.loading}
-              className="px-4 py-2 bg-votescot-dark text-white rounded-md font-body text-sm font-bold hover:bg-gray-800 transition-colors disabled:opacity-50"
-            >
-              {pc.loading ? "..." : "Find"}
-            </button>
-          </div>
-          {pc.result?.found && !pc.result.covered && (
-            <p className="mt-2 font-body text-xs text-amber-600">
-              Found {pc.result.constituencyName}, but it doesn't match our records.
-            </p>
-          )}
-          {pc.result && !pc.result.found && (
-            <p className="mt-2 font-body text-xs text-red-600">
-              Couldn't find that postcode. Check the format and try again.
-            </p>
-          )}
-        </div>
+        <PostcodeInput
+          knownConstituencies={knownConstituencies}
+          label="Enter your postcode to find your constituency automatically"
+          onResolved={(id) => setSelectedConstituency(id)}
+        />
 
         <p className="font-body text-xs text-gray-500 mb-2">Or browse constituencies:</p>
         <input
