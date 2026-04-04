@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-votescot-dark: #1a1a2e;
+  --color-votescot-gold: #c4940a;
+  --color-votescot-paper: #f5f2ed;
+  --color-votescot-border: #e8e4df;
+  --color-match-good: #2d8a4e;
+  --color-match-partial: #c4940a;
+  --color-match-poor: #c0392b;
+  --font-heading: "Crimson Pro", Georgia, serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
