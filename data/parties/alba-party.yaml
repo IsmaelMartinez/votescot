@@ -1,0 +1,29 @@
+id: alba-party
+name: Alba Party
+positions:
+  independence: 2
+  nhs: 1
+  housing: 1
+  climate: 1
+  tax: 1
+  economy: 1
+  education: 1
+  equality: 0
+stances:
+  independence: Immediate and urgent push for independence. Argue the SNP has been too slow. Want to use a majority of Scottish seats as an independence mandate.
+  nhs: Maintain NHS Scotland in public hands. Frame healthcare as a key argument for independence — Scotland controlling its own health policy.
+  housing: Build more affordable and social housing. Support home ownership. Broadly supportive of current housing direction without the SNP's specific rent control approach.
+  climate: Balanced transition approach. Support renewables but cautious about pace and economic cost. Retain North Sea production during transition.
+  tax: Maintain the current Scottish income tax approach broadly. Prioritise economic growth alongside public services.
+  economy: Scottish economic sovereignty is the core argument. Independence would allow Scotland to tailor economic policy to Scottish needs.
+  education: Protect standards. Maintain free university tuition. Critical of some progressive curriculum reforms introduced under the SNP.
+  equality: Socially conservative on gender issues. The split from the SNP in 2021 was partly driven by disagreement over the Gender Recognition Reform Bill. Oppose self-identification.
+quotes:
+  independence: "Based on party platform"
+  nhs: "Based on party platform"
+  housing: "Based on party platform"
+  climate: "Based on party platform"
+  tax: "Based on party platform"
+  economy: "Based on party platform"
+  education: "Based on party platform"
+  equality: "Based on party platform"

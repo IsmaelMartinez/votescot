@@ -6,9 +6,36 @@ color: "#0087DC"
 accent: "#005EA5"
 constituency: midlothian-south-tweeddale-and-lauderdale
 isIncumbent: false
-quizCandidate: false
-bio: Conservative and Unionist Party candidate for Midlothian South, Tweeddale and Lauderdale.
+quizCandidate: true
+bio: Conservative and Unionist Party candidate for Midlothian South, Tweeddale
+  and Lauderdale.
 highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+positions:
+  independence: 0
+  nhs: 0
+  housing: 0
+  climate: 0
+  tax: 0
+  economy: 0
+  education: 0
+  equality: 0
+stances:
+  independence: Strongest opponents of independence. The union is the defining
+    issue. Want to make the case for Scotland's place in the UK permanent.
+  nhs: Reform and streamline NHS Scotland. Focus on better value for money and
+    cutting management layers rather than new spending commitments.
+  housing: Market-led housing policy. Reduce planning red tape to let developers
+    build more. Less emphasis on rent controls or public ownership.
+  climate: Scrap the 2045 net zero target. Favour a more affordable energy
+    transition that protects jobs in oil, gas, and traditional industries.
+  tax: Cut Scottish income tax to below UK rates. Reverse Scotland's higher income
+    tax for top earners. Prioritise economic competitiveness.
+  economy: Pro-business agenda. Cut regulatory burden. Lower business rates.
+    Support North Sea oil and gas industry for energy security.
+  education: Raise academic standards and expand vocational routes. Focus on
+    employability skills. Resist progressive curriculum reforms.
+  equality: Socially conservative. Opposed the Gender Recognition Reform Bill.
+    Emphasise biological definitions of sex in law and policy.
