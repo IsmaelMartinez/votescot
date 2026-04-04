@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: east-lothian-coast-and-lammermuirs
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour Party candidate for East Lothian Coast and Lammermuirs.
 highlights: []

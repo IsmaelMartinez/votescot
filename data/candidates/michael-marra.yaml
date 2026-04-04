@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: dundee-city-west
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour Party candidate for Dundee City West.
 highlights: []

@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: cumbernauld-and-kilsyth
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Scottish National Party (SNP) candidate for Cumbernauld and Kilsyth.
 highlights: []

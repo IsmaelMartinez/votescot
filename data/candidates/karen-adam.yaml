@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: banffshire-and-buchan-coast
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Scottish National Party (SNP) candidate for Banffshire and Buchan Coast.
 highlights: []

@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: aberdeenshire-west
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Aberdeenshire West.
 highlights: []
