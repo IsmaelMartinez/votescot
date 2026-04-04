@@ -115,7 +115,7 @@ export default function PostcodeLookup({ knownConstituencies, basePath }: Props)
           <a href="https://boundaries.scot" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Boundaries Scotland</a>.
         </div>
       )}
-      <div className="mt-2 font-body text-[9px] text-gray-400">
+      <div className="mt-2 font-body text-xs text-gray-400">
         Postcode lookup via <a href="https://mapit.mysociety.org/" target="_blank" rel="noopener noreferrer" className="underline">MapIt</a> using 2026 boundary data (SPCF)
       </div>
     </div>

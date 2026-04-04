@@ -48,7 +48,7 @@ const questions = loadQuestions();
             const q = questions.find((q) => q.id === key);
             return (
               <div class="bg-white rounded-md p-2.5 border border-votescot-border">
-                <div class="font-body text-[10px] font-bold uppercase tracking-widest mb-0.5" style={`color: ${candidate.accent || candidate.color}`}>
+                <div class="font-body text-xs font-bold uppercase tracking-widest mb-0.5" style={`color: ${candidate.accent || candidate.color}`}>
                   {q?.area || key}
                 </div>
                 <div class="font-body text-[13px] text-gray-700 leading-snug">{stance}</div>
@@ -82,7 +82,7 @@ const questions = loadQuestions();
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              class="font-body text-[11px] text-blue-600 bg-blue-50 px-2 py-0.5 rounded no-underline hover:bg-blue-100"
+              class="font-body text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded no-underline hover:bg-blue-100"
             >
               {s.type.replace("_", " ")}
             </a>
@@ -93,7 +93,7 @@ const questions = loadQuestions();
 
     <div class="mt-6 text-center">
       <details class="inline-block text-left">
-        <summary class="font-body text-[10px] text-gray-400 cursor-pointer hover:text-gray-600">
+        <summary class="font-body text-xs text-gray-400 cursor-pointer hover:text-gray-600">
           Advanced: AI analysis (requires API key)
         </summary>
         <div class="mt-2">

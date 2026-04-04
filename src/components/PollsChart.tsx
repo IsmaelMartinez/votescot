@@ -236,7 +236,7 @@ export default function PollsChart({ data }: Props) {
         {/* Tooltip box */}
         {tooltip && (
           <div
-            className="absolute bg-white border border-votescot-border rounded shadow-md text-[11px] font-body pointer-events-none z-10 p-2 min-w-[140px]"
+            className="absolute bg-white border border-votescot-border rounded shadow-md text-xs font-body pointer-events-none z-10 p-2 min-w-[140px]"
             style={{
               left: `calc(${(tooltip.x / CHART_W) * 100}% + 6px)`,
               top: `${PAD_TOP + 8}px`,
@@ -272,7 +272,7 @@ export default function PollsChart({ data }: Props) {
               className="inline-block rounded-full"
               style={{ width: 10, height: 10, background: color }}
             />
-            <span className="font-body text-[11px] text-gray-600">{label}</span>
+            <span className="font-body text-xs text-gray-600">{label}</span>
           </div>
         ))}
       </div>

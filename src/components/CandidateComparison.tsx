@@ -38,7 +38,7 @@ export default function CandidateComparison({ candidates, questions, constituenc
     return (
       <div className="py-3.5">
         <h2 className="font-heading text-base font-black mb-1">Side-by-Side Comparison</h2>
-        <p className="font-body text-[11.5px] text-gray-400 mb-3">
+        <p className="font-body text-xs text-gray-400 mb-3">
           Select your constituency to compare candidates.
         </p>
         <input
@@ -68,11 +68,11 @@ export default function CandidateComparison({ candidates, questions, constituenc
       <div className="flex items-center justify-between mb-1 flex-wrap gap-1.5">
         <div>
           <h2 className="font-heading text-base font-black m-0">Side-by-Side Comparison</h2>
-          <div className="font-body text-[11px] text-gray-400">{selectedConstituencyName}</div>
+          <div className="font-body text-xs text-gray-400">{selectedConstituencyName}</div>
         </div>
         <button
           onClick={() => setSelectedConstituency("")}
-          className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+          className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
         >
           Change constituency
         </button>
@@ -80,7 +80,7 @@ export default function CandidateComparison({ candidates, questions, constituenc
       <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
         Policy positions shown are based on party platforms. Individual candidates may hold different views.
       </div>
-      <p className="font-body text-[11.5px] text-gray-400 mb-3">
+      <p className="font-body text-xs text-gray-400 mb-3">
         What each candidate actually stands for on each issue
       </p>
 
@@ -101,7 +101,7 @@ export default function CandidateComparison({ candidates, questions, constituenc
                     style={{ background: cand.color, border: `1.5px solid ${cand.accent}` }}
                   />
                   <div>
-                    <span className="font-body text-[11px] font-bold text-gray-600">
+                    <span className="font-body text-xs font-bold text-gray-600">
                       {cand.partyShort}:{" "}
                     </span>
                     <span className="font-body text-xs text-gray-500 leading-snug">

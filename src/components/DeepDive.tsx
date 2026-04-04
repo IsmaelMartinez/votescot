@@ -111,7 +111,7 @@ export default function DeepDive({ candidate }: Props) {
 
   return (
     <div className="bg-white rounded-lg p-4 border border-votescot-border max-w-xl">
-      <div className="font-body text-[9px] uppercase tracking-widest text-gray-400 font-semibold mb-2">
+      <div className="font-body text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">
         AI analysis via Claude &bull; Not a recommendation &bull; Your key stays in this tab only
       </div>
 
