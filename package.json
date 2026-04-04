@@ -12,7 +12,8 @@
     "astro": "astro",
     "test": "vitest run",
     "sync:candidates": "tsx scripts/sync-candidates.ts",
-    "sync:manifestos": "tsx scripts/sync-manifestos.ts"
+    "sync:manifestos": "tsx scripts/sync-manifestos.ts",
+    "sync:polls": "tsx scripts/sync-polls.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
