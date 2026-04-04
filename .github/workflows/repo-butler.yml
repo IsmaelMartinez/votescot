@@ -1,0 +1,27 @@
+name: Repo Butler
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "Phase to run (observe, assess, update, ideate, propose, report, or all)"
+        default: "report"
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: IsmaelMartinez/repo-butler@v1
+        with:
+          github-token: ${{ github.token }}
+          phase: ${{ github.event.inputs.phase || 'report' }}
+          gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
