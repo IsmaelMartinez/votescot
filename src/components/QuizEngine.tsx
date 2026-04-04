@@ -33,7 +33,7 @@ export default function QuizEngine({ questions, candidates, constituencies, base
   const ranked = filteredCandidates
     .map((c) => ({
       ...c,
-      match: calculateMatch(answers, c.positions!),
+      match: calculateMatch(answers, c.positions || {}),
     }))
     .sort((a, b) => b.match.percentage - a.match.percentage);
 

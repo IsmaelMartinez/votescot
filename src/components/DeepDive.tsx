@@ -4,6 +4,7 @@ interface Candidate {
   id: string;
   name: string;
   party: string;
+  constituency: string;
   color: string;
   accent: string;
 }
@@ -56,7 +57,7 @@ export default function DeepDive({ candidate }: Props) {
           messages: [
             {
               role: "user",
-              content: `You are a neutral political analyst for Edinburgh Central in the 2026 Scottish Parliament election — a historic three-way marginal (SNP vs Green vs Labour). Analyse ${candidate.name} (${candidate.party}). Cover: 1) What they actually stand for — key policies and values. 2) Track record — what have they delivered or failed to deliver? 3) Strengths and weaknesses as a candidate. 4) 3 specific questions a voter should ask at a hustings. Be balanced and factual. ~350 words. Use ** for section headers.`,
+              content: `You are a neutral political analyst for the ${candidate.constituency} constituency in the 2026 Scottish Parliament election. Analyse ${candidate.name} (${candidate.party}), standing in ${candidate.constituency}. Cover: 1) What they actually stand for — key policies and values. 2) Track record — what have they delivered or failed to deliver? 3) Strengths and weaknesses as a candidate. 4) 3 specific questions a voter should ask at a hustings. Be balanced and factual. ~350 words. Use ** for section headers.`,
             },
           ],
         }),

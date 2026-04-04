@@ -104,7 +104,3 @@ export function loadResources(): ResourceSection[] {
   const data = loadYaml<{ sections: ResourceSection[] }>("data/resources.yaml");
   return data.sections;
 }
-
-export function loadPostcodeSectors(): Record<string, string[]> {
-  return loadYaml<Record<string, string[]>>("data/postcode-sectors.yaml");
-}

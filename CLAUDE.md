@@ -12,7 +12,7 @@ Open-source vote compass for the 2026 Scottish Parliament election.
 
 ## Architecture
 
-Astro 5 static site with React islands for interactive components. YAML data files in `data/` are the single source of truth. Built and deployed to GitHub Pages via GitHub Actions.
+Astro 6 static site with React islands for interactive components. YAML data files in `data/` are the single source of truth. Built and deployed to GitHub Pages via GitHub Actions. Daily sync from Democracy Club API via GitHub Actions cron.
 
 ## Key conventions
 
