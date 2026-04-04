@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CandidateCard from "../../components/CandidateCard.astro";
+import { loadCandidates } from "../../lib/data";
+
+const candidates = loadCandidates();
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Candidates" description="All candidates standing in Edinburgh Central for the 2026 Scottish Parliament election">
+  <Header slot="header" currentTab="candidates" />
+
+  <div class="py-3.5">
+    <h2 class="font-heading text-lg font-black mb-1">Edinburgh Central Candidates</h2>
+    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+      5 candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {candidates.map((c) => (
+        <CandidateCard candidate={c} basePath={base} />
+      ))}
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</Base>
