@@ -6,6 +6,7 @@ color: "#FAA61A"
 accent: "#B8860B"
 constituency: "edinburgh-central"
 isIncumbent: false
+quizCandidate: true
 bio: "Lib Dem candidate. Party's Edinburgh focus is mainly on Northern and North Western seats. Edinburgh Central has been competitive for Lib Dems historically — they nearly won in 2007."
 
 positions:

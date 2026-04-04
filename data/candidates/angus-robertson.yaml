@@ -7,6 +7,7 @@ accent: "#9B870C"
 textColor: "#333"
 constituency: "edinburgh-central"
 isIncumbent: true
+quizCandidate: true
 bio: "MSP for Edinburgh Central since 2021. Cabinet Secretary for Culture and External Affairs. Former SNP Westminster leader (2001-2017). Led party through 2014 independence referendum."
 
 positions:

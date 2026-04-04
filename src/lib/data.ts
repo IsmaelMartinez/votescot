@@ -28,9 +28,10 @@ export interface Candidate {
   textColor?: string;
   constituency: string;
   isIncumbent: boolean;
+  quizCandidate?: boolean;
   bio: string;
-  positions: CandidatePosition;
-  stances: Record<string, string>;
+  positions?: CandidatePosition;
+  stances?: Record<string, string>;
   highlights: string[];
   sources: CandidateSource[];
 }
@@ -82,6 +83,16 @@ export function loadCandidates(): Candidate[] {
 
 export function loadConstituency(id: string): Constituency {
   return loadYaml<Constituency>(`data/constituencies/${id}.yaml`);
+}
+
+export function loadConstituencies(): Constituency[] {
+  const dir = path.resolve(process.cwd(), "data/constituencies");
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
+  return files.map((f) => loadYaml<Constituency>(path.join("data/constituencies", f)));
+}
+
+export function loadCandidatesByConstituency(constituencyId: string): Candidate[] {
+  return loadCandidates().filter((c) => c.constituency === constituencyId);
 }
 
 export function loadQuestions(): QuizQuestion[] {

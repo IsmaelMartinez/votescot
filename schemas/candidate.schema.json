@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["id", "name", "party", "partyShort", "color", "accent", "constituency", "isIncumbent", "bio", "positions", "stances", "highlights", "sources"],
+  "required": ["id", "name", "party", "partyShort", "color", "accent", "constituency", "isIncumbent", "bio", "highlights", "sources"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
     "name": { "type": "string", "minLength": 1 },
@@ -12,6 +12,7 @@
     "textColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{3,6}$" },
     "constituency": { "type": "string" },
     "isIncumbent": { "type": "boolean" },
+    "quizCandidate": { "type": "boolean" },
     "bio": { "type": "string", "minLength": 1 },
     "positions": {
       "type": "object",
