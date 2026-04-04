@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ConstituencyMap from "../components/ConstituencyMap.tsx";
+import { loadConstituencies } from "../lib/data";
+
+const constituencies = loadConstituencies();
+const knownConstituencies = constituencies.map((c) => c.id);
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Constituency Map" description="Interactive map of all 73 Scottish Parliament constituencies for the 2026 election">
+  <Header slot="header" currentTab="map" />
+
+  <div class="py-6">
+    <h2 class="font-heading text-2xl font-black mb-1">Constituency Map</h2>
+    <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
+      All 73 Scottish Parliament constituencies for the 7 May 2026 election, using the new 2026 boundaries.
+      Click any constituency to see its candidates, or search by postcode to find yours.
+    </p>
+
+    <ConstituencyMap
+      client:only="react"
+      knownConstituencies={knownConstituencies}
+      basePath={base}
+    />
+  </div>
+
+  <Footer slot="footer" />
+</Base>
