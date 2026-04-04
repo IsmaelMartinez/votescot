@@ -44,29 +44,29 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ### Critical — data accuracy
 
-Enrich high-profile candidates with real bios. John Swinney (First Minister), Anas Sarwar (Labour leader), and other party leaders currently show generic template bios like "SNP candidate for Perthshire North." These need substantive biographical information — voters deserve to know who these people are.
+~~Enrich high-profile candidates with real bios.~~ Done. 13 candidates (Swinney, Sarwar, Baillie, Fraser, Gilruth, McAllan, Somerville, Bibby, Gallacher, Rennie, Slater, Constance, Thewliss, Macpherson) have substantive bios and highlights. Factual accuracy verified via code review.
 
-Fix incumbent status for sitting MSPs. The sync script hardcodes `isIncumbent: false` for everyone. Current MSPs standing again should be marked as incumbents. Cross-reference with the Scottish Parliament members API at `data.parliament.scot/api/members`.
+~~Fix incumbent status for sitting MSPs.~~ Done. `scripts/fix-incumbents.ts` cross-references the Scottish Parliament members API. 75 sitting MSPs marked as incumbents. Two false positives (name collisions with different-party candidates) caught in review and fixed.
 
-Differentiate Conservative and Reform positions. Both currently score 0 on every issue, making them indistinguishable in the quiz. The Conservatives have specific manifesto positions on NHS, education, and housing that differ from Reform's "scrap everything" approach.
+~~Differentiate Conservative and Reform positions.~~ Done. Conservatives now score nhs:1, education:1 (more moderate). Reform stays at all 0s. 72 candidate files updated.
 
 Make projection methodology transparent. Currently hardcoded numbers with no source attribution. Each projection should cite its basis (Ballot Box Scotland notionals, national polling swing, or whatever the source is).
 
 ### High priority — usability
 
-Add a "How to Vote" guide. Voters need to know they get TWO ballot papers (constituency and regional list), how AMS works, what the regional list vote means, and where their polling station is. This is essential for first-time voters and 16-17 year olds.
+~~Add a "How to Vote" guide.~~ Done at `/how-to-vote`. Covers two ballot papers, AMS, D'Hondt, key dates, voter eligibility (16+), no photo ID required, registration links. Voter ID section corrected in review (Scotland does NOT require photo ID at Holyrood elections).
 
-Fix slug consistency between PostcodeLookup and ConstituencyMap. Both derive constituency slugs client-side using different logic. A mismatch sends voters to the wrong page.
+~~Fix slug consistency.~~ Done. Shared `slugifyConstituency()` utility in `src/lib/slugify.ts`. Both PostcodeLookup and ConstituencyMap use it. 5 test cases.
 
-Add `robots.txt` and `sitemap.xml`. 515 pages need to be indexed before the election.
+~~Add `robots.txt` and `sitemap.xml`.~~ Done. `@astrojs/sitemap` generates sitemap-index.xml at build time. robots.txt in public/.
 
-Consider making the map the landing page, or at least more prominent. The current landing page is text-heavy. The map is a more intuitive entry point — click your area, see your candidates.
+Consider making the map the landing page, or at least more prominent. Analysis done — recommended Option A (map as hero, replacing the 73-constituency text grid). Awaiting decision.
 
 ### Medium priority — accessibility and polish
 
-Bump font sizes to minimum 12px. Multiple components still use 9-10px text which is below WCAG recommendations.
+~~Bump font sizes to minimum 12px.~~ Done. All sub-12px Tailwind classes replaced with `text-xs` across 18 files. Zero sub-12px fonts remain.
 
-Add ARIA roles to quiz radio buttons (`role="radio"`, `aria-checked`, `role="radiogroup"`).
+~~Add ARIA roles to quiz radio buttons.~~ Done. `role="radiogroup"`, `role="radio"`, `aria-checked`, `aria-labelledby` added. Skip-to-content link added in Base.astro.
 
 Compress the 1.8MB GeoJSON boundary file. TopoJSON would cut it to ~500KB.
 
