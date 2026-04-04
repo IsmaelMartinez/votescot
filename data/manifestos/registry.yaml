@@ -1,0 +1,63 @@
+parties:
+  - id: "scottish-national-party"
+    name: "Scottish National Party (SNP)"
+    manifestoUrls:
+      - "https://www.snp.org/manifesto"
+      - "https://www.snp.org/policies"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "scottish-green-party"
+    name: "Scottish Green Party"
+    manifestoUrls:
+      - "https://greens.scot/manifesto"
+      - "https://greens.scot/2026-manifesto"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "scottish-labour"
+    name: "Scottish Labour"
+    manifestoUrls:
+      - "https://scottishlabour.org.uk/manifesto"
+      - "https://scottishlabour.org.uk/where-we-stand"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "scottish-conservatives"
+    name: "Scottish Conservatives"
+    manifestoUrls:
+      - "https://www.scottishconservatives.com/manifesto"
+      - "https://www.scottishconservatives.com/2026-manifesto"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "scottish-liberal-democrats"
+    name: "Scottish Liberal Democrats"
+    manifestoUrls:
+      - "https://www.scotlibdems.org.uk/2026-manifesto"
+      - "https://www.scotlibdems.org.uk/manifesto"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "reform-uk"
+    name: "Reform UK"
+    manifestoUrls:
+      - "https://www.reformparty.uk/scotland"
+      - "https://www.reformparty.uk/manifesto"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
+
+  - id: "alba-party"
+    name: "Alba Party"
+    manifestoUrls:
+      - "https://www.albaparty.org/manifesto"
+      - "https://www.albaparty.org/policies"
+    manifestoPdf: null
+    parsedAt: null
+    positionsFile: null
