@@ -225,24 +225,44 @@ export default function QuizEngine({ questions, candidates, constituencies, base
               {qi + 1}/{questions.length} &bull; {q.area}
             </div>
             <div id={`question-${q.id}`} className="font-heading text-[15px] font-bold mb-2.5 leading-tight">{q.question}</div>
-            <div className="flex flex-col gap-1.5" role="radiogroup" aria-labelledby={`question-${q.id}`}>
-              {q.options.map((opt) => (
+            <div
+              className="flex flex-col gap-1.5"
+              role="radiogroup"
+              aria-labelledby={`question-${q.id}`}
+              onKeyDown={(e) => {
+                if (!["ArrowDown", "ArrowUp"].includes(e.key)) return;
+                e.preventDefault();
+                const buttons = (e.currentTarget as HTMLElement).querySelectorAll<HTMLElement>("[role=radio]");
+                const current = Array.from(buttons).indexOf(e.target as HTMLElement);
+                if (current < 0) return;
+                const next = e.key === "ArrowDown"
+                  ? (current + 1) % buttons.length
+                  : (current - 1 + buttons.length) % buttons.length;
+                buttons[next].focus();
+              }}
+            >
+              {q.options.map((opt, optIdx) => {
+                const isChecked = answers[q.id] === opt.value;
+                const checkedIdx = q.options.findIndex((o) => o.value === answers[q.id]);
+                const isFocusable = isChecked || (checkedIdx === -1 && optIdx === 0);
+                return (
                 <button
                   key={opt.value}
                   role="radio"
-                  aria-checked={answers[q.id] === opt.value}
+                  aria-checked={isChecked}
+                  tabIndex={isFocusable ? 0 : -1}
                   onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.value }))}
                   className="text-left rounded-md px-3 py-2 cursor-pointer font-body text-[13px] leading-snug transition-all"
                   style={{
-                    background: answers[q.id] === opt.value ? "#1a1a2e" : "#faf8f5",
-                    color: answers[q.id] === opt.value ? "#fff" : "#444",
-                    border: answers[q.id] === opt.value ? "2px solid #1a1a2e" : "1px solid #ddd",
-                    fontWeight: answers[q.id] === opt.value ? 700 : 400,
+                    background: isChecked ? "#1a1a2e" : "#faf8f5",
+                    color: isChecked ? "#fff" : "#444",
+                    border: isChecked ? "2px solid #1a1a2e" : "1px solid #ddd",
+                    fontWeight: isChecked ? 700 : 400,
                   }}
                 >
                   {opt.label}
-                </button>
-              ))}
+                </button>);
+              })}
             </div>
           </div>
         ))}

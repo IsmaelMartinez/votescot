@@ -38,10 +38,10 @@ const PARTIES = [
 
 const CHART_W = 800;
 const CHART_H = 260;
-const PAD_LEFT = 36;
+const PAD_LEFT = 40;
 const PAD_RIGHT = 12;
 const PAD_TOP = 10;
-const PAD_BOTTOM = 28;
+const PAD_BOTTOM = 32;
 
 function dateToMs(d: string): number {
   return new Date(d).getTime();
@@ -167,7 +167,7 @@ export default function PollsChart({ data }: Props) {
                 x={PAD_LEFT - 4}
                 y={yPos(v) + 4}
                 textAnchor="end"
-                fontSize={9}
+                fontSize={12}
                 fill="#9ca3af"
               >
                 {v}%
@@ -184,7 +184,7 @@ export default function PollsChart({ data }: Props) {
                 x={tx}
                 y={CHART_H - 6}
                 textAnchor="middle"
-                fontSize={8}
+                fontSize={12}
                 fill="#9ca3af"
               >
                 {monthLabel(tick)}
