@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://ismaelmartinez.github.io",
-  base: "/votescot",
+  base: "/votescot/",
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
