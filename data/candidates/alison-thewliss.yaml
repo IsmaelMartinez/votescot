@@ -8,8 +8,13 @@ textColor: "#333"
 constituency: glasgow-central
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Glasgow Central.
-highlights: []
+bio: Former MP for Glasgow Central (2015-2024) who is now standing for the Scottish Parliament. During nearly a decade at Westminster, Thewliss served as SNP spokesperson on home affairs and the economy. Before entering Parliament she was a Glasgow City councillor for the Calton ward from 2007.
+highlights:
+  - Former MP for Glasgow Central (2015-2024)
+  - SNP Westminster spokesperson on Home Affairs (2022-2024)
+  - SNP Westminster spokesperson on the Economy (2020-2022)
+  - Former Glasgow City councillor for Calton ward (2007-2015)
+  - Studied Politics and International Relations at the University of Aberdeen
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

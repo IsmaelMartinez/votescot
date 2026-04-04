@@ -7,8 +7,13 @@ accent: "#8B0000"
 constituency: paisley
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Paisley.
-highlights: []
+bio: Labour MSP for the West Scotland region since 2011 and the party's Shadow Cabinet Secretary for Constitution, External Affairs and Culture. A Renfrewshire native, Bibby was a councillor on Renfrewshire Council before being elected to Holyrood. He previously chaired both Young Labour UK and Scottish Labour Students.
+highlights:
+  - MSP for West Scotland since 2011
+  - Shadow Cabinet Secretary for Constitution, External Affairs and Culture
+  - Former Renfrewshire councillor (elected 2007)
+  - Former Chair of Young Labour UK and Scottish Labour Students
+  - Previously worked for MPs and MSPs in parliamentary research roles
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website

@@ -7,8 +7,13 @@ accent: "#8B0000"
 constituency: glasgow-cathcart-and-pollok
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Glasgow Cathcart and Pollok.
-highlights: []
+bio: Leader of the Scottish Labour Party since 2021 and the first Muslim leader of a major UK political party. A Glasgow-born dentist by training, Sarwar served as MP for Glasgow Central (2010-2015) before becoming an MSP for the Glasgow region in 2016. He led Scottish Labour to its strongest Westminster result in a decade at the 2024 general election.
+highlights:
+  - Leader of the Scottish Labour Party since 2021
+  - First Muslim and person of colour to lead a major UK political party
+  - Former MP for Glasgow Central (2010-2015)
+  - Deputy Leader of Scottish Labour (2011-2014)
+  - Qualified dentist; son of Mohammad Sarwar, the UK's first Muslim MP
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

@@ -8,8 +8,13 @@ textColor: "#333"
 constituency: edinburgh-north-eastern-and-leith
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Edinburgh North Eastern and Leith.
-highlights: []
+bio: MSP for Edinburgh Northern and Leith since 2016. A former commercial lawyer, Macpherson has held a series of ministerial roles covering migration, public finance, rural affairs, and social security. He returned to government as Minister for Higher and Further Education in September 2025 after two years on the backbenches.
+highlights:
+  - Minister for Higher and Further Education (reappointed September 2025)
+  - MSP for Edinburgh Northern and Leith since 2016
+  - Former Minister for Europe, Migration and International Development (2018-2020)
+  - Former Minister for Social Security and Local Government (2021-2023)
+  - Former commercial lawyer; also worked in renewable energy
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
