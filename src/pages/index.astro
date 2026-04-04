@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PostcodeLookup from "../components/PostcodeLookup.tsx";
+import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import { loadConstituencies } from "../lib/data";
 
 const constituencies = loadConstituencies();
@@ -38,13 +39,12 @@ const base = import.meta.env.BASE_URL;
       </a>
     </div>
 
-    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {constituencies.map((c) => (
-        <a href={`${base}candidates/constituency/${c.id}`} class="bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
-          <div class="font-heading font-bold text-sm mb-0.5">{c.name}</div>
-          <div class="font-body text-xs text-gray-500 leading-snug">{c.context}</div>
-        </a>
-      ))}
+    <div class="mt-4">
+      <ConstituencyMap
+        client:only="react"
+        knownConstituencies={knownConstituencies}
+        basePath={base}
+      />
     </div>
 
     <div class="mt-6 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
