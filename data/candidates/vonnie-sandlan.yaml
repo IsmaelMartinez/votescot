@@ -12,6 +12,10 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.glasgow-central.2026-05-07/glasgow-central/
+    type: whocanivotefor
+  - url: https://scottishlabour.org.uk/
+    type: party_website
 positions:
   independence: 0
   nhs: 2
@@ -22,20 +26,11 @@ positions:
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Focus on strengthening devolution within the
-    UK. Want Scotland to lead reform of the union, not leave it.
-  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments.
-    Increase capacity for mental health and cancer services.
-  housing: Build new social and affordable housing. Support first-time buyers with
-    targeted schemes. Reform planning to unlock more homes.
-  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned
-    clean energy company. Promote Scottish renewables jobs.
-  tax: No planned increase to Scottish income tax rates. Focus spending increases
-    on NHS efficiency and economic growth rather than tax rises.
-  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws
-    to attract business. Support industrial transition in heavy industry areas.
-  education: Close the attainment gap between richest and poorest pupils. Ban
-    mobile phones in classrooms. Invest in teaching workforce.
-  equality: Progressive on equalities generally. More cautious position on gender
-    recognition reform — supportive of trans rights while emphasising women's
-    spaces.
+  independence: Oppose independence. Focus on strengthening devolution within the UK. Want Scotland to lead reform of the union, not leave it.
+  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments. Increase capacity for mental health and cancer services.
+  housing: Build new social and affordable housing. Support first-time buyers with targeted schemes. Reform planning to unlock more homes.
+  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned clean energy company. Promote Scottish renewables jobs.
+  tax: No planned increase to Scottish income tax rates. Focus spending increases on NHS efficiency and economic growth rather than tax rises.
+  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws to attract business. Support industrial transition in heavy industry areas.
+  education: Close the attainment gap between richest and poorest pupils. Ban mobile phones in classrooms. Invest in teaching workforce.
+  equality: Progressive on equalities generally. More cautious position on gender recognition reform — supportive of trans rights while emphasising women's spaces.

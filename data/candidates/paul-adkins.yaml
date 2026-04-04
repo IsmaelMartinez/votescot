@@ -12,3 +12,5 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP17976/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.dumfriesshire.2026-05-07/dumfriesshire/
+    type: whocanivotefor

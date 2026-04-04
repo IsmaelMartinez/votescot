@@ -12,3 +12,5 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.ettrick-roxburgh-and-berwickshire.2026-05-07/ettrick-roxburgh-and-berwickshire/
+    type: whocanivotefor

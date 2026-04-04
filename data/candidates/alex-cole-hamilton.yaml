@@ -17,6 +17,10 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-north-western.2026-05-07/edinburgh-north-western/
+    type: whocanivotefor
+  - url: https://www.scotlibdems.org.uk/
+    type: party_website
 positions:
   independence: 0
   nhs: 1

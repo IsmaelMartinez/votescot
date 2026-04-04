@@ -12,6 +12,10 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.ayr.2026-05-07/ayr/
+    type: whocanivotefor
+  - url: https://www.reformparty.uk/
+    type: party_website
 positions:
   independence: 0
   nhs: 0
@@ -22,19 +26,11 @@ positions:
   education: 0
   equality: 0
 stances:
-  independence: Oppose independence. Strong unionist position. Want to strengthen
-    the UK as a whole rather than devolve further power.
-  nhs: Reform the NHS to reduce bureaucracy and management overhead. Open to
-    insurance-based elements for some services. Cut NHS administrative spending.
-  housing: Market-led housing policy. Reduce planning regulation to allow
-    developers to build faster. Oppose rent controls as counterproductive.
-  climate: Scrap net zero targets. Protect fossil fuel jobs in Scotland's North
-    Sea. Oppose wind farm expansion on land. Energy bills as the priority.
-  tax: Significant tax cuts across the board. Raise income tax thresholds
-    substantially. Reduce burden on working people and businesses.
-  economy: Deregulate business. Cut government spending and the size of the public
-    sector. Attract investment through lower taxes and less red tape.
-  education: Traditional academic standards. Expand vocational and apprenticeship
-    routes. Oppose what they call 'woke' curriculum content.
-  equality: Socially conservative. Oppose gender self-identification. Emphasise
-    traditional definitions of sex in law. Sceptical of diversity initiatives.
+  independence: Oppose independence. Strong unionist position. Want to strengthen the UK as a whole rather than devolve further power.
+  nhs: Reform the NHS to reduce bureaucracy and management overhead. Open to insurance-based elements for some services. Cut NHS administrative spending.
+  housing: Market-led housing policy. Reduce planning regulation to allow developers to build faster. Oppose rent controls as counterproductive.
+  climate: Scrap net zero targets. Protect fossil fuel jobs in Scotland's North Sea. Oppose wind farm expansion on land. Energy bills as the priority.
+  tax: Significant tax cuts across the board. Raise income tax thresholds substantially. Reduce burden on working people and businesses.
+  economy: Deregulate business. Cut government spending and the size of the public sector. Attract investment through lower taxes and less red tape.
+  education: Traditional academic standards. Expand vocational and apprenticeship routes. Oppose what they call 'woke' curriculum content.
+  equality: Socially conservative. Oppose gender self-identification. Emphasise traditional definitions of sex in law. Sceptical of diversity initiatives.

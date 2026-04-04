@@ -13,6 +13,10 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.glasgow-anniesland.2026-05-07/glasgow-anniesland/
+    type: whocanivotefor
+  - url: https://www.snp.org/
+    type: party_website
 positions:
   independence: 2
   nhs: 1
@@ -23,19 +27,11 @@ positions:
   education: 1
   equality: 2
 stances:
-  independence: Core commitment. Independence referendum if SNP wins a majority.
-    Describes independence as essential to Scotland's future prosperity.
-  nhs: Continue current NHS investment. Deliver the long-delayed National Care
-    Service. Maintain mental health funding expansion.
-  housing: Continue the rent control framework introduced in 2022. Invest in
-    social housing. Maintain existing tenant protections.
-  climate: Net zero by 2045. Just transition fund for oil and gas workers. Active
-    travel investment. (2030 interim targets were dropped in 2024.)
-  tax: Maintain progressive Scottish income tax, which currently raises around
-    £1bn more than the rest-of-UK equivalent.
-  economy: Support a just transition from fossil fuels. Protect free university
-    tuition. Invest in creative industries and Scottish exports.
-  education: Protect free university tuition. Maintain national curriculum
-    standards. Focus on closing the attainment gap.
-  equality: Supported the Gender Recognition Reform Bill (subsequently blocked by
-    the UK Government). Progressive social policy across all groups.
+  independence: Core commitment. Independence referendum if SNP wins a majority. Describes independence as essential to Scotland's future prosperity.
+  nhs: Continue current NHS investment. Deliver the long-delayed National Care Service. Maintain mental health funding expansion.
+  housing: Continue the rent control framework introduced in 2022. Invest in social housing. Maintain existing tenant protections.
+  climate: Net zero by 2045. Just transition fund for oil and gas workers. Active travel investment. (2030 interim targets were dropped in 2024.)
+  tax: Maintain progressive Scottish income tax, which currently raises around £1bn more than the rest-of-UK equivalent.
+  economy: Support a just transition from fossil fuels. Protect free university tuition. Invest in creative industries and Scottish exports.
+  education: Protect free university tuition. Maintain national curriculum standards. Focus on closing the attainment gap.
+  equality: Supported the Gender Recognition Reform Bill (subsequently blocked by the UK Government). Progressive social policy across all groups.

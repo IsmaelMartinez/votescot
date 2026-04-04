@@ -12,6 +12,10 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.shetland-islands.2026-05-07/shetland-islands/
+    type: whocanivotefor
+  - url: https://greens.scot/
+    type: party_website
 positions:
   independence: 2
   nhs: 2
@@ -22,20 +26,11 @@ positions:
   education: 1
   equality: 2
 stances:
-  independence: Support independence. Part of the former Bute House Agreement with
-    the SNP. Also supports a Scottish republic in the long term.
-  nhs: Care workers to be paid at least £15/hr. Walk-in mental health centres
-    across Scotland. Raise Scottish Child Payment to £40/week.
-  housing: Strengthen rent controls beyond the current framework. Tackle landlord
-    exploitation. Prioritise affordable rents over landlord returns.
-  climate: Most ambitious climate platform. Free bus travel for all, not just
-    under-22s. A public bus network. End road expansion. Higher taxes on
-    polluters.
-  tax: Higher taxes on super-rich individuals, big banks, Amazon-style warehouses,
-    and betting companies. Use wealth taxes to fund public services.
-  economy: Four-day working week pilot. Exploration of Universal Basic Income.
-    Investment in green jobs. Transition to a circular economy.
-  education: Expand funded childcare to cover children from six months old. 43,000
-    additional children would be eligible — biggest expansion in a generation.
-  equality: Strong advocate for trans rights. Backed Gender Recognition Reform
-    strongly. Progressive social policy and anti-poverty focus throughout.
+  independence: Support independence. Part of the former Bute House Agreement with the SNP. Also supports a Scottish republic in the long term.
+  nhs: Care workers to be paid at least £15/hr. Walk-in mental health centres across Scotland. Raise Scottish Child Payment to £40/week.
+  housing: Strengthen rent controls beyond the current framework. Tackle landlord exploitation. Prioritise affordable rents over landlord returns.
+  climate: Most ambitious climate platform. Free bus travel for all, not just under-22s. A public bus network. End road expansion. Higher taxes on polluters.
+  tax: Higher taxes on super-rich individuals, big banks, Amazon-style warehouses, and betting companies. Use wealth taxes to fund public services.
+  economy: Four-day working week pilot. Exploration of Universal Basic Income. Investment in green jobs. Transition to a circular economy.
+  education: Expand funded childcare to cover children from six months old. 43,000 additional children would be eligible — biggest expansion in a generation.
+  equality: Strong advocate for trans rights. Backed Gender Recognition Reform strongly. Progressive social policy and anti-poverty focus throughout.

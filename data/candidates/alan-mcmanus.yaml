@@ -12,3 +12,5 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.cumbernauld-and-kilsyth.2026-05-07/cumbernauld-and-kilsyth/
+    type: whocanivotefor

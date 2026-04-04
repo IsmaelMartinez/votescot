@@ -12,3 +12,5 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP804/
     type: party_website
+  - url: https://whocanivotefor.co.uk/elections/sp.c.dundee-city-west.2026-05-07/dundee-city-west/
+    type: whocanivotefor
