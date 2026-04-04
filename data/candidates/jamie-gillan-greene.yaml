@@ -5,7 +5,7 @@ partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
 constituency: inverclyde
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Liberal Democrats candidate for Inverclyde.
 highlights: []

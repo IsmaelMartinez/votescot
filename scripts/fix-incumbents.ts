@@ -31,7 +31,8 @@ function normaliseName(name: string): string {
     .replace(/[\u0300-\u036f]/g, "") // strip accents (e.g. Màiri → Mairi)
     .toLowerCase()
     .replace(/['']/g, "")
-    .replace(/\bdr\b/g, "") // strip "Dr" prefix
+    .replace(/\bdr\.?\s*/g, "") // strip "Dr" or "Dr." prefix
+    .replace(/\./g, "")
     .trim();
 }
 
@@ -41,8 +42,10 @@ function normaliseName(name: string): string {
 function parseMspName(parliamentaryName: string, preferredName: string): { first: string; surname: string } {
   const parts = parliamentaryName.split(",").map((s) => s.trim());
   const surname = normaliseName(parts[0]);
-  // PreferredName is more reliable for first name than what's after the comma
-  const first = normaliseName(preferredName);
+  // Use only the first token of PreferredName to handle multi-word entries
+  // like "John Farquhar" — we only need the first name for matching
+  const firstToken = preferredName.split(/\s+/)[0];
+  const first = normaliseName(firstToken);
   return { first, surname };
 }
 
@@ -187,7 +190,7 @@ async function main() {
       // Check hyphenated surname matches
       for (const name of matchedMspNames) {
         const [mFirst, mSurname] = name.split("|");
-        if (mFirst === first && (mSurname.includes(surname) || surname.includes(mSurname))) {
+        if (mFirst === first && mSurname === surname) {
           wasMatched = true;
           break;
         }
