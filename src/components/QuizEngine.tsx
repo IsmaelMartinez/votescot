@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { calculateMatch } from "../lib/matching";
 import PostcodeInput from "./PostcodeInput";
+import ErrorBoundary from "./ErrorBoundary";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
 interface Constituency {
@@ -16,7 +17,7 @@ interface Props {
   basePath: string;
 }
 
-export default function QuizEngine({ questions, candidates, constituencies, knownConstituencies, basePath }: Props) {
+function QuizEngineInner({ questions, candidates, constituencies, knownConstituencies, basePath }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
   const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
@@ -110,7 +111,7 @@ export default function QuizEngine({ questions, candidates, constituencies, know
           </div>
         </div>
         <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
-          Policy positions shown are based on party platforms. Individual candidates may hold different views.
+          Policy positions shown are based on party platforms, so candidates from the same party will share identical match scores. Individual candidates may hold different views.
         </div>
         <p className="font-body text-xs text-gray-400 mb-4">
           Based on {answeredCount} of {questions.length} questions answered. The more you answer, the better the match.
@@ -131,7 +132,7 @@ export default function QuizEngine({ questions, candidates, constituencies, know
                   {i === 0 && <span className="text-base">🏆</span>}
                   <div
                     className="w-2.5 h-2.5 rounded-full"
-                    style={{ background: cand.color, border: `2px solid ${cand.accent}` }}
+                    style={{ background: cand.textColor ? cand.accent : cand.color, border: `2px solid ${cand.accent}` }}
                   />
                   <div>
                     <span className="font-heading font-black text-sm">{cand.name}</span>
@@ -294,4 +295,8 @@ export default function QuizEngine({ questions, candidates, constituencies, know
       </button>
     </div>
   );
+}
+
+export default function QuizEngine(props: Props) {
+  return <ErrorBoundary><QuizEngineInner {...props} /></ErrorBoundary>;
 }

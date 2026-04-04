@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 4 April 2026 (evening)
+Last updated: 4 April 2026 (night)
 
 ## What's live now
 
@@ -50,7 +50,7 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ~~Differentiate Conservative and Reform positions.~~ Done. Conservatives now score nhs:1, education:1 (more moderate). Reform stays at all 0s. 72 candidate files updated.
 
-Make projection methodology transparent. Currently hardcoded numbers with no source attribution. Each projection should cite its basis (Ballot Box Scotland notionals, national polling swing, or whatever the source is).
+~~Make projection methodology transparent.~~ Done. Each constituency's projection now cites its source (Ballot Box Scotland notionals, historical results, national polling swing, incumbency factors, etc.). Source displayed on constituency pages below the projection panel.
 
 ### High priority — usability
 
@@ -68,23 +68,23 @@ Make projection methodology transparent. Currently hardcoded numbers with no sou
 
 ~~Add ARIA roles to quiz radio buttons.~~ Done. `role="radiogroup"`, `role="radio"`, `aria-checked`, `aria-labelledby` added. Skip-to-content link added in Base.astro.
 
-Compress the 1.8MB GeoJSON boundary file. TopoJSON would cut it to ~500KB.
+~~Compress the 1.8MB GeoJSON boundary file.~~ Done. Converted to TopoJSON (340 KB, 81% reduction). ConstituencyMap loads TopoJSON and converts client-side with topojson-client.
 
-Add retry logic to `fetchBuffer` and `fetchHtml` in the pipeline.
+~~Add retry logic to `fetchBuffer` and `fetchHtml` in the pipeline.~~ Done. Both now retry up to 3 times with exponential backoff, matching the existing `fetchJson` pattern.
 
-Cache `loadCandidates()` at module level to speed up builds (currently parses 434 YAML files on every call).
+~~Cache `loadCandidates()` at module level to speed up builds.~~ Done. Module-level cache avoids re-parsing 434 YAML files on every call.
 
-Self-host Google Fonts to eliminate render-blocking external requests.
+~~Self-host Google Fonts to eliminate render-blocking external requests.~~ Done. Using @fontsource-variable for Crimson Pro and Source Sans 3. Removed external Google Fonts links.
 
 ### Low priority
 
-Add React error boundaries around interactive components.
+~~Add React error boundaries around interactive components.~~ Done. ErrorBoundary component wraps all 7 Astro island components (QuizEngine, CandidateComparison, CandidatesSearch, PollsChart, PostcodeLookup, DeepDive, ConstituencyMap).
 
-Add tests for slug derivation logic, React components, and the manifesto parsing pipeline.
+~~Add tests for slug derivation logic, React components, and the manifesto parsing pipeline.~~ Done. Added api-retry and data-cache test suites (11 new tests, 34 total). Slug tests already existed.
 
-The `textColor` property exists in candidate data but is never used in rendering — SNP's yellow dots have poor contrast on white.
+~~The `textColor` property exists in candidate data but is never used in rendering.~~ Done. SNP and Libertarian dots now use the darker accent colour as fill when textColor is set, fixing yellow-on-white contrast.
 
-Explain in quiz results that candidates from the same party share identical match scores (party-level positions).
+~~Explain in quiz results that candidates from the same party share identical match scores.~~ Done. Disclosure box now states that same-party candidates share identical match scores.
 
 ## After the election
 

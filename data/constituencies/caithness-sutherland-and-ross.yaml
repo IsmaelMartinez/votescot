@@ -16,3 +16,4 @@ topParties:
   - party: conservative
     share: 16
     status: might-win
+projectionSource: Ballot Box Scotland notional results; Highlands Lib Dem competition factor

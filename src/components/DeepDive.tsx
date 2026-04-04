@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import ErrorBoundary from "./ErrorBoundary";
 
 interface Candidate {
   id: string;
@@ -13,7 +14,7 @@ interface Props {
   candidate: Candidate;
 }
 
-export default function DeepDive({ candidate }: Props) {
+function DeepDiveInner({ candidate }: Props) {
   const [apiKey, setApiKey] = useState(() => {
     if (typeof window !== "undefined") {
       return sessionStorage.getItem("votescot-api-key") || "";
@@ -149,4 +150,8 @@ export default function DeepDive({ candidate }: Props) {
       {analysis && <div className="mt-2">{formatAnalysis(analysis)}</div>}
     </div>
   );
+}
+
+export default function DeepDive(props: Props) {
+  return <ErrorBoundary><DeepDiveInner {...props} /></ErrorBoundary>;
 }

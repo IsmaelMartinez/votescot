@@ -16,7 +16,7 @@ const { candidate, basePath } = Astro.props;
     </span>
   )}
   <div class="flex items-center gap-2 mb-1">
-    <div class="w-2.5 h-2.5 rounded-full shrink-0" style={`background: ${candidate.color}; border: 2px solid ${candidate.accent}`} />
+    <div class="w-2.5 h-2.5 rounded-full shrink-0" style={`background: ${candidate.textColor ? candidate.accent : candidate.color}; border: 2px solid ${candidate.accent}`} />
     <div>
       <div class="font-heading font-black text-sm">{candidate.name}</div>
       <div class="font-body text-xs text-gray-400">{candidate.party}</div>

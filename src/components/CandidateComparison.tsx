@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import ErrorBoundary from "./ErrorBoundary";
 import type { Candidate, QuizQuestion } from "../lib/data";
 
 interface Constituency {
@@ -12,7 +13,7 @@ interface Props {
   constituencies: Constituency[];
 }
 
-export default function CandidateComparison({ candidates, questions, constituencies }: Props) {
+function CandidateComparisonInner({ candidates, questions, constituencies }: Props) {
   const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
     if (typeof window !== "undefined") {
       return new URLSearchParams(window.location.search).get("constituency") || "";
@@ -98,7 +99,7 @@ export default function CandidateComparison({ candidates, questions, constituenc
                 >
                   <div
                     className="w-2 h-2 rounded-full shrink-0 mt-1"
-                    style={{ background: cand.color, border: `1.5px solid ${cand.accent}` }}
+                    style={{ background: cand.textColor ? cand.accent : cand.color, border: `1.5px solid ${cand.accent}` }}
                   />
                   <div>
                     <span className="font-body text-xs font-bold text-gray-600">
@@ -116,4 +117,8 @@ export default function CandidateComparison({ candidates, questions, constituenc
       </div>
     </div>
   );
+}
+
+export default function CandidateComparison(props: Props) {
+  return <ErrorBoundary><CandidateComparisonInner {...props} /></ErrorBoundary>;
 }

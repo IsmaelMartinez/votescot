@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from "react";
+import ErrorBoundary from "./ErrorBoundary";
 
 interface PollEntry {
   date: string;
@@ -47,7 +48,7 @@ function dateToMs(d: string): number {
   return new Date(d).getTime();
 }
 
-export default function PollsChart({ data }: Props) {
+function PollsChartInner({ data }: Props) {
   const [voteType, setVoteType] = useState<"constituency" | "regional">("constituency");
   const [tooltip, setTooltip] = useState<{ x: number; y: number; poll: PollEntry } | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -278,4 +279,8 @@ export default function PollsChart({ data }: Props) {
       </div>
     </div>
   );
+}
+
+export default function PollsChart(props: Props) {
+  return <ErrorBoundary><PollsChartInner {...props} /></ErrorBoundary>;
 }

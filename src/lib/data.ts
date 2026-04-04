@@ -50,6 +50,7 @@ export interface Constituency {
   description: string;
   context: string;
   projection?: string;
+  projectionSource?: string;
   competitiveness?: "safe" | "competitive" | "marginal" | "toss-up";
   topParties?: PartyProjection[];
 }
@@ -84,10 +85,15 @@ function loadYaml<T>(filePath: string): T {
   return yaml.parse(content) as T;
 }
 
+let candidatesCache: readonly Candidate[] | null = null;
+
 export function loadCandidates(): Candidate[] {
-  const dir = path.resolve(process.cwd(), "data/candidates");
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
-  return files.map((f) => loadYaml<Candidate>(path.join("data/candidates", f)));
+  if (!candidatesCache) {
+    const dir = path.resolve(process.cwd(), "data/candidates");
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
+    candidatesCache = Object.freeze(files.map((f) => loadYaml<Candidate>(path.join("data/candidates", f))));
+  }
+  return [...candidatesCache];
 }
 
 export function loadConstituency(id: string): Constituency {

@@ -19,7 +19,7 @@ const questions = loadQuestions();
 
   <div class="py-3.5">
     <div class="flex items-center gap-2 mb-2">
-      <div class="w-3 h-3 rounded-full" style={`background: ${candidate.color}; border: 2px solid ${candidate.accent}`} />
+      <div class="w-3 h-3 rounded-full" style={`background: ${candidate.textColor ? candidate.accent : candidate.color}; border: 2px solid ${candidate.accent}`} />
       <h2 class="font-heading text-lg font-black m-0">
         {candidate.name}
         <span class="font-normal text-gray-400 text-[12.5px] ml-1">{candidate.party}</span>

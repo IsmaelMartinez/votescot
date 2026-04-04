@@ -16,3 +16,4 @@ topParties:
   - party: labour
     share: 25
     status: could-win
+projectionSource: Ballot Box Scotland notional results adjusted for local Green incumbency

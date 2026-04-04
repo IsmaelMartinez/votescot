@@ -1,3 +1,5 @@
+@import "@fontsource-variable/crimson-pro";
+@import "@fontsource-variable/source-sans-3";
 @import "tailwindcss";
 
 @theme {
@@ -8,6 +10,6 @@
   --color-match-good: #2d8a4e;
   --color-match-partial: #c4940a;
   --color-match-poor: #c0392b;
-  --font-heading: "Crimson Pro", Georgia, serif;
-  --font-body: "Source Sans 3", sans-serif;
+  --font-heading: "Crimson Pro Variable", Georgia, serif;
+  --font-body: "Source Sans 3 Variable", sans-serif;
 }

@@ -9,6 +9,8 @@ import {
 import L from "leaflet";
 import type { Layer, PathOptions } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { feature } from "topojson-client";
+import ErrorBoundary from "./ErrorBoundary";
 
 interface ConstituencyProperties {
   id: string;
@@ -63,7 +65,7 @@ function MapController({
   return null;
 }
 
-export default function ConstituencyMap({ knownConstituencies, basePath }: Props) {
+function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
   const [features, setFeatures] = useState<ConstituencyFeature[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -78,15 +80,16 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ name: string; slug: string; covered: boolean } | null>(null);
 
-  // Load the GeoJSON at mount
+  // Load the TopoJSON at mount and convert to GeoJSON features
   useEffect(() => {
-    fetch(`${basePath}constituencies.geojson`)
+    fetch(`${basePath}constituencies.topojson`)
       .then((r) => {
         if (!r.ok) throw new Error(`Failed to load boundaries: ${r.status}`);
         return r.json();
       })
-      .then((data) => {
-        setFeatures(data.features as ConstituencyFeature[]);
+      .then((topo) => {
+        const geojson = feature(topo, topo.objects.constituencies) as any;
+        setFeatures(geojson.features as ConstituencyFeature[]);
         setLoading(false);
       })
       .catch((err) => {
@@ -333,4 +336,8 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
       </div>
     </div>
   );
+}
+
+export default function ConstituencyMap(props: Props) {
+  return <ErrorBoundary><ConstituencyMapInner {...props} /></ErrorBoundary>;
 }

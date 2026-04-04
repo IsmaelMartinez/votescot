@@ -10,6 +10,7 @@
     "description": { "type": "string", "minLength": 1 },
     "context": { "type": "string", "minLength": 1 },
     "projection": { "type": "string" },
+    "projectionSource": { "type": "string" },
     "competitiveness": {
       "type": "string",
       "enum": ["safe", "competitive", "marginal", "toss-up"]

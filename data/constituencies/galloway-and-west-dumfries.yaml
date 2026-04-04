@@ -16,3 +16,4 @@ topParties:
   - party: reform
     share: 20
     status: could-win
+projectionSource: Ballot Box Scotland notional results adjusted for Reform UK vote share

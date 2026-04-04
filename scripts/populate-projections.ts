@@ -12,6 +12,7 @@ interface PartyProjection {
 
 interface Projection {
   projection: string;
+  projectionSource: string;
   competitiveness: "safe" | "competitive" | "marginal" | "toss-up";
   topParties: PartyProjection[];
 }
@@ -19,6 +20,7 @@ interface Projection {
 // Default for most SNP-held Scottish constituencies
 const defaultProjection: Projection = {
   projection: "snp",
+  projectionSource: "National polling average with uniform swing applied to 2021 results",
   competitiveness: "competitive",
   topParties: [
     { party: "snp", share: 34, status: "could-win" },
@@ -31,6 +33,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Edinburgh seats
   "edinburgh-central": {
     projection: "green",
+    projectionSource: "Ballot Box Scotland notional results adjusted for local Green incumbency",
     competitiveness: "toss-up",
     topParties: [
       { party: "green", share: 30, status: "could-win" },
@@ -40,6 +43,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-north-western": {
     projection: "libdem",
+    projectionSource: "Ballot Box Scotland notional results; Lib Dem incumbency advantage",
     competitiveness: "safe",
     topParties: [
       { party: "libdem", share: 42, status: "will-win" },
@@ -49,6 +53,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-southern": {
     projection: "labour",
+    projectionSource: "Ballot Box Scotland notional results with Labour local council gains",
     competitiveness: "competitive",
     topParties: [
       { party: "labour", share: 32, status: "could-win" },
@@ -58,6 +63,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-northern": {
     projection: "libdem",
+    projectionSource: "Ballot Box Scotland notional results; Lib Dem incumbency advantage",
     competitiveness: "competitive",
     topParties: [
       { party: "libdem", share: 35, status: "could-win" },
@@ -67,6 +73,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-eastern-musselburgh-and-tranent": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -76,6 +83,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-north-eastern-and-leith": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -85,6 +93,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "edinburgh-south-western": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -95,6 +104,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Glasgow seats — Labour targets
   "glasgow-central": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Glasgow council vote trends",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -104,6 +114,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-southside": {
     projection: "labour",
+    projectionSource: "Ballot Box Scotland notional results; Glasgow council vote trends",
     competitiveness: "competitive",
     topParties: [
       { party: "labour", share: 33, status: "could-win" },
@@ -113,6 +124,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-anniesland": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Glasgow council vote trends",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -122,6 +134,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-baillieston-and-shettleston": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 40, status: "will-win" },
@@ -131,6 +144,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-cathcart-and-pollok": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Glasgow council vote trends",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -140,6 +154,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-easterhouse-and-springburn": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 38, status: "will-win" },
@@ -149,6 +164,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "glasgow-kelvin-and-maryhill": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Green vote share from 2022 council results",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -159,6 +175,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Lib Dem strongholds
   "orkney-islands": {
     projection: "libdem",
+    projectionSource: "Historical results; Lib Dem hold since 1950 with strong incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "libdem", share: 55, status: "will-win" },
@@ -168,6 +185,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "shetland-islands": {
     projection: "libdem",
+    projectionSource: "Historical results; Lib Dem hold since 1965 with strong incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "libdem", share: 50, status: "will-win" },
@@ -177,6 +195,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "fife-north-east": {
     projection: "libdem",
+    projectionSource: "Ballot Box Scotland notional results; Lib Dem incumbency advantage",
     competitiveness: "competitive",
     topParties: [
       { party: "libdem", share: 35, status: "could-win" },
@@ -187,6 +206,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Conservative-held seats under pressure from Reform
   "ettrick-roxburgh-and-berwickshire": {
     projection: "conservative",
+    projectionSource: "Ballot Box Scotland notional results adjusted for Reform UK vote share",
     competitiveness: "competitive",
     topParties: [
       { party: "conservative", share: 30, status: "could-win" },
@@ -196,6 +216,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "galloway-and-west-dumfries": {
     projection: "conservative",
+    projectionSource: "Ballot Box Scotland notional results adjusted for Reform UK vote share",
     competitiveness: "competitive",
     topParties: [
       { party: "conservative", share: 28, status: "could-win" },
@@ -205,6 +226,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "dumfriesshire": {
     projection: "conservative",
+    projectionSource: "Ballot Box Scotland notional results adjusted for Reform UK vote share",
     competitiveness: "competitive",
     topParties: [
       { party: "conservative", share: 30, status: "could-win" },
@@ -215,6 +237,7 @@ const OVERRIDES: Record<string, Projection> = {
   // SNP safe seats
   "dundee-city-east": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 42, status: "will-win" },
@@ -224,6 +247,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "dundee-city-west": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 40, status: "will-win" },
@@ -234,6 +258,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Northeast — SNP but Conservative/Reform competition
   "aberdeenshire-east": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split in NE Scotland",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -243,6 +268,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "aberdeenshire-west": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split in NE Scotland",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 30, status: "could-win" },
@@ -252,6 +278,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "aberdeen-central": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -261,6 +288,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "aberdeen-donside": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 38, status: "will-win" },
@@ -270,6 +298,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "aberdeen-deeside-and-north-kincardine": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split in NE Scotland",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 31, status: "could-win" },
@@ -279,6 +308,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "banffshire-and-buchan-coast": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 40, status: "will-win" },
@@ -288,6 +318,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "moray": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split in NE Scotland",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -298,6 +329,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Highlands and Islands
   "caithness-sutherland-and-ross": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Highlands Lib Dem competition factor",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -307,6 +339,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "inverness-and-nairn": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Highlands Lib Dem competition factor",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -316,6 +349,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "skye-lochaber-and-badenoch": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 42, status: "will-win" },
@@ -325,6 +359,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "na-h-eileanan-an-iar": {
     projection: "snp",
+    projectionSource: "Historical results; SNP dominant since 2011 with strong incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 48, status: "will-win" },
@@ -334,6 +369,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "argyll-and-bute": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Highlands Lib Dem competition factor",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -344,6 +380,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Central Belt / Lothian SNP safe-ish seats
   "almond-valley": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -353,6 +390,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "bathgate": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -362,6 +400,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "midlothian-north": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -371,6 +410,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "midlothian-south-tweeddale-and-lauderdale": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -380,6 +420,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "east-lothian-coast-and-lammermuirs": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -390,6 +431,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Fife seats
   "cowdenbeath": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -399,6 +441,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "dunfermline": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -408,6 +451,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "kirkcaldy": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -417,6 +461,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "mid-fife-and-glenrothes": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 35, status: "could-win" },
@@ -426,6 +471,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "perthshire-north": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 40, status: "will-win" },
@@ -435,6 +481,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "perthshire-south-and-kinross-shire": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -444,6 +491,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "stirling": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -453,6 +501,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "clackmannanshire-and-dunblane": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -463,6 +512,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Ayrshire seats
   "ayr": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; three-way Conservative-Reform-SNP split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 30, status: "could-win" },
@@ -472,6 +522,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "carrick-cumnock-and-doon-valley": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -481,6 +532,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "cunninghame-north": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -490,6 +542,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "cunninghame-south": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -499,6 +552,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "kilmarnock-and-irvine-valley": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -509,6 +563,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Renfrewshire / West
   "paisley": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -518,6 +573,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "renfrewshire-north-and-cardonald": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -527,6 +583,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "renfrewshire-west-and-levern-valley": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -537,6 +594,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Lanarkshire seats
   "airdrie": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -546,6 +604,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "coatbridge-and-chryston": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -555,6 +614,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "cumbernauld-and-kilsyth": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 35, status: "could-win" },
@@ -564,6 +624,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "hamilton-larkhall-and-stonehouse": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -573,6 +634,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "motherwell-and-wishaw": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -582,6 +644,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "uddingston-and-bellshill": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -591,6 +654,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "rutherglen-and-cambuslang": {
     projection: "labour",
+    projectionSource: "Ballot Box Scotland notional results; Labour by-election gain in 2023",
     competitiveness: "competitive",
     topParties: [
       { party: "labour", share: 34, status: "could-win" },
@@ -600,6 +664,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "east-kilbride": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -609,6 +674,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "clydesdale": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 32, status: "could-win" },
@@ -619,6 +685,7 @@ const OVERRIDES: Record<string, Projection> = {
   // West / Dumbarton
   "clydebank-and-milngavie": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -628,6 +695,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "dumbarton": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -637,6 +705,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "strathkelvin-and-bearsden": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 33, status: "could-win" },
@@ -646,6 +715,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "eastwood": {
     projection: "conservative",
+    projectionSource: "Ballot Box Scotland notional results; Conservative incumbency advantage",
     competitiveness: "competitive",
     topParties: [
       { party: "conservative", share: 30, status: "could-win" },
@@ -656,6 +726,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Falkirk seats
   "falkirk-east-and-linlithgow": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -665,6 +736,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "falkirk-west": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -675,6 +747,7 @@ const OVERRIDES: Record<string, Projection> = {
   // Angus
   "angus-north-and-mearns": {
     projection: "snp",
+    projectionSource: "Historical results and national polling; strong SNP incumbency",
     competitiveness: "safe",
     topParties: [
       { party: "snp", share: 38, status: "will-win" },
@@ -684,6 +757,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "angus-south": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results; Conservative-Reform vote split",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 35, status: "could-win" },
@@ -693,6 +767,7 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "inverclyde": {
     projection: "snp",
+    projectionSource: "Ballot Box Scotland notional results with national polling swing",
     competitiveness: "competitive",
     topParties: [
       { party: "snp", share: 34, status: "could-win" },
@@ -722,6 +797,7 @@ function main() {
     const proj = OVERRIDES[id] ?? defaultProjection;
 
     constituency.projection = proj.projection;
+    constituency.projectionSource = proj.projectionSource;
     constituency.competitiveness = proj.competitiveness;
     constituency.topParties = proj.topParties;
 

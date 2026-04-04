@@ -1,6 +1,7 @@
 import React from "react";
 import SearchFilter, { type SearchItem } from "./SearchFilter";
 import PostcodeInput from "./PostcodeInput";
+import ErrorBoundary from "./ErrorBoundary";
 
 interface Props {
   items: SearchItem[];
@@ -8,7 +9,7 @@ interface Props {
   basePath: string;
 }
 
-export default function CandidatesSearch({ items, knownConstituencies, basePath }: Props) {
+function CandidatesSearchInner({ items, knownConstituencies, basePath }: Props) {
   const handleSelect = (item: SearchItem) => {
     if (item.id.startsWith("constituency:")) {
       const slug = item.id.replace("constituency:", "");
@@ -34,4 +35,8 @@ export default function CandidatesSearch({ items, knownConstituencies, basePath 
       />
     </div>
   );
+}
+
+export default function CandidatesSearch(props: Props) {
+  return <ErrorBoundary><CandidatesSearchInner {...props} /></ErrorBoundary>;
 }

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { slugifyConstituency } from "../lib/slugify";
+import ErrorBoundary from "./ErrorBoundary";
 
 interface Props {
   knownConstituencies: string[];
   basePath: string;
 }
 
-export default function PostcodeLookup({ knownConstituencies, basePath }: Props) {
+function PostcodeLookupInner({ knownConstituencies, basePath }: Props) {
   const [postcode, setPostcode] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{
@@ -120,4 +121,8 @@ export default function PostcodeLookup({ knownConstituencies, basePath }: Props)
       </div>
     </div>
   );
+}
+
+export default function PostcodeLookup(props: Props) {
+  return <ErrorBoundary><PostcodeLookupInner {...props} /></ErrorBoundary>;
 }
