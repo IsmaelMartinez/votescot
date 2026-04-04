@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
-    "@astrojs/sitemap": "^3.7.2",
     "@google/generative-ai": "^0.24.1",
     "@tailwindcss/vite": "^4.2.2",
     "@types/leaflet": "^1.9.21",
@@ -30,6 +29,7 @@
     "yaml": "^2.8.3"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@types/pdf-parse": "^1.1.5",
     "ajv": "^8.18.0",
     "tsx": "^4.21.0",
