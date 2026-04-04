@@ -1,0 +1,88 @@
+questions:
+  - id: "independence"
+    area: "Scotland's Future"
+    question: "What's your view on Scottish independence?"
+    options:
+      - label: "Scotland should become independent"
+        value: 2
+      - label: "Scotland should stay in the UK"
+        value: 0
+      - label: "Not a priority for me either way"
+        value: 1
+
+  - id: "nhs"
+    area: "NHS & Health"
+    question: "What's the best approach to fix the NHS?"
+    options:
+      - label: "Invest more, expand public services, raise care worker pay"
+        value: 2
+      - label: "Maintain current approach, incremental improvements"
+        value: 1
+      - label: "Reform and streamline — cut bureaucracy, better value for money"
+        value: 0
+
+  - id: "housing"
+    area: "Housing"
+    question: "How should Edinburgh's housing crisis be tackled?"
+    options:
+      - label: "Stronger rent controls and tenant protections"
+        value: 2
+      - label: "Build more social housing and help first-time buyers"
+        value: 1
+      - label: "Let the market work — less regulation, more incentives for developers"
+        value: 0
+
+  - id: "climate"
+    area: "Climate & Transport"
+    question: "How urgently should Scotland act on climate?"
+    options:
+      - label: "Emergency — free public transport, ban road expansion, tax polluters"
+        value: 2
+      - label: "Important but balanced — net zero by 2045, pragmatic steps"
+        value: 1
+      - label: "Affordability first — scrap unachievable targets, protect energy jobs"
+        value: 0
+
+  - id: "tax"
+    area: "Tax & Public Spending"
+    question: "What should Scotland do about tax?"
+    options:
+      - label: "Tax the wealthy more to fund public services"
+        value: 2
+      - label: "Keep current rates — they're working well enough"
+        value: 1
+      - label: "Cut taxes to boost growth and competitiveness"
+        value: 0
+
+  - id: "economy"
+    area: "Economy & Jobs"
+    question: "What economic approach appeals to you most?"
+    options:
+      - label: "Green economy — four-day week, UBI pilots, circular economy"
+        value: 2
+      - label: "Public investment — GB Energy, planning reform, infrastructure"
+        value: 1
+      - label: "Pro-business — cut red tape, lower taxes, attract investment"
+        value: 0
+
+  - id: "education"
+    area: "Education & Childcare"
+    question: "What's the top education priority?"
+    options:
+      - label: "Massively expand childcare — funded from 6 months"
+        value: 2
+      - label: "Close the poverty-related attainment gap in schools"
+        value: 1
+      - label: "Vocational training and skills for work"
+        value: 0
+
+  - id: "equality"
+    area: "Social Issues"
+    question: "Where do you stand on social and equality issues?"
+    options:
+      - label: "Progressive — strong trans rights, anti-poverty, systemic change"
+        value: 2
+      - label: "Moderate progressive — rights matter but pragmatic approach"
+        value: 1
+      - label: "Socially conservative — traditional values, less government intervention"
+        value: 0

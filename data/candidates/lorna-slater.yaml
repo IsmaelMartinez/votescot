@@ -1,0 +1,42 @@
+id: "slater"
+name: "Lorna Slater"
+party: "Scottish Greens"
+partyShort: "Green"
+color: "#00A651"
+accent: "#007A3D"
+constituency: "edinburgh-central"
+isIncumbent: false
+bio: "Former Green co-leader and Minister (2021-2024). Delivered free bus travel for under-22s and rent controls. Ballot Box Scotland projects Greens could win here — would be first ever Green constituency MSP."
+
+positions:
+  independence: 2
+  nhs: 2
+  housing: 2
+  climate: 2
+  tax: 2
+  economy: 2
+  education: 1
+  equality: 2
+
+stances:
+  independence: "Supports independence. Part of former Bute House Agreement. Also supports republic long-term."
+  nhs: "Care workers £15/hr. Walk-in mental health centres. Scottish Child Payment to £40/wk (up from £28.20)."
+  housing: "Strengthen rent controls (already delivered first version). Tackle landlord exploitation. Edinburgh rents a key focus."
+  climate: "Most ambitious platform. Free bus travel for ALL. Public bus network. Higher taxes on polluters. End road expansion."
+  tax: "Higher taxes on super-rich, big banks, Amazon warehouses, casinos/bookies. Fund public services through wealth."
+  economy: "Four-day week pilot. Universal basic income exploration. Green jobs. Circular economy."
+  education: "Expand funded childcare from 6 months. 43,000 more children covered. Biggest expansion in a generation."
+  equality: "Strong advocate for trans rights. Progressive social policy. Anti-poverty focus."
+
+highlights:
+  - "First ever Green government minister in UK history"
+  - "Delivered free bus travel for under-22s (930,000+ eligible)"
+  - "Delivered rent control legislation"
+  - "Deposit Return Scheme faced delays — controversial"
+  - "Projected to potentially win Edinburgh Central"
+
+sources:
+  - url: "https://greens.scot/people/lorna-slater"
+    type: "party_website"
+  - url: "https://www.theyworkforyou.com/sp/?m=25808"
+    type: "voting_record"

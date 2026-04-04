@@ -1,0 +1,39 @@
+id: "mowat"
+name: "Jo Mowat"
+party: "Scottish Conservatives"
+partyShort: "Tory"
+color: "#0087DC"
+accent: "#005EA5"
+constituency: "edinburgh-central"
+isIncumbent: false
+bio: "Edinburgh city councillor. Also 5th on Conservative regional list. Edinburgh Central was held by Ruth Davidson (Con) from 2016-2021. Party seeking to rebuild under Russell Findlay's 'common sense' platform."
+
+positions:
+  independence: 0
+  nhs: 0
+  housing: 0
+  climate: 0
+  tax: 0
+  economy: 0
+  education: 0
+  equality: 0
+
+stances:
+  independence: "Strongest opposition to independence. Union first. No referendum under any circumstances."
+  nhs: "Faster GP access. Better value for taxpayers. Reduce NHS bureaucracy."
+  housing: "Market-led approach. Less regulation. Help homeowners."
+  climate: "Scrap 2045 net zero target. 'Affordable Transition Fund' instead. Protect North Sea jobs."
+  tax: "Cut income tax below rest-of-UK rates. Business rates overhaul — zero under £20k. Apprenticeship reform."
+  economy: "Scottish 'Canary Wharf'. Cut red tape. Pro-business deregulation. Attract investment."
+  education: "Raise school standards. Vocational routes with parity of esteem. Skills for work."
+  equality: "More socially conservative. Opposed Gender Recognition Reform. Traditional values emphasis."
+
+highlights:
+  - "Edinburgh city councillor — local experience"
+  - "Edinburgh Central was Conservative 2016-2021 under Ruth Davidson"
+  - "Also on regional list (5th) — potential route via list"
+  - "Party rebuilding under Russell Findlay"
+
+sources:
+  - url: "https://www.scottishconservatives.com/"
+    type: "party_website"

@@ -1,0 +1,25 @@
+# Postcode sectors mapping to Edinburgh Central constituency
+# Source: Boundaries Scotland 2026 boundary review
+# Note: This is an initial mapping based on known boundary areas.
+# Full mapping requires cross-referencing NRS postcode index with GIS boundary data.
+edinburgh-central:
+  - "EH1 1"
+  - "EH1 2"
+  - "EH1 3"
+  - "EH2 1"
+  - "EH2 2"
+  - "EH2 3"
+  - "EH2 4"
+  - "EH3 5"
+  - "EH3 6"
+  - "EH3 7"
+  - "EH3 8"
+  - "EH3 9"
+  - "EH4 1"
+  - "EH7 4"
+  - "EH7 5"
+  - "EH8 8"
+  - "EH8 9"
+  - "EH11 1"
+  - "EH11 2"
+  - "EH12 5"
