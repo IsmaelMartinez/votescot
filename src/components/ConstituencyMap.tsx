@@ -136,7 +136,7 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
         },
         click() {
           if (covered) {
-            window.location.href = `${basePath}candidates?constituency=${slug}`;
+            window.location.href = `${basePath}candidates/constituency/${slug}`;
           } else {
             setTooltip({ name, slug, covered });
             setTimeout(() => setTooltip(null), 3000);
@@ -233,7 +233,7 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
             {postcodeResult.covered ? (
               <>
                 <a
-                  href={`${basePath}candidates?constituency=${postcodeResult.slug}`}
+                  href={`${basePath}candidates/constituency/${postcodeResult.slug}`}
                   className="text-blue-600 underline font-semibold"
                 >
                   See your candidates →

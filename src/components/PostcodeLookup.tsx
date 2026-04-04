@@ -97,7 +97,7 @@ export default function PostcodeLookup({ knownConstituencies, basePath }: Props)
             Take the vote compass →
           </a>{" "}
           or{" "}
-          <a href={`${basePath}candidates?constituency=${result.constituencyId}`} className="text-blue-600 underline font-semibold">
+          <a href={`${basePath}candidates/constituency/${result.constituencyId}`} className="text-blue-600 underline font-semibold">
             see your candidates →
           </a>
         </div>
