@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "name", "region", "boundaryYear", "description", "context"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "boundaryYear": { "type": "integer" },
+    "description": { "type": "string", "minLength": 1 },
+    "context": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "name", "party", "partyShort", "color", "accent", "constituency", "isIncumbent", "bio", "positions", "stances", "highlights", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "party": { "type": "string", "minLength": 1 },
+    "partyShort": { "type": "string", "minLength": 1 },
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "textColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{3,6}$" },
+    "constituency": { "type": "string" },
+    "isIncumbent": { "type": "boolean" },
+    "bio": { "type": "string", "minLength": 1 },
+    "positions": {
+      "type": "object",
+      "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
+      "properties": {
+        "independence": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "nhs": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "housing": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "climate": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "tax": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "economy": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "education": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "equality": { "type": "integer", "minimum": 0, "maximum": 2 }
+      },
+      "additionalProperties": false
+    },
+    "stances": {
+      "type": "object",
+      "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
+      "additionalProperties": { "type": "string" }
+    },
+    "highlights": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "type"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "type": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
