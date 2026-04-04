@@ -1,0 +1,14 @@
+id: miles-briggs
+name: Miles Briggs
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+constituency: east-lothian-coast-and-lammermuirs
+isIncumbent: false
+quizCandidate: false
+bio: Conservative and Unionist Party candidate for East Lothian Coast and Lammermuirs.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

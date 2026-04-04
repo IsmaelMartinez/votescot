@@ -1,0 +1,14 @@
+id: patrick-logue
+name: Patrick Logue
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: rutherglen-and-cambuslang
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Rutherglen and Cambuslang.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

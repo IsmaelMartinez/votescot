@@ -1,14 +1,20 @@
-id: "dundas"
-name: "Charles Dundas"
-party: "Liberal Democrats"
-partyShort: "Lib Dem"
+id: charles-dundas
+name: Charles Dundas
+party: Liberal Democrats
+partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
-constituency: "edinburgh-central"
+constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: true
-bio: "Lib Dem candidate. Party's Edinburgh focus is mainly on Northern and North Western seats. Edinburgh Central has been competitive for Lib Dems historically — they nearly won in 2007."
-
+bio: Lib Dem candidate. Party's Edinburgh focus is mainly on Northern and North Western seats. Edinburgh Central has been competitive for Lib Dems historically — they nearly won in 2007.
+highlights:
+  - Lib Dems nearly won Edinburgh Central in 2007
+  - Party focus is on Edinburgh Northern and North Western
+  - Likely lower priority for Lib Dem campaign resources in Central
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website
 positions:
   independence: 0
   nhs: 1
@@ -18,22 +24,12 @@ positions:
   economy: 1
   education: 1
   equality: 1
-
 stances:
-  independence: "Oppose independence. Support federalism — Scotland within a reformed UK structure."
-  nhs: "Mental health specialists in every GP surgery. Social care reform. Cancer care prioritisation."
-  housing: "Build affordable housing. Protect greenbelt. Balance development with environment."
-  climate: "Net zero by 2045. New national parks. Sewage transparency reform. Rail decarbonisation."
-  tax: "Personal allowance increases. No Scottish rate rises. Modest, targeted approach."
-  economy: "Support SMEs. Budget negotiations track record (secured £178m rates relief). Pragmatic centrism."
-  education: "Play-based learning. Mental health support in schools. University funding reform."
-  equality: "Liberal approach. Individual rights focus. Moderate progressive position."
-
-highlights:
-  - "Lib Dems nearly won Edinburgh Central in 2007"
-  - "Party focus is on Edinburgh Northern and North Western"
-  - "Likely lower priority for Lib Dem campaign resources in Central"
-
-sources:
-  - url: "https://www.scotlibdems.org.uk/"
-    type: "party_website"
+  independence: Oppose independence. Support federalism — Scotland within a reformed UK structure.
+  nhs: Mental health specialists in every GP surgery. Social care reform. Cancer care prioritisation.
+  housing: Build affordable housing. Protect greenbelt. Balance development with environment.
+  climate: Net zero by 2045. New national parks. Sewage transparency reform. Rail decarbonisation.
+  tax: Personal allowance increases. No Scottish rate rises. Modest, targeted approach.
+  economy: Support SMEs. Budget negotiations track record (secured £178m rates relief). Pragmatic centrism.
+  education: Play-based learning. Mental health support in schools. University funding reform.
+  equality: Liberal approach. Individual rights focus. Moderate progressive position.

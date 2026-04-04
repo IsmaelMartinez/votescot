@@ -1,0 +1,14 @@
+id: brooke-ritchie
+name: Brooke Ritchie
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: banffshire-and-buchan-coast
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Banffshire and Buchan Coast.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

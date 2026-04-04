@@ -1,0 +1,15 @@
+id: deidre-leanne-brock
+name: Deidre Leanne Brock
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: edinburgh-southern
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Edinburgh Southern.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

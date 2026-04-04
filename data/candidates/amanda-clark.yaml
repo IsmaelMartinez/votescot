@@ -1,0 +1,14 @@
+id: amanda-clark
+name: Amanda Clark
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: perthshire-south-and-kinross-shire
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Perthshire South and Kinross-shire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

@@ -1,0 +1,14 @@
+id: abu-meron
+name: Abu Meron
+party: Workers Party of Britain
+partyShort: Workers
+color: "#c41230"
+accent: "#8b0d22"
+constituency: edinburgh-northern
+isIncumbent: false
+quizCandidate: false
+bio: Workers Party of Britain candidate for Edinburgh Northern.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
+    type: party_website

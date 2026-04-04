@@ -1,0 +1,14 @@
+id: ben-langmead
+name: Ben Langmead
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: clydebank-and-milngavie
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Clydebank and Milngavie.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

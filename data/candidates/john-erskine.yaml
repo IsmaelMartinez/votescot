@@ -1,0 +1,14 @@
+id: john-erskine
+name: John Erskine
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: shetland-islands
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Shetland Islands.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

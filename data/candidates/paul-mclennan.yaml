@@ -1,0 +1,15 @@
+id: paul-mclennan
+name: Paul McLennan
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: east-lothian-coast-and-lammermuirs
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for East Lothian Coast and Lammermuirs.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

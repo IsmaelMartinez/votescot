@@ -1,0 +1,14 @@
+id: tommy-macpherson
+name: Tommy Macpherson
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+constituency: argyll-and-bute
+isIncumbent: false
+quizCandidate: false
+bio: Independent candidate for Argyll and Bute.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

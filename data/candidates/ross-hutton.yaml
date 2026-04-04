@@ -1,0 +1,14 @@
+id: ross-hutton
+name: Ross Hutton
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+constituency: glasgow-southside
+isIncumbent: false
+quizCandidate: false
+bio: Conservative and Unionist Party candidate for Glasgow Southside.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

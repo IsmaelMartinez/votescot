@@ -1,0 +1,14 @@
+id: ray-georgeson
+name: Ray Georgeson
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: ettrick-roxburgh-and-berwickshire
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Ettrick, Roxburgh and Berwickshire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

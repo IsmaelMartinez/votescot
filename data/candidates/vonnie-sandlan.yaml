@@ -1,0 +1,14 @@
+id: vonnie-sandlan
+name: Vonnie Sandlan
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: glasgow-central
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Glasgow Central.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

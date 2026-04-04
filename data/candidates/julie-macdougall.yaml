@@ -1,0 +1,14 @@
+id: julie-macdougall
+name: Julie MacDougall
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: kirkcaldy
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Kirkcaldy.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

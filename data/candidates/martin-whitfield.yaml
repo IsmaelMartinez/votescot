@@ -1,0 +1,14 @@
+id: martin-whitfield
+name: Martin Whitfield
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: east-lothian-coast-and-lammermuirs
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for East Lothian Coast and Lammermuirs.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

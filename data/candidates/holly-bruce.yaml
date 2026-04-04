@@ -1,0 +1,14 @@
+id: holly-bruce
+name: Holly Bruce
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+constituency: glasgow-southside
+isIncumbent: false
+quizCandidate: false
+bio: Scottish Green Party candidate for Glasgow Southside.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

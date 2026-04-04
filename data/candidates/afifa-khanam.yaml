@@ -1,0 +1,14 @@
+id: afifa-khanam
+name: Afifa Khanam
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: mid-fife-and-glenrothes
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Mid Fife and Glenrothes.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

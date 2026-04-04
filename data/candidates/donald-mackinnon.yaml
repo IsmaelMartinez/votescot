@@ -1,0 +1,14 @@
+id: donald-mackinnon
+name: Donald MacKinnon
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: na-h-eileanan-an-iar
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Na h-Eileanan an Iar.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

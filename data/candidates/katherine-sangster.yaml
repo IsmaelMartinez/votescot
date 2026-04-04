@@ -1,0 +1,14 @@
+id: katherine-sangster
+name: Katherine Sangster
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: edinburgh-eastern-musselburgh-and-tranent
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Edinburgh Eastern, Musselburgh and Tranent.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

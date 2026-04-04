@@ -1,0 +1,14 @@
+id: alex-armitage
+name: Alex Armitage
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+constituency: shetland-islands
+isIncumbent: false
+quizCandidate: false
+bio: Scottish Green Party candidate for Shetland Islands.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

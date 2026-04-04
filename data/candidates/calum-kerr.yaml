@@ -1,0 +1,15 @@
+id: calum-kerr
+name: Calum Kerr
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: midlothian-south-tweeddale-and-lauderdale
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Midlothian South, Tweeddale and Lauderdale.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

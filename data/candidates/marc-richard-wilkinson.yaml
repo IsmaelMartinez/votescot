@@ -1,0 +1,14 @@
+id: marc-richard-wilkinson
+name: Marc Richard Wilkinson
+party: Edinburgh & East Lothian People
+partyShort: Edinburgh & East Lothian People
+color: "#666666"
+accent: "#444444"
+constituency: edinburgh-southern
+isIncumbent: false
+quizCandidate: false
+bio: Edinburgh & East Lothian People candidate for Edinburgh Southern.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18303/
+    type: party_website

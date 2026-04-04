@@ -1,0 +1,14 @@
+id: duncan-angus-melville-dunlop
+name: Duncan Angus Melville Dunlop
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: midlothian-south-tweeddale-and-lauderdale
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Midlothian South, Tweeddale and Lauderdale.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

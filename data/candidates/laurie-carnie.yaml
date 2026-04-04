@@ -1,0 +1,14 @@
+id: laurie-carnie
+name: Laurie Carnie
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: angus-north-and-mearns
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Angus North and Mearns.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

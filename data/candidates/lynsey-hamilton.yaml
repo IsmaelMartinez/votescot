@@ -1,0 +1,14 @@
+id: lynsey-hamilton
+name: Lynsey Hamilton
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: clydesdale
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Clydesdale.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

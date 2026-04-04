@@ -1,0 +1,14 @@
+id: kaymarie-hughes
+name: Kaymarie Hughes
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: ettrick-roxburgh-and-berwickshire
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Ettrick, Roxburgh and Berwickshire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

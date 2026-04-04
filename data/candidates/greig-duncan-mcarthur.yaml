@@ -1,0 +1,14 @@
+id: greig-duncan-mcarthur
+name: Greig Duncan McArthur
+party: Alliance to Liberate Scotland
+partyShort: Alliance to Liberate Scotland
+color: "#666666"
+accent: "#444444"
+constituency: motherwell-and-wishaw
+isIncumbent: false
+quizCandidate: false
+bio: Alliance to Liberate Scotland candidate for Motherwell and Wishaw.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

@@ -1,0 +1,14 @@
+id: ian-wallace-el-paget
+name: Ian Wallace El-Paget
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+constituency: falkirk-east-and-linlithgow
+isIncumbent: false
+quizCandidate: false
+bio: Independent candidate for Falkirk East and Linlithgow.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

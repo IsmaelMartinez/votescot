@@ -1,15 +1,22 @@
-id: "robertson"
-name: "Angus Robertson"
-party: "Scottish National Party"
-partyShort: "SNP"
+id: angus-robertson
+name: Angus Robertson
+party: Scottish National Party (SNP)
+partyShort: SNP
 color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
-constituency: "edinburgh-central"
-isIncumbent: true
+constituency: edinburgh-central
+isIncumbent: false
 quizCandidate: true
-bio: "MSP for Edinburgh Central since 2021. Cabinet Secretary for Culture and External Affairs. Former SNP Westminster leader (2001-2017). Led party through 2014 independence referendum."
-
+bio: MSP for Edinburgh Central since 2021. Cabinet Secretary for Culture and External Affairs. Former SNP Westminster leader (2001-2017). Led party through 2014 independence referendum.
+highlights:
+  - Won seat from Ruth Davidson (Con) in 2021
+  - Cabinet Secretary — Culture & External Affairs
+  - Former SNP Westminster leader
+  - No candidate has ever won >40% in this constituency
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website
 positions:
   independence: 2
   nhs: 1
@@ -19,25 +26,12 @@ positions:
   economy: 1
   education: 1
   equality: 2
-
 stances:
-  independence: "Core commitment. Independence referendum if SNP majority. 'Second vote delivers independence.'"
-  nhs: "Continue current investment. Deliver National Care Service (delayed since 2021). Mental health focus."
-  housing: "Continue rent control framework. Social housing investment. Maintain current approach."
-  climate: "Net zero by 2045. Just transition fund. Active travel investment. (2030 interim targets were abandoned in 2024.)"
-  tax: "Maintain progressive Scottish income tax. Currently generates ~£1bn more than rest-of-UK equivalent."
-  economy: "Just transition from oil/gas. Protect free tuition. Creative industries investment (Robertson's portfolio)."
-  education: "Protect free tuition. Maintain current education approach. National standards."
-  equality: "Supported Gender Recognition Reform Bill (blocked by UK Gov). Progressive social policy."
-
-highlights:
-  - "Won seat from Ruth Davidson (Con) in 2021"
-  - "Cabinet Secretary — Culture & External Affairs"
-  - "Former SNP Westminster leader"
-  - "No candidate has ever won >40% in this constituency"
-
-sources:
-  - url: "https://www.snp.org/people/angus-robertson/"
-    type: "party_website"
-  - url: "https://www.theyworkforyou.com/sp/?m=25625"
-    type: "voting_record"
+  independence: Core commitment. Independence referendum if SNP majority. 'Second vote delivers independence.'
+  nhs: Continue current investment. Deliver National Care Service (delayed since 2021). Mental health focus.
+  housing: Continue rent control framework. Social housing investment. Maintain current approach.
+  climate: Net zero by 2045. Just transition fund. Active travel investment. (2030 interim targets were abandoned in 2024.)
+  tax: Maintain progressive Scottish income tax. Currently generates ~£1bn more than rest-of-UK equivalent.
+  economy: Just transition from oil/gas. Protect free tuition. Creative industries investment (Robertson's portfolio).
+  education: Protect free tuition. Maintain current education approach. National standards.
+  equality: Supported Gender Recognition Reform Bill (blocked by UK Gov). Progressive social policy.

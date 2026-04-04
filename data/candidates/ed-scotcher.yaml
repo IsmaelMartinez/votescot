@@ -1,0 +1,14 @@
+id: ed-scotcher
+name: Ed Scotcher
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: mid-fife-and-glenrothes
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Mid Fife and Glenrothes.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

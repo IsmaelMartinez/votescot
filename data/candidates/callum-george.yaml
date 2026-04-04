@@ -1,0 +1,14 @@
+id: callum-george
+name: Callum George
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: argyll-and-bute
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Argyll and Bute.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

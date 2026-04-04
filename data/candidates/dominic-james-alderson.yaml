@@ -1,0 +1,14 @@
+id: dominic-james-alderson
+name: Dominic James Alderson
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+constituency: motherwell-and-wishaw
+isIncumbent: false
+quizCandidate: false
+bio: Independent candidate for Motherwell and Wishaw.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

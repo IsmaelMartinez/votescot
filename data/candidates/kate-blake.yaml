@@ -1,0 +1,14 @@
+id: kate-blake
+name: Kate Blake
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: aberdeenshire-west
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Aberdeenshire West.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

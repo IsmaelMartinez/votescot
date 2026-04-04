@@ -1,0 +1,14 @@
+id: luke-thomson
+name: Luke Thomson
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: perthshire-south-and-kinross-shire
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Perthshire South and Kinross-shire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

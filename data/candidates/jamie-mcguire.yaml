@@ -1,0 +1,14 @@
+id: jamie-mcguire
+name: Jamie McGuire
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: renfrewshire-west-and-levern-valley
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Renfrewshire West and Levern Valley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

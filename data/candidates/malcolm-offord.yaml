@@ -1,0 +1,14 @@
+id: malcolm-offord
+name: Malcolm Offord
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: inverclyde
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Inverclyde.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

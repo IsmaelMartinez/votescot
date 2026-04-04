@@ -1,0 +1,14 @@
+id: senga-beresford
+name: Senga Beresford
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: galloway-and-west-dumfries
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Galloway and West Dumfries.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

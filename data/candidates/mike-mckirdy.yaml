@@ -1,0 +1,14 @@
+id: mike-mckirdy
+name: Mike McKirdy
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: renfrewshire-north-and-cardonald
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Renfrewshire North and Cardonald.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

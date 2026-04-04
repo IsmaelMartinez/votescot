@@ -1,15 +1,15 @@
-id: "creighton"
-name: "Chris Creighton"
-party: "Independent"
-partyShort: "Ind"
+id: chris-creighton
+name: Chris Creighton
+party: Independent
+partyShort: Ind
 color: "#888888"
 accent: "#555555"
-constituency: "edinburgh-central"
+constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: false
-bio: "Independent candidate for Edinburgh Central."
-
+bio: Independent candidate for Edinburgh Central.
 highlights:
-  - "Independent candidate"
-
-sources: []
+  - Independent candidate
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

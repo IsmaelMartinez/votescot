@@ -1,0 +1,14 @@
+id: stewart-whyte
+name: Stewart Whyte
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+constituency: aberdeen-central
+isIncumbent: false
+quizCandidate: false
+bio: Conservative and Unionist Party candidate for Aberdeen Central.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

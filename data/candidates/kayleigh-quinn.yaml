@@ -1,0 +1,14 @@
+id: kayleigh-quinn
+name: Kayleigh Quinn
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: eastwood
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Eastwood.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

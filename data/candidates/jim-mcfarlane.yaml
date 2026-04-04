@@ -1,0 +1,14 @@
+id: jim-mcfarlane
+name: Jim McFarlane
+party: Trade Unionist and Socialist Coalition
+partyShort: Trade Unionist and Socialist Coalition
+color: "#666666"
+accent: "#444444"
+constituency: dundee-city-west
+isIncumbent: false
+quizCandidate: false
+bio: Trade Unionist and Socialist Coalition candidate for Dundee City West.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP804/
+    type: party_website

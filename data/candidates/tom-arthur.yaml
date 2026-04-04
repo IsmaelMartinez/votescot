@@ -1,0 +1,15 @@
+id: tom-arthur
+name: Tom Arthur
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: renfrewshire-west-and-levern-valley
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Renfrewshire West and Levern Valley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

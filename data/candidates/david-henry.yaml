@@ -1,15 +1,15 @@
-id: "henry"
-name: "David Henry"
-party: "Workers Party of Britain"
-partyShort: "Workers"
+id: david-henry
+name: David Henry
+party: Workers Party of Britain
+partyShort: Workers
 color: "#c41230"
 accent: "#8b0d22"
-constituency: "edinburgh-north-western"
+constituency: edinburgh-north-western
 isIncumbent: false
 quizCandidate: false
-bio: "Workers Party of Britain candidate for Edinburgh North Western."
-
+bio: Workers Party of Britain candidate for Edinburgh North Western.
 highlights:
-  - "Workers Party of Britain candidate"
-
-sources: []
+  - Workers Party of Britain candidate
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
+    type: party_website

@@ -1,0 +1,14 @@
+id: brian-nugent
+name: Brian Nugent
+party: Alliance to Liberate Scotland and Sovereignty
+partyShort: Alliance to Liberate Scotland and Sovereignty
+color: "#666666"
+accent: "#444444"
+constituency: shetland-islands
+isIncumbent: false
+quizCandidate: false
+bio: Alliance to Liberate Scotland and Sovereignty candidate for Shetland Islands.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
+    type: party_website

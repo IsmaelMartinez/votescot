@@ -1,0 +1,14 @@
+id: iris-duane
+name: Iris Duane
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+constituency: glasgow-kelvin-and-maryhill
+isIncumbent: false
+quizCandidate: false
+bio: Scottish Green Party candidate for Glasgow Kelvin and Maryhill.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

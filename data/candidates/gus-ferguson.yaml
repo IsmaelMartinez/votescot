@@ -1,0 +1,14 @@
+id: gus-ferguson
+name: Gus Ferguson
+party: British Unionist Party
+partyShort: British Unionist Party
+color: "#666666"
+accent: "#444444"
+constituency: bathgate
+isIncumbent: false
+quizCandidate: false
+bio: British Unionist Party candidate for Bathgate.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP2834/
+    type: party_website

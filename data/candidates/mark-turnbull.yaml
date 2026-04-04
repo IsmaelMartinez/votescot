@@ -1,0 +1,14 @@
+id: mark-turnbull
+name: Mark Turnbull
+party: Freedom Alliance
+partyShort: Freedom Alliance
+color: "#666666"
+accent: "#444444"
+constituency: paisley
+isIncumbent: false
+quizCandidate: false
+bio: Freedom Alliance candidate for Paisley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP17509/
+    type: party_website

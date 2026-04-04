@@ -34,7 +34,7 @@
       "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
       "additionalProperties": { "type": "string" }
     },
-    "highlights": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "highlights": { "type": "array", "items": { "type": "string" } },
     "sources": {
       "type": "array",
       "items": {

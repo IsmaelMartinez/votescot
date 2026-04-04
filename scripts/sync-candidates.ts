@@ -5,8 +5,20 @@ import { fetchJson } from "./lib/api";
 import { getPartyColours, getPartyShortName, slugify } from "./lib/parties";
 
 const DEMOCRACY_CLUB_BASE = "https://candidates.democracyclub.org.uk/api/next";
-const ELECTION_PREFIX = "sp.c.";
-const ELECTION_DATE = "2026-05-07";
+const ELECTION_ID = "sp.c.2026-05-07";
+
+interface Candidacy {
+  person: { id: number; name: string };
+  party_name: string;
+  party: { name: string; url?: string };
+  deselected: boolean;
+}
+
+interface Ballot {
+  ballot_paper_id: string;
+  post: { slug: string; label: string };
+  candidacies: Candidacy[];
+}
 
 interface DemocracyClubResult {
   id: number;
@@ -15,8 +27,9 @@ interface DemocracyClubResult {
   post: { slug: string; label: string };
 }
 
-interface DemocracyClubResponse {
-  results: DemocracyClubResult[];
+interface BallotsResponse {
+  count: number;
+  results: Ballot[];
   next: string | null;
 }
 
@@ -69,13 +82,13 @@ function readYaml(filePath: string): Record<string, unknown> | null {
   return yaml.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
-async function fetchAllCandidates(): Promise<DemocracyClubResult[]> {
-  const all: DemocracyClubResult[] = [];
+async function fetchAllBallots(): Promise<Ballot[]> {
+  const all: Ballot[] = [];
   let url: string | null =
-    `${DEMOCRACY_CLUB_BASE}/candidacies/?election_date=${ELECTION_DATE}&election_id_regex=^${ELECTION_PREFIX}&page_size=200`;
+    `${DEMOCRACY_CLUB_BASE}/ballots/?election_id=${ELECTION_ID}&page_size=200`;
 
   while (url) {
-    const page = await fetchJson<DemocracyClubResponse>(url);
+    const page = await fetchJson<BallotsResponse>(url);
     all.push(...page.results);
     url = page.next;
     if (url) await new Promise((r) => setTimeout(r, 500));
@@ -84,10 +97,27 @@ async function fetchAllCandidates(): Promise<DemocracyClubResult[]> {
   return all;
 }
 
+function ballotToResults(ballot: Ballot): DemocracyClubResult[] {
+  return ballot.candidacies
+    .filter((c) => !c.deselected)
+    .map((c) => ({
+      id: c.person.id,
+      person: { id: c.person.id, name: c.person.name, statement_to_voters: null },
+      party: { name: c.party_name || c.party.name, url: c.party.url || null },
+      post: ballot.post,
+    }));
+}
+
 async function main() {
-  console.log("Fetching candidates from Democracy Club...");
-  const apiCandidates = await fetchAllCandidates();
-  console.log(`Fetched ${apiCandidates.length} candidates.`);
+  console.log("Fetching ballots from Democracy Club...");
+  const ballots = await fetchAllBallots();
+  console.log(`Fetched ${ballots.length} ballots.`);
+
+  const apiCandidates: DemocracyClubResult[] = [];
+  for (const ballot of ballots) {
+    apiCandidates.push(...ballotToResults(ballot));
+  }
+  console.log(`Total candidates: ${apiCandidates.length}.`);
 
   const apiCandidateIds = new Set<string>();
   const constituencies = new Map<string, { slug: string; label: string }>();

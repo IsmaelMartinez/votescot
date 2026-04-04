@@ -1,0 +1,14 @@
+id: suzanne-grahame
+name: Suzanne Grahame
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: clackmannanshire-and-dunblane
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Clackmannanshire and Dunblane.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

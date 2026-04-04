@@ -1,15 +1,15 @@
-id: "thomson"
-name: "Davie Thomson"
-party: "Reform UK"
-partyShort: "Reform"
+id: david-thomson
+name: David Thomson
+party: Reform UK
+partyShort: Reform
 color: "#12B6CF"
 accent: "#0a7f91"
-constituency: "edinburgh-north-western"
+constituency: edinburgh-north-western
 isIncumbent: false
 quizCandidate: false
-bio: "Reform UK candidate for Edinburgh North Western."
-
+bio: Reform UK candidate for Edinburgh North Western.
 highlights:
-  - "Reform UK candidate"
-
-sources: []
+  - Reform UK candidate
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

@@ -1,0 +1,14 @@
+id: shaun-alexander-fraser
+name: Shaun Alexander Fraser
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: inverness-and-nairn
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Inverness and Nairn.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

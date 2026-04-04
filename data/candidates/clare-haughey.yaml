@@ -1,0 +1,15 @@
+id: clare-haughey
+name: Clare Haughey
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: rutherglen-and-cambuslang
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Rutherglen and Cambuslang.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

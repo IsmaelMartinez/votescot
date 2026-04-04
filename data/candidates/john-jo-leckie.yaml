@@ -1,0 +1,14 @@
+id: john-jo-leckie
+name: John Jo Leckie
+party: British Unionist Party
+partyShort: British Unionist Party
+color: "#666666"
+accent: "#444444"
+constituency: airdrie
+isIncumbent: false
+quizCandidate: false
+bio: British Unionist Party candidate for Airdrie.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP2834/
+    type: party_website

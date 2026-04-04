@@ -1,0 +1,14 @@
+id: lauren-buchanan-quigley
+name: Lauren Buchanan-Quigley
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: dunfermline
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Dunfermline.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

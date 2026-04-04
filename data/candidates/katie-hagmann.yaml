@@ -1,0 +1,15 @@
+id: katie-hagmann
+name: Katie Hagmann
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: carrick-cumnock-and-doon-valley
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Carrick, Cumnock and Doon Valley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

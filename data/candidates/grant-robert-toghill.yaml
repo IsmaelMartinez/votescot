@@ -1,0 +1,14 @@
+id: grant-robert-toghill
+name: Grant Robert Toghill
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: renfrewshire-north-and-cardonald
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Renfrewshire North and Cardonald.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

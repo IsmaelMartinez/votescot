@@ -1,0 +1,14 @@
+id: craig-john-murray
+name: Craig John Murray
+party: Alliance to Liberate Scotland
+partyShort: Alliance to Liberate Scotland
+color: "#666666"
+accent: "#444444"
+constituency: edinburgh-central
+isIncumbent: false
+quizCandidate: false
+bio: Alliance to Liberate Scotland candidate for Edinburgh Central.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

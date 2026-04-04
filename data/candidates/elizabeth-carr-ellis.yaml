@@ -1,0 +1,14 @@
+id: elizabeth-carr-ellis
+name: Elizabeth Carr-Ellis
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: fife-north-east
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Fife North East.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

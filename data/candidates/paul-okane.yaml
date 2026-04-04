@@ -1,0 +1,14 @@
+id: paul-okane
+name: Paul O'Kane
+party: Labour and Co-operative Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: renfrewshire-west-and-levern-valley
+isIncumbent: false
+quizCandidate: false
+bio: Labour and Co-operative Party candidate for Renfrewshire West and Levern Valley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
+    type: party_website

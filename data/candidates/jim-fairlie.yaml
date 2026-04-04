@@ -1,0 +1,15 @@
+id: jim-fairlie
+name: Jim Fairlie
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+textColor: "#333"
+constituency: perthshire-south-and-kinross-shire
+isIncumbent: false
+quizCandidate: false
+bio: Scottish National Party (SNP) candidate for Perthshire South and Kinross-shire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website

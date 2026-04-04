@@ -1,0 +1,14 @@
+id: steve-skerrett
+name: Steve Skerrett
+party: Advance UK
+partyShort: Advance UK
+color: "#666666"
+accent: "#444444"
+constituency: inverness-and-nairn
+isIncumbent: false
+quizCandidate: false
+bio: Advance UK candidate for Inverness and Nairn.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18211/
+    type: party_website

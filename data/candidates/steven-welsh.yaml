@@ -1,0 +1,14 @@
+id: steven-welsh
+name: Steven Welsh
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: caithness-sutherland-and-ross
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Caithness, Sutherland and Ross.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

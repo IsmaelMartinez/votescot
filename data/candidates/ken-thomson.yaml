@@ -1,0 +1,14 @@
+id: ken-thomson
+name: Ken Thomson
+party: Alliance for Democracy and Freedom
+partyShort: Alliance for Democracy and Freedom
+color: "#666666"
+accent: "#444444"
+constituency: renfrewshire-west-and-levern-valley
+isIncumbent: false
+quizCandidate: false
+bio: Alliance for Democracy and Freedom candidate for Renfrewshire West and Levern Valley.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP10288/
+    type: party_website

@@ -1,0 +1,14 @@
+id: roz-mccall
+name: Roz McCall
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+constituency: perthshire-south-and-kinross-shire
+isIncumbent: false
+quizCandidate: false
+bio: Conservative and Unionist Party candidate for Perthshire South and Kinross-shire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

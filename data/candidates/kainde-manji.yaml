@@ -1,0 +1,14 @@
+id: kainde-manji
+name: Kainde Manji
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+constituency: stirling
+isIncumbent: false
+quizCandidate: false
+bio: Labour Party candidate for Stirling.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

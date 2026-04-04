@@ -1,0 +1,14 @@
+id: david-kirkwood
+name: David Kirkwood
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+constituency: dumfriesshire
+isIncumbent: false
+quizCandidate: false
+bio: Reform UK candidate for Dumfriesshire.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website
