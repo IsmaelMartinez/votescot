@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { loadResources } from "../lib/data";
+
+const sections = loadResources();
+---
+
+<Base title="Research Hub" description="Curated resources for the 2026 Scottish Parliament election">
+  <Header slot="header" currentTab="resources" />
+
+  <div class="py-3.5">
+    <h2 class="font-heading text-base font-black mb-1">Research Hub</h2>
+    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+      Three tools cover the full picture: this quiz tells you <strong>who aligns with your values</strong>,
+      Ballot Box Scotland tells you <strong>who's likely to win</strong>, and Fraser of Allander tells you
+      <strong>whether the promises are funded</strong>.
+    </p>
+
+    {sections.map((section, si) => (
+      <div class:list={["mb-3.5", si === 0 ? "" : "mt-1"]}>
+        <h3 class="font-body text-[13px] font-black text-gray-700 mb-2">{section.title}</h3>
+        <div class="flex flex-col gap-1.5">
+          {section.items.map((item) => (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+              <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="font-body text-[13px] font-bold text-blue-600">{item.name}</span>
+                  <span class="font-body text-[10px] text-gray-300">↗</span>
+                </div>
+                <div class="font-body text-[11.5px] text-gray-500 leading-snug">{item.description}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="mt-2.5 p-2.5 bg-white rounded border border-votescot-border">
+      <div class="font-body text-[9.5px] font-bold uppercase tracking-widest text-gray-400 mb-1">Key dates</div>
+      <div class="font-body text-xs text-gray-600 leading-relaxed">
+        <strong>2 Apr</strong> Official candidates &bull;
+        <strong>9 Apr</strong> Dissolution &bull;
+        <strong>20 Apr</strong> Register deadline &bull;
+        <strong>21 Apr</strong> Postal vote deadline &bull;
+        <strong>7 May</strong> Polling day 7am–10pm &bull;
+        <strong>8 May</strong> Count
+      </div>
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</Base>
