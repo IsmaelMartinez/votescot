@@ -7,10 +7,14 @@ accent: "#8B0000"
 constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh Central.
-highlights: []
+bio: "Labour constituency candidate. New boundaries pull in areas from Edinburgh Southern (Labour territory), giving a realistic path to winning. Sarwar called for PM Starmer to resign (Feb 2026) — unusual Scottish-UK Labour tension."
+highlights:
+  - New boundaries favour Labour in this seat
+  - No Holyrood voting record — first-time candidate
+  - Sarwar's split with Starmer creates UK-Scottish Labour tension
+  - Edinburgh Central was Labour (Sarah Boyack) 1999-2011
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+  - url: https://scottishlabour.org.uk/
     type: party_website
 positions:
   independence: 0
@@ -22,20 +26,11 @@ positions:
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Focus on strengthening devolution within the
-    UK. Want Scotland to lead reform of the union, not leave it.
-  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments.
-    Increase capacity for mental health and cancer services.
-  housing: Build new social and affordable housing. Support first-time buyers with
-    targeted schemes. Reform planning to unlock more homes.
-  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned
-    clean energy company. Promote Scottish renewables jobs.
-  tax: No planned increase to Scottish income tax rates. Focus spending increases
-    on NHS efficiency and economic growth rather than tax rises.
-  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws
-    to attract business. Support industrial transition in heavy industry areas.
-  education: Close the attainment gap between richest and poorest pupils. Ban
-    mobile phones in classrooms. Invest in teaching workforce.
-  equality: Progressive on equalities generally. More cautious position on gender
-    recognition reform — supportive of trans rights while emphasising women's
-    spaces.
+  independence: "Oppose independence. Focus on making devolution work. MSP recall mechanism. Directly-elected mayors."
+  nhs: "Declare national waiting times emergency. GP within 48hrs. 160,000 extra appointments/yr. Digital-first. Reduce health boards."
+  housing: "End rough sleeping. Build more social housing. Help first-time buyers."
+  climate: "Support net zero. GB Energy (publicly-owned clean power, HQ in Scotland). Green jobs."
+  tax: "No increase to Scottish income tax rates. Growth-dependent strategy. Business rates reform."
+  economy: "GB Energy. Planning reform. Ban zero-hour contracts. Dept of Government Efficiency."
+  education: "Ban phones in classrooms. Close poverty-related attainment gap. Technology in schools."
+  equality: "Progressive but more cautious on gender recognition than SNP/Greens. Anti-poverty focus."
