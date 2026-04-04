@@ -8,8 +8,13 @@ textColor: "#333"
 constituency: perthshire-north
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Perthshire North.
-highlights: []
+bio: First Minister of Scotland since May 2024 and leader of the SNP. A veteran of Scottish politics, Swinney has been an MSP since 1999 and previously served as SNP leader (2000-2004), Deputy First Minister (2007-2024), and Cabinet Secretary for Finance. He is one of the longest-serving members of the Scottish Parliament.
+highlights:
+  - First Minister of Scotland since May 2024
+  - Previously served as Deputy First Minister for over 16 years (2007-2024)
+  - SNP leader twice — 2000-2004 and again from 2024
+  - Cabinet Secretary for Finance (2007-2016) and Education (2016-2023)
+  - MSP continuously since the Scottish Parliament's creation in 1999
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

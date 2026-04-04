@@ -8,8 +8,13 @@ textColor: "#333"
 constituency: mid-fife-and-glenrothes
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Mid Fife and Glenrothes.
-highlights: []
+bio: Cabinet Secretary for Education and Skills since 2023 and MSP for Mid Fife and Glenrothes since 2016. A former secondary school teacher and head of department in Fife, Gilruth previously served as Minister for Culture (2020-2022) and Minister for Transport (2022-2023). She brings direct classroom experience to her education brief.
+highlights:
+  - Cabinet Secretary for Education and Skills since 2023
+  - Former secondary school teacher and head of department in Fife
+  - Minister for Transport (2022-2023)
+  - Minister for Culture, Europe and International Development (2020-2022)
+  - Elected MSP in 2016 with a majority of over 8,000 votes
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

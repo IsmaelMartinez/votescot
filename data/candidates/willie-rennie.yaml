@@ -7,8 +7,13 @@ accent: "#B8860B"
 constituency: fife-north-east
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Fife North East.
-highlights: []
+bio: Former leader of the Scottish Liberal Democrats (2011-2021) and MSP for North East Fife since 2016. Before leading the party, Rennie served as MP for Dunfermline and West Fife (2006-2010) and was Chief Executive of the Scottish Liberal Democrats. He handed the leadership to Alex Cole-Hamilton in 2021 and remains one of the party's most experienced MSPs.
+highlights:
+  - Leader of the Scottish Liberal Democrats (2011-2021)
+  - MSP for North East Fife since 2016 (regional list MSP 2011-2016)
+  - Former MP for Dunfermline and West Fife (2006-2010)
+  - Former Chief Executive of the Scottish Liberal Democrats (1997-1999)
+  - Negotiated budget concessions including business rates relief
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
