@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ismaelmartinez.github.io/votescot/sitemap-index.xml
