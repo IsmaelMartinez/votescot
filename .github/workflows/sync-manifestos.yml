@@ -1,0 +1,42 @@
+name: Sync Manifestos
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run manifesto sync
+        run: npx tsx scripts/sync-manifestos.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Validate data
+        run: npm test
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/parties/ data/manifestos/ data/candidates/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "manifesto: update party positions from manifesto parsing"
+            git push
+          fi

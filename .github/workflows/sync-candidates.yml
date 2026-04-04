@@ -1,0 +1,65 @@
+name: Sync Candidates
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run candidate sync
+        run: npx tsx scripts/sync-candidates.ts
+
+      - name: Validate data
+        run: npm test
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/candidates/ data/constituencies/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            COUNTS=$(git diff --cached --stat | tail -1)
+            git commit -m "sync: update candidate data from Democracy Club
+
+          $COUNTS"
+            git push
+          fi
+
+      - name: Create withdrawal PR if needed
+        if: hashFiles('withdrawn.json') != ''
+        run: |
+          WITHDRAWN=$(cat withdrawn.json)
+          BRANCH="withdrawals-$(date +%Y%m%d)"
+          git checkout -b "$BRANCH"
+          echo "$WITHDRAWN" > data/withdrawn-$(date +%Y%m%d).json
+          git add data/
+          git commit -m "flag potentially withdrawn candidates for review"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "Review: potentially withdrawn candidates $(date +%Y-%m-%d)" \
+            --body "The following candidates appeared in our data but are no longer in the Democracy Club API:
+
+          $(echo "$WITHDRAWN" | jq -r '.[]' | sed 's/^/- /')
+
+          Please review and confirm withdrawals before merging." \
+            --base main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
