@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { loadCandidates, loadQuestions } from "../../lib/data";
+import DeepDive from "../../components/DeepDive.tsx";
 
 export function getStaticPaths() {
   const candidates = loadCandidates();
@@ -87,7 +88,7 @@ const questions = loadQuestions();
           Advanced: AI analysis (requires API key)
         </summary>
         <div class="mt-2">
-          <p class="font-body text-xs text-gray-400">AI deep dive component will be added in a later task.</p>
+          <DeepDive client:only="react" candidate={candidate} />
         </div>
       </details>
     </div>
