@@ -1,0 +1,56 @@
+---
+interface Props {
+  constituency?: string;
+  postcode?: string;
+  currentTab?: string;
+}
+
+const { constituency = "Edinburgh Central", postcode = "EH12 5NR", currentTab } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const tabs = [
+  { id: "quiz", label: "Quiz", href: `${base}quiz` },
+  { id: "candidates", label: "Candidates", href: `${base}candidates` },
+  { id: "compare", label: "Compare", href: `${base}compare` },
+  { id: "resources", label: "Resources", href: `${base}resources` },
+];
+---
+
+<header class="bg-votescot-dark text-votescot-paper border-b-[3px] border-votescot-gold px-4 pt-3.5 pb-3">
+  <div class="max-w-[920px] mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="text-lg">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+      <div>
+        <h1 class="text-lg font-heading font-black tracking-tight m-0">Scottish Election Helper</h1>
+        <div class="font-body text-[9.5px] text-votescot-gold tracking-widest uppercase font-bold">
+          Find your candidate &bull; 7 May 2026
+        </div>
+      </div>
+    </div>
+    <div class="bg-white/[0.08] rounded-md px-3 py-1.5 mt-2 font-body text-[11.5px] leading-snug text-gray-300">
+      <strong class="text-votescot-gold">{constituency}</strong> — Verified for {postcode} (Roseburn)
+      <br />
+      <span class="text-gray-500 text-[10.5px]">
+        Three-way marginal: SNP (incumbent) vs Green (projected to win) vs Labour &bull; 5 candidates confirmed
+      </span>
+    </div>
+  </div>
+</header>
+
+<nav class="max-w-[920px] mx-auto w-full px-3">
+  <div class="flex gap-0 border-b-2 border-gray-300 mt-2 overflow-x-auto">
+    {tabs.map((tab) => (
+      <a
+        href={tab.href}
+        class:list={[
+          "shrink-0 px-3.5 py-2 font-body text-xs font-medium uppercase tracking-wider -mb-[2px] no-underline",
+          currentTab === tab.id
+            ? "border-b-[3px] border-votescot-gold text-gray-900 font-bold"
+            : "border-b-[3px] border-transparent text-gray-400 hover:text-gray-600",
+        ]}
+      >
+        {tab.label}
+      </a>
+    ))}
+  </div>
+</nav>
