@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Banffshire and Buchan Coast constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: safe
+topParties:
+  - party: snp
+    share: 40
+    status: will-win
+  - party: conservative
+    share: 20
+    status: might-win
+  - party: reform
+    share: 16
+    status: might-win

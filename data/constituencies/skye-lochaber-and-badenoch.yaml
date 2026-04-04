@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Skye, Lochaber and Badenoch constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: safe
+topParties:
+  - party: snp
+    share: 42
+    status: will-win
+  - party: libdem
+    share: 18
+    status: might-win
+  - party: labour
+    share: 14
+    status: might-win

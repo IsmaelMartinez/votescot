@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Orkney Islands constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: libdem
+competitiveness: safe
+topParties:
+  - party: libdem
+    share: 55
+    status: will-win
+  - party: snp
+    share: 20
+    status: might-win
+  - party: conservative
+    share: 10
+    status: might-win

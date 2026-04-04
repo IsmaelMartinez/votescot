@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Glasgow Southside constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: labour
+competitiveness: competitive
+topParties:
+  - party: labour
+    share: 33
+    status: could-win
+  - party: snp
+    share: 30
+    status: could-win
+  - party: reform
+    share: 12
+    status: might-win

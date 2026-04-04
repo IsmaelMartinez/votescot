@@ -8,7 +8,28 @@
     "region": { "type": "string" },
     "boundaryYear": { "type": "integer" },
     "description": { "type": "string", "minLength": 1 },
-    "context": { "type": "string", "minLength": 1 }
+    "context": { "type": "string", "minLength": 1 },
+    "projection": { "type": "string" },
+    "competitiveness": {
+      "type": "string",
+      "enum": ["safe", "competitive", "marginal", "toss-up"]
+    },
+    "topParties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["party", "share", "status"],
+        "properties": {
+          "party": { "type": "string" },
+          "share": { "type": "number" },
+          "status": {
+            "type": "string",
+            "enum": ["will-win", "could-win", "might-win"]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
   },
   "additionalProperties": false
 }

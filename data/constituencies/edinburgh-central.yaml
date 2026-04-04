@@ -1,6 +1,18 @@
-id: "edinburgh-central"
-name: "Edinburgh Central"
-region: "Edinburgh and Lothians East"
+id: edinburgh-central
+name: Edinburgh Central
+region: Edinburgh and Lothians East
 boundaryYear: 2026
-description: "Covers Old/New Towns, Princes Street, Haymarket, Murrayfield, Stockbridge, Dalry, Fountainbridge, Tollcross, and parts of the South Side."
-context: "Three-way marginal. No candidate has ever won >40%. Greens projected for first constituency win."
+description: Covers Old/New Towns, Princes Street, Haymarket, Murrayfield, Stockbridge, Dalry, Fountainbridge, Tollcross, and parts of the South Side.
+context: Three-way marginal. No candidate has ever won >40%. Greens projected for first constituency win.
+projection: green
+competitiveness: toss-up
+topParties:
+  - party: green
+    share: 30
+    status: could-win
+  - party: snp
+    share: 28
+    status: could-win
+  - party: labour
+    share: 25
+    status: could-win

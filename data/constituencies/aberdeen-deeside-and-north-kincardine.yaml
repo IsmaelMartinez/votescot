@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Aberdeen Deeside and North Kincardine constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: competitive
+topParties:
+  - party: snp
+    share: 31
+    status: could-win
+  - party: conservative
+    share: 26
+    status: could-win
+  - party: reform
+    share: 18
+    status: might-win

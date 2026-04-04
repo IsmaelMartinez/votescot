@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Edinburgh Northern constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: libdem
+competitiveness: competitive
+topParties:
+  - party: libdem
+    share: 35
+    status: could-win
+  - party: snp
+    share: 28
+    status: could-win
+  - party: labour
+    share: 20
+    status: might-win

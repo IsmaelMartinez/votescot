@@ -18,6 +18,32 @@ const { constituency, candidates } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
+
+const competitivenessLabel: Record<string, string> = {
+  "safe": "Safe seat",
+  "competitive": "Competitive",
+  "marginal": "Marginal",
+  "toss-up": "Toss-up",
+};
+
+const competitivenessColor: Record<string, string> = {
+  "safe": "bg-gray-100 text-gray-600",
+  "competitive": "bg-amber-50 text-amber-700",
+  "marginal": "bg-orange-50 text-orange-700",
+  "toss-up": "bg-red-50 text-red-700",
+};
+
+const statusLabel: Record<string, string> = {
+  "will-win": "Will win",
+  "could-win": "Could win",
+  "might-win": "Might win",
+};
+
+const statusColor: Record<string, string> = {
+  "will-win": "text-green-700",
+  "could-win": "text-amber-700",
+  "might-win": "text-gray-500",
+};
 ---
 
 <Base title={`${constituency.name} Candidates`} description={`Candidates standing in ${constituency.name} for the 2026 Scottish Parliament election`}>
@@ -33,6 +59,45 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
       {candidates.length} candidates confirmed for 7 May 2026.
     </p>
+
+    {constituency.topParties && constituency.topParties.length > 0 && (
+      <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400">Projection</div>
+          {constituency.competitiveness && (
+            <span class={`font-body text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
+              {competitivenessLabel[constituency.competitiveness] ?? constituency.competitiveness}
+            </span>
+          )}
+        </div>
+
+        <div class="flex gap-1 mb-2.5 h-2 rounded overflow-hidden">
+          {constituency.topParties.map((p: any) => (
+            <div
+              class="h-full rounded-sm"
+              style={`width: ${p.share}%; background: var(--color-${p.party}, #cbd5e1)`}
+              title={`${p.party}: ${p.share}%`}
+            />
+          ))}
+        </div>
+
+        <div class="flex flex-wrap gap-x-4 gap-y-1">
+          {constituency.topParties.map((p: any) => (
+            <div class="flex items-center gap-1">
+              <div
+                class="w-2 h-2 rounded-full shrink-0"
+                style={`background: var(--color-${p.party}, #cbd5e1)`}
+              />
+              <span class="font-body text-[11px] font-bold capitalize">{p.party}</span>
+              <span class="font-body text-[11px] text-gray-400">{p.share}%</span>
+              <span class={`font-body text-[10px] ${statusColor[p.status] ?? "text-gray-500"}`}>
+                · {statusLabel[p.status] ?? p.status}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
 
     {quizCandidates.length > 0 && (
       <div class="mb-4">

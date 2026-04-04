@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Glasgow Easterhouse and Springburn constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: safe
+topParties:
+  - party: snp
+    share: 38
+    status: will-win
+  - party: labour
+    share: 26
+    status: might-win
+  - party: reform
+    share: 12
+    status: might-win

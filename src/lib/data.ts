@@ -36,6 +36,12 @@ export interface Candidate {
   sources: CandidateSource[];
 }
 
+export interface PartyProjection {
+  party: string;
+  share: number;
+  status: "will-win" | "could-win" | "might-win";
+}
+
 export interface Constituency {
   id: string;
   name: string;
@@ -43,6 +49,9 @@ export interface Constituency {
   boundaryYear: number;
   description: string;
   context: string;
+  projection?: string;
+  competitiveness?: "safe" | "competitive" | "marginal" | "toss-up";
+  topParties?: PartyProjection[];
 }
 
 export interface QuizOption {

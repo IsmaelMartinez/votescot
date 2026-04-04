@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Shetland Islands constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: libdem
+competitiveness: safe
+topParties:
+  - party: libdem
+    share: 50
+    status: will-win
+  - party: snp
+    share: 22
+    status: might-win
+  - party: conservative
+    share: 12
+    status: might-win

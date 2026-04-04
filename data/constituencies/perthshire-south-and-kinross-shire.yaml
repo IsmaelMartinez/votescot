@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Perthshire South and Kinross-shire constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: competitive
+topParties:
+  - party: snp
+    share: 34
+    status: could-win
+  - party: conservative
+    share: 22
+    status: could-win
+  - party: libdem
+    share: 16
+    status: might-win

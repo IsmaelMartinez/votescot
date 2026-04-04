@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Aberdeenshire West constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: competitive
+topParties:
+  - party: snp
+    share: 30
+    status: could-win
+  - party: conservative
+    share: 24
+    status: could-win
+  - party: reform
+    share: 18
+    status: might-win

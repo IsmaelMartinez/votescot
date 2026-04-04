@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Stirling constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: snp
+competitiveness: competitive
+topParties:
+  - party: snp
+    share: 34
+    status: could-win
+  - party: conservative
+    share: 22
+    status: could-win
+  - party: labour
+    share: 18
+    status: might-win

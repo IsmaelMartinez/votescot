@@ -4,3 +4,15 @@ region: ""
 boundaryYear: 2026
 description: Galloway and West Dumfries constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
+projection: conservative
+competitiveness: competitive
+topParties:
+  - party: conservative
+    share: 28
+    status: could-win
+  - party: snp
+    share: 25
+    status: could-win
+  - party: reform
+    share: 20
+    status: could-win
