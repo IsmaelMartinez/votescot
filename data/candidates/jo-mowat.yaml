@@ -22,12 +22,12 @@ sources:
     type: party_website
 positions:
   independence: 0
-  nhs: 0
+  nhs: 1
   housing: 0
   climate: 0
   tax: 0
   economy: 0
-  education: 0
+  education: 1
   equality: 0
 stances:
   independence: Strongest opposition to independence. Union first. No referendum under any circumstances.
