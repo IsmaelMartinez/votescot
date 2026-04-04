@@ -5,7 +5,7 @@ partyShort: Reform
 color: "#12B6CF"
 accent: "#0a7f91"
 constituency: airdrie
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Reform UK candidate for Airdrie.
 highlights: []

@@ -5,7 +5,7 @@ partyShort: Ind
 color: "#888888"
 accent: "#555555"
 constituency: inverness-and-nairn
-isIncumbent: false
+isIncumbent: true
 quizCandidate: false
 bio: Independent candidate for Inverness and Nairn.
 highlights: []

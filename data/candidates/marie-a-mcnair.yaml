@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: clydebank-and-milngavie
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Scottish National Party (SNP) candidate for Clydebank and Milngavie.
 highlights: []

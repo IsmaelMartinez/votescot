@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: edinburgh-south-western
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Edinburgh South Western.
 highlights: []

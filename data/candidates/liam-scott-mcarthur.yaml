@@ -5,7 +5,7 @@ partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
 constituency: orkney-islands
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Liberal Democrats candidate for Orkney Islands.
 highlights: []

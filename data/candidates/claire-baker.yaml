@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: kirkcaldy
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour and Co-operative Party candidate for Kirkcaldy.
 highlights: []

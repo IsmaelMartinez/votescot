@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: stirling
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Stirling.
 highlights: []

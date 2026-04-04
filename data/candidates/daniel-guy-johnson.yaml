@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: edinburgh-southern
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour Party candidate for Edinburgh Southern.
 highlights: []
