@@ -51,11 +51,11 @@ const statusColor: Record<string, string> = {
 
   <div class="py-3.5">
     <div class="mb-4">
-      <a href={`${base}candidates`} class="font-body text-[11px] text-gray-400 no-underline hover:text-gray-600">← All constituencies</a>
+      <a href={`${base}candidates`} class="font-body text-xs text-gray-400 no-underline hover:text-gray-600">← All constituencies</a>
     </div>
 
     <h2 class="font-heading text-lg font-black mb-0.5">{constituency.name}</h2>
-    <p class="font-body text-[11px] text-gray-400 leading-snug mb-1">{constituency.context}</p>
+    <p class="font-body text-xs text-gray-400 leading-snug mb-1">{constituency.context}</p>
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
       {candidates.length} candidates confirmed for 7 May 2026.
     </p>
@@ -63,9 +63,9 @@ const statusColor: Record<string, string> = {
     {constituency.topParties && constituency.topParties.length > 0 && (
       <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
-          <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400">Projection</div>
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">Projection</div>
           {constituency.competitiveness && (
-            <span class={`font-body text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
+            <span class={`font-body text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
               {competitivenessLabel[constituency.competitiveness] ?? constituency.competitiveness}
             </span>
           )}
@@ -88,9 +88,9 @@ const statusColor: Record<string, string> = {
                 class="w-2 h-2 rounded-full shrink-0"
                 style={`background: var(--color-${p.party}, #cbd5e1)`}
               />
-              <span class="font-body text-[11px] font-bold capitalize">{p.party}</span>
-              <span class="font-body text-[11px] text-gray-400">{p.share}%</span>
-              <span class={`font-body text-[10px] ${statusColor[p.status] ?? "text-gray-500"}`}>
+              <span class="font-body text-xs font-bold capitalize">{p.party}</span>
+              <span class="font-body text-xs text-gray-400">{p.share}%</span>
+              <span class={`font-body text-xs ${statusColor[p.status] ?? "text-gray-500"}`}>
                 · {statusLabel[p.status] ?? p.status}
               </span>
             </div>
@@ -101,7 +101,7 @@ const statusColor: Record<string, string> = {
 
     {quizCandidates.length > 0 && (
       <div class="mb-4">
-        <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
           Quiz candidates — included in vote compass matching
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -114,7 +114,7 @@ const statusColor: Record<string, string> = {
 
     {otherCandidates.length > 0 && (
       <div>
-        <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
           {quizCandidates.length > 0 ? "Other candidates" : "Candidates"}
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">

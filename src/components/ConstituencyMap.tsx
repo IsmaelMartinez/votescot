@@ -118,8 +118,8 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
       // Bind a sticky tooltip with the constituency name
       (layer as any).bindTooltip(
         covered
-          ? `<strong>${name}</strong><br/><span style="font-size:11px;color:#16a34a">Click to see candidates</span>`
-          : `<strong>${name}</strong><br/><span style="font-size:11px;color:#9ca3af">Coming soon</span>`,
+          ? `<strong>${name}</strong><br/><span style="font-size:12px;color:#16a34a">Click to see candidates</span>`
+          : `<strong>${name}</strong><br/><span style="font-size:12px;color:#9ca3af">Coming soon</span>`,
         { sticky: true, className: "constituency-tooltip" }
       );
 
@@ -319,7 +319,7 @@ export default function ConstituencyMap({ knownConstituencies, basePath }: Props
         </MapContainer>
       </div>
 
-      <div className="font-body text-[10px] text-gray-400">
+      <div className="font-body text-xs text-gray-400">
         Boundaries: 2026 Scottish Parliament constituencies (SPCF) via{" "}
         <a
           href="https://mapit.mysociety.org/"

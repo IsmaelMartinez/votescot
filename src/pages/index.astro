@@ -42,7 +42,7 @@ const base = import.meta.env.BASE_URL;
       {constituencies.map((c) => (
         <a href={`${base}candidates/constituency/${c.id}`} class="bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
           <div class="font-heading font-bold text-sm mb-0.5">{c.name}</div>
-          <div class="font-body text-[11px] text-gray-500 leading-snug">{c.context}</div>
+          <div class="font-body text-xs text-gray-500 leading-snug">{c.context}</div>
         </a>
       ))}
     </div>

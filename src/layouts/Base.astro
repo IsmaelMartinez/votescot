@@ -23,8 +23,9 @@ const base = import.meta.env.BASE_URL;
     />
   </head>
   <body class="bg-votescot-paper text-gray-900 font-body min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-votescot-dark focus:text-white focus:px-4 focus:py-2 focus:rounded focus:font-body focus:text-sm focus:font-bold">Skip to content</a>
     <slot name="header" />
-    <main class="max-w-[920px] mx-auto w-full px-3 flex-1">
+    <main id="main-content" class="max-w-[920px] mx-auto w-full px-3 flex-1">
       <slot />
     </main>
     <slot name="footer" />

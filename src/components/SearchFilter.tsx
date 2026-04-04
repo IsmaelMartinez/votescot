@@ -117,7 +117,7 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
               <span className="font-bold truncate">{item.label}</span>
               {item.sublabel && (
                 <span
-                  className="shrink-0 text-[11px]"
+                  className="shrink-0 text-xs"
                   style={{ color: i === activeIndex ? "#c4940a" : "#9ca3af" }}
                 >
                   {item.sublabel}

@@ -45,11 +45,11 @@ const searchItems = [
     {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
       <div class="mb-6" id={constituency.id}>
         <h3 class="font-heading text-base font-black mb-0.5">{constituency.name}</h3>
-        <p class="font-body text-[11px] text-gray-400 leading-snug mb-3">{constituency.context}</p>
+        <p class="font-body text-xs text-gray-400 leading-snug mb-3">{constituency.context}</p>
 
         {quizCandidates.length > 0 && (
           <div class="mb-3">
-            <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+            <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
               Quiz candidates
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -62,7 +62,7 @@ const searchItems = [
 
         {otherCandidates.length > 0 && (
           <div>
-            <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+            <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
               Other candidates
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">

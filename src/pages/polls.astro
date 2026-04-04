@@ -53,7 +53,7 @@ const sortedParties = partyKeys
 
     <!-- Latest poll headline bar -->
     <div class="bg-white border border-votescot-border rounded-md p-3 mb-4">
-      <div class="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
+      <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
         Latest Poll — {latest.pollster} · {formatDate(latest.endDate)}
         {latest.sampleSize ? ` · n=${latest.sampleSize.toLocaleString()}` : ""}
       </div>
@@ -63,12 +63,12 @@ const sortedParties = partyKeys
           return (
             <div class="flex flex-col items-center">
               <div
-                class="flex items-end justify-center font-body font-bold text-white text-[11px] rounded-sm"
+                class="flex items-end justify-center font-body font-bold text-white text-xs rounded-sm"
                 style={`background:${PARTY_COLORS[key]};width:${Math.max(val * 1.6, 24)}px;height:${Math.max(val * 1.4, 20)}px;`}
               >
                 {val}%
               </div>
-              <div class="font-body text-[9px] text-gray-500 mt-0.5 text-center">
+              <div class="font-body text-xs text-gray-500 mt-0.5 text-center">
                 {PARTY_LABELS[key]}
               </div>
             </div>
@@ -87,7 +87,7 @@ const sortedParties = partyKeys
     <div>
       <h3 class="font-body text-[13px] font-black text-gray-700 mb-2">Recent Polls (Constituency)</h3>
       <div class="overflow-x-auto">
-        <table class="w-full font-body text-[11px] border-collapse">
+        <table class="w-full font-body text-xs border-collapse">
           <thead>
             <tr class="border-b border-votescot-border">
               <th class="text-left py-1.5 pr-2 text-gray-400 font-medium">Date</th>
@@ -121,7 +121,7 @@ const sortedParties = partyKeys
     </div>
 
     <!-- Attribution -->
-    <p class="font-body text-[10px] text-gray-400 mt-3 leading-snug">
+    <p class="font-body text-xs text-gray-400 mt-3 leading-snug">
       Data from <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" target="_blank" rel="noopener" class="underline">Wikipedia polling tracker</a>.
       Polls conducted by BPC-registered polling firms.
       Last synced: {new Date(pollsData.lastUpdated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.

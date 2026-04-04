@@ -82,18 +82,18 @@ export default function QuizEngine({ questions, candidates, constituencies, base
         <div className="flex items-center justify-between mb-3 flex-wrap gap-1.5">
           <div>
             <h2 className="font-heading text-lg font-black m-0">Your Matches</h2>
-            <div className="font-body text-[11px] text-gray-400">{selectedConstituencyName}</div>
+            <div className="font-body text-xs text-gray-400">{selectedConstituencyName}</div>
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => { setSelectedConstituency(""); setShowResults(false); setAnswers({}); }}
-              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
             >
               Change constituency
             </button>
             <button
               onClick={() => { setShowResults(false); setAnswers({}); }}
-              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+              className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
             >
               Reset quiz
             </button>
@@ -125,7 +125,7 @@ export default function QuizEngine({ questions, candidates, constituencies, base
                   />
                   <div>
                     <span className="font-heading font-black text-sm">{cand.name}</span>
-                    <span className="font-body text-[11px] text-gray-400 ml-1.5">{cand.party}</span>
+                    <span className="font-body text-xs text-gray-400 ml-1.5">{cand.party}</span>
                   </div>
                 </div>
                 <div
@@ -164,7 +164,7 @@ export default function QuizEngine({ questions, candidates, constituencies, base
                   return (
                     <span
                       key={questionId}
-                      className="font-body text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
+                      className="font-body text-xs px-1.5 py-0.5 rounded-full font-semibold"
                       style={{
                         background: diff === 0 ? "#e8f5e9" : diff === 1 ? "#fff8e1" : "#fce4ec",
                         color: diff === 0 ? "#2d8a4e" : diff === 1 ? "#c4940a" : "#c0392b",
@@ -179,7 +179,7 @@ export default function QuizEngine({ questions, candidates, constituencies, base
               <p className="font-body text-xs text-gray-500 leading-snug">{cand.bio}</p>
               <a
                 href={`${basePath}candidates/${cand.id}`}
-                className="inline-block mt-2 bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-500 no-underline hover:border-gray-400"
+                className="inline-block mt-2 bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-500 no-underline hover:border-gray-400"
               >
                 View full profile →
               </a>
@@ -202,7 +202,7 @@ export default function QuizEngine({ questions, candidates, constituencies, base
         <h2 className="font-heading text-lg font-black m-0">Vote Compass — {selectedConstituencyName}</h2>
         <button
           onClick={() => { setSelectedConstituency(""); setAnswers({}); }}
-          className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-[11px] text-gray-400 cursor-pointer"
+          className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
         >
           Change constituency
         </button>
@@ -221,14 +221,16 @@ export default function QuizEngine({ questions, candidates, constituencies, base
               border: answers[q.id] !== undefined ? "2px solid #c4940a" : "1px solid #e8e4df",
             }}
           >
-            <div className="font-body text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">
+            <div className="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
               {qi + 1}/{questions.length} &bull; {q.area}
             </div>
-            <div className="font-heading text-[15px] font-bold mb-2.5 leading-tight">{q.question}</div>
-            <div className="flex flex-col gap-1.5">
+            <div id={`question-${q.id}`} className="font-heading text-[15px] font-bold mb-2.5 leading-tight">{q.question}</div>
+            <div className="flex flex-col gap-1.5" role="radiogroup" aria-labelledby={`question-${q.id}`}>
               {q.options.map((opt) => (
                 <button
                   key={opt.value}
+                  role="radio"
+                  aria-checked={answers[q.id] === opt.value}
                   onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.value }))}
                   className="text-left rounded-md px-3 py-2 cursor-pointer font-body text-[13px] leading-snug transition-all"
                   style={{
