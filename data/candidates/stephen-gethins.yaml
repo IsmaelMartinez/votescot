@@ -19,8 +19,6 @@ sources:
     type: party_website
   - url: https://en.wikipedia.org/wiki/Stephen_Gethins
     type: wikipedia
-  - url: https://www.theyworkforyou.com/mp/25120/stephen_gethins/north_east_fife
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1
