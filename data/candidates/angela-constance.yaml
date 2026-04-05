@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: almond-valley
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Cabinet Secretary for Justice and Home Affairs since 2023 and MSP for Almond Valley since 2007. A former social worker by profession, Constance has held multiple cabinet roles including Education, Communities, and Social Security. She also serves as the SNP's Business Convener (party chair) since 2023, overseeing party management and election campaigns.
 highlights:
@@ -17,10 +17,6 @@ highlights:
   - Former social worker; MSP since 2007
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.almond-valley.2026-05-07/almond-valley/
-    type: whocanivotefor
-  - url: https://www.snp.org/
     type: party_website
 positions:
   independence: 2

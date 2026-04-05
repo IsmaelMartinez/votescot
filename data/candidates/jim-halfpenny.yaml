@@ -12,5 +12,3 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP804/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.renfrewshire-north-and-cardonald.2026-05-07/renfrewshire-north-and-cardonald/
-    type: whocanivotefor

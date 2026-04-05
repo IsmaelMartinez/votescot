@@ -5,16 +5,12 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: aberdeen-deeside-and-north-kincardine
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Aberdeen Deeside and North Kincardine.
 highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.aberdeen-deeside-and-north-kincardine.2026-05-07/aberdeen-deeside-and-north-kincardine/
-    type: whocanivotefor
-  - url: https://www.scottishconservatives.com/
     type: party_website
 positions:
   independence: 0

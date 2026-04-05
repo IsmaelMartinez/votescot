@@ -12,5 +12,3 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP2834/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.bathgate.2026-05-07/bathgate/
-    type: whocanivotefor

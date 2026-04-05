@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: edinburgh-central
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: MSP for Edinburgh Central since 2021. Cabinet Secretary for Culture and External Affairs. Former SNP Westminster leader (2001-2017). Led party through 2014 independence referendum.
 highlights:
@@ -16,10 +16,6 @@ highlights:
   - No candidate has ever won >40% in this constituency
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-central.2026-05-07/edinburgh-central/
-    type: whocanivotefor
-  - url: https://www.snp.org/
     type: party_website
 positions:
   independence: 2

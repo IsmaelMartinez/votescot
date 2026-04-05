@@ -6,16 +6,12 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: ayr
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Scottish National Party (SNP) candidate for Ayr.
 highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.ayr.2026-05-07/ayr/
-    type: whocanivotefor
-  - url: https://www.snp.org/
     type: party_website
 positions:
   independence: 2

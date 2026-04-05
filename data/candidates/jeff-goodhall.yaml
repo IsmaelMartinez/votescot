@@ -12,10 +12,6 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.aberdeenshire-west.2026-05-07/aberdeenshire-west/
-    type: whocanivotefor
-  - url: https://www.scotlibdems.org.uk/
-    type: party_website
 positions:
   independence: 0
   nhs: 1
@@ -26,20 +22,11 @@ positions:
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Support a federal UK with stronger Scottish
-    devolution. Want a reformed union rather than separation.
-  nhs: Mental health specialists in every GP surgery. £500m care rescue package.
-    Rolling 10-year NHS workforce plan to end staffing crisis.
-  housing: Build affordable housing while protecting greenbelt. Balance
-    development needs with environmental quality of communities.
-  climate: Net zero by 2045. New national parks to protect nature. Sewage
-    transparency reform. Decarbonise rail and expand public transport.
-  tax: Maintain current Scottish income tax rates. Increase personal allowances so
-    low earners pay less.
-  economy: Support small and medium-sized businesses. Track record of negotiating
-    budget concessions (e.g., £178m business rates relief). Pragmatic centrist
-    economics.
-  education: Mental health counsellor in every school. Expand play-based learning
-    in early years. Education recovery plan post-pandemic.
-  equality: Liberal approach to individual rights. Moderate progressive position.
-    Support for LGBT+ protections within a rights-based framework.
+  independence: Oppose independence. Support a federal UK with stronger Scottish devolution. Want a reformed union rather than separation.
+  nhs: Mental health specialists in every GP surgery. £500m care rescue package. Rolling 10-year NHS workforce plan to end staffing crisis.
+  housing: Build affordable housing while protecting greenbelt. Balance development needs with environmental quality of communities.
+  climate: Net zero by 2045. New national parks to protect nature. Sewage transparency reform. Decarbonise rail and expand public transport.
+  tax: Maintain current Scottish income tax rates. Increase personal allowances so low earners pay less.
+  economy: Support small and medium-sized businesses. Track record of negotiating budget concessions (e.g., £178m business rates relief). Pragmatic centrist economics.
+  education: Mental health counsellor in every school. Expand play-based learning in early years. Education recovery plan post-pandemic.
+  equality: Liberal approach to individual rights. Moderate progressive position. Support for LGBT+ protections within a rights-based framework.

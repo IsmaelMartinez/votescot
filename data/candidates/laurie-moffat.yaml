@@ -12,5 +12,3 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.cowdenbeath.2026-05-07/cowdenbeath/
-    type: whocanivotefor

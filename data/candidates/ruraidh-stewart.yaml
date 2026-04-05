@@ -12,10 +12,6 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.inverness-and-nairn.2026-05-07/inverness-and-nairn/
-    type: whocanivotefor
-  - url: https://www.scottishconservatives.com/
-    type: party_website
 positions:
   independence: 0
   nhs: 1

@@ -12,10 +12,6 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.dunfermline.2026-05-07/dunfermline/
-    type: whocanivotefor
-  - url: https://www.reformparty.uk/
-    type: party_website
 positions:
   independence: 0
   nhs: 0

@@ -12,10 +12,6 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-northern.2026-05-07/edinburgh-northern/
-    type: whocanivotefor
-  - url: https://greens.scot/
-    type: party_website
 positions:
   independence: 2
   nhs: 2

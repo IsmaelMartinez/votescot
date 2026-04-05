@@ -5,16 +5,12 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: eastwood
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Eastwood.
 highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.eastwood.2026-05-07/eastwood/
-    type: whocanivotefor
-  - url: https://www.scottishconservatives.com/
     type: party_website
 positions:
   independence: 0

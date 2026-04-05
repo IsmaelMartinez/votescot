@@ -12,5 +12,3 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-eastern-musselburgh-and-tranent.2026-05-07/edinburgh-eastern-musselburgh-and-tranent/
-    type: whocanivotefor

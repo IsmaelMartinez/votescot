@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: uddingston-and-bellshill
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Conservative MSP for the Central Scotland region since 2021 and one of the party's younger representatives in Holyrood. Before entering Parliament, Gallacher served as a councillor on North Lanarkshire Council and as the Conservative group leader there. She served as Deputy Leader of the Scottish Conservatives (2022-2024) and was a candidate in the 2024 leadership election.
 highlights:
@@ -16,10 +16,6 @@ highlights:
   - Studied political science at the University of the West of Scotland
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.uddingston-and-bellshill.2026-05-07/uddingston-and-bellshill/
-    type: whocanivotefor
-  - url: https://www.scottishconservatives.com/
     type: party_website
 positions:
   independence: 0

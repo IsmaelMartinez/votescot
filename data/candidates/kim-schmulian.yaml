@@ -12,10 +12,6 @@ highlights: []
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.glasgow-cathcart-and-pollok.2026-05-07/glasgow-cathcart-and-pollok/
-    type: whocanivotefor
-  - url: https://www.reformparty.uk/
-    type: party_website
 positions:
   independence: 0
   nhs: 0

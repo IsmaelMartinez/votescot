@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: clydesdale
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: SNP Cabinet Secretary and MSP for Clydesdale since 2021, McAllan is one of the youngest members of the Scottish Cabinet. A former corporate solicitor who also served as a special adviser to First Minister Nicola Sturgeon, she has held the environment, net zero, and transport portfolios since entering Parliament and was appointed Cabinet Secretary for Housing in 2025.
 highlights:
@@ -17,10 +17,6 @@ highlights:
   - First elected to the Scottish Parliament in 2021 at age 28
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.clydesdale.2026-05-07/clydesdale/
-    type: whocanivotefor
-  - url: https://www.snp.org/
     type: party_website
 positions:
   independence: 2

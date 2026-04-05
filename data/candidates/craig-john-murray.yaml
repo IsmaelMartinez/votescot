@@ -13,5 +13,5 @@ highlights:
   - Pro-independence campaigner and author
   - Alliance to Liberate Scotland candidate
 sources:
-  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-central.2026-05-07/edinburgh-central/
-    type: whocanivotefor
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

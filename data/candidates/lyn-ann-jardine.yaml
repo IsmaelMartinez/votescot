@@ -14,10 +14,8 @@ highlights:
   - Councillor since 2022
   - First-time Holyrood candidate
 sources:
-  - url: https://www.snp.org/snp-announce-candidates-for-2026-scottish-parliament-elections/
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.edinburgh-north-western.2026-05-07/edinburgh-north-western/
-    type: whocanivotefor
 positions:
   independence: 2
   nhs: 1

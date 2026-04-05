@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: paisley
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Labour MSP for the West Scotland region since 2011 and the party's Shadow Cabinet Secretary for Constitution, External Affairs and Culture. A Renfrewshire native, Bibby was a councillor on Renfrewshire Council before being elected to Holyrood. He previously chaired both Young Labour UK and Scottish Labour Students.
 highlights:
@@ -17,10 +17,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
-  - url: https://whocanivotefor.co.uk/elections/sp.c.paisley.2026-05-07/paisley/
-    type: whocanivotefor
-  - url: https://scottishlabour.org.uk/
-    type: party_website
 positions:
   independence: 0
   nhs: 2
@@ -31,20 +27,11 @@ positions:
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Focus on strengthening devolution within the
-    UK. Want Scotland to lead reform of the union, not leave it.
-  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments.
-    Increase capacity for mental health and cancer services.
-  housing: Build new social and affordable housing. Support first-time buyers with
-    targeted schemes. Reform planning to unlock more homes.
-  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned
-    clean energy company. Promote Scottish renewables jobs.
-  tax: Maintain current Scottish income tax rates. No planned increases or cuts.
-    Focus on economic growth to fund services.
-  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws
-    to attract business. Support industrial transition in heavy industry areas.
-  education: Close the attainment gap between richest and poorest pupils. Ban
-    mobile phones in classrooms. Invest in teaching workforce.
-  equality: Progressive on equalities generally. More cautious position on gender
-    recognition reform — supportive of trans rights while emphasising women's
-    spaces.
+  independence: Oppose independence. Focus on strengthening devolution within the UK. Want Scotland to lead reform of the union, not leave it.
+  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments. Increase capacity for mental health and cancer services.
+  housing: Build new social and affordable housing. Support first-time buyers with targeted schemes. Reform planning to unlock more homes.
+  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned clean energy company. Promote Scottish renewables jobs.
+  tax: Maintain current Scottish income tax rates. No planned increases or cuts. Focus on economic growth to fund services.
+  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws to attract business. Support industrial transition in heavy industry areas.
+  education: Close the attainment gap between richest and poorest pupils. Ban mobile phones in classrooms. Invest in teaching workforce.
+  equality: Progressive on equalities generally. More cautious position on gender recognition reform — supportive of trans rights while emphasising women's spaces.
