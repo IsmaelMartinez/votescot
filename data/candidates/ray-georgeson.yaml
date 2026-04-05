@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: Awarded MBE for services to sustainable waste management. Environmental manager and former council leader of Otley Town Council.
+highlights:
+  - Awarded MBE for services to sustainable waste management
+  - Former council leader of Otley Town Council (2015-2021)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

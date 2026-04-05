@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: shetland-islands
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Shetland Islands.
-highlights: []
+bio: 21-year-old Aberdeen University student from Shetland. Youngest Conservative constituency candidate.
+highlights:
+  - At 21, youngest Conservative constituency candidate; Aberdeen University student from Shetland
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: na-h-eileanan-an-iar
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Na h-Eileanan an Iar.
-highlights: []
+bio: Uig crofter in the Western Isles. Former Chartered Engineer in nuclear submarines. Elder in the Church of Scotland. Degrees in Theology and Mechanical Engineering.
+highlights:
+  - Uig crofter; former Chartered Engineer in nuclear submarines
+  - Degrees in both Theology and Mechanical Engineering
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

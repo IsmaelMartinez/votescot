@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: cowdenbeath
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Cowdenbeath.
-highlights: []
+bio: SNP councillor for Inverkeithing and Dalgety Bay. Convener of South West Fife area committee. Senior environmental consultant specialising in flood risk.
+highlights:
+  - Fife councillor; convener of South West Fife area committee
+  - Environmental consultant specialising in flood risk and renewables
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

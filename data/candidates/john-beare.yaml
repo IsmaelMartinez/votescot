@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: fife-north-east
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Fife North East.
-highlights: []
+bio: SNP councillor for Glenrothes North, Leslie and Markinch. Glenrothes Area Committee convener.
+highlights:
+  - Glenrothes councillor; area committee convener
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

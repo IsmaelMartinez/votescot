@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: hamilton-larkhall-and-stonehouse
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Hamilton, Larkhall and Stonehouse.
-highlights: []
+bio: SNP National Secretary. Worked for late MSP Christina McKelvie. Glasgow councillor.
+highlights:
+  - SNP National Secretary; Glasgow councillor
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

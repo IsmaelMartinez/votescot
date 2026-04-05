@@ -7,11 +7,16 @@ accent: "#B8860B"
 constituency: inverclyde
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Inverclyde.
-highlights: []
+bio: MSP for West Scotland since 2016. Defected from Conservatives to Lib Dems in April 2025. Former Viacom International executive. Co-Convenor of the LGBTI+ Cross-Party Group.
+highlights:
+  - MSP for West Scotland since 2016; defected from Conservatives in April 2025
+  - Co-Convenor of Scottish Parliament's LGBTI+ Cross-Party Group
+  - Former senior executive at Viacom International (media/tech)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Jamie_Greene
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

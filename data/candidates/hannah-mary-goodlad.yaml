@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: shetland-islands
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Shetland Islands.
-highlights: []
+bio: Shetland-born energy professional. Worked for Norwegian company Equinor for 11 years in oil, gas, renewables and carbon capture. Proposes a Shetland Energy Act.
+highlights:
+  - Worked for Equinor for 11 years in oil, gas and renewables
+  - Proposes a Shetland Energy Act and devolving the Crown Estate
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: ayr
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Ayr.
-highlights: []
+bio: Labour councillor for Ayr East on South Ayrshire Council. Former Labour group leader on the council.
+highlights:
+  - South Ayrshire councillor for Ayr East; former Labour group leader
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

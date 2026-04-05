@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: glasgow-kelvin-and-maryhill
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Glasgow Kelvin and Maryhill.
-highlights: []
+bio: Scots Law LLB (Hons) and MSc in Political Communication from the University of Glasgow. Event Producer at Holyrood Communications.
+highlights:
+  - Law and political communications graduate (University of Glasgow)
+  - Event Producer at Holyrood Communications; worked in the Scottish Parliament
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

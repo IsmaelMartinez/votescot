@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: dumfriesshire
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Dumfriesshire.
-highlights: []
+bio: Lifelong Castle Douglas resident. Solicitor and local employer.
+highlights:
+  - Castle Douglas solicitor and lifelong local resident
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

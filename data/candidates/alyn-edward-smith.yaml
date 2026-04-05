@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: stirling
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Stirling.
-highlights: []
+bio: Former commercial lawyer who served as Scotland's MEP for 15 years (2004-2019) before becoming MP for Stirling (2019-2024).
+highlights:
+  - Scotland's MEP for 15 years (2004-2019); youngest Scottish MEP when first elected
+  - MP for Stirling (2019-2024); former commercial lawyer at Clifford Chance
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Alyn_Smith
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25848/alyn_smith/stirling
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

@@ -7,8 +7,11 @@ accent: "#8B0000"
 constituency: clydesdale
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Clydesdale.
-highlights: []
+bio: South Lanarkshire councillor for Clydesdale West since 2012. Chair of education on the council. First councillor in Scotland to take family leave.
+highlights:
+  - South Lanarkshire councillor since 2012; chair of education
+  - First councillor in Scotland to take family leave (2020)
+  - Campaigned for NHS pre-eclampsia testing after personal loss
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Carrick, Cumnock and Doon Valley.
-highlights: []
+bio: Dumfries and Galloway councillor for Mid Galloway and Wigtown West.
+highlights:
+  - Dumfries and Galloway councillor for Mid Galloway and Wigtown West
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

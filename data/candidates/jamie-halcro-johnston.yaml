@@ -7,11 +7,17 @@ accent: "#005EA5"
 constituency: orkney-islands
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Orkney Islands.
-highlights: []
+bio: Conservative MSP for Highlands and Islands since 2017. Shadow Minister for Business, Trade, Tourism and Enterprise. Originally from Orkney. Former Financial Times journalist.
+highlights:
+  - MSP for Highlands and Islands since 2017; Shadow Minister for Business and Trade
+  - Originally from Orkney; former Financial Times journalist
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Jamie_Halcro_Johnston
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jamie-halcro-johnston
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

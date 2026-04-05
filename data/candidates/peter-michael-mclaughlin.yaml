@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: glasgow-cathcart-and-pollok
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Glasgow Cathcart and Pollok.
-highlights: []
+bio: Works in the Scottish Parliament. Vice-Convenor of Glasgow Lib Dems. Postgraduate in intellectual history.
+highlights:
+  - Scottish Parliament staffer; Vice-Convenor of Glasgow Lib Dems
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: midlothian-north
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Midlothian North.
-highlights: []
+bio: Experienced Borders campaigner. Has stood for the Lib Dems since 2016. Vocal about rural communities feeling left out.
+highlights:
+  - Experienced Borders campaigner since 2016; rural communities advocate
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

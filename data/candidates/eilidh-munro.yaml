@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: skye-lochaber-and-badenoch
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Skye, Lochaber and Badenoch.
-highlights: []
+bio: Fluent Gaelic speaker and traditional musician with a background in media and politics. Selected after Kate Forbes stepped down.
+highlights:
+  - Gaelic-speaking musician and media professional
+  - Selected after Kate Forbes stepped down from Skye, Lochaber and Badenoch
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

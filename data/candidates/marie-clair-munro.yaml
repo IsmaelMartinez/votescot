@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: edinburgh-southern
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Edinburgh Southern.
-highlights: []
+bio: Edinburgh councillor for Morningside since 2022. Single mother who campaigns on women's representation in politics.
+highlights:
+  - Edinburgh Morningside councillor since 2022
+  - Campaigns for greater women's representation in politics
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -8,7 +8,8 @@ constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for Caithness, Sutherland and Ross.
-highlights: []
+highlights:
+  - Reform UK candidate for Caithness Sutherland And Ross in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

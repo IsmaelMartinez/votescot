@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: glasgow-central
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Glasgow Central.
-highlights: []
+bio: Former President of NUS Scotland (2015-2017), the first woman in the role since 2004. Head of Office for Labour MP Graeme Downie.
+highlights:
+  - Former President of NUS Scotland (2015-2017)
+  - Head of Office for Labour MP Graeme Downie
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

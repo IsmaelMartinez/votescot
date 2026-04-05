@@ -7,8 +7,10 @@ accent: "#555555"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: Scottish Borders councillor for East Berwickshire since 2022. Single dad of four and foster carer for over a decade. Former Honorary Provost of Eyemouth.
+highlights:
+  - Borders councillor since 2022; single father and foster carer for over a decade
+  - Former Honorary Provost of Eyemouth Community Council
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

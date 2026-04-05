@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: inverness-and-nairn
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Inverness and Nairn.
-highlights: []
+bio: Brother of the Earl of Cawdor. Reform UK candidate for Inverness and Nairn.
+highlights:
+  - Brother of the Earl of Cawdor
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

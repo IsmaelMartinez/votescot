@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: clydesdale
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Clydesdale.
-highlights: []
+bio: Scottish Borders councillor. Former journalist with nearly 30 years in blue-chip companies.
+highlights:
+  - Borders councillor; former journalist with 30 years in corporate sector
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

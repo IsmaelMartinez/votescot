@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: edinburgh-south-western
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Edinburgh South Western.
-highlights: []
+bio: Edinburgh city councillor for Southside/Newington since 2022. SNP group leader on Edinburgh Council — first woman and first person of colour to lead a council group in the city. Programme Manager at Public Health Scotland.
+highlights:
+  - SNP group leader on Edinburgh Council — first woman of colour to lead a council group in the city
+  - Edinburgh councillor since 2022; Programme Manager at Public Health Scotland
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

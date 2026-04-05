@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: aberdeen-deeside-and-north-kincardine
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Aberdeen Deeside and North Kincardine.
-highlights: []
+bio: Aberdeenshire councillor for North Kincardine. Community volunteer with Home-Start Aberdeen supporting families with young children.
+highlights:
+  - Aberdeenshire councillor for North Kincardine
+  - Volunteer with Home-Start Aberdeen supporting families
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

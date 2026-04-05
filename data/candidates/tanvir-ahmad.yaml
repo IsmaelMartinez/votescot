@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: dundee-city-east
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Dundee City East.
-highlights: []
+bio: Over 20 years leading major projects in technology and telecoms. Royal Navy Reservist. Managed a youth centre for minority communities.
+highlights:
+  - 20+ years in technology and telecoms; Royal Navy Reservist
+  - Managed youth centre for minority communities
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

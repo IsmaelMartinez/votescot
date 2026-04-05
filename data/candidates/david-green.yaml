@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Caithness, Sutherland and Ross.
-highlights: []
+bio: Former aide to the late Lib Dem leader Charles Kennedy. Worked with humanitarian relief organisations.
+highlights:
+  - Former aide to the late Lib Dem leader Charles Kennedy
+  - Worked with humanitarian relief organisations
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

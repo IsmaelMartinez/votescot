@@ -7,8 +7,9 @@ accent: "#555555"
 constituency: clackmannanshire-and-dunblane
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Clackmannanshire and Dunblane.
-highlights: []
+bio: 19-year-old from Alloa. Content creator and social media personality. Works as a waiter.
+highlights:
+  - At 19, one of Scotland's youngest candidates; social media creator from Alloa
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

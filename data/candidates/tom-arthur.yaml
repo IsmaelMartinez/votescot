@@ -8,11 +8,16 @@ textColor: "#333"
 constituency: renfrewshire-west-and-levern-valley
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Renfrewshire West and Levern Valley.
-highlights: []
+bio: MSP for Renfrewshire South since 2016. Minister for Social Care and Mental Wellbeing since June 2025. Previously Minister for Public Finance (2021-2025). Trained musician.
+highlights:
+  - Minister for Social Care and Mental Wellbeing since June 2025
+  - Previously Minister for Public Finance, Planning and Community Wealth (2021-2025)
+  - First SNP MSP for Renfrewshire South; trained musician (Glasgow University)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Tom_Arthur_(Scottish_politician)
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

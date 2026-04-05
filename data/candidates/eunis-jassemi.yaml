@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: glasgow-anniesland
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Glasgow Anniesland.
-highlights: []
+bio: Glasgow city councillor for Victoria Park since 2022. Passed the 'Get Me Home Safely' motion for safe transport for late-night hospitality workers.
+highlights:
+  - Glasgow councillor for Victoria Park since 2022
+  - Passed 'Get Me Home Safely' motion for safe transport for hospitality workers
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

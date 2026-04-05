@@ -8,7 +8,8 @@ constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Carrick, Cumnock and Doon Valley.
-highlights: []
+highlights:
+  - Conservative and Unionist Party candidate for Carrick, Cumnock and Doon Valley
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

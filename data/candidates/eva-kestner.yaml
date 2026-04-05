@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Caithness, Sutherland and Ross.
-highlights: []
+bio: Lewisham councillor and former Holyrood researcher for Highland Labour MSPs. Stood in the 2024 general election in Caithness.
+highlights:
+  - Lewisham councillor; former Holyrood researcher for Highland Labour MSPs
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

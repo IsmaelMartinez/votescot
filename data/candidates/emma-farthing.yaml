@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: cunninghame-south
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Cunninghame South.
-highlights: []
+bio: Experienced Lib Dem candidate. Has contested multiple Scottish elections since 2011 across different constituencies.
+highlights:
+  - Veteran Lib Dem candidate since 2011 across multiple constituencies
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

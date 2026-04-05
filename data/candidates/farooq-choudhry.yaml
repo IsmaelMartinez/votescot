@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: renfrewshire-west-and-levern-valley
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Renfrewshire West and Levern Valley.
-highlights: []
+bio: East Renfrewshire Conservative activist. Has contested several local council elections.
+highlights:
+  - Contested several council elections in East Renfrewshire
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

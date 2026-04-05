@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: glasgow-central
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Glasgow Central.
-highlights: []
+bio: Cousin of the late Charles Kennedy. Served 30 years with Strathclyde Police. Later worked as a secondary school maths teacher. Argyll and Bute councillor.
+highlights:
+  - Cousin of the late Charles Kennedy (former Lib Dem leader)
+  - 30 years in Strathclyde Police; later a secondary school maths teacher
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

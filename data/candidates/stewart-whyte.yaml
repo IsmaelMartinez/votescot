@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: aberdeen-central
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Aberdeen Central.
-highlights: []
+bio: Aberdeen secondary school teacher making his first political stand on a platform of defending the oil and gas industry.
+highlights:
+  - Aberdeen schoolteacher; campaigns to defend the oil and gas industry
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

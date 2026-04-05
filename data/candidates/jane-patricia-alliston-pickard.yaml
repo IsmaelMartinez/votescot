@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: edinburgh-southern
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Edinburgh Southern.
-highlights: []
+bio: Mental health counsellor in Edinburgh working with adults and young people. Law and Politics graduate from Edinburgh University.
+highlights:
+  - Mental health counsellor; Law and Politics graduate from Edinburgh University
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

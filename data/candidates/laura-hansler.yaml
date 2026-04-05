@@ -8,7 +8,8 @@ constituency: skye-lochaber-and-badenoch
 isIncumbent: false
 quizCandidate: false
 bio: Alliance to Liberate Scotland candidate for Skye, Lochaber and Badenoch.
-highlights: []
+highlights:
+  - Alliance to Liberate Scotland candidate for Skye, Lochaber and Badenoch
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website

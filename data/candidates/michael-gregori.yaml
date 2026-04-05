@@ -8,7 +8,8 @@ constituency: kilmarnock-and-irvine-valley
 isIncumbent: false
 quizCandidate: true
 bio: Liberal Democrats candidate for Kilmarnock and Irvine Valley.
-highlights: []
+highlights:
+  - Liberal Democrats candidate for Kilmarnock And Irvine Valley in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

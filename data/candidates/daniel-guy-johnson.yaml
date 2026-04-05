@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: edinburgh-southern
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh Southern.
-highlights: []
+bio: Labour MSP for Edinburgh Southern since 2016. Shadow Cabinet Secretary for Economy, Business and Fair Work. Former Accenture management consultant. Publicly disclosed his ADHD diagnosis in 2017.
+highlights:
+  - Labour MSP for Edinburgh Southern since 2016
+  - Shadow Cabinet Secretary for Economy, Business and Fair Work
+  - Publicly disclosed his ADHD diagnosis in 2017 to raise awareness
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Daniel_Johnson_(Scottish_politician)
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/daniel-johnson
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 2

@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: dunfermline
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Dunfermline.
-highlights: []
+bio: Dunfermline-based Lib Dem activist. Campaigns on school violence, transport, and NHS access.
+highlights:
+  - Campaigns on school violence, transport, and NHS access
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

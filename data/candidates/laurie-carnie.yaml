@@ -8,7 +8,8 @@ constituency: angus-north-and-mearns
 isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for Angus North and Mearns.
-highlights: []
+highlights:
+  - Reform UK candidate for Angus North And Mearns in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

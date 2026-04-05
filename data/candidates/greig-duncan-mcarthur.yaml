@@ -8,7 +8,8 @@ constituency: motherwell-and-wishaw
 isIncumbent: false
 quizCandidate: false
 bio: Alliance to Liberate Scotland candidate for Motherwell and Wishaw.
-highlights: []
+highlights:
+  - Alliance to Liberate Scotland candidate for Motherwell And Wishaw in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website

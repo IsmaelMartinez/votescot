@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: strathkelvin-and-bearsden
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Strathkelvin and Bearsden.
-highlights: []
+bio: Former charity campaigner for cystic fibrosis patients' access to life-saving medicines. Leading the Lib Dem West Scotland regional list.
+highlights:
+  - Former healthcare charity campaigner for cystic fibrosis patients
+  - Lead candidate on Lib Dem West Scotland regional list
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

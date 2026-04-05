@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: banffshire-and-buchan-coast
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Banffshire and Buchan Coast.
-highlights: []
+bio: East Lothian councillor and Scottish Parliament researcher. MA from the University of St Andrews. Chair of Lothian Young Labour.
+highlights:
+  - East Lothian councillor and Scottish Parliament researcher
+  - Chair of Lothian Young Labour; GMB Branch Secretary
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

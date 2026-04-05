@@ -8,7 +8,8 @@ constituency: mid-fife-and-glenrothes
 isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for Mid Fife and Glenrothes.
-highlights: []
+highlights:
+  - Reform UK candidate for Mid Fife And Glenrothes in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: dundee-city-east
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Dundee City East.
-highlights: []
+bio: Angus councillor for Arbroath West since 2024 by-election. First-class degree in financial economics from Dundee University.
+highlights:
+  - Angus councillor since 2024; first-class degree in financial economics
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

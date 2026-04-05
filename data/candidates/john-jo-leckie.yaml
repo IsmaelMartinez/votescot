@@ -8,7 +8,8 @@ constituency: airdrie
 isIncumbent: false
 quizCandidate: false
 bio: British Unionist Party candidate for Airdrie.
-highlights: []
+highlights:
+  - British Unionist Party candidate for Airdrie in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP2834/
     type: party_website

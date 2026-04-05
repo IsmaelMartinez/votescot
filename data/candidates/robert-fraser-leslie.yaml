@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: orkney-islands
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Orkney Islands.
-highlights: []
+bio: Energy officer at Orkney Housing Association. Former reporter and editor at The Orcadian. Born in Orkney. Fourth electoral bid for the SNP.
+highlights:
+  - Energy officer at Orkney Housing Association; former Orcadian journalist
+  - Fourth electoral bid for the SNP in the Northern Isles
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

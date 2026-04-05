@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: dundee-city-east
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Dundee City East.
-highlights: []
+bio: Operational director for children's charity Action for Children. Placed second in Arbroath and Broughty Ferry at the 2024 general election.
+highlights:
+  - Director at children's charity Action for Children
+  - Close second in Arbroath and Broughty Ferry at the 2024 general election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website

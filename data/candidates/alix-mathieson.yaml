@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Clydebank and Milngavie.
-highlights: []
+bio: East Dunbartonshire councillor for Milngavie. University of Glasgow politics graduate. Stood as Conservative candidate for Mid-Dunbartonshire in 2024.
+highlights:
+  - East Dunbartonshire councillor for Milngavie
+  - University of Glasgow politics graduate; worked in electoral law
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

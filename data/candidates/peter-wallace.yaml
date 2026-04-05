@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Argyll and Bute.
-highlights: []
+bio: Argyll and Bute councillor for Isle of Bute since 2022. Leader of the Conservative group on the council. Runs a family business and presents on Bute Island Radio.
+highlights:
+  - Argyll and Bute councillor; Conservative group leader
+  - Family business owner; presents on Bute Island Radio
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

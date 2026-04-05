@@ -7,11 +7,17 @@ accent: "#0a7f91"
 constituency: airdrie
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Airdrie.
-highlights: []
+bio: MSP for Central Scotland since 2016. Defected from the Conservatives to Reform UK in August 2025. Former journalist for The Sun and Daily Record.
+highlights:
+  - MSP for Central Scotland since 2016; defected from Conservatives to Reform UK in 2025
+  - Former journalist for The Sun and Daily Record; South Lanarkshire councillor (2007-2017)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Graham_Simpson_(politician)
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/graham-simpson
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 0

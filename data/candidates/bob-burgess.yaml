@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: motherwell-and-wishaw
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Motherwell and Wishaw.
-highlights: []
+bio: North Lanarkshire councillor for Motherwell West.
+highlights:
+  - North Lanarkshire councillor for Motherwell West
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

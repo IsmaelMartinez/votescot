@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: glasgow-cathcart-and-pollok
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Glasgow Cathcart and Pollok.
-highlights: []
+bio: Glasgow City councillor standing as SNP candidate for Glasgow Cathcart and Pollok.
+highlights:
+  - Glasgow City councillor
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

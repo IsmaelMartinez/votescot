@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: inverness-and-nairn
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Inverness and Nairn.
-highlights: []
+bio: Highland councillor for Skye since 2022. First Conservative ever elected for Skye. Leader of Conservative group on Highland Council. Crofter and St Andrews graduate.
+highlights:
+  - First Conservative ever elected for Skye on Highland Council
+  - Conservative group leader on Highland Council; crofter and St Andrews graduate
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

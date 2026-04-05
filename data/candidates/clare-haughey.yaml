@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: rutherglen-and-cambuslang
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Rutherglen and Cambuslang.
-highlights: []
+bio: MSP for Rutherglen since 2016. Former Minister for Mental Health (2018-2021) and Minister for Children and Young People (2021-2023). Trained mental health nurse.
+highlights:
+  - Minister for Mental Health (2018-2021) and Children and Young People (2021-2023)
+  - MSP for Rutherglen since 2016; convener of Health, Social Care and Sport Committee
+  - Trained mental health nurse; former clinical nurse manager
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Clare_Haughey
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/clare-haughey
+    type: scottish_parliament
 positions:
   independence: 2
   nhs: 1

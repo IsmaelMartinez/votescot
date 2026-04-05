@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: dumbarton
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Dumbarton.
-highlights: []
+bio: Worked in education for 22 years as a student welfare manager. Doubled Lib Dem vote share in Edinburgh's Craigentinny/Duddingston by-election.
+highlights:
+  - 22 years in education as a student welfare manager
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

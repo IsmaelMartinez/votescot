@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: aberdeenshire-west
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Aberdeenshire West.
-highlights: []
+bio: Aberdeenshire councillor for Huntly, Strathbogie and Howe of Alford since 2012. Trustee of Grampian Transport Museum.
+highlights:
+  - Aberdeenshire councillor since 2012
+  - Trustee of Grampian Transport Museum
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

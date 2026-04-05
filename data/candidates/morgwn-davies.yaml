@@ -7,8 +7,9 @@ accent: "#555555"
 constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+bio: Former community councillor and ex-Alba candidate. Campaigns against council parking charges in East Lothian.
+highlights:
+  - Former community councillor; campaigns against parking charges
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

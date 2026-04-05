@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Argyll and Bute.
-highlights: []
+bio: NHS doctor based in Oban working in rural and remote medicine. BMA and Royal College of GPs representative. Holds a PhD.
+highlights:
+  - NHS doctor specialising in rural and remote medicine in Oban
+  - BMA and Royal College of GPs elected representative; holds a PhD
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

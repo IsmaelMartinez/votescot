@@ -7,8 +7,10 @@ accent: "#007A3D"
 constituency: glasgow-kelvin-and-maryhill
 isIncumbent: false
 quizCandidate: true
-bio: Scottish Green Party candidate for Glasgow Kelvin and Maryhill.
-highlights: []
+bio: Politics and Social Policy student at University of Glasgow. First openly transgender person elected sabbatical officer in the university's 600-year history.
+highlights:
+  - First openly transgender sabbatical officer in University of Glasgow's 600-year history
+  - Stood for Glasgow North in the 2024 general election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website

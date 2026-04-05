@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: perthshire-south-and-kinross-shire
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Perthshire South and Kinross-shire.
-highlights: []
+bio: Conservative MSP for Mid Scotland and Fife since 2022. Shadow Minister for Children, Young People and the Promise. Former Perth and Kinross councillor. First MSP to swear allegiance to King Charles III.
+highlights:
+  - MSP for Mid Scotland and Fife since 2022; Shadow Minister for Children and Young People
+  - First MSP to swear allegiance to King Charles III
+  - Former Perth and Kinross councillor; founded a distribution company
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Roz_McCall
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/roz-mccall
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

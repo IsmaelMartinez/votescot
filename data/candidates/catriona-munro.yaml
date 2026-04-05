@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: edinburgh-south-western
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh South Western.
-highlights: []
+bio: Lawyer for 30 years, most recently a competition lawyer. Parents were lifelong Labour activists.
+highlights:
+  - Lawyer for 30 years specialising in competition law
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

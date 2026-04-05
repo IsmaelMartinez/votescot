@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: ayr
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Ayr.
-highlights: []
+bio: Aberdeen city councillor for George Street and Harbour since 2022. Took the seat from the Conservatives.
+highlights:
+  - Aberdeen city councillor since 2022; took seat from Conservatives
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

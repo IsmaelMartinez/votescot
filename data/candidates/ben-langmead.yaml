@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Clydebank and Milngavie.
-highlights: []
+bio: 35-year career in financial services across London, New York, and Glasgow. Scout leader in Bearsden.
+highlights:
+  - 35-year career in financial services across London, New York and Glasgow
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

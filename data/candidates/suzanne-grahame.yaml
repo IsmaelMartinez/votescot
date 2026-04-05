@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: clackmannanshire-and-dunblane
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Clackmannanshire and Dunblane.
-highlights: []
+bio: Qualified accountant with over 25 years' experience as a business leader and board director across manufacturing, energy, and financial services.
+highlights:
+  - Chartered accountant with 25+ years as a business leader
+  - Board director across manufacturing, oil and gas, and financial services
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

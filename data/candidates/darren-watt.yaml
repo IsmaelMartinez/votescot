@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: cowdenbeath
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Cowdenbeath.
-highlights: []
+bio: Fife councillor for Cowdenbeath ward since 2017.
+highlights:
+  - Fife councillor for Cowdenbeath since 2017
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: perthshire-south-and-kinross-shire
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Perthshire South and Kinross-shire.
-highlights: []
+bio: Reform UK's Scottish spokesperson. Former veterinary surgeon turned environmental public affairs professional. Tops the Mid Scotland and Fife regional list.
+highlights:
+  - Reform UK's Scottish spokesperson; tops Mid Scotland and Fife regional list
+  - Former veterinary surgeon turned environmental campaigner
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

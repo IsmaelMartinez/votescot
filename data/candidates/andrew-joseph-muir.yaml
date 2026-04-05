@@ -7,8 +7,10 @@ accent: "#555555"
 constituency: dumbarton
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Dumbarton.
-highlights: []
+bio: Fellow of the Institute of Actuaries. Scottish chess champion in 2007. Standing for the third time as an Independent in Dumbarton.
+highlights:
+  - Scottish chess champion (2007); Fellow of the Institute of Actuaries
+  - Third-time Independent candidate for Dumbarton
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

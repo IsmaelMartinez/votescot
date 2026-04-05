@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: strathkelvin-and-bearsden
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Strathkelvin and Bearsden.
-highlights: []
+bio: North Lanarkshire councillor for Kilsyth and the Villages. Assistant pub manager.
+highlights:
+  - North Lanarkshire councillor for Kilsyth and the Villages
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

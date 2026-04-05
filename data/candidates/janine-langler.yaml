@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: aberdeenshire-east
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Aberdeenshire East.
-highlights: []
+bio: NHS worker with more than 25 years' service. Vice chair of the Grampian health branch of Unison.
+highlights:
+  - NHS worker with 25+ years' service; Unison Grampian health branch vice chair
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

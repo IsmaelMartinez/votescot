@@ -8,11 +8,15 @@ textColor: "#333"
 constituency: inverness-and-nairn
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Inverness and Nairn.
-highlights: []
+bio: Youngest MSP elected in 2021 at age 23 for Highlands and Islands. Former Minister for Equalities, Migration and Refugees. Experienced homelessness as a teenager.
+highlights:
+  - Youngest MSP elected in 2021 at age 23; Minister for Equalities (2023-2024)
+  - Experienced homelessness as a teenager; mental health campaigner
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Emma_Roddick
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

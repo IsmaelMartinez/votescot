@@ -8,7 +8,8 @@ constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: false
 bio: Alliance to Liberate Scotland and Sovereignty candidate for Caithness, Sutherland and Ross.
-highlights: []
+highlights:
+  - Alliance to Liberate Scotland and Sovereignty candidate for Caithness, Sutherland and Ross
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
     type: party_website

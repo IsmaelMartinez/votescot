@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: midlothian-south-tweeddale-and-lauderdale
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Midlothian South, Tweeddale and Lauderdale.
-highlights: []
+bio: Former MP for Berwickshire, Roxburgh and Selkirk (2015-2017). SNP Environment and Rural Affairs spokesperson. IT industry background.
+highlights:
+  - MP for Berwickshire, Roxburgh and Selkirk (2015-2017)
+  - SNP Environment and Rural Affairs spokesperson; IT industry background
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Calum_Kerr
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25416/calum_kerr/berwickshire,_roxburgh_and_selkirk
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

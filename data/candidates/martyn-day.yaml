@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: falkirk-east-and-linlithgow
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Falkirk East and Linlithgow.
-highlights: []
+bio: Former MP for Linlithgow and East Falkirk (2015-2024). SNP health spokesperson at Westminster. Former personal banking manager and West Lothian councillor from 1999.
+highlights:
+  - MP for Linlithgow and East Falkirk (2015-2024); SNP health spokesperson
+  - West Lothian councillor from 1999; former banking manager
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Martyn_Day_(politician)
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25307/martyn_day/linlithgow_and_east_falkirk
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

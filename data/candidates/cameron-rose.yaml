@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: edinburgh-south-western
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Edinburgh South Western.
-highlights: []
+bio: Former Conservative Edinburgh councillor for 15 years (Southside/Newington). Former police inspector. Now standing for Reform UK.
+highlights:
+  - Edinburgh councillor for 15 years; former Conservative group leader
+  - Former police inspector; defected from Conservatives to Reform UK
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

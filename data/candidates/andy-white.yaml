@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Clydebank and Milngavie.
-highlights: []
+bio: Former Labour leader of West Dunbartonshire Council. Standing for Reform UK against his sister Marie McNair (SNP MSP).
+highlights:
+  - Former Labour leader of West Dunbartonshire Council
+  - Standing against his sister Marie McNair (SNP MSP) in Clydebank and Milngavie
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

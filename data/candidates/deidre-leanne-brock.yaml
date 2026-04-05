@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: edinburgh-southern
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Edinburgh Southern.
-highlights: []
+bio: Former MP for Edinburgh North and Leith (2015-2024). First SNP representative to hold that seat. Former Deputy Lord Provost of Edinburgh.
+highlights:
+  - MP for Edinburgh North and Leith (2015-2024); first SNP holder of that seat
+  - Former Deputy Lord Provost of Edinburgh
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Deidre_Brock
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25336/deidre_brock/edinburgh_north_and_leith
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: cunninghame-south
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Cunninghame South.
-highlights: []
+bio: Former Conservative MSP for West Scotland (2016-2021). Current Provost of Argyll and Bute. Served 38 years in the Army including commanding the Argyll and Sutherland Highlanders TA.
+highlights:
+  - Former MSP for West Scotland (2016-2021); Provost of Argyll and Bute
+  - 38 years in the Army; commanded the Argyll and Sutherland Highlanders TA
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

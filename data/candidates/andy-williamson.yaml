@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: edinburgh-south-western
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Edinburgh South Western.
-highlights: []
+bio: Edinburgh community activist who led the campaign to remove smartphones from schools.
+highlights:
+  - Led the campaign to remove smartphones from Edinburgh schools
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

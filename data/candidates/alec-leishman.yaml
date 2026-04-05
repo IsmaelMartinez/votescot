@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: paisley
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Paisley.
-highlights: []
+bio: Renfrewshire councillor for Erskine and Inchinnan since 2022. Defected from Conservatives to Reform UK in February 2025.
+highlights:
+  - Renfrewshire councillor for Erskine and Inchinnan since 2022
+  - Defected from Conservatives to Reform UK in February 2025
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

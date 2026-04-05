@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: midlothian-south-tweeddale-and-lauderdale
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Midlothian South, Tweeddale and Lauderdale.
-highlights: []
+bio: Chief executive specialising in care system reform. Advised governments from New Zealand to Holyrood on children's care policy.
+highlights:
+  - Care system reform expert; advised governments on children's welfare
+  - Chief advocate with responsibility for 2,000+ children's cases annually
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

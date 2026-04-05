@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: aberdeen-central
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Aberdeen Central.
-highlights: []
+bio: Aberdeenshire councillor for Banchory and Mid-Deeside. Won highest-ever Lib Dem vote in the ward. Tops the North East Scotland regional list.
+highlights:
+  - Aberdeenshire councillor for Banchory and Mid-Deeside
+  - Tops the Lib Dem North East Scotland regional list
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: aberdeenshire-east
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Aberdeenshire East.
-highlights: []
+bio: North East Scotland native with experience in healthcare and energy sectors. Previously stood for Arbroath at the 2024 general election.
+highlights:
+  - Cross-sector experience in healthcare and energy; North East native
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

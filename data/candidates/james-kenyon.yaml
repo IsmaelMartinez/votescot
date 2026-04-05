@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: paisley
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Paisley.
-highlights: []
+bio: Human rights solicitor based in Paisley. Career dedicated to holding powerful institutions to account.
+highlights:
+  - Human rights solicitor; campaigns on healthcare and cost of living
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

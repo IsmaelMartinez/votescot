@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: falkirk-west
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Falkirk West.
-highlights: []
+bio: Falkirk councillor for Carse, Kinnaird and Tryst since 2017. Housing spokesperson. Former joiner and building preservation specialist.
+highlights:
+  - Falkirk councillor since 2017; housing spokesperson
+  - Former joiner turned building preservation specialist
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: midlothian-south-tweeddale-and-lauderdale
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Midlothian South, Tweeddale and Lauderdale.
-highlights: []
+bio: IT professional who moved from Glasgow to the Scottish Borders. Background in newspaper advertising and IT.
+highlights:
+  - IT professional; supported schools IT in Galashiels
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: na-h-eileanan-an-iar
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Na h-Eileanan an Iar.
-highlights: []
+bio: Oxford-educated teacher and education consultant from a Western Isles crofting background. Gaelic speaker and bagpiper.
+highlights:
+  - Oxford-educated teacher from a Western Isles crofting background
+  - Gaelic speaker and bagpiper
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

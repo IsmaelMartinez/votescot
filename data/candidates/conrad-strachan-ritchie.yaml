@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: banffshire-and-buchan-coast
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Banffshire and Buchan Coast.
-highlights: []
+bio: Former managing director of Score Group, Peterhead-based engineering firm. 32-year career in oil and gas. Standing for Reform UK in Banffshire and Buchan Coast.
+highlights:
+  - Former MD of Score Group; 32-year career in oil and gas industry
+  - Founded engineering firm Scotia after leaving Score Group
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

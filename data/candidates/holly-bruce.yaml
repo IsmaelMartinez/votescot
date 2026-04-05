@@ -7,8 +7,10 @@ accent: "#007A3D"
 constituency: glasgow-southside
 isIncumbent: false
 quizCandidate: true
-bio: Scottish Green Party candidate for Glasgow Southside.
-highlights: []
+bio: Green councillor for Langside in Glasgow. Won ahead of SNP council leader Susan Aitken on first preferences in 2022. Championed feminist town planning.
+highlights:
+  - Glasgow Green councillor; beat SNP council leader on first preferences in 2022
+  - Championed feminist town planning including safer streets
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website
