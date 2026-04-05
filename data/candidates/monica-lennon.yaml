@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: rutherglen-and-cambuslang
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Rutherglen and Cambuslang.
-highlights: []
+bio: Labour MSP for Central Scotland since 2016. Legislated the Period Products Act 2021, making Scotland the first country to guarantee free access to period products. Contested the 2021 Scottish Labour leadership.
+highlights:
+  - Legislated the Period Products Act 2021 — Scotland first in the world to guarantee free period products
+  - Contested the 2021 Scottish Labour leadership election against Anas Sarwar
+  - MSP for Central Scotland since 2016; former town planner
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25516/monica_lennon
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Monica_Lennon
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

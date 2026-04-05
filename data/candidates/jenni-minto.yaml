@@ -8,11 +8,19 @@ textColor: "#333"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Argyll and Bute.
-highlights: []
+bio: MSP for Argyll and Bute since 2021. Minister for Public Health and Women's Health since March 2023. Worked at BBC Scotland for 18 years helping to establish BBC Alba.
+highlights:
+  - Minister for Public Health and Women's Health since March 2023
+  - MSP for Argyll and Bute since 2021
+  - Worked at BBC Scotland for 18 years; helped establish BBC Alba
+  - Chartered accountant; managed the Islay Energy Trust on the Isle of Islay
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/26007/jenni_minto
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Jenni_Minto
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

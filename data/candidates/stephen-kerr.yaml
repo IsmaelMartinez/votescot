@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: stirling
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Stirling.
-highlights: []
+bio: Conservative MSP for Central Scotland since 2021. Former MP for Stirling (2017-2019). Currently Chief Whip of the Scottish Conservative group. Former Convener of the Education Committee.
+highlights:
+  - Former MP for Stirling (2017-2019); MSP for Central Scotland since 2021
+  - Chief Whip of the Scottish Conservative group in Holyrood
+  - Former Convener of Education, Children and Young People Committee (2021-2022)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/stephen-kerr
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Stephen_Kerr
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

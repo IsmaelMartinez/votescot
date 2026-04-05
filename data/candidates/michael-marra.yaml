@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: dundee-city-west
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Dundee City West.
-highlights: []
+bio: Labour MSP for North East Scotland since 2021. Shadow Cabinet Secretary for Finance. Former Dundee city councillor and adviser to Scottish Labour leader Iain Gray.
+highlights:
+  - Shadow Cabinet Secretary for Finance since April 2023
+  - Labour MSP for North East Scotland since 2021; former Dundee city councillor
+  - Won Holyrood magazine's 'One For The Watching' newcomer award in 2021
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/26003/michael_marra
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Michael_Marra_(politician)
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

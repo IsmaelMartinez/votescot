@@ -8,11 +8,19 @@ textColor: "#333"
 constituency: dundee-city-east
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Dundee City East.
-highlights: []
+bio: Currently MP for Arbroath and Broughty Ferry. Previously MP for North East Fife (2015-2019), re-elected in 2017 by just two votes. SNP foreign affairs spokesperson and former special adviser to First Ministers Salmond and Sturgeon.
+highlights:
+  - MP re-elected in 2017 by just two votes — the slimmest margin in UK history that election
+  - SNP foreign affairs spokesperson at Westminster
+  - Former special adviser on European affairs to First Ministers Salmond and Sturgeon
+  - Lecturer in international relations at the University of St Andrews
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Stephen_Gethins
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25120/stephen_gethins/north_east_fife
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

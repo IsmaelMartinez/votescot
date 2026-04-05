@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: rutherglen-and-cambuslang
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Rutherglen and Cambuslang.
-highlights: []
+bio: Conservative MSP for Glasgow since 2016. Former Deputy Leader of the Scottish Conservatives. Held spokesperson roles for Equalities and Mental Health. Former Marks & Spencer retail manager.
+highlights:
+  - Conservative MSP for Glasgow since 2016
+  - Former Deputy Leader of the Scottish Conservatives (2020)
+  - Spokesperson for Equalities and Mental Health; former M&S manager for 12 years
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25542/annie_wells
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Annie_Wells_(politician)
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

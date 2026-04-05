@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: aberdeen-donside
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Aberdeen Donside.
-highlights: []
+bio: MSP for Aberdeen Donside since 2021. Former Aberdeen City councillor (from 2007) and SNP deputy group leader on the council.
+highlights:
+  - MSP for Aberdeen Donside since 2021
+  - Former Aberdeen City councillor from 2007; SNP deputy group leader
+  - Focused on Just Transition Fund, child poverty, and NHS waiting times
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jackie-dunbar
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/25993/jackie_dunbar
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

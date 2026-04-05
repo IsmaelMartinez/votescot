@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: banffshire-and-buchan-coast
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Banffshire and Buchan Coast.
-highlights: []
+bio: MSP for Banffshire and Buchan Coast since 2021. First MSP to take the oath of affirmation in British Sign Language. Convener of the Equalities, Human Rights and Civil Justice Committee.
+highlights:
+  - First MSP to take the oath of affirmation in British Sign Language
+  - Convener of the Equalities, Human Rights and Civil Justice Committee
+  - MSP for Banffshire and Buchan Coast since 2021
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25985/karen_adam
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Karen_Adam
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

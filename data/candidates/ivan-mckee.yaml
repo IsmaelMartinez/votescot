@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: glasgow-easterhouse-and-springburn
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Glasgow Easterhouse and Springburn.
-highlights: []
+bio: MSP for Glasgow Provan since 2016. Minister for Public Finance since May 2024. Background in manufacturing engineering and international business consultancy.
+highlights:
+  - Minister for Public Finance since May 2024
+  - Minister for Business, Trade, Tourism and Enterprise (2021-2023)
+  - MSP for Glasgow Provan since 2016; background in manufacturing engineering
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25527/ivan_mckee
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Ivan_McKee
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

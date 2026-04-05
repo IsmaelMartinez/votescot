@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: strathkelvin-and-bearsden
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Strathkelvin and Bearsden.
-highlights: []
+bio: Conservative MSP for West Scotland since 2021. First Sikh and first woman of Indian background elected to the Scottish Parliament. Promoting a Members' Bill on domestic abuse prevention.
+highlights:
+  - First Sikh and first woman of Indian background elected to the Scottish Parliament
+  - Promoting the Prevention of Domestic Abuse (Scotland) Bill
+  - Deputy Chairwoman of the Scottish Conservatives; founded Scottish Conservative Friends of BAME
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.parliament.scot/home/msps/current-and-previous-msps/pam-gosal
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Pam_Gosal
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

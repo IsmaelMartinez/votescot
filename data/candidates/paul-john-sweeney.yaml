@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: glasgow-easterhouse-and-springburn
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Glasgow Easterhouse and Springburn.
-highlights: []
+bio: Labour MSP for Glasgow since 2021. Former MP for Glasgow North East (2017-2019). Won 'Community MSP of the Year' in 2022 for work on the drugs death crisis.
+highlights:
+  - Won 'Community MSP of the Year' at The Herald awards in 2022
+  - Former MP for Glasgow North East (2017-2019); Shadow Under-Secretary for Scotland
+  - Shadow Minister for Employment and Public Finance
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-sweeney
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Paul_Sweeney
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

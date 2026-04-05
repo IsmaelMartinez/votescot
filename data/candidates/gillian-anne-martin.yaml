@@ -8,11 +8,19 @@ textColor: "#333"
 constituency: aberdeenshire-east
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Aberdeenshire East.
-highlights: []
+bio: MSP for Aberdeenshire East since 2016, succeeding Alex Salmond. Cabinet Secretary for Climate Action and Energy. Former further education lecturer.
+highlights:
+  - Cabinet Secretary for Climate Action and Energy since June 2025
+  - MSP for Aberdeenshire East since 2016, succeeding Alex Salmond
+  - Convened the Environment, Climate Change and Land Reform Committee (2018)
+  - Former further education lecturer for 15 years
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/gillian-martin
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/25525/gillian_martin
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

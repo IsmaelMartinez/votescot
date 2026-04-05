@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Carrick, Cumnock and Doon Valley.
-highlights: []
+bio: Labour MSP for South Scotland since 2021. Shadow Minister for Mental Wellbeing, Women's Health and Sport. Party spokesperson on Public Health.
+highlights:
+  - Labour MSP for South Scotland since 2021
+  - Shadow Minister for Mental Wellbeing, Women's Health and Sport
+  - Party Spokesperson on Public Health and Women's Health
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/26008/carol_mochan
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Carol_Mochan
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

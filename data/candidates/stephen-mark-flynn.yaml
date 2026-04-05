@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: aberdeen-deeside-and-north-kincardine
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Aberdeen Deeside and North Kincardine.
-highlights: []
+bio: SNP Westminster leader since December 2022 and MP for Aberdeen South since 2019. Standing for Holyrood in 2026. Previously SNP group leader on Aberdeen City Council.
+highlights:
+  - SNP Westminster leader since December 2022, succeeding Ian Blackford
+  - MP for Aberdeen South since 2019; transitioning from Westminster to Holyrood
+  - Former SNP group leader on Aberdeen City Council (elected 2015)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/mp/25867/stephen_flynn/aberdeen_south
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Stephen_Flynn
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

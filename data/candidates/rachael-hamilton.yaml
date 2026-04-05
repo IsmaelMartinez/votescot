@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: Conservative MSP for Ettrick, Roxburgh and Berwickshire since 2017. Deputy Leader of the Scottish Conservatives under Russell Findlay. Former party Chairwoman. Agriculture background.
+highlights:
+  - Deputy Leader of the Scottish Conservatives under Russell Findlay
+  - MSP for Ettrick, Roxburgh and Berwickshire since 2017; re-elected with 51% in 2021
+  - Former Chairwoman of the Scottish Conservative Party; agriculture background
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/rachael-hamilton
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Rachael_Hamilton
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

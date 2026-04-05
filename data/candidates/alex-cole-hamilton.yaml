@@ -7,16 +7,19 @@ accent: "#B8860B"
 constituency: edinburgh-north-western
 isIncumbent: false
 quizCandidate: true
-bio: Leader of the Scottish Liberal Democrats since 2021. MSP for Edinburgh Western since 2016 — won with the highest vote ever for a single candidate in a Scottish Parliament election. Standing in the redrawn Edinburgh North Western. Campaigns on mental health, children's services, and NHS recovery.
+bio: Leader of the Scottish Liberal Democrats since 2021 and MSP for Edinburgh Western since 2016. Under his leadership the party tripled its Westminster seats in 2024. Former youth worker supporting trafficked children.
 highlights:
-  - Leader of the Scottish Liberal Democrats
-  - Won Edinburgh Western 2016 and 2021 with record-breaking vote counts
-  - Campaigned on children's mental health and NHS workforce
-  - Ruled out serving in any SNP-led administration
-  - Frontrunner in Edinburgh North Western
+  - Leader of the Scottish Liberal Democrats since 2021
+  - MSP for Edinburgh Western since 2016; tripled party's Westminster seats in 2024
+  - Blocked the Scottish Government's attempt to abolish jury trials during Covid
+  - Former youth worker supporting trafficked and care-experienced children
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/alex-colehamilton
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Alex_Cole-Hamilton
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

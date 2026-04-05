@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: cunninghame-north
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Cunninghame North.
-highlights: []
+bio: One of Scotland's longest-serving MSPs, in parliament since 1999. Convener of the Finance and Public Administration Committee. Won Cunninghame North in 2007 by just 48 votes.
+highlights:
+  - MSP since 1999; one of Scotland's longest-serving parliamentarians
+  - Convener of the Finance and Public Administration Committee (2021-2026)
+  - Won Cunninghame North in 2007 by just 48 votes; built to a 6,117 majority by 2011
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/13994/kenneth_gibson
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Kenneth_Gibson_(Scottish_politician)
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1
