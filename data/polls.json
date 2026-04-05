@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-04-04T14:40:42.162Z",
+  "lastUpdated": "2026-04-05T08:14:25.800Z",
   "constituency": [
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-01",
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "sampleSize": 1006,
+      "snp": 34,
+      "con": 11,
+      "lab": 19,
+      "libdem": 10,
+      "green": 8,
+      "alba": null,
+      "reform": 15,
+      "others": null
+    },
     {
       "date": "2026-03-16",
       "endDate": "2026-03-23",
@@ -1908,6 +1923,21 @@
     }
   ],
   "regional": [
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-01",
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "sampleSize": 1006,
+      "snp": 30,
+      "con": 10,
+      "lab": 17,
+      "libdem": 10,
+      "green": 12,
+      "alba": null,
+      "reform": 15,
+      "others": 6
+    },
     {
       "date": "2026-03-16",
       "endDate": "2026-03-23",
