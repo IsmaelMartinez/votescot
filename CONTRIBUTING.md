@@ -18,8 +18,9 @@ Candidate data lives in `data/candidates/` as YAML files. If you spot an error i
 2. Run `npm install` to set up dependencies
 3. Make your changes
 4. Run `npm test` to ensure all tests pass
-5. Run `npm run build` to verify the site builds
-6. Open a pull request
+5. Run `node scripts/validate-data.ts` to validate YAML data
+6. Run `npm run build` to verify the site builds
+7. Open a pull request
 
 ### Development setup
 
@@ -27,6 +28,7 @@ Candidate data lives in `data/candidates/` as YAML files. If you spot an error i
 npm install
 npm run dev      # start dev server
 npm test         # run tests
+node scripts/validate-data.ts  # validate YAML data
 npm run build    # build static site
 ```
 

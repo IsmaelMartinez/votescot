@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in VoteScot, please report it responsibly by emailing the maintainer directly rather than opening a public issue.
+If you discover a security vulnerability in VoteScot, please report it responsibly by emailing ismaelmartinez@gmail.com rather than opening a public issue.
 
 ## Scope
 
