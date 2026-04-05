@@ -2,7 +2,6 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import PostcodeLookup from "../components/PostcodeLookup.tsx";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import { loadConstituencies } from "../lib/data";
 
@@ -22,9 +21,7 @@ const base = import.meta.env.BASE_URL;
       No endorsements. No editorial scores. Just your values matched to their positions.
     </p>
 
-    <PostcodeLookup client:load knownConstituencies={knownConstituencies} basePath={base} />
-
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <a href={`${base}quiz`} class="bg-white rounded-lg p-4 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
         <div class="font-heading font-bold text-base mb-1">Vote Compass</div>
         <div class="font-body text-xs text-gray-500">8 questions. Find your closest candidate match.</div>
