@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: almond-valley
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Almond Valley.
-highlights: []
+bio: Technology consultant with over 18 years in the sector. Co-operative Party member and Community Trade Union member. Serves on West Calder Community Centre management committee.
+highlights:
+  - Management consultant with 18+ years in the technology sector
+  - Community activist; serves on West Calder Community Centre committee
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

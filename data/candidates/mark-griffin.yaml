@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: uddingston-and-bellshill
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Uddingston and Bellshill.
-highlights: []
+bio: Labour MSP for Central Scotland since 2011. Was the youngest MSP in history at election aged 25. Former North Lanarkshire councillor and trained mechanical engineer.
+highlights:
+  - Youngest MSP in Scottish Parliament history at time of election (age 25, 2011)
+  - MSP for Central Scotland since 2011; campaigner on carer poverty
+  - Former North Lanarkshire councillor and Territorial Army soldier
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25089/mark_griffin
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Mark_Griffin_(politician)
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

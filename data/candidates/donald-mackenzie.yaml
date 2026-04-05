@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Caithness, Sutherland and Ross.
-highlights: []
+bio: Inverness-based qualified accountant. Established his own business in 2001 advising companies across the Highlands.
+highlights:
+  - Inverness-based accountant and business adviser
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

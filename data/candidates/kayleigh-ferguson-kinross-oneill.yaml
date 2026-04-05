@@ -7,8 +7,10 @@ accent: "#007A3D"
 constituency: edinburgh-northern
 isIncumbent: false
 quizCandidate: true
-bio: Scottish Green Party candidate for Edinburgh Northern.
-highlights: []
+bio: Edinburgh Green councillor and transport spokesperson. Works for Lorna Slater MSP. Previously worked on disability accessibility at Euan's Guide and Inclusion Scotland.
+highlights:
+  - Edinburgh Green councillor; transport spokesperson for the Green group
+  - Disability accessibility advocate; worked for Euan's Guide and Inclusion Scotland
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website

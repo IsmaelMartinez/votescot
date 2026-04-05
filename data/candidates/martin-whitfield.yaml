@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+bio: Labour MSP for South Scotland since 2021. Former MP for East Lothian (2017-2019). Convener of the Standards, Procedures and Public Appointments Committee. Former primary school teacher and solicitor.
+highlights:
+  - Former MP for East Lothian (2017-2019); MSP for South Scotland since 2021
+  - Convener of Standards, Procedures and Public Appointments Committee
+  - Former primary school teacher and solicitor
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/martin-whitfield
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Martin_Whitfield
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

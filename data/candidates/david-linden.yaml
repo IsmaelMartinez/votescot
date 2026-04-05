@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: glasgow-baillieston-and-shettleston
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Glasgow Baillieston and Shettleston.
-highlights: []
+bio: Former MP for Glasgow East (2017-2024). SNP welfare and housing spokesperson at Westminster. Youngest SNP MP when first elected at age 27.
+highlights:
+  - MP for Glasgow East (2017-2024); youngest SNP MP when first elected at 27
+  - SNP spokesperson for Work and Pensions and Housing at Westminster
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/David_Linden_(politician)
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25677/david_linden/glasgow_east
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

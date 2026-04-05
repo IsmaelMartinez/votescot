@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: cumbernauld-and-kilsyth
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Cumbernauld and Kilsyth.
-highlights: []
+bio: MSP since 2007 for Cumbernauld and Kilsyth. Has held multiple ministerial roles including Minister for Independence and Minister for Higher and Further Education.
+highlights:
+  - MSP since 2007; Minister for Independence from 2023
+  - Minister for Higher and Further Education (2021-2023)
+  - Minister for Business, Fair Work and Skills
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/14009/jamie_hepburn
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Jamie_Hepburn
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

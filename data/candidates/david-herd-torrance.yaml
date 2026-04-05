@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: kirkcaldy
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Kirkcaldy.
-highlights: []
+bio: MSP for Kirkcaldy since 2011. Former mechanical engineer who worked for British Gas, Alcan Chemicals, and Bosch Rexroth. Scout leader since 1979.
+highlights:
+  - MSP for Kirkcaldy since 2011
+  - Former mechanical engineer; Scout leader for over four decades
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/David_Torrance_(politician)
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/david-torrance
+    type: scottish_parliament
 positions:
   independence: 2
   nhs: 1

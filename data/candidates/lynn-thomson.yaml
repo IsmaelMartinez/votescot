@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: aberdeen-donside
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Aberdeen Donside.
-highlights: []
+bio: Aberdeen councillor and long-serving NHS worker with 30 years' experience in the health service.
+highlights:
+  - Aberdeen city councillor; NHS worker with 30 years' service
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

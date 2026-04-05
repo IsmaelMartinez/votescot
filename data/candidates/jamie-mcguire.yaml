@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: renfrewshire-west-and-levern-valley
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Renfrewshire West and Levern Valley.
-highlights: []
+bio: Renfrewshire councillor for Renfrew North and Braehead since 2022. First Scottish Labour councillor to defect to Reform UK. Former chair of Glasgow University Labour Club.
+highlights:
+  - First Scottish Labour councillor to defect to Reform UK (June 2025)
+  - Renfrewshire councillor since 2022; former Glasgow University Labour Club chair
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

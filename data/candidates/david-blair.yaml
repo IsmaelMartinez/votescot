@@ -8,7 +8,8 @@ constituency: moray
 isIncumbent: false
 quizCandidate: true
 bio: Labour Party candidate for Moray.
-highlights: []
+highlights:
+  - Labour Party candidate for Moray in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

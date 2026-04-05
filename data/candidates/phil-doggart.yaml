@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: midlothian-north
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Midlothian North.
-highlights: []
+bio: Edinburgh city councillor for Liberton/Gilmerton for nine years. Actuary by profession. Serves on Finance and Governance committees.
+highlights:
+  - Edinburgh councillor for Liberton/Gilmerton for nine years
+  - Qualified actuary; serves on Finance and Governance committees
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

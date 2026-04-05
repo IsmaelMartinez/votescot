@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Argyll and Bute.
-highlights: []
+bio: Argyll and Bute councillor for Oban South and the Isles. Defected from the Conservatives to Reform UK in 2026.
+highlights:
+  - Argyll and Bute councillor for Oban South and the Isles
+  - Defected from Conservatives to Reform UK in 2026
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

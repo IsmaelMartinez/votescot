@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: perthshire-south-and-kinross-shire
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Perthshire South and Kinross-shire.
-highlights: []
+bio: Retired teacher of 30 years. Full-time carer for her son with complex disabilities. Volunteers for Rainbows, Guides, and anti-poverty charities.
+highlights:
+  - Retired teacher of 30 years; full-time carer
+  - Volunteers for anti-poverty charities, Rainbows and Guides
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

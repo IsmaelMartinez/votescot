@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: strathkelvin-and-bearsden
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Strathkelvin and Bearsden.
-highlights: []
+bio: Chairwoman of the Scottish Iraqi Association. Moved to Scotland from Iraq 30 years ago. Has stood for Labour and the Conservatives before joining Reform UK.
+highlights:
+  - Chairwoman of the Scottish Iraqi Association; moved from Iraq 30 years ago
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

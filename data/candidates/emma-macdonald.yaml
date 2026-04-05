@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: shetland-islands
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Shetland Islands.
-highlights: []
+bio: Leader of Shetland Islands Council. Won LGIU Councillor Award for Leader of the Year 2024. First joined the council in 2017.
+highlights:
+  - Leader of Shetland Islands Council; LGIU Leader of the Year 2024
+  - Councillor since 2017; became deputy leader then elected Leader in 2022
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

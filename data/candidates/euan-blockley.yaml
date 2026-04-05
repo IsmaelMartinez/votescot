@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: airdrie
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Airdrie.
-highlights: []
+bio: Glasgow City councillor for Linn ward.
+highlights:
+  - Glasgow City councillor for Linn ward
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

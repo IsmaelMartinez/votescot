@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: almond-valley
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Almond Valley.
-highlights: []
+bio: West Lothian councillor for East Livingston and East Calder. Conservative group leader on West Lothian Council.
+highlights:
+  - Conservative group leader on West Lothian Council
+  - Councillor for East Livingston and East Calder
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: edinburgh-northern
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh Northern.
-highlights: []
+bio: PhD graduate, qualified primary teacher, and carer for her disabled daughter. Professional caseworker focused on NHS and social care.
+highlights:
+  - PhD graduate and qualified primary teacher
+  - Caseworker focused on NHS, social care, and women's safety
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

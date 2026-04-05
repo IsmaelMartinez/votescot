@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: clydesdale
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Clydesdale.
-highlights: []
+bio: Dumfries and Galloway councillor for Annandale South.
+highlights:
+  - Dumfries and Galloway councillor for Annandale South
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

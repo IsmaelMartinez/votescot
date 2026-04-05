@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: midlothian-south-tweeddale-and-lauderdale
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Midlothian South, Tweeddale and Lauderdale.
-highlights: []
+bio: Former Tweeddale West councillor (2013-2017). Three-decade career in the printing business. Lives in Innerleithen.
+highlights:
+  - Former Tweeddale West councillor; 30 years in the printing business
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

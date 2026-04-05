@@ -7,8 +7,12 @@ accent: "#8b0d22"
 constituency: glasgow-cathcart-and-pollok
 isIncumbent: false
 quizCandidate: false
-bio: Workers Party of Britain candidate for Glasgow Cathcart and Pollok.
-highlights: []
+bio: Journalist captured by the Taliban in 2001. Worked for Sunday Times, Daily Mirror, Observer. Converted to Islam in 2003. Standing for the Workers Party of Britain.
+highlights:
+  - Veteran journalist captured by the Taliban in 2001; global headlines
+  - Worked for Sunday Times, Daily Mirror, Observer, and News of the World
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Yvonne_Ridley
+    type: wikipedia

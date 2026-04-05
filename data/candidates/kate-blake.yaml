@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: aberdeenshire-west
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Aberdeenshire West.
-highlights: []
+bio: Aberdeen city councillor for Kingswells, Sheddocksley and Summerhill. Education background.
+highlights:
+  - Aberdeen city councillor for Kingswells, Sheddocksley and Summerhill
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: eastwood
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Eastwood.
-highlights: []
+bio: Former MP for East Renfrewshire (2015-2017 and 2019-2024). Unseated Scottish Labour leader Jim Murphy in 2015. SNP deputy Westminster leader (2020-2022) and Business Convener (2018-2023).
+highlights:
+  - Unseated Scottish Labour leader Jim Murphy in 2015, one of the election's most notable results
+  - SNP deputy Westminster leader (2020-2022) and Business Convener (2018-2023)
+  - MP for East Renfrewshire across two terms (2015-2017 and 2019-2024)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/mp/25294/kirsten_oswald/east_renfrewshire
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Kirsten_Oswald
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

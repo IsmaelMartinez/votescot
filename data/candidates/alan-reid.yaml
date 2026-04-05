@@ -7,11 +7,15 @@ accent: "#B8860B"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Argyll and Bute.
-highlights: []
+bio: Former Liberal Democrat MP for Argyll and Bute (2001-2015). East Dunbartonshire councillor for Bearsden North since 2022. Computer project manager background.
+highlights:
+  - MP for Argyll and Bute (2001-2015); Lib Dem Scotland Office spokesperson
+  - East Dunbartonshire councillor since 2022
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Alan_Reid_(politician)
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: east-kilbride
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for East Kilbride.
-highlights: []
+bio: MSP for East Kilbride since 2021. Convener of the Social Justice and Social Security Committee. Former South Lanarkshire councillor and depute provost.
+highlights:
+  - MSP for East Kilbride since 2021; convener of Social Justice and Social Security Committee
+  - Former South Lanarkshire councillor and depute provost
+  - Founding member of East Kilbride branch of Women for Independence
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/collette-stevenson
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/26013/collette_stevenson
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

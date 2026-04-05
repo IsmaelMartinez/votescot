@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: Unison branch secretary standing for Labour in Ettrick, Roxburgh and Berwickshire.
+highlights:
+  - Unison branch secretary
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

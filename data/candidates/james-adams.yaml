@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: kilmarnock-and-irvine-valley
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Banffshire and Buchan Coast.
-highlights: []
+bio: Kilmarnock Conservative councillor.
+highlights:
+  - Kilmarnock councillor
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: coatbridge-and-chryston
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Coatbridge and Chryston.
-highlights: []
+bio: MSP for Coatbridge and Chryston since 2016, the first SNP MSP ever elected for the constituency. Re-elected in 2021 with 57% vote share. Former social worker.
+highlights:
+  - First SNP MSP elected for Coatbridge and Chryston (2016); re-elected with 57% in 2021
+  - Serves on the Justice Committee and Education and Skills Committee
+  - Former qualified social worker; North Lanarkshire councillor from 2012
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/fulton-macgregor
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/25521/fulton_macgregor
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

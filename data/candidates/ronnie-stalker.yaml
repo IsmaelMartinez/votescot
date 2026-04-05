@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: cunninghame-north
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Cunninghame North.
-highlights: []
+bio: North Ayrshire councillor and local butcher.
+highlights:
+  - North Ayrshire councillor; local butcher
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

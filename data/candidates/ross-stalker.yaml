@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: renfrewshire-west-and-levern-valley
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Renfrewshire West and Levern Valley.
-highlights: []
+bio: Former Lib Dem professional campaign organiser through four parliamentary elections. Biologist by training.
+highlights:
+  - Former Lib Dem professional campaign organiser
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

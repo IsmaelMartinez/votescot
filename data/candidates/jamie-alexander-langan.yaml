@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: List-topper for Reform UK in the South Scotland region. Originally from Edinburgh.
+highlights:
+  - Tops Reform UK regional list for South Scotland
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

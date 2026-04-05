@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: eastwood
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Eastwood.
-highlights: []
+bio: Former Leader of the Scottish Conservatives (February-July 2020) and Deputy Leader (2011-2019) under Ruth Davidson. MSP since 2007; elected for Eastwood in 2016.
+highlights:
+  - Former Leader of the Scottish Conservatives (February-July 2020)
+  - Deputy Leader under Ruth Davidson (2011-2019); MSP since 2007
+  - Elected for Eastwood constituency in 2016 defeating incumbent Ken Macintosh
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/13967/jackson_carlaw
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Jackson_Carlaw
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

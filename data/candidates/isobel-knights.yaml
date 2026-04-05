@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: angus-south
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Angus South.
-highlights: []
+bio: Active in the Mearns area. Significantly increased the Lib Dem vote in a recent local by-election.
+highlights:
+  - Increased Lib Dem vote by 15 points in Mearns by-election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

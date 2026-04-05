@@ -7,8 +7,10 @@ accent: "#555555"
 constituency: argyll-and-bute
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Argyll and Bute.
-highlights: []
+bio: Argyll and Bute councillor for South Kintyre since 2022. Former Royal Marines Commando. Worked for CalMac ferries.
+highlights:
+  - South Kintyre councillor; former Royal Marines Commando
+  - Worked for CalMac ferries for six years
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

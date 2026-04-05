@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: edinburgh-south-western
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Edinburgh South Western.
-highlights: []
+bio: Conservative MSP for Lothian since 2021. Shadow Cabinet Secretary for Transport. Convenor of the Education, Children and Young People Committee. Former Edinburgh councillor and NHS medical supplies business owner.
+highlights:
+  - MSP for Lothian since 2021; Shadow Cabinet Secretary for Transport
+  - Convenor of Education, Children and Young People Committee
+  - Former Edinburgh councillor; ran NHS medical supplies business
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Sue_Webber
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/sue-webber
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

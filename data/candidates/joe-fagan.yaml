@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: east-kilbride
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for East Kilbride.
-highlights: []
+bio: Leader of South Lanarkshire Council. Lifelong East Kilbride resident and councillor for East Kilbride Central North since 2017. Strathclyde University graduate.
+highlights:
+  - Leader of South Lanarkshire Council
+  - East Kilbride councillor since 2017; lifelong local resident
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

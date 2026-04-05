@@ -8,11 +8,19 @@ textColor: "#333"
 constituency: clackmannanshire-and-dunblane
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Clackmannanshire and Dunblane.
-highlights: []
+bio: SNP Depute Leader since 2018 and MSP since 2007. Former Royal Marine who served in the Falklands War. Has held multiple Cabinet Secretary roles including Justice, Economy, and Infrastructure.
+highlights:
+  - SNP Depute Leader since 2018; MSP since 2007
+  - Cabinet Secretary for Justice and Veterans (2021-2023)
+  - Cabinet Secretary for Economy, Jobs and Fair Work (2016-2018)
+  - Former Royal Marine who served in the Falklands War
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/keith-brown
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/13961/keith_brown
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

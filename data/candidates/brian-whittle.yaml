@@ -7,11 +7,17 @@ accent: "#005EA5"
 constituency: east-kilbride
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for East Kilbride.
-highlights: []
+bio: Conservative MSP for South Scotland since 2016. Former international athlete who competed at the 1988 Seoul Olympics and won gold in the 4x400m relay at the European Championships.
+highlights:
+  - Former Olympic athlete (1988 Seoul); European Championships 4x400m gold medallist
+  - MSP for South Scotland since 2016; Shadow Minister for Environment
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Brian_Whittle
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/brian-whittle
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

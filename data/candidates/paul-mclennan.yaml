@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+bio: MSP for East Lothian since 2021, the first SNP MSP for the constituency. Former Minister for Housing (2023-2025). Long-serving East Lothian councillor since 2007.
+highlights:
+  - Minister for Housing (2023-2025); first SNP MSP for East Lothian
+  - East Lothian councillor since 2007; council leader (2010-2012)
+  - 22 years at Bank of Scotland; former NHS Lothian board member
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/26005/paul_mclennan
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Paul_McLennan
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

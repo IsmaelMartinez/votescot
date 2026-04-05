@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: cumbernauld-and-kilsyth
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Cumbernauld and Kilsyth.
-highlights: []
+bio: Labour councillor for Cumbernauld South on North Lanarkshire Council, elected 2022.
+highlights:
+  - North Lanarkshire councillor for Cumbernauld South since 2022
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

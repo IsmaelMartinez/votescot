@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: angus-south
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Angus South.
-highlights: []
+bio: Awarded OBE for services to healthcare. Former BP executive with senior posts in Africa, Brussels, London and Washington. Former director of Scottish Blood Service and Angus councillor.
+highlights:
+  - Awarded OBE for services to healthcare
+  - Former BP executive; former director of Scottish Blood Service
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

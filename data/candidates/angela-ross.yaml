@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: edinburgh-eastern-musselburgh-and-tranent
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Edinburgh Eastern, Musselburgh and Tranent.
-highlights: []
+bio: Qualified teacher and fraud awareness expert. Business owner with deep East Lothian roots. Standing for Reform UK.
+highlights:
+  - Qualified teacher, fraud awareness expert, and business owner
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

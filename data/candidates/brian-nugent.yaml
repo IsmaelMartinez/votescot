@@ -8,7 +8,8 @@ constituency: shetland-islands
 isIncumbent: false
 quizCandidate: false
 bio: Alliance to Liberate Scotland and Sovereignty candidate for Shetland Islands.
-highlights: []
+highlights:
+  - Alliance to Liberate Scotland and Sovereignty candidate for Shetland Islands in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
     type: party_website

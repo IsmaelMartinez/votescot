@@ -7,11 +7,15 @@ accent: "#005EA5"
 constituency: moray
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Moray.
-highlights: []
+bio: Conservative MSP for Highlands and Islands since 2024. Shadow Secretary for Rural Affairs. Former police officer, missionary in Mozambique, and Moray councillor since 2017.
+highlights:
+  - MSP for Highlands and Islands since 2024; Shadow Secretary for Rural Affairs
+  - Former police officer and missionary in Mozambique; Moray councillor since 2017; runs a sheep farm
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Tim_Eagle
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

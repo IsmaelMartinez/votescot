@@ -7,16 +7,18 @@ accent: "#007A3D"
 constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: true
-bio: Former Green co-leader and Minister (2021-2024). Delivered free bus travel for under-22s and rent controls. Ballot Box Scotland projects Greens could win here — would be first ever Green constituency MSP.
+bio: Former Scottish Green co-leader (2019-2025) and MSP for Lothian since 2021. Minister for Green Skills, Circular Economy and Biodiversity (2021-2024) under the Bute House Agreement. Former tidal energy engineer.
 highlights:
-  - First ever Green government minister in UK history
-  - Delivered free bus travel for under-22s (930,000+ eligible)
-  - Delivered rent control legislation
-  - Deposit Return Scheme faced delays — controversial
-  - Projected to potentially win Edinburgh Central
+  - Scottish Green co-leader (2019-2025); one of the first Green ministers in UK government history
+  - Minister for Green Skills, Circular Economy and Biodiversity (2021-2024)
+  - Delivered bans on problematic single-use plastics; former tidal energy engineer
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/26012/lorna_slater
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Lorna_Slater
+    type: wikipedia
 positions:
   independence: 2
   nhs: 2

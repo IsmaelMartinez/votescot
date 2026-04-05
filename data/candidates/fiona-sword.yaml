@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: cowdenbeath
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Cowdenbeath.
-highlights: []
+bio: Two decades of experience in the voluntary sector supporting communities and championing social justice. Grew up in Kirkcaldy, lives in Burntisland.
+highlights:
+  - Two decades' experience in the voluntary sector
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

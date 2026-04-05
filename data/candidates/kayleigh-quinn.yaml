@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: eastwood
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Eastwood.
-highlights: []
+bio: Former Scottish organiser for the Labour Party. Currently Head of Office and Research at the House of Commons.
+highlights:
+  - Former Scottish organiser for the Labour Party
+  - Head of Office and Research at the House of Commons
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

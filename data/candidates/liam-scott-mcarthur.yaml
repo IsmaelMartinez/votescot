@@ -7,11 +7,18 @@ accent: "#B8860B"
 constituency: orkney-islands
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Orkney Islands.
-highlights: []
+bio: MSP for Orkney Islands since 2007. Deputy Presiding Officer of the Scottish Parliament since 2021. Introduced the Assisted Dying for Terminally Ill Adults Bill in 2024.
+highlights:
+  - MSP for Orkney since 2007; Deputy Presiding Officer since 2021
+  - Introduced the Assisted Dying for Terminally Ill Adults Bill (2024)
+  - Former special adviser to Deputy First Minister Jim Wallace
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Liam_McArthur
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/liam-mcarthur
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

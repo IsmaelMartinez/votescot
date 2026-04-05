@@ -7,8 +7,14 @@ accent: "#555555"
 constituency: inverness-and-nairn
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Inverness and Nairn.
-highlights: []
+bio: MSP since 1999 for Inverness and Nairn. Former Cabinet Secretary for Rural Economy and Tourism (2016-2021). Left the SNP in 2025. Standing as Independent.
+highlights:
+  - MSP since 1999; Cabinet Secretary for Rural Economy and Tourism (2016-2021)
+  - Left the SNP in 2025; standing as Independent for Inverness and Nairn
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Fergus_Ewing
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/fergus-ewing
+    type: scottish_parliament

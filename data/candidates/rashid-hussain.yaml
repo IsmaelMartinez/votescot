@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: glasgow-southside
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Glasgow Southside.
-highlights: []
+bio: Leader of the Labour group on Glasgow City Council. Councillor for Greater Pollok since 2012. First BAME leader of Glasgow Labour group. Data analyst at BAE Systems.
+highlights:
+  - Leader of Glasgow Labour group; first BAME leader of the group
+  - Glasgow councillor for Greater Pollok since 2012
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

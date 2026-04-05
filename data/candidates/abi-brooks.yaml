@@ -8,7 +8,8 @@ constituency: dundee-city-west
 isIncumbent: false
 quizCandidate: true
 bio: Conservative and Unionist Party candidate for Dundee City West.
-highlights: []
+highlights:
+  - Conservative and Unionist Party candidate for Dundee City West in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

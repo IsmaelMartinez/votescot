@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: fife-north-east
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Fife North East.
-highlights: []
+bio: Journalist, NHS worker and leading menopause campaigner. Named Big Issue Changemaker in 2023. Former first female Night Editor of The Scotsman.
+highlights:
+  - Named Big Issue Changemaker in 2023 for menopause campaign
+  - Former first female Night Editor of The Scotsman; helped launch the Sunday Herald
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

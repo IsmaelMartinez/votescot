@@ -8,7 +8,8 @@ constituency: angus-north-and-mearns
 isIncumbent: false
 quizCandidate: false
 bio: Independent candidate for Angus North and Mearns.
-highlights: []
+highlights:
+  - Independent candidate for Angus North and Mearns in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

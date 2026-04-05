@@ -7,11 +7,18 @@ accent: "#8B0000"
 constituency: glasgow-baillieston-and-shettleston
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Glasgow Baillieston and Shettleston.
-highlights: []
+bio: One of Scotland's longest-serving Labour MSPs, first elected for Glasgow Kelvin in 1999. Shadow Cabinet Secretary for Justice. Former NUS Scotland President.
+highlights:
+  - MSP since 1999; one of Scotland's longest-serving Labour parliamentarians
+  - Shadow Cabinet Secretary for Justice; Convener of Justice Committee (2003-2007)
+  - Former President of NUS Scotland (1986-1988)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/14062/pauline_mcneill
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Pauline_McNeill
+    type: wikipedia
 positions:
   independence: 0
   nhs: 2

@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: edinburgh-eastern-musselburgh-and-tranent
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh Eastern, Musselburgh and Tranent.
-highlights: []
+bio: Director of the Scottish Fabians. Head of Office to Chris Murray MP. Author of Fabian pamphlets on devolution and social security reform.
+highlights:
+  - Director of the Scottish Fabians
+  - Head of Office to Chris Murray MP; author on devolution and social security
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

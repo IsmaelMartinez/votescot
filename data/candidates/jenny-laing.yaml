@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: aberdeen-central
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Aberdeen Central.
-highlights: []
+bio: Former leader of Aberdeen City Council (2014-2022). Returning to frontline politics as Labour's candidate for Aberdeen Central.
+highlights:
+  - Former leader of Aberdeen City Council (2014-2022)
+  - Aberdeen City councillor since 2007, representing Midstocket and Rosemount
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

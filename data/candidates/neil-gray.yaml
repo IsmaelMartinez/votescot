@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: airdrie
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Airdrie.
-highlights: []
+bio: Cabinet Secretary for Health and Social Care since February 2024. MSP for Airdrie and Shotts since 2021, previously the Westminster MP for the same seat (2015-2021).
+highlights:
+  - Cabinet Secretary for Health and Social Care since February 2024
+  - Previously Cabinet Secretary for Wellbeing Economy, Fair Work and Energy (2023-2024)
+  - MP for Airdrie and Shotts (2015-2021) before moving to Holyrood
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/neil-gray
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/25293/neil_gray
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+bio: First-time candidate from Gordon in the Scottish Borders. Grew up with ties to agriculture and forestry. Previously worked in hospitality and the Scottish Parliament.
+highlights:
+  - First-time candidate from the Borders; agriculture and forestry background
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

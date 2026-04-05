@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: aberdeen-deeside-and-north-kincardine
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Aberdeen Deeside and North Kincardine.
-highlights: []
+bio: Conservative MSP for North East Scotland since 2016. Former Deputy Leader of the Scottish Conservatives (2019-2020). Currently Shadow Cabinet Secretary for Education and Skills. Employment law specialist.
+highlights:
+  - Conservative MSP for North East Scotland since 2016
+  - Former Deputy Leader of the Scottish Conservatives (2019-2020)
+  - Shadow Cabinet Secretary for Education and Skills; former employment law specialist
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25515/liam_kerr
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Liam_Kerr
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

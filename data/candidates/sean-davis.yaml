@@ -7,8 +7,9 @@ accent: "#555555"
 constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Carrick, Cumnock and Doon Valley.
-highlights: []
+bio: Pro-independence independent candidate. First independent to stand in Carrick, Cumnock and Doon Valley since 2007.
+highlights:
+  - First independent candidate in Carrick, Cumnock and Doon Valley since 2007
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

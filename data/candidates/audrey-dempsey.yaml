@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: glasgow-easterhouse-and-springburn
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Glasgow Easterhouse and Springburn.
-highlights: []
+bio: Glasgow city councillor for Springburn and Robroyston. Founder of Glasgow's No 1 Baby and Family Support Service charity, supporting over 8,000 families. Left Labour to join Reform UK.
+highlights:
+  - Glasgow councillor; founder of No 1 Baby and Family Support Service (8,000+ families)
+  - Left Labour in 2024; joined Reform UK in 2025
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

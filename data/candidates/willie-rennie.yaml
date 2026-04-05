@@ -7,16 +7,19 @@ accent: "#B8860B"
 constituency: fife-north-east
 isIncumbent: false
 quizCandidate: true
-bio: Former leader of the Scottish Liberal Democrats (2011-2021) and MSP for North East Fife since 2016. Before leading the party, Rennie served as MP for Dunfermline and West Fife (2006-2010) and was Chief Executive of the Scottish Liberal Democrats. He handed the leadership to Alex Cole-Hamilton in 2021 and remains one of the party's most experienced MSPs.
+bio: Former Leader of the Scottish Liberal Democrats (2011-2021) and MSP for North East Fife since 2016. Former MP for Dunfermline and West Fife (2006-2010). Chief Executive of the Scottish Liberal Democrats (1997-1999).
 highlights:
   - Leader of the Scottish Liberal Democrats (2011-2021)
-  - MSP for North East Fife since 2016 (regional list MSP 2011-2016)
-  - Former MP for Dunfermline and West Fife (2006-2010)
-  - Former Chief Executive of the Scottish Liberal Democrats (1997-1999)
-  - Negotiated budget concessions including business rates relief
+  - MSP for North East Fife since 2016; former MP for Dunfermline and West Fife (2006-2010)
+  - Chief Executive of the Scottish Liberal Democrats (1997-1999)
+  - Secured new funding for colleges and extra childcare support during leadership
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/willie-rennie
+    type: scottish_parliament
+  - url: https://en.wikipedia.org/wiki/Willie_Rennie
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

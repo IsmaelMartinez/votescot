@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: galloway-and-west-dumfries
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Galloway and West Dumfries.
-highlights: []
+bio: Conservative MSP for Galloway and West Dumfries since 2016. Convener of the Rural Affairs, Islands and Natural Environment Committee. Farmer and agricultural graduate.
+highlights:
+  - MSP for Galloway and West Dumfries since 2016
+  - Convener of Rural Affairs, Islands and Natural Environment Committee
+  - Agricultural graduate (Aberdeen University); farmer by background
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Finlay_Carson
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/finlay-carson
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

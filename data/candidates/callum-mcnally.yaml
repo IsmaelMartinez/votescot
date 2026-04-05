@@ -7,8 +7,10 @@ accent: "#8B0000"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Clydebank and Milngavie.
-highlights: []
+bio: East Dunbartonshire councillor for Lenzie and Kirkintilloch South. Previously stood as Labour candidate for East Dunbartonshire in 2017.
+highlights:
+  - East Dunbartonshire councillor for Lenzie and Kirkintilloch South
+  - Labour candidate for East Dunbartonshire at the 2017 general election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

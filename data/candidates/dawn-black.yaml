@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: angus-north-and-mearns
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Angus North and Mearns.
-highlights: []
+bio: Aberdeenshire councillor for Stonehaven and Lower Deeside. Standing for Angus North and Mearns in her first bid for the Scottish Parliament.
+highlights:
+  - Aberdeenshire councillor for Stonehaven and Lower Deeside
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

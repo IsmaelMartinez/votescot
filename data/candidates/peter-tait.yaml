@@ -7,8 +7,9 @@ accent: "#555555"
 constituency: shetland-islands
 isIncumbent: false
 quizCandidate: false
-bio: Independent candidate for Shetland Islands.
-highlights: []
+bio: Repeat Shetland independent candidate from Walls. Campaigns on constitutional reform.
+highlights:
+  - Repeat Shetland independent; campaigns on constitutional reform
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website

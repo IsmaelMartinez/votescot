@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: edinburgh-eastern-musselburgh-and-tranent
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Edinburgh Eastern, Musselburgh and Tranent.
-highlights: []
+bio: Writer, columnist and communications consultant. Attended Stirling University. Active in the Better Together and Remain campaigns.
+highlights:
+  - Writer and communications consultant; Stirling University graduate
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

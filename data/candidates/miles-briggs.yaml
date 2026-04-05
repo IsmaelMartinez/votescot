@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+bio: Conservative MSP for the Lothian region since 2016. Former Shadow Cabinet Secretary for Health and Sport. Scottish Conservative Chief Whip (2020-2021).
+highlights:
+  - Conservative MSP for Lothian since 2016
+  - Shadow Cabinet Secretary for Health and Sport (2017-2020)
+  - Scottish Conservative Chief Whip (2020-2021)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25494/miles_briggs
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Miles_Briggs
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

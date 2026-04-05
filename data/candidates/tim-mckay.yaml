@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+bio: Edinburgh councillor for Inverleith since 2007. Convener of Lothian Pensions Committee. Former chartered accountant. Maths and Physics degree from St Andrews.
+highlights:
+  - Edinburgh councillor since 2007; Convener of Lothian Pensions Committee
+  - Former chartered accountant; St Andrews maths and physics graduate
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

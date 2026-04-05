@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: almond-valley
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Almond Valley.
-highlights: []
+bio: Editor of Liberal Democrat Voice, the party's leading grassroots blog. Scottish Lib Dem spokesperson for Social Security.
+highlights:
+  - Editor of Liberal Democrat Voice, the party's leading blog
+  - Scottish Lib Dem spokesperson for Social Security
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

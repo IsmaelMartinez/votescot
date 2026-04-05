@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: glasgow-southside
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Glasgow Southside.
-highlights: []
+bio: Vice-Chair of Campaigns for Glasgow Conservative Association.
+highlights:
+  - Vice-Chair of Campaigns for Glasgow Conservative Association
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

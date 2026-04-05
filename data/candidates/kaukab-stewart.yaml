@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: glasgow-southside
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Glasgow Southside.
-highlights: []
+bio: MSP for Glasgow Kelvin since 2021. Minister for Equalities since May 2024. One of the first women of colour elected to the Scottish Parliament. Former primary teacher for nearly 30 years.
+highlights:
+  - Minister for Equalities since May 2024; one of the first women of colour in the Scottish Parliament
+  - MSP for Glasgow Kelvin since 2021; former primary teacher for nearly 30 years
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Kaukab_Stewart
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/kaukab-stewart
+    type: scottish_parliament
 positions:
   independence: 2
   nhs: 1

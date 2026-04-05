@@ -8,7 +8,8 @@ constituency: ettrick-roxburgh-and-berwickshire
 isIncumbent: false
 quizCandidate: false
 bio: Alliance to Liberate Scotland candidate for Ettrick, Roxburgh and Berwickshire.
-highlights: []
+highlights:
+  - Alliance to Liberate Scotland candidate for Ettrick, Roxburgh and Berwickshire
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website

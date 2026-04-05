@@ -7,8 +7,9 @@ accent: "#0a7f91"
 constituency: falkirk-east-and-linlithgow
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Falkirk East and Linlithgow.
-highlights: []
+bio: Over 35 years of frontline public service experience. Standing for Reform UK in Falkirk East and Linlithgow.
+highlights:
+  - Over 35 years of frontline public service experience
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

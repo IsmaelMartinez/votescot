@@ -8,11 +8,16 @@ textColor: "#333"
 constituency: perthshire-south-and-kinross-shire
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Perthshire South and Kinross-shire.
-highlights: []
+bio: MSP for Perthshire South and Kinross-shire since 2021. Minister for Agriculture and Connectivity since February 2024. Hill farmer who founded Perth Farmers' Market in 1996.
+highlights:
+  - Minister for Agriculture and Connectivity since February 2024
+  - Hill farmer who founded Perth Farmers' Market in 1996
+  - Co-founded Farmers4Yes pro-independence campaign
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Jim_Fairlie_(MSP)
+    type: wikipedia
 positions:
   independence: 2
   nhs: 1

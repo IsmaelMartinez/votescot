@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: aberdeen-donside
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Aberdeen Donside.
-highlights: []
+bio: Aberdeenshire councillor for Central Buchan since 2022. Specialist additional support needs teacher.
+highlights:
+  - Aberdeenshire councillor since 2022; specialist ASN teacher
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: stirling
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Stirling.
-highlights: []
+bio: Senior project manager with public and private sector experience. Volunteered to re-home rough sleepers during Covid. Mentors disadvantaged children.
+highlights:
+  - Senior project manager; volunteered to re-home rough sleepers during Covid
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

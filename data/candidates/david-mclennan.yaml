@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: bathgate
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Bathgate.
-highlights: []
+bio: First Reform UK councillor elected in Scotland, winning the Whitburn and Blackburn by-election in December 2025. Semi-retired, formerly in the Civil Service.
+highlights:
+  - First Reform UK councillor elected in Scotland (Whitburn and Blackburn, December 2025)
+  - Former Civil Service worker
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

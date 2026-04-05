@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: perthshire-north
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Perthshire North.
-highlights: []
+bio: Liberal Democrat councillor for Strathtay ward, Perth and Kinross Council since 2022. Party spokesperson for Agriculture and Remote Communities. Runs Perthshire businesses.
+highlights:
+  - Perth and Kinross councillor since 2022; Lib Dem agriculture spokesperson
+  - Runs Perthshire property and retail businesses
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

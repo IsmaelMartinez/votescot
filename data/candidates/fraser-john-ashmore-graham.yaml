@@ -7,8 +7,9 @@ accent: "#B8860B"
 constituency: kirkcaldy
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Kirkcaldy.
-highlights: []
+bio: Chartered Architect from Fife. Grew up with deep roots in the area. Focus on sustainable and community-focused design.
+highlights:
+  - Chartered Architect specialising in sustainable design; Fife native
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

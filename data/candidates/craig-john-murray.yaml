@@ -7,11 +7,12 @@ accent: "#444444"
 constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: false
-bio: Alliance to Liberate Scotland candidate for Edinburgh Central. Former British Ambassador to Uzbekistan. Pro-independence campaigner and author.
+bio: Former British Ambassador to Uzbekistan (2002-2004). Exposed human rights violations under the Karimov regime. Author and human rights campaigner.
 highlights:
-  - Former British Ambassador to Uzbekistan
-  - Pro-independence campaigner and author
-  - Alliance to Liberate Scotland candidate
+  - Former British Ambassador to Uzbekistan (2002-2004)
+  - Exposed human rights violations; author and human rights campaigner
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Craig_Murray
+    type: wikipedia

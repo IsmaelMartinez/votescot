@@ -7,11 +7,17 @@ accent: "#005EA5"
 constituency: aberdeenshire-east
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Aberdeenshire East.
-highlights: []
+bio: Conservative MSP for North East Scotland since 2021. Shadow Cabinet Secretary for Energy. Former co-leader of Aberdeen City Council (2017-2021). 20 years in IT industry.
+highlights:
+  - MSP for North East Scotland since 2021; Shadow Cabinet Secretary for Energy
+  - Former co-leader of Aberdeen City Council (2017-2021)
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Douglas_Lumsden
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/douglas-lumsden
+    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

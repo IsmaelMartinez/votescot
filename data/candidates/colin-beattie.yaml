@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: midlothian-north
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Midlothian North.
-highlights: []
+bio: MSP for Midlothian North and Musselburgh since 2011. Former SNP National Treasurer. Background in international banking spanning 23 years.
+highlights:
+  - MSP for Midlothian North since 2011; former SNP National Treasurer
+  - 23-year career in international banking in the Middle and Far East
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Colin_Beattie
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/msp/25074/colin_beattie
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

@@ -7,8 +7,9 @@ accent: "#8B0000"
 constituency: edinburgh-north-eastern-and-leith
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Edinburgh North Eastern and Leith.
-highlights: []
+bio: NHS doctor for over a decade. Entering politics to address systemic healthcare problems.
+highlights:
+  - NHS doctor for over a decade
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website

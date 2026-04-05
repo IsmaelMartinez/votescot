@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: hamilton-larkhall-and-stonehouse
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Hamilton, Larkhall and Stonehouse.
-highlights: []
+bio: Co-Founder of the Wellbeing Economy Alliance. Former director of New Economics Foundation consulting arm for over a decade.
+highlights:
+  - Co-Founded the Wellbeing Economy Alliance (WEAll)
+  - Former director at the New Economics Foundation for over a decade
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: dumbarton
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Dumbarton.
-highlights: []
+bio: Argyll and Bute councillor since 2003. Qualified accountant and director of Helensburgh Toyota. Led the Conservative group on the council.
+highlights:
+  - Argyll and Bute councillor since 2003 (five terms)
+  - Chartered accountant and car dealership director; Conservative group leader
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

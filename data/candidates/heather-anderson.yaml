@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: dundee-city-west
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Dundee City West.
-highlights: []
+bio: Briefly served as MEP for Scotland in January 2020 (four days before Brexit). Dundee councillor, welfare rights officer and organic farmer.
+highlights:
+  - Briefly served as Scotland's MEP in January 2020 before Brexit
+  - Dundee councillor; welfare rights officer and organic farmer
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: clackmannanshire-and-dunblane
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Clackmannanshire and Dunblane.
-highlights: []
+bio: First Liberal Democrat elected to West Lothian Council (2022). Runs the Far From The Madding Crowd Bookshop in Linlithgow.
+highlights:
+  - First-ever Lib Dem councillor on West Lothian Council (2022)
+  - Runs the Far From The Madding Crowd Bookshop in Linlithgow
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

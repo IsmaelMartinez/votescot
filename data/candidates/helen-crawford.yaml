@@ -7,8 +7,10 @@ accent: "#005EA5"
 constituency: skye-lochaber-and-badenoch
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Skye, Lochaber and Badenoch.
-highlights: []
+bio: Highland councillor for Aird and Loch Ness since 2022. Former lawyer. Led community opposition to renewable energy planning processes.
+highlights:
+  - Highland councillor since 2022; former lawyer
+  - Led community campaigns on renewable energy planning
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

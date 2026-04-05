@@ -7,8 +7,10 @@ accent: "#B8860B"
 constituency: falkirk-east-and-linlithgow
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Falkirk East and Linlithgow.
-highlights: []
+bio: Made homeless at age 16. Scottish Lib Dem Housing and Homelessness Spokesperson and Vice-Convenor. Campaigns on social justice.
+highlights:
+  - Made homeless at 16; now Lib Dem Housing and Homelessness Spokesperson
+  - First on Central Scotland and Lothians West regional list
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: moray
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Moray.
-highlights: []
+bio: Born and raised in Moray. Works in Richard Lochhead MSP's constituency office. Media and Communications graduate.
+highlights:
+  - Works in the outgoing MSP's constituency office; Moray native
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

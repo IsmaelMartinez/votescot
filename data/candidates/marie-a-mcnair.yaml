@@ -8,11 +8,18 @@ textColor: "#333"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Clydebank and Milngavie.
-highlights: []
+bio: MSP for Clydebank and Milngavie since 2021, the constituency's first female MSP. Former NHS nurse and prominent asbestos awareness campaigner.
+highlights:
+  - First female MSP for Clydebank and Milngavie (2021)
+  - Prominent asbestos and mesothelioma awareness campaigner reflecting Clydebank's industrial legacy
+  - Former NHS nurse; spent 14 years at St Margaret of Scotland Hospice
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/marie-mcnair
+    type: scottish_parliament
+  - url: https://www.theyworkforyou.com/msp/26006/marie_mcnair
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

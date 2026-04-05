@@ -8,7 +8,8 @@ constituency: east-lothian-coast-and-lammermuirs
 isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for East Lothian Coast and Lammermuirs.
-highlights: []
+highlights:
+  - Reform UK candidate for East Lothian Coast and Lammermuirs in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

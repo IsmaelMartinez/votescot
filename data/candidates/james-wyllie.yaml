@@ -7,8 +7,10 @@ accent: "#0a7f91"
 constituency: aberdeen-central
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Aberdeen Central.
-highlights: []
+bio: Retired Professor in Strategic Studies at the University of Aberdeen. 42 years at the university with expertise in international security and nuclear weapons.
+highlights:
+  - Retired Professor in Strategic Studies at the University of Aberdeen (42 years)
+  - International security expert; oversaw 25 PhD candidates
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

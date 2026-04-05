@@ -8,7 +8,8 @@ constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for Carrick, Cumnock and Doon Valley.
-highlights: []
+highlights:
+  - Reform UK candidate for Carrick, Cumnock and Doon Valley in the 2026 Scottish Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website

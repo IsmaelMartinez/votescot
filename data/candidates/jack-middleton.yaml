@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: aberdeen-central
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Aberdeen Central.
-highlights: []
+bio: Former special adviser to First Ministers Humza Yousaf and John Swinney. Age 30. Previously worked for MSP Maureen Watt.
+highlights:
+  - Former special adviser to First Ministers Yousaf and Swinney
+  - Selected after Kevin Stewart withdrew due to ill health
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

@@ -7,11 +7,18 @@ accent: "#005EA5"
 constituency: glasgow-anniesland
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Glasgow Anniesland.
-highlights: []
+bio: Conservative MSP for Glasgow since 2021. First Hindu and first person of Indian descent elected to the Scottish Parliament. Shadow Cabinet Secretary for Health. Practising NHS GP.
+highlights:
+  - First Hindu and first person of Indian descent elected to the Scottish Parliament
+  - Shadow Cabinet Secretary for Health and Social Care; practising NHS GP
+  - Trained at Imperial College London; former orthopaedic registrar
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
+  - url: https://www.theyworkforyou.com/msp/25999/sandesh_gulhane
+    type: theyworkforyou
+  - url: https://en.wikipedia.org/wiki/Sandesh_Gulhane
+    type: wikipedia
 positions:
   independence: 0
   nhs: 1

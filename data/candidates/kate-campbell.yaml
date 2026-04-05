@@ -8,8 +8,10 @@ textColor: "#333"
 constituency: edinburgh-eastern-musselburgh-and-tranent
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Edinburgh Eastern, Musselburgh and Tranent.
-highlights: []
+bio: Edinburgh city councillor for Portobello/Craigmillar. Former Housing, Homelessness and Fair Work Convener. Led the campaign to regulate Airbnb-style short-term lets in Edinburgh.
+highlights:
+  - Edinburgh councillor; former Housing and Homelessness Convener
+  - Led campaign to regulate short-term lets in Edinburgh; established Homelessness Task Force
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website

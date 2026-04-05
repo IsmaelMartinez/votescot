@@ -8,11 +8,17 @@ textColor: "#333"
 constituency: kilmarnock-and-irvine-valley
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Kilmarnock and Irvine Valley.
-highlights: []
+bio: Former civil engineer and MP for Kilmarnock and Loudoun (2015-2024). SNP energy and transport spokesperson at Westminster.
+highlights:
+  - MP for Kilmarnock and Loudoun (2015-2024); SNP energy and transport spokesperson
+  - Civil engineer by training (Glasgow University); East Ayrshire councillor from 2007
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
+  - url: https://en.wikipedia.org/wiki/Alan_Brown_(Scottish_politician)
+    type: wikipedia
+  - url: https://www.theyworkforyou.com/mp/25268/alan_brown/kilmarnock_and_loudoun
+    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

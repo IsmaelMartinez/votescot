@@ -7,8 +7,9 @@ accent: "#005EA5"
 constituency: inverclyde
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Inverclyde.
-highlights: []
+bio: Inverclyde-based HR consultant and former civil aviation worker. Has stood in multiple elections.
+highlights:
+  - HR consultant; former civil aviation worker
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website

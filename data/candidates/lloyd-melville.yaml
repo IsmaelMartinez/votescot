@@ -8,8 +8,9 @@ textColor: "#333"
 constituency: angus-south
 isIncumbent: false
 quizCandidate: true
-bio: Scottish National Party (SNP) candidate for Angus South.
-highlights: []
+bio: Monifieth and Sidlaw councillor since 2022. Born in 2001, one of Scotland's youngest councillors at 24.
+highlights:
+  - One of Scotland's youngest councillors at 24; elected 2022
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
