@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Liam_McArthur
-    type: wikipedia
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/liam-mcarthur
-    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

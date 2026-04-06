@@ -14,8 +14,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Thomas_Kerr_(Scottish_politician)
-    type: wikipedia
 positions:
   independence: 0
   nhs: 0

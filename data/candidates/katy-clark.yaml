@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/katy-clark
-    type: scottish_parliament
-  - url: https://en.wikipedia.org/wiki/Katy_Clark
-    type: wikipedia
 positions:
   independence: 0
   nhs: 2

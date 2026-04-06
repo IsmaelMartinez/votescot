@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/collette-stevenson
-    type: scottish_parliament
-  - url: https://www.theyworkforyou.com/msp/26013/collette_stevenson
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

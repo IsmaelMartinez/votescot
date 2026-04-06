@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Alexander_Burnett_(politician)
-    type: wikipedia
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/alexander-burnett
-    type: scottish_parliament
 positions:
   independence: 0
   nhs: 1

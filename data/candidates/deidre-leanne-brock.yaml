@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Deidre_Brock
-    type: wikipedia
-  - url: https://www.theyworkforyou.com/mp/25336/deidre_brock/edinburgh_north_and_leith
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

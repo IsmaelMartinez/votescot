@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/25515/liam_kerr
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Liam_Kerr
-    type: wikipedia
 positions:
   independence: 0
   nhs: 1

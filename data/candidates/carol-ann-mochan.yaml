@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/26008/carol_mochan
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Carol_Mochan
-    type: wikipedia
 positions:
   independence: 0
   nhs: 2

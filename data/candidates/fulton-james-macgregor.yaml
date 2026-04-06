@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/fulton-macgregor
-    type: scottish_parliament
-  - url: https://www.theyworkforyou.com/msp/25521/fulton_macgregor
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

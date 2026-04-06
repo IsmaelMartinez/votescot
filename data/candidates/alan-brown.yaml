@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Alan_Brown_(Scottish_politician)
-    type: wikipedia
-  - url: https://www.theyworkforyou.com/mp/25268/alan_brown/kilmarnock_and_loudoun
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

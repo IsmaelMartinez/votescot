@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/13994/kenneth_gibson
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Kenneth_Gibson_(Scottish_politician)
-    type: wikipedia
 positions:
   independence: 2
   nhs: 1

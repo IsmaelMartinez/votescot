@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Daniel_Johnson_(Scottish_politician)
-    type: wikipedia
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/daniel-johnson
-    type: scottish_parliament
 positions:
   independence: 0
   nhs: 2

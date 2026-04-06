@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://www.theyworkforyou.com/mp/25294/kirsten_oswald/east_renfrewshire
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Kirsten_Oswald
-    type: wikipedia
 positions:
   independence: 2
   nhs: 1

@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/14062/pauline_mcneill
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Pauline_McNeill
-    type: wikipedia
 positions:
   independence: 0
   nhs: 2

@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/25985/karen_adam
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Karen_Adam
-    type: wikipedia
 positions:
   independence: 2
   nhs: 1

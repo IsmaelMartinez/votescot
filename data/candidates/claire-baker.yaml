@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website
-  - url: https://www.theyworkforyou.com/msp/13951/claire_baker
-    type: theyworkforyou
-  - url: https://en.wikipedia.org/wiki/Claire_Baker
-    type: wikipedia
 positions:
   independence: 0
   nhs: 2

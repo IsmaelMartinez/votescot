@@ -16,10 +16,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Emma_Harper
-    type: wikipedia
-  - url: https://www.parliament.scot/msps/current-and-previous-msps/emma-harper
-    type: scottish_parliament
 positions:
   independence: 2
   nhs: 1

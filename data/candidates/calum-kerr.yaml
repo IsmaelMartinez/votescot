@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Calum_Kerr
-    type: wikipedia
-  - url: https://www.theyworkforyou.com/mp/25416/calum_kerr/berwickshire,_roxburgh_and_selkirk
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1

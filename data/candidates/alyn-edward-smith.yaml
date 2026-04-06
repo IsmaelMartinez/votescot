@@ -15,10 +15,6 @@ highlights:
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
     type: party_website
-  - url: https://en.wikipedia.org/wiki/Alyn_Smith
-    type: wikipedia
-  - url: https://www.theyworkforyou.com/mp/25848/alyn_smith/stirling
-    type: theyworkforyou
 positions:
   independence: 2
   nhs: 1
