@@ -1,0 +1,373 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PollsChart from "../components/PollsChart.tsx";
+import { loadResources } from "../lib/data";
+import pollsData from "../../data/polls.json";
+
+const sections = loadResources();
+const constituencyPolls = pollsData.constituency || [];
+const latest = constituencyPolls[0] ?? null;
+const recentPolls = constituencyPolls.slice(0, 10);
+
+type PartyKey = "snp" | "con" | "lab" | "libdem" | "green" | "alba" | "reform";
+
+const PARTY_LABELS: Record<string, string> = {
+  snp: "SNP",
+  con: "Con",
+  lab: "Lab",
+  libdem: "LD",
+  green: "Green",
+  alba: "Alba",
+  reform: "Reform",
+};
+
+const PARTY_COLORS: Record<PartyKey, string> = {
+  snp: "#9B870C",
+  con: "#0087DC",
+  lab: "#DC241F",
+  libdem: "#FAA61A",
+  green: "#00A651",
+  alba: "#005EB8",
+  reform: "#12B6CF",
+};
+
+const partyKeys = Object.keys(PARTY_LABELS) as PartyKey[];
+
+const sortedParties = latest
+  ? partyKeys
+      .filter((k) => latest[k] != null)
+      .sort((a, b) => (latest[b] as number) - (latest[a] as number))
+  : [];
+
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+---
+
+<Base title="Guide" description="Everything you need to know about the 2026 Scottish Parliament election">
+  <Header slot="header" currentTab="guide" />
+
+  <div class="py-3.5 max-w-[680px]">
+    <!-- Jump links -->
+    <nav class="flex flex-wrap gap-2 mb-4 font-body text-xs">
+      <a href="#how-to-vote" class="px-2.5 py-1 rounded-full border border-gray-300 text-gray-500 hover:border-votescot-gold hover:text-gray-700 no-underline transition-colors">How to vote</a>
+      <a href="#polls" class="px-2.5 py-1 rounded-full border border-gray-300 text-gray-500 hover:border-votescot-gold hover:text-gray-700 no-underline transition-colors">Polls</a>
+      <a href="#resources" class="px-2.5 py-1 rounded-full border border-gray-300 text-gray-500 hover:border-votescot-gold hover:text-gray-700 no-underline transition-colors">Resources</a>
+      <a href="#about" class="px-2.5 py-1 rounded-full border border-gray-300 text-gray-500 hover:border-votescot-gold hover:text-gray-700 no-underline transition-colors">About</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ HOW TO VOTE ═══════════════════════════════════════ -->
+    <section id="how-to-vote" class="mb-8 scroll-mt-4">
+      <h2 class="font-heading text-lg font-black mb-1">How to Vote</h2>
+      <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+        Everything you need to know about voting in the Scottish Parliament election on 7 May 2026.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Your Two Ballot Papers</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        When you arrive at the polling station, you will be handed two ballot papers, not one. The first is your
+        constituency vote. Scotland is divided into 73 constituencies, each electing one MSP. This works on a simple
+        first-past-the-post basis: the candidate with the most votes wins the seat. You pick one name on this ballot.
+      </p>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        The second ballot paper is your regional list vote. Scotland has eight regions, and each one elects seven
+        additional MSPs through a proportional system. On this ballot you vote for a party rather than a person.
+        The regional vote is where smaller parties often win seats, because the system is designed to reflect each
+        party's share of the vote more fairly than first-past-the-post alone can.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How the Additional Member System Works</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        The Scottish Parliament has 129 MSPs in total: 73 from constituencies and 56 from the regional lists.
+        This combination is called the Additional Member System (AMS). The regional list seats exist to correct
+        the disproportionality that first-past-the-post creates. If a party wins fewer constituency seats than its
+        share of the vote would suggest, it picks up extra seats through the regional list to bring things closer to
+        a fair reflection of how people voted.
+      </p>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        The regional seats are allocated using a formula called D'Hondt. It works like this: after the constituency
+        results are in, each party's regional vote total is divided by the total number of seats (both constituency
+        and regional) that party has already won in that region, plus one. The party with the highest result after
+        that division gets the next seat, and the calculation repeats until all seven regional seats in that region
+        are filled. The "plus one" is the key part — it means a party that already holds several seats needs a much
+        larger regional vote to win additional list seats, which is how the system balances things out.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Key Dates</h3>
+      <div class="bg-white rounded-md p-2.5 border border-votescot-border mb-3">
+        <div class="font-body text-xs text-gray-600 leading-relaxed">
+          <strong>20 April 2026</strong> — Voter registration deadline.<br />
+          <strong>21 April 2026</strong> — Postal vote application deadline.<br />
+          <strong>7 May 2026</strong> — Election day. Polling stations are open from 7am to 10pm.
+        </div>
+      </div>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Who Can Vote</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        You can vote if you are aged 16 or over on polling day, registered to vote, and live in Scotland.
+        Unlike UK general elections, Scottish Parliament elections extend the vote to EU citizens and
+        Commonwealth citizens resident in Scotland — you do not need to be a British citizen.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Do I Need ID?</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        Unlike UK general elections, you do NOT need to show photo ID to vote at the Scottish Parliament election.
+        You do not even need to bring your polling card — you just need to be registered and turn up at your
+        polling station. Photo ID requirements apply only to UK Parliament elections.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How to Register</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        If you are not yet registered to vote, you can do so online in about five minutes. You will need your
+        National Insurance number (you can find this on payslips, tax letters, or by requesting it from HMRC).
+        The deadline is 20 April 2026, but it is best to register as soon as possible.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where to Vote</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        Your polling station is assigned based on your address and will be printed on your polling card, which
+        arrives by post before the election. If you have lost your polling card, do not worry — you can still vote
+        as long as you are registered.
+      </p>
+
+      <div class="flex flex-col gap-1.5 mb-3">
+        <a href="https://www.gov.uk/register-to-vote" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Register to Vote</div>
+            <div class="font-body text-xs text-gray-500">Register online at GOV.UK — takes about 5 minutes</div>
+          </div>
+        </a>
+        <a href="https://www.gov.uk/find-polling-station" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Find Your Polling Station</div>
+            <div class="font-body text-xs text-gray-500">Look up where to vote on GOV.UK</div>
+          </div>
+        </a>
+        <a href="https://www.electoralcommission.org.uk/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Electoral Commission</div>
+            <div class="font-body text-xs text-gray-500">Official guidance on voting, ID requirements, and postal votes</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ POLLS ═══════════════════════════════════════ -->
+    <section id="polls" class="mb-8 scroll-mt-4">
+      <h2 class="font-heading text-lg font-black mb-1">Polling Trends</h2>
+      <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+        Opinion polling for the 2026 Scottish Parliament election. Updated daily from the Wikipedia polling tracker.
+      </p>
+
+      <!-- Latest poll headline bar -->
+      {latest ? (
+        <div class="bg-white border border-votescot-border rounded-md p-3 mb-4">
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+            Latest Poll — {latest.pollster} · {formatDate(latest.endDate)}
+            {latest.sampleSize ? ` · n=${latest.sampleSize.toLocaleString()}` : ""}
+          </div>
+          <div class="flex gap-1 flex-wrap">
+            {sortedParties.map((key) => {
+              const val = latest[key] as number;
+              return (
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex items-end justify-center font-body font-bold text-white text-xs rounded-sm"
+                    style={`background:${PARTY_COLORS[key]};width:${Math.max(val * 1.6, 24)}px;height:${Math.max(val * 1.4, 20)}px;`}
+                  >
+                    {val}%
+                  </div>
+                  <div class="font-body text-xs text-gray-500 mt-0.5 text-center">
+                    {PARTY_LABELS[key]}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <div class="bg-white border border-votescot-border rounded-md p-3 mb-4 font-body text-xs text-gray-400">
+          No polling data available yet.
+        </div>
+      )}
+
+      <!-- Interactive line chart -->
+      <div class="mb-4">
+        <h3 class="font-body text-[13px] font-black text-gray-700 mb-2">Trends (Last 12 months)</h3>
+        <PollsChart client:load data={pollsData} />
+      </div>
+
+      <!-- Recent polls table -->
+      <div>
+        <h3 class="font-body text-[13px] font-black text-gray-700 mb-2">Recent Polls (Constituency)</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full font-body text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-votescot-border">
+                <th class="text-left py-1.5 pr-2 text-gray-400 font-medium">Date</th>
+                <th class="text-left py-1.5 pr-2 text-gray-400 font-medium">Pollster</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#9B870C">SNP</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#DC241F">Lab</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#0087DC">Con</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#12B6CF">Ref</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#00A651">Grn</th>
+                <th class="text-right py-1.5 pr-1 font-medium" style="color:#FAA61A">LD</th>
+                <th class="text-right py-1.5 font-medium" style="color:#005EB8">Alba</th>
+              </tr>
+            </thead>
+            <tbody>
+              {recentPolls.map((poll, i) => (
+                <tr class:list={["border-b border-gray-100", i % 2 === 0 ? "bg-white" : "bg-votescot-paper/40"]}>
+                  <td class="py-1.5 pr-2 text-gray-500 whitespace-nowrap">{formatDate(poll.endDate)}</td>
+                  <td class="py-1.5 pr-2 text-gray-700 whitespace-nowrap">{poll.pollster}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#9B870C">{poll.snp !== null ? `${poll.snp}%` : "–"}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#DC241F">{poll.lab !== null ? `${poll.lab}%` : "–"}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#0087DC">{poll.con !== null ? `${poll.con}%` : "–"}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#12B6CF">{poll.reform !== null ? `${poll.reform}%` : "–"}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#00A651">{poll.green !== null ? `${poll.green}%` : "–"}</td>
+                  <td class="py-1.5 pr-1 text-right font-medium" style="color:#FAA61A">{poll.libdem !== null ? `${poll.libdem}%` : "–"}</td>
+                  <td class="py-1.5 text-right font-medium" style="color:#005EB8">{poll.alba !== null ? `${poll.alba}%` : "–"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="font-body text-xs text-gray-400 mt-3 leading-snug">
+        Data from <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" target="_blank" rel="noopener" class="underline">Wikipedia polling tracker</a>.
+        Polls conducted by BPC-registered polling firms.
+        Last synced: {new Date(pollsData.lastUpdated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════ RESOURCES ═══════════════════════════════════════ -->
+    <section id="resources" class="mb-8 scroll-mt-4">
+      <h2 class="font-heading text-lg font-black mb-1">Resources</h2>
+      <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+        Three tools cover the full picture: this quiz tells you who aligns with your values,
+        Ballot Box Scotland tells you who's likely to win, and Fraser of Allander tells you
+        whether the promises are funded.
+      </p>
+
+      {sections.map((section) => (
+        <div class="mb-3.5">
+          <h3 class="font-body text-[13px] font-black text-gray-700 mb-2">{section.title}</h3>
+          <div class="flex flex-col gap-1.5">
+            {section.items.map((item) => (
+              <a href={item.url} target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+                <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+                  <div class="flex items-center justify-between mb-0.5">
+                    <span class="font-body text-[13px] font-bold text-blue-600">{item.name}</span>
+                    <span class="font-body text-xs text-gray-300">↗</span>
+                  </div>
+                  <div class="font-body text-xs text-gray-500 leading-snug">{item.description}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="mt-2.5 p-2.5 bg-white rounded border border-votescot-border">
+        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Key dates</div>
+        <div class="font-body text-xs text-gray-600 leading-relaxed">
+          <strong>2 Apr</strong> Official candidates &bull;
+          <strong>9 Apr</strong> Dissolution &bull;
+          <strong>20 Apr</strong> Register deadline &bull;
+          <strong>21 Apr</strong> Postal vote deadline &bull;
+          <strong>7 May</strong> Polling day 7am–10pm &bull;
+          <strong>8 May</strong> Count
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
+    <section id="about" class="mb-8 scroll-mt-4">
+      <h2 class="font-heading text-lg font-black mb-1">About VoteScot</h2>
+      <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+        VoteScot is an open-source, non-partisan vote compass for the 2026 Scottish Parliament election.
+        It was built as a community project to help voters understand where candidates stand on policy issues.
+        The source code is available on <a href="https://github.com/ismaelmartinez/votescot" class="text-blue-600 underline">GitHub</a> and contributions are welcome.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How the Quiz Works</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        The quiz covers 8 policy areas: Scotland's Future, NHS &amp; Health, Housing, Climate &amp; Transport,
+        Tax &amp; Public Spending, Economy &amp; Jobs, Education &amp; Childcare, and Social Issues.
+        Each question has three options scored on a 0–2 scale. When you answer, the tool compares your
+        responses to each candidate's recorded positions and calculates a match percentage based on the
+        difference across all answered questions. The more questions you answer, the more accurate the match.
+        No data is stored — the entire quiz runs in your browser only.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where the Data Comes From</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        Candidate details (names, parties, constituencies) are sourced from
+        <a href="https://democracyclub.org.uk/" class="text-blue-600 underline">Democracy Club</a> via their public API.
+        Party policy positions are taken from official party platforms and manifestos.
+        Opinion poll data is aggregated from Wikipedia's
+        <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" class="text-blue-600 underline">polling tracker</a>,
+        which compiles British Polling Council member surveys.
+        Constituency boundaries use data from
+        <a href="https://mapit.mysociety.org/" class="text-blue-600 underline">MapIt by mySociety</a>.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Important Caveat: Party Defaults</h3>
+      <div class="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
+        Policy positions shown are based on party platforms. Individual candidates may hold different views.
+      </div>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        For the majority of candidates, policy positions are derived from their party's published platform
+        rather than from the individual candidate's own statements. Where a candidate has an empty "Track Record"
+        section on their profile page, their positions are party defaults and have not been individually verified.
+        Always check the candidate's own website and election leaflets where possible.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How to Report Errors</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        If you find a mistake, please <a href="https://github.com/ismaelmartinez/votescot/issues" class="text-blue-600 underline">open an issue on GitHub</a>.
+        You can also submit a pull request — data lives in the <code class="bg-gray-100 px-1 rounded text-xs">data/</code> directory as YAML files.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Data Sources</h3>
+      <div class="flex flex-col gap-1.5 mb-3">
+        <a href="https://democracyclub.org.uk/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Democracy Club</div>
+            <div class="font-body text-xs text-gray-500">Candidate names, parties, and constituency data</div>
+          </div>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Wikipedia — Polling Tracker</div>
+            <div class="font-body text-xs text-gray-500">Opinion poll data from BPC member surveys</div>
+          </div>
+        </a>
+        <a href="https://mapit.mysociety.org/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">MapIt by mySociety</div>
+            <div class="font-body text-xs text-gray-500">Constituency boundary data</div>
+          </div>
+        </a>
+        <a href="https://github.com/ismaelmartinez/votescot" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">VoteScot on GitHub</div>
+            <div class="font-body text-xs text-gray-500">Full source code, data files, and issue tracker</div>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Privacy & License</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        VoteScot does not collect, store, or transmit any personal data. There are no cookies, no analytics,
+        and no tracking. The quiz runs entirely in your browser. VoteScot is released under the
+        <a href="https://github.com/ismaelmartinez/votescot/blob/main/LICENSE" class="text-blue-600 underline">MIT licence</a>.
+      </p>
+    </section>
+  </div>
+
+  <Footer slot="footer" />
+</Base>

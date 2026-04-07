@@ -7,14 +7,10 @@ const { currentTab } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const tabs = [
-  { id: "map", label: "Map", href: `${base}map` },
+  { id: "map", label: "Map", href: base },
   { id: "quiz", label: "Quiz", href: `${base}quiz` },
   { id: "candidates", label: "Candidates", href: `${base}candidates` },
-  { id: "compare", label: "Compare", href: `${base}compare` },
-  { id: "polls", label: "Polls", href: `${base}polls` },
-  { id: "how-to-vote", label: "How to Vote", href: `${base}how-to-vote` },
-  { id: "resources", label: "Resources", href: `${base}resources` },
-  { id: "about", label: "About", href: `${base}about` },
+  { id: "guide", label: "Guide", href: `${base}guide` },
 ];
 ---
 

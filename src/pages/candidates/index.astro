@@ -4,10 +4,12 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import CandidateCard from "../../components/CandidateCard.astro";
 import CandidatesSearch from "../../components/CandidatesSearch";
-import { loadCandidates, loadConstituencies } from "../../lib/data";
+import CandidateComparison from "../../components/CandidateComparison.tsx";
+import { loadCandidates, loadQuestions, loadConstituencies } from "../../lib/data";
 
 const constituencies = loadConstituencies();
 const allCandidates = loadCandidates();
+const questions = loadQuestions();
 const base = import.meta.env.BASE_URL;
 
 const grouped = constituencies.map((c) => {
@@ -37,10 +39,20 @@ const searchItems = [
   <div class="py-3.5">
     <h2 class="font-heading text-lg font-black mb-1">Candidates</h2>
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
-      Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile.
+      Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile, or use the comparison tool to see stances side by side.
     </p>
 
     <CandidatesSearch client:load items={searchItems} knownConstituencies={constituencies.map((c) => c.id)} basePath={base} />
+
+    <!-- Compare section -->
+    <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
+      <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
+        Compare candidates side by side
+      </summary>
+      <div class="px-4 pb-4">
+        <CandidateComparison client:visible candidates={allCandidates} questions={questions} constituencies={constituencies} />
+      </div>
+    </details>
 
     {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
       <div class="mb-6" id={constituency.id}>
