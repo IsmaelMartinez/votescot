@@ -8,7 +8,7 @@ import pollsData from "../../data/polls.json";
 
 const sections = loadResources();
 const constituencyPolls = pollsData.constituency || [];
-const latest = constituencyPolls[0];
+const latest = constituencyPolls[0] ?? null;
 const recentPolls = constituencyPolls.slice(0, 10);
 
 type PartyKey = "snp" | "con" | "lab" | "libdem" | "green" | "alba" | "reform";
@@ -35,9 +35,11 @@ const PARTY_COLORS: Record<PartyKey, string> = {
 
 const partyKeys = Object.keys(PARTY_LABELS) as PartyKey[];
 
-const sortedParties = partyKeys
-  .filter((k) => latest[k] !== null && latest[k] !== undefined)
-  .sort((a, b) => (latest[b] as number) - (latest[a] as number));
+const sortedParties = latest
+  ? partyKeys
+      .filter((k) => latest[k] != null)
+      .sort((a, b) => (latest[b] as number) - (latest[a] as number))
+  : [];
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -160,30 +162,36 @@ function formatDate(iso: string): string {
       </p>
 
       <!-- Latest poll headline bar -->
-      <div class="bg-white border border-votescot-border rounded-md p-3 mb-4">
-        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Latest Poll — {latest.pollster} · {formatDate(latest.endDate)}
-          {latest.sampleSize ? ` · n=${latest.sampleSize.toLocaleString()}` : ""}
-        </div>
-        <div class="flex gap-1 flex-wrap">
-          {sortedParties.map((key) => {
-            const val = latest[key] as number;
-            return (
-              <div class="flex flex-col items-center">
-                <div
-                  class="flex items-end justify-center font-body font-bold text-white text-xs rounded-sm"
-                  style={`background:${PARTY_COLORS[key]};width:${Math.max(val * 1.6, 24)}px;height:${Math.max(val * 1.4, 20)}px;`}
-                >
-                  {val}%
+      {latest ? (
+        <div class="bg-white border border-votescot-border rounded-md p-3 mb-4">
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+            Latest Poll — {latest.pollster} · {formatDate(latest.endDate)}
+            {latest.sampleSize ? ` · n=${latest.sampleSize.toLocaleString()}` : ""}
+          </div>
+          <div class="flex gap-1 flex-wrap">
+            {sortedParties.map((key) => {
+              const val = latest[key] as number;
+              return (
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex items-end justify-center font-body font-bold text-white text-xs rounded-sm"
+                    style={`background:${PARTY_COLORS[key]};width:${Math.max(val * 1.6, 24)}px;height:${Math.max(val * 1.4, 20)}px;`}
+                  >
+                    {val}%
+                  </div>
+                  <div class="font-body text-xs text-gray-500 mt-0.5 text-center">
+                    {PARTY_LABELS[key]}
+                  </div>
                 </div>
-                <div class="font-body text-xs text-gray-500 mt-0.5 text-center">
-                  {PARTY_LABELS[key]}
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div class="bg-white border border-votescot-border rounded-md p-3 mb-4 font-body text-xs text-gray-400">
+          No polling data available yet.
+        </div>
+      )}
 
       <!-- Interactive line chart -->
       <div class="mb-4">
