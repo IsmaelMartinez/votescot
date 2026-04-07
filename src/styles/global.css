@@ -13,3 +13,11 @@
   --font-heading: "Crimson Pro Variable", Georgia, serif;
   --font-body: "Source Sans 3 Variable", sans-serif;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
