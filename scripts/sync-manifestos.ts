@@ -141,9 +141,10 @@ async function findPdfLink(url: string): Promise<string | null> {
 }
 
 async function extractPdfText(pdfBuffer: Buffer): Promise<string> {
-  const pdfParse = (await import("pdf-parse")).default;
-  const data = await pdfParse(pdfBuffer);
-  return data.text;
+  const { PDFParse } = await import("pdf-parse");
+  const parser = new PDFParse({});
+  await parser.load(pdfBuffer);
+  return parser.getText();
 }
 
 async function parseWithGemini(text: string): Promise<{ positions: Record<string, number>; stances: Record<string, string>; quotes: Record<string, string> }> {
