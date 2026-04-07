@@ -8,44 +8,36 @@ import { loadConstituencies } from "../lib/data";
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
 const base = import.meta.env.BASE_URL;
+
+const projections = constituencies
+  .filter((c) => c.projection)
+  .map((c) => ({
+    id: c.id,
+    projection: c.projection,
+    competitiveness: c.competitiveness,
+    topParties: c.topParties,
+  }));
 ---
 
-<Base title="Home">
-  <Header slot="header" currentTab="home" />
+<Base title="VoteScot — 2026 Scottish Parliament Election">
+  <Header slot="header" currentTab="map" />
 
   <div class="py-6">
     <h2 class="font-heading text-2xl font-black mb-2">Navigate the noise</h2>
-    <p class="font-body text-sm text-gray-600 leading-relaxed mb-6">
-      Scotland votes on 7 May 2026. This tool helps you find your constituency, discover which
+    <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
+      Scotland votes on 7 May 2026. Find your constituency, discover which
       candidates align with your values, and access the research you need to make an informed choice.
-      No endorsements. No editorial scores. Just your values matched to their positions.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-      <a href={`${base}quiz`} class="bg-white rounded-lg p-4 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
-        <div class="font-heading font-bold text-base mb-1">Vote Compass</div>
-        <div class="font-body text-xs text-gray-500">8 questions. Find your closest candidate match.</div>
-      </a>
-      <a href={`${base}candidates`} class="bg-white rounded-lg p-4 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
-        <div class="font-heading font-bold text-base mb-1">Candidates</div>
-        <div class="font-body text-xs text-gray-500">Profiles, policies, and track records.</div>
-      </a>
-      <a href={`${base}resources`} class="bg-white rounded-lg p-4 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit">
-        <div class="font-heading font-bold text-base mb-1">Research Hub</div>
-        <div class="font-body text-xs text-gray-500">Projections, fiscal analysis, and voter info.</div>
-      </a>
-    </div>
-
-    <div class="mt-4">
-      <ConstituencyMap
-        client:only="react"
-        knownConstituencies={knownConstituencies}
-        basePath={base}
-      />
-    </div>
+    <ConstituencyMap
+      client:only="react"
+      knownConstituencies={knownConstituencies}
+      basePath={base}
+      projections={projections}
+    />
 
     <div class="mt-6 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
-      <strong class="text-votescot-gold">Privacy-first:</strong> This quiz runs entirely in your browser.
+      <strong class="text-votescot-gold">Privacy-first:</strong> This site runs entirely in your browser.
       No data is stored. No cookies. No tracking. No accounts.
     </div>
   </div>

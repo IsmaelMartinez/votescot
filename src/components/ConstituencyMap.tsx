@@ -24,9 +24,17 @@ interface ConstituencyFeature {
   geometry: GeoJSON.Geometry;
 }
 
+interface ProjectionInfo {
+  id: string;
+  projection?: string;
+  competitiveness?: "safe" | "competitive" | "marginal" | "toss-up";
+  topParties?: { party: string; share: number; status: string }[];
+}
+
 interface Props {
   knownConstituencies: string[];
   basePath: string;
+  projections?: ProjectionInfo[];
 }
 
 // Scotland roughly: lat 54.6–60.9, lon -7.6–-0.7
@@ -37,6 +45,33 @@ const COLOR_COVERED = "#1a3a2a"; // votescot-dark green - has data
 const COLOR_UNCOVERED = "#9ca3af"; // gray-400 - no data yet
 const COLOR_HOVER = "#d4a017"; // votescot-gold highlight
 const COLOR_HIGHLIGHTED = "#f59e0b"; // amber for postcode result
+
+const PARTY_COLORS: Record<string, string> = {
+  snp: "#9B870C",
+  conservative: "#0087DC",
+  labour: "#DC241F",
+  libdem: "#FAA61A",
+  green: "#00A651",
+  alba: "#005EB8",
+  reform: "#12B6CF",
+};
+
+const PARTY_LABELS: Record<string, string> = {
+  snp: "SNP",
+  conservative: "Con",
+  labour: "Lab",
+  libdem: "Lib Dem",
+  green: "Green",
+  alba: "Alba",
+  reform: "Reform",
+};
+
+const COMPETITIVENESS_OPACITY: Record<string, number> = {
+  safe: 0.75,
+  competitive: 0.55,
+  marginal: 0.45,
+  "toss-up": 0.35,
+};
 
 function MapController({
   highlightSlug,
@@ -52,7 +87,6 @@ function MapController({
     const feature = features.find((f) => f.properties.slug === highlightSlug);
     if (!feature) return;
 
-    // Compute bounding box of the feature geometry
     try {
       const layer = L.geoJSON(feature);
       const bounds = layer.getBounds();
@@ -65,7 +99,7 @@ function MapController({
   return null;
 }
 
-function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
+function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Props) {
   const [features, setFeatures] = useState<ConstituencyFeature[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -79,8 +113,20 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
   } | null>(null);
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ name: string; slug: string; covered: boolean } | null>(null);
+  const [showProjections, setShowProjections] = useState(false);
 
-  // Load the TopoJSON at mount and convert to GeoJSON features
+  const projectionMap = React.useMemo(() => {
+    const map = new Map<string, ProjectionInfo>();
+    if (projections) {
+      for (const p of projections) {
+        map.set(p.id, p);
+      }
+    }
+    return map;
+  }, [projections]);
+
+  const hasProjections = projections && projections.length > 0;
+
   useEffect(() => {
     fetch(`${basePath}constituencies.topojson`)
       .then((r) => {
@@ -103,14 +149,44 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
       const slug = feature?.properties?.slug ?? "";
       const covered = knownConstituencies.includes(slug);
       const isHighlighted = slug === highlightSlug;
+
+      if (isHighlighted) {
+        return {
+          fillColor: COLOR_HIGHLIGHTED,
+          fillOpacity: 0.7,
+          color: "#d97706",
+          weight: 2.5,
+        };
+      }
+
+      if (showProjections && hasProjections) {
+        const proj = projectionMap.get(slug);
+        if (proj?.projection) {
+          const partyColor = PARTY_COLORS[proj.projection] ?? COLOR_UNCOVERED;
+          const opacity = COMPETITIVENESS_OPACITY[proj.competitiveness ?? "competitive"] ?? 0.55;
+          return {
+            fillColor: partyColor,
+            fillOpacity: opacity,
+            color: "#333",
+            weight: 0.8,
+          };
+        }
+        return {
+          fillColor: COLOR_UNCOVERED,
+          fillOpacity: 0.25,
+          color: "#6b7280",
+          weight: 0.8,
+        };
+      }
+
       return {
-        fillColor: isHighlighted ? COLOR_HIGHLIGHTED : covered ? COLOR_COVERED : COLOR_UNCOVERED,
-        fillOpacity: isHighlighted ? 0.7 : covered ? 0.55 : 0.3,
-        color: isHighlighted ? "#d97706" : covered ? "#0f2418" : "#6b7280",
-        weight: isHighlighted ? 2.5 : 1,
+        fillColor: covered ? COLOR_COVERED : COLOR_UNCOVERED,
+        fillOpacity: covered ? 0.55 : 0.3,
+        color: covered ? "#0f2418" : "#6b7280",
+        weight: 1,
       };
     },
-    [knownConstituencies, highlightSlug]
+    [knownConstituencies, highlightSlug, showProjections, hasProjections, projectionMap]
   );
 
   const onEachFeature = useCallback(
@@ -118,13 +194,40 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
       const { name, slug } = feature.properties;
       const covered = knownConstituencies.includes(slug);
 
-      // Bind a sticky tooltip with the constituency name
-      (layer as any).bindTooltip(
-        covered
+      let tooltipHtml: string;
+      if (showProjections && hasProjections) {
+        const proj = projectionMap.get(slug);
+        if (proj?.projection) {
+          const partyLabel = PARTY_LABELS[proj.projection] ?? proj.projection;
+          const compLabel = proj.competitiveness
+            ? ` (${proj.competitiveness})`
+            : "";
+          const topPartiesHtml = proj.topParties
+            ? proj.topParties
+                .slice(0, 3)
+                .map(
+                  (tp) =>
+                    `<span style="color:${PARTY_COLORS[tp.party] ?? "#666"}">${PARTY_LABELS[tp.party] ?? tp.party} ${tp.share}%</span>`
+                )
+                .join(" · ")
+            : "";
+          tooltipHtml = `<strong>${name}</strong><br/><span style="font-size:12px">${partyLabel} projected${compLabel}</span>`;
+          if (topPartiesHtml) {
+            tooltipHtml += `<br/><span style="font-size:11px">${topPartiesHtml}</span>`;
+          }
+        } else {
+          tooltipHtml = `<strong>${name}</strong><br/><span style="font-size:12px;color:#9ca3af">No projection</span>`;
+        }
+      } else {
+        tooltipHtml = covered
           ? `<strong>${name}</strong><br/><span style="font-size:12px;color:#16a34a">Click to see candidates</span>`
-          : `<strong>${name}</strong><br/><span style="font-size:12px;color:#9ca3af">Coming soon</span>`,
-        { sticky: true, className: "constituency-tooltip" }
-      );
+          : `<strong>${name}</strong><br/><span style="font-size:12px;color:#9ca3af">Coming soon</span>`;
+      }
+
+      (layer as any).bindTooltip(tooltipHtml, {
+        sticky: true,
+        className: "constituency-tooltip",
+      });
 
       layer.on({
         mouseover(e: any) {
@@ -148,7 +251,7 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
         },
       });
     },
-    [knownConstituencies, basePath, highlightSlug, styleFeature]
+    [knownConstituencies, basePath, highlightSlug, styleFeature, showProjections, hasProjections, projectionMap]
   );
 
   async function lookupPostcode() {
@@ -191,6 +294,19 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
       setPostcodeLoading(false);
     }
   }
+
+  // Derive unique parties from projections for the legend
+  const legendParties = React.useMemo(() => {
+    if (!projections) return [];
+    const seen = new Set<string>();
+    for (const p of projections) {
+      if (p.projection) seen.add(p.projection);
+    }
+    return Array.from(seen).sort();
+  }, [projections]);
+
+  // Force GeoJSON re-render when projection mode or highlight changes
+  const geoJsonKey = `${showProjections ? "proj" : "data"}-${highlightSlug ?? "none"}`;
 
   return (
     <div className="flex flex-col gap-3">
@@ -250,16 +366,46 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
         )}
       </div>
 
-      {/* Legend */}
-      <div className="flex gap-4 font-body text-xs text-gray-600">
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_COVERED, opacity: 0.8 }} />
-          Has candidate data
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_UNCOVERED, opacity: 0.6 }} />
-          Coming soon
-        </span>
+      {/* Projection toggle + Legend */}
+      <div className="flex flex-wrap items-center gap-4 font-body text-xs text-gray-600">
+        {hasProjections && (
+          <button
+            onClick={() => setShowProjections(!showProjections)}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-colors ${
+              showProjections
+                ? "bg-votescot-dark text-white border-votescot-dark"
+                : "bg-white text-gray-600 border-gray-300 hover:border-votescot-gold"
+            }`}
+          >
+            {showProjections ? "Projections on" : "Show projections"}
+          </button>
+        )}
+
+        {showProjections && hasProjections ? (
+          <>
+            {legendParties.map((party) => (
+              <span key={party} className="flex items-center gap-1.5">
+                <span
+                  className="w-3 h-3 rounded-sm inline-block"
+                  style={{ background: PARTY_COLORS[party] ?? "#666", opacity: 0.8 }}
+                />
+                {PARTY_LABELS[party] ?? party}
+              </span>
+            ))}
+            <span className="text-gray-400 ml-1">Opacity = competitiveness</span>
+          </>
+        ) : (
+          <>
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_COVERED, opacity: 0.8 }} />
+              Has candidate data
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_UNCOVERED, opacity: 0.6 }} />
+              Coming soon
+            </span>
+          </>
+        )}
         {highlightSlug && (
           <span className="flex items-center gap-1.5">
             <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_HIGHLIGHTED, opacity: 0.9 }} />
@@ -311,7 +457,7 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
           {!loading && features.length > 0 && (
             <>
               <GeoJSON
-                key={highlightSlug ?? "none"}
+                key={geoJsonKey}
                 data={{ type: "FeatureCollection", features } as any}
                 style={styleFeature as any}
                 onEachFeature={onEachFeature as any}
@@ -333,6 +479,9 @@ function ConstituencyMapInner({ knownConstituencies, basePath }: Props) {
           MapIt/mySociety
         </a>
         . Postcode lookup uses the MapIt API. Click a constituency to view candidates.
+        {showProjections && (
+          <> Projections are estimates based on notional results, not predictions.</>
+        )}
       </div>
     </div>
   );
