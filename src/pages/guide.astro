@@ -7,8 +7,9 @@ import { loadResources } from "../lib/data";
 import pollsData from "../../data/polls.json";
 
 const sections = loadResources();
-const latest = pollsData.constituency[0];
-const recentPolls = pollsData.constituency.slice(0, 10);
+const constituencyPolls = pollsData.constituency || [];
+const latest = constituencyPolls[0];
+const recentPolls = constituencyPolls.slice(0, 10);
 
 type PartyKey = "snp" | "con" | "lab" | "libdem" | "green" | "alba" | "reform";
 
@@ -115,6 +116,20 @@ function formatDate(iso: string): string {
         polling station. Photo ID requirements apply only to UK Parliament elections.
       </p>
 
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How to Register</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        If you are not yet registered to vote, you can do so online in about five minutes. You will need your
+        National Insurance number (you can find this on payslips, tax letters, or by requesting it from HMRC).
+        The deadline is 20 April 2026, but it is best to register as soon as possible.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where to Vote</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        Your polling station is assigned based on your address and will be printed on your polling card, which
+        arrives by post before the election. If you have lost your polling card, do not worry — you can still vote
+        as long as you are registered.
+      </p>
+
       <div class="flex flex-col gap-1.5 mb-3">
         <a href="https://www.gov.uk/register-to-vote" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
           <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
@@ -126,6 +141,12 @@ function formatDate(iso: string): string {
           <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
             <div class="font-body text-[13px] font-bold text-blue-600">Find Your Polling Station</div>
             <div class="font-body text-xs text-gray-500">Look up where to vote on GOV.UK</div>
+          </div>
+        </a>
+        <a href="https://www.electoralcommission.org.uk/" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
+          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
+            <div class="font-body text-[13px] font-bold text-blue-600">Electoral Commission</div>
+            <div class="font-body text-xs text-gray-500">Official guidance on voting, ID requirements, and postal votes</div>
           </div>
         </a>
       </div>
@@ -272,6 +293,18 @@ function formatDate(iso: string): string {
         responses to each candidate's recorded positions and calculates a match percentage based on the
         difference across all answered questions. The more questions you answer, the more accurate the match.
         No data is stored — the entire quiz runs in your browser only.
+      </p>
+
+      <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where the Data Comes From</h3>
+      <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
+        Candidate details (names, parties, constituencies) are sourced from
+        <a href="https://democracyclub.org.uk/" class="text-blue-600 underline">Democracy Club</a> via their public API.
+        Party policy positions are taken from official party platforms and manifestos.
+        Opinion poll data is aggregated from Wikipedia's
+        <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" class="text-blue-600 underline">polling tracker</a>,
+        which compiles British Polling Council member surveys.
+        Constituency boundaries use data from
+        <a href="https://mapit.mysociety.org/" class="text-blue-600 underline">MapIt by mySociety</a>.
       </p>
 
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Important Caveat: Party Defaults</h3>
