@@ -113,7 +113,7 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
   } | null>(null);
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ name: string; slug: string; covered: boolean } | null>(null);
-  const [showProjections, setShowProjections] = useState(true);
+  const [showProjections, setShowProjections] = useState(!!projections?.length);
 
   const projectionMap = React.useMemo(() => {
     const map = new Map<string, ProjectionInfo>();
