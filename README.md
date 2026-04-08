@@ -1,43 +1,27 @@
-# Astro Starter Kit: Minimal
+# VoteScot
 
-```sh
-npm create astro@latest -- --template minimal
+An open-source vote compass for the 2026 Scottish Parliament election. VoteScot helps voters discover which parties and candidates best match their views by answering a short quiz on key policy topics.
+
+Built with Astro 6, React islands, and YAML-driven candidate data. Deployed to GitHub Pages.
+
+## Prerequisites
+
+- Node.js >= 22.12.0
+
+## Quick start
+
+```bash
+npm install
+npm run dev          # dev server at localhost:4321
+npm test             # run tests
+npm run build        # build static site
+npm run preview      # preview production build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Contributing
 
-## 🚀 Project Structure
+We welcome contributions of all kinds, from fixing candidate data to building new features. See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
 
-Inside of your Astro project, you'll see the following folders and files:
+## License
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[MIT](LICENSE)
