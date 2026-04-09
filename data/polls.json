@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-08T08:28:34.490Z",
+  "lastUpdated": "2026-04-09T08:34:57.041Z",
   "constituency": [
     {
       "date": "2026-03-30",
@@ -15,6 +15,21 @@
       "alba": null,
       "reform": 15,
       "others": null
+    },
+    {
+      "date": "2026-03-26",
+      "endDate": "2026-03-31",
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "sampleSize": 1038,
+      "snp": 39,
+      "con": 11,
+      "lab": 15,
+      "libdem": 10,
+      "green": 7,
+      "alba": null,
+      "reform": 15,
+      "others": 3
     },
     {
       "date": "2026-03-13",
@@ -1952,6 +1967,21 @@
       "alba": null,
       "reform": 15,
       "others": 6
+    },
+    {
+      "date": "2026-03-26",
+      "endDate": "2026-03-31",
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "sampleSize": 1038,
+      "snp": 29,
+      "con": 13,
+      "lab": 15,
+      "libdem": 9,
+      "green": 16,
+      "alba": null,
+      "reform": 16,
+      "others": 3
     },
     {
       "date": "2026-03-13",
