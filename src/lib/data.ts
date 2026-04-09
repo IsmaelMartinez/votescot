@@ -119,3 +119,33 @@ export function loadResources(): ResourceSection[] {
   const data = loadYaml<{ sections: ResourceSection[] }>("data/resources.yaml");
   return data.sections;
 }
+
+export interface Party {
+  id: string;
+  name: string;
+  positions: CandidatePosition;
+  stances: Record<string, string>;
+  quotes: Record<string, string>;
+}
+
+export interface ManifestoEntry {
+  id: string;
+  name: string;
+  manifestoUrls: string[];
+}
+
+let partiesCache: readonly Party[] | null = null;
+
+export function loadParties(): Party[] {
+  if (!partiesCache) {
+    const dir = path.resolve(process.cwd(), "data/parties");
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
+    partiesCache = Object.freeze(files.map((f) => loadYaml<Party>(path.join("data/parties", f))));
+  }
+  return [...partiesCache];
+}
+
+export function loadManifestoRegistry(): ManifestoEntry[] {
+  const data = loadYaml<{ parties: ManifestoEntry[] }>("data/manifestos/registry.yaml");
+  return data.parties;
+}
