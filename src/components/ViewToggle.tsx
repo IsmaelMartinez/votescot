@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
   onToggle: (view: "constituency" | "party") => void;
