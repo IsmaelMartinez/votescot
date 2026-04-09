@@ -56,8 +56,7 @@ function applyPartyPositions(): void {
 
     fs.writeFileSync(filePath, yaml.stringify(data));
 
-    const partyId = party.id;
-    counts[partyId] = (counts[partyId] ?? 0) + 1;
+    counts[party.id] = (counts[party.id] ?? 0) + 1;
   }
 
   console.log("\nParty positions applied:\n");

@@ -145,7 +145,12 @@ export function loadParties(): Party[] {
   return [...partiesCache];
 }
 
+let manifestoRegistryCache: readonly ManifestoEntry[] | null = null;
+
 export function loadManifestoRegistry(): ManifestoEntry[] {
-  const data = loadYaml<{ parties: ManifestoEntry[] }>("data/manifestos/registry.yaml");
-  return data.parties;
+  if (!manifestoRegistryCache) {
+    const data = loadYaml<{ parties: ManifestoEntry[] }>("data/manifestos/registry.yaml");
+    manifestoRegistryCache = Object.freeze(data.parties);
+  }
+  return [...manifestoRegistryCache];
 }

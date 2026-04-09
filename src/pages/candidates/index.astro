@@ -5,10 +5,9 @@ import Footer from "../../components/Footer.astro";
 import CandidateCard from "../../components/CandidateCard.astro";
 import CandidatesSearch from "../../components/CandidatesSearch";
 import CandidateComparison from "../../components/CandidateComparison.tsx";
-import { loadCandidates, loadQuestions, loadConstituencies } from "../../lib/data";
+import { loadCandidates, loadQuestions, loadConstituencies, loadParties, loadManifestoRegistry } from "../../lib/data";
 import PartyCard from "../../components/PartyCard.astro";
 import ViewToggle from "../../components/ViewToggle";
-import { loadParties, loadManifestoRegistry } from "../../lib/data";
 import { matchPartyId } from "../../lib/party-match";
 
 const constituencies = loadConstituencies();
