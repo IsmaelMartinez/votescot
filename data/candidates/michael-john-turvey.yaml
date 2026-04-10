@@ -1,0 +1,14 @@
+id: michael-john-turvey
+name: Michael John Turvey
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: aberdeen-donside
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Aberdeen Donside.
+highlights: []
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website
