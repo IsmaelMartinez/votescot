@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-interface Props {
-  onToggle: (view: "constituency" | "party") => void;
-}
-
-export default function ViewToggle({ onToggle }: Props) {
+export default function ViewToggle() {
   const [active, setActive] = useState<"constituency" | "party">("constituency");
 
   function handleClick(view: "constituency" | "party") {
     setActive(view);
-    onToggle(view);
+    document.getElementById("view-constituency")!.style.display = view === "constituency" ? "" : "none";
+    document.getElementById("view-party")!.style.display = view === "party" ? "" : "none";
   }
 
   const base = "px-3.5 py-1.5 font-body text-xs font-medium uppercase tracking-wider transition-colors";

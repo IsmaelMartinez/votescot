@@ -19,17 +19,18 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const filtered = query.trim()
-    ? items
-        .filter((item) => {
-          const q = query.toLowerCase();
-          return (
-            item.label.toLowerCase().includes(q) ||
-            (item.sublabel?.toLowerCase().includes(q) ?? false)
-          );
-        })
-        .slice(0, 10)
+  const MAX_RESULTS = 10;
+  const allFiltered = query.trim()
+    ? items.filter((item) => {
+        const q = query.toLowerCase();
+        return (
+          item.label.toLowerCase().includes(q) ||
+          (item.sublabel?.toLowerCase().includes(q) ?? false)
+        );
+      })
     : [];
+  const filtered = allFiltered.slice(0, MAX_RESULTS);
+  const hasMore = allFiltered.length > MAX_RESULTS;
 
   const handleSelect = useCallback(
     (item: SearchItem) => {
@@ -125,6 +126,11 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
               )}
             </li>
           ))}
+          {hasMore && (
+            <li className="px-3.5 py-2 font-body text-xs text-gray-400 text-center border-t border-gray-100">
+              {allFiltered.length - MAX_RESULTS} more result{allFiltered.length - MAX_RESULTS !== 1 ? "s" : ""} — refine your search
+            </li>
+          )}
         </ul>
       )}
     </div>

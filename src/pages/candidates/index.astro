@@ -63,10 +63,7 @@ const searchItems = [
       Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile, or use the comparison tool to see stances side by side.
     </p>
 
-    <ViewToggle client:load onToggle={(view) => {
-      document.getElementById('view-constituency')!.style.display = view === 'constituency' ? '' : 'none';
-      document.getElementById('view-party')!.style.display = view === 'party' ? '' : 'none';
-    }} />
+    <ViewToggle client:load />
 
     <!-- Party view -->
     <div id="view-party" style="display: none;">
