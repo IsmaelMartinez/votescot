@@ -11,10 +11,12 @@ interface Props {
   candidates: Candidate[];
   questions: QuizQuestion[];
   constituencies: Constituency[];
+  defaultConstituency?: string;
 }
 
-function CandidateComparisonInner({ candidates, questions, constituencies }: Props) {
+function CandidateComparisonInner({ candidates, questions, constituencies, defaultConstituency }: Props) {
   const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
+    if (defaultConstituency) return defaultConstituency;
     if (typeof window !== "undefined") {
       return new URLSearchParams(window.location.search).get("constituency") || "";
     }
