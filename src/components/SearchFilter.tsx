@@ -95,45 +95,43 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
         className="w-full bg-white border border-votescot-border rounded-lg px-3.5 py-2.5 font-body text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-votescot-gold transition-colors"
       />
       {open && filtered.length > 0 && (
-        <>
-          <ul
-            role="listbox"
-            className="absolute z-50 left-0 right-0 mt-1 bg-white border border-votescot-border rounded-lg shadow-md overflow-hidden"
-          >
-            {filtered.map((item, i) => (
-              <li
-                key={item.id}
-                role="option"
-                aria-selected={i === activeIndex}
-                onMouseDown={(e) => {
-                  e.preventDefault();
-                  handleSelect(item);
-                }}
-                onMouseEnter={() => setActiveIndex(i)}
-                className="px-3.5 py-2.5 cursor-pointer font-body text-sm flex items-baseline justify-between gap-3"
-                style={{
-                  background: i === activeIndex ? "#1a1a2e" : "white",
-                  color: i === activeIndex ? "#fff" : "#333",
-                }}
-              >
-                <span className="font-bold truncate">{item.label}</span>
-                {item.sublabel && (
-                  <span
-                    className="shrink-0 text-xs"
-                    style={{ color: i === activeIndex ? "#c4940a" : "#9ca3af" }}
-                  >
-                    {item.sublabel}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+        <ul
+          role="listbox"
+          className="absolute z-50 left-0 right-0 mt-1 bg-white border border-votescot-border rounded-lg shadow-md overflow-hidden"
+        >
+          {filtered.map((item, i) => (
+            <li
+              key={item.id}
+              role="option"
+              aria-selected={i === activeIndex}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleSelect(item);
+              }}
+              onMouseEnter={() => setActiveIndex(i)}
+              className="px-3.5 py-2.5 cursor-pointer font-body text-sm flex items-baseline justify-between gap-3"
+              style={{
+                background: i === activeIndex ? "#1a1a2e" : "white",
+                color: i === activeIndex ? "#fff" : "#333",
+              }}
+            >
+              <span className="font-bold truncate">{item.label}</span>
+              {item.sublabel && (
+                <span
+                  className="shrink-0 text-xs"
+                  style={{ color: i === activeIndex ? "#c4940a" : "#9ca3af" }}
+                >
+                  {item.sublabel}
+                </span>
+              )}
+            </li>
+          ))}
           {hasMore && (
-            <div className="absolute z-50 left-0 right-0 bg-white border border-t-0 border-votescot-border rounded-b-lg px-3.5 py-2 font-body text-xs text-gray-400 text-center" role="status" aria-live="polite">
+            <li className="px-3.5 py-2 border-t border-votescot-border bg-gray-50 font-body text-xs text-gray-400 text-center">
               {allFiltered.length - MAX_RESULTS} more result{allFiltered.length - MAX_RESULTS !== 1 ? "s" : ""} — refine your search
-            </div>
+            </li>
           )}
-        </>
+        </ul>
       )}
     </div>
   );

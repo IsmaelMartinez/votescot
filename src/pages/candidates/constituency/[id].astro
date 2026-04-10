@@ -18,8 +18,6 @@ export function getStaticPaths() {
 const { constituency, candidates } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const questions = loadQuestions();
-const allConstituencies = loadConstituencies();
-const allCandidates = loadCandidates();
 const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
@@ -141,7 +139,7 @@ const statusColor: Record<string, string> = {
           Compare candidates side by side
         </summary>
         <div class="px-4 pb-4">
-          <CandidateComparison client:visible candidates={allCandidates} questions={questions} constituencies={allConstituencies} defaultConstituency={constituency.id} />
+          <CandidateComparison client:visible candidates={quizCandidates} questions={questions} constituencies={[{ id: constituency.id, name: constituency.name }]} defaultConstituency={constituency.id} />
         </div>
       </details>
     )}
