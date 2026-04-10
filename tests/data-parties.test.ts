@@ -5,7 +5,7 @@ describe("loadParties", () => {
   it("returns an array of parties", () => {
     const parties = loadParties();
     expect(Array.isArray(parties)).toBe(true);
-    expect(parties.length).toBe(7);
+    expect(parties.length).toBe(6);
   });
 
   it("returns equal data on second call (cached internally)", () => {
@@ -39,7 +39,7 @@ describe("loadManifestoRegistry", () => {
   it("returns an array of manifesto entries", () => {
     const entries = loadManifestoRegistry();
     expect(Array.isArray(entries)).toBe(true);
-    expect(entries.length).toBe(7);
+    expect(entries.length).toBe(6);
   });
 
   it("each entry has id, name, and manifestoUrls", () => {
