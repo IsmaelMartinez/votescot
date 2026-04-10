@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { matchPartyId, PARTY_MATCH_MAP } from "../src/lib/party-match";
+import { matchPartyId } from "../src/lib/party-match";
 
 describe("matchPartyId", () => {
   it("matches SNP candidate to party id", () => {
@@ -24,10 +24,6 @@ describe("matchPartyId", () => {
 
   it("matches Reform UK candidate to party id", () => {
     expect(matchPartyId("Reform UK")).toBe("reform-uk");
-  });
-
-  it("matches Alba candidate to party id", () => {
-    expect(matchPartyId("Alba Party")).toBe("alba-party");
   });
 
   it("returns undefined for unknown party", () => {

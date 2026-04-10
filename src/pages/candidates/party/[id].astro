@@ -23,7 +23,7 @@ const sampleCandidate = partyCandidates[0];
 const color = sampleCandidate?.color || "#666666";
 const accent = sampleCandidate?.accent || "#444444";
 
-const manifesto = manifestoRegistry.find((m) => m.id === party.id);
+const manifestoUrl = manifestoRegistry.find((m) => m.id === party.id)?.manifestoUrls?.[0];
 
 const constituencyMap = new Map(constituencies.map((c) => [c.id, c.name]));
 const sortedCandidates = [...partyCandidates].sort((a, b) =>
@@ -45,9 +45,9 @@ const sortedCandidates = [...partyCandidates].sort((a, b) =>
       <h2 class="font-heading text-lg font-black m-0">{party.name}</h2>
     </div>
 
-    {manifesto && (
+    {manifestoUrl && (
       <a
-        href={manifesto.manifestoUrls[0]}
+        href={manifestoUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-block font-body text-xs text-blue-600 bg-blue-50 px-2.5 py-1 rounded no-underline hover:bg-blue-100 mb-3.5"

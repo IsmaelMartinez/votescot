@@ -18,17 +18,25 @@ const base = import.meta.env.BASE_URL;
 const parties = loadParties();
 const manifestoRegistry = loadManifestoRegistry();
 
+const candidatesByParty = new Map<string, typeof allCandidates>();
+for (const c of allCandidates) {
+  const pid = matchPartyId(c.party);
+  if (pid) {
+    if (!candidatesByParty.has(pid)) candidatesByParty.set(pid, []);
+    candidatesByParty.get(pid)!.push(c);
+  }
+}
+
 const partyCards = parties
   .map((p) => {
-    const candidateCount = allCandidates.filter((c) => matchPartyId(c.party) === p.id).length;
+    const partyCandidates = candidatesByParty.get(p.id) ?? [];
     const manifesto = manifestoRegistry.find((m) => m.id === p.id);
-    const sampleCandidate = allCandidates.find((c) => matchPartyId(c.party) === p.id);
     return {
       party: p,
-      candidateCount,
+      candidateCount: partyCandidates.length,
       manifestoUrl: manifesto?.manifestoUrls[0],
-      color: sampleCandidate?.color || "#666666",
-      accent: sampleCandidate?.accent || "#444444",
+      color: partyCandidates[0]?.color || "#666666",
+      accent: partyCandidates[0]?.accent || "#444444",
     };
   })
   .sort((a, b) => a.party.name.localeCompare(b.party.name));

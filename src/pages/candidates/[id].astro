@@ -12,6 +12,7 @@ export function getStaticPaths() {
 
 const { candidate } = Astro.props;
 const questions = loadQuestions();
+const externalSources = candidate.sources?.filter((s) => !s.url.includes("candidates.democracyclub.org.uk")) ?? [];
 ---
 
 <Base title={candidate.name} description={`${candidate.name} (${candidate.party}) — candidate for ${candidate.constituency} in the 2026 Scottish Parliament election`}>
@@ -71,13 +72,13 @@ const questions = loadQuestions();
       ))}
     </div>
 
-    {candidate.sources && candidate.sources.filter((s) => !s.url.includes("candidates.democracyclub.org.uk")).length > 0 && (
+    {externalSources.length > 0 && (
       <>
         <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
           Sources
         </h3>
         <div class="flex flex-wrap gap-1.5">
-          {candidate.sources.filter((s) => !s.url.includes("candidates.democracyclub.org.uk")).map((s) => (
+          {externalSources.map((s) => (
             <a
               href={s.url}
               target="_blank"

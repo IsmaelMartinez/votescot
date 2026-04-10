@@ -5,7 +5,6 @@ export const PARTY_MATCH_MAP: Record<string, string[]> = {
   "scottish-liberal-democrats": ["liberal democrat"],
   "scottish-green-party": ["scottish green", "green party"],
   "reform-uk": ["reform uk"],
-  "alba-party": ["alba"],
 };
 
 export function matchPartyId(candidatePartyName: string): string | undefined {
