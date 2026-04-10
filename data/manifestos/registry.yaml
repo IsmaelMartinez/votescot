@@ -52,12 +52,3 @@ parties:
     manifestoPdf: null
     parsedAt: null
     positionsFile: null
-
-  - id: "alba-party"
-    name: "Alba Party"
-    manifestoUrls:
-      - "https://www.albaparty.org/manifesto"
-      - "https://www.albaparty.org/policies"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null

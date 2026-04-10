@@ -5,12 +5,41 @@ import Footer from "../../components/Footer.astro";
 import CandidateCard from "../../components/CandidateCard.astro";
 import CandidatesSearch from "../../components/CandidatesSearch";
 import CandidateComparison from "../../components/CandidateComparison.tsx";
-import { loadCandidates, loadQuestions, loadConstituencies } from "../../lib/data";
+import { loadCandidates, loadQuestions, loadConstituencies, loadParties, loadManifestoRegistry } from "../../lib/data";
+import PartyCard from "../../components/PartyCard.astro";
+import ViewToggle from "../../components/ViewToggle";
+import { matchPartyId } from "../../lib/party-match";
 
 const constituencies = loadConstituencies();
 const allCandidates = loadCandidates();
 const questions = loadQuestions();
 const base = import.meta.env.BASE_URL;
+
+const parties = loadParties();
+const manifestoRegistry = loadManifestoRegistry();
+
+const candidatesByParty = new Map<string, typeof allCandidates>();
+for (const c of allCandidates) {
+  const pid = matchPartyId(c.party);
+  if (pid) {
+    if (!candidatesByParty.has(pid)) candidatesByParty.set(pid, []);
+    candidatesByParty.get(pid)!.push(c);
+  }
+}
+
+const partyCards = parties
+  .map((p) => {
+    const partyCandidates = candidatesByParty.get(p.id) ?? [];
+    const manifesto = manifestoRegistry.find((m) => m.id === p.id);
+    return {
+      party: p,
+      candidateCount: partyCandidates.length,
+      manifestoUrl: manifesto?.manifestoUrls[0],
+      color: partyCandidates[0]?.color || "#666666",
+      accent: partyCandidates[0]?.accent || "#444444",
+    };
+  })
+  .sort((a, b) => a.party.name.localeCompare(b.party.name));
 
 const grouped = constituencies.map((c) => {
   const candidates = allCandidates.filter((cand) => cand.constituency === c.id);
@@ -38,54 +67,81 @@ const searchItems = [
 
   <div class="py-3.5">
     <h2 class="font-heading text-lg font-black mb-1">Candidates</h2>
-    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-3">
       Candidates confirmed for the 7 May 2026 election. Click any candidate for their full profile, or use the comparison tool to see stances side by side.
     </p>
 
-    <CandidatesSearch client:load items={searchItems} knownConstituencies={constituencies.map((c) => c.id)} basePath={base} />
+    <a
+      href={`${base}quiz`}
+      class="inline-block px-4 py-2 bg-votescot-gold text-white rounded-lg font-body text-sm font-bold no-underline hover:opacity-90 mb-4"
+    >
+      Take the quiz — find your match
+    </a>
 
-    <!-- Compare section -->
-    <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
-      <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
-        Compare candidates side by side
-      </summary>
-      <div class="px-4 pb-4">
-        <CandidateComparison client:visible candidates={allCandidates} questions={questions} constituencies={constituencies} />
+    <ViewToggle client:load />
+
+    <!-- Party view -->
+    <div id="view-party" style="display: none;">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {partyCards.map(({ party, candidateCount, manifestoUrl, color, accent }) => (
+          <PartyCard
+            party={party}
+            candidateCount={candidateCount}
+            manifestoUrl={manifestoUrl}
+            color={color}
+            accent={accent}
+            basePath={base}
+          />
+        ))}
       </div>
-    </details>
+    </div>
 
-    {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
-      <div class="mb-6" id={constituency.id}>
-        <h3 class="font-heading text-base font-black mb-0.5">{constituency.name}</h3>
-        <p class="font-body text-xs text-gray-400 leading-snug mb-3">{constituency.context}</p>
+    <!-- Constituency view (existing content) -->
+    <div id="view-constituency">
+      <CandidatesSearch client:load items={searchItems} knownConstituencies={constituencies.map((c) => c.id)} basePath={base} />
 
-        {quizCandidates.length > 0 && (
-          <div class="mb-3">
-            <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-              Quiz candidates
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {quizCandidates.map((c) => (
-                <CandidateCard candidate={c} basePath={base} />
-              ))}
-            </div>
-          </div>
-        )}
+      <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
+        <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
+          Compare candidates side by side
+        </summary>
+        <div class="px-4 pb-4">
+          <CandidateComparison client:visible candidates={allCandidates} questions={questions} constituencies={constituencies} />
+        </div>
+      </details>
 
-        {otherCandidates.length > 0 && (
-          <div>
-            <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-              Other candidates
+      {grouped.map(({ constituency, quizCandidates, otherCandidates }) => (
+        <div class="mb-6" id={constituency.id}>
+          <h3 class="font-heading text-base font-black mb-0.5">{constituency.name}</h3>
+          <p class="font-body text-xs text-gray-400 leading-snug mb-3">{constituency.context}</p>
+
+          {quizCandidates.length > 0 && (
+            <div class="mb-3">
+              <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+                Quiz candidates
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {quizCandidates.map((c) => (
+                  <CandidateCard candidate={c} basePath={base} />
+                ))}
+              </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {otherCandidates.map((c) => (
-                <CandidateCard candidate={c} basePath={base} />
-              ))}
+          )}
+
+          {otherCandidates.length > 0 && (
+            <div>
+              <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+                Other candidates
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {otherCandidates.map((c) => (
+                  <CandidateCard candidate={c} basePath={base} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    ))}
+          )}
+        </div>
+      ))}
+    </div>
   </div>
 
   <Footer slot="footer" />

@@ -1,20 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import yaml from "yaml";
+import { matchPartyId } from "../src/lib/party-match";
 
 const PARTIES_DIR = path.resolve("data/parties");
 const CANDIDATES_DIR = path.resolve("data/candidates");
-
-// Maps party file id keywords to candidate party name substrings (case-insensitive)
-const PARTY_MATCH_MAP: Record<string, string[]> = {
-  "scottish-national-party": ["scottish national party", "snp"],
-  "scottish-labour": ["labour"],
-  "scottish-conservatives": ["conservative"],
-  "scottish-liberal-democrats": ["liberal democrat"],
-  "scottish-green-party": ["scottish green", "green party"],
-  "reform-uk": ["reform uk"],
-  "alba-party": ["alba"],
-};
 
 interface PartyData {
   id: string;
@@ -31,16 +21,6 @@ function loadParties(): Map<string, PartyData> {
     parties.set(data.id, data);
   }
   return parties;
-}
-
-function matchParty(candidateParty: string, parties: Map<string, PartyData>): PartyData | undefined {
-  const lower = candidateParty.toLowerCase();
-  for (const [partyId, keywords] of Object.entries(PARTY_MATCH_MAP)) {
-    if (keywords.some((kw) => lower.includes(kw))) {
-      return parties.get(partyId);
-    }
-  }
-  return undefined;
 }
 
 function applyPartyPositions(): void {
@@ -62,7 +42,8 @@ function applyPartyPositions(): void {
       continue;
     }
 
-    const party = matchParty(String(data.party ?? ""), parties);
+    const partyId = matchPartyId(String(data.party ?? ""));
+    const party = partyId ? parties.get(partyId) : undefined;
     if (!party) {
       noMatch++;
       continue;
@@ -75,8 +56,7 @@ function applyPartyPositions(): void {
 
     fs.writeFileSync(filePath, yaml.stringify(data));
 
-    const partyId = party.id;
-    counts[partyId] = (counts[partyId] ?? 0) + 1;
+    counts[party.id] = (counts[party.id] ?? 0) + 1;
   }
 
   console.log("\nParty positions applied:\n");
