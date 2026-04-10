@@ -3,7 +3,8 @@ import Base from "../../../layouts/Base.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import CandidateCard from "../../../components/CandidateCard.astro";
-import { loadCandidates, loadConstituencies } from "../../../lib/data";
+import CandidateComparison from "../../../components/CandidateComparison.tsx";
+import { loadCandidates, loadConstituencies, loadQuestions } from "../../../lib/data";
 
 export function getStaticPaths() {
   const constituencies = loadConstituencies();
@@ -16,6 +17,9 @@ export function getStaticPaths() {
 
 const { constituency, candidates } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const questions = loadQuestions();
+const allConstituencies = loadConstituencies();
+const allCandidates = loadCandidates();
 const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
@@ -129,6 +133,17 @@ const statusColor: Record<string, string> = {
           ))}
         </div>
       </div>
+    )}
+
+    {quizCandidates.length > 1 && (
+      <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
+        <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
+          Compare candidates side by side
+        </summary>
+        <div class="px-4 pb-4">
+          <CandidateComparison client:visible candidates={allCandidates} questions={questions} constituencies={allConstituencies} defaultConstituency={constituency.id} />
+        </div>
+      </details>
     )}
 
     <div class="mt-6 text-center">
