@@ -25,13 +25,12 @@ const accent = sampleCandidate?.accent || "#444444";
 
 const manifesto = manifestoRegistry.find((m) => m.id === party.id);
 
-const groupedByConstituency = constituencies
-  .map((c) => ({
-    constituency: c,
-    candidates: partyCandidates.filter((cand) => cand.constituency === c.id),
-  }))
-  .filter((g) => g.candidates.length > 0)
-  .sort((a, b) => a.constituency.name.localeCompare(b.constituency.name));
+const constituencyMap = new Map(constituencies.map((c) => [c.id, c.name]));
+const sortedCandidates = [...partyCandidates].sort((a, b) =>
+  (constituencyMap.get(a.constituency) || a.constituency).localeCompare(
+    constituencyMap.get(b.constituency) || b.constituency
+  )
+);
 ---
 
 <Base title={party.name} description={`${party.name} — policy positions, manifesto, and candidates for the 2026 Scottish Parliament election`}>
@@ -85,16 +84,14 @@ const groupedByConstituency = constituencies
       Candidates ({partyCandidates.length})
     </h3>
 
-    {groupedByConstituency.map(({ constituency, candidates }) => (
-      <div class="mb-4">
-        <div class="font-body text-xs font-bold text-gray-400 mb-2">{constituency.name}</div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {candidates.map((c) => (
-            <CandidateCard candidate={c} basePath={base} />
-          ))}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {sortedCandidates.map((c) => (
+        <div>
+          <div class="font-body text-xs text-gray-400 mb-1">{constituencyMap.get(c.constituency) || c.constituency}</div>
+          <CandidateCard candidate={c} basePath={base} />
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
 
     <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
       News
