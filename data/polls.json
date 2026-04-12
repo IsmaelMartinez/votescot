@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-04-11T08:14:40.373Z",
+  "lastUpdated": "2026-04-12T08:19:32.103Z",
   "constituency": [
+    {
+      "date": "2026-03-23",
+      "endDate": "2026-04-08",
+      "pollster": "YouGov",
+      "client": "Sky News",
+      "sampleSize": 3925,
+      "snp": 41,
+      "con": 8,
+      "lab": 18,
+      "libdem": 10,
+      "green": 2,
+      "alba": null,
+      "reform": 19,
+      "others": null
+    },
     {
       "date": "2026-03-30",
       "endDate": "2026-04-01",
@@ -1953,6 +1968,21 @@
     }
   ],
   "regional": [
+    {
+      "date": "2026-03-23",
+      "endDate": "2026-04-08",
+      "pollster": "YouGov",
+      "client": "Sky News",
+      "sampleSize": 3925,
+      "snp": 32,
+      "con": 8,
+      "lab": 15,
+      "libdem": 10,
+      "green": 13,
+      "alba": null,
+      "reform": 19,
+      "others": 2
+    },
     {
       "date": "2026-03-30",
       "endDate": "2026-04-01",
