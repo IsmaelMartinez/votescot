@@ -218,10 +218,13 @@ function QuizEngineInner({ questions, candidates, constituencies, knownConstitue
           Change constituency
         </button>
       </div>
-      <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+      <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-3">
         Answer 8 questions about what matters to you. We'll match you to the candidate closest to your
         views. No data is stored — this runs entirely in your browser.
       </p>
+      <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
+        Candidate positions are based on party platforms, not individual views. Candidates from the same party will share the same match score.
+      </div>
 
       <div className="flex flex-col gap-3">
         {questions.map((q, qi) => (
