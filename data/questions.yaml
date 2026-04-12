@@ -14,11 +14,11 @@ questions:
     area: "NHS & Health"
     question: "What's the best approach to fix the NHS?"
     options:
-      - label: "Invest more, expand public services, raise care worker pay"
+      - label: "Invest more and expand public services"
         value: 2
-      - label: "Maintain current approach, incremental improvements"
+      - label: "Maintain current approach with incremental improvements"
         value: 1
-      - label: "Reform and streamline — cut bureaucracy, better value for money"
+      - label: "Reform and streamline for better value"
         value: 0
 
   - id: "housing"
@@ -29,18 +29,18 @@ questions:
         value: 2
       - label: "Build more social housing and help first-time buyers"
         value: 1
-      - label: "Let the market work — less regulation, more incentives for developers"
+      - label: "Let the market work with less regulation"
         value: 0
 
   - id: "climate"
     area: "Climate & Transport"
     question: "How urgently should Scotland act on climate?"
     options:
-      - label: "Emergency — free public transport, ban road expansion, tax polluters"
+      - label: "Treat it as an emergency with bold action now"
         value: 2
-      - label: "Important but balanced — net zero by 2045, pragmatic steps"
+      - label: "Important but take a balanced, pragmatic approach"
         value: 1
-      - label: "Affordability first — scrap unachievable targets, protect energy jobs"
+      - label: "Affordability first — protect jobs and keep costs down"
         value: 0
 
   - id: "tax"
@@ -58,20 +58,20 @@ questions:
     area: "Economy & Jobs"
     question: "What economic approach appeals to you most?"
     options:
-      - label: "Green economy — four-day week, UBI pilots, circular economy"
+      - label: "Green economy with shorter working week and new pilots"
         value: 2
-      - label: "Public investment — GB Energy, planning reform, infrastructure"
+      - label: "Public investment in energy and infrastructure"
         value: 1
-      - label: "Pro-business — cut red tape, lower taxes, attract investment"
+      - label: "Pro-business — cut red tape and attract investment"
         value: 0
 
   - id: "education"
     area: "Education & Childcare"
     question: "What's the top education priority?"
     options:
-      - label: "Massively expand childcare — funded from 6 months"
+      - label: "Massively expand funded childcare"
         value: 2
-      - label: "Close the poverty-related attainment gap in schools"
+      - label: "Close the poverty-related attainment gap"
         value: 1
       - label: "Vocational training and skills for work"
         value: 0
@@ -80,9 +80,9 @@ questions:
     area: "Social Issues"
     question: "Where do you stand on social and equality issues?"
     options:
-      - label: "Progressive — strong trans rights, anti-poverty, systemic change"
+      - label: "Progressive — push for systemic change"
         value: 2
-      - label: "Moderate progressive — rights matter but pragmatic approach"
+      - label: "Moderate — rights matter but take a pragmatic approach"
         value: 1
-      - label: "Socially conservative — traditional values, less government intervention"
+      - label: "Conservative — traditional values, less intervention"
         value: 0
