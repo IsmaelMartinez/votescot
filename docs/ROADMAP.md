@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 4 April 2026 (night)
+Last updated: 13 April 2026
 
 ## What's live now
 
@@ -85,6 +85,81 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 ~~The `textColor` property exists in candidate data but is never used in rendering.~~ Done. SNP and Libertarian dots now use the darker accent colour as fill when textColor is set, fixing yellow-on-white contrast.
 
 ~~Explain in quiz results that candidates from the same party share identical match scores.~~ Done. Disclosure box now states that same-party candidates share identical match scores.
+
+## Visual Roadmap
+
+```
+                          VoteScot Roadmap
+                          ════════════════
+
+  ELECTION DAY: 7 May 2026
+  ─────────────────────────────────────────────────────────────
+
+  TODAY                                           ELECTION
+  13 Apr                                           7 May
+    │                                                │
+    ▼                                                ▼
+    ┌─────────────────────────────────────────────────┐
+    │         ★ PRE-ELECTION (24 days left) ★         │
+    │                                                 │
+    │  [████████████████████████████] All done!        │
+    │                                                 │
+    │  ✅ Vote compass quiz (8 policy areas)          │
+    │  ✅ 434 candidates across 73 constituencies     │
+    │  ✅ Interactive map + postcode lookup            │
+    │  ✅ Polling trends (127 polls, daily sync)      │
+    │  ✅ Constituency projections                    │
+    │  ✅ How-to-Vote guide                           │
+    │  ✅ Party pages                                 │
+    │  ✅ Accessibility & performance optimised       │
+    │  ✅ Data pipeline (daily cron syncs)            │
+    │  ✅ 48 tests passing                            │
+    │  ✅ Dependencies updated (13 Apr 2026)          │
+    └─────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────┐
+    │       MAINTENANCE MODE — Now until 7 May        │
+    │                                                 │
+    │  • Monitor daily data syncs                     │
+    │  • React to candidate withdrawals               │
+    │  • Fix any user-reported bugs                   │
+    │  • Keep dependencies current                    │
+    └─────────────────────────────────────────────────┘
+
+  ─────────────────────────────────────────────────────────────
+  POST-ELECTION PHASES
+  ─────────────────────────────────────────────────────────────
+
+  PHASE 1 — Results & Reflection (May–Jun 2026)
+    │
+    │  ┌──────────────────────────────────────────────┐
+    │  │  📊 Election results integration             │
+    │  │  📊 Prediction accuracy analysis             │
+    │  │  📊 Custom domain (votescot.scot)            │
+    │  │  📊 Plausible analytics (privacy-first)      │
+    │  └──────────────────────────────────────────────┘
+    │
+    ▼
+  PHASE 2 — Accountability Tracker (Jul–Dec 2026)
+    │
+    │  ┌──────────────────────────────────────────────┐
+    │  │  🔍 Track MSP votes vs campaign promises     │
+    │  │  🔍 TheyWorkForYou voting record integration │
+    │  │  🔍 Promise-keeping scorecards               │
+    │  └──────────────────────────────────────────────┘
+    │
+    ▼
+  PHASE 3 — Multi-Election Platform (2027+)
+    │
+    │  ┌──────────────────────────────────────────────┐
+    │  │  🌐 Scottish local elections (2027)          │
+    │  │  🌐 UK general elections                     │
+    │  │  🌐 Welsh Senedd elections                   │
+    │  │  🌐 Community contributions via Decap CMS   │
+    │  └──────────────────────────────────────────────┘
+    ▼
+    ∞  Ongoing open-source civic tech platform
+```
 
 ## After the election
 
