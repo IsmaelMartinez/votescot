@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 4 April 2026 (night)
+Last updated: 13 April 2026
 
 ## What's live now
 
@@ -32,13 +32,13 @@ Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForY
 
 ### Data pipeline
 
-Daily GitHub Actions cron jobs are configured for candidate sync (06:00 UTC from Democracy Club API), manifesto parsing (07:00 UTC via Gemini), and polling sync (08:00 UTC from Wikipedia). The candidate sync auto-commits additions and opens PRs for withdrawn candidates. Repo Butler runs at 02:00 UTC for health analysis.
+Daily GitHub Actions cron jobs are configured for candidate sync (06:00 UTC from Democracy Club API) and polling sync (08:00 UTC from Wikipedia). The candidate sync auto-commits additions and opens PRs for withdrawn candidates. Repo Butler runs at 02:00 UTC for health analysis.
 
-The `GEMINI_API_KEY` GitHub Actions secret needs to be added to activate manifesto sync.
+A manifesto sync pipeline exists (`sync-manifestos.ts`, cron at 07:00 UTC) that discovers party manifesto PDFs and parses them via Google Gemini into structured policy positions with real quotes. **This pipeline has never run** because the `GEMINI_API_KEY` GitHub Actions secret is not configured. All current party positions are hand-curated defaults without manifesto sourcing. Adding the secret would activate automated manifesto analysis.
 
 ### Infrastructure
 
-GitHub Pages deployment via GitHub Actions on every push to main. CI on pull requests. JSON Schema validation. 18 vitest tests. Repo Butler for health dashboards.
+GitHub Pages deployment via GitHub Actions on every push to main. CI on pull requests. JSON Schema validation. 48 vitest tests. Repo Butler for health dashboards.
 
 ## What needs doing before 7 May (33 days)
 
@@ -86,14 +86,84 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ~~Explain in quiz results that candidates from the same party share identical match scores.~~ Done. Disclosure box now states that same-party candidates share identical match scores.
 
-## After the election
+## Visual Roadmap
 
-Multi-election support for Scottish local elections (2027), UK general elections, and Welsh Senedd.
+```
+                          VoteScot Roadmap
+                          ════════════════
 
-Historical comparison: how did your MSP actually vote vs what they promised?
+  ELECTION DAY: 7 May 2026
+  ─────────────────────────────────────────────────────────────
 
-Community contributions via Decap CMS for moderated candidate position submissions.
+  TODAY                                           ELECTION
+  13 Apr                                           7 May
+    │              24 days remaining                  │
+    ▼                                                ▼
+    ┌─────────────────────────────────────────────────┐
+    │           WHAT'S DONE (ship-ready)              │
+    │                                                 │
+    │  ✅ Vote compass quiz (8 policy areas)          │
+    │  ✅ 434 candidates / 73 constituencies          │
+    │  ✅ Interactive map + postcode lookup            │
+    │  ✅ Polling trends (127 polls, daily sync)      │
+    │  ✅ Constituency projections                    │
+    │  ✅ How-to-Vote guide                           │
+    │  ✅ Party pages                                 │
+    │  ✅ Accessibility & performance optimised       │
+    │  ✅ Daily data pipeline (candidates + polls)    │
+    │  ✅ 48 tests passing                            │
+    │  ✅ Dependencies updated (13 Apr 2026)          │
+    └─────────────────────────────────────────────────┘
 
-Custom domain: `votescot.scot` or `kenyercandidate.scot`.
+    ┌─────────────────────────────────────────────────┐
+    │        MANIFESTO ANALYSIS (the big gap)         │
+    │                                                 │
+    │  The pipeline exists (sync-manifestos.ts) but   │
+    │  has never run. Positions are hand-curated      │
+    │  party defaults, not sourced from manifestos.   │
+    │                                                 │
+    │  To activate:                                   │
+    │  ┌────────────────────────────────────────────┐ │
+    │  │ 1. Add GEMINI_API_KEY secret to GitHub     │ │
+    │  │    (unblocks the daily 07:00 UTC cron)     │ │
+    │  │                                            │ │
+    │  │ 2. Pipeline auto-discovers manifesto PDFs  │ │
+    │  │    from 6 party websites                   │ │
+    │  │                                            │ │
+    │  │ 3. Gemini parses PDFs into structured      │ │
+    │  │    positions + real quotes per policy area  │ │
+    │  │                                            │ │
+    │  │ 4. Replaces "Based on party platform"      │ │
+    │  │    with actual manifesto evidence           │ │
+    │  │                                            │ │
+    │  │ 5. Updates 368 candidate files             │ │
+    │  └────────────────────────────────────────────┘ │
+    │                                                 │
+    │  Status: BLOCKED on GEMINI_API_KEY secret       │
+    └─────────────────────────────────────────────────┘
 
-Plausible analytics for privacy-first usage tracking.
+    ┌─────────────────────────────────────────────────┐
+    │      MAINTENANCE — Now until 7 May              │
+    │                                                 │
+    │  • Monitor daily data syncs                     │
+    │  • React to candidate withdrawals               │
+    │  • Fix any user-reported bugs                   │
+    │  • Keep dependencies current                    │
+    └─────────────────────────────────────────────────┘
+
+
+  AFTER 7 MAY
+  ─────────────────────────────────────────────────────────────
+
+    ┌─────────────────────────────────────────────────┐
+    │  No concrete post-election plans. The site      │
+    │  was built for this election. Ideas that        │
+    │  would only happen if there's energy for it:    │
+    │                                                 │
+    │  ? Multi-election support (locals 2027, etc.)   │
+    │  ? MSP voting record vs promises tracker        │
+    │  ? Community contributions via Decap CMS        │
+    │  ? Custom domain (votescot.scot)                │
+    │  ? Plausible analytics                          │
+    └─────────────────────────────────────────────────┘
+```
