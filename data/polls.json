@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T08:19:32.103Z",
+  "lastUpdated": "2026-04-13T08:45:09.677Z",
   "constituency": [
     {
       "date": "2026-03-23",
@@ -42,9 +42,9 @@
       "lab": 15,
       "libdem": 10,
       "green": 7,
-      "alba": null,
-      "reform": 15,
-      "others": 3
+      "alba": 15,
+      "reform": 3,
+      "others": 24
     },
     {
       "date": "2026-03-13",
@@ -57,9 +57,9 @@
       "lab": 18,
       "libdem": 10,
       "green": 9,
-      "alba": null,
-      "reform": 15,
-      "others": null
+      "alba": 15,
+      "reform": null,
+      "others": 16
     },
     {
       "date": "2026-03-16",
@@ -2009,9 +2009,9 @@
       "lab": 15,
       "libdem": 9,
       "green": 16,
-      "alba": null,
-      "reform": 16,
-      "others": 3
+      "alba": 16,
+      "reform": 3,
+      "others": 13
     },
     {
       "date": "2026-03-13",
@@ -2024,9 +2024,9 @@
       "lab": 17,
       "libdem": 10,
       "green": 14,
-      "alba": null,
-      "reform": 16,
-      "others": 4
+      "alba": 16,
+      "reform": 4,
+      "others": 12
     },
     {
       "date": "2026-03-16",
