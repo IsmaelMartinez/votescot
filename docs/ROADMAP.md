@@ -1,10 +1,10 @@
 # VoteScot Roadmap
 
-Last updated: 13 April 2026
+Last updated: 14 April 2026
 
 ## What's live now
 
-The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 434 candidates for the 7 May 2026 election.
+The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 436 candidates for the 7 May 2026 election.
 
 ### Core features
 
@@ -20,7 +20,7 @@ The interactive map displays all 73 constituency boundaries on a Leaflet map usi
 
 ### Polling trends
 
-A polling trends page shows national constituency and regional vote polls scraped from the Wikipedia polling tracker (127 polls). SVG line chart with party colours, recent polls table, and constituency/regional toggle. Daily sync via GitHub Actions at 08:00 UTC.
+A polling trends page shows national constituency and regional vote polls scraped from the Wikipedia polling tracker (131 polls). SVG line chart with party colours, recent polls table, and constituency/regional toggle. Daily sync via GitHub Actions at 08:00 UTC.
 
 ### Constituency projections
 
@@ -40,7 +40,7 @@ A manifesto sync pipeline exists (`sync-manifestos.ts`, cron at 07:00 UTC) that 
 
 GitHub Pages deployment via GitHub Actions on every push to main. CI on pull requests. JSON Schema validation. 48 vitest tests. Repo Butler for health dashboards.
 
-## What needs doing before 7 May (33 days)
+## What needs doing before 7 May (23 days)
 
 ### Critical — data accuracy
 
@@ -54,7 +54,7 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ### High priority — usability
 
-~~Add a "How to Vote" guide.~~ Done at `/how-to-vote`. Covers two ballot papers, AMS, D'Hondt, key dates, voter eligibility (16+), no photo ID required, registration links. Voter ID section corrected in review (Scotland does NOT require photo ID at Holyrood elections).
+~~Add a "How to Vote" guide.~~ Done at `/guide` (with `#how-to-vote` anchor). Covers two ballot papers, AMS, D'Hondt, key dates, voter eligibility (16+), no photo ID required, registration links. Voter ID section corrected in review (Scotland does NOT require photo ID at Holyrood elections).
 
 ~~Fix slug consistency.~~ Done. Shared `slugifyConstituency()` utility in `src/lib/slugify.ts`. Both PostcodeLookup and ConstituencyMap use it. 5 test cases.
 
@@ -96,16 +96,16 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
   ─────────────────────────────────────────────────────────────
 
   TODAY                                           ELECTION
-  13 Apr                                           7 May
-    │              24 days remaining                  │
+  14 Apr                                           7 May
+    │              23 days remaining                  │
     ▼                                                ▼
     ┌─────────────────────────────────────────────────┐
     │           WHAT'S DONE (ship-ready)              │
     │                                                 │
     │  ✅ Vote compass quiz (8 policy areas)          │
-    │  ✅ 434 candidates / 73 constituencies          │
+    │  ✅ 436 candidates / 73 constituencies          │
     │  ✅ Interactive map + postcode lookup            │
-    │  ✅ Polling trends (127 polls, daily sync)      │
+    │  ✅ Polling trends (131 polls, daily sync)      │
     │  ✅ Constituency projections                    │
     │  ✅ How-to-Vote guide                           │
     │  ✅ Party pages                                 │
