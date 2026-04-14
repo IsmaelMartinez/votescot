@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import Ajv from "ajv/dist/2020";
+import Ajv from "ajv/dist/2020.js";
 import yaml from "yaml";
 
 const ajv = new Ajv({ allErrors: true, strict: false });
