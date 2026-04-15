@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  issues: write
 
 jobs:
   sync:
@@ -43,23 +43,17 @@ jobs:
             git push
           fi
 
-      - name: Create withdrawal PR if needed
+      - name: Open withdrawal review issue if needed
         if: hashFiles('withdrawn.json') != ''
         run: |
           WITHDRAWN=$(cat withdrawn.json)
-          BRANCH="withdrawals-$(date +%Y%m%d)"
-          git checkout -b "$BRANCH"
-          echo "$WITHDRAWN" > data/withdrawn-$(date +%Y%m%d).json
-          git add data/
-          git commit -m "flag potentially withdrawn candidates for review"
-          git push -u origin "$BRANCH"
-          gh pr create \
+          LIST=$(echo "$WITHDRAWN" | jq -r '.[]' | sed 's/^/- /')
+          BODY=$(printf '%s\n\n%s\n\n%s\n' \
+            "The following candidates appeared in our data but are no longer in the Democracy Club API:" \
+            "$LIST" \
+            "Please review and confirm withdrawals before removing from \`data/candidates/\`.")
+          gh issue create \
             --title "Review: potentially withdrawn candidates $(date +%Y-%m-%d)" \
-            --body "The following candidates appeared in our data but are no longer in the Democracy Club API:
-
-          $(echo "$WITHDRAWN" | jq -r '.[]' | sed 's/^/- /')
-
-          Please review and confirm withdrawals before merging." \
-            --base main
+            --body "$BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
