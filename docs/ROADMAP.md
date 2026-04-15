@@ -32,7 +32,7 @@ Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForY
 
 ### Data pipeline
 
-Daily GitHub Actions cron jobs are configured for candidate sync (06:00 UTC from Democracy Club API) and polling sync (08:00 UTC from Wikipedia). The candidate sync auto-commits additions and opens PRs for withdrawn candidates. Repo Butler runs at 02:00 UTC for health analysis.
+A daily GitHub Actions cron job is configured for polling sync (08:00 UTC from Wikipedia). Repo Butler runs at 02:00 UTC for health analysis. The candidate sync workflow has been retired — Democracy Club has locked the 2026 Scottish Parliament ballot (`candidates_locked: true`), so no further automated updates are expected. Any late withdrawals will be handled manually.
 
 A manifesto sync pipeline exists (`sync-manifestos.ts`, cron at 07:00 UTC) that discovers party manifesto PDFs and parses them via Google Gemini into structured policy positions with real quotes. **This pipeline has never run** because the `GEMINI_API_KEY` GitHub Actions secret is not configured. All current party positions are hand-curated defaults without manifesto sourcing. Adding the secret would activate automated manifesto analysis.
 
@@ -110,7 +110,7 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
     │  ✅ How-to-Vote guide                           │
     │  ✅ Party pages                                 │
     │  ✅ Accessibility & performance optimised       │
-    │  ✅ Daily data pipeline (candidates + polls)    │
+    │  ✅ Daily polling sync                          │
     │  ✅ 48 tests passing                            │
     │  ✅ Dependencies updated (13 Apr 2026)          │
     └─────────────────────────────────────────────────┘
