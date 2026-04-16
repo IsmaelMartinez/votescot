@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 14 April 2026
+Last updated: 16 April 2026
 
 ## What's live now
 
@@ -34,19 +34,30 @@ Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForY
 
 A daily GitHub Actions cron job is configured for polling sync (08:00 UTC from Wikipedia). Repo Butler runs at 02:00 UTC for health analysis. The candidate sync workflow has been retired — Democracy Club has locked the 2026 Scottish Parliament ballot (`candidates_locked: true`), so no further automated updates are expected. Any late withdrawals will be handled manually.
 
-A manifesto sync pipeline exists (`sync-manifestos.ts`, cron at 07:00 UTC) that discovers party manifesto PDFs and parses them via Google Gemini into structured policy positions with real quotes. **This pipeline has never run** because the `GEMINI_API_KEY` GitHub Actions secret is not configured. All current party positions are hand-curated defaults without manifesto sourcing. Adding the secret would activate automated manifesto analysis.
+A manifesto sync script exists (`scripts/sync-manifestos.ts`) that discovers party manifesto PDFs and parses them via Google Gemini into structured policy positions with real quotes. **This has never produced any data.** Parties have not published 2026 manifestos yet, and the registry URLs in `data/manifestos/registry.yaml` are still speculative (e.g. `/2026-manifesto`). The GitHub Actions cron was removed on 16 April 2026 — see the "Manifesto check" section below for the manual check to run each time the repo is picked up. All current party positions are hand-curated defaults.
 
 ### Infrastructure
 
 GitHub Pages deployment via GitHub Actions on every push to main. CI on pull requests. JSON Schema validation. 48 vitest tests. Repo Butler for health dashboards.
 
-## What needs doing before 7 May (23 days)
+## Manifesto check (run each time you pick the repo up)
+
+Parties haven't published 2026 Holyrood manifestos yet. Instead of leaving a daily cron failing silently, check manually:
+
+1. Open each URL list in `data/manifestos/registry.yaml` in a browser and look for a published 2026 manifesto PDF.
+2. If one is published, update the `manifestoPdf` field in the registry to the direct PDF URL.
+3. Set `GEMINI_API_KEY` locally and run `npm run sync:manifestos`. The script will parse the PDF, write structured positions to `data/parties/<party>.yaml`, and fan out to the 368 quiz-ready candidates.
+4. Review the diff, commit, and push.
+
+If no manifesto is out, do nothing — positions stay as hand-curated defaults until the real thing drops.
+
+## What needs doing before 7 May (21 days)
 
 ### Critical — data accuracy
 
 ~~Enrich high-profile candidates with real bios.~~ Done. 13 candidates (Swinney, Sarwar, Baillie, Fraser, Gilruth, McAllan, Somerville, Bibby, Gallacher, Rennie, Slater, Constance, Thewliss, Macpherson) have substantive bios and highlights. Factual accuracy verified via code review.
 
-~~Fix incumbent status for sitting MSPs.~~ Done. `scripts/fix-incumbents.ts` cross-references the Scottish Parliament members API. 75 sitting MSPs marked as incumbents. Two false positives (name collisions with different-party candidates) caught in review and fixed.
+**Fix incumbent status for sitting MSPs (regressed).** `scripts/fix-incumbents.ts` cross-references the Scottish Parliament members API and originally marked 75 sitting MSPs as incumbents (two name-collision false positives caught in review). Subsequent "sync: update candidate data from Democracy Club" commits overwrote the `isIncumbent` field, and today every candidate file on disk has `isIncumbent: false`. The sync workflow has since been retired (#25), so re-running `scripts/fix-incumbents.ts` locally and committing the result will fix this for good.
 
 ~~Differentiate Conservative and Reform positions.~~ Done. Conservatives now score nhs:1, education:1 (more moderate). Reform stays at all 0s. 72 candidate files updated.
 
@@ -96,8 +107,8 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
   ─────────────────────────────────────────────────────────────
 
   TODAY                                           ELECTION
-  14 Apr                                           7 May
-    │              23 days remaining                  │
+  16 Apr                                           7 May
+    │              21 days remaining                  │
     ▼                                                ▼
     ┌─────────────────────────────────────────────────┐
     │           WHAT'S DONE (ship-ready)              │
@@ -118,28 +129,27 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
     ┌─────────────────────────────────────────────────┐
     │        MANIFESTO ANALYSIS (the big gap)         │
     │                                                 │
-    │  The pipeline exists (sync-manifestos.ts) but   │
-    │  has never run. Positions are hand-curated      │
-    │  party defaults, not sourced from manifestos.   │
+    │  Parties haven't published 2026 Holyrood        │
+    │  manifestos yet. Registry URLs are still        │
+    │  speculative. Positions remain hand-curated     │
+    │  party defaults until a manifesto drops.        │
     │                                                 │
-    │  To activate:                                   │
+    │  Manual check (run when you pick the repo up):  │
     │  ┌────────────────────────────────────────────┐ │
-    │  │ 1. Add GEMINI_API_KEY secret to GitHub     │ │
-    │  │    (unblocks the daily 07:00 UTC cron)     │ │
+    │  │ 1. Visit each URL in                        │ │
+    │  │    data/manifestos/registry.yaml           │ │
     │  │                                            │ │
-    │  │ 2. Pipeline auto-discovers manifesto PDFs  │ │
-    │  │    from 6 party websites                   │ │
+    │  │ 2. If a 2026 manifesto PDF is live,        │ │
+    │  │    update manifestoPdf in the registry     │ │
     │  │                                            │ │
-    │  │ 3. Gemini parses PDFs into structured      │ │
-    │  │    positions + real quotes per policy area  │ │
+    │  │ 3. Export GEMINI_API_KEY locally and run   │ │
+    │  │    npm run sync:manifestos                 │ │
     │  │                                            │ │
-    │  │ 4. Replaces "Based on party platform"      │ │
-    │  │    with actual manifesto evidence           │ │
-    │  │                                            │ │
-    │  │ 5. Updates 368 candidate files             │ │
+    │  │ 4. Review diff, commit, push               │ │
     │  └────────────────────────────────────────────┘ │
     │                                                 │
-    │  Status: BLOCKED on GEMINI_API_KEY secret       │
+    │  Status: waiting on parties to publish          │
+    │  (daily cron removed 16 Apr 2026)               │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
