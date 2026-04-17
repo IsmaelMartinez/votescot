@@ -9,25 +9,37 @@ isIncumbent: false
 quizCandidate: true
 bio: Liberal Democrats candidate for Angus North and Mearns.
 highlights:
-  - Liberal Democrats candidate for Angus North and Mearns in the 2026 Scottish Parliament election
+  - Liberal Democrats candidate for Angus North and Mearns in the 2026 Scottish
+    Parliament election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website
 positions:
   independence: 0
-  nhs: 1
+  nhs: 2
   housing: 1
   climate: 1
   tax: 1
   economy: 1
   education: 1
-  equality: 1
+  equality: 2
 stances:
-  independence: Oppose independence. Support a federal UK with stronger Scottish devolution. Want a reformed union rather than separation.
-  nhs: Mental health specialists in every GP surgery. £500m care rescue package. Rolling 10-year NHS workforce plan to end staffing crisis.
-  housing: Build affordable housing while protecting greenbelt. Balance development needs with environmental quality of communities.
-  climate: Net zero by 2045. New national parks to protect nature. Sewage transparency reform. Decarbonise rail and expand public transport.
-  tax: Maintain current Scottish income tax rates. Increase personal allowances so low earners pay less.
-  economy: Support small and medium-sized businesses. Track record of negotiating budget concessions (e.g., £178m business rates relief). Pragmatic centrist economics.
-  education: Mental health counsellor in every school. Expand play-based learning in early years. Education recovery plan post-pandemic.
-  equality: Liberal approach to individual rights. Moderate progressive position. Support for LGBT+ protections within a rights-based framework.
+  independence: Oppose independence. Back a written constitution for a federal
+    United Kingdom and a new bespoke UK-EU customs union.
+  nhs: A 10-year NHS and care workforce plan, new neighbourhood health teams
+    giving every GP practice the equivalent of an extra clinical staff member,
+    walk-in mental health services and a Fair Deal for Rural Healthcare.
+  housing: Return housebuilding to 25,000 new homes annually, create key worker
+    housing, and replace the SNP's housing strategy with a new holistic
+    data-driven approach.
+  climate: Support net zero by 2045 with a programme for net zero new towns
+    featuring rail links, district heating and 20-minute neighbourhoods.
+  tax: Where funds allow, lift tax thresholds in line with inflation and begin to
+    close the tax differential with England in a balanced way that protects
+    public services.
+  economy: Reform business rates to stop sudden tax hikes on successful employers
+    and help people upskill through new Job Transition Loans worth up to £5,000.
+  education: Hire 2,000 more pupil support assistants, roll out speech and
+    language therapy and make every school a smartphone-free environment.
+  equality: Strong defence of LGBT+ and trans rights. Ban all forms of conversion
+    therapies and practices, working in partnership with the UK Government.

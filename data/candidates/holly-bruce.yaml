@@ -7,9 +7,11 @@ accent: "#007A3D"
 constituency: glasgow-southside
 isIncumbent: false
 quizCandidate: true
-bio: Green councillor for Langside in Glasgow. Won ahead of SNP council leader Susan Aitken on first preferences in 2022. Championed feminist town planning.
+bio: Green councillor for Langside in Glasgow. Won ahead of SNP council leader
+  Susan Aitken on first preferences in 2022. Championed feminist town planning.
 highlights:
-  - Glasgow Green councillor; beat SNP council leader on first preferences in 2022
+  - Glasgow Green councillor; beat SNP council leader on first preferences in
+    2022
   - Championed feminist town planning including safer streets
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
@@ -21,14 +23,24 @@ positions:
   climate: 2
   tax: 2
   economy: 2
-  education: 1
+  education: 2
   equality: 2
 stances:
-  independence: Support independence. Part of the former Bute House Agreement with the SNP. Also supports a Scottish republic in the long term.
-  nhs: Care workers to be paid at least £15/hr. Walk-in mental health centres across Scotland. Raise Scottish Child Payment to £40/week.
-  housing: Strengthen rent controls beyond the current framework. Tackle landlord exploitation. Prioritise affordable rents over landlord returns.
-  climate: Most ambitious climate platform. Free bus travel for all, not just under-22s. A public bus network. End road expansion. Higher taxes on polluters.
-  tax: Higher taxes on super-rich individuals, big banks, Amazon-style warehouses, and betting companies. Use wealth taxes to fund public services.
-  economy: Four-day working week pilot. Exploration of Universal Basic Income. Investment in green jobs. Transition to a circular economy.
-  education: Expand funded childcare to cover children from six months old. 43,000 additional children would be eligible — biggest expansion in a generation.
-  equality: Strong advocate for trans rights. Backed Gender Recognition Reform strongly. Progressive social policy and anti-poverty focus throughout.
+  independence: Support independence and full powers of a sovereign nation, while
+    pressing ahead with change using devolved powers now.
+  nhs: Introduce a £15 per hour minimum wage for social care, a network of free
+    walk-in mental health support hubs, and invest in the NHS workforce.
+  housing: Permanent rent controls, a higher tax rate on landlords' rental income,
+    and stronger renters' rights to tackle the housing emergency.
+  climate: Get Scotland back on track to deliver net zero by 2045 with a
+    coordinated climate action delivery programme across transport, energy,
+    farming and buildings.
+  tax: Tax wealth rather than work. More progressive income tax, higher taxes on
+    second and empty homes, and new taxes on private jets and mansions.
+  economy: Jobs in a green economy — clean industries, care, childcare and
+    community wealth. Move away from expensive and volatile oil and gas.
+  education: Universal free childcare guarantee from 6 months until children start
+    school, with significant investment in the childcare workforce.
+  equality: Strong LGBT+ rights advocacy. Revisit NHS policy changes made as a
+    result of the Cass Review and publish a gender-affirming care action plan to
+    bring down waiting times.

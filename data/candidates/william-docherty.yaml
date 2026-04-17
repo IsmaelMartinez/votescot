@@ -9,13 +9,14 @@ isIncumbent: false
 quizCandidate: true
 bio: Reform UK candidate for Fife North East.
 highlights:
-  - Reform UK candidate for Fife North East in the 2026 Scottish Parliament election
+  - Reform UK candidate for Fife North East in the 2026 Scottish Parliament
+    election
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
     type: party_website
 positions:
   independence: 0
-  nhs: 0
+  nhs: 1
   housing: 0
   climate: 0
   tax: 0
@@ -23,11 +24,25 @@ positions:
   education: 0
   equality: 0
 stances:
-  independence: Oppose independence. Strong unionist position. Want to strengthen the UK as a whole rather than devolve further power.
-  nhs: Reform the NHS to reduce bureaucracy and management overhead. Open to insurance-based elements for some services. Cut NHS administrative spending.
-  housing: Market-led housing policy. Reduce planning regulation to allow developers to build faster. Oppose rent controls as counterproductive.
-  climate: Scrap net zero targets. Protect fossil fuel jobs in Scotland's North Sea. Oppose wind farm expansion on land. Energy bills as the priority.
-  tax: Significant tax cuts across the board. Raise income tax thresholds substantially. Reduce burden on working people and businesses.
-  economy: Deregulate business. Cut government spending and the size of the public sector. Attract investment through lower taxes and less red tape.
-  education: Traditional academic standards. Expand vocational and apprenticeship routes. Oppose what they call 'woke' curriculum content.
-  equality: Socially conservative. Oppose gender self-identification. Emphasise traditional definitions of sex in law. Sceptical of diversity initiatives.
+  independence: Oppose independence. Strong unionist position rejecting another
+    referendum as a distraction from Scotland's day-to-day problems.
+  nhs: NHS Scotland stays free at the point of need and funded by general
+    taxation, but needs major reform. A workforce plan to train more doctors and
+    nurses and a shift to prevention.
+  housing: Repeal SNP tenancy regulations and introduce a Rent-To-Buy model for
+    young people, first-time buyers and working families. Restore a local
+    connection requirement for social housing.
+  climate: Scrap all SNP Net Zero related targets, subsidies and quangos. End the
+    ban on new nuclear in Scotland and rehabilitate North Sea gas as the primary
+    energy system.
+  tax: Cut income tax. Scrap Scotland's six income tax bands, mirror the rUK three
+    bands at 1p below each, and aim for a 3p variation below rUK within the
+    first five years.
+  economy: Cut £7.5bn of spending — £1bn from ideological Net Zero projects and
+    £6.5bn from 132 quangos — to fund a new deal for Scotland that rewards work
+    and aspiration.
+  education: Direct school-leavers into trades via technical colleges rather than
+    universities. Ban mobile phones in classrooms and give headteachers
+    discretion over budgets and recruitment.
+  equality: Socially conservative. Criticises existing gender policies as "woke"
+    and argues the SNP has not protected women and girls in Scotland.

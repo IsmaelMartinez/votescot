@@ -5,12 +5,13 @@ interface Props {
   party: Party;
   candidateCount: number;
   manifestoUrl?: string;
+  manifestoPublished?: boolean;
   color: string;
   accent: string;
   basePath: string;
 }
 
-const { party, candidateCount, manifestoUrl, color, accent, basePath } = Astro.props;
+const { party, candidateCount, manifestoUrl, manifestoPublished, color, accent, basePath } = Astro.props;
 ---
 
 <a
@@ -31,7 +32,7 @@ const { party, candidateCount, manifestoUrl, color, accent, basePath } = Astro.p
   </div>
   {manifestoUrl && (
     <div class="font-body text-xs text-blue-600 mt-1 truncate">
-      Manifesto available
+      {manifestoPublished ? "2026 manifesto published" : "Manifesto not yet published"}
     </div>
   )}
 </a>

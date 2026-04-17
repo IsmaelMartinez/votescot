@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 16 April 2026
+Last updated: 17 April 2026
 
 ## What's live now
 
@@ -8,7 +8,7 @@ The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scot
 
 ### Core features
 
-The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 368 candidates from 7 major parties have quiz data based on party-level positions. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
+The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 370 candidates from 6 major parties have quiz data based on party-level positions. Five parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos; Scottish Labour positions remain hand-curated until their manifesto drops. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
 
 Every candidate has a profile page with policy stances, track record highlights (where available), and source links to WhoCanIVoteFor, party websites, and TheyWorkForYou. The side-by-side comparison view lets voters compare all quiz-ready candidates in their constituency grouped by policy area.
 
@@ -34,7 +34,7 @@ Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForY
 
 A daily GitHub Actions cron job is configured for polling sync (08:00 UTC from Wikipedia). Repo Butler runs at 02:00 UTC for health analysis. The candidate sync workflow has been retired — Democracy Club has locked the 2026 Scottish Parliament ballot (`candidates_locked: true`), so no further automated updates are expected. Any late withdrawals will be handled manually.
 
-Manifesto parsing is handled by a Claude Code slash command (`/sync-manifestos`, defined in `.claude/commands/sync-manifestos.md`). The agent crawls the URLs in `data/manifestos/registry.yaml`, looks for a published 2026 manifesto, and — if found — writes positions/stances/quotes to `data/parties/<party>.yaml` and fans out to candidates via `scripts/apply-party-positions.ts`. The previous Gemini-based script and its daily cron were removed on 16 April 2026; parties have not published 2026 manifestos yet, so all current party positions are hand-curated defaults.
+Manifesto parsing is handled by a Claude Code slash command (`/sync-manifestos`, defined in `.claude/commands/sync-manifestos.md`). The agent crawls the URLs in `data/manifestos/registry.yaml`, looks for a published 2026 manifesto, and — if found — writes positions/stances/quotes to `data/parties/<party>.yaml` and fans out to candidates via `scripts/apply-party-positions.ts`. The previous Gemini-based script and its daily cron were removed on 16 April 2026. On 17 April 2026, the first `/sync-manifestos` run pulled 2026 manifestos for the SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, and Reform UK into `data/parties/<party>.yaml` with verbatim quotes; only Scottish Labour is still outstanding (their `/manifesto` URL currently redirects to the 2024 UK manifesto), so Labour positions remain hand-curated defaults until their 2026 manifesto is published.
 
 ### Infrastructure
 
@@ -42,16 +42,20 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ## Manifesto check (run each time you pick the repo up)
 
-Parties haven't published 2026 Holyrood manifestos yet. Instead of leaving a daily cron failing silently:
+5 of 6 parties have published 2026 Holyrood manifestos. Scottish Labour is the remaining gap. Instead of leaving a daily cron failing silently:
 
 1. In Claude Code, run `/sync-manifestos`.
 2. The agent visits each URL in `data/manifestos/registry.yaml`, reports which parties have published, parses any 2026 manifesto it finds, and writes positions to `data/parties/<party>.yaml`.
-3. The agent then runs `npx tsx scripts/apply-party-positions.ts` to fan out to candidates and `npm test` to validate.
+3. The agent then runs `npx tsx scripts/apply-party-positions.ts --force` to fan out to candidates and `npm test` to validate.
 4. Review the diff, commit, push.
 
-If no manifesto is out, the agent reports that and stops without changing anything. Positions stay as hand-curated defaults until the real thing drops.
+If no new manifesto is out, the agent reports that and stops without changing anything. Previously-parsed parties keep their manifesto-sourced positions; parties without a published manifesto keep their hand-curated defaults.
 
-## What needs doing before 7 May (21 days)
+### Manifesto extraction notes
+
+Most party manifestos are standard PDFs that `pdftotext -layout` can parse directly. The SNP manifesto is hosted on Issuu, which blocks direct PDF download — the agent can OCR the per-page images at `image.isu.pub/{docid}/jpg/page_N.jpg` with `tesseract`. Both `poppler` (pdftotext) and `tesseract` can be installed via Homebrew.
+
+## What needs doing before 7 May (20 days)
 
 ### Critical — data accuracy
 
@@ -107,8 +111,8 @@ If no manifesto is out, the agent reports that and stops without changing anythi
   ─────────────────────────────────────────────────────────────
 
   TODAY                                           ELECTION
-  16 Apr                                           7 May
-    │              21 days remaining                  │
+  17 Apr                                           7 May
+    │              20 days remaining                  │
     ▼                                                ▼
     ┌─────────────────────────────────────────────────┐
     │           WHAT'S DONE (ship-ready)              │
@@ -127,25 +131,22 @@ If no manifesto is out, the agent reports that and stops without changing anythi
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
-    │        MANIFESTO ANALYSIS (the big gap)         │
+    │        MANIFESTO ANALYSIS                        │
     │                                                 │
-    │  Parties haven't published 2026 Holyrood        │
-    │  manifestos yet. Positions remain hand-curated  │
-    │  party defaults until a manifesto drops.        │
+    │  5 of 6 parties have 2026 manifestos parsed:    │
+    │    SNP              published 16 Apr            │
+    │    Scottish Greens  published                   │
+    │    Scottish LibDems published                   │
+    │    Scottish Cons    published 7 Apr             │
+    │    Reform UK        published                   │
+    │    Scottish Labour  STILL NOT PUBLISHED         │
     │                                                 │
-    │  When you pick the repo up:                     │
-    │  ┌────────────────────────────────────────────┐ │
-    │  │ Run /sync-manifestos in Claude Code.       │ │
-    │  │                                            │ │
-    │  │ The agent crawls the registry, reports     │ │
-    │  │ which parties have published, parses any   │ │
-    │  │ live manifestos into positions/quotes,     │ │
-    │  │ fans out to candidates, and runs tests.    │ │
-    │  │ Review the diff before committing.         │ │
-    │  └────────────────────────────────────────────┘ │
+    │  Positions, stances and verbatim quotes parsed  │
+    │  into data/parties/<party>.yaml on 17 Apr 2026. │
     │                                                 │
-    │  Status: waiting on parties to publish          │
-    │  (Gemini script + cron removed 16 Apr 2026)     │
+    │  Re-run /sync-manifestos when Labour drops      │
+    │  their manifesto — or if any party updates      │
+    │  theirs — to refresh positions.                 │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
