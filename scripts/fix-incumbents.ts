@@ -191,6 +191,20 @@ async function main() {
           }
           if (matched) break;
         }
+
+        // Strategy 4: MSP has a space-separated multi-word surname (e.g.
+        // "Halcro Johnston") — check if joining the last N candidate tokens
+        // with a space matches the MSP surname.
+        if (!matched && msp.surname.includes(" ") && msp.first === first) {
+          for (let i = 1; i < allTokens.length; i++) {
+            const trySurname = allTokens.slice(i).join(" ");
+            if (trySurname === msp.surname) {
+              matched = true;
+              break;
+            }
+          }
+          if (matched) break;
+        }
       }
     }
 
