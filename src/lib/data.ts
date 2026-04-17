@@ -100,19 +100,31 @@ export function loadConstituency(id: string): Constituency {
   return loadYaml<Constituency>(`data/constituencies/${id}.yaml`);
 }
 
+let constituenciesCache: readonly Constituency[] | null = null;
+
 export function loadConstituencies(): Constituency[] {
-  const dir = path.resolve(process.cwd(), "data/constituencies");
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
-  return files.map((f) => loadYaml<Constituency>(path.join("data/constituencies", f)));
+  if (!constituenciesCache) {
+    const dir = path.resolve(process.cwd(), "data/constituencies");
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
+    constituenciesCache = Object.freeze(
+      files.map((f) => loadYaml<Constituency>(path.join("data/constituencies", f)))
+    );
+  }
+  return [...constituenciesCache];
 }
 
 export function loadCandidatesByConstituency(constituencyId: string): Candidate[] {
   return loadCandidates().filter((c) => c.constituency === constituencyId);
 }
 
+let questionsCache: readonly QuizQuestion[] | null = null;
+
 export function loadQuestions(): QuizQuestion[] {
-  const data = loadYaml<{ questions: QuizQuestion[] }>("data/questions.yaml");
-  return data.questions;
+  if (!questionsCache) {
+    const data = loadYaml<{ questions: QuizQuestion[] }>("data/questions.yaml");
+    questionsCache = Object.freeze(data.questions);
+  }
+  return [...questionsCache];
 }
 
 export function loadResources(): ResourceSection[] {

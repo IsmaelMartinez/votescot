@@ -20,11 +20,11 @@ parties:
   - id: "scottish-labour"
     name: "Scottish Labour"
     manifestoUrls:
-      - "https://scottishlabour.org.uk/manifesto"
-      - "https://scottishlabour.org.uk/where-we-stand"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+      - "https://scottishlabour.org.uk/manifesto-2026"
+      - "https://scottishlabour.org.uk/our-vision"
+    manifestoPdf: "https://scottishlabour.org.uk/wp-content/uploads/2026/04/Scottish-Labour-Manifesto-2026.pdf"
+    parsedAt: "2026-04-18"
+    positionsFile: "data/parties/scottish-labour.yaml"
 
   - id: "scottish-conservatives"
     name: "Scottish Conservatives"

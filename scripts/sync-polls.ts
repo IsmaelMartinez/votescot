@@ -71,11 +71,18 @@ function parseStartDate(text: string, endDate: string): string {
     if (month) return `${rangeMatch[4]}-${month}-${day}`;
   }
 
-  const crossMatch = text.match(/(\d{1,2})\s+(\w+)\s*[–\-]\s*\d{1,2}\s+\w+\s+(\d{4})/);
+  const crossMatch = text.match(/(\d{1,2})\s+(\w+)\s*[–\-]\s*\d{1,2}\s+(\w+)\s+(\d{4})/);
   if (crossMatch) {
     const day = crossMatch[1].padStart(2, "0");
-    const month = parseMonth(crossMatch[2]);
-    if (month) return `${crossMatch[3]}-${month}-${day}`;
+    const startMonth = parseMonth(crossMatch[2]);
+    const endMonth = parseMonth(crossMatch[3]);
+    if (startMonth && endMonth) {
+      // If the start month is after the end month, the range crosses a year
+      // boundary (e.g. "22 Dec – 1 Jan 2023" starts in 2022) and the year
+      // should be decremented for the start date.
+      const year = startMonth > endMonth ? parseInt(crossMatch[4]) - 1 : parseInt(crossMatch[4]);
+      return `${year}-${startMonth}-${day}`;
+    }
   }
 
   const singleMatch = text.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
@@ -185,7 +192,10 @@ function parseTable(tableHtml: string): PollEntry[] {
     if (cells.length < 10) continue;
 
     const rowText = stripTags(row).toLowerCase();
-    if (rowText.includes("2021 election") || rowText.includes("2016 election") || rowText.includes("election result")) continue;
+    // Skip baseline election-result rows. Wikipedia formats these as "2021
+    // Scottish Parliament election" / "2016 Scottish Parliament election",
+    // so a loose regex catches both the short-form and long-form variants.
+    if (/\b(201[16]|202[16])\b[^.]*election/.test(rowText) || rowText.includes("election result")) continue;
 
     const colspanMatch = row.match(/colspan="(\d+)"/);
     if (colspanMatch && parseInt(colspanMatch[1]) > 5) continue;
@@ -284,6 +294,18 @@ async function main() {
   console.log("Parsing regional table...");
   const regional = parseTable(tables[1]);
   console.log(`  Extracted ${regional.length} regional polls`);
+
+  // Guard against silent parse failure: if Wikipedia renames a party column,
+  // buildColMap returns null, parseTable returns [], and we'd write an empty
+  // polls file that the scheduled workflow would auto-commit. Require a
+  // plausible minimum count so a broken parse fails loudly.
+  const MIN_POLLS = 50;
+  if (constituency.length < MIN_POLLS || regional.length < MIN_POLLS) {
+    throw new Error(
+      `Unexpectedly few polls parsed (constituency=${constituency.length}, regional=${regional.length}). ` +
+        `Check for Wikipedia schema changes before writing to ${OUTPUT_PATH}.`
+    );
+  }
 
   const output = {
     lastUpdated: new Date().toISOString(),
