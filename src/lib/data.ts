@@ -169,3 +169,31 @@ export function loadManifestoRegistry(): ManifestoEntry[] {
   }
   return [...manifestoRegistryCache];
 }
+
+export interface NewsItem {
+  title: string;
+  description: string;
+  url: string;
+  publishedAt: string;
+  source: string;
+}
+
+export interface NewsFeed {
+  lastUpdated: string;
+  sources: { name: string; url: string }[];
+  items: NewsItem[];
+}
+
+let newsCache: Readonly<NewsFeed> | null = null;
+
+export function loadNews(): NewsFeed {
+  if (!newsCache) {
+    const newsPath = path.resolve(process.cwd(), "data/news.json");
+    if (!fs.existsSync(newsPath)) {
+      newsCache = Object.freeze({ lastUpdated: "", sources: [], items: [] });
+    } else {
+      newsCache = Object.freeze(JSON.parse(fs.readFileSync(newsPath, "utf-8")) as NewsFeed);
+    }
+  }
+  return newsCache;
+}

@@ -1,0 +1,64 @@
+---
+import type { NewsItem } from "../lib/data";
+
+interface Props {
+  items: NewsItem[];
+  sources: { name: string; url: string }[];
+  lastUpdated: string;
+  limit?: number;
+}
+
+const { items, sources, lastUpdated, limit = 5 } = Astro.props;
+const visible = items.slice(0, limit);
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  const now = new Date();
+  const diffHours = (now.getTime() - d.getTime()) / (1000 * 60 * 60);
+  if (diffHours < 24) return `${Math.max(1, Math.round(diffHours))}h ago`;
+  if (diffHours < 48) return "yesterday";
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+}
+---
+
+{visible.length > 0 && (
+  <section class="mt-6">
+    <div class="flex items-baseline justify-between mb-2">
+      <h2 class="font-heading text-lg font-black m-0">Latest news</h2>
+      <span class="font-body text-xs text-gray-400">
+        via {sources.map((s, i) => (
+          <>
+            {i > 0 && ", "}
+            <a href={s.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{s.name}</a>
+          </>
+        ))}
+      </span>
+    </div>
+    <ul class="flex flex-col gap-2 list-none p-0 m-0">
+      {visible.map((item) => (
+        <li>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit"
+          >
+            <div class="flex items-start gap-2">
+              <div class="flex-1 min-w-0">
+                <div class="font-body text-[13px] font-bold text-gray-800 leading-snug mb-1">
+                  {item.title}
+                </div>
+                <div class="font-body text-xs text-gray-500 leading-snug line-clamp-2">
+                  {item.description}
+                </div>
+              </div>
+              <div class="font-body text-xs text-gray-400 whitespace-nowrap shrink-0 mt-0.5">
+                {formatDate(item.publishedAt)}
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
