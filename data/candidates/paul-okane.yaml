@@ -7,11 +7,13 @@ accent: "#8B0000"
 constituency: renfrewshire-west-and-levern-valley
 isIncumbent: true
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Renfrewshire West and Levern
-  Valley.
+bio: Labour MSP for West Scotland region since 2021. Shadow Cabinet Secretary
+  for Education and Equalities. Now standing as the constituency candidate for
+  Renfrewshire West and Levern Valley.
 highlights:
-  - Labour and Co-operative Party candidate for Renfrewshire West and Levern
-    Valley in the 2026 Scottish Parliament election
+  - Labour MSP for West Scotland region since 2021
+  - Shadow Cabinet Secretary for Education and Equalities
+  - Now standing for Renfrewshire West and Levern Valley
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
     type: party_website

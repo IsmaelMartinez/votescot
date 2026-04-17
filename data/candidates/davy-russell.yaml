@@ -7,9 +7,13 @@ accent: "#8B0000"
 constituency: hamilton-larkhall-and-stonehouse
 isIncumbent: true
 quizCandidate: true
-bio: Labour Party candidate for Hamilton, Larkhall and Stonehouse.
+bio: Labour MSP for Hamilton, Larkhall and Stonehouse since June 2025, elected at
+  the by-election triggered by the death of Christina McKelvie. Raised in the
+  South Lanarkshire mining village of Quarter.
 highlights:
-  - Labour Party candidate for Hamilton, Larkhall and Stonehouse
+  - Won the June 2025 Hamilton, Larkhall and Stonehouse by-election by 602 votes
+  - First Labour MSP for the seat since its creation
+  - From Quarter, South Lanarkshire
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
