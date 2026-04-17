@@ -13,8 +13,12 @@ const REGION_STATUS_API =
 // The Scottish Parliament API flips `IsCurrent` to false for every MSP during
 // dissolution (~25 working days before polling day), so we can't rely on it in
 // the run-up to an election. Instead, identify sitting MSPs as anyone whose
-// election-status record for the current session is still live.
-const SESSION_6_START = "2021-05";
+// election-status record begins within the current session (2021-05-06 general
+// election up to the 2026-04-08 dissolution date). This range captures both the
+// initial cohort and any mid-session replacements (by-elections, regional list
+// replacements).
+const SESSION_6_START = "2021-05-06";
+const SESSION_6_END = "2026-04-08";
 
 interface ScotParliamentMember {
   PersonID: number;
@@ -102,7 +106,8 @@ async function main() {
 
   const sessionSixPersonIds = new Set<number>();
   for (const status of [...constituencyStatuses, ...regionStatuses]) {
-    if (status.ValidFromDate?.startsWith(SESSION_6_START)) {
+    const from = status.ValidFromDate ?? "";
+    if (from >= SESSION_6_START && from <= SESSION_6_END) {
       sessionSixPersonIds.add(status.PersonID);
     }
   }
