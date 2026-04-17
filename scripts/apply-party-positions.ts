@@ -24,6 +24,7 @@ function loadParties(): Map<string, PartyData> {
 }
 
 function applyPartyPositions(): void {
+  const force = process.argv.includes("--force");
   const parties = loadParties();
   const candidateFiles = fs.readdirSync(CANDIDATES_DIR).filter((f) => f.endsWith(".yaml"));
 
@@ -36,8 +37,9 @@ function applyPartyPositions(): void {
     const raw = fs.readFileSync(filePath, "utf-8");
     const data = yaml.parse(raw) as Record<string, unknown>;
 
-    // Skip already hand-curated candidates
-    if (data.quizCandidate === true) {
+    // Skip already-processed candidates unless --force refreshes them
+    // (e.g. after a party YAML update from /sync-manifestos).
+    if (!force && data.quizCandidate === true) {
       skipped++;
       continue;
     }

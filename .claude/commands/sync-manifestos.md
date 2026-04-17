@@ -56,9 +56,9 @@ You are syncing manifesto positions for the VoteScot vote compass. The 2026 Scot
 
    Quotes must be **verbatim** from the manifesto. If you can't find a clean quote for a policy area, leave the quote as `"Not addressed in 2026 manifesto"` and set the position to `1` (neutral).
 
-4. **Update the registry.** For each party you parsed, set `manifestoPdf` to the PDF URL you used and `parsedAt` to today's ISO date. Leave parties you didn't parse untouched.
+4. **Update the registry.** For each party you parsed, in `data/manifestos/registry.yaml` set `manifestoPdf` to the PDF URL you used, `parsedAt` to today's ISO date, and `positionsFile` to the path of the file you wrote in step 3 (e.g. `data/parties/<party-id>.yaml`). Leave parties you didn't parse untouched.
 
-5. **Fan out to candidates.** Run `npx tsx scripts/apply-party-positions.ts`. This applies the new party positions to all candidates of that party who don't already have hand-curated positions.
+5. **Fan out to candidates.** Run `npx tsx scripts/apply-party-positions.ts --force`. The `--force` flag is required because every candidate currently has `quizCandidate: true` from the previous party-defaults run — without it the script is a no-op. It overwrites `positions`, `stances`, and `quizCandidate`, and leaves `bio`, `highlights`, and `sources` alone, so hand-curated biographies are preserved.
 
 6. **Validate.** Run `npm test`. All vitest suites must pass. If `data-parties.test.ts` fails because of a count mismatch, do not edit the test — investigate.
 
