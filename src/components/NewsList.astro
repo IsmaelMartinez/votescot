@@ -4,20 +4,17 @@ import type { NewsItem } from "../lib/data";
 interface Props {
   items: NewsItem[];
   sources: { name: string; url: string }[];
-  lastUpdated: string;
   limit?: number;
 }
 
-const { items, sources, lastUpdated, limit = 5 } = Astro.props;
+const { items, sources, limit = 5 } = Astro.props;
 const visible = items.slice(0, limit);
 
+// Absolute dates rather than relative ("Xh ago") because the page is
+// pre-rendered at build time — a "1h ago" label baked into the HTML would
+// grow stale as users visit hours after the build runs.
 function formatDate(iso: string): string {
-  const d = new Date(iso);
-  const now = new Date();
-  const diffHours = (now.getTime() - d.getTime()) / (1000 * 60 * 60);
-  if (diffHours < 24) return `${Math.max(1, Math.round(diffHours))}h ago`;
-  if (diffHours < 48) return "yesterday";
-  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 }
 ---
 

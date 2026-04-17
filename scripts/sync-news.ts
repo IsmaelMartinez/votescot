@@ -25,6 +25,7 @@ interface NewsItem {
 function decode(text: string): string {
   return text
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/<[^>]+>/g, "")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
@@ -32,7 +33,7 @@ function decode(text: string): string {
     .replace(/&#39;/g, "'")
     .replace(/&apos;/g, "'")
     .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
-    .replace(/<[^>]+>/g, "")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -53,7 +54,8 @@ function parseRss(xml: string, sourceName: string): NewsItem[] {
     if (!title || !link) continue;
     const description = extractTag(block, "description");
     const pubDate = extractTag(block, "pubDate");
-    const publishedAt = pubDate ? new Date(pubDate).toISOString() : "";
+    const parsed = pubDate ? new Date(pubDate) : null;
+    const publishedAt = parsed && !isNaN(parsed.getTime()) ? parsed.toISOString() : "";
     if (!publishedAt) continue;
     items.push({ title, description, url: link, publishedAt, source: sourceName });
   }
