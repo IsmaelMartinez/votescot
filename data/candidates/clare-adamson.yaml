@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: motherwell-and-wishaw
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP since 2011 for Motherwell and Wishaw. Convener of the Constitution,
   Europe, External Affairs and Culture Committee. Background in computer

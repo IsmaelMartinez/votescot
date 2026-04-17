@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: glasgow-easterhouse-and-springburn
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour MSP for Glasgow since 2021. Former MP for Glasgow North East
   (2017-2019). Won 'Community MSP of the Year' in 2022 for work on the drugs

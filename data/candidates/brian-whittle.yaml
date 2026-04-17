@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: east-kilbride
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative MSP for South Scotland since 2016. Former international
   athlete who competed at the 1988 Seoul Olympics and won gold in the 4x400m

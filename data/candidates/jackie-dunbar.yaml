@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: aberdeen-donside
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Aberdeen Donside since 2021. Former Aberdeen City councillor (from
   2007) and SNP deputy group leader on the council.

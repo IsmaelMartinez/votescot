@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: aberdeenshire-east
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Aberdeenshire East since 2016, succeeding Alex Salmond. Cabinet
   Secretary for Climate Action and Energy. Former further education lecturer.

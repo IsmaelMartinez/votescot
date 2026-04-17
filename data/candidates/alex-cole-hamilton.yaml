@@ -5,7 +5,7 @@ partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
 constituency: edinburgh-north-western
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Leader of the Scottish Liberal Democrats since 2021 and MSP for Edinburgh
   Western since 2016. Under his leadership the party tripled its Westminster

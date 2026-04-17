@@ -5,12 +5,28 @@ import { fetchJson } from "./lib/api";
 
 const CANDIDATES_DIR = "data/candidates";
 const MEMBERS_API = "https://data.parliament.scot/api/members";
+const CONSTITUENCY_STATUS_API =
+  "https://data.parliament.scot/api/memberelectionconstituencystatuses";
+const REGION_STATUS_API =
+  "https://data.parliament.scot/api/memberelectionregionstatuses";
+
+// The Scottish Parliament API flips `IsCurrent` to false for every MSP during
+// dissolution (~25 working days before polling day), so we can't rely on it in
+// the run-up to an election. Instead, identify sitting MSPs as anyone whose
+// election-status record for the current session is still live.
+const SESSION_6_START = "2021-05";
 
 interface ScotParliamentMember {
   PersonID: number;
   ParliamentaryName: string;
   PreferredName: string;
   IsCurrent: boolean;
+}
+
+interface ElectionStatus {
+  PersonID: number;
+  ValidFromDate: string;
+  ValidUntilDate: string | null;
 }
 
 interface CandidateData {
@@ -78,9 +94,23 @@ function setIncumbentTrue(filePath: string) {
 
 async function main() {
   console.log("Fetching current MSPs from Scottish Parliament API...");
-  const allMembers = await fetchJson<ScotParliamentMember[]>(MEMBERS_API);
-  const currentMsps = allMembers.filter((m) => m.IsCurrent);
-  console.log(`Found ${currentMsps.length} current MSPs out of ${allMembers.length} total members.`);
+  const [allMembers, constituencyStatuses, regionStatuses] = await Promise.all([
+    fetchJson<ScotParliamentMember[]>(MEMBERS_API),
+    fetchJson<ElectionStatus[]>(CONSTITUENCY_STATUS_API),
+    fetchJson<ElectionStatus[]>(REGION_STATUS_API),
+  ]);
+
+  const sessionSixPersonIds = new Set<number>();
+  for (const status of [...constituencyStatuses, ...regionStatuses]) {
+    if (status.ValidFromDate?.startsWith(SESSION_6_START)) {
+      sessionSixPersonIds.add(status.PersonID);
+    }
+  }
+
+  const currentMsps = allMembers.filter((m) => sessionSixPersonIds.has(m.PersonID));
+  console.log(
+    `Found ${currentMsps.length} session-6 MSPs (${allMembers.length} total members; ${sessionSixPersonIds.size} unique PersonIDs in session-6 election statuses).`
+  );
 
   // Build a lookup structure from MSP data. For each MSP we store the parsed
   // name and original data. We key by "first|surname" for fast lookup, but

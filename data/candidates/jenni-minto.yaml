@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: argyll-and-bute
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Argyll and Bute since 2021. Minister for Public Health and Women's
   Health since March 2023. Worked at BBC Scotland for 18 years helping to

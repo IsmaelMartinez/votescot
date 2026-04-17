@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: east-kilbride
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for East Kilbride since 2021. Convener of the Social Justice and Social
   Security Committee. Former South Lanarkshire councillor and depute provost.

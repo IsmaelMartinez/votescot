@@ -5,7 +5,7 @@ partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
 constituency: orkney-islands
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Orkney Islands since 2007. Deputy Presiding Officer of the Scottish
   Parliament since 2021. Introduced the Assisted Dying for Terminally Ill Adults

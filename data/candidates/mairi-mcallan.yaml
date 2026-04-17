@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: clydesdale
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: SNP Cabinet Secretary and MSP for Clydesdale since 2021, McAllan is one of
   the youngest members of the Scottish Cabinet. A former corporate solicitor who

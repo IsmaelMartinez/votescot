@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: glasgow-easterhouse-and-springburn
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Glasgow Provan since 2016. Minister for Public Finance since May
   2024. Background in manufacturing engineering and international business

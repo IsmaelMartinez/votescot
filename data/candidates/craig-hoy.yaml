@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: dumfriesshire
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative MSP for South Scotland since 2021. Shadow Cabinet Secretary
   for Finance and Local Government. Former Chairman of the Scottish Conservative

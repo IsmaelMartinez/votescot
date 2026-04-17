@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: midlothian-north
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Midlothian North and Musselburgh since 2011. Former SNP National
   Treasurer. Background in international banking spanning 23 years.

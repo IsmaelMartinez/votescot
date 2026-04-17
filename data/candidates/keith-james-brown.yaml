@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: clackmannanshire-and-dunblane
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: SNP Depute Leader since 2018 and MSP since 2007. Former Royal Marine who
   served in the Falklands War. Has held multiple Cabinet Secretary roles

@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: clackmannanshire-and-dunblane
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Conservative MSP for Mid Scotland and Fife since 2016. Awarded MBE for
   services to local government. Former Perth and Kinross councillor for 18
