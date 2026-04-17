@@ -5,7 +5,7 @@ partyShort: Labour
 color: "#DC241F"
 accent: "#8B0000"
 constituency: edinburgh-southern
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Labour MSP for Edinburgh Southern since 2016. Shadow Cabinet Secretary for
   Economy, Business and Fair Work. Former Accenture management consultant.

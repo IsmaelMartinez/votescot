@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: perthshire-south-and-kinross-shire
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Perthshire South and Kinross-shire since 2021. Minister for
   Agriculture and Connectivity since February 2024. Hill farmer who founded

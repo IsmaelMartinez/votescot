@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: inverclyde
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP since 2007, representing Greenock and Inverclyde from 2016. First SNP
   member to win the constituency. Convener of the Delegated Powers and Law

@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: east-lothian-coast-and-lammermuirs
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for East Lothian since 2021, the first SNP MSP for the constituency.
   Former Minister for Housing (2023-2025). Long-serving East Lothian councillor

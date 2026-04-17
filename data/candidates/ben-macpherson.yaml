@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: edinburgh-north-eastern-and-leith
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Edinburgh Northern and Leith since 2016. A former commercial
   lawyer, Macpherson has held a series of ministerial roles covering migration,

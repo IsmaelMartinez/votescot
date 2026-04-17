@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: paisley
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Paisley since 2011. Former Minister for Parliamentary Business
   (2021-2024). Prominent campaigner for multiple sclerosis awareness.

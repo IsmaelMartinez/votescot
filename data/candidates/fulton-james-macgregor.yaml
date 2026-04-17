@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: coatbridge-and-chryston
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Coatbridge and Chryston since 2016, the first SNP MSP ever elected
   for the constituency. Re-elected in 2021 with 57% vote share. Former social

@@ -5,12 +5,32 @@ import { fetchJson } from "./lib/api";
 
 const CANDIDATES_DIR = "data/candidates";
 const MEMBERS_API = "https://data.parliament.scot/api/members";
+const CONSTITUENCY_STATUS_API =
+  "https://data.parliament.scot/api/memberelectionconstituencystatuses";
+const REGION_STATUS_API =
+  "https://data.parliament.scot/api/memberelectionregionstatuses";
+
+// The Scottish Parliament API flips `IsCurrent` to false for every MSP during
+// dissolution (~25 working days before polling day), so we can't rely on it in
+// the run-up to an election. Instead, identify sitting MSPs as anyone whose
+// election-status record begins within the current session (2021-05-06 general
+// election up to the 2026-04-08 dissolution date). This range captures both the
+// initial cohort and any mid-session replacements (by-elections, regional list
+// replacements).
+const SESSION_6_START = "2021-05-06";
+const SESSION_6_END = "2026-04-08";
 
 interface ScotParliamentMember {
   PersonID: number;
   ParliamentaryName: string;
   PreferredName: string;
   IsCurrent: boolean;
+}
+
+interface ElectionStatus {
+  PersonID: number;
+  ValidFromDate: string;
+  ValidUntilDate: string | null;
 }
 
 interface CandidateData {
@@ -78,9 +98,24 @@ function setIncumbentTrue(filePath: string) {
 
 async function main() {
   console.log("Fetching current MSPs from Scottish Parliament API...");
-  const allMembers = await fetchJson<ScotParliamentMember[]>(MEMBERS_API);
-  const currentMsps = allMembers.filter((m) => m.IsCurrent);
-  console.log(`Found ${currentMsps.length} current MSPs out of ${allMembers.length} total members.`);
+  const [allMembers, constituencyStatuses, regionStatuses] = await Promise.all([
+    fetchJson<ScotParliamentMember[]>(MEMBERS_API),
+    fetchJson<ElectionStatus[]>(CONSTITUENCY_STATUS_API),
+    fetchJson<ElectionStatus[]>(REGION_STATUS_API),
+  ]);
+
+  const sessionSixPersonIds = new Set<number>();
+  for (const status of [...constituencyStatuses, ...regionStatuses]) {
+    const from = status.ValidFromDate ?? "";
+    if (from >= SESSION_6_START && from <= SESSION_6_END) {
+      sessionSixPersonIds.add(status.PersonID);
+    }
+  }
+
+  const currentMsps = allMembers.filter((m) => sessionSixPersonIds.has(m.PersonID));
+  console.log(
+    `Found ${currentMsps.length} session-6 MSPs (${allMembers.length} total members; ${sessionSixPersonIds.size} unique PersonIDs in session-6 election statuses).`
+  );
 
   // Build a lookup structure from MSP data. For each MSP we store the parsed
   // name and original data. We key by "first|surname" for fast lookup, but
@@ -150,6 +185,20 @@ async function main() {
         if (!matched && msp.first === first) {
           for (let i = 1; i < allTokens.length; i++) {
             if (allTokens[i] === msp.surname) {
+              matched = true;
+              break;
+            }
+          }
+          if (matched) break;
+        }
+
+        // Strategy 4: MSP has a space-separated multi-word surname (e.g.
+        // "Halcro Johnston") — check if joining the last N candidate tokens
+        // with a space matches the MSP surname.
+        if (!matched && msp.surname.includes(" ") && msp.first === first) {
+          for (let i = 1; i < allTokens.length; i++) {
+            const trySurname = allTokens.slice(i).join(" ");
+            if (trySurname === msp.surname) {
               matched = true;
               break;
             }

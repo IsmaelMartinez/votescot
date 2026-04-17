@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: ayr
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Ayr since 2021 and Minister for Victims and Community Safety since
   March 2023. Defeated the Conservatives' longest-serving MSP by 170 votes.

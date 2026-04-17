@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: glasgow-kelvin-and-maryhill
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP since 2007 for Glasgow. Former Modern Studies teacher. Deputy convener
   of the Social Justice and Social Security Committee.

@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: clydebank-and-milngavie
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Clydebank and Milngavie since 2021, the constituency's first female
   MSP. Former NHS nurse and prominent asbestos awareness campaigner.

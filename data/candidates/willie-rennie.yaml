@@ -5,7 +5,7 @@ partyShort: Lib Dem
 color: "#FAA61A"
 accent: "#B8860B"
 constituency: fife-north-east
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: Former Leader of the Scottish Liberal Democrats (2011-2021) and MSP for
   North East Fife since 2016. Former MP for Dunfermline and West Fife

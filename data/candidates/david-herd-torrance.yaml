@@ -6,7 +6,7 @@ color: "#FDF38E"
 accent: "#9B870C"
 textColor: "#333"
 constituency: kirkcaldy
-isIncumbent: false
+isIncumbent: true
 quizCandidate: true
 bio: MSP for Kirkcaldy since 2011. Former mechanical engineer who worked for
   British Gas, Alcan Chemicals, and Bosch Rexroth. Scout leader since 1979.
