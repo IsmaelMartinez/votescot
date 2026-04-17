@@ -1,5 +1,17 @@
 ---
 description: Check Scottish party websites for 2026 Holyrood manifestos and update party positions if any are published
+allowed-tools:
+  - WebFetch
+  - WebSearch
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Bash(npx tsx scripts/apply-party-positions.ts:*)
+  - Bash(npm test:*)
+  - Bash(git diff:*)
+  - Bash(git status:*)
 ---
 
 You are syncing manifesto positions for the VoteScot vote compass. The 2026 Scottish Parliament election is on 7 May 2026. Most parties have not yet published their manifesto — your first job is to *find out whether they have*.
