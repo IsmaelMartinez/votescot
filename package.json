@@ -11,19 +11,16 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
-    "sync:manifestos": "tsx scripts/sync-manifestos.ts",
     "sync:polls": "tsx scripts/sync-polls.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
     "@fontsource-variable/crimson-pro": "^5.2.8",
     "@fontsource-variable/source-sans-3": "^5.2.9",
-    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/vite": "^4.2.2",
     "@types/leaflet": "^1.9.21",
     "astro": "^6.1.3",
     "leaflet": "^1.9.4",
-    "pdf-parse": "^2.4.5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-leaflet": "^5.0.0",
@@ -33,7 +30,6 @@
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.2",
-    "@types/pdf-parse": "^1.1.5",
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-server": "^3.0.4",
     "ajv": "^8.18.0",
