@@ -3,7 +3,8 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
-import { loadConstituencies } from "../lib/data";
+import NewsList from "../components/NewsList.astro";
+import { loadConstituencies, loadNews } from "../lib/data";
 
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
@@ -17,6 +18,8 @@ const projections = constituencies
     competitiveness: c.competitiveness,
     topParties: c.topParties,
   }));
+
+const news = loadNews();
 ---
 
 <Base title="VoteScot — 2026 Scottish Parliament Election">
@@ -34,6 +37,12 @@ const projections = constituencies
       knownConstituencies={knownConstituencies}
       basePath={base}
       projections={projections}
+    />
+
+    <NewsList
+      items={news.items}
+      sources={news.sources}
+      limit={5}
     />
 
     <div class="mt-6 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
