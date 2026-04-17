@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-04-15T08:37:08.901Z",
+  "lastUpdated": "2026-04-17T08:37:01.198Z",
   "constituency": [
+    {
+      "date": "2026-03-24",
+      "endDate": "2026-04-10",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 1008,
+      "snp": 32,
+      "con": 12,
+      "lab": 19,
+      "libdem": 11,
+      "green": 7,
+      "alba": null,
+      "reform": 18,
+      "others": 2
+    },
     {
       "date": "2026-03-23",
       "endDate": "2026-04-08",
@@ -12,9 +27,9 @@
       "lab": 18,
       "libdem": 10,
       "green": 2,
-      "alba": null,
-      "reform": 19,
-      "others": null
+      "alba": 19,
+      "reform": null,
+      "others": 23
     },
     {
       "date": "2026-03-30",
@@ -1969,6 +1984,21 @@
   ],
   "regional": [
     {
+      "date": "2026-03-24",
+      "endDate": "2026-04-10",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 1008,
+      "snp": 27,
+      "con": 13,
+      "lab": 17,
+      "libdem": 12,
+      "green": 11,
+      "alba": null,
+      "reform": 17,
+      "others": 2
+    },
+    {
       "date": "2026-03-23",
       "endDate": "2026-04-08",
       "pollster": "YouGov",
@@ -1979,9 +2009,9 @@
       "lab": 15,
       "libdem": 10,
       "green": 13,
-      "alba": null,
-      "reform": 19,
-      "others": 2
+      "alba": 19,
+      "reform": 2,
+      "others": 13
     },
     {
       "date": "2026-03-30",
