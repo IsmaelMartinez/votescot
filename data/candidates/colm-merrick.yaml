@@ -16,19 +16,34 @@ sources:
     type: party_website
 positions:
   independence: 2
-  nhs: 1
-  housing: 1
+  nhs: 2
+  housing: 2
   climate: 1
-  tax: 1
+  tax: 2
   economy: 1
-  education: 1
+  education: 2
   equality: 2
 stances:
-  independence: Core commitment. Independence referendum if SNP wins a majority. Describes independence as essential to Scotland's future prosperity.
-  nhs: Continue current NHS investment. Deliver the long-delayed National Care Service. Maintain mental health funding expansion.
-  housing: Continue the rent control framework introduced in 2022. Invest in social housing. Maintain existing tenant protections.
-  climate: Net zero by 2045. Just transition fund for oil and gas workers. Active travel investment. (2030 interim targets were dropped in 2024.)
-  tax: Maintain progressive Scottish income tax, which currently raises around £1bn more than the rest-of-UK equivalent.
-  economy: Support a just transition from fossil fuels. Protect free university tuition. Invest in creative industries and Scottish exports.
-  education: Protect free university tuition. Maintain national curriculum standards. Focus on closing the attainment gap.
-  equality: Supported the Gender Recognition Reform Bill (subsequently blocked by the UK Government). Progressive social policy across all groups.
+  independence: Support independence. An SNP majority at this election is framed
+    as a mandate for a referendum. Independence cited as essential to Scotland's
+    future prosperity.
+  nhs: Significant NHS investment. Expand GP walk-in clinics, shorten waiting
+    times, deliver more operations and community diagnostics. NHS described as
+    Scotland's most precious public service.
+  housing: Build 110,000 affordable homes by 2032 (70% social rent), create a new
+    housing agency, retain the rent control framework, and provide deposit
+    support of up to £10,000 for first-time buyers.
+  climate: Continue the transition to net zero by 2045 with a focus on Scotland's
+    renewable energy wealth. Interim 2030 climate targets were dropped in 2024;
+    emphasis is on energy costs and a just transition.
+  tax: Keep Scotland's progressive income tax, the fairest and most progressive in
+    the UK. Introduce a mansion tax on properties valued above £1m from 2028.
+  economy: Grow the economy while protecting public services. Unlock £20 billion
+    of pension fund investment, back a just transition, and use Scotland's
+    renewable energy wealth to cut costs for households and businesses.
+  education: A transformational national expansion of childcare from 9 months to
+    the end of primary school, 52 weeks a year. Protect free university tuition
+    and free school lunches.
+  equality: Uphold and protect the human rights of trans people within devolved
+    powers. Scotland is the first country in the world to incorporate LGBTQI+
+    education in schools. Strong commitment to equality across all groups.

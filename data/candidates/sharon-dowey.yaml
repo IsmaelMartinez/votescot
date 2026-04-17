@@ -7,7 +7,9 @@ accent: "#005EA5"
 constituency: ayr
 isIncumbent: false
 quizCandidate: true
-bio: Conservative MSP for South Scotland since 2021. Deputy Justice Spokesperson. Former senior manager at Morrisons. Born in Girvan, brought up in Maybole.
+bio: Conservative MSP for South Scotland since 2021. Deputy Justice
+  Spokesperson. Former senior manager at Morrisons. Born in Girvan, brought up
+  in Maybole.
 highlights:
   - MSP for South Scotland since 2021; Deputy Justice Spokesperson
   - Former senior manager at Morrisons supermarket chain
@@ -24,11 +26,24 @@ positions:
   education: 1
   equality: 0
 stances:
-  independence: Strongest opponents of independence. The union is the defining issue. Want to make the case for Scotland's place in the UK permanent.
-  nhs: Reform and streamline NHS Scotland. Focus on better value for money and cutting management layers rather than new spending commitments.
-  housing: Market-led housing policy. Reduce planning red tape to let developers build more. Less emphasis on rent controls or public ownership.
-  climate: Scrap the 2045 net zero target. Favour a more affordable energy transition that protects jobs in oil, gas, and traditional industries.
-  tax: Cut Scottish income tax to below UK rates. Reverse Scotland's higher income tax for top earners. Prioritise economic competitiveness.
-  economy: Pro-business agenda. Cut regulatory burden. Lower business rates. Support North Sea oil and gas industry for energy security.
-  education: Raise academic standards and expand vocational routes. Focus on employability skills. Resist progressive curriculum reforms.
-  equality: Socially conservative. Opposed the Gender Recognition Reform Bill. Emphasise biological definitions of sex in law and policy.
+  independence: Strong opposition to independence. Stand up for Scotland's place
+    in the Union and stop another independence referendum.
+  nhs: Focus on faster GP appointments and reducing waiting lists by increasing
+    NHS capacity for procedures. Efficiency-led NHS reform rather than new
+    spending commitments.
+  housing: Market-led housing policy. Scrap SNP rent controls, stop costly
+    housebuilding regulations, and abolish tax on buying a primary home (Land
+    and Buildings Transaction Tax reform).
+  climate: Scrap the SNP's 2045 net zero target and drop policies that impose
+    costs on households to meet it. Back the oil and gas industry and scrap
+    carbon pricing schemes.
+  tax: Cut income tax — raise the point at which you start paying in line with
+    inflation, uprate the Higher Rate threshold, and lower income tax to 19p in
+    the £1 for low- and middle-income households.
+  economy: Make economic growth the number one policy objective. Cut regulation,
+    introduce Scottish Business Zones, and oppose tax rises and new taxes.
+  education: Raise school standards. Empower headteachers and reduce bureaucracy
+    to lift Scotland back up international rankings.
+  equality: Socially conservative. Guarantee every woman has access to single-sex
+    wards, affirm biological sex under the Equality Act, and oppose the
+    Non-Binary Equality Action Plan.

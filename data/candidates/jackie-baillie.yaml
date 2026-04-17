@@ -7,10 +7,15 @@ accent: "#8B0000"
 constituency: dumbarton
 isIncumbent: false
 quizCandidate: true
-bio: Deputy Leader of the Scottish Labour Party since 2020 and MSP for Dumbarton since 1999, making her the only Scottish Labour MSP to have held their constituency seat continuously since the Parliament's creation. Before entering politics she worked in local government in community economic development. She has twice served as acting leader of Scottish Labour.
+bio: Deputy Leader of the Scottish Labour Party since 2020 and MSP for Dumbarton
+  since 1999, making her the only Scottish Labour MSP to have held their
+  constituency seat continuously since the Parliament's creation. Before
+  entering politics she worked in local government in community economic
+  development. She has twice served as acting leader of Scottish Labour.
 highlights:
   - Deputy Leader of the Scottish Labour Party since 2020
-  - Only Labour MSP to have won the same constituency in every election since 1999
+  - Only Labour MSP to have won the same constituency in every election since
+    1999
   - Served as acting Leader of Scottish Labour in 2017 and 2021
   - Former Minister for Social Justice in the Scottish Executive (2000-2001)
   - Shadow Cabinet Secretary for NHS Recovery, Health and Social Care
@@ -27,11 +32,20 @@ positions:
   education: 1
   equality: 1
 stances:
-  independence: Oppose independence. Focus on strengthening devolution within the UK. Want Scotland to lead reform of the union, not leave it.
-  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments. Increase capacity for mental health and cancer services.
-  housing: Build new social and affordable housing. Support first-time buyers with targeted schemes. Reform planning to unlock more homes.
-  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned clean energy company. Promote Scottish renewables jobs.
-  tax: Maintain current Scottish income tax rates. No planned increases or cuts. Focus on economic growth to fund services.
-  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws to attract business. Support industrial transition in heavy industry areas.
-  education: Close the attainment gap between richest and poorest pupils. Ban mobile phones in classrooms. Invest in teaching workforce.
-  equality: Progressive on equalities generally. More cautious position on gender recognition reform — supportive of trans rights while emphasising women's spaces.
+  independence: Oppose independence. Focus on strengthening devolution within the
+    UK. Want Scotland to lead reform of the union, not leave it.
+  nhs: Declare a waiting times emergency. Pledge 160,000 extra NHS appointments.
+    Increase capacity for mental health and cancer services.
+  housing: Build new social and affordable housing. Support first-time buyers with
+    targeted schemes. Reform planning to unlock more homes.
+  climate: Support UK net zero targets and back GB Energy, Labour's publicly owned
+    clean energy company. Promote Scottish renewables jobs.
+  tax: Maintain current Scottish income tax rates. No planned increases or cuts.
+    Focus on economic growth to fund services.
+  economy: Back GB Energy as a driver of Scottish investment. Reform planning laws
+    to attract business. Support industrial transition in heavy industry areas.
+  education: Close the attainment gap between richest and poorest pupils. Ban
+    mobile phones in classrooms. Invest in teaching workforce.
+  equality: Progressive on equalities generally. More cautious position on gender
+    recognition reform — supportive of trans rights while emphasising women's
+    spaces.

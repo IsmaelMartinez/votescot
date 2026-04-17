@@ -132,6 +132,9 @@ export interface ManifestoEntry {
   id: string;
   name: string;
   manifestoUrls: string[];
+  manifestoPdf: string | null;
+  parsedAt: string | null;
+  positionsFile: string | null;
 }
 
 let partiesCache: readonly Party[] | null = null;

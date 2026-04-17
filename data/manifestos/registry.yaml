@@ -4,18 +4,18 @@ parties:
     manifestoUrls:
       - "https://www.snp.org/manifesto"
       - "https://www.snp.org/policies"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+    manifestoPdf: "https://issuu.com/hinksbrandwise/docs/snp_manifesto_the_scottish_parliament_election_2"
+    parsedAt: "2026-04-17"
+    positionsFile: "data/parties/scottish-national-party.yaml"
 
   - id: "scottish-green-party"
     name: "Scottish Green Party"
     manifestoUrls:
       - "https://greens.scot/manifesto"
       - "https://greens.scot/2026-manifesto"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+    manifestoPdf: "https://greens.scot/sites/default/files/public/Scottish%20Greens%20Manifesto.pdf"
+    parsedAt: "2026-04-17"
+    positionsFile: "data/parties/scottish-green-party.yaml"
 
   - id: "scottish-labour"
     name: "Scottish Labour"
@@ -31,24 +31,24 @@ parties:
     manifestoUrls:
       - "https://www.scottishconservatives.com/manifesto"
       - "https://www.scottishconservatives.com/2026-manifesto"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+    manifestoPdf: "https://www.scottishconservatives.com/wp-content/uploads/2026/04/Web-SCUP-Manifesto-2026.pdf"
+    parsedAt: "2026-04-17"
+    positionsFile: "data/parties/scottish-conservatives.yaml"
 
   - id: "scottish-liberal-democrats"
     name: "Scottish Liberal Democrats"
     manifestoUrls:
       - "https://www.scotlibdems.org.uk/2026-manifesto"
       - "https://www.scotlibdems.org.uk/manifesto"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+    manifestoPdf: "https://www.scotlibdems.org.uk/fileadmin/groups/511/Documents/1210292388738801922agdfhfuhfhskk/Change_with_fairness_at_its_heart.pdf"
+    parsedAt: "2026-04-17"
+    positionsFile: "data/parties/scottish-liberal-democrats.yaml"
 
   - id: "reform-uk"
     name: "Reform UK"
     manifestoUrls:
       - "https://www.reformparty.uk/scotland"
       - "https://www.reformparty.uk/manifesto"
-    manifestoPdf: null
-    parsedAt: null
-    positionsFile: null
+    manifestoPdf: "https://www.reformparty.uk/scotland-manifesto.pdf"
+    parsedAt: "2026-04-17"
+    positionsFile: "data/parties/reform-uk.yaml"

@@ -33,7 +33,8 @@ const partyCards = parties
     return {
       party: p,
       candidateCount: partyCandidates.length,
-      manifestoUrl: manifesto?.manifestoUrls[0],
+      manifestoUrl: manifesto?.manifestoPdf ?? manifesto?.manifestoUrls[0],
+      manifestoPublished: Boolean(manifesto?.manifestoPdf),
       color: partyCandidates[0]?.color || "#666666",
       accent: partyCandidates[0]?.accent || "#444444",
     };
@@ -82,11 +83,12 @@ const searchItems = [
     <!-- Party view -->
     <div id="view-party" style="display: none;">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {partyCards.map(({ party, candidateCount, manifestoUrl, color, accent }) => (
+        {partyCards.map(({ party, candidateCount, manifestoUrl, manifestoPublished, color, accent }) => (
           <PartyCard
             party={party}
             candidateCount={candidateCount}
             manifestoUrl={manifestoUrl}
+            manifestoPublished={manifestoPublished}
             color={color}
             accent={accent}
             basePath={base}
