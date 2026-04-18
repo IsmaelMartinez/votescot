@@ -7,16 +7,19 @@ const CANDIDATES_DIR = "data/candidates";
 const MEMBERS_API = "https://data.parliament.scot/api/members";
 const CONSTITUENCY_STATUS_API =
   "https://data.parliament.scot/api/memberelectionconstituencystatuses";
-const REGION_STATUS_API =
-  "https://data.parliament.scot/api/memberelectionregionstatuses";
 
-// The Scottish Parliament API flips `IsCurrent` to false for every MSP during
-// dissolution (~25 working days before polling day), so we can't rely on it in
-// the run-up to an election. Instead, identify sitting MSPs as anyone whose
-// election-status record begins within the current session (2021-05-06 general
-// election up to the 2026-04-08 dissolution date). This range captures both the
-// initial cohort and any mid-session replacements (by-elections, regional list
-// replacements).
+// `isIncumbent: true` means "the sitting constituency MSP of this seat" — i.e.
+// the name next to the winner on the 2021 declaration for this (or a successor)
+// seat. Regional-list MSPs who are now standing for a constituency they didn't
+// previously represent are NOT incumbents of that seat, so the region-status
+// API is deliberately not consulted.
+//
+// The Parliament API's IsCurrent flag is also unreliable: it flips to false
+// for every MSP during the ~25-working-day dissolution period before polling.
+// Instead we take any constituency-status record that begins within the current
+// parliamentary session (2021-05-06 general election up to the 2026-04-08
+// dissolution). That catches both the initial 2021 cohort and any mid-session
+// constituency by-election winners (e.g. Davy Russell in June 2025).
 const SESSION_6_START = "2021-05-06";
 const SESSION_6_END = "2026-04-08";
 
@@ -91,21 +94,22 @@ function readYaml(filePath: string): CandidateData | null {
 }
 
 /** Replace only the isIncumbent field in-place, preserving all other formatting. */
-function setIncumbentTrue(filePath: string) {
+function setIncumbent(filePath: string, value: boolean) {
   const content = fs.readFileSync(filePath, "utf-8");
-  fs.writeFileSync(filePath, content.replace(/^isIncumbent: false$/m, "isIncumbent: true"));
+  const pattern = value ? /^isIncumbent: false$/m : /^isIncumbent: true$/m;
+  const replacement = value ? "isIncumbent: true" : "isIncumbent: false";
+  fs.writeFileSync(filePath, content.replace(pattern, replacement));
 }
 
 async function main() {
   console.log("Fetching current MSPs from Scottish Parliament API...");
-  const [allMembers, constituencyStatuses, regionStatuses] = await Promise.all([
+  const [allMembers, constituencyStatuses] = await Promise.all([
     fetchJson<ScotParliamentMember[]>(MEMBERS_API),
     fetchJson<ElectionStatus[]>(CONSTITUENCY_STATUS_API),
-    fetchJson<ElectionStatus[]>(REGION_STATUS_API),
   ]);
 
   const sessionSixPersonIds = new Set<number>();
-  for (const status of [...constituencyStatuses, ...regionStatuses]) {
+  for (const status of constituencyStatuses) {
     const from = status.ValidFromDate ?? "";
     if (from >= SESSION_6_START && from <= SESSION_6_END) {
       sessionSixPersonIds.add(status.PersonID);
@@ -137,13 +141,14 @@ async function main() {
   console.log(`Found ${candidateFiles.length} candidate files.\n`);
 
   let matchCount = 0;
+  let clearedCount = 0;
   const matches: string[] = [];
+  const cleared: string[] = [];
 
   for (const file of candidateFiles) {
     const filePath = path.join(CANDIDATES_DIR, file);
     const candidate = readYaml(filePath);
     if (!candidate) continue;
-    if (candidate.isIncumbent) continue; // already marked
 
     const { first, surname, allTokens } = parseCandidateName(candidate.name);
 
@@ -208,16 +213,27 @@ async function main() {
       }
     }
 
-    if (matched) {
-      setIncumbentTrue(filePath);
+    if (matched && !candidate.isIncumbent) {
+      setIncumbent(filePath, true);
       matchCount++;
       matches.push(`  ✓ ${candidate.name} (${file})`);
+    } else if (!matched && candidate.isIncumbent) {
+      setIncumbent(filePath, false);
+      clearedCount++;
+      cleared.push(`  ✗ ${candidate.name} (${file}) — no session-6 constituency match`);
     }
   }
 
   console.log(`Marked ${matchCount} candidates as incumbent:\n`);
   for (const m of matches) {
     console.log(m);
+  }
+
+  if (clearedCount > 0) {
+    console.log(`\nCleared incumbent flag from ${clearedCount} candidates (no session-6 constituency-MSP match — typically regional-list MSPs standing in a constituency they didn't represent):\n`);
+    for (const m of cleared) {
+      console.log(m);
+    }
   }
 
   // Report current MSPs that were NOT matched to any candidate file, for
