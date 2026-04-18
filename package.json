@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
-    "sync:polls": "tsx scripts/sync-polls.ts"
+    "sync:polls": "tsx scripts/sync-polls.ts",
+    "project:polls": "tsx scripts/project-from-polls.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
