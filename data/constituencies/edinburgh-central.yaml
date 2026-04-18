@@ -3,17 +3,23 @@ name: Edinburgh Central
 region: Edinburgh and Lothians East
 boundaryYear: 2026
 description: Covers Old/New Towns, Princes Street, Haymarket, Murrayfield, Stockbridge, Dalry, Fountainbridge, Tollcross, and parts of the South Side.
-context: Three-way marginal. No candidate has ever won >40%. Greens projected for first constituency win.
+context: Three-way toss-up on new 2026 boundaries (Old/New Town, Morningside, Sighthill, Southside). No candidate has ever won above 40% here. Greens in contention for a first-ever Holyrood constituency win — Lorna Slater challenging Cabinet Secretary Angus Robertson (SNP).
 projection: green
 competitiveness: toss-up
 topParties:
   - party: green
-    share: 30
+    share: 31
     status: could-win
   - party: snp
-    share: 28
+    share: 26
     status: could-win
   - party: labour
-    share: 25
+    share: 23
     status: could-win
-projectionSource: Ballot Box Scotland notional results adjusted for local Green incumbency
+projectionSource: "2021 result SNP 39% / Con 28% (Robertson majority 4,732).
+  Ballot Box Scotland's 2026-boundary notional removed Con-leaning wards
+  (Corstorphine, Inverleith) and added Morningside/Sighthill/Southside, shifting
+  the seat toward SNP+10.5 over Labour and collapsing the Con vote. April 2026
+  projections: BBS Green 31.2% (+7.6), Devolved Elections Projection Green 28.6
+  / SNP 26.1 / Lab 23.0, YouGov MRP knife-edge Green lead. The strongest Green
+  list-vote seat ever."

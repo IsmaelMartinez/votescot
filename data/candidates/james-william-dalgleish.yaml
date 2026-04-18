@@ -7,13 +7,9 @@ accent: "#8B0000"
 constituency: edinburgh-central
 isIncumbent: false
 quizCandidate: true
-bio: Labour constituency candidate. New boundaries pull in areas from Edinburgh
-  Southern (Labour territory), giving a realistic path to winning. Sarwar called
-  for PM Starmer to resign (Feb 2026) — unusual Scottish-UK Labour tension.
+bio: Labour Party candidate for Edinburgh Central. First-time Holyrood candidate.
 highlights:
-  - New boundaries favour Labour in this seat
-  - No Holyrood voting record — first-time candidate
-  - Sarwar's split with Starmer creates UK-Scottish Labour tension
+  - Labour Party candidate for Edinburgh Central
   - Edinburgh Central was Labour (Sarah Boyack) 1999-2011
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/

@@ -7,8 +7,14 @@ accent: "#B8860B"
 constituency: aberdeen-donside
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Aberdeen Donside.
-highlights: []
+bio: 17 years in the energy sector specialising in North East oil and gas. Lives
+  in a small community between Stonehaven and Banchory. Standing in Aberdeen
+  Donside alongside his wife Yi-Pei Chou-Turvey (Lib Dem candidate elsewhere in
+  the North East).
+highlights:
+  - 17 years in the energy sector; oil and gas specialist
+  - Lives in Kincardineshire; husband-and-wife Lib Dem candidate pairing with
+    Yi-Pei Chou-Turvey
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
     type: party_website

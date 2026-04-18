@@ -5,15 +5,18 @@ boundaryYear: 2026
 description: Fife North East constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
 projection: libdem
-competitiveness: competitive
+competitiveness: safe
 topParties:
   - party: libdem
-    share: 35
-    status: could-win
+    share: 48
+    status: will-win
   - party: snp
     share: 28
-    status: could-win
-  - party: conservative
-    share: 18
     status: might-win
-projectionSource: Ballot Box Scotland notional results; Lib Dem incumbency advantage
+  - party: conservative
+    share: 10
+    status: might-win
+projectionSource: "2021 result Rennie 55.1% vs SNP 36.6%, majority 7,448 (18.5%).
+  Rennie is standing again as incumbent. BBS 2026-boundary notional unchanged
+  — only the name reversed from North East Fife. National LD vote roughly flat
+  vs 2021; anti-SNP consolidation around the Lib Dem incumbent."
