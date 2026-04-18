@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T12:29:34.524Z",
+  "lastUpdated": "2026-04-18T18:28:54.135Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Starmer accused of 'skulking' and shunning Sarwar in Scotland",
+      "description": "It is the first time the prime minister has been north of the border since the Scottish Labour leader Anas Sarwar called for him to step down in February.",
+      "url": "https://www.bbc.com/news/articles/ckgr54407wxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-18T15:46:43.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Swinney predicts SNP majority at Holyrood election",
       "description": "The first minister has told BBC News that his party will return at least 65 seats at next month's vote.",
@@ -216,13 +223,6 @@
       "description": "Claims made by leaders of six political parties who took part in a TV debate for the 2026 Holyrood election campaign are checked.",
       "url": "https://www.bbc.com/news/articles/c62j07q046eo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-12T22:30:06.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Swinney says Scottish independence referendum could be held in 2028",
-      "description": "The SNP leader made the claim in the BBC's televised debate ahead of next month's Scottish election.",
-      "url": "https://www.bbc.com/news/articles/cm2r89y9n3go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-12T21:07:24.000Z",
       "source": "BBC News"
     }
   ]
