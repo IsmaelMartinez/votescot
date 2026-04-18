@@ -38,7 +38,7 @@ function QuizEngineInner({ questions, candidates, constituencies, knownConstitue
       ...c,
       match: calculateMatch(answers, c.positions || {}),
     }))
-    .sort((a, b) => b.match.percentage - a.match.percentage);
+    .sort((a, b) => b.match.percentage - a.match.percentage || a.name.localeCompare(b.name));
 
   const selectedConstituencyName = constituencies.find((c) => c.id === selectedConstituency)?.name;
 

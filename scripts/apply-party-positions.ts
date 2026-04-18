@@ -56,7 +56,7 @@ function applyPartyPositions(): void {
     data.stances = party.stances;
     data.quizCandidate = true;
 
-    fs.writeFileSync(filePath, yaml.stringify(data));
+    fs.writeFileSync(filePath, yaml.stringify(data, { lineWidth: 0 }));
 
     counts[party.id] = (counts[party.id] ?? 0) + 1;
   }

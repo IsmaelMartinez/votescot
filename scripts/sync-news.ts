@@ -8,10 +8,20 @@ const SOURCES: { name: string; url: string; feed: string }[] = [
     url: "https://www.bbc.co.uk/news/scotland/scotland_politics",
     feed: "https://feeds.bbci.co.uk/news/scotland/scotland_politics/rss.xml",
   },
+  {
+    name: "Ballot Box Scotland",
+    url: "https://ballotbox.scot",
+    feed: "https://ballotbox.scot/feed/",
+  },
+  {
+    name: "The Guardian — Scotland politics",
+    url: "https://www.theguardian.com/politics/scotland",
+    feed: "https://www.theguardian.com/politics/scotland/rss",
+  },
 ];
 
 const OUTPUT_PATH = path.join(process.cwd(), "data/news.json");
-const MAX_ITEMS = 20;
+const MAX_ITEMS = 30;
 const MIN_ITEMS = 3;
 
 interface NewsItem {

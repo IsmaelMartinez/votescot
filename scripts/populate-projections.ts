@@ -17,18 +17,6 @@ interface Projection {
   topParties: PartyProjection[];
 }
 
-// Default for most SNP-held Scottish constituencies
-const defaultProjection: Projection = {
-  projection: "snp",
-  projectionSource: "National polling average with uniform swing applied to 2021 results",
-  competitiveness: "competitive",
-  topParties: [
-    { party: "snp", share: 34, status: "could-win" },
-    { party: "labour", share: 19, status: "could-win" },
-    { party: "reform", share: 14, status: "might-win" },
-  ],
-};
-
 const OVERRIDES: Record<string, Projection> = {
   // Edinburgh seats
   "edinburgh-central": {
@@ -794,7 +782,10 @@ function main() {
     const constituency = readYaml(filePath);
     const id = constituency.id as string;
 
-    const proj = OVERRIDES[id] ?? defaultProjection;
+    const proj = OVERRIDES[id];
+    if (!proj) {
+      throw new Error(`No projection override found for constituency: ${id}`);
+    }
 
     constituency.projection = proj.projection;
     constituency.projectionSource = proj.projectionSource;
