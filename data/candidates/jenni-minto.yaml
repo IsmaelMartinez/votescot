@@ -17,8 +17,10 @@ highlights:
   - Worked at BBC Scotland for 18 years; helped establish BBC Alba
   - Chartered accountant; managed the Islay Energy Trust on the Isle of Islay
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Jenni_Minto
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jenni-minto
+    type: parliament
 positions:
   independence: 2
   nhs: 2

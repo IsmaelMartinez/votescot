@@ -8,14 +8,21 @@ textColor: "#333"
 constituency: paisley
 isIncumbent: true
 quizCandidate: true
-bio: MSP for Paisley since 2011. Former Minister for Parliamentary Business
-  (2021-2024). Prominent campaigner for multiple sclerosis awareness.
+bio: MSP for Paisley since 2011 and former Minister for Parliamentary Business
+  (2021-2024). Elected a Renfrewshire councillor for Paisley South in 2007,
+  he served as SNP Chief Whip from 2018 before entering government. A lifelong
+  St Mirren supporter, he helped lead the 2016 fan takeover of the club.
 highlights:
-  - MSP for Paisley since 2011; Minister for Parliamentary Business (2021-2024)
-  - Former SNP Chief Whip; MS awareness campaigner
+  - MSP for Paisley since 2011
+  - Minister for Parliamentary Business (2021-2024)
+  - Former SNP Chief Whip at Holyrood (from 2018)
+  - Co-led the 2016 fan-ownership takeover of St Mirren F.C.
+  - Multiple sclerosis awareness campaigner
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/George_Adam
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/george-adam
+    type: parliament
 positions:
   independence: 2
   nhs: 2

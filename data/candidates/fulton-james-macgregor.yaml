@@ -17,8 +17,10 @@ highlights:
   - Serves on the Justice Committee and Education and Skills Committee
   - Former qualified social worker; North Lanarkshire councillor from 2012
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Fulton_MacGregor
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/fulton-macgregor
+    type: parliament
 positions:
   independence: 2
   nhs: 2

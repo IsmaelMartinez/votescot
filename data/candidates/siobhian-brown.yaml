@@ -16,8 +16,10 @@ highlights:
   - MSP for Ayr since 2021; first female SNP MSP for the constituency
   - Convened the COVID-19 Recovery Committee (2021-2023)
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Siobhian_Brown
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/siobhian-brown
+    type: parliament
 positions:
   independence: 2
   nhs: 2

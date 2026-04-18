@@ -16,8 +16,10 @@ highlights:
     Scotland
   - Shadow Minister for Employment and Public Finance
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Paul_Sweeney
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-sweeney
+    type: parliament
 positions:
   independence: 0
   nhs: 2

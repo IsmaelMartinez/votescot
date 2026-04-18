@@ -17,8 +17,10 @@ highlights:
   - Won Cunninghame North in 2007 by just 48 votes; built to a 6,117 majority by
     2011
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Kenneth_Gibson_(Scottish_politician)
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/kenneth-gibson
+    type: parliament
 positions:
   independence: 2
   nhs: 2

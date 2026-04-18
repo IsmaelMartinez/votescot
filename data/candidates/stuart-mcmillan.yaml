@@ -15,8 +15,10 @@ highlights:
   - MSP since 2007; first SNP member to win Greenock and Inverclyde (2016)
   - Convener of the Delegated Powers and Law Reform Committee
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Stuart_McMillan
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/stuart-mcmillan
+    type: parliament
 positions:
   independence: 2
   nhs: 2

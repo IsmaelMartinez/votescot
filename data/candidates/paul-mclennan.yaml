@@ -16,8 +16,10 @@ highlights:
   - East Lothian councillor since 2007; council leader (2010-2012)
   - 22 years at Bank of Scotland; former NHS Lothian board member
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Paul_McLennan
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-mclennan
+    type: parliament
 positions:
   independence: 2
   nhs: 2

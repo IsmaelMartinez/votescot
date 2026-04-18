@@ -17,8 +17,10 @@ highlights:
   - Convened the Environment, Climate Change and Land Reform Committee (2018)
   - Former further education lecturer for 15 years
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Gillian_Martin
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/gillian-martin
+    type: parliament
 positions:
   independence: 2
   nhs: 2

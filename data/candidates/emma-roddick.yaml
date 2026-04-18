@@ -15,8 +15,10 @@ highlights:
   - Youngest MSP elected in 2021 at age 23; Minister for Equalities (2023-2024)
   - Experienced homelessness as a teenager; mental health campaigner
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Emma_Roddick
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/emma-roddick
+    type: parliament
 positions:
   independence: 2
   nhs: 2

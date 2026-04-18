@@ -14,8 +14,10 @@ highlights:
   - MP for Edinburgh North and Leith (2015-2024); first SNP holder of that seat
   - Former Deputy Lord Provost of Edinburgh
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Deidre_Brock
+    type: wikipedia
+  - url: https://whocanivotefor.co.uk/person/987/deidre-brock
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

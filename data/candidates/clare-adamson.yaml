@@ -16,8 +16,10 @@ highlights:
     Culture Committee
   - Background in computer science; former North Lanarkshire councillor from 2007
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Clare_Adamson
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/clare-adamson
+    type: parliament
 positions:
   independence: 2
   nhs: 2

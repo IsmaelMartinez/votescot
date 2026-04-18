@@ -14,8 +14,10 @@ highlights:
   - MP for Glasgow East (2017-2024); youngest SNP MP when first elected at 27
   - SNP spokesperson for Work and Pensions and Housing at Westminster
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/David_Linden
+    type: wikipedia
+  - url: https://whocanivotefor.co.uk/person/20517/david-linden
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

@@ -17,8 +17,10 @@ highlights:
   - Former hospice nurse; spent 14 years at St Margaret of Scotland Hospice
     in Clydebank
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Marie_McNair
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/marie-mcnair
+    type: parliament
 positions:
   independence: 2
   nhs: 2

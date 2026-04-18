@@ -20,8 +20,10 @@ highlights:
   - Former Minister for Social Justice in the Scottish Executive (2000-2001)
   - Shadow Cabinet Secretary for NHS Recovery, Health and Social Care
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Jackie_Baillie
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jackie-baillie
+    type: parliament
 positions:
   independence: 0
   nhs: 2

@@ -15,8 +15,10 @@ highlights:
   - Shadow Cabinet Secretary for Education and Equalities
   - Now standing for Renfrewshire West and Levern Valley
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Paul_O%27Kane
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-okane
+    type: parliament
 positions:
   independence: 0
   nhs: 2

@@ -15,8 +15,10 @@ highlights:
   - Introduced the Assisted Dying for Terminally Ill Adults Bill (2024)
   - Former special adviser to Deputy First Minister Jim Wallace
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Liam_McArthur
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/liam-mcarthur
+    type: parliament
 positions:
   independence: 0
   nhs: 2
