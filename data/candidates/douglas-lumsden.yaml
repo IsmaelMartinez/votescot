@@ -5,7 +5,7 @@ partyShort: Tory
 color: "#0087DC"
 accent: "#005EA5"
 constituency: aberdeenshire-east
-isIncumbent: true
+isIncumbent: false
 quizCandidate: true
 bio: Conservative MSP for North East Scotland since 2021. Shadow Cabinet
   Secretary for Energy. Former co-leader of Aberdeen City Council (2017-2021).

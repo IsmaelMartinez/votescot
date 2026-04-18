@@ -7,16 +7,63 @@ const CANDIDATES_DIR = "data/candidates";
 const MEMBERS_API = "https://data.parliament.scot/api/members";
 const CONSTITUENCY_STATUS_API =
   "https://data.parliament.scot/api/memberelectionconstituencystatuses";
-const REGION_STATUS_API =
-  "https://data.parliament.scot/api/memberelectionregionstatuses";
+const CONSTITUENCIES_API = "https://data.parliament.scot/api/constituencies";
 
-// The Scottish Parliament API flips `IsCurrent` to false for every MSP during
-// dissolution (~25 working days before polling day), so we can't rely on it in
-// the run-up to an election. Instead, identify sitting MSPs as anyone whose
-// election-status record begins within the current session (2021-05-06 general
-// election up to the 2026-04-08 dissolution date). This range captures both the
-// initial cohort and any mid-session replacements (by-elections, regional list
-// replacements).
+// 2021-boundary constituency slug -> 2026-boundary candidate.constituency slug.
+// Only entries where a 2021 seat was renamed or absorbed into a differently-named
+// 2026 seat. Same-name cases (Dumbarton, Edinburgh Central, Perthshire North,
+// etc.) don't need an entry — the direct slug match handles them.
+//
+// Compiled from the Boundaries Scotland 2026 review. Where a 2021 seat was
+// split across multiple 2026 seats, we map to the seat that inherited the
+// larger share of the predecessor (the "primary" successor), because that's
+// where the sitting MSP is typically selected to stand again.
+const BOUNDARY_SUCCESSORS: Record<string, string> = {
+  "north-east-fife": "fife-north-east",
+  "edinburgh-western": "edinburgh-north-western",
+  "edinburgh-northern-and-leith": "edinburgh-north-eastern-and-leith",
+  "edinburgh-eastern": "edinburgh-eastern-musselburgh-and-tranent",
+  "edinburgh-pentlands": "edinburgh-south-western",
+  "greenock-and-inverclyde": "inverclyde",
+  "east-lothian": "east-lothian-coast-and-lammermuirs",
+  "aberdeen-south-and-north-kincardine": "aberdeen-deeside-and-north-kincardine",
+  "airdrie-and-shotts": "airdrie",
+  "linlithgow": "falkirk-east-and-linlithgow",
+  "falkirk-east": "falkirk-east-and-linlithgow",
+  "glasgow-cathcart": "glasgow-cathcart-and-pollok",
+  "glasgow-pollok": "glasgow-cathcart-and-pollok",
+  "glasgow-shettleston": "glasgow-baillieston-and-shettleston",
+  "glasgow-kelvin": "glasgow-kelvin-and-maryhill",
+  "glasgow-maryhill-and-springburn": "glasgow-kelvin-and-maryhill",
+  "glasgow-provan": "glasgow-easterhouse-and-springburn",
+  "midlothian-north-and-musselburgh": "midlothian-north",
+  "renfrewshire-north-and-west": "renfrewshire-north-and-cardonald",
+  "renfrewshire-south": "renfrewshire-west-and-levern-valley",
+  "rutherglen": "rutherglen-and-cambuslang",
+};
+
+function slugifyConstituency(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/['']/g, "")
+    .replace(/,/g, "")
+    .replace(/\s+/g, "-")
+    .trim();
+}
+
+// `isIncumbent: true` means "the sitting constituency MSP of this seat" — i.e.
+// the name next to the winner on the 2021 declaration for this (or a successor)
+// seat. Regional-list MSPs who are now standing for a constituency they didn't
+// previously represent are NOT incumbents of that seat, so the region-status
+// API is deliberately not consulted.
+//
+// The Parliament API's IsCurrent flag is also unreliable: it flips to false
+// for every MSP during the ~25-working-day dissolution period before polling.
+// Instead we take any constituency-status record that begins within the current
+// parliamentary session (2021-05-06 general election up to the 2026-04-08
+// dissolution). That catches both the initial 2021 cohort and any mid-session
+// constituency by-election winners (e.g. Davy Russell in June 2025).
 const SESSION_6_START = "2021-05-06";
 const SESSION_6_END = "2026-04-08";
 
@@ -29,6 +76,14 @@ interface ScotParliamentMember {
 
 interface ElectionStatus {
   PersonID: number;
+  ConstituencyID: number;
+  ValidFromDate: string;
+  ValidUntilDate: string | null;
+}
+
+interface ApiConstituency {
+  ID: number;
+  Name: string;
   ValidFromDate: string;
   ValidUntilDate: string | null;
 }
@@ -91,24 +146,53 @@ function readYaml(filePath: string): CandidateData | null {
 }
 
 /** Replace only the isIncumbent field in-place, preserving all other formatting. */
-function setIncumbentTrue(filePath: string) {
+function setIncumbent(filePath: string, value: boolean) {
   const content = fs.readFileSync(filePath, "utf-8");
-  fs.writeFileSync(filePath, content.replace(/^isIncumbent: false$/m, "isIncumbent: true"));
+  const pattern = value ? /^isIncumbent:\s*false\s*$/m : /^isIncumbent:\s*true\s*$/m;
+  const newContent = content.replace(pattern, `isIncumbent: ${value}`);
+  if (newContent !== content) {
+    fs.writeFileSync(filePath, newContent);
+  }
 }
 
 async function main() {
   console.log("Fetching current MSPs from Scottish Parliament API...");
-  const [allMembers, constituencyStatuses, regionStatuses] = await Promise.all([
+  const [allMembers, constituencyStatuses, apiConstituencies] = await Promise.all([
     fetchJson<ScotParliamentMember[]>(MEMBERS_API),
     fetchJson<ElectionStatus[]>(CONSTITUENCY_STATUS_API),
-    fetchJson<ElectionStatus[]>(REGION_STATUS_API),
+    fetchJson<ApiConstituency[]>(CONSTITUENCIES_API),
   ]);
 
+  // Build ConstituencyID -> slugified name map for seats active during session 6.
+  // The API issues new IDs when it refreshes a seat administratively, so some
+  // session-6 seats appear with ValidFromDate 2011-05-04 (e.g. Edinburgh Central
+  // ID 101, continuous) and others with 2021-05-06 (e.g. Coatbridge and Chryston
+  // ID 151, re-issued). Include any seat whose validity span overlaps session 6.
+  const constituencyIdToSlug = new Map<number, string>();
+  for (const c of apiConstituencies) {
+    const from = c.ValidFromDate ?? "";
+    const until = c.ValidUntilDate ?? "";
+    const startsBeforeSession6End = from <= SESSION_6_END;
+    const endsAfterSession6Start = !until || until >= SESSION_6_START;
+    if (startsBeforeSession6End && endsAfterSession6Start) {
+      constituencyIdToSlug.set(c.ID, slugifyConstituency(c.Name));
+    }
+  }
+
   const sessionSixPersonIds = new Set<number>();
-  for (const status of [...constituencyStatuses, ...regionStatuses]) {
+  const personIdToSeatSlug = new Map<number, string>();
+  for (const status of constituencyStatuses) {
     const from = status.ValidFromDate ?? "";
     if (from >= SESSION_6_START && from <= SESSION_6_END) {
       sessionSixPersonIds.add(status.PersonID);
+      const seatSlug = constituencyIdToSlug.get(status.ConstituencyID);
+      if (seatSlug) {
+        // Keep the EARLIEST session-6 seat — if an MSP moved constituencies
+        // mid-session via by-election, we credit them to the seat they most
+        // recently held (overwrite preserves most recent since we can't tell
+        // ordering from API alone, but practical cases match either way).
+        personIdToSeatSlug.set(status.PersonID, seatSlug);
+      }
     }
   }
 
@@ -132,23 +216,39 @@ async function main() {
     mspByKey.get(key)!.push(msp);
   }
 
+  /**
+   * Given an MSP's 2021-boundary seat and a candidate's 2026-boundary seat,
+   * decide whether the candidate is standing in the same-or-successor seat.
+   */
+  function seatMatches(mspSeatSlug: string, candidateSeatSlug: string): boolean {
+    if (mspSeatSlug === candidateSeatSlug) return true;
+    const successor = BOUNDARY_SUCCESSORS[mspSeatSlug];
+    return successor === candidateSeatSlug;
+  }
+
   // Read all candidate YAML files
   const candidateFiles = fs.readdirSync(CANDIDATES_DIR).filter((f) => f.endsWith(".yaml"));
   console.log(`Found ${candidateFiles.length} candidate files.\n`);
 
   let matchCount = 0;
+  let clearedCount = 0;
   const matches: string[] = [];
+  const cleared: string[] = [];
 
   for (const file of candidateFiles) {
     const filePath = path.join(CANDIDATES_DIR, file);
     const candidate = readYaml(filePath);
     if (!candidate) continue;
-    if (candidate.isIncumbent) continue; // already marked
 
     const { first, surname, allTokens } = parseCandidateName(candidate.name);
 
-    // Strategy 1: direct first+surname match
-    let matched = mspByKey.has(`${first}|${surname}`);
+    // Track which MSP PersonID matched — needed for seat-level verification.
+    let matchedMsp: ScotParliamentMember | undefined;
+    const primaryKey = `${first}|${surname}`;
+    if (mspByKey.has(primaryKey)) {
+      matchedMsp = mspByKey.get(primaryKey)![0];
+    }
+    let matched = !!matchedMsp;
 
     // Strategy 2: for hyphenated MSP surnames (e.g. "Cole-Hamilton"),
     // check if the candidate name contains those tokens joined.
@@ -160,6 +260,7 @@ async function main() {
         if (msp.surname.includes("-")) {
           const candidateJoined = allTokens.join("-");
           if (candidateJoined.includes(msp.surname) && first === msp.first) {
+            matchedMsp = msp.member;
             matched = true;
             break;
           }
@@ -167,6 +268,7 @@ async function main() {
           for (let i = 1; i < allTokens.length; i++) {
             const trySurname = allTokens.slice(i).join("-");
             if (trySurname === msp.surname && first === msp.first) {
+              matchedMsp = msp.member;
               matched = true;
               break;
             }
@@ -176,6 +278,7 @@ async function main() {
 
         // Check if candidate has a hyphenated surname that contains the MSP surname
         if (surname.includes("-") && surname === msp.surname && first === msp.first) {
+          matchedMsp = msp.member;
           matched = true;
           break;
         }
@@ -185,6 +288,7 @@ async function main() {
         if (!matched && msp.first === first) {
           for (let i = 1; i < allTokens.length; i++) {
             if (allTokens[i] === msp.surname) {
+              matchedMsp = msp.member;
               matched = true;
               break;
             }
@@ -199,6 +303,7 @@ async function main() {
           for (let i = 1; i < allTokens.length; i++) {
             const trySurname = allTokens.slice(i).join(" ");
             if (trySurname === msp.surname) {
+              matchedMsp = msp.member;
               matched = true;
               break;
             }
@@ -208,16 +313,41 @@ async function main() {
       }
     }
 
-    if (matched) {
-      setIncumbentTrue(filePath);
+    // Seat-level verification: even if the name matches, the candidate is only
+    // the incumbent of THIS seat if their 2021 constituency (or its 2026
+    // successor via BOUNDARY_SUCCESSORS) equals the candidate's constituency.
+    // An MSP who moved to a wholly different seat is not the incumbent of the
+    // new one.
+    let seatOk = false;
+    if (matched && matchedMsp) {
+      const mspSeat = personIdToSeatSlug.get(matchedMsp.PersonID);
+      if (mspSeat && seatMatches(mspSeat, candidate.constituency)) {
+        seatOk = true;
+      }
+    }
+    matched = matched && seatOk;
+
+    if (matched && !candidate.isIncumbent) {
+      setIncumbent(filePath, true);
       matchCount++;
       matches.push(`  ✓ ${candidate.name} (${file})`);
+    } else if (!matched && candidate.isIncumbent) {
+      setIncumbent(filePath, false);
+      clearedCount++;
+      cleared.push(`  ✗ ${candidate.name} (${file}) — no session-6 constituency match`);
     }
   }
 
   console.log(`Marked ${matchCount} candidates as incumbent:\n`);
   for (const m of matches) {
     console.log(m);
+  }
+
+  if (clearedCount > 0) {
+    console.log(`\nCleared incumbent flag from ${clearedCount} candidates (no session-6 constituency-MSP match — typically regional-list MSPs standing in a constituency they didn't represent):\n`);
+    for (const m of cleared) {
+      console.log(m);
+    }
   }
 
   // Report current MSPs that were NOT matched to any candidate file, for
