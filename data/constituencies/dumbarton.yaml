@@ -4,16 +4,21 @@ region: ""
 boundaryYear: 2026
 description: Dumbarton constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: competitive
+projection: labour
+competitiveness: marginal
 topParties:
+  - party: labour
+    share: 37
+    status: could-win
   - party: snp
     share: 34
     status: could-win
-  - party: labour
-    share: 25
-    status: could-win
-  - party: libdem
-    share: 14
+  - party: conservative
+    share: 10
     status: might-win
-projectionSource: Ballot Box Scotland notional results with national polling swing
+projectionSource: "Labour-held 2021 (Jackie Baillie 46.3% vs SNP 42.5%, majority
+  1,483). BBS 2026-boundary notional unchanged at Lab +3.9. BBS's April 2026
+  west-central analysis assesses Labour likely to hold, citing Baillie's record
+  of absorbing tactical Con/LD votes. YouGov MRP is an outlier showing SNP +2,
+  so this is classified marginal rather than safe. National SNP down ~10pp vs
+  2021 mitigates any SNP gain."

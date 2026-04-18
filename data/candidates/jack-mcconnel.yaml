@@ -7,16 +7,13 @@ accent: "#8B0000"
 constituency: galloway-and-west-dumfries
 isIncumbent: false
 quizCandidate: true
-bio: Former First Minister of Scotland (2001-2007) and Scottish Labour leader.
-  Implemented the smoking ban, won Glasgow's 2014 Commonwealth Games bid.
-  Created Baron McConnell of Glenscorrodale in 2010.
+bio: Labour and Co-operative Party candidate for Galloway and West Dumfries.
+  Former diplomat. Not to be confused with Baron Jack McConnell of
+  Glenscorrodale (the former First Minister).
 highlights:
-  - First Minister of Scotland (2001-2007); youngest First Minister at time of
-    appointment
-  - Implemented Scotland's public smoking ban; won Glasgow's 2014 Commonwealth
-    Games bid
-  - Managed Labour's successful 1997 Scottish devolution referendum campaign
-  - Created Baron McConnell of Glenscorrodale in 2010
+  - Labour Party candidate for Galloway and West Dumfries
+  - Former diplomat and Co-operative Party member
+  - Selected as Labour's constituency candidate in 2025
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
     type: party_website
