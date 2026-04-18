@@ -21,12 +21,13 @@ const OVERRIDES: Record<string, Projection> = {
   // Edinburgh seats
   "edinburgh-central": {
     projection: "green",
-    projectionSource: "Ballot Box Scotland notional results adjusted for local Green incumbency",
+    projectionSource:
+      "2021 result SNP 39% / Con 28% (Robertson majority 4,732). Ballot Box Scotland's 2026-boundary notional removed Con-leaning wards (Corstorphine, Inverleith) and added Morningside/Sighthill/Southside, shifting the seat toward SNP+10.5 over Labour and collapsing the Con vote. April 2026 projections: BBS Green 31.2% (+7.6), Devolved Elections Projection Green 28.6 / SNP 26.1 / Lab 23.0, YouGov MRP knife-edge Green lead. The strongest Green list-vote seat ever.",
     competitiveness: "toss-up",
     topParties: [
-      { party: "green", share: 30, status: "could-win" },
-      { party: "snp", share: 28, status: "could-win" },
-      { party: "labour", share: 25, status: "could-win" },
+      { party: "green", share: 31, status: "could-win" },
+      { party: "snp", share: 26, status: "could-win" },
+      { party: "labour", share: 23, status: "could-win" },
     ],
   },
   "edinburgh-north-western": {
@@ -183,12 +184,13 @@ const OVERRIDES: Record<string, Projection> = {
   },
   "fife-north-east": {
     projection: "libdem",
-    projectionSource: "Ballot Box Scotland notional results; Lib Dem incumbency advantage",
-    competitiveness: "competitive",
+    projectionSource:
+      "2021 result Rennie 55.1% vs SNP 36.6%, majority 7,448 (18.5%). Rennie is standing again as incumbent. BBS 2026-boundary notional unchanged — only the name reversed from North East Fife. National LD vote roughly flat vs 2021; anti-SNP consolidation around the Lib Dem incumbent.",
+    competitiveness: "safe",
     topParties: [
-      { party: "libdem", share: 35, status: "could-win" },
-      { party: "snp", share: 28, status: "could-win" },
-      { party: "conservative", share: 18, status: "might-win" },
+      { party: "libdem", share: 48, status: "will-win" },
+      { party: "snp", share: 28, status: "might-win" },
+      { party: "conservative", share: 10, status: "might-win" },
     ],
   },
   // Conservative-held seats under pressure from Reform
@@ -682,13 +684,14 @@ const OVERRIDES: Record<string, Projection> = {
     ],
   },
   "dumbarton": {
-    projection: "snp",
-    projectionSource: "Ballot Box Scotland notional results with national polling swing",
-    competitiveness: "competitive",
+    projection: "labour",
+    projectionSource:
+      "Labour-held 2021 (Jackie Baillie 46.3% vs SNP 42.5%, majority 1,483). BBS 2026-boundary notional unchanged at Lab +3.9. BBS's April 2026 west-central analysis assesses Labour likely to hold, citing Baillie's record of absorbing tactical Con/LD votes. YouGov MRP is an outlier showing SNP +2, so this is classified marginal rather than safe. National SNP down ~10pp vs 2021 mitigates any SNP gain.",
+    competitiveness: "marginal",
     topParties: [
+      { party: "labour", share: 37, status: "could-win" },
       { party: "snp", share: 34, status: "could-win" },
-      { party: "labour", share: 25, status: "could-win" },
-      { party: "libdem", share: 14, status: "might-win" },
+      { party: "conservative", share: 10, status: "might-win" },
     ],
   },
   "strathkelvin-and-bearsden": {
