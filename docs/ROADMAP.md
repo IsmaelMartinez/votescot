@@ -4,7 +4,7 @@ Last updated: 18 April 2026
 
 ## What's live now
 
-The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 436 candidates for the 7 May 2026 election.
+The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scottish Parliament constituencies with 434 candidates for the 7 May 2026 election.
 
 ### Core features
 
@@ -66,7 +66,7 @@ The items below are what's left after the 17–18 April audit and fix sweep. Pic
 ### Must-fix if time allows before 7 May
 
 - [ ] **Schema-validate party and manifesto YAMLs.** `scripts/validate-data.ts` currently only validates candidates, constituencies, and questions. A typo like `nhs: 3` in a party file would silently propagate to every candidate of that party. Add `schemas/party.schema.json` and `schemas/manifesto-registry.schema.json` and wire them into `validate-data.ts` alongside the existing loops. Range-check position values 0–2.
-- [ ] **Stub-bio enrichment pass.** ~165 candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Prioritise the ~70 candidates who are listed as quiz candidates. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
+- [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Grep for bios under ~80 characters; prioritise candidates with `quizCandidate: true` since they surface on the quiz results page. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
 - [ ] **Replace Democracy Club API URLs in candidate `sources`.** Every candidate file cites `candidates.democracyclub.org.uk/api/next/parties/PP*` — that's a party registration API, not a biographical source for the individual. Credibility risk if a claim is challenged. Swap in at least one per-candidate bio source (Wikipedia, TheyWorkForYou, Scottish Parliament member page, or official party bio). Can be done opportunistically alongside the stub-bio enrichment.
 
 ### Nice-to-have before 7 May
@@ -78,7 +78,7 @@ The items below are what's left after the 17–18 April audit and fix sweep. Pic
 ### Post-election cleanup (after 7 May)
 
 - [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site.
-- [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning. Update the ROADMAP text that used to say "others use a default based on national polling" (still stale since April — fixed above).
+- [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning.
 - [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
 - [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
 - [ ] **Re-parse Scottish Labour positions after manifesto revisions.** The 18 April parse reflects the 13 April manifesto launch version. If Labour publishes amendments before polling day, `/sync-manifestos` will pick them up — but watch for stance drift around tax and equality where the language is under active scrutiny.
