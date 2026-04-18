@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T06:43:11.182Z",
+  "lastUpdated": "2026-04-18T12:29:34.524Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Swinney predicts SNP majority at Holyrood election",
+      "description": "The first minister has told BBC News that his party will return at least 65 seats at next month's vote.",
+      "url": "https://www.bbc.com/news/articles/c9wq2jvqqxvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-18T05:00:24.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
       "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber. [...]",
@@ -217,13 +224,6 @@
       "url": "https://www.bbc.com/news/articles/cm2r89y9n3go?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-12T21:07:24.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "Poll Analysis: Norstat 30th of March – 1st of April 2026",
-      "description": "What Labour attempted to convince the media was a good poll for them would still be their worst ever Holyrood result and offer Anas Sarwar no path to Bute House. [...]",
-      "url": "https://ballotbox.scot/norstat-april-2026/",
-      "publishedAt": "2026-04-12T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
     }
   ]
 }
