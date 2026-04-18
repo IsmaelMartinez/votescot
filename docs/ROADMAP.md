@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 17 April 2026
+Last updated: 18 April 2026
 
 ## What's live now
 
@@ -8,7 +8,7 @@ The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scot
 
 ### Core features
 
-The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 370 candidates from 6 major parties have quiz data based on party-level positions. Five parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos; Scottish Labour positions remain hand-curated until their manifesto drops. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
+The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 370 candidates from 6 major parties have quiz data based on party-level positions. All six parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK, Scottish Labour) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
 
 Every candidate has a profile page with policy stances, track record highlights (where available), and source links to WhoCanIVoteFor, party websites, and TheyWorkForYou. The side-by-side comparison view lets voters compare all quiz-ready candidates in their constituency grouped by policy area.
 
@@ -20,11 +20,15 @@ The interactive map displays all 73 constituency boundaries on a Leaflet map usi
 
 ### Polling trends
 
-A polling trends page shows national constituency and regional vote polls scraped from the Wikipedia polling tracker (131 polls). SVG line chart with party colours, recent polls table, and constituency/regional toggle. Daily sync via GitHub Actions at 08:00 UTC.
+A polling trends page shows national constituency and regional vote polls scraped from the Wikipedia polling tracker (132 polls per section). SVG line chart with party colours, recent polls table, and constituency/regional toggle. Daily sync via GitHub Actions at 08:00 UTC. Parser has an empty-result guard (throws if fewer than 50 rows parse) so a Wikipedia schema change fails CI loudly rather than silently wiping the file.
+
+### Latest news
+
+A small "Latest news" block on the homepage shows up to five recent Scottish politics headlines with absolute dates and source attribution. Sourced from BBC News — Scotland Politics RSS; the parser in `scripts/sync-news.ts` supports any RSS 2.0 feed so additional sources are a one-line config change. Refreshed three times a day via GitHub Actions (`.github/workflows/sync-news.yml`).
 
 ### Constituency projections
 
-Each constituency page shows a projection panel with estimated vote shares and "will win / could win / might win" classifications. 73 constituencies have projection data. Specific overrides exist for well-known competitive seats (Edinburgh Central, Edinburgh North Western, Glasgow seats, Lib Dem strongholds, Conservative-held seats). Others use a default based on national polling.
+Each constituency page shows a projection panel with estimated vote shares and "will win / could win / might win" classifications. All 73 constituencies have explicit per-seat overrides (the `defaultProjection` template is effectively dead code). Edinburgh Central, Dumbarton, and Fife North East were re-sourced on 18 April 2026 against Ballot Box Scotland 2026-boundary notionals and April 2026 MRP projections after an audit flagged the original calls as politically implausible.
 
 ### Research hub and about page
 
@@ -34,7 +38,7 @@ Curated links to Ballot Box Scotland, Fraser of Allander Institute, TheyWorkForY
 
 A daily GitHub Actions cron job is configured for polling sync (08:00 UTC from Wikipedia). Repo Butler runs at 02:00 UTC for health analysis. The candidate sync workflow has been retired — Democracy Club has locked the 2026 Scottish Parliament ballot (`candidates_locked: true`), so no further automated updates are expected. Any late withdrawals will be handled manually.
 
-Manifesto parsing is handled by a Claude Code slash command (`/sync-manifestos`, defined in `.claude/commands/sync-manifestos.md`). The agent crawls the URLs in `data/manifestos/registry.yaml`, looks for a published 2026 manifesto, and — if found — writes positions/stances/quotes to `data/parties/<party>.yaml` and fans out to candidates via `scripts/apply-party-positions.ts`. The previous Gemini-based script and its daily cron were removed on 16 April 2026. On 17 April 2026, the first `/sync-manifestos` run pulled 2026 manifestos for the SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, and Reform UK into `data/parties/<party>.yaml` with verbatim quotes; only Scottish Labour is still outstanding (their `/manifesto` URL currently redirects to the 2024 UK manifesto), so Labour positions remain hand-curated defaults until their 2026 manifesto is published.
+Manifesto parsing is handled by a Claude Code slash command (`/sync-manifestos`, defined in `.claude/commands/sync-manifestos.md`). The agent crawls the URLs in `data/manifestos/registry.yaml`, looks for a published 2026 manifesto, and — if found — writes positions/stances/quotes to `data/parties/<party>.yaml` and fans out to candidates via `scripts/apply-party-positions.ts`. The previous Gemini-based script and its daily cron were removed on 16 April 2026. On 17 April 2026, the first `/sync-manifestos` run pulled 2026 manifestos for the SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, and Reform UK into `data/parties/<party>.yaml` with verbatim quotes. Scottish Labour's 2026 manifesto was published separately on 13 April (redirect masked it initially) and parsed on 18 April. All six parties now have manifesto-sourced positions.
 
 ### Infrastructure
 
@@ -42,7 +46,7 @@ GitHub Pages deployment via GitHub Actions on every push to main. CI on pull req
 
 ## Manifesto check (run each time you pick the repo up)
 
-5 of 6 parties have published 2026 Holyrood manifestos. Scottish Labour is the remaining gap. Instead of leaving a daily cron failing silently:
+All 6 parties have published 2026 Holyrood manifestos and are parsed. Run `/sync-manifestos` whenever you pick up the repo to catch any amendments:
 
 1. In Claude Code, run `/sync-manifestos`.
 2. The agent visits each URL in `data/manifestos/registry.yaml`, reports which parties have published, parses any 2026 manifesto it finds, and writes positions to `data/parties/<party>.yaml`.
@@ -55,13 +59,37 @@ If no new manifesto is out, the agent reports that and stops without changing an
 
 Most party manifestos are standard PDFs that `pdftotext -layout` can parse directly. The SNP manifesto is hosted on Issuu, which blocks direct PDF download — the agent can OCR the per-page images at `image.isu.pub/{docid}/jpg/page_N.jpg` with `tesseract`. Both `poppler` (pdftotext) and `tesseract` can be installed via Homebrew.
 
-## What needs doing before 7 May (20 days)
+## Next up
+
+The items below are what's left after the 17–18 April audit and fix sweep. Pick these up in a fresh session. Each is scoped tight enough to handle in a single PR.
+
+### Must-fix if time allows before 7 May
+
+- [ ] **Schema-validate party and manifesto YAMLs.** `scripts/validate-data.ts` currently only validates candidates, constituencies, and questions. A typo like `nhs: 3` in a party file would silently propagate to every candidate of that party. Add `schemas/party.schema.json` and `schemas/manifesto-registry.schema.json` and wire them into `validate-data.ts` alongside the existing loops. Range-check position values 0–2.
+- [ ] **Stub-bio enrichment pass.** ~165 candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Prioritise the ~70 candidates who are listed as quiz candidates. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
+- [ ] **Replace Democracy Club API URLs in candidate `sources`.** Every candidate file cites `candidates.democracyclub.org.uk/api/next/parties/PP*` — that's a party registration API, not a biographical source for the individual. Credibility risk if a claim is challenged. Swap in at least one per-candidate bio source (Wikipedia, TheyWorkForYou, Scottish Parliament member page, or official party bio). Can be done opportunistically alongside the stub-bio enrichment.
+
+### Nice-to-have before 7 May
+
+- [ ] **Additional news sources.** News block currently sources BBC Scotland Politics only. `scripts/sync-news.ts` `SOURCES` array supports any RSS 2.0 feed — candidates worth adding: Ballot Box Scotland (https://ballotbox.scot/feed/), Guardian Scotland politics. Weigh trust vs breadth.
+- [ ] **Matching engine edge-case tests.** `tests/matching.test.ts` does not cover: voter answer for a `questionId` not present in candidate `positions` (silent 0% path at `src/lib/matching.ts:25`); all-answers/all-positions at value 0 (only the value-2 case is tested); tie-order stability between same-party candidates. Added tests would prevent regressions in the 20 days before and during election coverage.
+- [ ] **Pollster name unification.** `data/polls.json` shows "Ipsos MORI" and "Savanta ComRes" as separate pollsters from "Ipsos" and "Savanta"; both are predecessor brand names. Either normalise at scrape time in `scripts/sync-polls.ts` or map at render time in the polls chart.
+
+### Post-election cleanup (after 7 May)
+
+- [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site.
+- [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning. Update the ROADMAP text that used to say "others use a default based on national polling" (still stale since April — fixed above).
+- [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
+- [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
+- [ ] **Re-parse Scottish Labour positions after manifesto revisions.** The 18 April parse reflects the 13 April manifesto launch version. If Labour publishes amendments before polling day, `/sync-manifestos` will pick them up — but watch for stance drift around tax and equality where the language is under active scrutiny.
+
+## What shipped before 7 May (archived task list)
 
 ### Critical — data accuracy
 
 ~~Enrich high-profile candidates with real bios.~~ Done. 13 candidates (Swinney, Sarwar, Baillie, Fraser, Gilruth, McAllan, Somerville, Bibby, Gallacher, Rennie, Slater, Constance, Thewliss, Macpherson) have substantive bios and highlights. Factual accuracy verified via code review.
 
-**Fix incumbent status for sitting MSPs (regressed).** `scripts/fix-incumbents.ts` cross-references the Scottish Parliament members API and originally marked 75 sitting MSPs as incumbents (two name-collision false positives caught in review). Subsequent "sync: update candidate data from Democracy Club" commits overwrote the `isIncumbent` field, and today every candidate file on disk has `isIncumbent: false`. The sync workflow has since been retired (#25), so re-running `scripts/fix-incumbents.ts` locally and committing the result will fix this for good.
+~~Fix incumbent status for sitting MSPs.~~ Done on 18 April 2026. `scripts/fix-incumbents.ts` rewritten to pull the 6th-session cohort from `memberelectionconstituencystatuses` + `memberelectionregionstatuses` (the original `IsCurrent` flag flips to false at dissolution). Added strategy for space-separated multi-word surnames. 78 sitting MSPs correctly flagged.
 
 ~~Differentiate Conservative and Reform positions.~~ Done. Conservatives now score nhs:1, education:1 (more moderate). Reform stays at all 0s. 72 candidate files updated.
 
@@ -111,42 +139,59 @@ Most party manifestos are standard PDFs that `pdftotext -layout` can parse direc
   ─────────────────────────────────────────────────────────────
 
   TODAY                                           ELECTION
-  17 Apr                                           7 May
-    │              20 days remaining                  │
+  18 Apr                                           7 May
+    │              19 days remaining                  │
     ▼                                                ▼
     ┌─────────────────────────────────────────────────┐
     │           WHAT'S DONE (ship-ready)              │
     │                                                 │
     │  ✅ Vote compass quiz (8 policy areas)          │
-    │  ✅ 436 candidates / 73 constituencies          │
+    │  ✅ 434 candidates / 73 constituencies          │
     │  ✅ Interactive map + postcode lookup            │
-    │  ✅ Polling trends (131 polls, daily sync)      │
-    │  ✅ Constituency projections                    │
+    │  ✅ Polling trends (132 polls, daily sync)      │
+    │  ✅ Constituency projections (all 73 overridden)│
     │  ✅ How-to-Vote guide                           │
     │  ✅ Party pages                                 │
+    │  ✅ Latest news on homepage (BBC RSS, 3x/day)   │
+    │  ✅ 6/6 manifestos parsed with verbatim quotes  │
+    │  ✅ 78 sitting MSPs flagged as incumbents       │
     │  ✅ Accessibility & performance optimised       │
-    │  ✅ Daily polling sync                          │
     │  ✅ 45 tests passing                            │
-    │  ✅ Dependencies updated (13 Apr 2026)          │
+    │  ✅ Dependencies updated                        │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
     │        MANIFESTO ANALYSIS                        │
     │                                                 │
-    │  5 of 6 parties have 2026 manifestos parsed:    │
-    │    SNP              published 16 Apr            │
-    │    Scottish Greens  published                   │
-    │    Scottish LibDems published                   │
-    │    Scottish Cons    published 7 Apr             │
-    │    Reform UK        published                   │
-    │    Scottish Labour  STILL NOT PUBLISHED         │
+    │  All 6 parties have 2026 manifestos parsed:     │
+    │    SNP              parsed 17 Apr               │
+    │    Scottish Greens  parsed 17 Apr               │
+    │    Scottish LibDems parsed 17 Apr               │
+    │    Scottish Cons    parsed 17 Apr               │
+    │    Reform UK        parsed 17 Apr               │
+    │    Scottish Labour  parsed 18 Apr               │
     │                                                 │
-    │  Positions, stances and verbatim quotes parsed  │
-    │  into data/parties/<party>.yaml on 17 Apr 2026. │
+    │  Re-run /sync-manifestos if any party publishes │
+    │  amendments between now and 7 May.              │
+    └─────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────┐
+    │      NEXT UP (see "Next up" section above)      │
     │                                                 │
-    │  Re-run /sync-manifestos when Labour drops      │
-    │  their manifesto — or if any party updates      │
-    │  theirs — to refresh positions.                 │
+    │  Must-fix if time allows:                       │
+    │  • Schema-validate party + manifesto YAMLs      │
+    │  • Enrich ~70 quiz-candidate stub bios          │
+    │  • Replace Democracy Club API source URLs       │
+    │                                                 │
+    │  Nice-to-have:                                  │
+    │  • Add Ballot Box Scotland / Guardian news RSS  │
+    │  • Matching engine edge-case tests              │
+    │  • Pollster name unification                    │
+    │                                                 │
+    │  Post-election:                                 │
+    │  • "How we did" projection retrospective        │
+    │  • Retire dead populate-projections default     │
+    │  • yaml.stringify lineWidth in fan-out script   │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
