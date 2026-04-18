@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { fetchHtml } from "./lib/api";
 
 const WIKI_URL =
@@ -111,6 +112,43 @@ function extractCells(trHtml: string): string[] {
   return cells;
 }
 
+function cellRowspan(cellHtml: string): number {
+  const m = cellHtml.match(/rowspan="(\d+)"/i);
+  return m ? parseInt(m[1], 10) : 1;
+}
+
+// Expand a row's raw <td> cells into logical columns, filling in positions
+// covered by rowspan cells from earlier rows. Wikipedia uses rowspan="2" for
+// Alba/Reform "N/A" cells that span consecutive pollsters — without expanding
+// these, the pollster beneath the rowspan appears to be missing a column and
+// every subsequent cell shifts left (Reform read as Alba, etc.).
+//
+// carries[colIdx] holds the cell HTML currently covering that column, plus
+// how many rows (including the current one) it still applies to.
+export function expandRowWithRowspans(
+  rawCells: string[],
+  carries: Array<{ html: string; rowsRemaining: number } | null>,
+): string[] {
+  const result: string[] = [];
+  let rawIdx = 0;
+  let colIdx = 0;
+  while (rawIdx < rawCells.length || carries[colIdx]) {
+    const carry = carries[colIdx];
+    if (carry) {
+      result.push(carry.html);
+      carry.rowsRemaining--;
+      if (carry.rowsRemaining <= 0) carries[colIdx] = null;
+    } else {
+      const cell = rawCells[rawIdx++];
+      result.push(cell);
+      const rs = cellRowspan(cell);
+      if (rs > 1) carries[colIdx] = { html: cell, rowsRemaining: rs - 1 };
+    }
+    colIdx++;
+  }
+  return result;
+}
+
 interface ColMap {
   date: number;
   pollster: number;
@@ -193,8 +231,23 @@ function parseTable(tableHtml: string): PollEntry[] {
     return results;
   }
 
+  // Rowspan carry-over is stateful across data rows in the order they appear
+  // in the HTML, so the expansion happens inside this loop (not per-row).
+  const rowspanCarries: Array<{ html: string; rowsRemaining: number } | null> = [];
+
   for (const row of dataRows) {
-    const cells = extractCells(row);
+    const rawCells = extractCells(row);
+    if (rawCells.length < 5) continue;
+
+    // Skip wide-colspan annotation rows (e.g. "Closure of nominations") before
+    // touching the rowspan tracker — they have one merged cell and would
+    // confuse expansion.
+    const colspanMatch = row.match(/colspan="(\d+)"/);
+    if (colspanMatch && parseInt(colspanMatch[1]) > 5) continue;
+
+    // Expand now so the rowspan tracker stays in sync even for rows we drop
+    // (e.g. baseline election-result rows that still have full party columns).
+    const cells = expandRowWithRowspans(rawCells, rowspanCarries);
     if (cells.length < 10) continue;
 
     const rowText = stripTags(row).toLowerCase();
@@ -202,9 +255,6 @@ function parseTable(tableHtml: string): PollEntry[] {
     // Scottish Parliament election" / "2016 Scottish Parliament election",
     // so a loose regex catches both the short-form and long-form variants.
     if (/\b(201[16]|202[16])\b[^.]*election/.test(rowText) || rowText.includes("election result")) continue;
-
-    const colspanMatch = row.match(/colspan="(\d+)"/);
-    if (colspanMatch && parseInt(colspanMatch[1]) > 5) continue;
 
     const getCellText = (idx: number): string => {
       if (idx >= cells.length) return "";
@@ -334,7 +384,10 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Only run main() when invoked directly; skip when imported (e.g. from tests).
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
