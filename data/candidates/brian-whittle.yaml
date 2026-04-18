@@ -15,8 +15,10 @@ highlights:
     medallist
   - MSP for South Scotland since 2016; Shadow Minister for Environment
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Brian_Whittle
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/brian-whittle
+    type: parliament
 positions:
   independence: 0
   nhs: 1

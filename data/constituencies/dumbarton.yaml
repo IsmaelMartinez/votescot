@@ -16,9 +16,4 @@ topParties:
   - party: conservative
     share: 10
     status: might-win
-projectionSource: "Labour-held 2021 (Jackie Baillie 46.3% vs SNP 42.5%, majority
-  1,483). BBS 2026-boundary notional unchanged at Lab +3.9. BBS's April 2026
-  west-central analysis assesses Labour likely to hold, citing Baillie's record
-  of absorbing tactical Con/LD votes. YouGov MRP is an outlier showing SNP +2,
-  so this is classified marginal rather than safe. National SNP down ~10pp vs
-  2021 mitigates any SNP gain."
+projectionSource: Labour-held 2021 (Jackie Baillie 46.3% vs SNP 42.5%, majority 1,483). BBS 2026-boundary notional unchanged at Lab +3.9. BBS's April 2026 west-central analysis assesses Labour likely to hold, citing Baillie's record of absorbing tactical Con/LD votes. YouGov MRP is an outlier showing SNP +2, so this is classified marginal rather than safe. National SNP down ~10pp vs 2021 mitigates any SNP gain.

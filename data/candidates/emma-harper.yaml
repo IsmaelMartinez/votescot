@@ -16,8 +16,10 @@ highlights:
   - Returned to frontline nursing during COVID-19 as part of NHS vaccination team
   - Raised on a dairy farm near Stranraer; worked at Cedars-Sinai in Los Angeles
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Emma_Harper
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/emma-harper
+    type: parliament
 positions:
   independence: 2
   nhs: 2

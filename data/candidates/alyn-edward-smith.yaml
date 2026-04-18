@@ -8,15 +8,21 @@ textColor: "#333"
 constituency: stirling
 isIncumbent: false
 quizCandidate: true
-bio: Former commercial lawyer who served as Scotland's MEP for 15 years
-  (2004-2019) before becoming MP for Stirling (2019-2024).
+bio: Former commercial lawyer and Scotland's longest-serving MEP (2004-2019)
+  before becoming MP for Stirling (2019-2024), when he ousted incumbent Tory
+  Stephen Kerr. A former SNP depute leader candidate, he has been selected to
+  stand for Stirling at Holyrood as Evelyn Tweed steps down.
 highlights:
-  - Scotland's MEP for 15 years (2004-2019); youngest Scottish MEP when first
-    elected
-  - MP for Stirling (2019-2024); former commercial lawyer at Clifford Chance
+  - MP for Stirling (2019-2024); Scotland's MEP for 15 years (2004-2019)
+  - Youngest Scottish MEP when first elected aged 30
+  - Former commercial lawyer at Clifford Chance
+  - SNP candidate for Stirling constituency in the 2026 Scottish Parliament
+    election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Alyn_Smith
+    type: wikipedia
+  - url: https://whocanivotefor.co.uk/person/1146/alyn-smith
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

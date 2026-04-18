@@ -16,8 +16,10 @@ highlights:
   - Hill farmer who founded Perth Farmers' Market in 1996
   - Co-founded Farmers4Yes pro-independence campaign
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Jim_Fairlie_(MSP)
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jim-fairlie
+    type: parliament
 positions:
   independence: 2
   nhs: 2

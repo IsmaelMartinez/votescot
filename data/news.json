@@ -1,12 +1,27 @@
 {
-  "lastUpdated": "2026-04-17T23:57:45.537Z",
+  "lastUpdated": "2026-04-18T00:50:53.681Z",
   "sources": [
     {
       "name": "BBC News",
       "url": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+    },
+    {
+      "name": "Ballot Box Scotland",
+      "url": "https://ballotbox.scot"
+    },
+    {
+      "name": "The Guardian — Scotland politics",
+      "url": "https://www.theguardian.com/politics/scotland"
     }
   ],
   "items": [
+    {
+      "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
+      "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber. [...]",
+      "url": "https://ballotbox.scot/more-in-common-april-2026/",
+      "publishedAt": "2026-04-17T16:30:00.000Z",
+      "source": "Ballot Box Scotland"
+    },
     {
       "title": "The Lib Dems' manifesto pledges analysed",
       "description": "We have analysed some of the policies in the Scottish Lib Dems' manifesto for the 2026 Holyrood election.",
@@ -43,6 +58,27 @@
       "source": "BBC News"
     },
     {
+      "title": "Badenoch calls Farage an ‘opportunist’ after he urges Scottish nationalists to back Reform",
+      "description": "<p>Tory leader criticises Farage for saying that holding another independence vote ‘probably quite reasonable’</p><p>Kemi Badenoch, the leader of the Conservative party, has accused Nigel Farage of being an opportunist who does not believe in unionism after he urged Scottish nationalists to back Reform.</p><p>Farage said earlier this week he believed “genuine nationalists” would not support the Scottish National party’s bid to rejoin the EU, and urged them to vote Reform in the Holyrood election on 7 May.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/16/badenoch-calls-farage-an-opportunist-after-he-urges-scottish-nationalists-to-back-reform\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/16/badenoch-calls-farage-an-opportunist-after-he-urges-scottish-nationalists-to-back-reform",
+      "publishedAt": "2026-04-16T18:17:58.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "No 10 claims Starmer did not know Mandelson failed security vetting until this week – as it happened",
+      "description": "<p>The prime minister was not aware that the former US ambassador had failed the vetting process, according to Downing Street</p><p><strong>Swinney</strong> says this is a manifesto for the whole of Scotland.</p><p>He confirms that the SNP would argue for the Scottish power to have more control over energy policy (still largely reserved to Westminter). He says:</p><p>The problem is not that we do not have the energy. The problem is that Westminster has the power. This election is our opportunity to take those powers and put them into Scotland’s hands.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/16/iran-economy-food-fuel-local-elections-covid-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/16/iran-economy-food-fuel-local-elections-covid-latest-news-updates",
+      "publishedAt": "2026-04-16T17:54:49.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "SNP pledges to cap bread and milk prices if it wins Scotland’s parliamentary elections",
+      "description": "<p>John Swinney unveils his party’s manifesto, saying cost of living is the ‘defining issue’ for voters on 7 May</p><p>The SNP will cap supermarket prices for essential goods such as bread and milk if it retains power, John Swinney has pledged, after describing the cost of living as “the defining issue of this election”.</p><p>With polls pointing to a fifth Holyrood term for the Scottish National party, its leader said he would use devolved public health powers to fix prices on 20 to 50 items such as bread, milk, cheese, eggs, rice and chicken because their rising cost was “impacting our nation’s nutrition”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/16/snp-pledges-cap-prices-bread-milk-scotland-parliamentary-election\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/16/snp-pledges-cap-prices-bread-milk-scotland-parliamentary-election",
+      "publishedAt": "2026-04-16T14:38:30.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
       "title": "Supermarket food prices to be capped under SNP manifesto pledge",
       "description": "The cost of \"essential\" items such as bread, milk and cheese are to be limited under John Swinney's plan.",
       "url": "https://www.bbc.com/news/articles/cgrlpg97ey9o?at_medium=RSS&at_campaign=rss",
@@ -55,6 +91,13 @@
       "url": "https://www.bbc.com/news/articles/c0q998dzwz2o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-16T13:12:42.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "Scottish Labour leader says claim he tried to do Reform deal is ‘desperate lie’",
+      "description": "<p>Anas Sarwar says there have been ‘no stitch-ups, no deals, no backroom chats with Reform’ over Holyrood elections</p><p></p><p>Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the rightwing party to keep the Scottish National party out of power.</p><p>Offord made the claim on Channel 4’s Scottish leaders’ debate on Tuesday evening, alleging the Scottish Labour leader came “bouncing up” to him at an event in December last year, suggesting they “work together to remove the SNP”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie",
+      "publishedAt": "2026-04-15T16:42:13.000Z",
+      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Labour's Sarwar brands Scottish Reform leader 'a liar' over deal claim",
@@ -76,6 +119,20 @@
       "url": "https://www.bbc.com/news/articles/cje4n5ppgw7o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-14T20:10:22.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
+      "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
+      "publishedAt": "2026-04-14T16:32:59.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
+      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
+      "publishedAt": "2026-04-14T14:13:25.000Z",
+      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Scottish Greens' manifesto pledges analysed",
@@ -106,11 +163,39 @@
       "source": "BBC News"
     },
     {
+      "title": "MSPs not told about collapse of funding deal for Scottish nature restoration",
+      "description": "<p>Exclusive: Ministers accused of trying to keep investment firm’s withdrawal from partnership with NatureScot under wraps</p><p>A funding deal to raise £100m from private investors for urgently needed nature restoration in Scotland has fallen through without the Scottish parliament being told.</p><p>The Guardian has learned that Aberdeen, the investment firm, decided to withdraw from <a href=\"https://www.theguardian.com/uk-news/2025/sep/30/naturescot-private-investment-conservation\">a partnership with the agency NatureScot</a> to raise at least £100m for conservation projects from commercial and private investors late last year.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/msps-not-told-about-collapse-of-funding-deal-for-scottish-nature-restoration\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/uk-news/2026/apr/14/msps-not-told-about-collapse-of-funding-deal-for-scottish-nature-restoration",
+      "publishedAt": "2026-04-14T05:00:01.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Shabana Mahmood says Southport inquiry report exposed ‘systematic failures across multiple public sector organisations’ – as it happened",
+      "description": "<p>The home secretary made the comments after an inquiry revealed that the system ‘completely failed’</p><p><strong>Keir Starmer</strong> has confirmed that he wants to stop children being exposed to addictive scrolling features on their phones as part of measures to protect them from social media.</p><p>The PM is under pressure to implement an Australian-style ban on social media for under-16s, and the government<a href=\"https://www.theguardian.com/media/2026/feb/16/social-media-restrictions-keir-starmer-announced\"> is consulting</a> on whether to go ahead with a full ban, or whether to just impose more specific restrictions.</p><p>It’s not a question of if we do something, it’s what we do.</p><p>The addictive scrolling mechanisms are really problematic to my mind, they need to go.</p><p>Despite some lower-income households receiving a long-overdue real-terms increase in their benefits, we now estimate – based on market-forecasts for the rise in energy prices consistent with market pricing after the announcement of a ceasefire – that average income growth for the poorest fifth this year is now set to be just 1.2 per cent, down from 2.8 per cent before the conflict.</p><p>The picture is brighter for families in the bottom half of the income distribution with three or more children. Even after the inflation shock, the abolition of the two-child limit is estimated to deliver 7.7 per cent income growth for this group this year – compared to 0.0 per cent for poorer families with fewer than three children.</p><p>Despite hopes for a sustained peace, the path of this conflict remains uncertain and energy prices remain well above pre-war levels, meaning many households face a decline in their purchasing power this year.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates",
+      "publishedAt": "2026-04-13T17:16:06.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Poll Analysis: YouGov MRP 23rd of March – 8th of April 2026",
+      "description": "Scepticism about fancy MRP polling aside and just using their vote share figures, the SNP are within touching distance of a majority whilst the Conservatives are near-death. [...]",
+      "url": "https://ballotbox.scot/yougov-april-2026/",
+      "publishedAt": "2026-04-13T16:30:00.000Z",
+      "source": "Ballot Box Scotland"
+    },
+    {
       "title": "Labour's Scottish manifesto pledges analysed",
       "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-13T15:31:34.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "Anas Sarwar asks voters in Scotland to give Labour five years to ‘fix SNP’s mess’",
+      "description": "<p>Scottish Labour leader pledges more homes and tax cuts as party tries to reverse slump in support before May elections</p><p>Anas Sarwar has appealed to voters to give Labour five years “to fix the Scottish National party’s mess” as he pledged more homes, tax cuts and a smaller public sector.</p><p>The Scottish Labour leader is fighting a last-ditch attempt to reverse a steep slump in support. Recent polls put Sarwar’s party third or even fourth behind the SNP, Reform and the Scottish Greens, dragged down by the UK government’s unpopularity.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections",
+      "publishedAt": "2026-04-13T14:35:15.000Z",
+      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Sarwar puts NHS at heart of Scottish Labour's election pitch",
@@ -134,18 +219,11 @@
       "source": "BBC News"
     },
     {
-      "title": "How tax and welfare are shaping the vote in the Scottish election",
-      "description": "In recent years Scotland has struck out on a different path to the rest of the UK when it comes to income tax and social security.",
-      "url": "https://www.bbc.com/news/articles/c8ej9nj9773o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-12T08:42:25.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "SNP pledges 'first refusal' for tenants to buy private rental homes",
-      "description": "John Swinney says it would help renters get on the housing ladder but other parties say the SNP is to blame for the housing emergency.",
-      "url": "https://www.bbc.com/news/articles/cx2e54vk0jvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-10T10:21:10.000Z",
-      "source": "BBC News"
+      "title": "Poll Analysis: Norstat 30th of March – 1st of April 2026",
+      "description": "What Labour attempted to convince the media was a good poll for them would still be their worst ever Holyrood result and offer Anas Sarwar no path to Bute House. [...]",
+      "url": "https://ballotbox.scot/norstat-april-2026/",
+      "publishedAt": "2026-04-12T16:30:00.000Z",
+      "source": "Ballot Box Scotland"
     }
   ]
 }

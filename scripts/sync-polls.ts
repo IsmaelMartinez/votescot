@@ -6,6 +6,12 @@ const WIKI_URL =
   "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election";
 const OUTPUT_PATH = path.join(process.cwd(), "data/polls.json");
 
+// Normalize pollster names: map predecessor brands to current names
+const POLLSTER_ALIASES: Record<string, string> = {
+  "Ipsos MORI": "Ipsos",
+  "Savanta ComRes": "Savanta",
+};
+
 interface PollEntry {
   date: string;
   endDate: string;
@@ -212,10 +218,13 @@ function parseTable(tableHtml: string): PollEntry[] {
     const dateText = stripTags(dateCellHtml);
     const startDate = parseStartDate(dateText, endDate);
 
+    const pollsterName = getCellText(colMap.pollster);
+    const normalizedPollster = POLLSTER_ALIASES[pollsterName] ?? pollsterName;
+
     results.push({
       date: startDate,
       endDate,
-      pollster: getCellText(colMap.pollster),
+      pollster: normalizedPollster,
       client: getCellText(colMap.client),
       sampleSize: parseSampleSize(getCellText(colMap.sample)),
       snp: parsePercent(getCellText(colMap.snp)),

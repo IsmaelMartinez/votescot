@@ -8,16 +8,22 @@ textColor: "#333"
 constituency: east-kilbride
 isIncumbent: true
 quizCandidate: true
-bio: MSP for East Kilbride since 2021. Convener of the Social Justice and Social
-  Security Committee. Former South Lanarkshire councillor and depute provost.
+bio: MSP for East Kilbride since May 2021. Raised in East Kilbride and a
+  University of the West of Scotland business graduate, she served as a
+  South Lanarkshire councillor for East Kilbride Central South from 2017 and
+  was depute provost before entering Holyrood.
 highlights:
-  - MSP for East Kilbride since 2021; convener of Social Justice and Social
-    Security Committee
-  - Former South Lanarkshire councillor and depute provost
-  - Founding member of East Kilbride branch of Women for Independence
+  - MSP for East Kilbride since 2021
+  - Former South Lanarkshire councillor for East Kilbride Central South
+    (2017-2022)
+  - Served as Depute Provost of South Lanarkshire
+  - Founding member of the East Kilbride branch of Women for Independence
+  - Business graduate of the University of the West of Scotland
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Collette_Stevenson
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/collette-stevenson
+    type: parliament
 positions:
   independence: 2
   nhs: 2

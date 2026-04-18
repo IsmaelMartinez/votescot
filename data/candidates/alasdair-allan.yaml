@@ -16,8 +16,10 @@ highlights:
   - Minister for Learning, Science and Scotland's Languages (2011-2016)
   - Gaelic speaker; holds a PhD in Scots Language from Aberdeen University
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Alasdair_Allan
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/alasdair-allan
+    type: parliament
 positions:
   independence: 2
   nhs: 2

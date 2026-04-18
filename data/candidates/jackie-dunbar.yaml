@@ -8,15 +8,20 @@ textColor: "#333"
 constituency: aberdeen-donside
 isIncumbent: true
 quizCandidate: true
-bio: MSP for Aberdeen Donside since 2021. Former Aberdeen City councillor (from
-  2007) and SNP deputy group leader on the council.
+bio: MSP for Aberdeen Donside since May 2021, winning the seat after her
+  predecessor Mark McDonald stood down. Born in Peterhead and educated in
+  Elgin, she served as an Aberdeen City councillor for the Northfield ward
+  from 2007 and was deputy leader of the SNP group on the council.
 highlights:
-  - MSP for Aberdeen Donside since 2021
-  - Former Aberdeen City councillor from 2007; SNP deputy group leader
-  - Focused on Just Transition Fund, child poverty, and NHS waiting times
+  - MSP for Aberdeen Donside since May 2021
+  - Aberdeen City councillor for Northfield/Mastrick North from 2007
+  - Deputy leader of the SNP group on Aberdeen City Council
+  - Focus on Just Transition Fund, child poverty, and NHS waiting times
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Jackie_Dunbar
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jackie-dunbar
+    type: parliament
 positions:
   independence: 2
   nhs: 2

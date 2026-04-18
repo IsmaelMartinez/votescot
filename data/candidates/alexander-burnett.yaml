@@ -15,8 +15,10 @@ highlights:
   - Scottish Conservative Chief Whip and Vice-Chairman for campaigning
   - Co-founder and Convener of the Cross-Party Group on Autism
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Alexander_Burnett
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/alexander-burnett
+    type: parliament
 positions:
   independence: 0
   nhs: 1

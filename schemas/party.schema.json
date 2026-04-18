@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "name", "positions", "stances", "quotes"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "positions": {
+      "type": "object",
+      "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
+      "properties": {
+        "independence": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "nhs": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "housing": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "climate": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "tax": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "economy": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "education": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "equality": { "type": "integer", "minimum": 0, "maximum": 2 }
+      },
+      "additionalProperties": false
+    },
+    "stances": {
+      "type": "object",
+      "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
+      "properties": {
+        "independence": { "type": "string", "minLength": 1 },
+        "nhs": { "type": "string", "minLength": 1 },
+        "housing": { "type": "string", "minLength": 1 },
+        "climate": { "type": "string", "minLength": 1 },
+        "tax": { "type": "string", "minLength": 1 },
+        "economy": { "type": "string", "minLength": 1 },
+        "education": { "type": "string", "minLength": 1 },
+        "equality": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "quotes": {
+      "type": "object",
+      "required": ["independence", "nhs", "housing", "climate", "tax", "economy", "education", "equality"],
+      "properties": {
+        "independence": { "type": "string", "minLength": 1 },
+        "nhs": { "type": "string", "minLength": 1 },
+        "housing": { "type": "string", "minLength": 1 },
+        "climate": { "type": "string", "minLength": 1 },
+        "tax": { "type": "string", "minLength": 1 },
+        "economy": { "type": "string", "minLength": 1 },
+        "education": { "type": "string", "minLength": 1 },
+        "equality": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

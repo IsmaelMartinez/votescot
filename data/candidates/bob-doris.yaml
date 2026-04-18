@@ -8,16 +8,23 @@ textColor: "#333"
 constituency: glasgow-kelvin-and-maryhill
 isIncumbent: true
 quizCandidate: true
-bio: MSP since 2007 for Glasgow. Former Modern Studies teacher. Deputy convener
-  of the Social Justice and Social Security Committee.
+bio: MSP for Glasgow Maryhill and Springburn since 2016, having previously served
+  as a regional MSP for Glasgow from 2007. A former Modern Studies teacher of
+  ten years, Doris was educated at the University of Glasgow and St Andrew's
+  Teaching College. Deputy convener of the Social Justice and Social Security
+  Committee.
 highlights:
-  - MSP since 2007; constituency MSP for Glasgow Maryhill and Springburn from
-    2016
+  - Glasgow regional MSP from 2007; constituency MSP for Maryhill and
+    Springburn from 2016
   - Deputy convener of the Social Justice and Social Security Committee
   - Former Modern Studies teacher for 10 years
+  - MA in Social Sciences from the University of Glasgow; PGCE from St
+    Andrew's Teaching College
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Bob_Doris
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/bob-doris
+    type: parliament
 positions:
   independence: 2
   nhs: 2

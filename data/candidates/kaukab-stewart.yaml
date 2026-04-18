@@ -16,8 +16,10 @@ highlights:
     the Scottish Parliament
   - MSP for Glasgow Kelvin since 2021; former primary teacher for nearly 30 years
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Kaukab_Stewart
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/kaukab-stewart
+    type: parliament
 positions:
   independence: 2
   nhs: 2

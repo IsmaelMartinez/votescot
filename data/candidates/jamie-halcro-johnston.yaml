@@ -15,8 +15,10 @@ highlights:
     Trade
   - Originally from Orkney; former Financial Times journalist
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Jamie_Halcro_Johnston
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/jamie-halcro-johnston
+    type: parliament
 positions:
   independence: 0
   nhs: 1

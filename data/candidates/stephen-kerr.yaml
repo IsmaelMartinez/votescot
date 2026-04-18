@@ -15,8 +15,10 @@ highlights:
   - Chief Whip of the Scottish Conservative group in Holyrood
   - Former Convener of Education, Children and Young People Committee (2021-2022)
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Stephen_Kerr
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/stephen-kerr
+    type: parliament
 positions:
   independence: 0
   nhs: 1

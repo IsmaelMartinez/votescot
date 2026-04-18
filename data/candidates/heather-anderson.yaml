@@ -14,8 +14,10 @@ highlights:
   - Briefly served as Scotland's MEP in January 2020 before Brexit
   - Dundee councillor; welfare rights officer and organic farmer
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Heather_Anderson
+    type: wikipedia
+  - url: https://whocanivotefor.co.uk/person/23996/heather-anderson
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

@@ -17,8 +17,10 @@ highlights:
     (2023-2024)
   - MP for Airdrie and Shotts (2015-2021) before moving to Holyrood
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
-    type: party_website
+  - url: https://en.wikipedia.org/wiki/Neil_Gray
+    type: wikipedia
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/neil-gray
+    type: parliament
 positions:
   independence: 2
   nhs: 2
