@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T12:29:17.047Z",
+  "lastUpdated": "2026-04-19T18:29:21.243Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "MSPs need to work together to reform council tax - SNP",
+      "description": "Representatives from six Scottish political parties agree that the council tax needs to be reformed, but how exactly is a contentious issue.",
+      "url": "https://www.bbc.com/news/articles/cy81e0w9dyjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-19T14:39:06.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Ex-Scottish Labour leader Dugdale appointed as Stonewall chairwoman",
       "description": "Dugdale, who is currently chairwoman of Shelter in Scotland, said she was \"thrilled and honoured\" to secure the post.",
@@ -217,13 +224,6 @@
       "url": "https://ballotbox.scot/yougov-april-2026/",
       "publishedAt": "2026-04-13T16:30:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Labour's Scottish manifesto pledges analysed",
-      "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-13T15:31:34.000Z",
-      "source": "BBC News"
     }
   ]
 }
