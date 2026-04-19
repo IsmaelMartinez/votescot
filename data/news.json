@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T18:28:54.135Z",
+  "lastUpdated": "2026-04-19T06:52:10.528Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "‘Things could go backwards’: Kezia Dugdale on safety, LGBTQ+ rights and the future of Stonewall",
+      "description": "<p>Exclusive: Former Scottish Labour leader says she feels more scared as a lesbian today and calls for a kinder debate on transgender issues</p><p>Kezia Dugdale, the former leader of Scottish Labour, says she is now “quite scared” as a lesbian in Britain and has started to feel nervous holding her wife’s hand in public.</p><p>Speaking to the Guardian in Edinburgh on the announcement of her appointment as the chair of Stonewall, the LGBTQ+ charity, she said it was “completely possible” gay rights in the UK could be eroded with the rise of rightwing populism.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/19/things-could-go-backwards-kezia-dugdale-on-safety-lgbtq-rights-and-the-future-of-stonewall\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/19/things-could-go-backwards-kezia-dugdale-on-safety-lgbtq-rights-and-the-future-of-stonewall",
+      "publishedAt": "2026-04-19T06:00:34.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Starmer accused of 'skulking' and shunning Sarwar in Scotland",
       "description": "It is the first time the prime minister has been north of the border since the Scottish Labour leader Anas Sarwar called for him to step down in February.",
@@ -216,13 +223,6 @@
       "description": "The party has announced its plans for health, education and taxation ahead of next month's Holyrood election.",
       "url": "https://www.bbc.com/news/articles/cly9gz585g1o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-13T11:14:07.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "The BBC Scotland election debate fact-checked",
-      "description": "Claims made by leaders of six political parties who took part in a TV debate for the 2026 Holyrood election campaign are checked.",
-      "url": "https://www.bbc.com/news/articles/c62j07q046eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-12T22:30:06.000Z",
       "source": "BBC News"
     }
   ]
