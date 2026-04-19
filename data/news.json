@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T06:52:10.528Z",
+  "lastUpdated": "2026-04-19T12:29:17.047Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Ex-Scottish Labour leader Dugdale appointed as Stonewall chairwoman",
+      "description": "Dugdale, who is currently chairwoman of Shelter in Scotland, said she was \"thrilled and honoured\" to secure the post.",
+      "url": "https://www.bbc.com/news/articles/ckgrvz5nxlno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-19T11:58:16.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "How Reform is exposing the reality of Scotland’s views on immigration and identity",
+      "description": "<p>Once a progressive outlier, Scotland is facing a political reckoning as Reform benefits from growing social division</p><p>It’s Monday evening in Aberdeen, and George Preston is wearing his union flag suit to the Reform UK rally. He joined the party in 2024 as it gained ground in the north-east of Scotland with its first councillor defections from the Scottish Conservatives.</p><p>Now Preston is out leafleting for the party that polls suggest is vying with Scottish Labour to become the official opposition to the Scottish National party in the Holyrood elections on 7 May.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity",
+      "publishedAt": "2026-04-19T10:00:39.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "‘Things could go backwards’: Kezia Dugdale on safety, LGBTQ+ rights and the future of Stonewall",
       "description": "<p>Exclusive: Former Scottish Labour leader says she feels more scared as a lesbian today and calls for a kinder debate on transgender issues</p><p>Kezia Dugdale, the former leader of Scottish Labour, says she is now “quite scared” as a lesbian in Britain and has started to feel nervous holding her wife’s hand in public.</p><p>Speaking to the Guardian in Edinburgh on the announcement of her appointment as the chair of Stonewall, the LGBTQ+ charity, she said it was “completely possible” gay rights in the UK could be eroded with the rise of rightwing populism.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/19/things-could-go-backwards-kezia-dugdale-on-safety-lgbtq-rights-and-the-future-of-stonewall\">Continue reading...</a>",
@@ -209,20 +223,6 @@
       "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-13T15:31:34.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Anas Sarwar asks voters in Scotland to give Labour five years to ‘fix SNP’s mess’",
-      "description": "<p>Scottish Labour leader pledges more homes and tax cuts as party tries to reverse slump in support before May elections</p><p>Anas Sarwar has appealed to voters to give Labour five years “to fix the Scottish National party’s mess” as he pledged more homes, tax cuts and a smaller public sector.</p><p>The Scottish Labour leader is fighting a last-ditch attempt to reverse a steep slump in support. Recent polls put Sarwar’s party third or even fourth behind the SNP, Reform and the Scottish Greens, dragged down by the UK government’s unpopularity.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections",
-      "publishedAt": "2026-04-13T14:35:15.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Sarwar puts NHS at heart of Scottish Labour's election pitch",
-      "description": "The party has announced its plans for health, education and taxation ahead of next month's Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cly9gz585g1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-13T11:14:07.000Z",
       "source": "BBC News"
     }
   ]
