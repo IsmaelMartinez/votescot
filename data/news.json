@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T06:57:12.289Z",
+  "lastUpdated": "2026-04-21T12:41:33.701Z",
   "sources": [
     {
       "name": "BBC News",
@@ -76,13 +76,6 @@
       "description": "We have analysed some of the policies in the Scottish Lib Dems' manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/ckg0p7ew4kqo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-17T14:16:48.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "The Lib Dems' Scottish election manifesto at-a-glance",
-      "description": "The party has announced its policy plans ahead of the Holyrood poll on 7 May.",
-      "url": "https://www.bbc.com/news/articles/c070g0yreddo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-17T11:29:12.000Z",
       "source": "BBC News"
     },
     {
@@ -224,6 +217,13 @@
       "url": "https://ballotbox.scot/yougov-april-2026/",
       "publishedAt": "2026-04-13T16:30:00.000Z",
       "source": "Ballot Box Scotland"
+    },
+    {
+      "title": "Labour's Scottish manifesto pledges analysed",
+      "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
+      "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-13T15:31:34.000Z",
+      "source": "BBC News"
     }
   ]
 }
