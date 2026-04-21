@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T18:38:32.961Z",
+  "lastUpdated": "2026-04-21T06:57:12.289Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Swinney turns down Trump invitation to White House banquet",
+      "description": "The Scottish government said Swinney \"politely declined\" the offer to join the event as part of the King and Queen's state visit.",
+      "url": "https://www.bbc.com/news/articles/c78rg2y2vn5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-20T21:52:40.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "MSPs need to work together to reform council tax - SNP",
       "description": "Representatives from six Scottish political parties agree that the council tax needs to be reformed, but how exactly is a contentious issue.",
@@ -217,13 +224,6 @@
       "url": "https://ballotbox.scot/yougov-april-2026/",
       "publishedAt": "2026-04-13T16:30:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Labour's Scottish manifesto pledges analysed",
-      "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-13T15:31:34.000Z",
-      "source": "BBC News"
     }
   ]
 }
