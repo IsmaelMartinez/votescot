@@ -1,6 +1,36 @@
 {
-  "lastUpdated": "2026-04-20T08:48:38.611Z",
+  "lastUpdated": "2026-04-21T08:40:18.217Z",
   "constituency": [
+    {
+      "date": "2026-03-31",
+      "endDate": "2026-04-13",
+      "pollster": "JL Partners",
+      "client": "The Telegraph",
+      "sampleSize": 2018,
+      "snp": 32,
+      "con": 10,
+      "lab": 20,
+      "libdem": 9,
+      "green": 9,
+      "alba": null,
+      "reform": 18,
+      "others": 3
+    },
+    {
+      "date": "2026-02-04",
+      "endDate": "2026-04-12",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 5124,
+      "snp": 33,
+      "con": 12,
+      "lab": 18,
+      "libdem": 12,
+      "green": 1,
+      "alba": null,
+      "reform": 21,
+      "others": 2
+    },
     {
       "date": "2026-03-24",
       "endDate": "2026-04-10",
@@ -63,8 +93,8 @@
     },
     {
       "date": "2026-03-13",
-      "endDate": "2026-03-30",
-      "pollster": "Find Out Now",
+      "endDate": "2026-03-31",
+      "pollster": "Find Out Now / Electoral Calculus",
       "client": "The National",
       "sampleSize": 4105,
       "snp": 34,
@@ -1954,6 +1984,36 @@
   ],
   "regional": [
     {
+      "date": "2026-03-31",
+      "endDate": "2026-04-13",
+      "pollster": "JL Partners",
+      "client": "The Telegraph",
+      "sampleSize": 2018,
+      "snp": 27,
+      "con": 12,
+      "lab": 19,
+      "libdem": 9,
+      "green": 12,
+      "alba": null,
+      "reform": 20,
+      "others": 3
+    },
+    {
+      "date": "2026-02-04",
+      "endDate": "2026-04-12",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 5124,
+      "snp": 29,
+      "con": 12,
+      "lab": 16,
+      "libdem": 12,
+      "green": 10,
+      "alba": null,
+      "reform": 19,
+      "others": 3
+    },
+    {
       "date": "2026-03-24",
       "endDate": "2026-04-10",
       "pollster": "More in Common",
@@ -2015,8 +2075,8 @@
     },
     {
       "date": "2026-03-13",
-      "endDate": "2026-03-30",
-      "pollster": "Find Out Now",
+      "endDate": "2026-03-31",
+      "pollster": "Find Out Now / Electoral Calculus",
       "client": "The National",
       "sampleSize": 4105,
       "snp": 29,
