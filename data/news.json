@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T06:56:50.098Z",
+  "lastUpdated": "2026-04-22T12:40:53.561Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Lib Dem leader signals party could back Sarwar as first minister",
+      "description": "Alex Cole-Hamilton says he would have an \"obligation\" to remove the SNP from power if the opportunity arose.",
+      "url": "https://www.bbc.com/news/articles/c2d8w09k4wko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-22T09:08:50.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Swinney turns down Trump invitation to White House banquet",
       "description": "The Scottish government said Swinney \"politely declined\" the offer to join the event as part of the King and Queen's state visit.",
@@ -156,13 +163,6 @@
       "source": "BBC News"
     },
     {
-      "title": "Former Nato chief warns UK's national security 'in peril'",
-      "description": "Lord George Robertson, a former Labour defence secretary, will use a speech to accuse \"non-military experts in the Treasury\" of \"vandalism\".",
-      "url": "https://www.bbc.com/news/articles/cje4n5ppgw7o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-14T20:10:22.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
       "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
@@ -181,13 +181,6 @@
       "description": "BBC Scotland journalists have analysed some of the policies in the Scottish Greens' manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/cx294n99p90o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-14T13:14:21.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "The Greens' Scottish election manifesto at-a-glance",
-      "description": "The party has announced its policy plans ahead of the Holyrood poll on 7 May.",
-      "url": "https://www.bbc.com/news/articles/c0e7w7y5xqvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-14T12:26:42.000Z",
       "source": "BBC News"
     },
     {
@@ -219,10 +212,17 @@
       "source": "Ballot Box Scotland"
     },
     {
-      "title": "Labour's Scottish manifesto pledges analysed",
-      "description": "BBC Scotland journalists have analysed some of the policies in Labour's manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cly9gnz59yeo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-13T15:31:34.000Z",
+      "title": "Anas Sarwar asks voters in Scotland to give Labour five years to ‘fix SNP’s mess’",
+      "description": "<p>Scottish Labour leader pledges more homes and tax cuts as party tries to reverse slump in support before May elections</p><p>Anas Sarwar has appealed to voters to give Labour five years “to fix the Scottish National party’s mess” as he pledged more homes, tax cuts and a smaller public sector.</p><p>The Scottish Labour leader is fighting a last-ditch attempt to reverse a steep slump in support. Recent polls put Sarwar’s party third or even fourth behind the SNP, Reform and the Scottish Greens, dragged down by the UK government’s unpopularity.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections",
+      "publishedAt": "2026-04-13T14:35:15.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "The BBC Scotland election debate fact-checked",
+      "description": "Claims made by leaders of six political parties who took part in a TV debate for the 2026 Holyrood election campaign are checked.",
+      "url": "https://www.bbc.com/news/articles/c62j07q046eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-12T22:30:06.000Z",
       "source": "BBC News"
     }
   ]
