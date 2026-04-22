@@ -1,0 +1,15 @@
+id: james-adams-banffshire-and-buchan-coast
+name: James Adams
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+constituency: banffshire-and-buchan-coast
+isIncumbent: false
+quizCandidate: false
+bio: Conservative and Unionist Party candidate for Banffshire and Buchan Coast.
+highlights:
+  - Conservative and Unionist Party candidate for Banffshire and Buchan Coast in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

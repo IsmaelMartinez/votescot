@@ -1,0 +1,15 @@
+id: daniel-coleman-dundee-city-west
+name: Daniel Coleman
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+constituency: dundee-city-west
+isIncumbent: false
+quizCandidate: false
+bio: Liberal Democrats candidate for Dundee City West.
+highlights:
+  - Liberal Democrats candidate for Dundee City West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website
