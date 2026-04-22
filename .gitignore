@@ -4,6 +4,8 @@ dist/
 .astro/
 # generated projection report (run `npm run project:polls` to regenerate)
 data/projection-report.json
+# generated reconciliation report (run `npx tsx scripts/reconcile-candidates.ts` to regenerate)
+reconcile-report.json
 
 # dependencies
 node_modules/
