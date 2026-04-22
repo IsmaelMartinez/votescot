@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T12:40:53.561Z",
+  "lastUpdated": "2026-04-22T18:40:37.205Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Starmer admits No 10 asked about job for aide Matthew Doyle",
+      "description": "The prime minister was questioned at PMQs about allegations that Downing Street had asked about a diplomat role for the then-communications chief.",
+      "url": "https://www.bbc.com/news/articles/cq59xx6n3j7o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-22T13:13:14.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "STV staff to strike on Scottish election results day",
+      "description": "Members of both the National Union of Journalists (NUJ) and Bectu are set to walk out on Friday 8 May.",
+      "url": "https://www.bbc.com/news/articles/clyxrl7prkzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-22T13:06:44.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Lib Dem leader signals party could back Sarwar as first minister",
       "description": "Alex Cole-Hamilton says he would have an \"obligation\" to remove the SNP from power if the opportunity arose.",
@@ -210,20 +224,6 @@
       "url": "https://ballotbox.scot/yougov-april-2026/",
       "publishedAt": "2026-04-13T16:30:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Anas Sarwar asks voters in Scotland to give Labour five years to ‘fix SNP’s mess’",
-      "description": "<p>Scottish Labour leader pledges more homes and tax cuts as party tries to reverse slump in support before May elections</p><p>Anas Sarwar has appealed to voters to give Labour five years “to fix the Scottish National party’s mess” as he pledged more homes, tax cuts and a smaller public sector.</p><p>The Scottish Labour leader is fighting a last-ditch attempt to reverse a steep slump in support. Recent polls put Sarwar’s party third or even fourth behind the SNP, Reform and the Scottish Greens, dragged down by the UK government’s unpopularity.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/politics/2026/apr/13/anas-sarwar-voters-scottish-labour-snp-mess-scotland-elections",
-      "publishedAt": "2026-04-13T14:35:15.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "The BBC Scotland election debate fact-checked",
-      "description": "Claims made by leaders of six political parties who took part in a TV debate for the 2026 Holyrood election campaign are checked.",
-      "url": "https://www.bbc.com/news/articles/c62j07q046eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-12T22:30:06.000Z",
-      "source": "BBC News"
     }
   ]
 }
