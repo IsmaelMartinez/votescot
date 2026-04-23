@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T06:58:09.966Z",
+  "lastUpdated": "2026-04-23T12:41:22.844Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Starmer brushes off reports that cabinet ministers don’t support him over sacking of Olly Robbins – UK politics live",
+      "description": "<p>The prime minister said that cabinet is still united and focused on delivering the government’s policy agenda</p><p><strong>Little</strong> says in March she had a meeting when she asked to see the Foreign Office’s documentation about the decision to grant Mandelson vetting. She said she was asking because this was documentation covered by the humble address. She said was told that “that information would not be forthcoming”.</p><p>In the middle of March, I have a meeting with Sir Olly and a senior member of his team, and this is after the point that I’ve been told that this summary document exists.</p><p>I specifically ask to see this document and any decision-making audit trail around those judgments at the time. It was made clear to me that that information would not be forthcoming.</p><p>I took the very unusual judgment that I should directly request the information from UK Security Vetting.</p><p>And I did that because I go back to my responsibilities, to discharge the humble address, which is a responsibility that is unique to me and I take very seriously.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/23/keir-starmer-peter-mandelson-vetting-cat-little-olly-robbins-vet-uk-politics-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/23/keir-starmer-peter-mandelson-vetting-cat-little-olly-robbins-vet-uk-politics-latest-news-updates",
+      "publishedAt": "2026-04-23T12:38:25.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "BBS Exclusive Poll Analysis: Survation 14th – 21st of April 2026",
+      "description": "This BBS-commissioned poll is surprisingly poor for the SNP, but still has a small Pro-Independence majority. Nonetheless, John Swinney will be hoping this is an outlier. [...]",
+      "url": "https://ballotbox.scot/survation-april-2026/",
+      "publishedAt": "2026-04-23T08:00:00.000Z",
+      "source": "Ballot Box Scotland"
+    },
     {
       "title": "Starmer admits No 10 asked about job for aide Matthew Doyle",
       "description": "The prime minister was questioned at PMQs about allegations that Downing Street had asked about a diplomat role for the then-communications chief.",
@@ -210,20 +224,6 @@
       "url": "https://www.theguardian.com/uk-news/2026/apr/14/msps-not-told-about-collapse-of-funding-deal-for-scottish-nature-restoration",
       "publishedAt": "2026-04-14T05:00:01.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Shabana Mahmood says Southport inquiry report exposed ‘systematic failures across multiple public sector organisations’ – as it happened",
-      "description": "<p>The home secretary made the comments after an inquiry revealed that the system ‘completely failed’</p><p><strong>Keir Starmer</strong> has confirmed that he wants to stop children being exposed to addictive scrolling features on their phones as part of measures to protect them from social media.</p><p>The PM is under pressure to implement an Australian-style ban on social media for under-16s, and the government<a href=\"https://www.theguardian.com/media/2026/feb/16/social-media-restrictions-keir-starmer-announced\"> is consulting</a> on whether to go ahead with a full ban, or whether to just impose more specific restrictions.</p><p>It’s not a question of if we do something, it’s what we do.</p><p>The addictive scrolling mechanisms are really problematic to my mind, they need to go.</p><p>Despite some lower-income households receiving a long-overdue real-terms increase in their benefits, we now estimate – based on market-forecasts for the rise in energy prices consistent with market pricing after the announcement of a ceasefire – that average income growth for the poorest fifth this year is now set to be just 1.2 per cent, down from 2.8 per cent before the conflict.</p><p>The picture is brighter for families in the bottom half of the income distribution with three or more children. Even after the inflation shock, the abolition of the two-child limit is estimated to deliver 7.7 per cent income growth for this group this year – compared to 0.0 per cent for poorer families with fewer than three children.</p><p>Despite hopes for a sustained peace, the path of this conflict remains uncertain and energy prices remain well above pre-war levels, meaning many households face a decline in their purchasing power this year.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates",
-      "publishedAt": "2026-04-13T17:16:06.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: YouGov MRP 23rd of March – 8th of April 2026",
-      "description": "Scepticism about fancy MRP polling aside and just using their vote share figures, the SNP are within touching distance of a majority whilst the Conservatives are near-death. [...]",
-      "url": "https://ballotbox.scot/yougov-april-2026/",
-      "publishedAt": "2026-04-13T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
     }
   ]
 }
