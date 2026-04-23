@@ -1,6 +1,36 @@
 {
-  "lastUpdated": "2026-04-22T08:38:28.103Z",
+  "lastUpdated": "2026-04-23T08:39:15.398Z",
   "constituency": [
+    {
+      "date": "2026-04-14",
+      "endDate": "2026-04-21",
+      "pollster": "Survation",
+      "client": "Ballot Box Scotland",
+      "sampleSize": null,
+      "snp": 35,
+      "con": 13,
+      "lab": 20,
+      "libdem": 10,
+      "green": 1,
+      "alba": null,
+      "reform": 20,
+      "others": null
+    },
+    {
+      "date": "2026-04-15",
+      "endDate": "2026-04-20",
+      "pollster": "Find Out Now",
+      "client": "Scot Goes Pop",
+      "sampleSize": null,
+      "snp": 35,
+      "con": 9,
+      "lab": 14,
+      "libdem": 10,
+      "green": 12,
+      "alba": null,
+      "reform": 14,
+      "others": null
+    },
     {
       "date": "2026-03-31",
       "endDate": "2026-04-13",
