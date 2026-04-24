@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T12:39:59.969Z",
+  "lastUpdated": "2026-04-24T18:32:18.375Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Zack Polanski calls for Trump to be 'kicked out' of his Scottish golf courses",
+      "description": "Trump International responded calling the Greens leader an \"imbecile\" after he shared his personal opinion on the Holyrood campaign trail.",
+      "url": "https://www.bbc.com/news/articles/c8954xe8yjpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-24T18:22:38.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "‘This election is all to play for’: Can the Scottish Labour leader defy political gravity in May?",
       "description": "<p>Anas Sarwar speaks to the Guardian about why he thinks the polls are wrong and how he hopes to end the SNP’s near 20-year dominance at Holyrood</p><p>Anas Sarwar says he is certain he can pull off one of the greatest escape acts of modern British politics. It is 14 days until the Holyrood election, and the polls consistently show Scottish Labour is in a battle simply to come second, never mind win.</p><p>Those polls are wrong, Sarwar says, and in two weeks plans to prove it. Claiming to be “more than happy” with his party’s underdog status, the Scottish Labour leader insists the media are too obsessed by polling numbers.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/24/this-election-is-all-to-play-for-can-scottish-labour-leader-defy-political-gravity\">Continue reading...</a>",
@@ -191,13 +198,6 @@
       "source": "The Guardian — Scotland politics"
     },
     {
-      "title": "Supermarket food prices to be capped under SNP manifesto pledge",
-      "description": "The cost of \"essential\" items such as bread, milk and cheese are to be limited under John Swinney's plan.",
-      "url": "https://www.bbc.com/news/articles/cgrlpg97ey9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-16T13:49:51.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "The SNP's manifesto pledges analysed",
       "description": "We have analysed some of the policies in the Scottish National Party's manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/c0q998dzwz2o?at_medium=RSS&at_campaign=rss",
@@ -212,17 +212,17 @@
       "source": "The Guardian — Scotland politics"
     },
     {
-      "title": "Labour's Sarwar brands Scottish Reform leader 'a liar' over deal claim",
-      "description": "Scottish Labour's Anas Sarwar brands Malcolm Offord \"a pathetic, poisonous, odious little man\" after a TV debate clash.",
-      "url": "https://www.bbc.com/news/articles/c36rrrg9k9do?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-15T12:15:00.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
       "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
       "publishedAt": "2026-04-14T16:32:59.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
+      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
+      "publishedAt": "2026-04-14T14:13:25.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
