@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T18:41:46.624Z",
+  "lastUpdated": "2026-04-24T06:58:33.246Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,11 +16,53 @@
   ],
   "items": [
     {
+      "title": "‘This election is all to play for’: Can the Scottish Labour leader defy political gravity in May?",
+      "description": "<p>Anas Sarwar speaks to the Guardian about why he thinks the polls are wrong and how he hopes to end the SNP’s near 20-year dominance at Holyrood</p><p>Anas Sarwar says he is certain he can pull off one of the greatest escape acts of modern British politics. It is 14 days until the Holyrood election, and the polls consistently show Scottish Labour is in a battle simply to come second, never mind win.</p><p>Those polls are wrong, Sarwar says, and in two weeks plans to prove it. Claiming to be “more than happy” with his party’s underdog status, the Scottish Labour leader insists the media are too obsessed by polling numbers.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/24/this-election-is-all-to-play-for-can-scottish-labour-leader-defy-political-gravity\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/24/this-election-is-all-to-play-for-can-scottish-labour-leader-defy-political-gravity",
+      "publishedAt": "2026-04-24T05:00:32.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Polling day to mark launch of new voting system for blind people",
+      "description": "An improved system to safeguard the anonymous vote will be used across Scotland on 7 May.",
+      "url": "https://www.bbc.com/news/articles/cp86g90n2qqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-23T22:13:08.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Are parties being upfront about Scotland's finances?",
+      "description": "Can Holyrood afford to pay for the spending promises being outlined in the election campaign?",
+      "url": "https://www.bbc.com/news/articles/cp8648vqp1ro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-23T22:11:51.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "State-owned shipyard 'blocked' from bidding for new CalMac ferry",
+      "description": "Ferguson Marine said it was unable to bid to build a replacement for MV Lord of the Isles because of eligibility criteria.",
+      "url": "https://www.bbc.com/news/articles/c93ezx6y4dko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-23T22:08:05.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "SNP's McAllan supports more 'evidence-led' drilling in North Sea",
+      "description": "The main political parties were asked their views on oil and gas extraction during the BBC's Question Time held in Aberdeen.",
+      "url": "https://www.bbc.com/news/articles/c2d8610rny4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-23T20:45:52.000Z",
+      "source": "BBC News"
+    },
+    {
       "title": "Global Counsel, lobbying firm set up by Mandelson, went bust owing £4.5m just before his arrest – as it happened",
       "description": "<p>Firm went bust in February amid fallout from the scandal over Mandelson’s links to Jeffrey Epstein</p><p><strong>Little</strong> says in March she had a meeting when she asked to see the Foreign Office’s documentation about the decision to grant Mandelson vetting. She said she was asking because this was documentation covered by the humble address. She said was told that “that information would not be forthcoming”.</p><p>In the middle of March, I have a meeting with Sir Olly and a senior member of his team, and this is after the point that I’ve been told that this summary document exists.</p><p>I specifically ask to see this document and any decision-making audit trail around those judgments at the time. It was made clear to me that that information would not be forthcoming.</p><p>I took the very unusual judgment that I should directly request the information from UK Security Vetting.</p><p>And I did that because I go back to my responsibilities, to discharge the humble address, which is a responsibility that is unique to me and I take very seriously.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/23/keir-starmer-peter-mandelson-vetting-cat-little-olly-robbins-vet-uk-politics-latest-news-updates\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/live/2026/apr/23/keir-starmer-peter-mandelson-vetting-cat-little-olly-robbins-vet-uk-politics-latest-news-updates",
       "publishedAt": "2026-04-23T16:48:21.000Z",
       "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish election 2026: Who should I vote for? Compare party policies",
+      "description": "Explore the policies of the main parties in Scotland and compare where they stand on key issues with this interactive guide.",
+      "url": "https://www.bbc.com/news/articles/cew79ezknrlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-23T11:49:08.000Z",
+      "source": "BBC News"
     },
     {
       "title": "BBS Exclusive Poll Analysis: Survation 14th – 21st of April 2026",
@@ -48,13 +90,6 @@
       "description": "Alex Cole-Hamilton says he would have an \"obligation\" to remove the SNP from power if the opportunity arose.",
       "url": "https://www.bbc.com/news/articles/c2d8w09k4wko?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-22T09:08:50.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Swinney turns down Trump invitation to White House banquet",
-      "description": "The Scottish government said Swinney \"politely declined\" the offer to join the event as part of the King and Queen's state visit.",
-      "url": "https://www.bbc.com/news/articles/c78rg2y2vn5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-20T21:52:40.000Z",
       "source": "BBC News"
     },
     {
@@ -184,45 +219,10 @@
       "source": "BBC News"
     },
     {
-      "title": "Scottish Green co-leader undecided over constituency vote",
-      "description": "With Greens only standing in six constituencies, the party's co-leader does not have the option of backing his party for the seat where he lives.",
-      "url": "https://www.bbc.com/news/articles/cx2rr117e9lo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-15T10:14:17.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
       "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
       "publishedAt": "2026-04-14T16:32:59.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
-      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
-      "publishedAt": "2026-04-14T14:13:25.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish Greens' manifesto pledges analysed",
-      "description": "BBC Scotland journalists have analysed some of the policies in the Scottish Greens' manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cx294n99p90o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-14T13:14:21.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Sarwar rules out 'harsh' cuts to bring down benefits bill",
-      "description": "The Scottish Labour leader says he wants to bring down social security spending, but not by slashing benefits.",
-      "url": "https://www.bbc.com/news/articles/c75kklq9z2go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-14T09:12:30.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "MSPs not told about collapse of funding deal for Scottish nature restoration",
-      "description": "<p>Exclusive: Ministers accused of trying to keep investment firm’s withdrawal from partnership with NatureScot under wraps</p><p>A funding deal to raise £100m from private investors for urgently needed nature restoration in Scotland has fallen through without the Scottish parliament being told.</p><p>The Guardian has learned that Aberdeen, the investment firm, decided to withdraw from <a href=\"https://www.theguardian.com/uk-news/2025/sep/30/naturescot-private-investment-conservation\">a partnership with the agency NatureScot</a> to raise at least £100m for conservation projects from commercial and private investors late last year.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/msps-not-told-about-collapse-of-funding-deal-for-scottish-nature-restoration\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/uk-news/2026/apr/14/msps-not-told-about-collapse-of-funding-deal-for-scottish-nature-restoration",
-      "publishedAt": "2026-04-14T05:00:01.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
