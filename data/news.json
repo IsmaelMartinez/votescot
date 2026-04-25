@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T18:32:18.375Z",
+  "lastUpdated": "2026-04-25T06:47:17.374Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Scotland's population is shifting - could it affect the election outcome?",
+      "description": "Changing populations mean that Scotland's electoral map has been redrawn - which could influence how parties campaign, and how the election plays out.",
+      "url": "https://www.bbc.com/news/articles/cpvxej8ly8yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-24T22:08:33.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Zack Polanski calls for Trump to be 'kicked out' of his Scottish golf courses",
       "description": "Trump International responded calling the Greens leader an \"imbecile\" after he shared his personal opinion on the Holyrood campaign trail.",
@@ -160,13 +167,6 @@
       "description": "Scottish leader Alex Cole-Hamilton has announced plans to spend an extra £400m on social care.",
       "url": "https://www.bbc.com/news/articles/c4gj01zx75qo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-17T09:45:13.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Swinney denies SNP grocery price cap is 'potty gimmick'",
-      "description": "The first minister defends his party's plans to impose a limit on the cost of \"essential\" items.",
-      "url": "https://www.bbc.com/news/articles/c8ej8yk7dlxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-17T08:28:48.000Z",
       "source": "BBC News"
     },
     {
