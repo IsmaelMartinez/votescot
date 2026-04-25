@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T08:43:51.581Z",
+  "lastUpdated": "2026-04-25T08:22:30.603Z",
   "constituency": [
     {
       "date": "2026-04-14",
@@ -2042,21 +2042,6 @@
       "alba": null,
       "reform": 17,
       "others": null
-    },
-    {
-      "date": "2026-03-31",
-      "endDate": "2026-04-13",
-      "pollster": "JL Partners",
-      "client": "The Telegraph",
-      "sampleSize": 2018,
-      "snp": 27,
-      "con": 12,
-      "lab": 19,
-      "libdem": 9,
-      "green": 12,
-      "alba": null,
-      "reform": 20,
-      "others": 3
     },
     {
       "date": "2026-03-31",
