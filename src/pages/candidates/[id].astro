@@ -8,11 +8,11 @@ import { slugifyConstituency } from "../../lib/slugify";
 
 export function getStaticPaths() {
   const candidates = loadCandidates();
-  const constituencies = loadConstituencies();
-  return candidates.map((c) => {
-    const constituency = constituencies.find((con) => con.id === c.constituency);
-    return { params: { id: c.id }, props: { candidate: c, constituency } };
-  });
+  const constituencyMap = new Map(loadConstituencies().map((c) => [c.id, c]));
+  return candidates.map((c) => ({
+    params: { id: c.id },
+    props: { candidate: c, constituency: constituencyMap.get(c.constituency) },
+  }));
 }
 
 const { candidate, constituency } = Astro.props;

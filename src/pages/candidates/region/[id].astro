@@ -19,9 +19,9 @@ export function getStaticPaths() {
 const { region, candidates, regionConstituencies } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const questions = loadQuestions();
-const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
-const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
-const comparisonConstituencies = regionConstituencies.map((c: any) => ({ id: c.id, name: c.name }));
+const quizCandidates = candidates.filter((c) => c.quizCandidate);
+const otherCandidates = candidates.filter((c) => !c.quizCandidate);
+const comparisonConstituencies = regionConstituencies.map((c) => ({ id: c.id, name: c.name }));
 ---
 
 <Base title={`${region.name} Candidates`} description={`Candidates standing in the ${region.name} region for the 2026 Scottish Parliament election`}>
@@ -34,7 +34,7 @@ const comparisonConstituencies = regionConstituencies.map((c: any) => ({ id: c.i
 
     <h2 class="font-heading text-lg font-black mb-0.5">{region.name}</h2>
     <p class="font-body text-xs text-gray-400 leading-snug mb-1">
-      Regional list ballot. Covers {regionConstituencies.length} constituencies: {regionConstituencies.map((c: any) => c.name).join(", ")}.
+      Regional list ballot. Covers {regionConstituencies.length} constituencies: {regionConstituencies.map((c) => c.name).join(", ")}.
     </p>
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
       {candidates.length} candidates standing across this region for 7 May 2026.
@@ -50,7 +50,7 @@ const comparisonConstituencies = regionConstituencies.map((c: any) => ({ id: c.i
           Quiz candidates — included in vote compass matching
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {quizCandidates.map((c: any) => (
+          {quizCandidates.map((c) => (
             <CandidateCard candidate={c} basePath={base} />
           ))}
         </div>
@@ -63,7 +63,7 @@ const comparisonConstituencies = regionConstituencies.map((c: any) => ({ id: c.i
           {quizCandidates.length > 0 ? "Other candidates" : "Candidates"}
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {otherCandidates.map((c: any) => (
+          {otherCandidates.map((c) => (
             <CandidateCard candidate={c} basePath={base} />
           ))}
         </div>
