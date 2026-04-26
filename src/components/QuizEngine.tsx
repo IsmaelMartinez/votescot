@@ -110,10 +110,20 @@ function QuizEngineInner(props: Props) {
           {selectorPrompt}
         </p>
 
-        {isRegional ? (
+        {isRegional && (
           <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
             Scottish Parliament uses two ballots — constituency and regional list. We don't yet model separate regional list candidates, so these matches show all candidates standing in your region based on party platforms.
           </div>
+        )}
+
+        {isRegional ? (
+          <PostcodeInput
+            knownConstituencies={props.knownConstituencies ?? props.constituencies.map((c) => c.id)}
+            label="Enter your postcode to find your region automatically"
+            target="region"
+            constituencyToRegion={constituencyToRegion}
+            onResolved={(id) => setSelected(id)}
+          />
         ) : (
           <PostcodeInput
             knownConstituencies={props.knownConstituencies}
