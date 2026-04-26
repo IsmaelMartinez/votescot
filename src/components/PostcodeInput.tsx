@@ -4,17 +4,28 @@ import { usePostcodeLookup } from "../lib/usePostcodeLookup";
 interface Props {
   knownConstituencies: string[];
   label: string;
-  onResolved?: (constituencyId: string) => void;
+  onResolved?: (id: string) => void;
+  target?: "constituency" | "region";
+  constituencyToRegion?: ReadonlyMap<string, string>;
 }
 
-export default function PostcodeInput({ knownConstituencies, label, onResolved }: Props) {
-  const pc = usePostcodeLookup(knownConstituencies);
+export default function PostcodeInput({
+  knownConstituencies,
+  label,
+  onResolved,
+  target = "constituency",
+  constituencyToRegion,
+}: Props) {
+  const pc = usePostcodeLookup(knownConstituencies, { constituencyToRegion });
 
   React.useEffect(() => {
-    if (pc.result?.found && pc.result.covered && pc.result.constituencyId && onResolved) {
-      onResolved(pc.result.constituencyId);
-    }
+    if (!pc.result?.found || !pc.result.covered || !onResolved) return;
+    const id = target === "region" ? pc.result.regionId : pc.result.constituencyId;
+    if (id) onResolved(id);
   }, [pc.result]);
+
+  const targetMissing =
+    target === "region" && pc.result?.found && pc.result.covered && !pc.result.regionId;
 
   return (
     <div className="mb-4">
@@ -39,6 +50,11 @@ export default function PostcodeInput({ knownConstituencies, label, onResolved }
       {pc.result?.found && !pc.result.covered && (
         <p className="mt-2 font-body text-xs text-amber-600">
           Found {pc.result.constituencyName}, but it doesn't match our records.
+        </p>
+      )}
+      {targetMissing && (
+        <p className="mt-2 font-body text-xs text-amber-600">
+          Found {pc.result!.constituencyName}, but we couldn't map it to a region.
         </p>
       )}
       {pc.result && !pc.result.found && (

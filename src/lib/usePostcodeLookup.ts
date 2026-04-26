@@ -5,10 +5,16 @@ interface PostcodeLookupResult {
   found: boolean;
   constituencyId?: string;
   constituencyName?: string;
+  regionId?: string;
+  regionName?: string;
   covered?: boolean;
 }
 
-export function usePostcodeLookup(knownConstituencies: string[]) {
+interface Options {
+  constituencyToRegion?: ReadonlyMap<string, string>;
+}
+
+export function usePostcodeLookup(knownConstituencies: string[], options: Options = {}) {
   const [postcode, setPostcode] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<PostcodeLookupResult | null>(null);
@@ -37,8 +43,17 @@ export function usePostcodeLookup(knownConstituencies: string[]) {
 
       const constituencyId = slugifyConstituency(area.name);
       const covered = knownConstituencies.includes(constituencyId);
+      const regionName = options.constituencyToRegion?.get(constituencyId);
+      const regionId = regionName ? slugifyConstituency(regionName) : undefined;
 
-      setResult({ found: true, constituencyId, constituencyName: area.name, covered });
+      setResult({
+        found: true,
+        constituencyId,
+        constituencyName: area.name,
+        regionId,
+        regionName,
+        covered,
+      });
     } catch {
       setResult({ found: false });
     } finally {

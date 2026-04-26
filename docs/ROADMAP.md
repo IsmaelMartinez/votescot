@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 26 April 2026
+Last updated: 26 April 2026 (regional parity: postcode lookup, region candidate page, profile region tag)
 
 ## What's live now
 
@@ -67,9 +67,9 @@ The items below are what's left after the 17–18 April audit and fix sweep. Pic
 
 The regional questionnaire shipped on 26 April 2026 but only covers the quiz surface. Constituency has six surfaces; regional has one. To bring them to parity:
 
-- [ ] **Postcode → region resolution.** `src/lib/usePostcodeLookup.ts` currently resolves to a constituency. Extend it to also expose the region (cheap: postcode → constituency → `constituency.region`). Wire `PostcodeInput` into the `/quiz/regional` selector so users don't have to pick from a region list.
-- [ ] **`/candidates/region/[id]` dynamic page.** Mirror `/candidates/constituency/[id]` using `loadCandidatesByRegion` (already in `src/lib/data.ts`). Add a "candidates in this region" link from the regional quiz results.
-- [ ] **Show region on candidate profiles.** Each candidate currently shows their constituency; add the derived region beside it on `src/pages/candidates/[id].astro`.
+- [x] **Postcode → region resolution.** Done. `usePostcodeLookup` now optionally takes a `constituencyToRegion` map and surfaces `regionId` / `regionName`; `PostcodeInput` accepts a `target: "region"` mode and is wired into the `/quiz/regional` selector.
+- [x] **`/candidates/region/[id]` dynamic page.** Done. Mirrors `/candidates/constituency/[id]` for all 9 regions, with side-by-side comparison scoped to constituencies in the region. The regional quiz results screen now links to it.
+- [x] **Show region on candidate profiles.** Done. Each profile now shows "Standing in {constituency} · {region} region" with links to both group pages.
 - [ ] **Region picker on the homepage.** Either colour-overlay the existing ConstituencyMap by region, or add a simple region list/dropdown beneath it. Real region-boundary GeoJSON would be ideal but isn't bundled — the cheap path is colouring the existing constituency polygons.
 - [ ] **Honest regional list candidates (data model change).** In AMS, parties run separate regional lists — different candidates from the constituency ballot. The current regional view filters constituency candidates by region, which is a stepping-stone, not the truth. Proper fix: add `ballot: "constituency" | "regional"` (or a separate `data/regional-candidates/`) and ingest party regional lists from Democracy Club. The candidate sync workflow has been retired (locked ballot), so this needs a one-shot import script. Update the regional quiz banner once done.
 
