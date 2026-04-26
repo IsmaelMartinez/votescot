@@ -185,6 +185,17 @@ function QuizEngineInner(props: Props) {
           Based on {answeredCount} of {questions.length} questions answered. The more you answer, the better the match.
         </p>
 
+        {isRegional && selectedItem && (
+          <div className="mb-3 text-center">
+            <a
+              href={`${basePath}candidates/region/${selectedItem.id}`}
+              className="inline-block px-4 py-2 bg-white border border-votescot-border rounded-lg font-body text-sm font-bold text-gray-700 no-underline hover:border-votescot-gold"
+            >
+              View all candidates in {selectedName} →
+            </a>
+          </div>
+        )}
+
         <div className="flex flex-col gap-2">
           {ranked.map((cand, i) => (
             <div
