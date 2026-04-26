@@ -66,18 +66,15 @@ function QuizEngineInner(props: Props) {
       }
     }
     return map;
-  }, [isRegional, isRegional ? props.constituencies : null]);
+  }, [isRegional, props.constituencies]);
 
   const selectedItem = items.find((i) => i.id === selected);
   const selectedName = selectedItem?.name;
 
-  const filteredCandidates = !selected
+  const filteredCandidates = !selected || (isRegional && !selectedName)
     ? []
     : isRegional
-      ? candidates.filter((c) => {
-          const regionName = constituencyToRegion.get(c.constituency);
-          return regionName !== undefined && regionName === selectedName;
-        })
+      ? candidates.filter((c) => constituencyToRegion.get(c.constituency) === selectedName)
       : candidates.filter((c) => c.constituency === selected);
 
   const answeredCount = Object.keys(answers).length;

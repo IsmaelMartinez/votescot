@@ -139,13 +139,30 @@ export function loadRegions(): Region[] {
   return [...regionsCache];
 }
 
+let candidatesByRegionCache: ReadonlyMap<string, readonly Candidate[]> | null = null;
+
+function buildCandidatesByRegion(): ReadonlyMap<string, readonly Candidate[]> {
+  const constituencyToRegion = new Map<string, string>();
+  for (const c of loadConstituencies()) {
+    if (c.region) constituencyToRegion.set(c.id, c.region);
+  }
+  const grouped = new Map<string, Candidate[]>();
+  for (const cand of loadCandidates()) {
+    const region = constituencyToRegion.get(cand.constituency);
+    if (!region) continue;
+    let bucket = grouped.get(region);
+    if (!bucket) {
+      bucket = [];
+      grouped.set(region, bucket);
+    }
+    bucket.push(cand);
+  }
+  return new Map(Array.from(grouped, ([k, v]) => [k, Object.freeze(v) as readonly Candidate[]]));
+}
+
 export function loadCandidatesByRegion(regionName: string): Candidate[] {
-  const constituenciesByRegion = new Set(
-    loadConstituencies()
-      .filter((c) => c.region === regionName)
-      .map((c) => c.id)
-  );
-  return loadCandidates().filter((c) => constituenciesByRegion.has(c.constituency));
+  if (!candidatesByRegionCache) candidatesByRegionCache = buildCandidatesByRegion();
+  return [...(candidatesByRegionCache.get(regionName) ?? [])];
 }
 
 let questionsCache: readonly QuizQuestion[] | null = null;
