@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 18 April 2026
+Last updated: 26 April 2026
 
 ## What's live now
 
@@ -8,7 +8,7 @@ The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scot
 
 ### Core features
 
-The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). 370 candidates from 6 major parties have quiz data based on party-level positions. All six parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK, Scottish Labour) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
+The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). It runs in two modes — `/quiz` for the constituency ballot and `/quiz/regional` for the regional list ballot — sharing the same questions and matching algorithm; regional mode filters the candidate pool by region (constituencies now carry a `region` field across all 9 of the 2026 boundary-review regions). 370 candidates from 6 major parties have quiz data based on party-level positions. All six parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK, Scottish Labour) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
 
 Every candidate has a profile page with policy stances, track record highlights (where available), and source links to WhoCanIVoteFor, party websites, and TheyWorkForYou. The side-by-side comparison view lets voters compare all quiz-ready candidates in their constituency grouped by policy area.
 
@@ -62,6 +62,16 @@ Most party manifestos are standard PDFs that `pdftotext -layout` can parse direc
 ## Next up
 
 The items below are what's left after the 17–18 April audit and fix sweep. Pick these up in a fresh session. Each is scoped tight enough to handle in a single PR.
+
+### Regional parity follow-up (next steps)
+
+The regional questionnaire shipped on 26 April 2026 but only covers the quiz surface. Constituency has six surfaces; regional has one. To bring them to parity:
+
+- [ ] **Postcode → region resolution.** `src/lib/usePostcodeLookup.ts` currently resolves to a constituency. Extend it to also expose the region (cheap: postcode → constituency → `constituency.region`). Wire `PostcodeInput` into the `/quiz/regional` selector so users don't have to pick from a region list.
+- [ ] **`/candidates/region/[id]` dynamic page.** Mirror `/candidates/constituency/[id]` using `loadCandidatesByRegion` (already in `src/lib/data.ts`). Add a "candidates in this region" link from the regional quiz results.
+- [ ] **Show region on candidate profiles.** Each candidate currently shows their constituency; add the derived region beside it on `src/pages/candidates/[id].astro`.
+- [ ] **Region picker on the homepage.** Either colour-overlay the existing ConstituencyMap by region, or add a simple region list/dropdown beneath it. Real region-boundary GeoJSON would be ideal but isn't bundled — the cheap path is colouring the existing constituency polygons.
+- [ ] **Honest regional list candidates (data model change).** In AMS, parties run separate regional lists — different candidates from the constituency ballot. The current regional view filters constituency candidates by region, which is a stepping-stone, not the truth. Proper fix: add `ballot: "constituency" | "regional"` (or a separate `data/regional-candidates/`) and ingest party regional lists from Democracy Club. The candidate sync workflow has been retired (locked ballot), so this needs a one-shot import script. Update the regional quiz banner once done.
 
 ### Must-fix if time allows before 7 May
 

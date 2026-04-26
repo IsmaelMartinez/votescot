@@ -7,31 +7,77 @@ import type { Candidate, QuizQuestion } from "../lib/data";
 interface Constituency {
   id: string;
   name: string;
+  region?: string;
 }
 
-interface Props {
+interface Region {
+  id: string;
+  name: string;
+}
+
+type Mode = "constituency" | "regional";
+
+interface BaseProps {
   questions: QuizQuestion[];
   candidates: Candidate[];
-  constituencies: Constituency[];
-  knownConstituencies: string[];
   basePath: string;
 }
 
-function QuizEngineInner({ questions, candidates, constituencies, knownConstituencies, basePath }: Props) {
+interface ConstituencyProps extends BaseProps {
+  mode: "constituency";
+  constituencies: Constituency[];
+  knownConstituencies: string[];
+  regions?: Region[];
+}
+
+interface RegionalProps extends BaseProps {
+  mode: "regional";
+  regions: Region[];
+  constituencies: Constituency[];
+  knownConstituencies?: string[];
+}
+
+type Props = ConstituencyProps | RegionalProps;
+
+function QuizEngineInner(props: Props) {
+  const { mode, questions, candidates, basePath } = props;
+  const isRegional = mode === "regional";
+
+  const items: { id: string; name: string }[] = isRegional
+    ? props.regions
+    : props.constituencies;
+
+  const queryParam = isRegional ? "region" : "constituency";
+
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
-  const [selectedConstituency, setSelectedConstituency] = useState<string>(() => {
+  const [selected, setSelected] = useState<string>(() => {
     if (typeof window !== "undefined") {
-      return new URLSearchParams(window.location.search).get("constituency") || "";
+      return new URLSearchParams(window.location.search).get(queryParam) || "";
     }
     return "";
   });
 
-  const answeredCount = Object.keys(answers).length;
+  const constituencyToRegion = useMemo(() => {
+    const map = new Map<string, string>();
+    if (isRegional) {
+      for (const c of props.constituencies) {
+        if (c.region) map.set(c.id, c.region);
+      }
+    }
+    return map;
+  }, [isRegional, props.constituencies]);
 
-  const filteredCandidates = selectedConstituency
-    ? candidates.filter((c) => c.constituency === selectedConstituency)
-    : [];
+  const selectedItem = items.find((i) => i.id === selected);
+  const selectedName = selectedItem?.name;
+
+  const filteredCandidates = !selected || (isRegional && !selectedName)
+    ? []
+    : isRegional
+      ? candidates.filter((c) => constituencyToRegion.get(c.constituency) === selectedName)
+      : candidates.filter((c) => c.constituency === selected);
+
+  const answeredCount = Object.keys(answers).length;
 
   const ranked = filteredCandidates
     .map((c) => ({
@@ -40,43 +86,55 @@ function QuizEngineInner({ questions, candidates, constituencies, knownConstitue
     }))
     .sort((a, b) => b.match.percentage - a.match.percentage || a.name.localeCompare(b.name));
 
-  const selectedConstituencyName = constituencies.find((c) => c.id === selectedConstituency)?.name;
+  const [filterText, setFilterText] = useState("");
 
-  const [constituencyFilter, setConstituencyFilter] = useState("");
+  const filteredItems = useMemo(() => {
+    const q = filterText.toLowerCase().trim();
+    if (!q) return items;
+    return items.filter((c) => c.name.toLowerCase().includes(q));
+  }, [items, filterText]);
 
-  const filteredConstituencies = useMemo(() => {
-    const q = constituencyFilter.toLowerCase().trim();
-    if (!q) return constituencies;
-    return constituencies.filter((c) => c.name.toLowerCase().includes(q));
-  }, [constituencies, constituencyFilter]);
+  const heading = isRegional ? "Vote Compass — Regional List" : "Vote Compass";
+  const selectorPrompt = isRegional
+    ? "Select your region to get started."
+    : "Select your constituency to get started.";
+  const browsePrompt = isRegional ? "Browse regions:" : "Or browse constituencies:";
+  const filterPlaceholder = isRegional ? "Filter regions…" : "Filter constituencies…";
+  const changeLabel = isRegional ? "Change region" : "Change constituency";
 
-  if (!selectedConstituency) {
+  if (!selected) {
     return (
       <div className="py-3.5">
-        <h2 className="font-heading text-lg font-black mb-1">Vote Compass</h2>
+        <h2 className="font-heading text-lg font-black mb-1">{heading}</h2>
         <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
-          Select your constituency to get started.
+          {selectorPrompt}
         </p>
 
-        <PostcodeInput
-          knownConstituencies={knownConstituencies}
-          label="Enter your postcode to find your constituency automatically"
-          onResolved={(id) => setSelectedConstituency(id)}
-        />
+        {isRegional ? (
+          <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
+            Scottish Parliament uses two ballots — constituency and regional list. We don't yet model separate regional list candidates, so these matches show all candidates standing in your region based on party platforms.
+          </div>
+        ) : (
+          <PostcodeInput
+            knownConstituencies={props.knownConstituencies}
+            label="Enter your postcode to find your constituency automatically"
+            onResolved={(id) => setSelected(id)}
+          />
+        )}
 
-        <p className="font-body text-xs text-gray-500 mb-2">Or browse constituencies:</p>
+        <p className="font-body text-xs text-gray-500 mb-2">{browsePrompt}</p>
         <input
           type="text"
-          value={constituencyFilter}
-          onChange={(e) => setConstituencyFilter(e.target.value)}
-          placeholder="Filter constituencies…"
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+          placeholder={filterPlaceholder}
           className="w-full bg-white border border-votescot-border rounded-lg px-3.5 py-2.5 font-body text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-votescot-gold transition-colors mb-3"
         />
         <div className="flex flex-col gap-2">
-          {filteredConstituencies.map((c) => (
+          {filteredItems.map((c) => (
             <button
               key={c.id}
-              onClick={() => setSelectedConstituency(c.id)}
+              onClick={() => setSelected(c.id)}
               className="text-left bg-white rounded-lg p-3.5 border border-votescot-border hover:border-votescot-gold transition-colors cursor-pointer font-body text-sm font-bold"
             >
               {c.name}
@@ -93,14 +151,14 @@ function QuizEngineInner({ questions, candidates, constituencies, knownConstitue
         <div className="flex items-center justify-between mb-3 flex-wrap gap-1.5">
           <div>
             <h2 className="font-heading text-lg font-black m-0">Your Matches</h2>
-            <div className="font-body text-xs text-gray-400">{selectedConstituencyName}</div>
+            <div className="font-body text-xs text-gray-400">{selectedName}</div>
           </div>
           <div className="flex gap-2">
             <button
-              onClick={() => { setSelectedConstituency(""); setShowResults(false); setAnswers({}); }}
+              onClick={() => { setSelected(""); setShowResults(false); setAnswers({}); }}
               className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
             >
-              Change constituency
+              {changeLabel}
             </button>
             <button
               onClick={() => { setShowResults(false); setAnswers({}); }}
@@ -210,12 +268,12 @@ function QuizEngineInner({ questions, candidates, constituencies, knownConstitue
   return (
     <div className="py-3.5">
       <div className="flex items-center justify-between mb-1 flex-wrap gap-1.5">
-        <h2 className="font-heading text-lg font-black m-0">Vote Compass — {selectedConstituencyName}</h2>
+        <h2 className="font-heading text-lg font-black m-0">{heading}{selectedName ? ` — ${selectedName}` : ""}</h2>
         <button
-          onClick={() => { setSelectedConstituency(""); setAnswers({}); }}
+          onClick={() => { setSelected(""); setAnswers({}); }}
           className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
         >
-          Change constituency
+          {changeLabel}
         </button>
       </div>
       <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-3">

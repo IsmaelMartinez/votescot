@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import QuizEngine from "../../components/QuizEngine.tsx";
+import { loadCandidates, loadQuestions, loadConstituencies, loadRegions } from "../../lib/data";
+
+const questions = loadQuestions();
+const candidates = loadCandidates().filter((c) => c.quizCandidate);
+const constituencies = loadConstituencies();
+const regions = loadRegions();
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Vote Compass — Regional List" description="Answer 8 questions and find which candidate aligns with your values for the regional list ballot">
+  <Header slot="header" currentTab="regional" />
+  <QuizEngine client:load mode="regional" questions={questions} candidates={candidates} regions={regions} constituencies={constituencies} basePath={base} />
+  <Footer slot="footer" />
+</Base>
