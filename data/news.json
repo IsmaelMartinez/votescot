@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-26T12:32:13.896Z",
+  "lastUpdated": "2026-04-26T18:30:48.505Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Too few migrants are coming to Scotland, say SNP",
+      "description": "The SNP say more migrants are needed to support the economy, but Reform claim immigration has pushed the system to breaking point.",
+      "url": "https://www.bbc.com/news/articles/c2484nmm2e3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-26T13:54:33.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Scotland's population is shifting - could it affect the election outcome?",
       "description": "Changing populations mean that Scotland's electoral map has been redrawn - which could influence how parties campaign, and how the election plays out.",
@@ -80,7 +87,7 @@
     },
     {
       "title": "BBS Exclusive Poll Analysis: Survation 14th – 21st of April 2026",
-      "description": "This BBS-commissioned poll is surprisingly poor for the SNP, but still has a small Pro-Independence majority. Nonetheless, John Swinney will be hoping this is an outlier. [...]",
+      "description": "This BBS-commissioned poll is surprisingly poor for the SNP, but still has a small Pro-Independence majority. Nonetheless, John Swinney will be hoping this is an outlier.",
       "url": "https://ballotbox.scot/survation-april-2026/",
       "publishedAt": "2026-04-23T08:00:00.000Z",
       "source": "Ballot Box Scotland"
@@ -150,7 +157,7 @@
     },
     {
       "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
-      "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber. [...]",
+      "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber.",
       "url": "https://ballotbox.scot/more-in-common-april-2026/",
       "publishedAt": "2026-04-17T16:30:00.000Z",
       "source": "Ballot Box Scotland"
@@ -216,13 +223,6 @@
       "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
       "publishedAt": "2026-04-14T16:32:59.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
-      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
-      "publishedAt": "2026-04-14T14:13:25.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
