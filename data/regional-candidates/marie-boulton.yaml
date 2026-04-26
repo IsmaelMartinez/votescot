@@ -1,0 +1,17 @@
+id: marie-boulton
+name: Marie Boulton
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+region: north-east-scotland
+regionLabel: North East Scotland
+listPosition: 999
+ballotPaperId: sp.r.north-east-scotland.2026-05-07
+isIncumbent: false
+bio: Independent regional list candidate for North East Scotland.
+highlights:
+  - Independent regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

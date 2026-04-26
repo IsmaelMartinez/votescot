@@ -1,0 +1,17 @@
+id: allan-petrie
+name: Allan Petrie
+party: Independence for Scotland Party
+partyShort: Independence for Scotland Party
+color: "#666666"
+accent: "#444444"
+region: north-east-scotland
+regionLabel: North East Scotland
+listPosition: 1
+ballotPaperId: sp.r.north-east-scotland.2026-05-07
+isIncumbent: false
+bio: Independence for Scotland Party regional list candidate for North East Scotland.
+highlights:
+  - Independence for Scotland Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11433/
+    type: party_website

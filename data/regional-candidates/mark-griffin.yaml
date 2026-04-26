@@ -1,0 +1,17 @@
+id: mark-griffin
+name: Mark Griffin
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 1
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for Central Scotland and Lothians West.
+highlights:
+  - Labour Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

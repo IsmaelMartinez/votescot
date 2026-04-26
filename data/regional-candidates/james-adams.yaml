@@ -1,0 +1,17 @@
+id: james-adams
+name: James Adams
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 5
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for Glasgow.
+highlights:
+  - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

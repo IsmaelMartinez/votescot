@@ -1,0 +1,17 @@
+id: marie-stadtler
+name: Marie Stadtler
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 5
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Scottish Green Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

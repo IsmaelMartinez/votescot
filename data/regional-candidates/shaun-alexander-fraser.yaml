@@ -1,0 +1,17 @@
+id: shaun-alexander-fraser
+name: Shaun Alexander Fraser
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: highlands-and-islands
+regionLabel: Highlands and Islands
+listPosition: 7
+ballotPaperId: sp.r.highlands-and-islands.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for Highlands and Islands.
+highlights:
+  - Labour Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

@@ -1,0 +1,17 @@
+id: ross-collins
+name: Ross Collins
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 5
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for West Scotland.
+highlights:
+  - Scottish Green Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

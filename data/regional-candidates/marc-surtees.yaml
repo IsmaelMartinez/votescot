@@ -1,0 +1,17 @@
+id: marc-surtees
+name: Marc Surtees
+party: Scottish Family Party
+partyShort: Scottish Family Party
+color: "#666666"
+accent: "#444444"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 4
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Scottish Family Party regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Scottish Family Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP6380/
+    type: party_website

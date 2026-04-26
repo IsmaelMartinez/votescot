@@ -1,0 +1,18 @@
+id: ivan-mckee
+name: Ivan McKee
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 2
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+highlights:
+  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website
+textColor: "#333"

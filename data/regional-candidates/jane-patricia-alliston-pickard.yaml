@@ -1,0 +1,17 @@
+id: jane-patricia-alliston-pickard
+name: Jane Patricia Alliston Pickard
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 2
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Liberal Democrats regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Liberal Democrats regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

@@ -1,0 +1,17 @@
+id: daniel-khan-omalley
+name: Daniel Khan-O'Malley
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 1
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Liberal Democrats regional list candidate for Glasgow.
+highlights:
+  - Liberal Democrats regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

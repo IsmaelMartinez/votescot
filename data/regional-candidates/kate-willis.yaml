@@ -1,0 +1,17 @@
+id: kate-willis
+name: Kate Willis
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: highlands-and-islands
+regionLabel: Highlands and Islands
+listPosition: 3
+ballotPaperId: sp.r.highlands-and-islands.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for Highlands and Islands.
+highlights:
+  - Scottish Green Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

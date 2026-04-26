@@ -1,0 +1,18 @@
+id: alan-findlay
+name: Alan Findlay
+party: Scottish Libertarian Party
+partyShort: Libertarian
+color: "#f5d442"
+accent: "#b89e30"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 1
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish Libertarian Party regional list candidate for West Scotland.
+highlights:
+  - Scottish Libertarian Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP15208/
+    type: party_website
+textColor: "#333"

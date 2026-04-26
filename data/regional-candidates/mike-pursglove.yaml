@@ -1,0 +1,17 @@
+id: mike-pursglove
+name: Mike Pursglove
+party: UK Independence Party (UKIP)
+partyShort: UK Independence Party (UKIP)
+color: "#666666"
+accent: "#444444"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 2
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: UK Independence Party (UKIP) regional list candidate for West Scotland.
+highlights:
+  - UK Independence Party (UKIP) regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP85/
+    type: party_website

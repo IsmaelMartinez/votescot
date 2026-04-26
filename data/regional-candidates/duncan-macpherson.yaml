@@ -1,0 +1,17 @@
+id: duncan-macpherson
+name: Duncan Macpherson
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+region: highlands-and-islands
+regionLabel: Highlands and Islands
+listPosition: 1
+ballotPaperId: sp.r.highlands-and-islands.2026-05-07
+isIncumbent: false
+bio: Independent regional list candidate for Highlands and Islands.
+highlights:
+  - Independent regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

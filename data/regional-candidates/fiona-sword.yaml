@@ -1,0 +1,17 @@
+id: fiona-sword
+name: Fiona Sword
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 3
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Labour Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website
