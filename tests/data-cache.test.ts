@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { loadCandidates, loadConstituencies } from "../src/lib/data";
+import { loadCandidates, loadConstituencies, loadRegions, loadCandidatesByRegion } from "../src/lib/data";
+import { slugifyConstituency } from "../src/lib/slugify";
 
 describe("loadCandidates", () => {
   it("returns an array of candidates", () => {
@@ -41,6 +42,56 @@ describe("loadConstituencies", () => {
       expect(c.competitiveness).toBeTruthy();
       expect(c.topParties).toBeDefined();
       expect(c.topParties!.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("loadRegions", () => {
+  it("derives unique non-empty regions from constituencies", () => {
+    const regions = loadRegions();
+    const constituencies = loadConstituencies();
+    const expectedNames = Array.from(
+      new Set(constituencies.map((c) => c.region).filter((r): r is string => !!r && r.trim() !== ""))
+    );
+    expect(regions.length).toBe(expectedNames.length);
+    for (const name of expectedNames) {
+      expect(regions.find((r) => r.name === name)).toBeDefined();
+    }
+  });
+
+  it("sorts regions alphabetically by name", () => {
+    const regions = loadRegions();
+    const sorted = [...regions].sort((a, b) => a.name.localeCompare(b.name));
+    expect(regions.map((r) => r.name)).toEqual(sorted.map((r) => r.name));
+  });
+
+  it("slugifies region ids", () => {
+    const regions = loadRegions();
+    for (const r of regions) {
+      expect(r.id).toBe(slugifyConstituency(r.name));
+    }
+  });
+
+  it("returns equal data on second call (cached internally)", () => {
+    const first = loadRegions();
+    const second = loadRegions();
+    expect(first).toEqual(second);
+  });
+});
+
+describe("loadCandidatesByRegion", () => {
+  it("returns only candidates whose constituency belongs to the region", () => {
+    const regions = loadRegions();
+    if (regions.length === 0) return;
+    const constituencies = loadConstituencies();
+    for (const region of regions) {
+      const constituencyIds = new Set(
+        constituencies.filter((c) => c.region === region.name).map((c) => c.id)
+      );
+      const candidates = loadCandidatesByRegion(region.name);
+      for (const cand of candidates) {
+        expect(constituencyIds.has(cand.constituency)).toBe(true);
+      }
     }
   });
 });

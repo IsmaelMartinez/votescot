@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import yaml from "yaml";
+import { slugifyConstituency } from "./slugify";
 
 export interface CandidatePosition {
   independence: number;
@@ -115,6 +116,36 @@ export function loadConstituencies(): Constituency[] {
 
 export function loadCandidatesByConstituency(constituencyId: string): Candidate[] {
   return loadCandidates().filter((c) => c.constituency === constituencyId);
+}
+
+export interface Region {
+  id: string;
+  name: string;
+}
+
+let regionsCache: readonly Region[] | null = null;
+
+export function loadRegions(): Region[] {
+  if (!regionsCache) {
+    const names = new Set<string>();
+    for (const c of loadConstituencies()) {
+      if (c.region && c.region.trim()) names.add(c.region.trim());
+    }
+    const regions = Array.from(names)
+      .sort((a, b) => a.localeCompare(b))
+      .map((name) => ({ id: slugifyConstituency(name), name }));
+    regionsCache = Object.freeze(regions);
+  }
+  return [...regionsCache];
+}
+
+export function loadCandidatesByRegion(regionName: string): Candidate[] {
+  const constituenciesByRegion = new Set(
+    loadConstituencies()
+      .filter((c) => c.region === regionName)
+      .map((c) => c.id)
+  );
+  return loadCandidates().filter((c) => constituenciesByRegion.has(c.constituency));
 }
 
 let questionsCache: readonly QuizQuestion[] | null = null;
