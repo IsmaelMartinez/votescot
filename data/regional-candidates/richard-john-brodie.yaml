@@ -1,0 +1,17 @@
+id: richard-john-brodie
+name: Richard John Brodie
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 4
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Liberal Democrats regional list candidate for South Scotland.
+highlights:
+  - Liberal Democrats regional list candidate for South Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+    type: party_website

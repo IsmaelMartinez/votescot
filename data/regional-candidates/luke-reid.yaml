@@ -1,0 +1,17 @@
+id: luke-reid
+name: Luke Reid
+party: Scottish Family Party
+partyShort: Scottish Family Party
+color: "#666666"
+accent: "#444444"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 2
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish Family Party regional list candidate for West Scotland.
+highlights:
+  - Scottish Family Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP6380/
+    type: party_website

@@ -1,0 +1,17 @@
+id: mike-mann
+name: Mike Mann
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 4
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Reform UK regional list candidate for West Scotland.
+highlights:
+  - Reform UK regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

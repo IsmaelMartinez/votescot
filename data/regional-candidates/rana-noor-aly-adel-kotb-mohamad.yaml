@@ -1,0 +1,17 @@
+id: rana-noor-aly-adel-kotb-mohamad
+name: Rana Noor Aly Adel Kotb Mohamad
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 4
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for Glasgow.
+highlights:
+  - Scottish Green Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

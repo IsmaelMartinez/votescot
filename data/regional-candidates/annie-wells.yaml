@@ -1,0 +1,17 @@
+id: annie-wells
+name: Annie Wells
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 1
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Conservative and Unionist Party regional list candidate for Glasgow.
+highlights:
+  - Conservative and Unionist Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

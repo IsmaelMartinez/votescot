@@ -1,0 +1,17 @@
+id: laurie-moffat
+name: Laurie Moffat
+party: Alliance to Liberate Scotland
+partyShort: Alliance to Liberate Scotland
+color: "#666666"
+accent: "#444444"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 2
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Alliance to Liberate Scotland regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Alliance to Liberate Scotland regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

@@ -1,0 +1,17 @@
+id: linda-jane-dorward
+name: Linda Jane Dorward
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 3
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for South Scotland.
+highlights:
+  - Labour Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

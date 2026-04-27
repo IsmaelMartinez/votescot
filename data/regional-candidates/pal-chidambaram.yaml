@@ -1,0 +1,17 @@
+id: pal-chidambaram
+name: Pal Chidambaram
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 2
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

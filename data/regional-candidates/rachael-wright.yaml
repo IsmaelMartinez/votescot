@@ -1,0 +1,17 @@
+id: rachael-wright
+name: Rachael Wright
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 3
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Reform UK regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Reform UK regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

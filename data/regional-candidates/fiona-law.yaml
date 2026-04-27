@@ -1,0 +1,18 @@
+id: fiona-law
+name: Fiona Law
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 3
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Scottish National Party (SNP) regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Scottish National Party (SNP) regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website
+textColor: "#333"

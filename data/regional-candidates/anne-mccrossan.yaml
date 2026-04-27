@@ -1,0 +1,17 @@
+id: anne-mccrossan
+name: Anne McCrossan
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 4
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for Central Scotland and Lothians West.
+highlights:
+  - Scottish Green Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

@@ -1,0 +1,17 @@
+id: darren-watt
+name: Darren Watt
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 7
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Conservative and Unionist Party regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Conservative and Unionist Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+    type: party_website

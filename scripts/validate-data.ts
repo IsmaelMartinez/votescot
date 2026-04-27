@@ -17,12 +17,14 @@ export function validateData(): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
 
   const candidateSchema = loadJson("schemas/candidate.schema.json");
+  const regionalCandidateSchema = loadJson("schemas/regional-candidate.schema.json");
   const constituencySchema = loadJson("schemas/constituency.schema.json");
   const questionsSchema = loadJson("schemas/questions.schema.json");
   const partySchema = loadJson("schemas/party.schema.json");
   const manifestoRegistrySchema = loadJson("schemas/manifesto-registry.schema.json");
 
   const validateCandidate = ajv.compile(candidateSchema);
+  const validateRegionalCandidate = ajv.compile(regionalCandidateSchema);
   const validateConstituency = ajv.compile(constituencySchema);
   const validateQuestions = ajv.compile(questionsSchema);
   const validateParty = ajv.compile(partySchema);
@@ -35,6 +37,18 @@ export function validateData(): { valid: boolean; errors: string[] } {
     const data = loadYaml(path.join(candidateDir, file));
     if (!validateCandidate(data)) {
       errors.push(`${file}: ${ajv.errorsText(validateCandidate.errors)}`);
+    }
+  }
+
+  // Validate regional list candidates
+  const regionalCandidateDir = "data/regional-candidates";
+  if (fs.existsSync(regionalCandidateDir)) {
+    const regionalFiles = fs.readdirSync(regionalCandidateDir).filter((f) => f.endsWith(".yaml"));
+    for (const file of regionalFiles) {
+      const data = loadYaml(path.join(regionalCandidateDir, file));
+      if (!validateRegionalCandidate(data)) {
+        errors.push(`regional-candidates/${file}: ${ajv.errorsText(validateRegionalCandidate.errors)}`);
+      }
     }
   }
 

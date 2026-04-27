@@ -1,0 +1,17 @@
+id: ian-charles-garbutt
+name: Ian Charles Garbutt
+party: UK Independence Party (UKIP)
+partyShort: UK Independence Party (UKIP)
+color: "#666666"
+accent: "#444444"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 2
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: UK Independence Party (UKIP) regional list candidate for Glasgow.
+highlights:
+  - UK Independence Party (UKIP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP85/
+    type: party_website

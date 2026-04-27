@@ -1,0 +1,18 @@
+id: siobhian-brown
+name: Siobhian Brown
+party: Scottish National Party (SNP)
+partyShort: SNP
+color: "#FDF38E"
+accent: "#9B870C"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 4
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish National Party (SNP) regional list candidate for South Scotland.
+highlights:
+  - Scottish National Party (SNP) regional list candidate for South Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+    type: party_website
+textColor: "#333"

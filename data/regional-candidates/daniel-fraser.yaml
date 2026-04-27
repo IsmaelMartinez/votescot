@@ -1,0 +1,18 @@
+id: daniel-fraser
+name: Daniel Fraser
+party: Scottish Libertarian Party
+partyShort: Libertarian
+color: "#f5d442"
+accent: "#b89e30"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 999
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish Libertarian Party regional list candidate for South Scotland.
+highlights:
+  - Scottish Libertarian Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP15208/
+    type: party_website
+textColor: "#333"

@@ -1,0 +1,17 @@
+id: carolyn-grant
+name: Carolyn Grant
+party: Reform UK
+partyShort: Reform
+color: "#12B6CF"
+accent: "#0a7f91"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 5
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Reform UK regional list candidate for South Scotland.
+highlights:
+  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+    type: party_website

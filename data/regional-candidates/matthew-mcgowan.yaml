@@ -1,0 +1,17 @@
+id: matthew-mcgowan
+name: Matthew McGowan
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 9
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Labour Party regional list candidate for West Scotland.
+highlights:
+  - Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+    type: party_website

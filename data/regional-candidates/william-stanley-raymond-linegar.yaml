@@ -1,0 +1,17 @@
+id: william-stanley-raymond-linegar
+name: William Stanley Raymond Linegar
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: north-east-scotland
+regionLabel: North East Scotland
+listPosition: 3
+ballotPaperId: sp.r.north-east-scotland.2026-05-07
+isIncumbent: false
+bio: Scottish Green Party regional list candidate for North East Scotland.
+highlights:
+  - Scottish Green Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP130/
+    type: party_website

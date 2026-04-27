@@ -1,0 +1,17 @@
+id: brenda-nicholson
+name: Brenda Nicholson
+party: Scottish Socialist Party
+partyShort: Scottish Socialist Party
+color: "#666666"
+accent: "#444444"
+region: highlands-and-islands
+regionLabel: Highlands and Islands
+listPosition: 2
+ballotPaperId: sp.r.highlands-and-islands.2026-05-07
+isIncumbent: false
+bio: Scottish Socialist Party regional list candidate for Highlands and Islands.
+highlights:
+  - Scottish Socialist Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP46/
+    type: party_website
