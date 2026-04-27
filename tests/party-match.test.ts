@@ -33,4 +33,12 @@ describe("matchPartyId", () => {
   it("returns undefined for Independent", () => {
     expect(matchPartyId("Independent")).toBeUndefined();
   });
+
+  it("returns undefined for Socialist Labour Party (does not leak onto scottish-labour)", () => {
+    expect(matchPartyId("Socialist Labour Party")).toBeUndefined();
+  });
+
+  it("matches Labour and Co-operative Party to scottish-labour", () => {
+    expect(matchPartyId("Labour and Co-operative Party")).toBe("scottish-labour");
+  });
 });
