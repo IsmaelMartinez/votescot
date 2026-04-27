@@ -10,7 +10,7 @@ import {
   PARTY_KEYS,
   type PartyKey,
   type PartyShares,
-} from "./lib/poll-average.ts";
+} from "../src/lib/poll-average";
 
 const CONSTITUENCIES_DIR = path.resolve("data/constituencies");
 const REPORT_PATH = path.resolve("data/projection-report.json");
