@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 26 April 2026 (regional parity: postcode lookup, region candidate page, profile region tag, regional list candidate import)
+Last updated: 26 April 2026 (regional parity: postcode lookup, region candidate page, profile region tag, homepage region picker, regional list candidate import)
 
 ## What's live now
 
@@ -70,7 +70,7 @@ The regional questionnaire shipped on 26 April 2026 but only covers the quiz sur
 - [x] **Postcode → region resolution.** Done. `usePostcodeLookup` now optionally takes a `constituencyToRegion` map and surfaces `regionId` / `regionName`; `PostcodeInput` accepts a `target: "region"` mode and is wired into the `/quiz/regional` selector.
 - [x] **`/candidates/region/[id]` dynamic page.** Done. Mirrors `/candidates/constituency/[id]` for all 9 regions, with side-by-side comparison scoped to constituencies in the region. The regional quiz results screen now links to it.
 - [x] **Show region on candidate profiles.** Done. Each profile now shows "Standing in {constituency} · {region} region" with links to both group pages.
-- [ ] **Region picker on the homepage.** Either colour-overlay the existing ConstituencyMap by region, or add a simple region list/dropdown beneath it. Real region-boundary GeoJSON would be ideal but isn't bundled — the cheap path is colouring the existing constituency polygons.
+- [x] **Region picker on the homepage.** Done. The landing page now has a "Browse by region" grid beneath the constituency map listing all 9 regions with their constituency and candidate counts, each linking to `/candidates/region/[id]`.
 - [~] **Honest regional list candidates (data model change).** Data ingested. `scripts/sync-regional-candidates.ts` pulls all 589 regional list candidacies from Democracy Club's locked `sp.r.2026-05-07` ballots and writes them to `data/regional-candidates/<slug>.yaml` with `region`, `regionLabel`, `listPosition`, and `ballotPaperId`. `schemas/regional-candidate.schema.json` validates the shape. Remaining sub-tasks (each can be its own PR):
   - [ ] **Wire `/candidates/region/[id]` and `/quiz/regional` to use `data/regional-candidates/` instead of constituency candidates filtered by region.** Add a `loadRegionalCandidates()` / `loadRegionalCandidatesByRegion()` to `src/lib/data.ts`. Drop the "we don't yet model separate regional list candidates" disclaimer banner.
   - [ ] **Reconcile region naming.** Democracy Club has 8 regions (the post-2025 boundary review structure: `central-scotland-and-lothians-west` is one region). VoteScot's constituency `region:` field uses 9 splits (`Central Scotland` + `Edinburgh and Lothians West` separated). Pick one canonical mapping — likely DC's 8 — and update constituency YAMLs and the homepage region picker to match.

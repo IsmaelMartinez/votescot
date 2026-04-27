@@ -144,7 +144,7 @@ let candidatesByRegionCache: ReadonlyMap<string, readonly Candidate[]> | null = 
 function buildCandidatesByRegion(): ReadonlyMap<string, readonly Candidate[]> {
   const constituencyToRegion = new Map<string, string>();
   for (const c of loadConstituencies()) {
-    if (c.region) constituencyToRegion.set(c.id, c.region);
+    if (c.region?.trim()) constituencyToRegion.set(c.id, c.region.trim());
   }
   const grouped = new Map<string, Candidate[]>();
   for (const cand of loadCandidates()) {
