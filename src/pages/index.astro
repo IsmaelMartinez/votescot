@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import NewsList from "../components/NewsList.astro";
-import { loadConstituencies, loadNews } from "../lib/data";
+import { loadConstituencies, loadNews, loadRegions, loadCandidatesByRegion } from "../lib/data";
 
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
@@ -18,6 +18,12 @@ const projections = constituencies
     competitiveness: c.competitiveness,
     topParties: c.topParties,
   }));
+
+const regions = loadRegions().map((r) => ({
+  ...r,
+  constituencyCount: constituencies.filter((c) => c.region?.trim() === r.name).length,
+  candidateCount: loadCandidatesByRegion(r.name).length,
+}));
 
 const news = loadNews();
 ---
@@ -38,6 +44,26 @@ const news = loadNews();
       basePath={base}
       projections={projections}
     />
+
+    <section class="my-6">
+      <h3 class="font-heading text-base font-black mb-1">Browse by region</h3>
+      <p class="font-body text-xs text-gray-500 leading-snug mb-3">
+        Scotland's regional list ballot is split into 9 regions. Pick yours to see every candidate standing across its constituencies.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {regions.map((r) => (
+          <a
+            href={`${base}candidates/region/${r.id}`}
+            class="block bg-white border border-votescot-border rounded-lg px-3 py-2 no-underline hover:border-votescot-gold transition-colors"
+          >
+            <div class="font-heading text-sm font-bold text-votescot-dark leading-tight">{r.name}</div>
+            <div class="font-body text-xs text-gray-500 leading-snug mt-0.5">
+              {r.constituencyCount} constituencies · {r.candidateCount} candidates
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
 
     <NewsList
       items={news.items}

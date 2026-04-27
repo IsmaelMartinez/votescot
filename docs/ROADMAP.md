@@ -72,8 +72,8 @@ Shipped surfaces feeding into this rollout:
 - [x] **Postcode → region resolution.** `usePostcodeLookup` returns `regionId` / `regionName`; `PostcodeInput` accepts `target: "region"`.
 - [x] **`/candidates/region/[id]` dynamic page.** Currently sources constituency candidates filtered by region (the stand-in to be replaced by PR B below).
 - [x] **Region tag on candidate profiles.** Profile shows "Standing in {constituency} · {region} region".
-- [x] **Region picker on the homepage** (PR #41 awaiting merge). 9 cards beneath the constituency map; will drop to 8 after PR A.
-- [x] **Regional list candidate ingest** (PR #42 awaiting merge). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
+- [x] **Region picker on the homepage** (PR #41). 9 cards beneath the constituency map; will drop to 8 after PR A.
+- [x] **Regional list candidate ingest** (PR #42). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
 
 The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
 
