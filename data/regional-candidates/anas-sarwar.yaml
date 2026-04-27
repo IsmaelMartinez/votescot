@@ -8,7 +8,7 @@ region: glasgow
 regionLabel: Glasgow
 listPosition: 1
 ballotPaperId: sp.r.glasgow.2026-05-07
-isIncumbent: false
+isIncumbent: true
 bio: Labour Party regional list candidate for Glasgow.
 highlights:
   - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
