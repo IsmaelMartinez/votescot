@@ -1,8 +1,13 @@
 import React, { useState, useMemo } from "react";
-import { calculateMatch, type MatchResult } from "../lib/matching";
 import PostcodeInput from "./PostcodeInput";
 import ErrorBoundary from "./ErrorBoundary";
 import type { Candidate, QuizQuestion, RegionalCandidate } from "../lib/data";
+import {
+  buildPartyBlocks,
+  buildConstituencyToRegion,
+  resolveInitialSelection,
+  type PartyBlock,
+} from "../lib/quiz-helpers";
 
 interface Constituency {
   id: string;
@@ -25,74 +30,10 @@ interface Props {
   basePath: string;
 }
 
-type BallotKind = "constituency" | "regional";
-
-interface PartyBlockCandidate {
-  id: string;
-  name: string;
-  isIncumbent: boolean;
-  listPosition?: number;
-}
-
-interface PartyBlock {
-  party: string;
-  partyShort: string;
-  color: string;
-  accent: string;
-  textColor?: string;
-  candidates: PartyBlockCandidate[];
-  positions: Record<string, number>;
-  match: MatchResult;
-}
-
 function scoreColor(percentage: number): string {
   if (percentage >= 70) return "#2d8a4e";
   if (percentage >= 40) return "#c4940a";
   return "#c0392b";
-}
-
-function buildPartyBlocks(
-  list: (Candidate | RegionalCandidate)[],
-  kind: BallotKind,
-  answers: Record<string, number>
-): PartyBlock[] {
-  const isRegional = kind === "regional";
-  const byParty = new Map<string, (Candidate | RegionalCandidate)[]>();
-  for (const c of list) {
-    const bucket = byParty.get(c.party) ?? [];
-    bucket.push(c);
-    byParty.set(c.party, bucket);
-  }
-  const blocks: PartyBlock[] = Array.from(byParty.entries()).map(([party, items]) => {
-    const sample = items.find((c) => c.positions) ?? items[0];
-    const positions = (sample.positions ?? {}) as Record<string, number>;
-    const sorted = isRegional
-      ? [...(items as RegionalCandidate[])].sort((a, b) => a.listPosition - b.listPosition)
-      : [...items].sort((a, b) => a.name.localeCompare(b.name));
-    const candidates: PartyBlockCandidate[] = sorted.map((c) => ({
-      id: c.id,
-      name: c.name,
-      isIncumbent: c.isIncumbent,
-      listPosition: isRegional ? (c as RegionalCandidate).listPosition : undefined,
-    }));
-    return {
-      party,
-      partyShort: sample.partyShort,
-      color: sample.color,
-      accent: sample.accent,
-      textColor: sample.textColor,
-      candidates,
-      positions,
-      match: calculateMatch(answers, positions),
-    };
-  });
-  return blocks.sort((a, b) => {
-    if (b.match.percentage !== a.match.percentage) return b.match.percentage - a.match.percentage;
-    const aHas = a.match.breakdown.length > 0 ? 1 : 0;
-    const bHas = b.match.breakdown.length > 0 ? 1 : 0;
-    if (aHas !== bHas) return bHas - aHas;
-    return a.party.localeCompare(b.party);
-  });
 }
 
 function QuizEngineInner(props: Props) {
@@ -106,19 +47,10 @@ function QuizEngineInner(props: Props) {
     basePath,
   } = props;
 
-  const constituencyToRegion = useMemo(() => {
-    const map = new Map<string, string>();
-    for (const c of constituencies) {
-      if (c.region) {
-        // The regional quiz used slugified region names as ids; mirror that here so
-        // the resolved id matches the regional candidate `region` field.
-        // c.region is the human name in the constituency YAML; regions[] carries id+name.
-        const region = regions.find((r) => r.name === c.region?.trim());
-        if (region) map.set(c.id, region.id);
-      }
-    }
-    return map;
-  }, [constituencies, regions]);
+  const constituencyToRegion = useMemo(
+    () => buildConstituencyToRegion(constituencies, regions),
+    [constituencies, regions]
+  );
 
   const constituenciesById = useMemo(() => {
     const map = new Map<string, Constituency>();
@@ -132,35 +64,18 @@ function QuizEngineInner(props: Props) {
     return map;
   }, [regions]);
 
-  // Resolve initial selection from query params. ?constituency= takes precedence;
-  // otherwise ?region= picks any constituency in that region so the picker is set.
-  // If ?region= was the inbound param, default the active tab to "regional".
   const initial = useMemo(() => {
-    if (typeof window === "undefined") {
-      return { constituencyId: "", regionId: "", inboundRegional: false };
-    }
-    const params = new URLSearchParams(window.location.search);
-    const cParam = params.get("constituency") ?? "";
-    const rParam = params.get("region") ?? "";
-    if (cParam && constituenciesById.has(cParam)) {
-      const regionId = constituencyToRegion.get(cParam) ?? "";
-      return { constituencyId: cParam, regionId, inboundRegional: false };
-    }
-    if (rParam && regionsById.has(rParam)) {
-      const regionName = regionsById.get(rParam)!.name;
-      const match = constituencies.find((c) => c.region?.trim() === regionName);
-      if (match) {
-        return { constituencyId: match.id, regionId: rParam, inboundRegional: true };
-      }
-    }
-    return { constituencyId: "", regionId: "", inboundRegional: false };
-  }, [constituenciesById, regionsById, constituencyToRegion, constituencies]);
+    const params = typeof window === "undefined"
+      ? new URLSearchParams()
+      : new URLSearchParams(window.location.search);
+    return resolveInitialSelection(params, constituencies, regions, constituencyToRegion);
+  }, [constituencies, regions, constituencyToRegion]);
 
   const [selectedConstituencyId, setSelectedConstituencyId] = useState<string>(initial.constituencyId);
   const [selectedRegionId, setSelectedRegionId] = useState<string>(initial.regionId);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<BallotKind>(initial.inboundRegional ? "regional" : "constituency");
+  const [activeTab, setActiveTab] = useState<"constituency" | "regional">(initial.inboundRegional ? "regional" : "constituency");
   const [filterText, setFilterText] = useState("");
 
   const selectedConstituency = selectedConstituencyId ? constituenciesById.get(selectedConstituencyId) : undefined;
