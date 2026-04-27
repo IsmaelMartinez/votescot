@@ -4,7 +4,7 @@ import yaml from "yaml";
 import { matchPartyId } from "../src/lib/party-match";
 
 const PARTIES_DIR = path.resolve("data/parties");
-const CANDIDATES_DIR = path.resolve("data/candidates");
+const CANDIDATE_DIRS = ["data/candidates", "data/regional-candidates"].map((d) => path.resolve(d));
 
 interface PartyData {
   id: string;
@@ -23,52 +23,60 @@ function loadParties(): Map<string, PartyData> {
   return parties;
 }
 
-function applyPartyPositions(): void {
-  const force = process.argv.includes("--force");
-  const parties = loadParties();
-  const candidateFiles = fs.readdirSync(CANDIDATES_DIR).filter((f) => f.endsWith(".yaml"));
+interface RunResult {
+  counts: Record<string, number>;
+  skipped: number;
+  noMatch: number;
+}
 
-  const counts: Record<string, number> = {};
-  let skipped = 0;
-  let noMatch = 0;
+function applyToDir(dir: string, parties: Map<string, PartyData>, force: boolean): RunResult {
+  const result: RunResult = { counts: {}, skipped: 0, noMatch: 0 };
+  if (!fs.existsSync(dir)) return result;
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
 
-  for (const file of candidateFiles) {
-    const filePath = path.join(CANDIDATES_DIR, file);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
     const raw = fs.readFileSync(filePath, "utf-8");
     const data = yaml.parse(raw) as Record<string, unknown>;
 
     // Skip already-processed candidates unless --force refreshes them
     // (e.g. after a party YAML update from /sync-manifestos).
     if (!force && data.quizCandidate === true) {
-      skipped++;
+      result.skipped++;
       continue;
     }
 
     const partyId = matchPartyId(String(data.party ?? ""));
     const party = partyId ? parties.get(partyId) : undefined;
     if (!party) {
-      noMatch++;
+      result.noMatch++;
       continue;
     }
 
-    // Apply party positions and stances
     data.positions = party.positions;
     data.stances = party.stances;
     data.quizCandidate = true;
 
     fs.writeFileSync(filePath, yaml.stringify(data, { lineWidth: 0 }));
 
-    counts[party.id] = (counts[party.id] ?? 0) + 1;
+    result.counts[party.id] = (result.counts[party.id] ?? 0) + 1;
   }
+  return result;
+}
 
-  console.log("\nParty positions applied:\n");
-  const totalUpdated = Object.values(counts).reduce((a, b) => a + b, 0);
-  for (const [partyId, count] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {
-    console.log(`  ${partyId}: ${count} candidates`);
+function applyPartyPositions(): void {
+  const force = process.argv.includes("--force");
+  const parties = loadParties();
+
+  for (const dir of CANDIDATE_DIRS) {
+    const label = path.basename(dir);
+    const { counts, skipped, noMatch } = applyToDir(dir, parties, force);
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    console.log(`\n${label}: ${total} updated, ${skipped} skipped (already hand-curated), ${noMatch} no match`);
+    for (const [partyId, count] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {
+      console.log(`  ${partyId}: ${count}`);
+    }
   }
-  console.log(`\nTotal updated: ${totalUpdated}`);
-  console.log(`Skipped (already hand-curated): ${skipped}`);
-  console.log(`No match (independents/small parties): ${noMatch}`);
 }
 
 applyPartyPositions();

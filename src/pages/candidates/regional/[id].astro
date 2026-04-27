@@ -1,0 +1,108 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { loadRegionalCandidates, loadQuestions } from "../../../lib/data";
+
+export function getStaticPaths() {
+  const candidates = loadRegionalCandidates();
+  return candidates.map((c) => ({ params: { id: c.id }, props: { candidate: c } }));
+}
+
+const { candidate } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const questions = loadQuestions();
+const externalSources = candidate.sources?.filter((s) => typeof s?.url === "string" && !s.url.includes("candidates.democracyclub.org.uk")) ?? [];
+---
+
+<Base title={candidate.name} description={`${candidate.name} (${candidate.party}) — regional list candidate for ${candidate.regionLabel} in the 2026 Scottish Parliament election`}>
+  <Header slot="header" currentTab="candidates" />
+
+  <div class="py-3.5">
+    <div class="flex items-center gap-2 mb-1">
+      <div class="w-3 h-3 rounded-full" style={`background: ${candidate.textColor ? candidate.accent : candidate.color}; border: 2px solid ${candidate.accent}`} />
+      <h2 class="font-heading text-lg font-black m-0">
+        {candidate.name}
+        <span class="font-normal text-gray-400 text-[12.5px] ml-1">{candidate.party}</span>
+      </h2>
+    </div>
+
+    <p class="font-body text-xs text-gray-500 mb-2">
+      Regional list candidate ·
+      <a href={`${base}candidates/region/${candidate.region}`} class="text-gray-600 no-underline hover:text-votescot-gold">{candidate.regionLabel} region</a>
+      · list position <strong>{candidate.listPosition}</strong>
+    </p>
+
+    <div
+      class="font-body text-[12.5px] text-gray-500 leading-snug mb-3.5 p-2.5 bg-white rounded"
+      style={`border-left: 3px solid ${candidate.accent || candidate.color}`}
+    >
+      {candidate.bio}
+    </div>
+
+    {candidate.stances && (
+      <>
+        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2">
+          Policy Positions
+        </h3>
+        {candidate.quizCandidate && candidate.highlights.length === 0 && (
+          <div class="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-2 font-body text-xs text-blue-700">
+            These positions reflect {candidate.party}'s platform. This candidate has not individually confirmed these positions.
+          </div>
+        )}
+        <div class="flex flex-col gap-1.5">
+          {Object.entries(candidate.stances).map(([key, stance]) => {
+            const q = questions.find((q) => q.id === key);
+            return (
+              <div class="bg-white rounded-md p-2.5 border border-votescot-border">
+                <div class="font-body text-xs font-bold uppercase tracking-widest mb-0.5" style={`color: ${candidate.accent || candidate.color}`}>
+                  {q?.area || key}
+                </div>
+                <div class="font-body text-[13px] text-gray-700 leading-snug">{stance}</div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    )}
+
+    {candidate.highlights.length > 0 && (
+      <>
+        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
+          Track Record
+        </h3>
+        <div class="flex flex-col gap-1">
+          {candidate.highlights.map((h) => (
+            <div class="bg-white rounded p-2 border border-votescot-border font-body text-[12.5px] leading-snug text-gray-600 flex gap-2 items-center">
+              <span class="font-black text-[13px]" style={`color: ${candidate.accent || candidate.color}`}>›</span>
+              {h}
+            </div>
+          ))}
+        </div>
+      </>
+    )}
+
+    {externalSources.length > 0 && (
+      <>
+        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
+          Sources
+        </h3>
+        <div class="flex flex-wrap gap-1.5">
+          {externalSources.map((s) => (
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-body text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded no-underline hover:bg-blue-100"
+            >
+              {s.type.replace("_", " ")}
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+  </div>
+
+  <Footer slot="footer" />
+</Base>

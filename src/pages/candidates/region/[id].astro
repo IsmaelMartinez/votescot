@@ -2,29 +2,41 @@
 import Base from "../../../layouts/Base.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
-import CandidateCard from "../../../components/CandidateCard.astro";
-import CandidateComparison from "../../../components/CandidateComparison.tsx";
-import { loadCandidatesByRegion, loadConstituencies, loadQuestions, loadRegions } from "../../../lib/data";
+import { loadConstituencies, loadRegionalCandidatesByRegion, loadRegions } from "../../../lib/data";
+import type { RegionalCandidate } from "../../../lib/data";
 
 export function getStaticPaths() {
   const regions = loadRegions();
   const constituencies = loadConstituencies();
   return regions.map((r) => {
-    const candidates = loadCandidatesByRegion(r.name);
-    const regionConstituencies = constituencies.filter((c) => c.region === r.name);
+    const candidates = loadRegionalCandidatesByRegion(r.id);
+    const regionConstituencies = constituencies.filter((c) => c.region?.trim() === r.name);
     return { params: { id: r.id }, props: { region: r, candidates, regionConstituencies } };
   });
 }
 
 const { region, candidates, regionConstituencies } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const questions = loadQuestions();
-const quizCandidates = candidates.filter((c) => c.quizCandidate);
-const otherCandidates = candidates.filter((c) => !c.quizCandidate);
-const comparisonConstituencies = regionConstituencies.map((c) => ({ id: c.id, name: c.name }));
+
+const byParty = new Map<string, RegionalCandidate[]>();
+for (const c of candidates) {
+  const bucket = byParty.get(c.party) ?? [];
+  bucket.push(c);
+  byParty.set(c.party, bucket);
+}
+const partyBlocks = Array.from(byParty.entries())
+  .map(([party, list]) => ({
+    party,
+    partyShort: list[0].partyShort,
+    color: list[0].color,
+    accent: list[0].accent,
+    textColor: list[0].textColor,
+    candidates: [...list].sort((a, b) => a.listPosition - b.listPosition),
+  }))
+  .sort((a, b) => b.candidates.length - a.candidates.length || a.party.localeCompare(b.party));
 ---
 
-<Base title={`${region.name} Candidates`} description={`Candidates standing in the ${region.name} region for the 2026 Scottish Parliament election`}>
+<Base title={`${region.name} Regional List Candidates`} description={`Regional list candidates standing in the ${region.name} region for the 2026 Scottish Parliament election`}>
   <Header slot="header" currentTab="candidates" />
 
   <div class="py-3.5">
@@ -37,49 +49,33 @@ const comparisonConstituencies = regionConstituencies.map((c) => ({ id: c.id, na
       Regional list ballot. Covers {regionConstituencies.length} constituencies: {regionConstituencies.map((c) => c.name).join(", ")}.
     </p>
     <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
-      {candidates.length} candidates standing across this region for 7 May 2026.
+      {candidates.length} candidates ordered by party list position. The regional ballot allocates 7 MSPs per region by D'Hondt against these ordered lists.
     </p>
 
-    <div class="mb-5 bg-blue-50 border border-blue-200 rounded px-3 py-2 font-body text-xs text-blue-700">
-      Scottish Parliament uses two ballots — constituency and regional list. We don't yet model separate regional list candidates, so these are the constituency candidates standing inside the region.
+    <div class="flex flex-col gap-3">
+      {partyBlocks.map((p) => (
+        <div class="bg-white border border-votescot-border rounded-lg overflow-hidden">
+          <div
+            class="px-3 py-2 flex items-center gap-2"
+            style={`background: ${p.textColor ? p.accent : p.color}; color: ${p.textColor ?? "#fff"}`}
+          >
+            <div class="font-heading font-black text-sm">{p.party}</div>
+            <div class="font-body text-xs opacity-80">· {p.candidates.length} {p.candidates.length === 1 ? "candidate" : "candidates"}</div>
+          </div>
+          <ol class="m-0 px-3 py-2 list-none">
+            {p.candidates.map((c) => (
+              <li class="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
+                <span class="font-body text-xs font-bold text-gray-400 w-5 text-right shrink-0">{c.listPosition}</span>
+                <a href={`${base}candidates/regional/${c.id}`} class="font-body text-[13px] text-gray-700 no-underline hover:text-votescot-gold flex-1">{c.name}</a>
+                {c.isIncumbent && (
+                  <span class="bg-gray-800 text-white text-[10px] px-1 py-0.5 rounded uppercase tracking-wider font-bold">Incumbent</span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))}
     </div>
-
-    {quizCandidates.length > 0 && (
-      <div class="mb-4">
-        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Quiz candidates — included in vote compass matching
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {quizCandidates.map((c) => (
-            <CandidateCard candidate={c} basePath={base} />
-          ))}
-        </div>
-      </div>
-    )}
-
-    {otherCandidates.length > 0 && (
-      <div>
-        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          {quizCandidates.length > 0 ? "Other candidates" : "Candidates"}
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {otherCandidates.map((c) => (
-            <CandidateCard candidate={c} basePath={base} />
-          ))}
-        </div>
-      </div>
-    )}
-
-    {quizCandidates.length > 1 && (
-      <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
-        <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
-          Compare candidates side by side
-        </summary>
-        <div class="px-4 pb-4">
-          <CandidateComparison client:visible candidates={quizCandidates} questions={questions} constituencies={comparisonConstituencies} />
-        </div>
-      </details>
-    )}
 
     <div class="mt-6 text-center">
       <a href={`${base}quiz/regional?region=${region.id}`} class="inline-block px-4 py-2 bg-votescot-gold text-white rounded-lg font-body text-sm font-bold no-underline hover:opacity-90">

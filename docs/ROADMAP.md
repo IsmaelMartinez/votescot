@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (PR A: region naming reconciled to 8 official regions)
+Last updated: 27 April 2026 (PR B: regional surfaces sourced from list candidates)
 
 ## What's live now
 
@@ -75,6 +75,7 @@ Shipped surfaces feeding into this rollout:
 - [x] **Region picker on the homepage** (PR #41). 8 cards beneath the constituency map after PR A reconciliation.
 - [x] **Regional list candidate ingest** (PR #42). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
 - [x] **Region naming reconciled to 8 official regions** (PR A). Constituency `region:` field updated across 16 YAMLs to match the 2025 Boundaries Scotland review and Democracy Club's ballot structure; `loadRegions()` now returns 8 entries with id slugs that match the regional list ballot keys. Astro redirects send legacy `/central-scotland` and `/edinburgh-and-lothians-west` URLs to the merged region.
+- [x] **Regional surfaces sourced from list candidates** (PR B). `loadRegionalCandidates()` / `loadRegionalCandidatesByRegion()` added; `loadCandidatesByRegion` refactored to a regionId API. `/candidates/region/[id]` now renders regional list candidates grouped by party and ordered by `listPosition`. Disclaimer banner dropped. Sibling `/candidates/regional/[id]` profile route added (collisions with `/candidates/[id]` made the aggregating approach unviable — 339 shared slugs). `apply-party-positions.ts` extended to fan out to `data/regional-candidates/`; 393 of 589 regional candidates now carry party positions.
 
 The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
 
@@ -82,13 +83,9 @@ The plan below is sequenced so each PR is independently shippable and reviewable
 
 Done in this PR. Cross-checking VoteScot's existing constituency `region:` tags against the official Wikipedia / Boundaries Scotland mapping surfaced more drift than the original "merge two regions" assumption: 5 constituencies were also miscategorised independently of the merge (Rutherglen and Cambuslang belonged in Glasgow not Central Scotland; East Kilbride and Hamilton/Larkhall/Stonehouse belonged in South Scotland; Edinburgh South Western and Edinburgh Southern belonged in Edinburgh and Lothians East not Lothians West; Midlothian South/Tweeddale/Lauderdale belonged in South Scotland; Moray belonged in Highlands and Islands not North East Scotland). All 16 relocations applied and the per-region totals now match the official 9/9/8/8/9/10/10/10 = 73 distribution. Astro redirects send the two legacy slugs (`central-scotland`, `edinburgh-and-lothians-west`) to the merged `central-scotland-and-lothians-west` region.
 
-#### PR B — Regional surfaces source from regional list candidates
+#### PR B — Regional surfaces source from regional list candidates — shipped
 
-Add `loadRegionalCandidates()` and `loadRegionalCandidatesByRegion(regionId)` to `src/lib/data.ts`. Refactor the existing `loadCandidatesByRegion(regionName)` to take `regionId` instead, so both loaders share an id-based API and callers stop passing display names around — this is a small but consistency-improving change that touches `/candidates/region/[id].astro` and the homepage picker. Rewrite `/candidates/region/[id]` to render regional list candidates grouped by party and ordered by `listPosition`, replacing the constituency-filtered view. Drop the "we don't yet model separate regional list candidates" disclaimer banner. Add a "Take the regional vote compass for this region" CTA mirroring the constituency page's flow.
-
-Profile-page coverage: regional list candidates live in a separate tree, so the existing `/candidates/[id]` route won't pick them up and "View full profile" links from the new region page will 404. Either add a sibling `/candidates/regional/[id].astro` route that reads from `data/regional-candidates/`, or aggregate both trees in the existing `getStaticPaths`. Lean towards the aggregating approach so a candidate id is enough to find them — the Profile-page UI itself can branch on whether the record has `constituency` or `region` set.
-
-Extend `scripts/apply-party-positions.ts` to walk `data/regional-candidates/` and fan out party positions (so the regional quiz has real, matchable data). Extend `scripts/fix-incumbents.ts` to flag sitting regional MSPs from the existing `memberelectionregionstatuses` fetch.
+Done in this PR. Loader API refactor, `/candidates/region/[id]` rewritten with party-grouped lists ordered by `listPosition`, `/candidates/regional/[id]` profile route added (sibling rather than aggregated — 339 candidate slugs collide between the constituency and regional trees, mostly because the same person stands on both ballots, so a single route was unworkable). Party positions fanned out to 393 of 589 regional candidates via the extended `apply-party-positions.ts`. The `fix-incumbents.ts` extension to flag sitting regional MSPs is split into a small follow-up PR.
 
 #### PR C — Quiz results grouped by party, not individual
 
