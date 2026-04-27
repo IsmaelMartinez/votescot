@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T07:12:26.498Z",
+  "lastUpdated": "2026-04-27T12:51:53.836Z",
   "sources": [
     {
       "name": "BBC News",
@@ -149,13 +149,6 @@
       "source": "BBC News"
     },
     {
-      "title": "Swinney predicts SNP majority at Holyrood election",
-      "description": "The first minister has told BBC News that his party will return at least 65 seats at next month's vote.",
-      "url": "https://www.bbc.com/news/articles/c9wq2jvqqxvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-18T05:00:24.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
       "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber.",
       "url": "https://ballotbox.scot/more-in-common-april-2026/",
@@ -167,13 +160,6 @@
       "description": "We have analysed some of the policies in the Scottish Lib Dems' manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/ckg0p7ew4kqo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-17T14:16:48.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Lib Dems vow action on NHS and cost of living in manifesto",
-      "description": "Scottish leader Alex Cole-Hamilton has announced plans to spend an extra £400m on social care.",
-      "url": "https://www.bbc.com/news/articles/c4gj01zx75qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-17T09:45:13.000Z",
       "source": "BBC News"
     },
     {
@@ -224,6 +210,20 @@
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
       "publishedAt": "2026-04-14T16:32:59.000Z",
       "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
+      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
+      "publishedAt": "2026-04-14T14:13:25.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish Greens' manifesto pledges analysed",
+      "description": "BBC Scotland journalists have analysed some of the policies in the Scottish Greens' manifesto for the 2026 Holyrood election.",
+      "url": "https://www.bbc.com/news/articles/cx294n99p90o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-14T13:14:21.000Z",
+      "source": "BBC News"
     }
   ]
 }
