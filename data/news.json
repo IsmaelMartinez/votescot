@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T12:51:53.836Z",
+  "lastUpdated": "2026-04-27T18:45:19.026Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "No 10 publishes previously confidential memo to refute claim that Starmer misled MPs over Mandelson appointment – as it happened",
+      "description": "<p>Speaker Sir Lindsay Hoyle earlier confirmed that MPs will decide whether to let inquiry into Keir Starmer’s statements over Peter Mandelson proceed</p><p>Downing Street has said that the UK is “in a good position” to handle the global supply problems caused by the Iran war not being resolved.</p><p>Speaking at the morning lobby briefing, the <strong>PM’s spokesperson</strong> said:</p><p>We remain focused on a long-term, permanent solution to the crisis. As a result of the forward-planning, the government undertook over the past few months, the UK is in a good position.</p><p>We’re ramping up planning for all different potential impacts on the UK economy and consumers, and that means focusing on a live monitoring of stock levels and what plans are in place for addressing supply chain disruption.</p><p>Even Boris Johnson didn’t block his MPs voting for scrutiny. Labour MPs must be given a free vote on any motion to refer Starmer to the privileges committee, not forced into being accomplices to a cover-up.</p><p>If Keir Starmer has misled the House and the public, he must be held to the same standard that we should expect of any prime minister.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates",
+      "publishedAt": "2026-04-27T17:13:10.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Free bus travel to first-homes fund: what Scottish parties are promising on the campaign trail",
+      "description": "<p>Advent of Reform has radically altered the dynamics of the campaign and parties are responding accordingly</p><p>Polls predict a gravity-defying fifth term at Holyrood for the Scottish National party – albeit on a much reduced vote share – but the advent of Reform UK has radically altered the dynamics of the election campaign. The manifesto pledges set out below reveal how established parties are responding, however, a lack of engagement with an estimated £5bn hole in Scottish government finances by the end of the decade has prompted economists at the independent Fraser of Allander Institute (FAI) to accuse all parties of “<a href=\"https://fraserofallander.org/2026-scottish-manifesto-analysis-scottish-national-party/\">a collective bout of fiscal denial</a>”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/27/what-scottish-parties-promising-campaign-elections-snp-reform-labour-green-lib-dem-conservative\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/2026/apr/27/what-scottish-parties-promising-campaign-elections-snp-reform-labour-green-lib-dem-conservative",
+      "publishedAt": "2026-04-27T13:00:11.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Too few migrants are coming to Scotland, say SNP",
       "description": "The SNP say more migrants are needed to support the economy, but Reform claim immigration has pushed the system to breaking point.",
@@ -210,20 +224,6 @@
       "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
       "publishedAt": "2026-04-14T16:32:59.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
-      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
-      "publishedAt": "2026-04-14T14:13:25.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish Greens' manifesto pledges analysed",
-      "description": "BBC Scotland journalists have analysed some of the policies in the Scottish Greens' manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/cx294n99p90o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-14T13:14:21.000Z",
-      "source": "BBC News"
     }
   ]
 }
