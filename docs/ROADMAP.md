@@ -115,12 +115,16 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 - [x] **Stub-bio enrichment pass.** Three-stage pass closed the must-fix:
   1. `scripts/cross-copy-bios.ts` lifted substantive constituency bios onto 193 same-name regional list entries.
   2. PR #55 wrote bios for the 15 list-only sitting MSPs (Harvie, Greer, Chapman, Ruskell, Burgess, MacKay, plus Lennon, Bibby, Sweeney, O'Kane, McNeill, Findlay, Baker, Regan, Balfour) sourced from Parliament.scot member pages.
-  3. PRs #56–#60 ran a research pass on the remaining 317 quiz-surfacing stubs via WhoCanIVoteFor candidate pages, party-specific candidate sites, news, council websites, and Wikipedia. Yield was 200 confident bios with citation versus 116 honest "we have not identified independent biographical sources for this candidate beyond the party listing" templates — the latter is the right answer for paper candidates whose only public footprint is a listing-page entry. Four pre-existing bios were corrected as a side-effect (Brodie, Stalker, Heggie, Ghani; the Herdman councillor mis-claim caught by the pilot).
+  3. PRs #56–#60 ran a research pass on the remaining 317 quiz-surfacing stubs via WhoCanIVoteFor candidate pages, party-specific candidate sites, news, council websites, and Wikipedia. Outcome: 200 confident bios with citation, 116 honest "we have not identified independent biographical sources for this candidate beyond the party listing" templates (the right answer for paper candidates whose only public footprint is a listing-page entry), and 1 already-substantive bio left untouched. Five pre-existing bios were corrected as a side-effect (Herdman councillor mis-claim caught by the pilot, plus Brodie, Stalker, Heggie, Ghani in batch 2).
 - [x] **Replace Democracy Club API URLs in candidate `sources`.** 704 major-six candidate files now cite the official party website (PR #53). The 262 long-tail candidates also got per-candidate sources where available via the bio research pass — Parliament.scot, WhoCanIVoteFor, council profiles, party candidate pages, news articles. Where no per-candidate source could be identified, the existing party_website source remains alongside the honest stub.
 
 ### Nice-to-have before 7 May
 
 - [x] **Additional news sources.** Added Ballot Box Scotland (https://ballotbox.scot/feed/) and Guardian Scotland politics (https://www.theguardian.com/politics/scotland/rss) to `scripts/sync-news.ts` `SOURCES` alongside BBC Scotland Politics.
+
+### Watch — between now and 7 May
+
+- [ ] **Re-parse manifestos if any party publishes amendments.** All six parties have manifestos parsed and applied. Run `/sync-manifestos` once before polling day to catch any late edits — Scottish Labour's 13 April launch was reparsed on 18 April after a redirect masked it initially, but the same vigilance applies to all parties in the final week.
 
 ### Post-election cleanup (after 7 May)
 
@@ -128,7 +132,6 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 - [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning.
 - [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
 - [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
-- [ ] **Re-parse manifestos if any party publishes amendments.** All six parties have manifestos parsed and applied. Run `/sync-manifestos` once before polling day to catch any late edits — Scottish Labour's 13 April launch was reparsed on 18 April after a redirect masked it initially, but the same vigilance applies to all parties in the final week.
 
 ## What shipped before 7 May (archived task list)
 
