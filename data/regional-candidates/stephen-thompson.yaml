@@ -13,7 +13,7 @@ bio: Scottish National Party (SNP) regional list candidate for South Scotland.
 highlights:
   - Scottish National Party (SNP) regional list candidate for South Scotland in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+  - url: https://www.snp.org/
     type: party_website
 textColor: "#333"
 positions:
