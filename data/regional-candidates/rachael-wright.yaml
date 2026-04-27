@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 3
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Mid Scotland and Fife.
+bio: Reform UK regional list candidate for Mid Scotland and Fife and constituency candidate for Stirling. Rachael Wright is an Operations Director in manufacturing with rural sector experience, standing as a first-time political candidate at this election.
 highlights:
-  - Reform UK regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Operations Director in manufacturing with rural sector experience
+  - First-time candidate standing for both Stirling and the regional list
+  - Campaigns on community safety, women and girls, and local services
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124615/rachael-wright/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 7
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for North East Scotland.
+bio: SNP regional list candidate (7th place) for North East Scotland. Michael Hutchison is a serving Aberdeen City Council councillor for the George Street/Harbour ward, having stood there for the SNP in 2017 and 2022.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Aberdeen City Council councillor for George Street/Harbour ward
+  - Stood as the SNP candidate in George Street/Harbour at council elections in 2017 and 2022
+  - 7th-place SNP candidate on the North East Scotland regional list
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/21071/michael-frederick-hutchison/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

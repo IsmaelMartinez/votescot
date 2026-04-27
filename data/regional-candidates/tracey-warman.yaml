@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 7
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for South Scotland.
+bio: Liberal Democrat regional list candidate for South Scotland and constituency candidate for Galloway and West Dumfries. Tracey Warman is a relief dairy worker and Airbnb operator in Dumfries and Galloway who previously spent 33 years in finance before retiring in 2019, and serves on her community council.
 highlights:
-  - Liberal Democrats regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Relief dairy worker and Airbnb operator in Dumfries and Galloway
+  - Spent 33 years in finance before taking early retirement in 2019
+  - Serves on her local community council and founded a women's sea swimming group in 2023
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123226/tracey-warman/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

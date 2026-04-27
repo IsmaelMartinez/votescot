@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 7
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for West Scotland.
+bio: Scottish Labour regional list candidate for West Scotland and constituency candidate for Renfrewshire North and Cardonald. Mike McKirdy is a retired consultant surgeon with more than 27 years of experience at the Royal Alexandra Hospital in Paisley, campaigning on the basis of his NHS background.
 highlights:
-  - Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Retired consultant surgeon with over 27 years at the Royal Alexandra Hospital in Paisley
+  - Standing for both the Renfrewshire North and Cardonald constituency and the regional list
+  - Campaigns on NHS reform after Labour's 19 years out of power at Holyrood
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123954/mike-mckirdy/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

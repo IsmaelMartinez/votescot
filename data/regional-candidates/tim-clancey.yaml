@@ -9,12 +9,15 @@ regionLabel: South Scotland
 listPosition: 7
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for South Scotland.
+bio: Scottish Green Party regional list candidate (7th place) for South Scotland. Tim Clancey previously stood for the Scottish Greens in South Scotland at the 2016 Scottish Parliament regional election.
 highlights:
-  - Scottish Green Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Stood for the Scottish Greens in South Scotland at the 2016 Scottish Parliament election
+  - 7th-place Green candidate on the South Scotland regional list
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/10957/tim-clancey/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

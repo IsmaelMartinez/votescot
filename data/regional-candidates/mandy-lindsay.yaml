@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 2
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Central Scotland and Lothians West.
+bio: Reform UK regional list candidate for Central Scotland and Lothians West and constituency candidate for Coatbridge and Chryston. Mandy Lindsay is a freelance software industry professional with more than 35 years of experience in the sector, who describes herself as a first-time candidate rather than a career politician.
 highlights:
-  - Reform UK regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Software industry professional with over 35 years of experience, currently freelancing
+  - First-time candidate standing for both the constituency and regional list
+  - Educated through the Scottish state school system
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124589/mandy-lindsay/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

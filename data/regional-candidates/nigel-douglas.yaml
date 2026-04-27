@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 3
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+bio: Reform UK regional list candidate for Edinburgh and Lothians East and constituency candidate for East Lothian Coast and Lammermuirs. Nigel Douglas has 26 years of experience building businesses and supporting entrepreneurs across IT, AI, environmental and energy projects, and lives on a smallholding with experience in the agricultural sector.
 highlights:
-  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - 26 years' experience in business across IT, AI and energy sectors
+  - Lives on a smallholding with experience in the agricultural sector
+  - Standing for both the East Lothian Coast and Lammermuirs constituency and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124595/nigel-douglas/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

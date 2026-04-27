@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 4
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for South Scotland.
+bio: Liberal Democrat regional list candidate for South Scotland and constituency candidate for Clydesdale. Richard Brodie is a long-serving Liberal Democrat candidate who has previously contested Dumfriesshire at the 2016 and 2021 Scottish Parliament elections, Ayr, Carrick and Cumnock at the 2015 UK general election, and Annandale South at the 2017 and 2022 council elections.
 highlights:
-  - Liberal Democrats regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Stood for the Liberal Democrats in Dumfriesshire at the 2016 and 2021 Scottish Parliament elections
+  - Contested Ayr, Carrick and Cumnock at the 2015 UK general election
+  - Previously stood in Annandale South at the 2017 and 2022 council elections
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/2243/richard-john-brodie/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

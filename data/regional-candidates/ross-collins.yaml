@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 5
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for West Scotland.
+bio: Scottish Green Party regional list candidate (5th place) for West Scotland. Ross Collins has worked in health and social care for over 20 years, grew up in Irvine, and previously stood for the Scottish Greens in Irvine East at the 2022 council elections and the 2021 Scottish Parliament regional ballot.
 highlights:
-  - Scottish Green Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Has worked in health and social care for more than 20 years
+  - Stood for the Scottish Greens in Irvine East at the 2022 local elections
+  - Previously contested the 2021 Scottish Parliament regional ballot
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20608/ross-collins/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

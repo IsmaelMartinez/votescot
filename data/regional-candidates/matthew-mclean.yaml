@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 5
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for West Scotland.
+bio: Reform UK regional list candidate for West Scotland and constituency candidate for Cunninghame South. Matthew McLean has previously contested local elections in North Ayrshire as a Conservative candidate in Irvine South in 2022 and as a UKIP candidate in Kilwinning in 2017.
 highlights:
-  - Reform UK regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Stood as a Conservative candidate in Irvine South at the 2022 North Ayrshire local election
+  - Previously contested Kilwinning at the 2017 council election as a UKIP candidate
+  - Standing for Reform UK in both Cunninghame South and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/21530/matthew-mclean/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

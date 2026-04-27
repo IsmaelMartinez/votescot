@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 2
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for North East Scotland.
+bio: Reform UK regional list candidate for North East Scotland and constituency candidate for Dundee City East. Mark Simpson has previously stood as a Reform UK candidate in London, including for Eltham and Chislehurst at the 2024 UK general election and the London Assembly elections in 2021 and 2024.
 highlights:
-  - Reform UK regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Stood as a Reform UK candidate in Eltham and Chislehurst at the 2024 UK general election
+  - Previously contested the London Assembly elections in 2021 and 2024
+  - Standing for both the Dundee City East constituency and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/73969/mark-simpson/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

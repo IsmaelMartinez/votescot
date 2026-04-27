@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 6
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for Edinburgh and Lothians East.
+bio: Liberal Democrat regional list candidate for Edinburgh and Lothians East and constituency candidate for Edinburgh North Eastern and Leith. Liss Owen is a former teacher and the chief executive of a charity supporting young people experiencing homelessness, who entered politics after Liberal Democrat councillors helped her as a victim of crime.
 highlights:
-  - Liberal Democrats regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Chief executive of a charity supporting homeless young people; former teacher
+  - Previously stood as a Liberal Democrat candidate in Spennymoor at the 2025 local elections
+  - Standing for both the Edinburgh North Eastern and Leith constituency and the regional list
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/121756/liss-owen/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

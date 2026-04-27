@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 7
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Highlands and Islands.
+bio: Scottish Labour regional list candidate for Highlands and Islands and constituency candidate for Inverness and Nairn. Shaun Fraser is a self-employed artist from Inverness who previously worked in homelessness prevention for the local charity New Start Highland and stood for Labour in Na h-Eileanan an Iar at the 2021 Scottish Parliament election.
 highlights:
-  - Labour Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Self-employed artist from Inverness; previously worked at New Start Highland on homelessness prevention
+  - Stood for Labour in Na h-Eileanan an Iar at the 2021 Scottish Parliament election (2nd place)
+  - Previously contested Highland Council elections in 2017 and 2022
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/22685/shaun-alexander-fraser/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 12
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+bio: SNP regional list candidate (12th place) for Glasgow. Qasim Hanif previously contested the West Scotland region at the 2016 Scottish Parliament election and the Highlands and Islands region in 2021, and stood for Glasgow Southside Central at the 2017 council elections.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Stood for the SNP in West Scotland at the 2016 Scottish Parliament election
+  - Contested the Highlands and Islands region at the 2021 Scottish Parliament election
+  - Stood in Glasgow Southside Central at the 2017 council elections
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/13094/qasim-hanif/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 7
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Mid Scotland and Fife.
+bio: Reform UK regional list candidate for Mid Scotland and Fife and constituency candidate for Dunfermline. Otto Inglis is a business owner near Edinburgh Airport with a legal background as a former welfare rights lawyer and asylum caseworker, and has been a long-running candidate for UKIP between 2010 and 2021 before joining Reform UK in 2024.
 highlights:
-  - Reform UK regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Business owner near Edinburgh Airport; former welfare rights and asylum caseworker
+  - Stood for UKIP in multiple Westminster, Holyrood, European and council elections from 2010 to 2021
+  - Joined Reform UK in 2024 and is standing in both Dunfermline and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/944/otto-inglis/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

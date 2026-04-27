@@ -9,12 +9,15 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 3
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Edinburgh and Lothians East.
+bio: Scottish Green Party regional list candidate (3rd place) for Edinburgh and Lothians East. Q Manivannan stood for the Scottish Greens at the 2025 Fountainbridge/Craiglockhart Edinburgh local by-election before this Holyrood candidacy.
 highlights:
-  - Scottish Green Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Stood for the Scottish Greens at the 2025 Fountainbridge/Craiglockhart by-election
+  - 3rd-place Green candidate on the Edinburgh and Lothians East regional list
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/122774/q-manivannan/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

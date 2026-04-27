@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 8
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for West Scotland.
+bio: Scottish Conservative regional list candidate for West Scotland and constituency candidate for Cunninghame North. Ronnie Stalker has previously contested Garnock Valley ward at the 2022 North Ayrshire council elections and the 2021 Dalry and West Kilbride by-election.
 highlights:
-  - Conservative and Unionist Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Stood for the Conservatives in Garnock Valley ward at the 2022 North Ayrshire local elections
+  - Contested the 2021 Dalry and West Kilbride by-election
+  - Standing for both the Cunninghame North constituency and the regional list
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/83844/ronnie-stalker/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

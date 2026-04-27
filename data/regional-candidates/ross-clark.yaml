@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 12
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for South Scotland.
+bio: SNP regional list candidate (12th place) for South Scotland. Ross Clark stood for the SNP in Hamilton and Clyde Valley at the 2024 UK general election, finishing second, and previously contested the Larkhall ward at the 2022 South Lanarkshire council elections.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Stood for the SNP in Hamilton and Clyde Valley at the 2024 UK general election (2nd place)
+  - Contested Larkhall ward at the 2022 South Lanarkshire council elections
+  - 12th-place SNP candidate on the South Scotland regional list
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/86287/ross-clark/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2
