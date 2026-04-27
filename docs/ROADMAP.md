@@ -81,11 +81,15 @@ The plan below is sequenced so each PR is independently shippable and reviewable
 
 Update the `region:` field on every constituency YAML currently tagged `Central Scotland` or `Edinburgh and Lothians West` to `Central Scotland and Lothians West`. After this PR, `loadRegions()` returns 8 entries matching Democracy Club's ballot post slugs, and the homepage region picker drops to 8 cards aligned with the regional candidate data shipped in #42.
 
-Touchpoints: ~18 constituency YAMLs (the affected subset), no schema or loader changes (`loadRegions()` already derives from the constituency data). Verified by `validate-data.ts` and the existing test suite. Mechanical, low risk; ship first.
+Slug change side-effect: `/candidates/region/central-scotland` and `/candidates/region/edinburgh-and-lothians-west` collapse into `/candidates/region/central-scotland-and-lothians-west`. The site has only been live a few weeks so external bookmarks are unlikely, but Astro's `redirects` config in `astro.config.mjs` is the cheapest way to keep old links working — add both legacy slugs as 301s to the merged region. The constituency `/candidates/[id]` and `/candidates/constituency/[id]` URLs are unaffected.
+
+Touchpoints: ~18 constituency YAMLs (the affected subset), the redirects entry, no schema or loader changes (`loadRegions()` already derives from the constituency data). Verified by `validate-data.ts` and the existing test suite. Mechanical, low risk; ship first.
 
 #### PR B — Regional surfaces source from regional list candidates
 
-Add `loadRegionalCandidates()` and `loadRegionalCandidatesByRegion(regionId)` to `src/lib/data.ts`. Rewrite `/candidates/region/[id]` to render regional list candidates grouped by party and ordered by `listPosition`, replacing the constituency-filtered view. Drop the "we don't yet model separate regional list candidates" disclaimer banner. Add a "Take the regional vote compass for this region" CTA mirroring the constituency page's flow.
+Add `loadRegionalCandidates()` and `loadRegionalCandidatesByRegion(regionId)` to `src/lib/data.ts`. Refactor the existing `loadCandidatesByRegion(regionName)` to take `regionId` instead, so both loaders share an id-based API and callers stop passing display names around — this is a small but consistency-improving change that touches `/candidates/region/[id].astro` and the homepage picker. Rewrite `/candidates/region/[id]` to render regional list candidates grouped by party and ordered by `listPosition`, replacing the constituency-filtered view. Drop the "we don't yet model separate regional list candidates" disclaimer banner. Add a "Take the regional vote compass for this region" CTA mirroring the constituency page's flow.
+
+Profile-page coverage: regional list candidates live in a separate tree, so the existing `/candidates/[id]` route won't pick them up and "View full profile" links from the new region page will 404. Either add a sibling `/candidates/regional/[id].astro` route that reads from `data/regional-candidates/`, or aggregate both trees in the existing `getStaticPaths`. Lean towards the aggregating approach so a candidate id is enough to find them — the Profile-page UI itself can branch on whether the record has `constituency` or `region` set.
 
 Extend `scripts/apply-party-positions.ts` to walk `data/regional-candidates/` and fan out party positions (so the regional quiz has real, matchable data). Extend `scripts/fix-incumbents.ts` to flag sitting regional MSPs from the existing `memberelectionregionstatuses` fetch.
 
