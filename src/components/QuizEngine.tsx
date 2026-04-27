@@ -113,7 +113,7 @@ function QuizEngineInner(props: Props) {
         // The regional quiz used slugified region names as ids; mirror that here so
         // the resolved id matches the regional candidate `region` field.
         // c.region is the human name in the constituency YAML; regions[] carries id+name.
-        const region = regions.find((r) => r.name === c.region);
+        const region = regions.find((r) => r.name === c.region?.trim());
         if (region) map.set(c.id, region.id);
       }
     }
@@ -148,7 +148,7 @@ function QuizEngineInner(props: Props) {
     }
     if (rParam && regionsById.has(rParam)) {
       const regionName = regionsById.get(rParam)!.name;
-      const match = constituencies.find((c) => c.region === regionName);
+      const match = constituencies.find((c) => c.region?.trim() === regionName);
       if (match) {
         return { constituencyId: match.id, regionId: rParam, inboundRegional: true };
       }

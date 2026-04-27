@@ -13,7 +13,7 @@ import {
 
 const questions = loadQuestions();
 const constituencyCandidates = loadCandidates().filter((c) => c.quizCandidate);
-const regionalCandidates = loadRegionalCandidates();
+const regionalCandidates = loadRegionalCandidates().filter((c) => c.quizCandidate);
 const constituencies = loadConstituencies();
 const regions = loadRegions();
 const base = import.meta.env.BASE_URL;
