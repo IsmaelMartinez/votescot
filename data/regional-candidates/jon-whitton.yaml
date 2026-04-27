@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 6
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Highlands and Islands.
+bio: Recently retired nurse with thirty years' experience across the NHS and private care sector. He moved to Scotland in 2013 and joined Reform UK in December 2024, serving as the party's local Treasurer and Constituency Organiser. He is Reform UK's candidate for Skye, Lochaber and Badenoch.
 highlights:
-  - Reform UK regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Retired nurse with 30 years' experience in NHS and private care
+  - Reform UK Treasurer and Constituency Organiser locally
+  - Reform UK constituency candidate for Skye, Lochaber and Badenoch
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124614/jon-whitton/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

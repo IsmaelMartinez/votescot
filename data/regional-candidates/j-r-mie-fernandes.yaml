@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 6
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Highlands and Islands.
+bio: SNP campaigner in Moray who previously stood for the party in the Elgin City North ward at the 2022 Moray Council elections.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Stood for the SNP in Elgin City North at the 2022 Moray Council elections
+  - Standing on the SNP's Highlands and Islands regional list in 2026
+  - Active on social media as @jeremieSNP
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/84949/jeremie-fernandes/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

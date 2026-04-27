@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 3
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for Highlands and Islands.
+bio: Scottish Liberal Democrat activist who previously stood for the party in the Badenoch and Strathspey ward at the 2022 Highland Council elections.
 highlights:
-  - Liberal Democrats regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Scottish Liberal Democrat candidate for Highlands and Islands in 2026
+  - Previously stood in Badenoch and Strathspey at the 2022 Highland Council elections
+  - Listed as Highland Lib Dems candidate via the local party's website
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85421/declan-gallacher/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

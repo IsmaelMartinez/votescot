@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 6
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for South Scotland.
+bio: British Army veteran of the Argyll and Sutherland Highlanders who joined up at sixteen and later worked as a senior operations manager for a South Pacific cruise company. He is also Reform UK's constituency candidate for Clydesdale.
 highlights:
-  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Former Argyll and Sutherland Highlanders soldier
+  - Background spans Armed Forces, tourism and the energy sector
+  - Reform UK constituency candidate for Clydesdale alongside the South Scotland list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124588/dan-clarke/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

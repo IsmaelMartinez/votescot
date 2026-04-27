@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 2
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Highlands and Islands.
+bio: Scottish Greens activist in Orkney who previously stood for the party in the Kirkwall West and Orphir ward at the 2022 Orkney Islands Council elections.
 highlights:
-  - Scottish Green Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Stood for the Scottish Greens in Kirkwall West and Orphir at the 2022 Orkney Council elections
+  - Second on the Scottish Greens' Highlands and Islands regional list in 2026
+  - Active on social media as @KristopherLeask
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/84880/kristopher-leask/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

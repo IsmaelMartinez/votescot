@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 5
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Glasgow.
+bio: Scottish Labour candidate for Glasgow Kelvin and Maryhill who previously contested a 2024 Glasgow City Council by-election in Partick East/Kelvindale and stood on the Glasgow regional list at the 2016 Holyrood election.
 highlights:
-  - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Labour constituency candidate for Glasgow Kelvin and Maryhill in 2026
+  - Stood at the 2024 Partick East/Kelvindale Glasgow City by-election
+  - Stood on the Glasgow regional list at the 2016 Scottish Parliament election
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/9432/james-adams/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

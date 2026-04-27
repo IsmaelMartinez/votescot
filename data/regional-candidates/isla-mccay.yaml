@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 1
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Highlands and Islands.
+bio: Scottish Labour candidate for Skye, Lochaber and Badenoch focusing her campaign on educational standards, school-leaver opportunities, the housing shortage and mental health services for young people.
 highlights:
-  - Labour Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Labour constituency candidate for Skye, Lochaber and Badenoch in 2026
+  - Campaign focus on education, housing and youth mental health
+  - Standing on the Scottish Labour list for Highlands and Islands
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123250/isla-mccay/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

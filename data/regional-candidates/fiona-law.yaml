@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 3
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Mid Scotland and Fife.
+bio: Clackmannanshire councillor for Clackmannanshire North, first elected in May 2022, where she serves as the SNP group's spokesperson on Environment and Net Zero. Her professional background is in financial services quality assurance and she helped set up a local breastfeeding peer-support group during the pandemic.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Clackmannanshire councillor for Clackmannanshire North since 2022
+  - Spokesperson for Environment and Net Zero on Clackmannanshire Council
+  - Former financial services quality-assurance professional and trained breastfeeding peer supporter
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85959/fiona-law/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

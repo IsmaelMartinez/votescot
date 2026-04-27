@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 6
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Mid Scotland and Fife.
+bio: Rural Chartered Surveyor, Agricultural Valuer and Project Manager with over 25 years of experience across estates, the civil service, the third sector and the energy industry. He authored Reform UK's 2021 energy policy paper and was among the party's first 2021 Holyrood candidates.
 highlights:
-  - Reform UK regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Rural Chartered Surveyor and Agricultural Valuer
+  - Authored Reform UK's 2021 energy policy paper
+  - Reform UK candidate at the 2021 Holyrood and 2024 Westminster elections
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/74123/kenneth-morton/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

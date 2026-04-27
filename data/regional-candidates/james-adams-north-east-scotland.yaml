@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 4
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for North East Scotland.
+bio: Aberdeenshire Council Conservative councillor (cllr.j.adams@aberdeenshire.gov.uk) who previously stood for the party in the Fraserburgh and District ward at the 2022 local elections. He is also Conservative constituency candidate for Banffshire and Buchan Coast.
 highlights:
-  - Conservative and Unionist Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Aberdeenshire Council Conservative councillor
+  - Stood in Fraserburgh and District at the 2022 Aberdeenshire Council elections
+  - Conservative constituency candidate for Banffshire and Buchan Coast in 2026
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85511/james-adams/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

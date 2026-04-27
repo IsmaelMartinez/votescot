@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 4
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Highlands and Islands.
+bio: Scottish Greens campaigner based in Moray who previously stood in the Forres ward at the 2022 Moray Council elections and was the party's candidate for Moray West, Nairn and Strathspey at the 2024 UK general election.
 highlights:
-  - Scottish Green Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Scottish Green candidate for Moray West, Nairn and Strathspey at the 2024 UK general election
+  - Stood in the Forres ward at the 2022 Moray Council elections
+  - Campaigns on warmer homes, thriving high streets and food access
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85602/dryk-van-der-hrn/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 8
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+bio: Retired police detective with nearly thirty years of service, much of it dealing with serious and organised crime. Since retiring in 2016 he has served as a community councillor and worked as an independent driving instructor.
 highlights:
-  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Nearly 30 years' policing experience, much of it as a detective
+  - Community councillor and driving instructor since retiring from the police in 2016
+  - Reform UK constituency candidate for Edinburgh Northwestern in 2026
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/125013/david-thomson/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

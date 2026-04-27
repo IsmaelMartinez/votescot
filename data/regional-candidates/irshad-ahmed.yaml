@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 1
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Edinburgh and Lothians East.
+bio: Long-standing pro-independence campaigner now standing for Labour. He previously contested the Lothian region for the SNP at the 2016 Scottish Parliament election and for the Alba Party in 2021, and is Labour's constituency candidate for Edinburgh Northern in 2026.
 highlights:
-  - Labour Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Labour constituency candidate for Edinburgh Northern in 2026
+  - Stood for the Alba Party on the Lothian regional list in 2021
+  - Stood for the SNP on the Lothian regional list in 2016
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/8317/irshad-ahmed/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

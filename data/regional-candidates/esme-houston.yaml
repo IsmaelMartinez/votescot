@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 2
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for North East Scotland.
+bio: Scottish Greens activist in Aberdeen who stood for the party in the Torry/Ferryhill ward at the 2022 Aberdeen City Council elections and was the Greens' candidate for Aberdeen North at the 2024 UK general election.
 highlights:
-  - Scottish Green Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Scottish Green candidate for Aberdeen North at the 2024 UK general election (1,275 votes)
+  - Stood in Torry/Ferryhill at the 2022 Aberdeen City Council elections
+  - Second on the Scottish Greens' North East Scotland regional list in 2026
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85482/esme-houston/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

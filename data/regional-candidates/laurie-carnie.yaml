@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 7
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for North East Scotland.
+bio: North Angus candidate who lives on a small croft and emphasises animal welfare and rural issues. She is Reform UK's constituency candidate for Angus North and Mearns and previously stood for the Conservatives in the Mearns ward at the 2022 Aberdeenshire Council elections.
 highlights:
-  - Reform UK regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Reform UK constituency candidate for Angus North and Mearns in 2026
+  - Previously stood for the Conservatives in Mearns at the 2022 Aberdeenshire Council elections
+  - Campaigns on animal welfare and rural communities
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85534/laurie-carnie/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

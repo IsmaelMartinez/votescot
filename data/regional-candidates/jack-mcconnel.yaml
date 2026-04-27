@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 10
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for South Scotland.
+bio: Former diplomat with experience across four continents who now works in community organising. He has helped set up a church food bank, campaigned for affordable housing (securing 115 co-op homes) and volunteered at a night shelter; he is a Co-operative Party member.
 highlights:
-  - Labour Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Former diplomat working in three languages across four continents
+  - Set up a church food bank and campaigned for 115 co-op homes
+  - Labour & Co-operative candidate on the South Scotland regional list
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123029/jack-mcconnel/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

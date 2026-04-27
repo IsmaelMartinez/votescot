@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 8
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for South Scotland.
+bio: East Ayrshire Council Conservative councillor profiled by the local Conservative association. He previously contested the Kilmarnock West and Crosshouse ward at the 2022 local elections and is the party's constituency candidate for Kilmarnock and Irvine Valley in 2026.
 highlights:
-  - Conservative and Unionist Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - East Ayrshire Council Conservative councillor
+  - Conservative constituency candidate for Kilmarnock and Irvine Valley in 2026
+  - Profiled on the Ayrshire Conservatives' website
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://www.ayrshireconservatives.org.uk/people/councillor-james-adams
+    type: party_candidate_page
 positions:
   independence: 0
   nhs: 1
