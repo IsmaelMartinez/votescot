@@ -9,6 +9,7 @@ export default defineConfig({
   redirects: {
     "/candidates/region/central-scotland": "/votescot/candidates/region/central-scotland-and-lothians-west",
     "/candidates/region/edinburgh-and-lothians-west": "/votescot/candidates/region/central-scotland-and-lothians-west",
+    "/quiz/regional": "/votescot/quiz",
   },
   integrations: [react(), sitemap()],
   vite: {
