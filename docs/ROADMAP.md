@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (PR C: regional quiz results grouped by party)
+Last updated: 27 April 2026 (audit: striking items already shipped)
 
 ## What's live now
 
@@ -106,15 +106,12 @@ The polls page already shows national-regional vote intent via the constituency/
 
 ### Must-fix if time allows before 7 May
 
-- [ ] **Schema-validate party and manifesto YAMLs.** `scripts/validate-data.ts` currently only validates candidates, constituencies, and questions. A typo like `nhs: 3` in a party file would silently propagate to every candidate of that party. Add `schemas/party.schema.json` and `schemas/manifesto-registry.schema.json` and wire them into `validate-data.ts` alongside the existing loops. Range-check position values 0–2.
 - [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Grep for bios under ~80 characters; prioritise candidates with `quizCandidate: true` since they surface on the quiz results page. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
 - [ ] **Replace Democracy Club API URLs in candidate `sources`.** Every candidate file cites `candidates.democracyclub.org.uk/api/next/parties/PP*` — that's a party registration API, not a biographical source for the individual. Credibility risk if a claim is challenged. Swap in at least one per-candidate bio source (Wikipedia, TheyWorkForYou, Scottish Parliament member page, or official party bio). Can be done opportunistically alongside the stub-bio enrichment.
 
 ### Nice-to-have before 7 May
 
 - [ ] **Additional news sources.** News block currently sources BBC Scotland Politics only. `scripts/sync-news.ts` `SOURCES` array supports any RSS 2.0 feed — candidates worth adding: Ballot Box Scotland (https://ballotbox.scot/feed/), Guardian Scotland politics. Weigh trust vs breadth.
-- [ ] **Matching engine edge-case tests.** `tests/matching.test.ts` does not cover: voter answer for a `questionId` not present in candidate `positions` (silent 0% path at `src/lib/matching.ts:25`); all-answers/all-positions at value 0 (only the value-2 case is tested); tie-order stability between same-party candidates. Added tests would prevent regressions in the 20 days before and during election coverage.
-- [ ] **Pollster name unification.** `data/polls.json` shows "Ipsos MORI" and "Savanta ComRes" as separate pollsters from "Ipsos" and "Savanta"; both are predecessor brand names. Either normalise at scrape time in `scripts/sync-polls.ts` or map at render time in the polls chart.
 
 ### Post-election cleanup (after 7 May)
 
@@ -220,14 +217,11 @@ The polls page already shows national-regional vote intent via the constituency/
     │      NEXT UP (see "Next up" section above)      │
     │                                                 │
     │  Must-fix if time allows:                       │
-    │  • Schema-validate party + manifesto YAMLs      │
     │  • Enrich ~70 quiz-candidate stub bios          │
     │  • Replace Democracy Club API source URLs       │
     │                                                 │
     │  Nice-to-have:                                  │
     │  • Add Ballot Box Scotland / Guardian news RSS  │
-    │  • Matching engine edge-case tests              │
-    │  • Pollster name unification                    │
     │                                                 │
     │  Post-election:                                 │
     │  • "How we did" projection retrospective        │
