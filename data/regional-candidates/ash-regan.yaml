@@ -9,9 +9,14 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 999
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: true
-bio: Independent regional list candidate for Edinburgh and Lothians East.
+bio: Served as MSP for Edinburgh Eastern from 2016 to 2026, sitting first as SNP, then for Alba from 2023, and as an Independent from 2025. She was Minister for Community Safety in the Scottish Government before resigning in 2022 over the Gender Recognition Reform Bill, and is known for hardline pro-independence and gender-critical positions.
 highlights:
-  - Independent regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Elected MSP for Edinburgh Eastern in 2016, re-elected 2021
+  - Served as Minister for Community Safety in the Scottish Government
+  - Resigned from government in 2022 over the Gender Recognition Reform Bill
+  - Crossed the floor to Alba in 2023, then sat as Independent from 2025
 sources:
   - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/ash-regan
+    type: parliament_profile

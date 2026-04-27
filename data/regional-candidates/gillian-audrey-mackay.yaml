@@ -9,12 +9,18 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 1
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: true
-bio: Scottish Green Party regional list candidate for Central Scotland and Lothians West.
+bio: Served as Scottish Green MSP for Central Scotland from 2021 to 2026, becoming party co-leader in August 2025. She was the party's spokesperson on health and social care for the whole parliament and led her members' bill creating safe-access zones around abortion clinics.
 highlights:
-  - Scottish Green Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Elected MSP for Central Scotland in May 2021
+  - Scottish Greens co-leader from August 2025 until dissolution
+  - Spokesperson on health and social care, 2021-2026
+  - Member of the Health, Social Care and Sport Committee
+  - Sponsored the Abortion Services (Safe Access Zones) (Scotland) Act 2024
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/gillian-mackay
+    type: parliament_profile
 positions:
   independence: 2
   nhs: 2
