@@ -9,12 +9,17 @@ regionLabel: Glasgow
 listPosition: 4
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for Glasgow.
+bio: Served as Labour MSP for Central Scotland from 2016 to 2026, with frontbench portfolios spanning health, social care and net zero. She is best known as the member who took the Period Products (Free Provision) (Scotland) Act 2021 through Parliament, making Scotland the first country in the world to enshrine free access to period products in law.
 highlights:
-  - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Elected MSP for Central Scotland in 2016, re-elected 2021
+  - Sponsored the Period Products (Free Provision) (Scotland) Act 2021
+  - Scottish Labour spokesperson on health (2018-2021)
+  - Member of the Net Zero, Energy and Transport Committee, 2021-2026
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/monica-lennon
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2

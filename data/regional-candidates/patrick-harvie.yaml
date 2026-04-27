@@ -9,12 +9,17 @@ regionLabel: Glasgow
 listPosition: 1
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: true
-bio: Scottish Green Party regional list candidate for Glasgow.
+bio: Served as Scottish Green MSP for Glasgow from 2003 to 2026 and as party co-leader from 2008 until 2025. Under the Bute House Agreement he was Minister for Zero Carbon Buildings, Active Travel and Tenants' Rights from 2021 to 2024, leading work on rent controls, energy efficiency and active travel.
 highlights:
-  - Scottish Green Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - First elected MSP for Glasgow in 2003; one of the longest-serving MSPs
+  - Scottish Greens co-leader, 2008-2025
+  - Minister for Zero Carbon Buildings, Active Travel and Tenants' Rights, 2021-2024
+  - Spokesperson on constitutional affairs, external affairs and net zero
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/patrick-harvie
+    type: parliament_profile
 positions:
   independence: 2
   nhs: 2

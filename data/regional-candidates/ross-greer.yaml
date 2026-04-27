@@ -9,12 +9,17 @@ regionLabel: West Scotland
 listPosition: 1
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: true
-bio: Scottish Green Party regional list candidate for West Scotland.
+bio: Served as Scottish Green MSP for West Scotland from 2016 to 2026, becoming party co-leader in August 2025. He was the Greens' spokesperson on education throughout his tenure, took on the finance brief in 2024, and sat on the Finance and Public Administration Committee for most of the 6th session.
 highlights:
-  - Scottish Green Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Elected MSP for West Scotland in 2016, re-elected 2021
+  - Scottish Greens co-leader from August 2025 until dissolution
+  - Spokesperson on education, 2021-2026, and on finance from 2024
+  - Member of the Finance and Public Administration Committee, 2021-2025
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/ross-greer
+    type: parliament_profile
 positions:
   independence: 2
   nhs: 2

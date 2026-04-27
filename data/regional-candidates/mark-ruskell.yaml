@@ -9,12 +9,17 @@ regionLabel: Mid Scotland and Fife
 listPosition: 1
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: true
-bio: Scottish Green Party regional list candidate for Mid Scotland and Fife.
+bio: Served as Scottish Green MSP for Mid Scotland and Fife from 2003 to 2007 and again from 2016 to 2026. He was the party's spokesperson on transport, environment and climate, and a member of the Net Zero, Energy and Transport Committee, with a long-running campaign for a 20mph default speed limit on built-up roads.
 highlights:
-  - Scottish Green Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - First elected MSP in 2003; returned to Parliament in 2016 and re-elected in 2021
+  - Scottish Green spokesperson on transport, environment and climate
+  - Member of the Net Zero, Energy and Transport Committee
+  - Long-time campaigner for a 20mph default speed limit in built-up areas
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/mark-ruskell
+    type: parliament_profile
 positions:
   independence: 2
   nhs: 2

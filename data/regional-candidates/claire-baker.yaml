@@ -9,12 +9,17 @@ regionLabel: Mid Scotland and Fife
 listPosition: 1
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for Mid Scotland and Fife.
+bio: Served as Labour MSP for Mid Scotland and Fife from 2007 to 2026, with a portfolio that has spanned culture, justice, rural affairs, transport and social security. She was Scottish Labour's spokesperson on social security in the run-up to dissolution and previously deputy spokesperson on transport.
 highlights:
-  - Labour Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Elected MSP for Mid Scotland and Fife in 2007, re-elected four times
+  - Scottish Labour spokesperson on social security, 2025-2026
+  - Deputy spokesperson on transport, 2024-2025
+  - Member of the Social Justice and Social Security Committee
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/claire-baker
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2

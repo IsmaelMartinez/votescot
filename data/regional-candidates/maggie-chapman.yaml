@@ -9,12 +9,17 @@ regionLabel: North East Scotland
 listPosition: 1
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: true
-bio: Scottish Green Party regional list candidate for North East Scotland.
+bio: Served as Scottish Green MSP for North East Scotland from 2021 to 2026, having previously co-convened the Scottish Greens between 2013 and 2019. She was the party's spokesperson on justice, human rights and (latterly) social justice, and deputy convener of the Equalities, Human Rights and Civil Justice Committee.
 highlights:
-  - Scottish Green Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Elected MSP for North East Scotland in May 2021
+  - Co-convener of the Scottish Greens, 2013-2019
+  - Deputy Convener of the Equalities, Human Rights and Civil Justice Committee
+  - Spokesperson on justice, human rights and social justice, 2021-2026
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/maggie-chapman
+    type: parliament_profile
 positions:
   independence: 2
   nhs: 2

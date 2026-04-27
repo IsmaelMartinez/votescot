@@ -9,12 +9,17 @@ regionLabel: West Scotland
 listPosition: 2
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for West Scotland.
+bio: Served as Labour MSP for West Scotland from 2011 to 2026, including a stint as Chief Whip from 2014 to 2016. He was the party's spokesperson on constitution, external affairs and culture in the run-up to dissolution and previously held shadow roles on justice, education and transport.
 highlights:
-  - Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Elected MSP for West Scotland in 2011, re-elected three times
+  - Scottish Labour Chief Whip, 2014-2016
+  - Spokesperson on constitution, external affairs and culture, 2023-2026
+  - Member of the Constitution, Europe, External Affairs and Culture Committee
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/neil-bibby
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2

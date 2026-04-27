@@ -9,12 +9,18 @@ regionLabel: Glasgow
 listPosition: 2
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for Glasgow.
+bio: One of the original 1999 intake, she served as MSP for Glasgow Kelvin from 1999 to 2011 and as a Glasgow regional MSP from 2016 to 2026. A former Convener of the Justice Committee, she was Scottish Labour's spokesperson on justice from 2021 until dissolution and a long-standing voice on housing and rent controls.
 highlights:
-  - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Elected to the first Scottish Parliament in 1999 for Glasgow Kelvin
+  - Returned in 2016 as MSP for Glasgow region; re-elected 2021
+  - Former Convener of the Justice Committee
+  - Scottish Labour spokesperson on justice, 2021-2026
+  - Member of the Criminal Justice Committee
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/pauline-mcneill
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2

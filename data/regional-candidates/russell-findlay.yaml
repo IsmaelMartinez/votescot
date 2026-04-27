@@ -9,12 +9,17 @@ regionLabel: West Scotland
 listPosition: 1
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: true
-bio: Conservative and Unionist Party regional list candidate for West Scotland.
+bio: Served as Conservative MSP for West Scotland from 2021 to 2026 and led the Scottish Conservatives from September 2024 until dissolution. A former investigative journalist, he was the party's justice spokesperson from 2023 and Deputy Convener of the Criminal Justice Committee until taking on the leadership.
 highlights:
-  - Conservative and Unionist Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Elected MSP for West Scotland in May 2021
+  - Leader of the Scottish Conservative and Unionist Party, 2024-2026
+  - Deputy Convener of the Criminal Justice Committee, 2021-2024
+  - Scottish Conservative spokesperson on justice, 2023-2024
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/russell-findlay
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 1

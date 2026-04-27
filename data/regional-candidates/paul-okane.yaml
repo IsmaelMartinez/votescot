@@ -9,12 +9,17 @@ regionLabel: West Scotland
 listPosition: 4
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for West Scotland.
+bio: Served as Labour MSP for West Scotland from 2021 to 2026, with frontbench portfolios spanning equalities, social justice, social security and (from late 2025) education. He was Deputy Convener of the Health, Social Care and Sport Committee in his first two years and is the first openly gay Scottish Labour MSP.
 highlights:
-  - Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Elected MSP for West Scotland in 2021
+  - Scottish Labour spokesperson on equalities, 2023-2026
+  - Spokesperson on education, December 2025 to dissolution
+  - Deputy Convener of the Health, Social Care and Sport Committee, 2021-2023
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-okane
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2

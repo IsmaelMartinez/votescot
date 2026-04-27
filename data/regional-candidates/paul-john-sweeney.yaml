@@ -9,12 +9,17 @@ regionLabel: Glasgow
 listPosition: 3
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: true
-bio: Labour Party regional list candidate for Glasgow.
+bio: Served as Labour MSP for Glasgow from 2021 to 2026 and was previously MP for Glasgow North East from 2017 to 2019. He was Deputy Convener of the Health, Social Care and Sport Committee and Scottish Labour's deputy spokesperson on mental health and veterans, and is a vocal advocate for drug-checking and safer-consumption services.
 highlights:
-  - Labour Party regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Elected MSP for Glasgow in 2021
+  - MP for Glasgow North East, 2017-2019
+  - Deputy Convener of the Health, Social Care and Sport Committee, 2023-2026
+  - Deputy spokesperson on mental health and on veterans, 2023-2026
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.parliament.scot/msps/current-and-previous-msps/paul-sweeney
+    type: parliament_profile
 positions:
   independence: 0
   nhs: 2
