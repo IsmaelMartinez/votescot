@@ -23,9 +23,7 @@ const STUB_RX = [
 
 function isStub(bio: string | undefined): boolean {
   if (!bio) return true;
-  const t = bio.trim();
-  if (t.length < 60) return true;
-  return STUB_RX.some((p) => p.test(t));
+  return STUB_RX.some((p) => p.test(bio.trim()));
 }
 
 function normaliseName(name: string): string {
