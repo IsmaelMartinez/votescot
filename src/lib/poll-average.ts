@@ -68,6 +68,34 @@ export function rollingAverage(
   return { shares, pollsUsed: window };
 }
 
+export interface PartyRange {
+  min: number;
+  max: number;
+}
+
+// Per-party min/max across the most recent `windowSize` polls. Same windowing
+// as `rollingAverage` so the values reconcile when shown side-by-side. Nulls
+// for a party are excluded; if every poll in the window is null for a party,
+// that party's range is { min: 0, max: 0 }.
+export function rangeOverWindow(
+  polls: PollEntry[],
+  windowSize = 5,
+): { ranges: Record<PartyKey, PartyRange>; pollsUsed: PollEntry[] } {
+  const sorted = [...polls].sort((a, b) => pollMidDate(b) - pollMidDate(a));
+  const window = sorted.slice(0, windowSize);
+
+  const ranges = {} as Record<PartyKey, PartyRange>;
+  for (const party of PARTY_KEYS) {
+    const values = window.map((p) => p[party]).filter((v): v is number => v != null);
+    if (values.length === 0) {
+      ranges[party] = { min: 0, max: 0 };
+    } else {
+      ranges[party] = { min: Math.min(...values), max: Math.max(...values) };
+    }
+  }
+  return { ranges, pollsUsed: window };
+}
+
 /** 2021 Scottish Parliament election national results (first-past-the-post constituency vote). */
 export const BASELINE_2021_CONSTITUENCY: PartyShares = {
   snp: 47.7,
