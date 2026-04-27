@@ -52,7 +52,7 @@ interface RegionalCandidateData {
 function normaliseName(name: string): string {
   return name
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "") // strip accents (e.g. Màiri → Mairi)
+    .replace(/[\u0300-\u036f]/g, "") // strip accents (e.g. Màiri → Mairi)
     .toLowerCase()
     .replace(/['']/g, "")
     .replace(/\bdr\.?\s*/g, "")
