@@ -111,7 +111,7 @@ The polls page already shows national-regional vote intent via the constituency/
 
 ### Nice-to-have before 7 May
 
-- [ ] **Additional news sources.** News block currently sources BBC Scotland Politics only. `scripts/sync-news.ts` `SOURCES` array supports any RSS 2.0 feed — candidates worth adding: Ballot Box Scotland (https://ballotbox.scot/feed/), Guardian Scotland politics. Weigh trust vs breadth.
+- [x] **Additional news sources.** Added Ballot Box Scotland (https://ballotbox.scot/feed/) and Guardian Scotland politics (https://www.theguardian.com/politics/scotland/rss) to `scripts/sync-news.ts` `SOURCES` alongside BBC Scotland Politics.
 
 ### Post-election cleanup (after 7 May)
 
