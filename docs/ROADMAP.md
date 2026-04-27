@@ -86,7 +86,7 @@ Done in this PR. Cross-checking VoteScot's existing constituency `region:` tags 
 
 #### PR B — Regional surfaces source from regional list candidates — shipped
 
-Done in this PR. Loader API refactor, `/candidates/region/[id]` rewritten with party-grouped lists ordered by `listPosition`, `/candidates/regional/[id]` profile route added (sibling rather than aggregated — 339 candidate slugs collide between the constituency and regional trees, mostly because the same person stands on both ballots, so a single route was unworkable). Party positions fanned out to 393 of 589 regional candidates via the extended `apply-party-positions.ts`. The `fix-incumbents.ts` extension to flag sitting regional MSPs is split into a small follow-up PR.
+Done in this PR. Loader API refactor, `/candidates/region/[id]` rewritten with party-grouped lists ordered by `listPosition`, `/candidates/regional/[id]` profile route added (sibling rather than aggregated — 339 candidate slugs collide between the constituency and regional trees, mostly because the same person stands on both ballots, so a single route was unworkable). Party positions fanned out to 393 of 589 regional candidates via the extended `apply-party-positions.ts`. ~~The `fix-incumbents.ts` extension to flag sitting regional MSPs is split into a small follow-up PR.~~ Done. `scripts/fix-incumbents-regional.ts` cross-references regional candidates against the union of session-6 constituency-status and region-status records (a sitting MSP is "incumbent" on any party list regardless of which seat they hold), flagging 69 sitting MSPs across 589 regional candidate files.
 
 #### PR C — Quiz results grouped by party, not individual — shipped
 
