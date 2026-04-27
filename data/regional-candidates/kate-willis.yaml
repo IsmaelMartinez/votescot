@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 3
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Highlands and Islands.
+bio: Marine ecologist and wildlife tour guide who has lived in the Highlands for nearly twenty years. She works for Lochaber Environmental Group on active travel and cycling infrastructure projects, including HIBIKE, Fort William's e-bike share scheme. She was the first Scottish Green to stand in council elections in Lochaber.
 highlights:
-  - Scottish Green Party regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Marine ecologist and Lochaber Environmental Group active-travel project worker
+  - Helped deliver HIBIKE, Fort William's e-bike share scheme
+  - First Scottish Green council candidate in Lochaber (2021/2022)
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/84096/kate-willis/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

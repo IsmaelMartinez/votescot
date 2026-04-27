@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 7
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for Mid Scotland and Fife.
+bio: Scottish Conservative councillor on Fife Council, representing the Cowdenbeath ward continuously since 2017. He lives in Cowdenbeath with his wife and three children and emphasises localism in his campaign.
 highlights:
-  - Conservative and Unionist Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Sitting Fife Council Conservative councillor for Cowdenbeath ward since 2017
+  - Standing on the Conservative list for Mid Scotland and Fife in 2026
+  - Campaigns on a localist platform of decisions made closer to communities
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20805/darren-watt/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 5
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+bio: Long-standing SNP councillor for the Springburn/Robroyston ward on Glasgow City Council, first elected in 2017 and re-elected in 2022. He previously stood for Solidarity in Glasgow North East at the 2010 general election.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Glasgow City Council SNP councillor for Springburn/Robroyston since 2017
+  - Stood on the Lothian regional list at the 2021 Holyrood election
+  - Standing for the SNP on the Glasgow regional list in 2026
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/1301/graham-campbell/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

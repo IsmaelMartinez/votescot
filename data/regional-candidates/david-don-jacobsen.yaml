@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 5
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Socialist Labour Party regional list candidate for West Scotland.
+bio: Healthcare worker with around twenty years' experience in the NHS, standing for the Socialist Labour Party. He opposed the 2024 National Care Service Bill and campaigns to keep care provision in the NHS and local authority sector rather than private providers.
 highlights:
-  - Socialist Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - NHS healthcare worker with two decades of frontline experience
+  - Socialist Labour Party candidate for Edinburgh North and Leith burgh constituency
+  - Opposed the Scottish Government's National Care Service Bill
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/3094/david-don-jacobsen/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

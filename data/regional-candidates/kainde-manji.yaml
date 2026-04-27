@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 4
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Mid Scotland and Fife.
+bio: Stirling-based Labour candidate who uses the title Dr (per her LinkedIn profile and party Facebook page "Dr Kainde Manji for Stirling"). She is Scottish Labour's constituency candidate for Stirling.
 highlights:
-  - Labour Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Labour constituency candidate for Stirling in 2026
+  - Stands as "Dr Kainde Manji for Stirling" on Scottish Labour materials
+  - Standing on the Scottish Labour list for Mid Scotland and Fife
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123032/kainde-manji/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

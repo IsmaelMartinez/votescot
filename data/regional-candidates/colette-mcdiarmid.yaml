@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 8
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for West Scotland.
+bio: Labour and Co-operative councillor representing Bishopbriggs North and Campsie on East Dunbartonshire Council. She is also Labour's constituency candidate for Strathkelvin and Bearsden in the 2026 election.
 highlights:
-  - Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Sitting East Dunbartonshire councillor for Bishopbriggs North and Campsie
+  - Labour & Co-operative constituency candidate for Strathkelvin and Bearsden in 2026
+  - Standing on the Scottish Labour list for West Scotland
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/84761/colette-mcdiarmid/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

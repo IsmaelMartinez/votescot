@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 4
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for North East Scotland.
+bio: Aberdeenshire-based former NHS nurse and midwife who now works as a health and wellness coach. She stood for Reform UK in Aberdeenshire North and Moray East at the 2024 UK general election, where she finished third with 5,562 votes.
 highlights:
-  - Reform UK regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Former NHS nurse and midwife, now a health and wellness coach
+  - Reform UK candidate for Aberdeenshire North and Moray East at the 2024 general election (3rd, 5,562 votes)
+  - Reform UK constituency candidate for Aberdeenshire West in 2026
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/117298/jo-hart/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

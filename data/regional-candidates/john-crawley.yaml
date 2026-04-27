@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 6
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for North East Scotland.
+bio: Aberdeenshire councillor since 2022, with prior careers in the Royal Navy as a radar specialist (1975–1987) and in financial services, including running his own consultancy from 1992–2007. He now operates a power-cleaning business and a property company and is a qualified FSA Compliance Officer.
 highlights:
-  - Reform UK regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Sitting Aberdeenshire Council councillor since 2022
+  - Royal Navy veteran (1975–1987) and former financial consultant with Prudential
+  - Reform UK candidate for Aberdeenshire constituencies and the North East regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/72888/john-crawley/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

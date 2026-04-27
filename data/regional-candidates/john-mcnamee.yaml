@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 7
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for South Scotland.
+bio: Hamilton-based qualified social worker and University of St Andrews graduate who previously chaired the Hamilton Area Committee on South Lanarkshire Council. He is Reform UK's constituency candidate for Hamilton, Larkhall and Stonehouse.
 highlights:
-  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Qualified social worker and former South Lanarkshire councillor
+  - Former Chair of the Hamilton Area Committee
+  - Reform UK constituency candidate for Hamilton, Larkhall and Stonehouse in 2026
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124608/john-mcnamee/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

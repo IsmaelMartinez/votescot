@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 7
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+bio: International sales professional with more than thirty years of experience in cross-cultural business, standing as Reform UK's constituency candidate for Edinburgh Central. He pitches a results-driven approach to public service and value for money.
 highlights:
-  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Over 30 years' experience in international sales
+  - Reform UK constituency candidate for Edinburgh Central in 2026
+  - Campaigns on accountability and value for money for Edinburgh businesses
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/122777/gary-neill/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

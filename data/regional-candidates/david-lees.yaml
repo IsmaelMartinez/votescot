@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 4
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+bio: Edinburgh-raised candidate who attended Duddingston Primary and Portobello High School and has worked across hospitality, retail, education and funeral services; he is currently self-employed. He is also Reform UK's constituency candidate for Edinburgh Northern.
 highlights:
-  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Born and educated in Edinburgh (Duddingston Primary and Portobello High)
+  - Career across hospitality, retail, education and funeral services
+  - Reform UK constituency candidate for Edinburgh Northern alongside the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124598/david-lees/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

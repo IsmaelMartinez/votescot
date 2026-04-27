@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 8
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Glasgow.
+bio: Retired Chartered Accountant and businessman who has lived in central Glasgow for around fifteen years and is active on his local community council. He is Reform UK's constituency candidate for Glasgow Southside.
 highlights:
-  - Reform UK regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Retired Chartered Accountant and former businessman
+  - Active on a local Glasgow community council
+  - Reform UK constituency candidate for Glasgow Southside in 2026
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124607/gordon-millar/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1
