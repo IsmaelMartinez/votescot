@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (bios: cross-copy from constituency to regional for 193 dual-list candidates)
+Last updated: 27 April 2026 (audit: bio enrichment closed; only watch + post-election items remain)
 
 ## What's live now
 
@@ -112,12 +112,19 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 
 ### Must-fix if time allows before 7 May
 
-- [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Round-1 cross-copy via `scripts/cross-copy-bios.ts` lifted the substantive constituency bios onto 193 same-name regional list entries, dropping the regional quiz-stub count from 393 to 206 and the regional incumbent stub count from 69 to 15. Remaining work: 15 regional list MSPs without a constituency twin (mostly Greens — Patrick Harvie, Ross Greer, Maggie Chapman, Mark Ruskell, Ariane Burgess, Gillian MacKay, plus list-only Labour/Indie MSPs), 206 regional non-incumbent quiz stubs, and 124 constituency-mode quiz stubs. These need per-candidate research from Parliament.scot member pages, TheyWorkForYou, or party bios — the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
-- [x] **Replace Democracy Club API URLs in candidate `sources`** (major-six). 704 candidate files across SNP, Conservatives, Reform UK, Labour, Lib Dems, and Greens now cite the official party website (taken from `data/manifestos/registry.yaml`) via `scripts/replace-dc-source-urls.ts`. The remaining 262 candidates across 25 minor parties + Independents still carry the DC API URL; surfacing a more specific source for each is folded into the stub-bio enrichment pass below since both need per-candidate research.
+- [x] **Stub-bio enrichment pass.** Three-stage pass closed the must-fix:
+  1. `scripts/cross-copy-bios.ts` lifted substantive constituency bios onto 193 same-name regional list entries.
+  2. PR #55 wrote bios for the 15 list-only sitting MSPs (Harvie, Greer, Chapman, Ruskell, Burgess, MacKay, plus Lennon, Bibby, Sweeney, O'Kane, McNeill, Findlay, Baker, Regan, Balfour) sourced from Parliament.scot member pages.
+  3. PRs #56–#60 ran a research pass on the remaining 317 quiz-surfacing stubs via WhoCanIVoteFor candidate pages, party-specific candidate sites, news, council websites, and Wikipedia. Outcome: 200 confident bios with citation, 116 honest "we have not identified independent biographical sources for this candidate beyond the party listing" templates (the right answer for paper candidates whose only public footprint is a listing-page entry), and 1 already-substantive bio left untouched. Five pre-existing bios were corrected as a side-effect (Herdman councillor mis-claim caught by the pilot, plus Brodie, Stalker, Heggie, Ghani in batch 2).
+- [x] **Replace Democracy Club API URLs in candidate `sources`.** 704 major-six candidate files now cite the official party website (PR #53). The 262 long-tail candidates also got per-candidate sources where available via the bio research pass — Parliament.scot, WhoCanIVoteFor, council profiles, party candidate pages, news articles. Where no per-candidate source could be identified, the existing party_website source remains alongside the honest stub.
 
 ### Nice-to-have before 7 May
 
 - [x] **Additional news sources.** Added Ballot Box Scotland (https://ballotbox.scot/feed/) and Guardian Scotland politics (https://www.theguardian.com/politics/scotland/rss) to `scripts/sync-news.ts` `SOURCES` alongside BBC Scotland Politics.
+
+### Watch — between now and 7 May
+
+- [ ] **Re-parse manifestos if any party publishes amendments.** All six parties have manifestos parsed and applied. Run `/sync-manifestos` once before polling day to catch any late edits — Scottish Labour's 13 April launch was reparsed on 18 April after a redirect masked it initially, but the same vigilance applies to all parties in the final week.
 
 ### Post-election cleanup (after 7 May)
 
@@ -125,7 +132,6 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 - [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning.
 - [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
 - [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
-- [ ] **Re-parse Scottish Labour positions after manifesto revisions.** The 18 April parse reflects the 13 April manifesto launch version. If Labour publishes amendments before polling day, `/sync-manifestos` will pick them up — but watch for stance drift around tax and equality where the language is under active scrutiny.
 
 ## What shipped before 7 May (archived task list)
 
@@ -222,17 +228,16 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
     ┌─────────────────────────────────────────────────┐
     │      NEXT UP (see "Next up" section above)      │
     │                                                 │
-    │  Must-fix if time allows:                       │
-    │  • Enrich ~70 quiz-candidate stub bios          │
-    │  • Replace Democracy Club API source URLs       │
+    │  Must-fix and nice-to-have: all closed.         │
     │                                                 │
-    │  Nice-to-have:                                  │
-    │  • Add Ballot Box Scotland / Guardian news RSS  │
+    │  Watch:                                         │
+    │  • Re-run /sync-manifestos if any party amends  │
     │                                                 │
     │  Post-election:                                 │
     │  • "How we did" projection retrospective        │
     │  • Retire dead populate-projections default     │
     │  • yaml.stringify lineWidth in fan-out script   │
+    │  • Deep-freeze data caches (or decide not to)   │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
