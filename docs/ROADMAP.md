@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (PR B: regional surfaces sourced from list candidates)
+Last updated: 27 April 2026 (PR C: regional quiz results grouped by party)
 
 ## What's live now
 
@@ -76,6 +76,7 @@ Shipped surfaces feeding into this rollout:
 - [x] **Regional list candidate ingest** (PR #42). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
 - [x] **Region naming reconciled to 8 official regions** (PR A). Constituency `region:` field updated across 16 YAMLs to match the 2025 Boundaries Scotland review and Democracy Club's ballot structure; `loadRegions()` now returns 8 entries with id slugs that match the regional list ballot keys. Astro redirects send legacy `/central-scotland` and `/edinburgh-and-lothians-west` URLs to the merged region.
 - [x] **Regional surfaces sourced from list candidates** (PR B). `loadRegionalCandidates()` / `loadRegionalCandidatesByRegion()` added; `loadCandidatesByRegion` refactored to a regionId API. `/candidates/region/[id]` now renders regional list candidates grouped by party and ordered by `listPosition`. Disclaimer banner dropped. Sibling `/candidates/regional/[id]` profile route added (collisions with `/candidates/[id]` made the aggregating approach unviable — 339 shared slugs). `apply-party-positions.ts` extended to fan out to `data/regional-candidates/`; 393 of 589 regional candidates now carry party positions.
+- [x] **Quiz results grouped by party** (PR C). `/quiz/regional` now sources from `loadRegionalCandidates()` and `QuizEngine` regional mode renders one match score per party with the party's regional list candidates listed beneath in `listPosition` order, each linking to `/candidates/regional/{id}`. Per-issue breakdown shown once per party; same-party-identical-score disclaimer dropped from regional mode (the new layout makes the same point structurally). Constituency mode untouched.
 
 The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
 
@@ -87,9 +88,9 @@ Done in this PR. Cross-checking VoteScot's existing constituency `region:` tags 
 
 Done in this PR. Loader API refactor, `/candidates/region/[id]` rewritten with party-grouped lists ordered by `listPosition`, `/candidates/regional/[id]` profile route added (sibling rather than aggregated — 339 candidate slugs collide between the constituency and regional trees, mostly because the same person stands on both ballots, so a single route was unworkable). Party positions fanned out to 393 of 589 regional candidates via the extended `apply-party-positions.ts`. The `fix-incumbents.ts` extension to flag sitting regional MSPs is split into a small follow-up PR.
 
-#### PR C — Quiz results grouped by party, not individual
+#### PR C — Quiz results grouped by party, not individual — shipped
 
-Refactor `QuizEngine`'s regional mode to compute one match score per party (positions are party-level) and render party blocks with the party's regional list candidates listed beneath each block in `listPosition` order. The existing "same-party candidates share identical match scores" disclosure on the constituency mode already concedes this is the honest shape; this PR makes the regional UI match. Constituency mode left untouched in this PR; whether to apply the same treatment there is a separate conversation captured below.
+Done in this PR. `QuizEngine` now branches on mode for both data and rendering: regional mode takes `RegionalCandidate[]` from `loadRegionalCandidates()`, groups them by party, computes one match score per party (positions are party-level), and renders party blocks ordered by score with each block listing that party's regional list candidates in `listPosition` order linked to `/candidates/regional/{id}`. The per-issue breakdown shows once per party. Parties with no captured positions render at the bottom with "No quiz positions" instead of a misleading 0%. Constituency mode left untouched; the analogous refactor for `/quiz` is captured in the carried follow-ups below.
 
 #### PR D — Map view toggle (constituency ↔ region)
 
