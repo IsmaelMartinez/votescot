@@ -4,9 +4,9 @@
 // the earlier substring-match did, which had let Scottish Labour's positions,
 // stances and party_website fan out onto SLP candidate files.
 export const PARTY_MATCH_MAP: Record<string, string[]> = {
-  "scottish-national-party": ["scottish national party (snp)"],
-  "scottish-labour": ["labour party", "labour and co-operative party"],
-  "scottish-conservatives": ["conservative and unionist party"],
+  "scottish-national-party": ["scottish national party (snp)", "scottish national party", "snp"],
+  "scottish-labour": ["labour party", "scottish labour party", "labour and co-operative party"],
+  "scottish-conservatives": ["conservative and unionist party", "scottish conservative and unionist party"],
   "scottish-liberal-democrats": ["liberal democrats", "scottish liberal democrats"],
   "scottish-green-party": ["scottish green party"],
   "reform-uk": ["reform uk"],
