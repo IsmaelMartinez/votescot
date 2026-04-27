@@ -7,13 +7,20 @@ accent: "#8B0000"
 constituency: motherwell-and-wishaw
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Motherwell and Wishaw.
+bio: Councillor on North Lanarkshire Council and founder of the Health and
+  Wellness Hub, a Motherwell-based social enterprise she set up in 2012. She
+  has chaired the North Lanarkshire Integration Joint Board and the council's
+  Community and Voluntary Sector Partnership group, and was named in the WISE
+  100 list of Women in Social Enterprise in 2019.
 highlights:
-  - Labour Party candidate for Motherwell and Wishaw in the 2026 Scottish
-    Parliament election
+  - North Lanarkshire councillor
+  - Founder of the Health and Wellness Hub social enterprise (2012)
+  - Former chair of the North Lanarkshire Integration Joint Board
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.socialenterprise.academy/scot/tutors/ayeshah-khan-67
+    type: campaign_site
 positions:
   independence: 0
   nhs: 2

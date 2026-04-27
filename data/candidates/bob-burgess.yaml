@@ -7,12 +7,16 @@ accent: "#005EA5"
 constituency: motherwell-and-wishaw
 isIncumbent: false
 quizCandidate: true
-bio: North Lanarkshire councillor for Motherwell West.
+bio: Conservative councillor on North Lanarkshire Council for the Wishaw ward,
+  serving his second term.
 highlights:
-  - North Lanarkshire councillor for Motherwell West
+  - North Lanarkshire councillor for Wishaw ward (second term)
+  - Scottish Conservative and Unionist Party
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://www.northlanarkshire.gov.uk/ward-21-wishaw
+    type: council_profile
 positions:
   independence: 0
   nhs: 1

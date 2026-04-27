@@ -7,10 +7,11 @@ accent: "#B8860B"
 constituency: uddingston-and-bellshill
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Uddingston and Bellshill.
+bio: Standing for the Liberal Democrats in Uddingston and Bellshill. We have
+  not identified independent biographical sources for this candidate beyond the
+  party listing.
 highlights:
-  - Liberal Democrats candidate for Uddingston and Bellshill in the 2026
-    Scottish Parliament election
+  - Standing for the Liberal Democrats in the 2026 Scottish Parliament election.
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website

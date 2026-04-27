@@ -7,13 +7,19 @@ accent: "#0a7f91"
 constituency: edinburgh-southern
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Edinburgh Southern.
+bio: A second-generation immigrant whose parents moved to the UK from the West
+  Indies in the 1960s, he trained as an apprentice and qualified engineer and
+  is self-employed running a technical engineering consultancy. A former Labour
+  voter, he moved to Scotland in 2023 with his Scottish wife.
 highlights:
-  - Reform UK candidate for Edinburgh Southern in the 2026 Scottish Parliament
-    election
+  - Self-employed technical engineering consultant
+  - Former Labour voter; moved from England to Scotland in 2023
+  - Reported as the only Black Reform UK constituency candidate in Scotland
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://www.deadlinenews.co.uk/2024/06/13/edinburgh-reform-candidate-the-last-person-who-would-support-a-racist-party/
+    type: news_article
 positions:
   independence: 0
   nhs: 1

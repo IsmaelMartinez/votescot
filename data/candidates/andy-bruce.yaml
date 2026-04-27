@@ -7,10 +7,12 @@ accent: "#005EA5"
 constituency: coatbridge-and-chryston
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Coatbridge and Chryston.
+bio: Standing for the Conservative and Unionist Party in Coatbridge and
+  Chryston. We have not identified independent biographical sources for this
+  candidate beyond the party listing.
 highlights:
-  - Conservative and Unionist Party candidate for Coatbridge and Chryston in the
-    2026 Scottish Parliament election
+  - Standing for the Conservative and Unionist Party in the 2026 Scottish
+    Parliament election.
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website

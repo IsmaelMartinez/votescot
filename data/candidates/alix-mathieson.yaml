@@ -7,15 +7,19 @@ accent: "#005EA5"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: East Dunbartonshire councillor for Milngavie. University of Glasgow
-  politics graduate. Stood as Conservative candidate for Mid-Dunbartonshire in
-  2024.
+bio: East Dunbartonshire councillor for Milngavie ward, elected in 2022. She
+  previously stood as the Conservative candidate for Mid Dunbartonshire at the
+  2024 UK general election and for Glasgow Maryhill and Springburn at the 2021
+  Scottish Parliament election.
 highlights:
-  - East Dunbartonshire councillor for Milngavie
-  - University of Glasgow politics graduate; worked in electoral law
+  - East Dunbartonshire councillor for Milngavie ward (elected 2022)
+  - Conservative candidate, Mid Dunbartonshire, 2024 UK general election
+  - Conservative candidate, Glasgow Maryhill and Springburn, 2021 Holyrood
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/71828/alix-mathieson
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1
