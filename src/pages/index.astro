@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import NewsList from "../components/NewsList.astro";
 import { loadConstituencies, loadNews, loadRegions, loadCandidatesByRegion } from "../lib/data";
+import { slugifyConstituency } from "../lib/slugify";
 
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
@@ -19,7 +20,15 @@ const projections = constituencies
     topParties: c.topParties,
   }));
 
-const regions = loadRegions().map((r) => ({
+const baseRegions = loadRegions();
+const mapRegions = baseRegions.map((r) => ({ id: r.id, name: r.name }));
+const constituencyRegions: Record<string, string> = Object.fromEntries(
+  constituencies
+    .filter((c) => c.region?.trim())
+    .map((c) => [c.id, slugifyConstituency(c.region.trim())])
+);
+
+const regions = baseRegions.map((r) => ({
   ...r,
   constituencyCount: constituencies.filter((c) => c.region?.trim() === r.name).length,
   candidateCount: loadCandidatesByRegion(r.id).length,
@@ -43,6 +52,8 @@ const news = loadNews();
       knownConstituencies={knownConstituencies}
       basePath={base}
       projections={projections}
+      constituencyRegions={constituencyRegions}
+      regions={mapRegions}
     />
 
     <section class="my-6">
