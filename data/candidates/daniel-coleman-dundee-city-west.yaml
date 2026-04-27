@@ -7,12 +7,16 @@ accent: "#B8860B"
 constituency: dundee-city-west
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Dundee City West.
+bio: Liberal Democrat candidate for Dundee City West who says he is standing 'to give the residents of Dundee City West a new voice instead of the same old one trick ponies'. Campaigning on healthcare, the cost of living, infrastructure and education.
 highlights:
-  - Liberal Democrats candidate for Dundee City West in the 2026 Scottish Parliament election
+  - Standing to give Dundee City West voters a new voice on local concerns
+  - Campaigning on healthcare, cost of living, infrastructure and education
+  - Liberal Democrat candidate for Dundee City West in the 2026 Scottish Parliament election
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/5271/daniel-coleman
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2
