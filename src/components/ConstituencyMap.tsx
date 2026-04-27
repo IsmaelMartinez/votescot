@@ -31,10 +31,19 @@ interface ProjectionInfo {
   topParties?: { party: string; share: number; status: string }[];
 }
 
+interface RegionInfo {
+  id: string;
+  name: string;
+}
+
 interface Props {
   knownConstituencies: string[];
   basePath: string;
   projections?: ProjectionInfo[];
+  /** Map of constituency id (== topojson slug) to region id slug. */
+  constituencyRegions?: Record<string, string>;
+  /** Region id -> human-readable region name. */
+  regions?: RegionInfo[];
 }
 
 // Scotland roughly: lat 54.6–60.9, lon -7.6–-0.7
@@ -73,6 +82,22 @@ const COMPETITIVENESS_OPACITY: Record<string, number> = {
   "toss-up": 0.35,
 };
 
+// Hand-assigned palette for the 8 official Holyrood regions. Adjacent regions
+// receive contrasting hues; ColorBrewer Set2-inspired but tuned to avoid clash
+// with the reserved party colours above. Colour-blind friendly enough for the
+// regional grouping cue (we are not encoding ranked data).
+const REGION_COLORS: Record<string, string> = {
+  "highlands-and-islands": "#8da0cb", // soft blue-violet (top)
+  "north-east-scotland": "#fc8d62", // warm orange
+  "mid-scotland-and-fife": "#66c2a5", // teal
+  "central-scotland-and-lothians-west": "#e78ac3", // pink
+  "edinburgh-and-lothians-east": "#a6d854", // lime
+  glasgow: "#ffd92f", // yellow
+  "west-scotland": "#e5c494", // tan
+  "south-scotland": "#b3b3b3", // neutral grey
+};
+const REGION_COLOR_FALLBACK = "#9ca3af";
+
 function MapController({
   highlightSlug,
   features,
@@ -99,7 +124,13 @@ function MapController({
   return null;
 }
 
-function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Props) {
+function ConstituencyMapInner({
+  knownConstituencies,
+  basePath,
+  projections,
+  constituencyRegions,
+  regions,
+}: Props) {
   const [features, setFeatures] = useState<ConstituencyFeature[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -114,6 +145,15 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ name: string; slug: string; covered: boolean } | null>(null);
   const [showProjections, setShowProjections] = useState(!!projections?.length);
+  const [viewMode, setViewMode] = useState<"constituency" | "region">("constituency");
+
+  const regionsById = React.useMemo(() => {
+    const map = new Map<string, string>();
+    if (regions) for (const r of regions) map.set(r.id, r.name);
+    return map;
+  }, [regions]);
+
+  const hasRegionData = !!constituencyRegions && !!regions?.length;
 
   const projectionMap = React.useMemo(() => {
     const map = new Map<string, ProjectionInfo>();
@@ -159,6 +199,19 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         };
       }
 
+      if (viewMode === "region" && hasRegionData) {
+        const regionId = constituencyRegions?.[slug];
+        const fill = (regionId && REGION_COLORS[regionId]) || REGION_COLOR_FALLBACK;
+        // Reduce internal stroke weight so adjacent constituencies sharing
+        // a region read visually as one block.
+        return {
+          fillColor: fill,
+          fillOpacity: 0.65,
+          color: "#4b5563",
+          weight: 0.5,
+        };
+      }
+
       if (showProjections && hasProjections) {
         const proj = projectionMap.get(slug);
         if (proj?.projection) {
@@ -186,7 +239,16 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         weight: 1,
       };
     },
-    [knownConstituencies, highlightSlug, showProjections, hasProjections, projectionMap]
+    [
+      knownConstituencies,
+      highlightSlug,
+      showProjections,
+      hasProjections,
+      projectionMap,
+      viewMode,
+      hasRegionData,
+      constituencyRegions,
+    ]
   );
 
   const onEachFeature = useCallback(
@@ -195,7 +257,11 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
       const covered = knownConstituencies.includes(slug);
 
       let tooltipHtml: string;
-      if (showProjections && hasProjections) {
+      if (viewMode === "region" && hasRegionData) {
+        const regionId = constituencyRegions?.[slug];
+        const regionName = (regionId && regionsById.get(regionId)) || "Unknown region";
+        tooltipHtml = `<strong>${regionName}</strong><br/><span style="font-size:12px;color:#16a34a">Click to see regional list candidates</span>`;
+      } else if (showProjections && hasProjections) {
         const proj = projectionMap.get(slug);
         if (proj?.projection) {
           const partyLabel = PARTY_LABELS[proj.projection] ?? proj.projection;
@@ -242,6 +308,13 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
           e.target.setStyle(styleFeature(feature));
         },
         click() {
+          if (viewMode === "region" && hasRegionData) {
+            const regionId = constituencyRegions?.[slug];
+            if (regionId) {
+              window.location.href = `${basePath}candidates/region/${regionId}`;
+            }
+            return;
+          }
           if (covered) {
             window.location.href = `${basePath}candidates/constituency/${slug}`;
           } else {
@@ -251,7 +324,19 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         },
       });
     },
-    [knownConstituencies, basePath, highlightSlug, styleFeature, showProjections, hasProjections, projectionMap]
+    [
+      knownConstituencies,
+      basePath,
+      highlightSlug,
+      styleFeature,
+      showProjections,
+      hasProjections,
+      projectionMap,
+      viewMode,
+      hasRegionData,
+      constituencyRegions,
+      regionsById,
+    ]
   );
 
   async function lookupPostcode() {
@@ -305,8 +390,8 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
     return Array.from(seen).sort();
   }, [projections]);
 
-  // Force GeoJSON re-render when projection mode or highlight changes
-  const geoJsonKey = `${showProjections ? "proj" : "data"}-${highlightSlug ?? "none"}`;
+  // Force GeoJSON re-render when projection mode, view mode, or highlight changes
+  const geoJsonKey = `${viewMode}-${showProjections ? "proj" : "data"}-${highlightSlug ?? "none"}`;
 
   return (
     <div className="flex flex-col gap-3">
@@ -366,9 +451,40 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         )}
       </div>
 
-      {/* Projection toggle + Legend */}
+      {/* View toggle + Projection toggle + Legend */}
       <div className="flex flex-wrap items-center gap-4 font-body text-xs text-gray-600">
-        {hasProjections && (
+        {hasRegionData && (
+          <div
+            role="group"
+            aria-label="Map view"
+            className="inline-flex rounded-full border border-gray-300 overflow-hidden text-xs font-bold"
+          >
+            <button
+              onClick={() => setViewMode("constituency")}
+              aria-pressed={viewMode === "constituency"}
+              className={`px-3 py-1.5 transition-colors ${
+                viewMode === "constituency"
+                  ? "bg-votescot-dark text-white"
+                  : "bg-white text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Constituency
+            </button>
+            <button
+              onClick={() => setViewMode("region")}
+              aria-pressed={viewMode === "region"}
+              className={`px-3 py-1.5 border-l border-gray-300 transition-colors ${
+                viewMode === "region"
+                  ? "bg-votescot-dark text-white"
+                  : "bg-white text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Region
+            </button>
+          </div>
+        )}
+
+        {hasProjections && viewMode === "constituency" && (
           <button
             onClick={() => setShowProjections(!showProjections)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-colors ${
@@ -381,7 +497,19 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
           </button>
         )}
 
-        {showProjections && hasProjections ? (
+        {viewMode === "region" && hasRegionData ? (
+          <>
+            {regions!.map((r) => (
+              <span key={r.id} className="flex items-center gap-1.5">
+                <span
+                  className="w-3 h-3 rounded-sm inline-block"
+                  style={{ background: REGION_COLORS[r.id] ?? REGION_COLOR_FALLBACK, opacity: 0.8 }}
+                />
+                {r.name}
+              </span>
+            ))}
+          </>
+        ) : showProjections && hasProjections ? (
           <>
             {legendParties.map((party) => (
               <span key={party} className="flex items-center gap-1.5">
@@ -478,8 +606,11 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         >
           MapIt/mySociety
         </a>
-        . Postcode lookup uses the MapIt API. Click a constituency to view candidates.
-        {showProjections && (
+        . Postcode lookup uses the MapIt API.
+        {viewMode === "region"
+          ? " Click any area to view that region's list candidates."
+          : " Click a constituency to view candidates."}
+        {viewMode === "constituency" && showProjections && (
           <> Projections are estimates based on notional results, not predictions.</>
         )}
       </div>

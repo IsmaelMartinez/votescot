@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (PR E: constituency quiz results grouped by party)
+Last updated: 27 April 2026 (PR D: constituency↔region map view toggle)
 
 ## What's live now
 
@@ -78,6 +78,7 @@ Shipped surfaces feeding into this rollout:
 - [x] **Regional surfaces sourced from list candidates** (PR B). `loadRegionalCandidates()` / `loadRegionalCandidatesByRegion()` added; `loadCandidatesByRegion` refactored to a regionId API. `/candidates/region/[id]` now renders regional list candidates grouped by party and ordered by `listPosition`. Disclaimer banner dropped. Sibling `/candidates/regional/[id]` profile route added (collisions with `/candidates/[id]` made the aggregating approach unviable — 339 shared slugs). `apply-party-positions.ts` extended to fan out to `data/regional-candidates/`; 393 of 589 regional candidates now carry party positions.
 - [x] **Quiz results grouped by party** (PR C). `/quiz/regional` now sources from `loadRegionalCandidates()` and `QuizEngine` regional mode renders one match score per party with the party's regional list candidates listed beneath in `listPosition` order, each linking to `/candidates/regional/{id}`. Per-issue breakdown shown once per party; same-party-identical-score disclaimer dropped from regional mode (the new layout makes the same point structurally). Constituency mode untouched.
 - [x] **Constituency quiz results grouped by party** (PR E). `/quiz` constituency mode now mirrors the regional refactor: one match score per party, candidates listed alphabetically beneath each party block linked to `/candidates/{id}`, per-issue breakdown shown once per party. Same-party-identical-score disclaimers dropped from constituency mode (the layout makes the point structurally).
+- [x] **Constituency↔region map view toggle** (PR D). `ConstituencyMap.tsx` exposes a two-button view selector; region view recolours the 73 polygons by their parent region (8-colour Set2-derived palette, hand-assigned per region id) with reduced internal stroke to imply the dissolve, and routes clicks to `/candidates/region/{id}`. Default remains constituency view; no new GeoJSON, no extra dependencies.
 
 The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
 
@@ -97,9 +98,9 @@ Done in this PR. `QuizEngine` now branches on mode for both data and rendering: 
 
 Done in this PR. `QuizEngine` constituency mode now uses the same party-block layout as regional mode: candidates filtered by `selected` constituency are grouped by party, one match score is computed per party from a representative candidate's positions, and party blocks are rendered ordered by score with each block listing the party's constituency candidates alphabetically by name linked to `/candidates/{id}`. The per-issue breakdown shows once per party; the same-party-identical-score disclaimers (both the results-page banner and the question-answering banner) were dropped from constituency mode since the new layout makes the same point structurally. The previous per-candidate "ranked individuals" view, including bios and individual percentage scores, is gone — the structurally flat list of names with optional incumbent badges matches the regional layout.
 
-#### PR D — Map view toggle (constituency ↔ region)
+#### PR D — Map view toggle (constituency ↔ region) — shipped
 
-Add a toggle to `ConstituencyMap.tsx` that recolours and regroups the existing 73 polygons by their parent region — no new GeoJSON needed; region polygons are dissolves of the constituency boundaries already loaded as TopoJSON. Region click navigates to `/candidates/region/[id]`, mirroring the constituency click. Largest of the four because it touches the React map component and adds new interaction state; ship last so it can build on PR A's reconciled naming.
+Done in this PR. `ConstituencyMap.tsx` gained a two-button segmented control ("Constituency" / "Region", default constituency so the existing flow is unchanged for users who never toggle). In region view the 73 polygons are recoloured by their parent region using a fixed 8-colour palette (Set2-derived, hand-assigned per region id to keep adjacent regions visually distinct), per-polygon stroke is reduced to 0.5 to imply the dissolve, the legend swaps to list region names with their colour swatch, and clicks navigate to `/candidates/region/{id}` with a region-name-only tooltip. No dissolves done in JS — recolouring is sufficient and avoids pulling in Turf. Wiring on `index.astro` threads a `constituencyId → regionId` map and the 8 regions into the component using the existing `loadRegions()` / `slugifyConstituency` plumbing from PR A. The projection toggle is hidden in region view to keep the two visual encodings from competing.
 
 #### Deferred — per-region polling
 
