@@ -21,7 +21,7 @@ const projections = constituencies
 
 const regions = loadRegions().map((r) => ({
   ...r,
-  constituencyCount: constituencies.filter((c) => c.region === r.name).length,
+  constituencyCount: constituencies.filter((c) => c.region?.trim() === r.name).length,
   candidateCount: loadCandidatesByRegion(r.name).length,
 }));
 
@@ -45,7 +45,7 @@ const news = loadNews();
       projections={projections}
     />
 
-    <section class="mt-6 mb-2">
+    <section class="my-6">
       <h3 class="font-heading text-base font-black mb-1">Browse by region</h3>
       <p class="font-body text-xs text-gray-500 leading-snug mb-3">
         Scotland's regional list ballot is split into 9 regions. Pick yours to see every candidate standing across its constituencies.
