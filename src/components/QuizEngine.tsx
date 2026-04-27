@@ -38,13 +38,20 @@ interface RegionalProps extends BaseProps {
 
 type Props = ConstituencyProps | RegionalProps;
 
+interface PartyBlockCandidate {
+  id: string;
+  name: string;
+  isIncumbent: boolean;
+  listPosition?: number;
+}
+
 interface PartyBlock {
   party: string;
   partyShort: string;
   color: string;
   accent: string;
   textColor?: string;
-  candidates: RegionalCandidate[];
+  candidates: PartyBlockCandidate[];
   positions: Record<string, number>;
   match: MatchResult;
 }
@@ -89,36 +96,36 @@ function QuizEngineInner(props: Props) {
 
   const answeredCount = Object.keys(answers).length;
 
-  const ranked = useMemo(() => {
-    if (isRegional || !selected) return [];
-    return props.candidates
-      .filter((c) => c.constituency === selected)
-      .map((c) => ({
-        ...c,
-        match: calculateMatch(answers, c.positions || {}),
-      }))
-      .sort((a, b) => b.match.percentage - a.match.percentage || a.name.localeCompare(b.name));
-  }, [isRegional, selected, props.candidates, answers]);
-
   const partyBlocks = useMemo<PartyBlock[]>(() => {
-    if (!isRegional || !selected) return [];
-    const inRegion = props.candidates.filter((c) => c.region === selected);
-    const byParty = new Map<string, RegionalCandidate[]>();
-    for (const c of inRegion) {
+    if (!selected) return [];
+    const inScope = isRegional
+      ? (props.candidates as RegionalCandidate[]).filter((c) => c.region === selected)
+      : (props.candidates as Candidate[]).filter((c) => c.constituency === selected);
+    const byParty = new Map<string, (Candidate | RegionalCandidate)[]>();
+    for (const c of inScope) {
       const bucket = byParty.get(c.party) ?? [];
       bucket.push(c);
       byParty.set(c.party, bucket);
     }
-    const blocks = Array.from(byParty.entries()).map(([party, list]) => {
+    const blocks: PartyBlock[] = Array.from(byParty.entries()).map(([party, list]) => {
       const sample = list.find((c) => c.positions) ?? list[0];
       const positions = (sample.positions ?? {}) as Record<string, number>;
+      const sorted = isRegional
+        ? [...(list as RegionalCandidate[])].sort((a, b) => a.listPosition - b.listPosition)
+        : [...list].sort((a, b) => a.name.localeCompare(b.name));
+      const candidates: PartyBlockCandidate[] = sorted.map((c) => ({
+        id: c.id,
+        name: c.name,
+        isIncumbent: c.isIncumbent,
+        listPosition: isRegional ? (c as RegionalCandidate).listPosition : undefined,
+      }));
       return {
         party,
         partyShort: sample.partyShort,
         color: sample.color,
         accent: sample.accent,
         textColor: sample.textColor,
-        candidates: [...list].sort((a, b) => a.listPosition - b.listPosition),
+        candidates,
         positions,
         match: calculateMatch(answers, positions),
       };
@@ -219,12 +226,6 @@ function QuizEngineInner(props: Props) {
           </div>
         </div>
 
-        {!isRegional && (
-          <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-3 font-body text-xs text-blue-700">
-            Policy positions shown are based on party platforms, so candidates from the same party will share identical match scores. Individual candidates may hold different views.
-          </div>
-        )}
-
         <p className="font-body text-xs text-gray-400 mb-4">
           Based on {answeredCount} of {questions.length} questions answered. The more you answer, the better the match.
         </p>
@@ -240,160 +241,95 @@ function QuizEngineInner(props: Props) {
           </div>
         )}
 
-        {isRegional ? (
-          <div className="flex flex-col gap-2">
-            {partyBlocks.map((p, i) => {
-              const hasPositions = p.match.breakdown.length > 0;
-              const headerBg = p.textColor ? p.accent : p.color;
-              const headerFg = p.textColor ?? "#fff";
-              return (
-                <div
-                  key={p.party}
-                  className="bg-white rounded-lg overflow-hidden border"
-                  style={{
-                    borderWidth: i === 0 && hasPositions ? 2 : 1,
-                    borderColor: i === 0 && hasPositions ? (p.accent || p.color) : "#e8e4df",
-                  }}
-                >
-                  <div
-                    className="px-3 py-2 flex items-center justify-between"
-                    style={{ background: headerBg, color: headerFg }}
-                  >
-                    <div className="flex items-center gap-2">
-                      {i === 0 && hasPositions && <span className="text-base">🏆</span>}
-                      <div className="font-heading font-black text-sm">{p.party}</div>
-                      <div className="font-body text-xs opacity-80">· {p.candidates.length} {p.candidates.length === 1 ? "candidate" : "candidates"}</div>
-                    </div>
-                    {hasPositions ? (
-                      <div className="font-body text-xl font-black" style={{ color: scoreColor(p.match.percentage), background: "#fff", padding: "0 8px", borderRadius: 4 }}>
-                        {p.match.percentage}%
-                      </div>
-                    ) : (
-                      <div className="font-body text-xs opacity-80">No quiz positions</div>
-                    )}
-                  </div>
-
-                  <div className="px-3 py-2.5">
-                    {hasPositions && (
-                      <>
-                        <div className="w-full h-1.5 bg-votescot-border rounded-full overflow-hidden mb-2.5">
-                          <div
-                            className="h-full rounded-full transition-all duration-700"
-                            style={{
-                              width: `${p.match.percentage}%`,
-                              background: scoreColor(p.match.percentage),
-                            }}
-                          />
-                        </div>
-
-                        <div className="flex flex-wrap gap-1 mb-2.5">
-                          {p.match.breakdown.map(({ questionId, diff }) => {
-                            const q = questions.find((q) => q.id === questionId);
-                            return (
-                              <span
-                                key={questionId}
-                                className="font-body text-xs px-1.5 py-0.5 rounded-full font-semibold"
-                                style={{
-                                  background: diff === 0 ? "#e8f5e9" : diff === 1 ? "#fff8e1" : "#fce4ec",
-                                  color: diff === 0 ? "#2d8a4e" : diff === 1 ? "#c4940a" : "#c0392b",
-                                }}
-                              >
-                                {diff === 0 ? "✓" : diff === 1 ? "~" : "✗"} {q?.area}
-                              </span>
-                            );
-                          })}
-                        </div>
-                      </>
-                    )}
-
-                    <ol className="m-0 p-0 list-none">
-                      {p.candidates.map((c) => (
-                        <li key={c.id} className="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
-                          <span className="font-body text-xs font-bold text-gray-400 w-5 text-right shrink-0">{c.listPosition}</span>
-                          <a
-                            href={`${basePath}candidates/regional/${c.id}`}
-                            className="font-body text-[13px] text-gray-700 no-underline hover:text-votescot-gold flex-1"
-                          >
-                            {c.name}
-                          </a>
-                          {c.isIncumbent && (
-                            <span className="bg-gray-800 text-white text-[10px] px-1 py-0.5 rounded uppercase tracking-wider font-bold">Incumbent</span>
-                          )}
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="flex flex-col gap-2">
-            {ranked.map((cand, i) => (
+        <div className="flex flex-col gap-2">
+          {partyBlocks.map((p, i) => {
+            const hasPositions = p.match.breakdown.length > 0;
+            const headerBg = p.textColor ? p.accent : p.color;
+            const headerFg = p.textColor ?? "#fff";
+            const profileBase = isRegional ? `${basePath}candidates/regional/` : `${basePath}candidates/`;
+            return (
               <div
-                key={cand.id}
-                className="bg-white rounded-lg p-3.5 border"
+                key={p.party}
+                className="bg-white rounded-lg overflow-hidden border"
                 style={{
-                  borderWidth: i === 0 ? 2 : 1,
-                  borderColor: i === 0 ? (cand.accent || cand.color) : "#e8e4df",
+                  borderWidth: i === 0 && hasPositions ? 2 : 1,
+                  borderColor: i === 0 && hasPositions ? (p.accent || p.color) : "#e8e4df",
                 }}
               >
-                <div className="flex items-center justify-between mb-1.5">
-                  <div className="flex items-center gap-2">
-                    {i === 0 && <span className="text-base">🏆</span>}
-                    <div
-                      className="w-2.5 h-2.5 rounded-full"
-                      style={{ background: cand.textColor ? cand.accent : cand.color, border: `2px solid ${cand.accent}` }}
-                    />
-                    <div>
-                      <span className="font-heading font-black text-sm">{cand.name}</span>
-                      <span className="font-body text-xs text-gray-400 ml-1.5">{cand.party}</span>
-                    </div>
-                  </div>
-                  <div className="font-body text-xl font-black" style={{ color: scoreColor(cand.match.percentage) }}>
-                    {cand.match.percentage}%
-                  </div>
-                </div>
-
-                <div className="w-full h-1.5 bg-votescot-border rounded-full overflow-hidden mb-2.5">
-                  <div
-                    className="h-full rounded-full transition-all duration-700"
-                    style={{
-                      width: `${cand.match.percentage}%`,
-                      background: scoreColor(cand.match.percentage),
-                    }}
-                  />
-                </div>
-
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {cand.match.breakdown.map(({ questionId, diff }) => {
-                    const q = questions.find((q) => q.id === questionId);
-                    return (
-                      <span
-                        key={questionId}
-                        className="font-body text-xs px-1.5 py-0.5 rounded-full font-semibold"
-                        style={{
-                          background: diff === 0 ? "#e8f5e9" : diff === 1 ? "#fff8e1" : "#fce4ec",
-                          color: diff === 0 ? "#2d8a4e" : diff === 1 ? "#c4940a" : "#c0392b",
-                        }}
-                      >
-                        {diff === 0 ? "✓" : diff === 1 ? "~" : "✗"} {q?.area}
-                      </span>
-                    );
-                  })}
-                </div>
-
-                <p className="font-body text-xs text-gray-500 leading-snug">{cand.bio}</p>
-                <a
-                  href={`${basePath}candidates/${cand.id}`}
-                  className="inline-block mt-2 bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-500 no-underline hover:border-gray-400"
+                <div
+                  className="px-3 py-2 flex items-center justify-between"
+                  style={{ background: headerBg, color: headerFg }}
                 >
-                  View full profile →
-                </a>
+                  <div className="flex items-center gap-2">
+                    {i === 0 && hasPositions && <span className="text-base">🏆</span>}
+                    <div className="font-heading font-black text-sm">{p.party}</div>
+                    <div className="font-body text-xs opacity-80">· {p.candidates.length} {p.candidates.length === 1 ? "candidate" : "candidates"}</div>
+                  </div>
+                  {hasPositions ? (
+                    <div className="font-body text-xl font-black" style={{ color: scoreColor(p.match.percentage), background: "#fff", padding: "0 8px", borderRadius: 4 }}>
+                      {p.match.percentage}%
+                    </div>
+                  ) : (
+                    <div className="font-body text-xs opacity-80">No quiz positions</div>
+                  )}
+                </div>
+
+                <div className="px-3 py-2.5">
+                  {hasPositions && (
+                    <>
+                      <div className="w-full h-1.5 bg-votescot-border rounded-full overflow-hidden mb-2.5">
+                        <div
+                          className="h-full rounded-full transition-all duration-700"
+                          style={{
+                            width: `${p.match.percentage}%`,
+                            background: scoreColor(p.match.percentage),
+                          }}
+                        />
+                      </div>
+
+                      <div className="flex flex-wrap gap-1 mb-2.5">
+                        {p.match.breakdown.map(({ questionId, diff }) => {
+                          const q = questions.find((q) => q.id === questionId);
+                          return (
+                            <span
+                              key={questionId}
+                              className="font-body text-xs px-1.5 py-0.5 rounded-full font-semibold"
+                              style={{
+                                background: diff === 0 ? "#e8f5e9" : diff === 1 ? "#fff8e1" : "#fce4ec",
+                                color: diff === 0 ? "#2d8a4e" : diff === 1 ? "#c4940a" : "#c0392b",
+                              }}
+                            >
+                              {diff === 0 ? "✓" : diff === 1 ? "~" : "✗"} {q?.area}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </>
+                  )}
+
+                  <ol className="m-0 p-0 list-none">
+                    {p.candidates.map((c) => (
+                      <li key={c.id} className="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
+                        {isRegional && (
+                          <span className="font-body text-xs font-bold text-gray-400 w-5 text-right shrink-0">{c.listPosition}</span>
+                        )}
+                        <a
+                          href={`${profileBase}${c.id}`}
+                          className="font-body text-[13px] text-gray-700 no-underline hover:text-votescot-gold flex-1"
+                        >
+                          {c.name}
+                        </a>
+                        {c.isIncumbent && (
+                          <span className="bg-gray-800 text-white text-[10px] px-1 py-0.5 rounded uppercase tracking-wider font-bold">Incumbent</span>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
               </div>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
 
         <div className="mt-3.5 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
           This is a starting point, not a verdict. Explore the{" "}
@@ -419,12 +355,6 @@ function QuizEngineInner(props: Props) {
         Answer 8 questions about what matters to you. We'll match you to the candidate closest to your
         views. No data is stored — this runs entirely in your browser.
       </p>
-      {!isRegional && (
-        <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
-          Candidate positions are based on party platforms, not individual views. Candidates from the same party will share the same match score.
-        </div>
-      )}
-
       <div className="flex flex-col gap-3">
         {questions.map((q, qi) => (
           <div
