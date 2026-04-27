@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 3
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for South Scotland.
+bio: Reform UK regional list candidate for South Scotland and constituency candidate for Galloway and West Dumfries. Senga Beresford is a lifelong resident of Dumfries and Galloway and a businesswoman with more than 25 years in small business management, standing as a first-time candidate.
 highlights:
-  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Businesswoman with over 25 years in small business management
+  - Lifelong resident of Dumfries and Galloway
+  - First-time candidate standing for both the constituency and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124603/senga-beresford/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

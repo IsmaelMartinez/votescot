@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 8
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Edinburgh and Lothians East.
+bio: Scottish Green Party regional list candidate (8th place) for Edinburgh and Lothians East. Mridul Wadhwa is the former chief executive of Edinburgh Rape Crisis Centre and a longstanding women's rights, trans rights and anti-domestic violence campaigner who previously stood for the SNP at the 2021 Scottish Parliament election before joining the Greens.
 highlights:
-  - Scottish Green Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Former Chief Executive of Edinburgh Rape Crisis Centre
+  - Stood as an SNP candidate at the 2021 Scottish Parliament election
+  - Previously contested Craigentinny/Duddingston at the 2017 Edinburgh council elections
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/21630/mridul-machindra-wadhwa/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

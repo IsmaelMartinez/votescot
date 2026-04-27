@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 8
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Mid Scotland and Fife.
+bio: Scottish Green Party regional list candidate (8th place) for Mid Scotland and Fife. Paul Vallot has been a recurring Green candidate in the Perth area, contesting the 2021 Mid Scotland and Fife regional ballot, the 2017 Perth City South and 2022 Almond and Earn council seats, and the 2020 Perth City North by-election.
 highlights:
-  - Scottish Green Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Stood for the Scottish Greens at the 2021 Scottish Parliament regional election
+  - Contested Almond and Earn ward at the 2022 Perth and Kinross council elections
+  - Previously stood in the 2020 Perth City North local by-election
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20641/paul-mark-vallot/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

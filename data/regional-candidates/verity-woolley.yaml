@@ -9,12 +9,15 @@ regionLabel: Glasgow
 listPosition: 7
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for Glasgow.
+bio: Liberal Democrat regional list candidate (7th place) for Glasgow. Verity Woolley previously stood as a Liberal Democrat candidate in the Castle ward at the 2019 Colchester local elections.
 highlights:
-  - Liberal Democrats regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Stood as a Liberal Democrat candidate in Castle ward at the 2019 Colchester local elections
+  - 7th-place Liberal Democrat candidate on the Glasgow regional list
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/60448/verity-woolley/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

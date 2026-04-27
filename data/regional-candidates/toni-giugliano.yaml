@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 3
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Central Scotland and Lothians West.
+bio: SNP regional list candidate (3rd place) for Central Scotland and Lothians West. Toni Giugliano works in the third sector and has stood as the SNP candidate in Falkirk at the 2024 UK general election, Dumbarton at the 2021 Scottish Parliament election and Edinburgh Western at both the 2016 Holyrood and 2017 UK elections, finishing second on each occasion.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Stood for the SNP in Falkirk at the 2024 UK general election (2nd place)
+  - Contested Dumbarton at the 2021 Scottish Parliament election (2nd place)
+  - Holds a degree in European politics and modern languages from the University of Edinburgh
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/8284/toni-giugliano/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

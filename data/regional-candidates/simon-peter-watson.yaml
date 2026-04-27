@@ -9,12 +9,15 @@ regionLabel: North East Scotland
 listPosition: 5
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for North East Scotland.
+bio: Scottish Labour regional list candidate for North East Scotland and constituency candidate for Angus North and Mearns. Simon Watson previously stood for Labour in the Torry/Ferryhill ward at Aberdeen City's 2022 local elections.
 highlights:
-  - Labour Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Stood for Labour in Torry/Ferryhill at the 2022 Aberdeen City Council elections
+  - Standing for both Angus North and Mearns constituency and the regional list
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85484/simon-peter-watson/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 6
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for North East Scotland.
+bio: SNP regional list candidate (6th place) for North East Scotland. Miranda Radley works at Aberdeen City Council and won the 2020 Kincorth/Nigg/Cove by-election for the SNP, going on to defend the seat at the 2022 council elections.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Won the 2020 Aberdeen Kincorth/Nigg/Cove by-election for the SNP
+  - Defended the Kincorth/Nigg/Cove ward at the 2022 Aberdeen council elections
+  - Works at Aberdeen City Council
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/72895/miranda-radley/
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

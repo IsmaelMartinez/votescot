@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 4
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Mid Scotland and Fife.
+bio: Reform UK regional list candidate for Mid Scotland and Fife and constituency candidate for Cowdenbeath. Mark Davies served 25 years in the British Army with operational deployments worldwide, then worked as a Ministry of Defence civil servant for 15 years, and chairs a community group in Cowdenbeath.
 highlights:
-  - Reform UK regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - 25 years' service in the British Army followed by 15 years as a Ministry of Defence civil servant
+  - Chairs a community group in Cowdenbeath
+  - Previously stood for Reform UK in a 2025 Fife local by-election
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123125/mark-davies/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

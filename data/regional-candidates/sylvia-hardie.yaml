@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 4
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for North East Scotland.
+bio: Scottish Green Party regional list candidate (4th place) for North East Scotland. Sylvia Hardie has been a recurring Green candidate in Aberdeen, standing for the North East Scotland region at the 2021 Scottish Parliament election and contesting Bridge of Don at council elections in 2019 and 2022 plus the 2023 Dyce/Bucksburn/Danestone by-election.
 highlights:
-  - Scottish Green Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Stood for the Scottish Greens in North East Scotland at the 2021 Scottish Parliament election
+  - Contested Bridge of Don ward at Aberdeen council elections in 2019 and 2022
+  - Stood in the 2023 Dyce/Bucksburn/Danestone Aberdeen by-election
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/70710/sylvia-hardie/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

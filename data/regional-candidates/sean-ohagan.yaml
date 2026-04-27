@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 7
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Glasgow.
+bio: Reform UK regional list candidate for Glasgow and constituency candidate for Glasgow Anniesland. Sean O'Hagan is a law student who grew up in foster care after being taken into care aged six, and frames his candidacy around lived experience of Scotland's drug crisis and child poverty.
 highlights:
-  - Reform UK regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - Law student standing as a first-time candidate
+  - Grew up in foster care from the age of six
+  - Standing for both Glasgow Anniesland and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124604/sean-ohagan/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

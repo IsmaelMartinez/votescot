@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 4
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for South Scotland.
+bio: Reform UK regional list candidate for South Scotland and constituency candidate for East Kilbride. Tim Kelly is an emergency medicine doctor with 15 years of frontline experience in Scotland and a small business owner originally from Wales, who holds a Diploma in Mountain Medicine.
 highlights:
-  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Emergency medicine doctor with 15 years' frontline experience in Scotland
+  - Small business owner with international development experience
+  - Holds a Diploma in Mountain Medicine
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124594/tim-kelly/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

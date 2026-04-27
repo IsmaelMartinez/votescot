@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 4
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for South Scotland.
+bio: Scottish Green Party regional list candidate (4th place) for South Scotland. Neil MacKinnon was born and raised in Peebles, has spent 20 years as a service engineer in the scientific sector and eight years as a research chemist, and lives in Galashiels where he plays in the Stow pipe band.
 highlights:
-  - Scottish Green Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Service engineer in the scientific sector for 20 years; previously a research chemist
+  - Born and raised in Peebles; has lived in Galashiels since 2001
+  - Plays bagpipes for the Stow pipe band and serves on its committee
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85813/neil-mackinnon/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

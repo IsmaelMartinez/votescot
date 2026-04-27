@@ -9,12 +9,16 @@ regionLabel: Mid Scotland and Fife
 listPosition: 5
 ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Mid Scotland and Fife.
+bio: Scottish Green Party regional list candidate (5th place) for Mid Scotland and Fife. Marie Stadtler has previously stood for the Greens in Stirling-area local elections, contesting Bannockburn ward in 2022 and 2025 and a Stirling local by-election in 2025.
 highlights:
-  - Scottish Green Party regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+  - Previously stood for the Scottish Greens in Bannockburn ward at the 2022 local election
+  - Contested a Stirling local by-election in 2025
+  - 5th-place Green candidate on the Mid Scotland and Fife regional list
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85372/marie-stadtler/
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 1
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Highlands and Islands.
+bio: Reform UK regional list candidate for Highlands and Islands and constituency candidate for Shetland Islands. Vic Currie was born and raised in Edinburgh, served in the Royal Navy patrolling the Shetland-Faroe Islands gap, and now works in the healthcare sector.
 highlights:
-  - Reform UK regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Royal Navy veteran with experience patrolling the Shetland-Faroe Islands gap
+  - Now works as a healthcare professional with frontline experience
+  - Standing for both the Shetland Islands constituency and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124613/vic-currie/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

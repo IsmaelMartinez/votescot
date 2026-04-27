@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 4
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Central Scotland and Lothians West.
+bio: Reform UK regional list candidate for Central Scotland and Lothians West and constituency candidate for Falkirk West. Richard Fairley is a 30-year-old Falkirk-area farmer who runs a mixed animal and arable operation that he inherited from his father, having attended Larbert High School and Oatridge Agricultural College.
 highlights:
-  - Reform UK regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Runs an inherited mixed animal and arable farm in the Falkirk area
+  - Educated at Larbert Village Primary, Larbert High School and Oatridge Agricultural College
+  - Standing for both the Falkirk West constituency and the regional list
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/114569/richard-fairley/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

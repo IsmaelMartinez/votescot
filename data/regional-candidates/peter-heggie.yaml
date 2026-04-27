@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 6
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for Central Scotland and Lothians West.
+bio: Scottish Conservative regional list candidate for Central Scotland and Lothians West and constituency candidate for Bathgate. Peter Heggie is a sitting West Lothian councillor for the Livingston South ward, having stood for the Conservatives there at the 2017 and 2022 council elections.
 highlights:
-  - Conservative and Unionist Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - West Lothian councillor for Livingston South ward
+  - Stood for the Conservatives in Livingston South at the 2017 and 2022 council elections
+  - Standing for both the Bathgate constituency and the regional list
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/22438/peter-heggie/
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1
