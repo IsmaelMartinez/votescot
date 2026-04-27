@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (regional list rollout plan + ADR-0001)
+Last updated: 27 April 2026 (PR A: region naming reconciled to 8 official regions)
 
 ## What's live now
 
@@ -72,18 +72,15 @@ Shipped surfaces feeding into this rollout:
 - [x] **Postcode → region resolution.** `usePostcodeLookup` returns `regionId` / `regionName`; `PostcodeInput` accepts `target: "region"`.
 - [x] **`/candidates/region/[id]` dynamic page.** Currently sources constituency candidates filtered by region (the stand-in to be replaced by PR B below).
 - [x] **Region tag on candidate profiles.** Profile shows "Standing in {constituency} · {region} region".
-- [x] **Region picker on the homepage** (PR #41). 9 cards beneath the constituency map; will drop to 8 after PR A.
+- [x] **Region picker on the homepage** (PR #41). 8 cards beneath the constituency map after PR A reconciliation.
 - [x] **Regional list candidate ingest** (PR #42). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
+- [x] **Region naming reconciled to 8 official regions** (PR A). Constituency `region:` field updated across 16 YAMLs to match the 2025 Boundaries Scotland review and Democracy Club's ballot structure; `loadRegions()` now returns 8 entries with id slugs that match the regional list ballot keys. Astro redirects send legacy `/central-scotland` and `/edinburgh-and-lothians-west` URLs to the merged region.
 
 The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
 
-#### PR A — Reconcile region naming (foundation)
+#### PR A — Reconcile region naming (foundation) — shipped
 
-Update the `region:` field on every constituency YAML currently tagged `Central Scotland` or `Edinburgh and Lothians West` to `Central Scotland and Lothians West`. After this PR, `loadRegions()` returns 8 entries matching Democracy Club's ballot post slugs, and the homepage region picker drops to 8 cards aligned with the regional candidate data shipped in #42.
-
-Slug change side-effect: `/candidates/region/central-scotland` and `/candidates/region/edinburgh-and-lothians-west` collapse into `/candidates/region/central-scotland-and-lothians-west`. The site has only been live a few weeks so external bookmarks are unlikely, but Astro's `redirects` config in `astro.config.mjs` is the cheapest way to keep old links working — add both legacy slugs as 301s to the merged region. The constituency `/candidates/[id]` and `/candidates/constituency/[id]` URLs are unaffected.
-
-Touchpoints: ~18 constituency YAMLs (the affected subset), the redirects entry, no schema or loader changes (`loadRegions()` already derives from the constituency data). Verified by `validate-data.ts` and the existing test suite. Mechanical, low risk; ship first.
+Done in this PR. Cross-checking VoteScot's existing constituency `region:` tags against the official Wikipedia / Boundaries Scotland mapping surfaced more drift than the original "merge two regions" assumption: 5 constituencies were also miscategorised independently of the merge (Rutherglen and Cambuslang belonged in Glasgow not Central Scotland; East Kilbride and Hamilton/Larkhall/Stonehouse belonged in South Scotland; Edinburgh South Western and Edinburgh Southern belonged in Edinburgh and Lothians East not Lothians West; Midlothian South/Tweeddale/Lauderdale belonged in South Scotland; Moray belonged in Highlands and Islands not North East Scotland). All 16 relocations applied and the per-region totals now match the official 9/9/8/8/9/10/10/10 = 73 distribution. Astro redirects send the two legacy slugs (`central-scotland`, `edinburgh-and-lothians-west`) to the merged `central-scotland-and-lothians-west` region.
 
 #### PR B — Regional surfaces source from regional list candidates
 
