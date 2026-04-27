@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (PR D: constituency↔region map view toggle)
+Last updated: 27 April 2026 (sources: swap DC API URLs for major-six party websites)
 
 ## What's live now
 
@@ -113,7 +113,7 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 ### Must-fix if time allows before 7 May
 
 - [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Grep for bios under ~80 characters; prioritise candidates with `quizCandidate: true` since they surface on the quiz results page. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
-- [ ] **Replace Democracy Club API URLs in candidate `sources`.** Every candidate file cites `candidates.democracyclub.org.uk/api/next/parties/PP*` — that's a party registration API, not a biographical source for the individual. Credibility risk if a claim is challenged. Swap in at least one per-candidate bio source (Wikipedia, TheyWorkForYou, Scottish Parliament member page, or official party bio). Can be done opportunistically alongside the stub-bio enrichment.
+- [x] **Replace Democracy Club API URLs in candidate `sources`** (major-six). 704 candidate files across SNP, Conservatives, Reform UK, Labour, Lib Dems, and Greens now cite the official party website (taken from `data/manifestos/registry.yaml`) via `scripts/replace-dc-source-urls.ts`. The remaining 262 candidates across 25 minor parties + Independents still carry the DC API URL; surfacing a more specific source for each is folded into the stub-bio enrichment pass below since both need per-candidate research.
 
 ### Nice-to-have before 7 May
 
