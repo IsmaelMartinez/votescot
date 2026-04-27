@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (sources: swap DC API URLs for major-six party websites)
+Last updated: 27 April 2026 (bios: cross-copy from constituency to regional for 193 dual-list candidates)
 
 ## What's live now
 
@@ -112,7 +112,7 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 
 ### Must-fix if time allows before 7 May
 
-- [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Grep for bios under ~80 characters; prioritise candidates with `quizCandidate: true` since they surface on the quiz results page. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
+- [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Round-1 cross-copy via `scripts/cross-copy-bios.ts` lifted the substantive constituency bios onto 193 same-name regional list entries, dropping the regional quiz-stub count from 393 to 206 and the regional incumbent stub count from 69 to 15. Remaining work: 15 regional list MSPs without a constituency twin (mostly Greens — Patrick Harvie, Ross Greer, Maggie Chapman, Mark Ruskell, Ariane Burgess, Gillian MacKay, plus list-only Labour/Indie MSPs), 206 regional non-incumbent quiz stubs, and 124 constituency-mode quiz stubs. These need per-candidate research from Parliament.scot member pages, TheyWorkForYou, or party bios — the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
 - [x] **Replace Democracy Club API URLs in candidate `sources`** (major-six). 704 candidate files across SNP, Conservatives, Reform UK, Labour, Lib Dems, and Greens now cite the official party website (taken from `data/manifestos/registry.yaml`) via `scripts/replace-dc-source-urls.ts`. The remaining 262 candidates across 25 minor parties + Independents still carry the DC API URL; surfacing a more specific source for each is folded into the stub-bio enrichment pass below since both need per-candidate research.
 
 ### Nice-to-have before 7 May

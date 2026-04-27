@@ -9,9 +9,12 @@ regionLabel: South Scotland
 listPosition: 2
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for South Scotland.
+bio: Born and raised in Kilmarnock, he is a civil engineering graduate of the University of Glasgow who served as MP for Kilmarnock and Loudoun from 2015 to 2024, acting as SNP spokesperson on Energy and Climate Change at Westminster. He stood as an East Ayrshire councillor for Irvine Valley from 2007.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - MP for Kilmarnock and Loudoun (2015-2024)
+  - SNP spokesperson on Energy and Climate Change at Westminster
+  - Civil engineer; graduate of the University of Glasgow
+  - East Ayrshire councillor for Irvine Valley from 2007
 sources:
   - url: https://www.snp.org/
     type: party_website
