@@ -3,10 +3,10 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import QuizEngine from "../../components/QuizEngine.tsx";
-import { loadCandidates, loadQuestions, loadConstituencies, loadRegions } from "../../lib/data";
+import { loadRegionalCandidates, loadQuestions, loadConstituencies, loadRegions } from "../../lib/data";
 
 const questions = loadQuestions();
-const candidates = loadCandidates().filter((c) => c.quizCandidate);
+const candidates = loadRegionalCandidates();
 const constituencies = loadConstituencies();
 const regions = loadRegions();
 const base = import.meta.env.BASE_URL;
