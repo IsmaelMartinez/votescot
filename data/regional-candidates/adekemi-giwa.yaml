@@ -9,12 +9,15 @@ regionLabel: Glasgow
 listPosition: 11
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+bio: Adekemi Giwa is the SNP's eleventh-placed candidate on the Glasgow regional list. She previously stood for the SNP in the 2024 Drumchapel/Anniesland Glasgow City Council by-election.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - SNP regional list candidate for Glasgow (position 11)
+  - Stood for the SNP in the 2024 Drumchapel/Anniesland Glasgow City Council by-election
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/84962/adekemi-giwa
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

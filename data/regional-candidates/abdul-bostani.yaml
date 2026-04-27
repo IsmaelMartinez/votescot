@@ -9,12 +9,16 @@ regionLabel: Glasgow
 listPosition: 10
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+bio: Abdul Bostani is a long-standing SNP activist in Glasgow who won the Partick East/Kelvindale by-election in 2021 and has since stood again for the SNP, including in Maryhill at the 2022 Glasgow City Council elections. He is the SNP's tenth-placed candidate on the Glasgow regional list for 2026.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - SNP regional list candidate for Glasgow (position 10)
+  - Won the 2021 Partick East/Kelvindale Glasgow City Council by-election
+  - Stood for SNP in Maryhill at the 2022 Glasgow City Council elections
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/73374/abdul-bostani
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

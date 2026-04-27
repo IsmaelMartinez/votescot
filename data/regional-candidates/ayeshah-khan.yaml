@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 7
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for Central Scotland and Lothians West.
+bio: Ayeshah Khan stood for Labour in Motherwell North ward at the 2022 North Lanarkshire Council elections and is also Labour's constituency candidate for Motherwell and Wishaw at this election.
 highlights:
-  - Labour Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Labour regional list candidate for Central Scotland and Lothians West (position 7)
+  - Also Labour's candidate for Motherwell and Wishaw
+  - Stood for Labour in Motherwell North ward at the 2022 North Lanarkshire Council elections
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/85080/ayeshah-khan
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

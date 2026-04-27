@@ -9,12 +9,15 @@ regionLabel: West Scotland
 listPosition: 3
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Socialist Labour Party regional list candidate for West Scotland.
+bio: Bobby Cochrane has stood for the Socialist Labour Party in Irvine West ward at the 2017 and 2022 North Ayrshire Council elections and is the party's third-placed candidate on the West Scotland regional list for 2026.
 highlights:
-  - Socialist Labour Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Socialist Labour Party regional list candidate for West Scotland (position 3)
+  - Stood for the Socialist Labour Party in Irvine West at the 2017 and 2022 North Ayrshire Council elections
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/21524/bobby-cochrane
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

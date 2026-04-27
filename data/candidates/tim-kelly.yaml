@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: east-kilbride
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for East Kilbride.
+bio: Tim Kelly is an emergency-medicine doctor with around 15 years of frontline NHS experience in Scotland and a diploma in Mountain Medicine. Originally from Wales, he is also a small business owner and has worked in international development. He is also on the Reform UK South Scotland regional list.
 highlights:
-  - Reform UK candidate for East Kilbride in the 2026 Scottish Parliament
-    election
+  - Reform UK candidate for East Kilbride and on the South Scotland regional list
+  - Emergency medicine doctor with 15 years' frontline NHS experience and a Mountain Medicine diploma
+  - Small business owner; previously worked in international development
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124594/tim-kelly
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

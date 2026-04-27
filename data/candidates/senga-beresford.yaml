@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: galloway-and-west-dumfries
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Galloway and West Dumfries.
+bio: Senga Beresford has lived in Dumfries and Galloway her whole life and has more than 25 years of small-business management experience. She is a married mother of four and is also on the Reform UK South Scotland regional list.
 highlights:
-  - Reform UK candidate for Galloway and West Dumfries in the 2026 Scottish
-    Parliament election
+  - Reform UK candidate for Galloway and West Dumfries and on the South Scotland regional list
+  - Businesswoman with 25+ years of small business management experience
+  - Lifelong Dumfries and Galloway resident; campaigns on tax, education and farming
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124603/senga-beresford
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

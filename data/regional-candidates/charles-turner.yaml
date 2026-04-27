@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 5
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for Edinburgh and Lothians East.
+bio: Charles Turner is the son of Windrush Generation parents who came to the UK from the West Indies in the 1960s. He completed an apprenticeship in lift engineering in the 1990s, became a service manager and later a lift consultant for an international real estate firm, and now runs his own lift consultancy. He is also Reform UK's candidate for Edinburgh Southern.
 highlights:
-  - Reform UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Reform UK regional list candidate for Edinburgh and Lothians East (position 5)
+  - Also Reform UK's candidate for Edinburgh Southern
+  - Lift consultant and small business owner; raised in social housing in a Windrush-Generation family
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124600/charles-turner
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

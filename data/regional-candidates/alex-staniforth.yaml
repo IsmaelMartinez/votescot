@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 11
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Edinburgh and Lothians East.
+bio: Alex Staniforth is a long-standing Edinburgh Greens activist who stood in Craigentinny/Duddingston ward at the 2017 and 2022 Edinburgh City Council elections and on the Lothian regional list at the 2021 Holyrood election.
 highlights:
-  - Scottish Green Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Scottish Green Party regional list candidate for Edinburgh and Lothians East (position 11)
+  - Edinburgh Greens activist; stood in Craigentinny/Duddingston ward in 2017 and 2022
+  - Previously stood on the Lothian regional list at the 2021 Holyrood election
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20118/alex-staniforth
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

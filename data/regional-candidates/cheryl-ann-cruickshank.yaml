@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 4
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Labour Party regional list candidate for North East Scotland.
+bio: Cheryl-Ann Cruickshank stood for Labour in Arbroath and Broughty Ferry at the 2024 UK general election (2nd of 7, 14,722 votes) and is also Labour and Co-operative Party's candidate for Dundee City East at this election.
 highlights:
-  - Labour Party regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Labour and Co-operative Party regional list candidate for North East Scotland (position 4)
+  - Also Labour's candidate for Dundee City East
+  - Stood for Labour in Arbroath and Broughty Ferry at the 2024 UK general election (2nd of 7)
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/116206/cheryl-ann-cruickshank
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

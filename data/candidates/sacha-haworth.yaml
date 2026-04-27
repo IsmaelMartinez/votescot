@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: mid-fife-and-glenrothes
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Mid Fife and Glenrothes.
+bio: Sacha Haworth describes a background in community service work, including cleaning community centres and retail roles before pursuing academia and politics. The campaign emphasises the values of family, community and country and is critical of the SNP and Labour record in the constituency.
 highlights:
-  - Reform UK candidate for Mid Fife and Glenrothes in the 2026 Scottish
-    Parliament election
+  - Reform UK candidate for Mid Fife and Glenrothes
+  - Background in community service work, retail and academia
+  - Campaigns on values of family, community and country
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/125802/sacha-haworth
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

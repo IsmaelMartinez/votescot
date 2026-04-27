@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 5
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for South Scotland.
+bio: Barbra Harvie is a semi-retired lecturer in ecology, countryside management and environmental science at SRUC and the University of Edinburgh and lives in Selkirk. A Scottish Green Party member since 2014, she co-convenes Scottish Borders Greens and stood in Ettrick, Roxburgh and Berwickshire and on the South Scotland list at Holyrood 2021.
 highlights:
-  - Scottish Green Party regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Scottish Green Party regional list candidate for South Scotland (position 5)
+  - Semi-retired ecology, countryside and environmental-science lecturer (SRUC and University of Edinburgh)
+  - Co-convenor of Scottish Borders Greens; stood in Ettrick, Roxburgh and Berwickshire at Holyrood 2021
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20099/barbra-harvie
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

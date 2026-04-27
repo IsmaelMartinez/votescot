@@ -9,12 +9,16 @@ regionLabel: South Scotland
 listPosition: 9
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for South Scotland.
+bio: Andrew Scott works as a postperson and is also Reform UK's constituency candidate for Carrick, Cumnock and Doon Valley. He stood for Reform UK in Paisley and Renfrewshire North at the 2024 UK general election (3rd of 6, 3,228 votes), with a campaign focus on tax, NHS and opposing net zero.
 highlights:
-  - Reform UK regional list candidate for South Scotland in the 2026 Scottish Parliament election
+  - Reform UK regional list candidate for South Scotland (position 9)
+  - Also Reform UK's candidate for Carrick, Cumnock and Doon Valley
+  - Postperson; stood for Reform UK in Paisley and Renfrewshire North at the 2024 UK general election (3rd of 6)
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/117617/andrew-scott
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

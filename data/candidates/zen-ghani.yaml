@@ -8,13 +8,16 @@ textColor: "#333"
 constituency: glasgow-cathcart-and-pollok
 isIncumbent: false
 quizCandidate: true
-bio: Glasgow City councillor standing as SNP candidate for Glasgow Cathcart and
-  Pollok.
+bio: Zen Ghani is the SNP councillor for Pollokshields ward on Glasgow City Council, elected in 2022. He is also on the SNP Glasgow regional list. As a councillor he has worked on local sports-pitch upgrades in East Pollokshields and on community-safety issues including fireworks controls.
 highlights:
-  - Glasgow City councillor
+  - SNP councillor for Pollokshields, Glasgow City Council (elected 2022)
+  - Standing in Glasgow Cathcart and Pollok and on the Glasgow regional list
+  - Active on local community safety and recreation issues in Pollokshields
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://www.glasgow.gov.uk/article/1721/Councillor-Zen-Ghani
+    type: council_profile
 positions:
   independence: 2
   nhs: 2
