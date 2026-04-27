@@ -3,16 +3,33 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import QuizEngine from "../components/QuizEngine.tsx";
-import { loadCandidates, loadQuestions, loadConstituencies } from "../lib/data";
+import {
+  loadCandidates,
+  loadQuestions,
+  loadConstituencies,
+  loadRegionalCandidates,
+  loadRegions,
+} from "../lib/data";
 
 const questions = loadQuestions();
-const candidates = loadCandidates().filter((c) => c.quizCandidate);
+const constituencyCandidates = loadCandidates().filter((c) => c.quizCandidate);
+const regionalCandidates = loadRegionalCandidates();
 const constituencies = loadConstituencies();
+const regions = loadRegions();
 const base = import.meta.env.BASE_URL;
 ---
 
-<Base title="Vote Compass" description="Answer 8 questions and find which candidate aligns with your values">
+<Base title="Vote Compass" description="Answer 8 questions and find which candidates align with your values on both the constituency and regional ballots">
   <Header slot="header" currentTab="quiz" />
-  <QuizEngine client:load mode="constituency" questions={questions} candidates={candidates} constituencies={constituencies} knownConstituencies={constituencies.map((c) => c.id)} basePath={base} />
+  <QuizEngine
+    client:load
+    questions={questions}
+    constituencyCandidates={constituencyCandidates}
+    regionalCandidates={regionalCandidates}
+    constituencies={constituencies}
+    regions={regions}
+    knownConstituencies={constituencies.map((c) => c.id)}
+    basePath={base}
+  />
   <Footer slot="footer" />
 </Base>
