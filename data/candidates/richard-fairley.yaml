@@ -7,12 +7,16 @@ accent: "#0a7f91"
 constituency: falkirk-west
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Falkirk West.
+bio: Richard Fairley grew up on a farm near Falkirk and has run the family farm business since his father's death in 2018, diversifying into prefabricated buildings and stabling. He stood for Reform UK in Alloa and Grangemouth at the 2024 UK general election (3rd, 3,804 votes) and is also on the Central Scotland and Lothians West regional list.
 highlights:
-  - Reform UK candidate for Falkirk West in the 2026 Scottish Parliament election
+  - Reform UK candidate for Falkirk West and on the Central Scotland and Lothians West regional list
+  - Falkirk-area farmer who has run the family farm business since 2018
+  - Stood for Reform UK in Alloa and Grangemouth at the 2024 UK general election (3rd of 4)
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/114569/richard-fairley
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

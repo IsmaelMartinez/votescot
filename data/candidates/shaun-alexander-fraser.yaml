@@ -7,13 +7,16 @@ accent: "#8B0000"
 constituency: inverness-and-nairn
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Inverness and Nairn.
+bio: Shaun Alexander Fraser is an Inverness-born self-employed artist and former homelessness prevention worker for the local charity New Start Highland. He stood for Labour in Na h-Eileanan an Iar at Holyrood 2021 (2nd of 5) and on the Highlands and Islands regional list, and in Highland Council local elections in 2017 and 2022.
 highlights:
-  - Labour Party candidate for Inverness and Nairn in the 2026 Scottish
-    Parliament election
+  - Labour candidate for Inverness and Nairn and on the Highlands and Islands regional list
+  - Self-employed artist; previously a homelessness prevention worker at New Start Highland
+  - Stood for Labour in Na h-Eileanan an Iar at Holyrood 2021 (2nd of 5)
 sources:
   - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/22685/shaun-alexander-fraser
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

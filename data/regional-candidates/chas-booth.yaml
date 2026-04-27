@@ -9,12 +9,16 @@ regionLabel: Edinburgh and Lothians East
 listPosition: 5
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Edinburgh and Lothians East.
+bio: Chas Booth has been the Scottish Green Party councillor for Leith on Edinburgh Council since 2012, re-elected in 2017 and 2022. He has previously worked as a fuel poverty campaigner with Friends of the Earth Scotland, in sustainable transport at Sustrans, and as parliamentary staff to Green parliamentarians.
 highlights:
-  - Scottish Green Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+  - Scottish Green Party regional list candidate for Edinburgh and Lothians East (position 5)
+  - Edinburgh Council Green councillor for Leith since 2012 (re-elected 2017, 2022)
+  - Former Friends of the Earth Scotland fuel poverty campaigner and Sustrans manager
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/8295/chas-booth
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

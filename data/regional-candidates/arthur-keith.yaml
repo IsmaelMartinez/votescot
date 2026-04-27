@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 8
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Reform UK regional list candidate for North East Scotland.
+bio: Arthur Keith was born in Dundee and joined the Army at 15, eventually serving as a Regimental Sergeant Major with 1st Battalion The Black Watch. After leaving the forces he worked as a security professional in conflict zones from 2005 to 2015 and now runs a small facilities management business. He stood for All for Unity on the North East Scotland list in 2021.
 highlights:
-  - Reform UK regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - Reform UK regional list candidate for North East Scotland (position 8)
+  - Former Regimental Sergeant Major, 1st Battalion The Black Watch
+  - Stood for All for Unity in North East Scotland at the 2021 Holyrood election
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/73430/arthur-keith
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

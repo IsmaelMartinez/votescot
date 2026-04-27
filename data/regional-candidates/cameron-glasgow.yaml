@@ -9,12 +9,16 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 3
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Scottish Green Party regional list candidate for Central Scotland and Lothians West.
+bio: Cameron Glasgow has stood as a Scottish Green Party candidate at every Westminster, Holyrood and Livingston-area council election since 2019, including Livingston at the 2019 and 2024 UK general elections (5th of 5 and 6th of 7 respectively) and a 2024 Whitburn and Blackburn council by-election.
 highlights:
-  - Scottish Green Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - Scottish Green Party regional list candidate for Central Scotland and Lothians West (position 3)
+  - Stood for the Scottish Greens in Livingston at the 2019 and 2024 UK general elections
+  - Long-standing Green local candidate in Livingston South and Whitburn/Blackburn wards
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/71768/cameron-glasgow
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

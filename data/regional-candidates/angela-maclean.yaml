@@ -9,12 +9,16 @@ regionLabel: Highlands and Islands
 listPosition: 4
 ballotPaperId: sp.r.highlands-and-islands.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for Highlands and Islands.
+bio: Angela Maclean is a Highland Council Liberal Democrat with a long candidacy record, having stood in Skye, Lochaber and Badenoch at Holyrood 2016 (2nd of 5, 8,319 votes) and in Dingwall and Seaforth ward at the 2017 and 2022 Highland Council elections.
 highlights:
-  - Liberal Democrats regional list candidate for Highlands and Islands in the 2026 Scottish Parliament election
+  - Liberal Democrats regional list candidate for Highlands and Islands (position 4)
+  - Highland councillor with multiple Dingwall and Seaforth candidacies
+  - Stood in Skye, Lochaber and Badenoch at Holyrood 2016 (2nd of 5)
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/8508/angela-maclean
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

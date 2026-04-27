@@ -9,12 +9,15 @@ regionLabel: West Scotland
 listPosition: 3
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Liberal Democrats regional list candidate for West Scotland.
+bio: Christine Margaret Murdoch is also Liberal Democrats' constituency candidate for Cunninghame North at this election and is the party's third-placed candidate on the West Scotland regional list.
 highlights:
-  - Liberal Democrats regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Liberal Democrats regional list candidate for West Scotland (position 3)
+  - Also Liberal Democrats' candidate for Cunninghame North
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123398/christine-margaret-murdoch
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

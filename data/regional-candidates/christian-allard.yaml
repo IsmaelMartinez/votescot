@@ -9,12 +9,16 @@ regionLabel: North East Scotland
 listPosition: 4
 ballotPaperId: sp.r.north-east-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for North East Scotland.
+bio: Christian Allard is a French-born Scottish politician who served as MSP for North East Scotland from 2013 to 2016 and as an SNP MEP for Scotland from 2019 until Brexit took effect in January 2020. He has been an Aberdeen City Council councillor since 2017, representing Torry/Ferryhill.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+  - SNP regional list candidate for North East Scotland (position 4)
+  - Former MSP for North East Scotland 2013-2016 and SNP MEP for Scotland 2019-2020
+  - Aberdeen City Council councillor for Torry/Ferryhill since 2017
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/7649/christian-allard
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

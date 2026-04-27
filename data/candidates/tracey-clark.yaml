@@ -7,13 +7,16 @@ accent: "#005EA5"
 constituency: carrick-cumnock-and-doon-valley
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Carrick, Cumnock and Doon Valley.
+bio: Tracey Clark stood for the Scottish Conservatives in the 2024 Doon Valley local by-election (East Ayrshire) and is also on the Tory South Scotland regional list for 2026.
 highlights:
-  - Conservative and Unionist Party candidate for Carrick, Cumnock and Doon
-    Valley
+  - Conservative and Unionist Party candidate for Carrick, Cumnock and Doon Valley
+  - Also on the South Scotland regional list
+  - Contested the 2024 Doon Valley local by-election (East Ayrshire)
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/118208/tracey-clark
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

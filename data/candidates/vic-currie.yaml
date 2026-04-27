@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: shetland-islands
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Shetland Islands.
+bio: Vic Currie was born and raised in Edinburgh and served in the Royal Navy, including patrols of the Shetland-Faroe Islands Gap, before moving into the healthcare sector. He is also on the Reform UK Highlands and Islands regional list and campaigns on common-sense decision-making and rural and island services.
 highlights:
-  - Reform UK candidate for Shetland Islands in the 2026 Scottish Parliament
-    election
+  - Reform UK candidate for Shetland Islands and on the Highlands and Islands regional list
+  - Former Royal Navy serviceman; subsequent frontline experience in healthcare
+  - Campaigns on accountable, common-sense decision-making for island and rural communities
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124613/vic-currie
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

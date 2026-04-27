@@ -15,6 +15,8 @@ highlights:
 sources:
   - url: https://greens.scot/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123051/adam-al-khateb
+    type: whocanivotefor
 positions:
   independence: 2
   nhs: 2

@@ -9,12 +9,15 @@ regionLabel: Glasgow
 listPosition: 9
 ballotPaperId: sp.r.glasgow.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Glasgow.
+bio: Annette Christie has stood for the SNP in East Centre ward at the 2017 and 2022 Glasgow City Council elections, and is the SNP's ninth-placed candidate on the Glasgow regional list for 2026.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Glasgow in the 2026 Scottish Parliament election
+  - SNP regional list candidate for Glasgow (position 9)
+  - Stood for the SNP in East Centre ward at the 2017 and 2022 Glasgow City Council elections
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20891/annette-christie
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

@@ -9,12 +9,15 @@ regionLabel: West Scotland
 listPosition: 10
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for West Scotland.
+bio: Andy Steel has stood for the SNP in Johnstone South and Elderslie ward at the 2017 and 2022 Renfrewshire Council elections and is the SNP's tenth-placed candidate on the West Scotland regional list for 2026.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - SNP regional list candidate for West Scotland (position 10)
+  - Stood for the SNP in Johnstone South and Elderslie at the 2017 and 2022 Renfrewshire Council elections
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/20874/andy-steel
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2

@@ -9,12 +9,16 @@ regionLabel: West Scotland
 listPosition: 4
 ballotPaperId: sp.r.west-scotland.2026-05-07
 isIncumbent: false
-bio: Conservative and Unionist Party regional list candidate for West Scotland.
+bio: Alix Mathieson is an East Dunbartonshire councillor who has stood for the Scottish Conservatives at multiple UK and Scottish Parliament elections, most recently in Mid Dunbartonshire at the 2024 UK general election (4th of 7) and in Glasgow Maryhill and Springburn at Holyrood 2021 (3rd of 4). Her local campaign priorities have included transport, school bus provision and green-belt protection.
 highlights:
-  - Conservative and Unionist Party regional list candidate for West Scotland in the 2026 Scottish Parliament election
+  - Conservative and Unionist Party regional list candidate for West Scotland (position 4)
+  - East Dunbartonshire councillor for Milngavie ward
+  - Stood for Conservatives in Mid Dunbartonshire (2024 UK general election, 4th of 7)
 sources:
   - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/71828/alix-mathieson
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

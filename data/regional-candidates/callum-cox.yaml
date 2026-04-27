@@ -9,12 +9,15 @@ regionLabel: Central Scotland and Lothians West
 listPosition: 5
 ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
 isIncumbent: false
-bio: Scottish National Party (SNP) regional list candidate for Central Scotland and Lothians West.
+bio: Callum Cox stood for the SNP in the 2025 West Lothian Whitburn and Blackburn ward council by-election and is the SNP's fifth-placed candidate on the Central Scotland and Lothians West regional list for 2026.
 highlights:
-  - Scottish National Party (SNP) regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+  - SNP regional list candidate for Central Scotland and Lothians West (position 5)
+  - Stood for the SNP in the 2025 Whitburn and Blackburn (West Lothian) council by-election
 sources:
   - url: https://www.snp.org/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123350/callum-cox
+    type: whocanivotefor
 textColor: "#333"
 positions:
   independence: 2
