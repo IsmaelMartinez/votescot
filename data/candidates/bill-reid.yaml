@@ -7,12 +7,20 @@ accent: "#0a7f91"
 constituency: angus-south
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Angus South.
+bio: Brought up on a farm in Angus and trained at agricultural college before
+  joining the Army, where he served as a surveyor and retired as a Regimental
+  Sergeant Major. After leaving the military he retrained and worked in
+  London's finance sector, then ran his own business in Manchester before
+  returning to Scotland.
 highlights:
-  - Reform UK candidate for Angus South in the 2026 Scottish Parliament election
+  - Retired Regimental Sergeant Major
+  - Worked in London's finance sector after retraining as a surveyor
+  - Ran his own business in Manchester before returning to Scotland
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://reformuk.scot/scottish-constituencies/angus-south/
+    type: party_candidate_page
 positions:
   independence: 0
   nhs: 1

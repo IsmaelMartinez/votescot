@@ -7,10 +7,11 @@ accent: "#0a7f91"
 constituency: rutherglen-and-cambuslang
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Rutherglen and Cambuslang.
+bio: Standing for Reform UK in Rutherglen and Cambuslang. We have not
+  identified independent biographical sources for this candidate beyond the
+  party listing.
 highlights:
-  - Reform UK candidate for Rutherglen and Cambuslang in the 2026 Scottish
-    Parliament election
+  - Standing for Reform UK in the 2026 Scottish Parliament election.
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
