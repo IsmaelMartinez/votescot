@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 28 April 2026 (post-audit: all 1,026 candidate slots cross-checked against authoritative sources; only post-election items remain)
+Last updated: 29 April 2026 (cross-reference pass surfaced 4 voter-impacting position mismatches, 1 factually-wrong bio, 9 wobbly projections, and 356 source-URL hygiene items)
 
 ## What's live now
 
@@ -128,6 +128,40 @@ All six manifestos re-checked on 28 April (`/sync-manifestos` returned no amendm
 
 A region-by-region audit of all 589 regional list candidates and all 437 constituency candidates against the official Statement of Persons Nominated, WhoCanIVoteFor, party websites, Wikipedia, and parliament.scot was completed on 28 April. Names, party assignments, list ordering, regional assignments, and incumbent flags were all confirmed. Two systemic issues were fixed in PR #70: every Independent Green Voice candidate had been branded as Scottish Greens, and 12 `listPosition` outliers had drifted from the dominant convention. PR #71 fixed a homepage region-card mismatch (cards displayed constituency candidate counts but linked to a regional-list page).
 
+A second cross-reference pass on 29 April compared assigned positions against TheyWorkForYou voting records, audited the 73 constituency projection numbers against the latest MRPs and Ballot Box Scotland, sample-validated source URLs, and spot-checked substantive bios. Findings prioritised below.
+
+### Pre-election fixes (do before 7 May)
+
+- [ ] **Override 4 incumbents whose party-default position substantively misleads.** Voter-facing — a quiz user relying on the displayed score would be wrong about how the candidate actually votes:
+  - `data/regional-candidates/jackson-carlaw.yaml` and `data/candidates/jackson-carlaw.yaml`: voted *for* GRR Bill in 2022 (one of two Tory MSPs who did). Override `equality: 0` (party default) to `1` with a per-candidate stance note.
+  - `data/regional-candidates/sandesh-gulhane.yaml` and `data/candidates/sandesh-gulhane.yaml`: voted *for* GRR Bill. Same fix as Carlaw.
+  - `data/candidates/kenneth-gibson.yaml` (and regional file): one of nine SNP MSPs who voted *against* GRR. Override `equality: 2` to `1` plus stance note.
+  - `data/regional-candidates/pauline-mcneill.yaml`: long-standing public champion of statutory rent controls (lodged a Member's Bill on it), which contradicts the Scottish Labour 2026 "no new rent controls" line our `housing: 1` encodes. Override to `housing: 2` plus stance note.
+  - Lower-priority companion: `data/candidates/jim-fairlie.yaml` abstained on GRR; keep `equality: 2` but add a per-candidate stance note acknowledging the abstention.
+
+- [ ] **Re-source 5 implausible constituency projections.** Each of these has the *winner* wrong against the latest MRPs and BBS, not just shares wobbly:
+  - `data/constituencies/glasgow-southside.yaml` — currently Labour 33 / SNP 30 / Reform 12. None of YouGov, Electoral Calculus, More in Common, or BBS has Labour winning Sturgeon's old seat; BBS frames it as an SNP/Green battleground. Re-source to SNP-leaning toss-up with Greens second.
+  - `data/constituencies/strathkelvin-and-bearsden.yaml` — Lib Dems aren't even in top-3; More in Common explicitly names this as a Lib Dem gain from SNP. Re-source as SNP/LibDem marginal.
+  - `data/constituencies/glasgow-kelvin-and-maryhill.yaml` — Greens at 18% (third); MRPs put Greens as the strongest pickup outside Edinburgh Central. Bump Greens into high-20s / low-30s.
+  - `data/constituencies/edinburgh-north-eastern-and-leith.yaml` — Greens at 16%; More in Common has them winning. Re-source as a 3-way SNP/Lab/Green toss-up.
+  - `data/constituencies/edinburgh-northern.yaml` — LibDem 7-point lead too high; tighten to a toss-up similar to Edinburgh Central.
+
+- [ ] **Calibrate 4 wobbly projections.** Defensible direction but shares need adjusting:
+  - `data/constituencies/ayr.yaml` — bump Reform to low-20s, mark `toss-up`.
+  - `data/constituencies/banffshire-and-buchan-coast.yaml` — Reform should be mid-20s; downgrade `safe` to `competitive`.
+  - `data/constituencies/eastwood.yaml` — Tory 30% looks high vs national 8-12%; SNP/Con/Lab three-way more honest.
+  - `data/constituencies/dumfriesshire.yaml` — tighten to a Con/SNP/Reform marginal in the mid-20s for each.
+
+- [ ] **Fix 1 factually-wrong bio + 3 stale framings.**
+  - `data/candidates/angela-constance.yaml` — bio says "MSP for Almond Valley since 2007" but Almond Valley didn't exist until 2011 (she was MSP for Livingston 2007–2011). Edit to "MSP for Almond Valley since 2011 (and previously MSP for Livingston from 2007)."
+  - `data/candidates/alexander-burnett.yaml` — claims current "Scottish Conservative Chief Whip and Vice-Chairman for campaigning"; he held that role 2022–2025 (Tim Eagle has it since September 2025). Reframe as former.
+  - `data/candidates/stephen-gethins.yaml` — highlight says "Lecturer in international relations at St Andrews"; he's actually Professor of Practice. Promote.
+  - `data/candidates/shirley-anne-somerville.yaml` — "MSP since 2007" framing glosses a 2011–2016 gap. Reframe.
+
+- [ ] **Source URL hygiene (mechanical, ~1 hour).**
+  - Strip trailing slash from ~94 `whocanivotefor.co.uk/person/<id>/<slug>/` URLs across `data/candidates/` and `data/regional-candidates/`. The site 404s on the trailing-slash form. Pure normalisation, no editorial judgement needed.
+  - Replace ~262 stale `candidates.democracyclub.org.uk/api/next/parties/<id>/` API URLs with proper party homepages or per-candidate WhoCanIVoteFor pages. The PR #53 cleanup covered the 704 major-party files; this is the long-tail (UKIP, Independent Green Voice, Workers Party, ISP, Liberal Party, Scottish Rural Party, Alliance to Liberate Scotland, plus Independents).
+
 ### Post-election cleanup (after 7 May)
 
 - [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site.
@@ -232,8 +266,13 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
     ┌─────────────────────────────────────────────────┐
     │      NEXT UP (see "Next up" section above)      │
     │                                                 │
-    │  Must-fix and nice-to-have: all closed.         │
-    │  Pre-election candidate audit complete.         │
+    │  Pre-election fixes (do before 7 May):          │
+    │  • 4 incumbent position overrides (GRR rebels)  │
+    │  • 5 implausible projections to re-source       │
+    │  • 4 wobbly projections to calibrate            │
+    │  • 4 bio fixes (Constance / Burnett / others)   │
+    │  • URL hygiene: ~94 trailing slashes,           │
+    │    ~262 legacy DC API URLs                      │
     │                                                 │
     │  Watch:                                         │
     │  • Re-run /sync-manifestos if any party amends  │
