@@ -5,6 +5,12 @@ import Footer from "../../../components/Footer.astro";
 import CandidateCard from "../../../components/CandidateCard.astro";
 import CandidateComparison from "../../../components/CandidateComparison.tsx";
 import { loadCandidates, loadConstituencies, loadQuestions } from "../../../lib/data";
+import {
+  COMPETITIVENESS_LABELS as competitivenessLabel,
+  COMPETITIVENESS_BADGE_CLASSES as competitivenessColor,
+  PROJECTION_STATUS_LABELS as statusLabel,
+  PROJECTION_STATUS_CLASSES as statusColor,
+} from "../../../lib/candidate-display";
 
 export function getStaticPaths() {
   const constituencies = loadConstituencies();
@@ -20,32 +26,6 @@ const base = import.meta.env.BASE_URL;
 const questions = loadQuestions();
 const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
-
-const competitivenessLabel: Record<string, string> = {
-  "safe": "Safe seat",
-  "competitive": "Competitive",
-  "marginal": "Marginal",
-  "toss-up": "Toss-up",
-};
-
-const competitivenessColor: Record<string, string> = {
-  "safe": "bg-gray-100 text-gray-600",
-  "competitive": "bg-amber-50 text-amber-700",
-  "marginal": "bg-orange-50 text-orange-700",
-  "toss-up": "bg-red-50 text-red-700",
-};
-
-const statusLabel: Record<string, string> = {
-  "will-win": "Will win",
-  "could-win": "Could win",
-  "might-win": "Might win",
-};
-
-const statusColor: Record<string, string> = {
-  "will-win": "text-green-700",
-  "could-win": "text-amber-700",
-  "might-win": "text-gray-500",
-};
 ---
 
 <Base title={`${constituency.name} Candidates`} description={`Candidates standing in ${constituency.name} for the 2026 Scottish Parliament election`}>
