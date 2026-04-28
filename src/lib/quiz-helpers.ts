@@ -19,6 +19,8 @@ export interface PartyBlock {
   candidates: PartyBlockCandidate[];
   positions: Record<string, number>;
   match: MatchResult;
+  /** 1 for the leader. Tied blocks share a rank (competition ranking: 1, 1, 3). */
+  rank: number;
 }
 
 export interface ConstituencyLite {
@@ -71,15 +73,51 @@ export function buildPartyBlocks(
       candidates,
       positions,
       match: calculateMatch(answers, positions),
+      rank: 0,
     };
   });
-  return blocks.sort((a, b) => {
+
+  blocks.sort((a, b) => {
     if (b.match.percentage !== a.match.percentage) return b.match.percentage - a.match.percentage;
     const aHas = a.match.breakdown.length > 0 ? 1 : 0;
     const bHas = b.match.breakdown.length > 0 ? 1 : 0;
     if (aHas !== bHas) return bHas - aHas;
     return a.party.localeCompare(b.party);
   });
+
+  for (let i = 0; i < blocks.length; i++) {
+    if (i === 0) {
+      blocks[i].rank = 1;
+      continue;
+    }
+    const prev = blocks[i - 1];
+    const curr = blocks[i];
+    const sameTier =
+      prev.match.percentage === curr.match.percentage &&
+      (prev.match.breakdown.length > 0) === (curr.match.breakdown.length > 0);
+    blocks[i].rank = sameTier ? prev.rank : i + 1;
+  }
+
+  return blocks;
+}
+
+export interface TopTie {
+  /** Number of rank-1 blocks with positions and a non-zero percentage. */
+  count: number;
+  /** The percentage shared by the rank-1 group, or 0 if none qualify. */
+  topPercentage: number;
+  /** True when 4+ parties tie at rank 1, or when the top percentage is 0. */
+  noClearLeader: boolean;
+}
+
+export function computeTopTie(blocks: PartyBlock[]): TopTie {
+  const rankOnePositioned = blocks.filter(
+    (b) => b.rank === 1 && b.match.breakdown.length > 0
+  );
+  const topPercentage = rankOnePositioned[0]?.match.percentage ?? 0;
+  const count = topPercentage > 0 ? rankOnePositioned.length : 0;
+  const noClearLeader = count === 0 || count >= 4;
+  return { count, topPercentage, noClearLeader };
 }
 
 // Whitespace in constituency YAML `region:` is trimmed when matching against

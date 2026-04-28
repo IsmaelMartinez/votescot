@@ -3,6 +3,7 @@ import {
   buildPartyBlocks,
   buildConstituencyToRegion,
   resolveInitialSelection,
+  computeTopTie,
   type ConstituencyLite,
   type RegionLite,
 } from "../src/lib/quiz-helpers";
@@ -201,5 +202,118 @@ describe("resolveInitialSelection", () => {
     const r = resolveInitialSelection(new URLSearchParams(""), constituencies, regions, c2r);
     expect(r.constituencyId).toBe("");
     expect(r.inboundRegional).toBe(false);
+  });
+});
+
+describe("buildPartyBlocks rank assignment", () => {
+  it("assigns rank 1 to the leader and increments for distinct percentages", () => {
+    const allMatchAnswers = { independence: 2, nhs: 2, housing: 1 };
+    const blocks = buildPartyBlocks([consA, consLab], "constituency", allMatchAnswers);
+    expect(blocks[0].rank).toBe(1);
+    expect(blocks[1].rank).toBe(2);
+  });
+
+  it("shares rank 1 across blocks with identical percentage", () => {
+    const consTie: Candidate = {
+      ...consA,
+      id: "alice-green",
+      name: "Alice Green",
+      party: "Scottish Greens",
+      partyShort: "Greens",
+    };
+    const blocks = buildPartyBlocks(
+      [consA, consTie],
+      "constituency",
+      { independence: 2, nhs: 2, housing: 1 }
+    );
+    expect(blocks[0].match.percentage).toBe(blocks[1].match.percentage);
+    expect(blocks[0].rank).toBe(1);
+    expect(blocks[1].rank).toBe(1);
+  });
+
+  it("uses competition ranking (1, 1, 3) after a tie", () => {
+    const consTie: Candidate = {
+      ...consA,
+      id: "alice-green",
+      name: "Alice Green",
+      party: "Scottish Greens",
+      partyShort: "Greens",
+    };
+    const blocks = buildPartyBlocks(
+      [consA, consTie, consLab],
+      "constituency",
+      { independence: 2, nhs: 2, housing: 1 }
+    );
+    expect(blocks[0].rank).toBe(1);
+    expect(blocks[1].rank).toBe(1);
+    expect(blocks[2].rank).toBe(3);
+  });
+
+  it("does not share rank between positioned and no-position blocks at 0%", () => {
+    const noPositions: Candidate = {
+      ...consA,
+      id: "p-none",
+      party: "Pirate Party",
+      partyShort: "Pir",
+      positions: undefined,
+    };
+    const blocks = buildPartyBlocks([consA, noPositions], "constituency", { independence: 0 });
+    expect(blocks[0].rank).toBe(1);
+    expect(blocks[1].rank).toBe(2);
+  });
+});
+
+describe("computeTopTie", () => {
+  it("returns count 1 and the top percentage for a clean win", () => {
+    const allMatchAnswers = { independence: 2, nhs: 2, housing: 1 };
+    const blocks = buildPartyBlocks([consA, consLab], "constituency", allMatchAnswers);
+    const tie = computeTopTie(blocks);
+    expect(tie.count).toBe(1);
+    expect(tie.topPercentage).toBe(blocks[0].match.percentage);
+    expect(tie.noClearLeader).toBe(false);
+  });
+
+  it("excludes blocks with no positions from the tie count", () => {
+    const noPositions: Candidate = {
+      ...consA,
+      id: "p-none",
+      party: "Pirate Party",
+      partyShort: "Pir",
+      positions: undefined,
+    };
+    const blocks = buildPartyBlocks([consA, noPositions], "constituency", { independence: 2 });
+    const tie = computeTopTie(blocks);
+    expect(tie.count).toBe(1);
+  });
+
+  it("flags noClearLeader when 4+ parties tie at rank 1", () => {
+    const mk = (id: string, party: string): Candidate => ({
+      ...consA,
+      id,
+      party,
+      partyShort: id.toUpperCase(),
+    });
+    const blocks = buildPartyBlocks(
+      [mk("a", "A"), mk("b", "B"), mk("c", "C"), mk("d", "D")],
+      "constituency",
+      { independence: 2 }
+    );
+    const tie = computeTopTie(blocks);
+    expect(tie.count).toBe(4);
+    expect(tie.noClearLeader).toBe(true);
+  });
+
+  it("flags noClearLeader when top percentage is zero", () => {
+    const sibling: Candidate = {
+      ...consA,
+      id: "p2",
+      party: "P2",
+      partyShort: "P2",
+    };
+    const blocks = buildPartyBlocks([consA, sibling], "constituency", { independence: 0 });
+    expect(blocks[0].match.percentage).toBe(0);
+    const tie = computeTopTie(blocks);
+    expect(tie.topPercentage).toBe(0);
+    expect(tie.noClearLeader).toBe(true);
   });
 });
