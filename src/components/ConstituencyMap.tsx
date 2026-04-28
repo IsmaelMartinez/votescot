@@ -355,7 +355,7 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
                 </a>
               </>
             ) : (
-              "We don't have candidate data for this constituency yet — check WhoCanIVoteFor.co.uk."
+              "We don't have candidate data for this constituency yet. Check WhoCanIVoteFor.co.uk."
             )}
           </div>
         )}
@@ -430,7 +430,7 @@ function ConstituencyMapInner({ knownConstituencies, basePath, projections }: Pr
         {/* Floating tooltip for uncovered constituency click */}
         {tooltip && (
           <div className="absolute top-3 left-1/2 -translate-x-1/2 z-[1000] bg-white border border-gray-300 rounded-md px-3 py-2 font-body text-sm shadow-md max-w-xs text-center">
-            <strong>{tooltip.name}</strong> — candidate data coming soon.{" "}
+            <strong>{tooltip.name}</strong>: candidate data coming soon.{" "}
             <a
               href="https://whocanivotefor.co.uk/"
               target="_blank"

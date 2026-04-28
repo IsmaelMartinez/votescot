@@ -94,7 +94,7 @@ function QuizEngineInner(props: Props) {
     return items.filter((c) => c.name.toLowerCase().includes(q));
   }, [items, filterText]);
 
-  const heading = isRegional ? "Vote Compass — Regional List" : "Vote Compass";
+  const heading = isRegional ? "Vote Compass · Regional List" : "Vote Compass";
   const selectorPrompt = isRegional
     ? "Select your region to get started."
     : "Select your constituency to get started.";
@@ -112,7 +112,7 @@ function QuizEngineInner(props: Props) {
 
         {isRegional && (
           <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
-            Scottish Parliament uses two ballots — constituency and regional list. We don't yet model separate regional list candidates, so these matches show all candidates standing in your region based on party platforms.
+            Scottish Parliament uses two ballots: constituency and regional list. We don't yet model separate regional list candidates, so these matches show all candidates standing in your region based on party platforms.
           </div>
         )}
 
@@ -289,7 +289,7 @@ function QuizEngineInner(props: Props) {
   return (
     <div className="py-3.5">
       <div className="flex items-center justify-between mb-1 flex-wrap gap-1.5">
-        <h2 className="font-heading text-lg font-black m-0">{heading}{selectedName ? ` — ${selectedName}` : ""}</h2>
+        <h2 className="font-heading text-lg font-black m-0">{heading}{selectedName ? ` · ${selectedName}` : ""}</h2>
         <button
           onClick={() => { setSelected(""); setAnswers({}); }}
           className="bg-transparent border border-gray-300 rounded px-3 py-1 font-body text-xs text-gray-400 cursor-pointer"
@@ -299,7 +299,7 @@ function QuizEngineInner(props: Props) {
       </div>
       <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-3">
         Answer 8 questions about what matters to you. We'll match you to the candidate closest to your
-        views. No data is stored — this runs entirely in your browser.
+        views. No data is stored. This runs entirely in your browser.
       </p>
       <div className="bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4 font-body text-xs text-blue-700">
         Candidate positions are based on party platforms, not individual views. Candidates from the same party will share the same match score.

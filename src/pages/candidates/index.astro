@@ -57,7 +57,7 @@ const searchItems = [
   ...allCandidates.map((c) => ({
     id: `candidate:${c.id}`,
     label: c.name,
-    sublabel: `${c.partyShort} — ${constituencies.find((con) => con.id === c.constituency)?.name || c.constituency}`,
+    sublabel: `${c.partyShort} · ${constituencies.find((con) => con.id === c.constituency)?.name || c.constituency}`,
   })),
 ];
 ---
@@ -75,7 +75,7 @@ const searchItems = [
       href={`${base}quiz`}
       class="inline-block px-4 py-2 bg-votescot-gold text-white rounded-lg font-body text-sm font-bold no-underline hover:opacity-90 mb-4"
     >
-      Take the quiz — find your match
+      Take the quiz, find your match
     </a>
 
     <ViewToggle client:load />

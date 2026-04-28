@@ -41,13 +41,13 @@ const comparisonConstituencies = regionConstituencies.map((c) => ({ id: c.id, na
     </p>
 
     <div class="mb-5 bg-blue-50 border border-blue-200 rounded px-3 py-2 font-body text-xs text-blue-700">
-      Scottish Parliament uses two ballots — constituency and regional list. We don't yet model separate regional list candidates, so these are the constituency candidates standing inside the region.
+      Scottish Parliament uses two ballots: constituency and regional list. We don't yet model separate regional list candidates, so these are the constituency candidates standing inside the region.
     </div>
 
     {quizCandidates.length > 0 && (
       <div class="mb-4">
         <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Quiz candidates — included in vote compass matching
+          Quiz candidates · included in vote compass matching
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {quizCandidates.map((c) => (

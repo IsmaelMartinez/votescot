@@ -128,7 +128,7 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
           ))}
           {hasMore && (
             <li className="px-3.5 py-2 border-t border-votescot-border bg-gray-50 font-body text-xs text-gray-400 text-center">
-              {allFiltered.length - MAX_RESULTS} more result{allFiltered.length - MAX_RESULTS !== 1 ? "s" : ""} — refine your search
+              {allFiltered.length - MAX_RESULTS} more result{allFiltered.length - MAX_RESULTS !== 1 ? "s" : ""}. Refine your search.
             </li>
           )}
         </ul>

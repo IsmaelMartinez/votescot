@@ -58,7 +58,7 @@ function DeepDiveInner({ candidate }: Props) {
           messages: [
             {
               role: "user",
-              content: `You are a neutral political analyst for the ${candidate.constituency} constituency in the 2026 Scottish Parliament election. Analyse ${candidate.name} (${candidate.party}), standing in ${candidate.constituency}. Cover: 1) What they actually stand for — key policies and values. 2) Track record — what have they delivered or failed to deliver? 3) Strengths and weaknesses as a candidate. 4) 3 specific questions a voter should ask at a hustings. Be balanced and factual. ~350 words. Use ** for section headers.`,
+              content: `You are a neutral political analyst for the ${candidate.constituency} constituency in the 2026 Scottish Parliament election. Analyse ${candidate.name} (${candidate.party}), standing in ${candidate.constituency}. Cover: 1) What they actually stand for: key policies and values. 2) Track record: what have they delivered or failed to deliver? 3) Strengths and weaknesses as a candidate. 4) 3 specific questions a voter should ask at a hustings. Be balanced and factual. Avoid em dashes; use periods, commas, or colons instead. ~350 words. Use ** for section headers.`,
             },
           ],
         }),
