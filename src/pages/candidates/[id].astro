@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { loadCandidates, loadConstituencies, loadQuestions } from "../../lib/data";
 import { slugifyConstituency } from "../../lib/slugify";
+import { filterExternalSources } from "../../lib/candidate-display";
 
 
 export function getStaticPaths() {
@@ -18,7 +19,7 @@ export function getStaticPaths() {
 const { candidate, constituency } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const questions = loadQuestions();
-const externalSources = candidate.sources?.filter((s) => typeof s?.url === "string" && !s.url.includes("candidates.democracyclub.org.uk")) ?? [];
+const externalSources = filterExternalSources(candidate.sources);
 const constituencyName = constituency?.name ?? candidate.constituency;
 const regionName = constituency?.region;
 const regionId = regionName ? slugifyConstituency(regionName) : null;
