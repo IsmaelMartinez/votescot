@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T07:12:41.990Z",
+  "lastUpdated": "2026-04-28T12:55:51.336Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Scotland's population set to fall due to drop in migration",
+      "description": "The National Records of Scotland said the change is \"mainly driven by migration falling from unusually high levels\".",
+      "url": "https://www.bbc.com/news/articles/cwy2jqj0203o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-28T12:30:16.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "What impact do refugees have on housing in Glasgow?",
       "description": "BBC Verify examines claims made by political leaders about the impact of asylum and migration on housing.",
@@ -135,20 +142,6 @@
       "source": "BBC News"
     },
     {
-      "title": "MSPs need to work together to reform council tax - SNP",
-      "description": "Representatives from six Scottish political parties agree that the council tax needs to be reformed, but how exactly is a contentious issue.",
-      "url": "https://www.bbc.com/news/articles/cy81e0w9dyjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-19T14:39:06.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Ex-Scottish Labour leader Dugdale appointed as Stonewall chairwoman",
-      "description": "Dugdale, who is currently chairwoman of Shelter in Scotland, said she was \"thrilled and honoured\" to secure the post.",
-      "url": "https://www.bbc.com/news/articles/ckgrvz5nxlno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-19T11:58:16.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "How Reform is exposing the reality of Scotland’s views on immigration and identity",
       "description": "<p>Once a progressive outlier, Scotland is facing a political reckoning as Reform benefits from growing social division</p><p>It’s Monday evening in Aberdeen, and George Preston is wearing his union flag suit to the Reform UK rally. He joined the party in 2024 as it gained ground in the north-east of Scotland with its first councillor defections from the Scottish Conservatives.</p><p>Now Preston is out leafleting for the party that polls suggest is vying with Scottish Labour to become the official opposition to the Scottish National party in the Holyrood elections on 7 May.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity",
@@ -161,13 +154,6 @@
       "url": "https://www.theguardian.com/politics/2026/apr/19/things-could-go-backwards-kezia-dugdale-on-safety-lgbtq-rights-and-the-future-of-stonewall",
       "publishedAt": "2026-04-19T06:00:34.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Starmer accused of 'skulking' and shunning Sarwar in Scotland",
-      "description": "It is the first time the prime minister has been north of the border since the Scottish Labour leader Anas Sarwar called for him to step down in February.",
-      "url": "https://www.bbc.com/news/articles/ckgr54407wxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-18T15:46:43.000Z",
-      "source": "BBC News"
     },
     {
       "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
@@ -223,6 +209,20 @@
       "description": "<p>Anas Sarwar says there have been ‘no stitch-ups, no deals, no backroom chats with Reform’ over Holyrood elections</p><p></p><p>Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the rightwing party to keep the Scottish National party out of power.</p><p>Offord made the claim on Channel 4’s Scottish leaders’ debate on Tuesday evening, alleging the Scottish Labour leader came “bouncing up” to him at an event in December last year, suggesting they “work together to remove the SNP”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie",
       "publishedAt": "2026-04-15T16:42:13.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
+      "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
+      "publishedAt": "2026-04-14T16:32:59.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish Greens pledge free bus travel and basic income in election manifesto",
+      "description": "<p>Party says plan for ‘radical change’ will be funded in part through higher taxes on aviation, gambling and landlords</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The Scottish Greens have called for free bus travel, thousands of extra teachers and doctors and a universal basic income among hundreds of uncosted manifesto pledges.</p><p>The party is enjoying a bounce in Scottish opinion polls, with some putting it ahead of Labour, driven partly by the surging support for the Green party of England and Wales under <a href=\"https://www.theguardian.com/politics/2026/jan/02/zack-polanski-interview-green-party-leader-taking-on-reform\">the leadership of Zack Polanski</a>.</p> <a href=\"https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/uk-news/2026/apr/14/scottish-greens-pledge-free-bus-travel-and-basic-income-in-election-manifesto",
+      "publishedAt": "2026-04-14T14:13:25.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
