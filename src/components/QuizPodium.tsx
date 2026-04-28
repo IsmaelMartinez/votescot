@@ -1,5 +1,6 @@
 import React from "react";
 import type { PartyBlock, TopTie } from "../lib/quiz-helpers";
+import { scoreColor } from "../lib/score-color";
 
 interface Props {
   blocks: PartyBlock[];
@@ -59,12 +60,6 @@ function buildSlots(blocks: PartyBlock[], tie: TopTie): Slot[] {
   const totalWidth = collected.length * BLOCK_W + (collected.length - 1) * GAP;
   const startX = (VIEWBOX_W - totalWidth) / 2;
   return collected.map((slot, i) => ({ ...slot, x: startX + i * (BLOCK_W + GAP) }));
-}
-
-function scoreColor(percentage: number): string {
-  if (percentage >= 70) return "#2d8a4e";
-  if (percentage >= 40) return "#c4940a";
-  return "#c0392b";
 }
 
 export default function QuizPodium({ blocks, tie }: Props) {

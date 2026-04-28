@@ -10,7 +10,7 @@
 
 **Spec:** `docs/superpowers/specs/2026-04-28-quiz-tie-handling-design.md`
 
-**Visual reference:** `/tmp/votescot-tie-sketch.html`
+**Visual reference:** the dev preview page at `src/pages/dev/quiz-podium-preview.astro` (rendered at `/dev/quiz-podium-preview/` after a build) covers every podium state with mock data.
 
 ---
 

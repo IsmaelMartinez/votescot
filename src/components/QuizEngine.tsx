@@ -11,6 +11,7 @@ import {
   computeTopTie,
   type PartyBlock,
 } from "../lib/quiz-helpers";
+import { scoreColor } from "../lib/score-color";
 
 interface Constituency {
   id: string;
@@ -31,12 +32,6 @@ interface Props {
   regions: Region[];
   knownConstituencies: string[];
   basePath: string;
-}
-
-function scoreColor(percentage: number): string {
-  if (percentage >= 70) return "#2d8a4e";
-  if (percentage >= 40) return "#c4940a";
-  return "#c0392b";
 }
 
 function QuizEngineInner(props: Props) {

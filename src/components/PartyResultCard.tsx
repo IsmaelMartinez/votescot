@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import type { PartyBlock } from "../lib/quiz-helpers";
 import type { QuizQuestion } from "../lib/data";
+import { scoreColor } from "../lib/score-color";
 
 interface Props {
   block: PartyBlock;
@@ -12,12 +13,6 @@ interface Props {
 }
 
 const CANDIDATE_PREVIEW = 4;
-
-function scoreColor(percentage: number): string {
-  if (percentage >= 70) return "#2d8a4e";
-  if (percentage >= 40) return "#c4940a";
-  return "#c0392b";
-}
 
 export default function PartyResultCard({ block: p, isWinner, showTiedPill, isRegionalTab, profileBase, questions }: Props) {
   const hasPositions = p.match.breakdown.length > 0;

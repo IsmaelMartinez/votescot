@@ -16,11 +16,11 @@ Out of scope: an algorithmic tie-breaker that picks a winner from tied scores (g
 
 ## Context
 
-`src/lib/matching.ts:11` defines `calculateMatch`. It returns a `percentage` rounded to a whole integer using `Math.round(total / breakdown.length)` where each question contributes 100, 50, or 0 based on absolute distance between the user's answer and the party's position. With 8 questions and three contribution buckets, parties with identical position vectors on the answered questions produce genuine score ties. Working through the arithmetic confirms that two distinct raw means always round to two distinct integer percentages under the current scheme, so apparent ties are real ties, not rounding artefacts.
+`calculateMatch` in `src/lib/matching.ts` returns a `percentage` rounded to a whole integer using `Math.round(total / breakdown.length)` where each question contributes 100, 50, or 0 based on absolute distance between the user's answer and the party's position. With 8 questions and three contribution buckets, parties with identical position vectors on the answered questions produce genuine score ties. Working through the arithmetic confirms that two distinct raw means always round to two distinct integer percentages under the current scheme, so apparent ties are real ties, not rounding artefacts.
 
-`src/lib/quiz-helpers.ts:76` sorts the party blocks by percentage descending, then by whether the party has any positions, then alphabetically by party name. The alphabetical fallback is the silent tie-breaker.
+`buildPartyBlocks` in `src/lib/quiz-helpers.ts` sorts the party blocks by percentage descending, then by whether the party has any positions, then alphabetically by party name. The alphabetical fallback is the silent tie-breaker.
 
-`src/components/QuizEngine.tsx:239` renders the sorted blocks. The treatment for index `0` includes a 🏆 emoji at line 257 and a `2px` accent border at line 248. Every other index gets a `1px` neutral border and no emoji. There is no concept of rank in the rendering: position 0 is privileged regardless of whether other blocks share its score.
+The block-render loop in `QuizEngine.tsx` privileges index `0`: that card gets a 🏆 emoji and a `2px` accent border, while every other card gets a `1px` neutral border and no emoji. There is no concept of rank in the rendering: position 0 is privileged regardless of whether other blocks share its score.
 
 ## Decision
 
@@ -73,7 +73,7 @@ A long candidate list (more than four entries) shows the first four with a "+ N 
 
 A tied group of four or more parties at rank 1 indicates that the quiz could not separate the field, often because the user answered too few questions or chose neutral on every axis. In that case, suppress the trophy and the "Tied #1" pill on every rank-1 card and render a single line of muted helper text above the list: "No clear leader from your answers. Try answering more questions." This is preferable to crowning half the field.
 
-A tied group at rank 1 where every member has zero positions (`breakdown.length === 0`) keeps the existing "no quiz positions" treatment from `QuizEngine.tsx:266` and never shows a trophy. The current `hasPositions` guard at line 248 is preserved.
+A tied group at rank 1 where every member has zero positions (`breakdown.length === 0`) keeps the existing "no quiz positions" treatment in the card header and never shows a trophy. The existing `hasPositions` guard around the trophy and accent border is preserved.
 
 A tied group at rank 1 where the percentage is zero (the user's answers do not align with any party at all) is treated the same as the four-or-more case: no trophy, no pill, helper text above the list. Crowning a 0% match misrepresents the data the same way the silent winner does.
 
@@ -85,7 +85,7 @@ A tied group at rank 1 where the percentage is zero (the user's answers do not a
 
 `src/components/QuizPodium.tsx`: new component. Pure render from props, no state. SVG is inlined for crisp scaling and zero JS overhead. The component returns `null` when its preconditions fail so the caller does not need to gate it.
 
-Card collapse logic is local to the existing block render in `QuizEngine.tsx`. Each rendered card holds its own `expanded` state, initialised to `i === 0 || isTiedRankOne`. The header becomes a button; the body renders conditionally. The "+ N more" inner toggle is a second piece of local state on the same card. No new top-level component is needed for collapse; pulling it into a `<QuizPartyCard>` is reasonable but not required for this change.
+Card collapse logic lives in a new `PartyResultCard` component (`src/components/PartyResultCard.tsx`). Each rendered card holds its own `expanded` state, initialised to `isWinner` (true for rank-1 cards when the leader is not suppressed). The header is a button; the body renders conditionally. The "+ N more" inner toggle is a second piece of local state on the same card. The component was extracted from `QuizEngine.tsx` to give it a clean Fast Refresh boundary and avoid the parent component's hook ordering bloating further.
 
 ## Testing
 
