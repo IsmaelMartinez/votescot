@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T18:45:19.026Z",
+  "lastUpdated": "2026-04-28T07:12:41.990Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "What impact do refugees have on housing in Glasgow?",
+      "description": "BBC Verify examines claims made by political leaders about the impact of asylum and migration on housing.",
+      "url": "https://www.bbc.com/news/articles/cly0g184l9ro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-28T05:00:29.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "No 10 publishes previously confidential memo to refute claim that Starmer misled MPs over Mandelson appointment – as it happened",
       "description": "<p>Speaker Sir Lindsay Hoyle earlier confirmed that MPs will decide whether to let inquiry into Keir Starmer’s statements over Peter Mandelson proceed</p><p>Downing Street has said that the UK is “in a good position” to handle the global supply problems caused by the Iran war not being resolved.</p><p>Speaking at the morning lobby briefing, the <strong>PM’s spokesperson</strong> said:</p><p>We remain focused on a long-term, permanent solution to the crisis. As a result of the forward-planning, the government undertook over the past few months, the UK is in a good position.</p><p>We’re ramping up planning for all different potential impacts on the UK economy and consumers, and that means focusing on a live monitoring of stock levels and what plans are in place for addressing supply chain disruption.</p><p>Even Boris Johnson didn’t block his MPs voting for scrutiny. Labour MPs must be given a free vote on any motion to refer Starmer to the privileges committee, not forced into being accomplices to a cover-up.</p><p>If Keir Starmer has misled the House and the public, he must be held to the same standard that we should expect of any prime minister.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates\">Continue reading...</a>",
@@ -216,13 +223,6 @@
       "description": "<p>Anas Sarwar says there have been ‘no stitch-ups, no deals, no backroom chats with Reform’ over Holyrood elections</p><p></p><p>Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the rightwing party to keep the Scottish National party out of power.</p><p>Offord made the claim on Channel 4’s Scottish leaders’ debate on Tuesday evening, alleging the Scottish Labour leader came “bouncing up” to him at an event in December last year, suggesting they “work together to remove the SNP”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie",
       "publishedAt": "2026-04-15T16:42:13.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Reeves condemns Trump’s decision to launch war against Iran as ‘folly’– as it happened",
-      "description": "<p>Chancellor ‘frustrated and angry’ at the effect on UK firms and families and says US went into war without a clear exit plan </p><p><em>Q: Why are you <a href=\"https://www.theguardian.com/politics/live/2026/apr/13/iran-war-keir-starmer-brexit-trump-strait-hormuz-oil-fuel-southport-latest-news-updates?page=with%3Ablock-69dd16848f08aa81602c8618#block-69dd16848f08aa81602c8618\">calling for an inquiry into Nigel Farage’s investment in a bitcoin firm</a>?</em></p><p><strong>Davey</strong> said that, in investing in crypto, Farage, the Reform UK leader, seemed to be copying Donald Trump. He said he thought MPs should be banned from promoting financial services or products.</p><p>[Farage is] now promoting this business. The question is, is he persuading people to put money into a risky business?</p><p>And the conclusion I draw from this example is that we need to change the rules for MPs. MPs should not be allowed to promote specific financial services or products in the way we’re seeing Nigel Farage doing.</p><p>We need to get together as a country. The defence challenges for our country are so serious, with war on our continent for the first time for a long time, with Russia invading Ukraine, surely that’s been the wake up call that we needed. The government hasn’t gone as fast as it should have given those circumstances.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/politics/live/2026/apr/14/keir-starmer-defence-spending-labour-latest-news-updates",
-      "publishedAt": "2026-04-14T16:32:59.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
