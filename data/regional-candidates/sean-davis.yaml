@@ -6,7 +6,7 @@ color: "#888888"
 accent: "#555555"
 region: south-scotland
 regionLabel: South Scotland
-listPosition: 1
+listPosition: 999
 ballotPaperId: sp.r.south-scotland.2026-05-07
 isIncumbent: false
 bio: Pro-independence independent candidate. First independent to stand in Carrick, Cumnock and Doon Valley since 2007.

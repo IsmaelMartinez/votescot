@@ -6,7 +6,7 @@ color: "#888888"
 accent: "#555555"
 region: edinburgh-and-lothians-east
 regionLabel: Edinburgh and Lothians East
-listPosition: 1
+listPosition: 999
 ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
 isIncumbent: false
 bio: Independent regional list candidate for Edinburgh and Lothians East.
