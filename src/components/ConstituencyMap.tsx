@@ -11,6 +11,7 @@ import type { Layer, PathOptions } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { feature } from "topojson-client";
 import ErrorBoundary from "./ErrorBoundary";
+import { PARTY_COLORS_BY_LONG } from "../lib/party-config";
 
 interface ConstituencyProperties {
   id: string;
@@ -55,16 +56,9 @@ const COLOR_UNCOVERED = "#9ca3af"; // gray-400 - no data yet
 const COLOR_HOVER = "#d4a017"; // votescot-gold highlight
 const COLOR_HIGHLIGHTED = "#f59e0b"; // amber for postcode result
 
-const PARTY_COLORS: Record<string, string> = {
-  snp: "#9B870C",
-  conservative: "#0087DC",
-  labour: "#DC241F",
-  libdem: "#FAA61A",
-  green: "#00A651",
-  alba: "#005EB8",
-  reform: "#12B6CF",
-};
+const PARTY_COLORS = PARTY_COLORS_BY_LONG;
 
+// Compact labels for tight tooltips; long-form labels live in party-config.
 const PARTY_LABELS: Record<string, string> = {
   snp: "SNP",
   conservative: "Con",
