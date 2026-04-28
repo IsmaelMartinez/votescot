@@ -4,11 +4,15 @@ interface PartyColours {
   textColor?: string;
 }
 
+// Order matters: findPartyKey returns the first substring match, so more
+// specific names (e.g. "Independent Green Voice") must come before broader
+// ones (e.g. "Green", "Independent") that would otherwise swallow them.
 const PARTY_MAP: Record<string, { short: string; colours: PartyColours }> = {
   "Scottish National Party": { short: "SNP", colours: { color: "#FDF38E", accent: "#9B870C", textColor: "#333" } },
   "Labour": { short: "Labour", colours: { color: "#DC241F", accent: "#8B0000" } },
   "Conservative": { short: "Tory", colours: { color: "#0087DC", accent: "#005EA5" } },
   "Liberal Democrat": { short: "Lib Dem", colours: { color: "#FAA61A", accent: "#B8860B" } },
+  "Independent Green Voice": { short: "Independent Green Voice", colours: { color: "#666666", accent: "#444444" } },
   "Green": { short: "Green", colours: { color: "#00A651", accent: "#007A3D" } },
   "Reform UK": { short: "Reform", colours: { color: "#12B6CF", accent: "#0a7f91" } },
   "Alba": { short: "Alba", colours: { color: "#005EB8", accent: "#003d7a" } },

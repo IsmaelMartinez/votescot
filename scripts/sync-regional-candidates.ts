@@ -87,7 +87,10 @@ function buildYaml(c: Candidacy, ballot: Ballot, id: string): RegionalCandidateY
     accent: colours.accent,
     region: regionSlug,
     regionLabel: ballot.post.label,
-    listPosition: c.party_list_position ?? 999,
+    // 999 is a sentinel for "no list" — used for true independents. Sole-party
+    // candidates whose API record omits a list position should default to 1
+    // (they are position 1 on a list of one), not the independent sentinel.
+    listPosition: c.party_list_position ?? (partyName === "Independent" ? 999 : 1),
     ballotPaperId: ballot.ballot_paper_id,
     isIncumbent: false,
     bio: `${partyName} regional list candidate for ${ballot.post.label}.`,
