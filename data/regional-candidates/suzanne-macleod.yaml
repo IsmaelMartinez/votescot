@@ -1,0 +1,36 @@
+id: suzanne-macleod
+name: Suzanne MacLeod
+party: Labour Party
+partyShort: Labour
+color: "#DC241F"
+accent: "#8B0000"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 6
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Standing for Labour Party in Central Scotland and Lothians West. We have not identified independent biographical sources for this candidate beyond the party listing.
+highlights:
+  - Standing for Labour Party in the 2026 Scottish Parliament election.
+sources:
+  - url: https://scottishlabour.org.uk/
+    type: party_website
+positions:
+  independence: 0
+  nhs: 2
+  housing: 1
+  climate: 1
+  tax: 1
+  economy: 1
+  education: 1
+  equality: 1
+stances:
+  independence: Oppose independence. Focus on delivery within the UK and Scotland's strengths in the UK growth sectors. Frame the election as a choice between delivery and SNP-led constitutional distraction.
+  nhs: End the 8am GP rush, bring back the family doctor, cut waiting times with funding following the patient, introduce an NHS app and AI scanners, and deliver £15/hr for social care workers.
+  housing: Deliver 125,000 new homes by 2031 across all tenures. Build 20,000 mid-market rent homes to save tenants an average of £2,700 a year off market rents. Establish a Housing Bank and a private-rented-sector strategy (no new rent controls).
+  climate: Achieve net zero by 2045 ambitions. Double home retrofits, back GB Energy and the Scottish National Investment Bank, end the block on clean nuclear energy, and deliver a fair energy transition for oil and gas workers.
+  tax: Commit to no income tax rate rises for five years, with the ambition to lower taxes as the economy grows.
+  economy: Sustained economic growth as the route to improving living standards. Establish a Scottish Board of Trade, partner with GB Energy and the UK National Wealth Fund, and cut a third of quangos to end government waste.
+  education: Breakfast clubs in every primary school, 2,000 Education Recovery teachers and 1,500 more classroom assistants, ban mobile phones in classrooms, and top up tax-free childcare to £3,000 per child.
+  equality: Recommit the NHS to single-sex wards on the basis of biological sex. Deliver a four-nation conversion practices ban to protect LGBT+ people. Tackle long waits for gynaecological procedures as part of a women's health plan.
+quizCandidate: true

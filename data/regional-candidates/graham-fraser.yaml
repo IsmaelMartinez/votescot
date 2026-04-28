@@ -1,0 +1,17 @@
+id: graham-fraser
+name: Graham Fraser
+party: Alliance to Liberate Scotland
+partyShort: Alliance to Liberate Scotland
+color: "#666666"
+accent: "#444444"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 4
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Alliance to Liberate Scotland regional list candidate for Central Scotland and Lothians West.
+highlights:
+  - Alliance to Liberate Scotland regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

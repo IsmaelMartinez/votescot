@@ -7,12 +7,13 @@ accent: "#B8860B"
 constituency: cunninghame-north
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Cunninghame North.
+bio: Standing for the Liberal Democrats in Cunninghame North. We have not
+  identified independent biographical sources for this candidate beyond the
+  party listing.
 highlights:
-  - Liberal Democrats candidate for Cunninghame North in the 2026 Scottish
-    Parliament election
+  - Standing for the Liberal Democrats in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
 positions:
   independence: 0

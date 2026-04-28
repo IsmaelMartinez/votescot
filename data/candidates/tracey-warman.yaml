@@ -7,13 +7,16 @@ accent: "#B8860B"
 constituency: galloway-and-west-dumfries
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Galloway and West Dumfries.
+bio: Tracey Warman lives in Dumfries and Galloway and worked in finance for 33 years before taking early retirement in 2019. She now works as a relief dairy worker, runs an Airbnb and has recently been elected to her local Community Council. She joined the Lib Dems in 2011 and is also on the South Scotland regional list.
 highlights:
-  - Liberal Democrats candidate for Galloway and West Dumfries in the 2026
-    Scottish Parliament election
+  - Liberal Democrats candidate for Galloway and West Dumfries and on the South Scotland regional list
+  - 33-year finance career; now relief dairy worker and Community Councillor in Dumfries and Galloway
+  - Lib Dem member since 2011; previously contested 2025 Stranraer and the Rhins council by-election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/123226/tracey-warman
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

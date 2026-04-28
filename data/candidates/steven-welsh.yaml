@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: caithness-sutherland-and-ross
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Caithness, Sutherland and Ross.
+bio: Dr Steven Welsh is a retired NHS Consultant Psychiatrist who worked with Caithness and Sutherland NHS Trust from 1996 and with NHS Western Isles from 2007 until his 2015 retirement. He stood for the Scottish Family Party in Na h-Eileanan an Iar at the 2024 UK general election (388 votes, 7th of 8) before joining Reform UK.
 highlights:
-  - Reform UK candidate for Caithness, Sutherland and Ross in the 2026 Scottish
-    Parliament election
+  - Reform UK candidate for Caithness, Sutherland and Ross
+  - Retired NHS Consultant Psychiatrist (Caithness/Sutherland and Western Isles)
+  - Stood for the Scottish Family Party in Na h-Eileanan an Iar at the 2024 UK general election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/116882/steven-welsh
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

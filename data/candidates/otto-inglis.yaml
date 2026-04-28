@@ -7,12 +7,16 @@ accent: "#0a7f91"
 constituency: dunfermline
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Dunfermline.
+bio: Otto Inglis runs his own business near Edinburgh Airport and qualified as a lawyer in England, working as a welfare rights lawyer and asylum caseworker. He has previously stood for UKIP and Reform UK at Westminster, Holyrood and European elections, including Edinburgh West in 2024. He is also on the Reform UK Mid Scotland and Fife regional list.
 highlights:
-  - Reform UK candidate for Dunfermline in the 2026 Scottish Parliament election
+  - Reform UK candidate for Dunfermline and on the Mid Scotland and Fife regional list
+  - Lawyer by training; previously worked in welfare rights and asylum casework
+  - Stood for UKIP/Reform in Edinburgh West (2024), Mid Scotland and Fife (2021) and Scotland (European 2014/2019)
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/944/otto-inglis
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

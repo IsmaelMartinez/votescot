@@ -1,0 +1,40 @@
+id: aisha-jawaid-mir
+name: Aisha Jawaid Mir
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+region: south-scotland
+regionLabel: South Scotland
+listPosition: 3
+ballotPaperId: sp.r.south-scotland.2026-05-07
+isIncumbent: false
+bio: Aisha Jawaid Mir is a businesswoman with a finance career who graduated from the University of the West of Scotland in 1996 (the first in her family to attend university). A Liberal Democrat since 2013, she is a Children's Panel member and has stood at multiple UK and Scottish Parliament elections, most recently the 2025 Hamilton, Larkhall and Stonehouse by-election (6th of 10) and East Kilbride and Strathaven at the 2024 UK general election (6th of 8).
+highlights:
+  - Liberal Democrats regional list candidate for South Scotland (position 3)
+  - Businesswoman with a long finance career; Children's Panel member
+  - Stood at the 2025 Hamilton, Larkhall and Stonehouse Holyrood by-election (6th of 10)
+sources:
+  - url: https://www.scotlibdems.org.uk/
+    type: party_website
+  - url: https://whocanivotefor.co.uk/person/6961/aisha-jawaid-mir
+    type: whocanivotefor
+positions:
+  independence: 0
+  nhs: 2
+  housing: 1
+  climate: 1
+  tax: 1
+  economy: 1
+  education: 1
+  equality: 2
+stances:
+  independence: Oppose independence. Back a written constitution for a federal United Kingdom and a new bespoke UK-EU customs union.
+  nhs: A 10-year NHS and care workforce plan, new neighbourhood health teams giving every GP practice the equivalent of an extra clinical staff member, walk-in mental health services and a Fair Deal for Rural Healthcare.
+  housing: Return housebuilding to 25,000 new homes annually, create key worker housing, and replace the SNP's housing strategy with a new holistic data-driven approach.
+  climate: Support net zero by 2045 with a programme for net zero new towns featuring rail links, district heating and 20-minute neighbourhoods.
+  tax: Where funds allow, lift tax thresholds in line with inflation and begin to close the tax differential with England in a balanced way that protects public services.
+  economy: Reform business rates to stop sudden tax hikes on successful employers and help people upskill through new Job Transition Loans worth up to £5,000.
+  education: Hire 2,000 more pupil support assistants, roll out speech and language therapy and make every school a smartphone-free environment.
+  equality: Strong defence of LGBT+ and trans rights. Ban all forms of conversion therapies and practices, working in partnership with the UK Government.
+quizCandidate: true

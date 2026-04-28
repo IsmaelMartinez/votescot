@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: fife-north-east
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Fife North East.
+bio: William Docherty has stood repeatedly for Reform UK in Stirling council by-elections, contesting Stirling East in 2024 and 2025 and Bannockburn in 2025 before this Holyrood candidacy.
 highlights:
-  - Reform UK candidate for Fife North East in the 2026 Scottish Parliament
-    election
+  - Reform UK candidate for Fife North East
+  - Stood for Reform UK in the 2024 and 2025 Stirling East council by-elections
+  - Also contested the 2025 Bannockburn council by-election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/118272/william-docherty
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

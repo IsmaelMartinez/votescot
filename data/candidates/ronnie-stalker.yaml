@@ -7,12 +7,16 @@ accent: "#005EA5"
 constituency: cunninghame-north
 isIncumbent: false
 quizCandidate: true
-bio: North Ayrshire councillor and local butcher.
+bio: Ronnie Stalker has stood for the Scottish Conservatives in North Ayrshire local elections, contesting Garnock Valley in 2022 and Dalry and West Kilbride at a 2021 by-election. He is also on the Tory West Scotland regional list for 2026.
 highlights:
-  - North Ayrshire councillor; local butcher
+  - Conservative candidate for Cunninghame North and on the West Scotland regional list
+  - Stood in Garnock Valley ward (North Ayrshire) at the 2022 council elections
+  - Contested the 2021 Dalry and West Kilbride council by-election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/83844/ronnie-stalker
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

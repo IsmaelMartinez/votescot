@@ -7,12 +7,11 @@ accent: "#8B0000"
 constituency: angus-north-and-mearns
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Angus North and Mearns.
+bio: Standing for Labour Party in Angus North and Mearns. We have not identified independent biographical sources for this candidate beyond the party listing.
 highlights:
-  - Labour Party candidate for Angus North and Mearns in the 2026 Scottish
-    Parliament election
+  - Standing for Labour Party in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+  - url: https://scottishlabour.org.uk/
     type: party_website
 positions:
   independence: 0

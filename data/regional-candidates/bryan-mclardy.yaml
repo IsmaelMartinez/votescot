@@ -1,0 +1,18 @@
+id: bryan-mclardy
+name: Bryan McLardy
+party: Socialist Labour Party
+partyShort: SLP
+color: "#DC241F"
+accent: "#8B0000"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 4
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Standing for Socialist Labour Party in West Scotland. We have not identified independent biographical sources for this candidate beyond the party listing.
+highlights:
+  - Standing for Socialist Labour Party in the 2026 Scottish Parliament election.
+sources:
+  - url: https://www.socialist-labour-party.org.uk/
+    type: party_website
+quizCandidate: false

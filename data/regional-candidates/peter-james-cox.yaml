@@ -1,0 +1,17 @@
+id: peter-james-cox
+name: Peter James Cox
+party: Scottish Family Party
+partyShort: Scottish Family Party
+color: "#666666"
+accent: "#444444"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 5
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Scottish Family Party regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Scottish Family Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP6380/
+    type: party_website

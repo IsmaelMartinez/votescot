@@ -7,12 +7,16 @@ accent: "#005EA5"
 constituency: bathgate
 isIncumbent: false
 quizCandidate: true
-bio: West Lothian councillor for Livingston South.
+bio: Peter Heggie is a Scottish Conservative councillor for Livingston South on West Lothian Council and serves as the council's Depute Provost. He has stood in Livingston South in 2017, 2022 and is also on the Central Scotland and Lothians West Tory regional list for 2026.
 highlights:
-  - West Lothian councillor for Livingston South
+  - Conservative councillor for Livingston South on West Lothian Council
+  - Depute Provost of West Lothian Council
+  - Also on the Central Scotland and Lothians West regional list
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://www.westlothian.gov.uk/article/34310/Councillor-Peter-Heggie
+    type: council_profile
 positions:
   independence: 0
   nhs: 1

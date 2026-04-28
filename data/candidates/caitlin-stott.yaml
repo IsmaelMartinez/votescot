@@ -7,13 +7,20 @@ accent: "#8B0000"
 constituency: midlothian-north
 isIncumbent: false
 quizCandidate: true
-bio: Labour and Co-operative Party candidate for Midlothian North.
+bio: Senior parliamentary advisor to Mark Griffin MSP, with a professional
+  background in housing policy. She has previously worked as a constituency
+  assistant to Jayne Baxter MSP and as a senior researcher in Scottish Labour's
+  Central Policy Unit, and is a parent raising children in Midlothian.
 highlights:
-  - Labour and Co-operative Party candidate for Midlothian North in the 2026
-    Scottish Parliament election
+  - Senior parliamentary advisor to Mark Griffin MSP (Central Scotland)
+  - Background in housing policy
+  - Previously constituency assistant to Jayne Baxter MSP and Labour senior
+    researcher
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:53-119/
+  - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://www.midlothianview.com/news/this-is-why-im-standing-to-be-your-next-msp
+    type: news_article
 positions:
   independence: 0
   nhs: 2

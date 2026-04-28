@@ -1,0 +1,40 @@
+id: alix-mathieson
+name: Alix Mathieson
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 4
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Alix Mathieson is an East Dunbartonshire councillor who has stood for the Scottish Conservatives at multiple UK and Scottish Parliament elections, most recently in Mid Dunbartonshire at the 2024 UK general election (4th of 7) and in Glasgow Maryhill and Springburn at Holyrood 2021 (3rd of 4). Her local campaign priorities have included transport, school bus provision and green-belt protection.
+highlights:
+  - Conservative and Unionist Party regional list candidate for West Scotland (position 4)
+  - East Dunbartonshire councillor for Milngavie ward
+  - Stood for Conservatives in Mid Dunbartonshire (2024 UK general election, 4th of 7)
+sources:
+  - url: https://www.scottishconservatives.com/
+    type: party_website
+  - url: https://whocanivotefor.co.uk/person/71828/alix-mathieson
+    type: whocanivotefor
+positions:
+  independence: 0
+  nhs: 1
+  housing: 0
+  climate: 0
+  tax: 0
+  economy: 0
+  education: 1
+  equality: 0
+stances:
+  independence: Strong opposition to independence. Stand up for Scotland's place in the Union and stop another independence referendum.
+  nhs: Focus on faster GP appointments and reducing waiting lists by increasing NHS capacity for procedures. Efficiency-led NHS reform rather than new spending commitments.
+  housing: Market-led housing policy. Scrap SNP rent controls, stop costly housebuilding regulations, and abolish tax on buying a primary home (Land and Buildings Transaction Tax reform).
+  climate: Scrap the SNP's 2045 net zero target and drop policies that impose costs on households to meet it. Back the oil and gas industry and scrap carbon pricing schemes.
+  tax: Cut income tax — raise the point at which you start paying in line with inflation, uprate the Higher Rate threshold, and lower income tax to 19p in the £1 for low- and middle-income households.
+  economy: Make economic growth the number one policy objective. Cut regulation, introduce Scottish Business Zones, and oppose tax rises and new taxes.
+  education: Raise school standards. Empower headteachers and reduce bureaucracy to lift Scotland back up international rankings.
+  equality: Socially conservative. Guarantee every woman has access to single-sex wards, affirm biological sex under the Equality Act, and oppose the Non-Binary Equality Action Plan.
+quizCandidate: true

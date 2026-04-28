@@ -1,0 +1,40 @@
+id: anne-thomas
+name: Anne Thomas
+party: Scottish Green Party
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: highlands-and-islands
+regionLabel: Highlands and Islands
+listPosition: 6
+ballotPaperId: sp.r.highlands-and-islands.2026-05-07
+isIncumbent: false
+bio: Anne Thomas is a former children's speech therapist who is now Convenor of Transition Black Isle, a Trustee of Highland People's Power and Treasurer of Highland Cycle Campaign. She has stood as a Scottish Green Party candidate at every Holyrood, Westminster and Highland Council election since 2014, most recently Caithness, Sutherland and Easter Ross at the 2024 UK general election.
+highlights:
+  - Scottish Green Party regional list candidate for Highlands and Islands (position 6)
+  - Former children's speech therapist; Convenor of Transition Black Isle
+  - Long-standing Green candidate; stood in Caithness, Sutherland and Easter Ross at the 2024 UK general election (6th of 7)
+sources:
+  - url: https://greens.scot/
+    type: party_website
+  - url: https://whocanivotefor.co.uk/person/6084/anne-thomas
+    type: whocanivotefor
+positions:
+  independence: 2
+  nhs: 2
+  housing: 2
+  climate: 2
+  tax: 2
+  economy: 2
+  education: 2
+  equality: 2
+stances:
+  independence: Support independence and full powers of a sovereign nation, while pressing ahead with change using devolved powers now.
+  nhs: Introduce a £15 per hour minimum wage for social care, a network of free walk-in mental health support hubs, and invest in the NHS workforce.
+  housing: Permanent rent controls, a higher tax rate on landlords' rental income, and stronger renters' rights to tackle the housing emergency.
+  climate: Get Scotland back on track to deliver net zero by 2045 with a coordinated climate action delivery programme across transport, energy, farming and buildings.
+  tax: Tax wealth rather than work. More progressive income tax, higher taxes on second and empty homes, and new taxes on private jets and mansions.
+  economy: Jobs in a green economy — clean industries, care, childcare and community wealth. Move away from expensive and volatile oil and gas.
+  education: Universal free childcare guarantee from 6 months until children start school, with significant investment in the childcare workforce.
+  equality: Strong LGBT+ rights advocacy. Revisit NHS policy changes made as a result of the Cass Review and publish a gender-affirming care action plan to bring down waiting times.
+quizCandidate: true

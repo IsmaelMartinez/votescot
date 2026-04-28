@@ -1,0 +1,17 @@
+id: sean-moffat
+name: Sean Moffat
+party: Advance UK
+partyShort: Advance UK
+color: "#666666"
+accent: "#444444"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 1
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Advance UK regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Advance UK regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18211/
+    type: party_website

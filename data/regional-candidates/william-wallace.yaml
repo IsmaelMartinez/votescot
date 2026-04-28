@@ -1,0 +1,17 @@
+id: william-wallace
+name: William Wallace
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 999
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Independent regional list candidate for West Scotland.
+highlights:
+  - Independent regional list candidate for West Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

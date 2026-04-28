@@ -7,14 +7,22 @@ accent: "#8B0000"
 constituency: clydebank-and-milngavie
 isIncumbent: false
 quizCandidate: true
-bio: East Dunbartonshire councillor for Lenzie and Kirkintilloch South.
-  Previously stood as Labour candidate for East Dunbartonshire in 2017.
+bio: Long-standing Labour candidate in East Dunbartonshire, having stood for
+  the Westminster seat at the 2017 and 2019 UK general elections and for
+  Strathkelvin and Bearsden at the 2021 Scottish Parliament election. He was
+  also a candidate in Lenzie and Kirkintilloch South at the 2022 East
+  Dunbartonshire council election.
 highlights:
-  - East Dunbartonshire councillor for Lenzie and Kirkintilloch South
-  - Labour candidate for East Dunbartonshire at the 2017 general election
+  - Labour candidate, East Dunbartonshire, 2017 and 2019 UK general elections
+  - Labour candidate, Strathkelvin and Bearsden, 2021 Holyrood (8,510 votes,
+    third place)
+  - Labour and Co-operative candidate, Lenzie and Kirkintilloch South, 2022
+    East Dunbartonshire council election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+  - url: https://scottishlabour.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/34259/callum-mcnally
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

@@ -1,0 +1,17 @@
+id: alexandra-rose-hardie
+name: Alexandra Rose Hardie
+party: Independent Green Voice
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: mid-scotland-and-fife
+regionLabel: Mid Scotland and Fife
+listPosition: 999
+ballotPaperId: sp.r.mid-scotland-and-fife.2026-05-07
+isIncumbent: false
+bio: Independent Green Voice regional list candidate for Mid Scotland and Fife.
+highlights:
+  - Independent Green Voice regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP293/
+    type: party_website

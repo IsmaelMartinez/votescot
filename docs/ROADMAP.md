@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 26 April 2026 (regional parity: postcode lookup, region candidate page, profile region tag)
+Last updated: 27 April 2026 (audit: bio enrichment closed; only watch + post-election items remain)
 
 ## What's live now
 
@@ -8,7 +8,7 @@ The site is at https://ismaelmartinez.github.io/votescot/ and covers all 73 Scot
 
 ### Core features
 
-The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). It runs in two modes — `/quiz` for the constituency ballot and `/quiz/regional` for the regional list ballot — sharing the same questions and matching algorithm; regional mode filters the candidate pool by region (constituencies now carry a `region` field across all 9 of the 2026 boundary-review regions). 370 candidates from 6 major parties have quiz data based on party-level positions. All six parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK, Scottish Labour) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
+The vote compass quiz matches voters to candidates across 8 policy areas (independence, NHS, housing, climate, tax, economy, education, equality). It lives at a single `/quiz` URL: voters answer the 8 questions once and switch between a "Constituency ballot" and "Regional list" tab in the results, both sourced from the same answers. One postcode lookup (or browse pick) resolves both selections via the constituency-to-region map; constituencies carry a `region` field across all 9 of the 2026 boundary-review regions. The legacy `/quiz/regional` URL redirects to `/quiz` and inbound `?region=` links still land on the regional tab. 370 candidates from 6 major parties have quiz data based on party-level positions. All six parties (SNP, Scottish Greens, Scottish Lib Dems, Scottish Conservatives, Reform UK, Scottish Labour) now have positions, stances, and verbatim quotes sourced from their published 2026 Holyrood manifestos. The matching algorithm scores exact matches, partial matches, and disagreements with per-issue breakdown. All pages clearly disclose that positions are party defaults unless individually verified.
 
 Every candidate has a profile page with policy stances, track record highlights (where available), and source links to WhoCanIVoteFor, party websites, and TheyWorkForYou. The side-by-side comparison view lets voters compare all quiz-ready candidates in their constituency grouped by policy area.
 
@@ -63,27 +63,68 @@ Most party manifestos are standard PDFs that `pdftotext -layout` can parse direc
 
 The items below are what's left after the 17–18 April audit and fix sweep. Pick these up in a fresh session. Each is scoped tight enough to handle in a single PR.
 
-### Regional parity follow-up (next steps)
+### Regional list rollout (planned)
 
-The regional questionnaire shipped on 26 April 2026 but only covers the quiz surface. Constituency has six surfaces; regional has one. To bring them to parity:
+The Scottish Parliament uses an Additional Member System with two ballots — constituency and regional list — so any vote compass that omits the regional list covers only 57% of the seats and renders list-only parties (Greens, Alba, Reform routes into Holyrood) invisible. The decision to model regional list candidates as first-class data is captured in [ADR-0001](adr/0001-regional-list-candidates.md). Authoritative region count is 8 under the 2025 Boundaries Scotland review (Wikipedia "List of Scottish Parliament constituencies and electoral regions (2026–)"; Democracy Club's locked `sp.r.2026-05-07` ballots).
 
-- [x] **Postcode → region resolution.** Done. `usePostcodeLookup` now optionally takes a `constituencyToRegion` map and surfaces `regionId` / `regionName`; `PostcodeInput` accepts a `target: "region"` mode and is wired into the `/quiz/regional` selector.
-- [x] **`/candidates/region/[id]` dynamic page.** Done. Mirrors `/candidates/constituency/[id]` for all 9 regions, with side-by-side comparison scoped to constituencies in the region. The regional quiz results screen now links to it.
-- [x] **Show region on candidate profiles.** Done. Each profile now shows "Standing in {constituency} · {region} region" with links to both group pages.
-- [ ] **Region picker on the homepage.** Either colour-overlay the existing ConstituencyMap by region, or add a simple region list/dropdown beneath it. Real region-boundary GeoJSON would be ideal but isn't bundled — the cheap path is colouring the existing constituency polygons.
-- [ ] **Honest regional list candidates (data model change).** In AMS, parties run separate regional lists — different candidates from the constituency ballot. The current regional view filters constituency candidates by region, which is a stepping-stone, not the truth. Proper fix: add `ballot: "constituency" | "regional"` (or a separate `data/regional-candidates/`) and ingest party regional lists from Democracy Club. The candidate sync workflow has been retired (locked ballot), so this needs a one-shot import script. Update the regional quiz banner once done.
+Shipped surfaces feeding into this rollout:
+
+- [x] **Postcode → region resolution.** `usePostcodeLookup` returns `regionId` / `regionName`; `PostcodeInput` accepts `target: "region"`.
+- [x] **`/candidates/region/[id]` dynamic page.** Currently sources constituency candidates filtered by region (the stand-in to be replaced by PR B below).
+- [x] **Region tag on candidate profiles.** Profile shows "Standing in {constituency} · {region} region".
+- [x] **Region picker on the homepage** (PR #41). 8 cards beneath the constituency map after PR A reconciliation.
+- [x] **Regional list candidate ingest** (PR #42). 589 candidacies imported from Democracy Club into `data/regional-candidates/`, validated by `schemas/regional-candidate.schema.json`.
+- [x] **Region naming reconciled to 8 official regions** (PR A). Constituency `region:` field updated across 16 YAMLs to match the 2025 Boundaries Scotland review and Democracy Club's ballot structure; `loadRegions()` now returns 8 entries with id slugs that match the regional list ballot keys. Astro redirects send legacy `/central-scotland` and `/edinburgh-and-lothians-west` URLs to the merged region.
+- [x] **Regional surfaces sourced from list candidates** (PR B). `loadRegionalCandidates()` / `loadRegionalCandidatesByRegion()` added; `loadCandidatesByRegion` refactored to a regionId API. `/candidates/region/[id]` now renders regional list candidates grouped by party and ordered by `listPosition`. Disclaimer banner dropped. Sibling `/candidates/regional/[id]` profile route added (collisions with `/candidates/[id]` made the aggregating approach unviable — 339 shared slugs). `apply-party-positions.ts` extended to fan out to `data/regional-candidates/`; 393 of 589 regional candidates now carry party positions.
+- [x] **Quiz results grouped by party** (PR C). `/quiz/regional` now sources from `loadRegionalCandidates()` and `QuizEngine` regional mode renders one match score per party with the party's regional list candidates listed beneath in `listPosition` order, each linking to `/candidates/regional/{id}`. Per-issue breakdown shown once per party; same-party-identical-score disclaimer dropped from regional mode (the new layout makes the same point structurally). Constituency mode untouched.
+- [x] **Constituency quiz results grouped by party** (PR E). `/quiz` constituency mode now mirrors the regional refactor: one match score per party, candidates listed alphabetically beneath each party block linked to `/candidates/{id}`, per-issue breakdown shown once per party. Same-party-identical-score disclaimers dropped from constituency mode (the layout makes the point structurally).
+- [x] **Constituency↔region map view toggle** (PR D). `ConstituencyMap.tsx` exposes a two-button view selector; region view recolours the 73 polygons by their parent region (8-colour Set2-derived palette, hand-assigned per region id) with reduced internal stroke to imply the dissolve, and routes clicks to `/candidates/region/{id}`. Default remains constituency view; no new GeoJSON, no extra dependencies.
+
+The plan below is sequenced so each PR is independently shippable and reviewable. Targeted at landing all four before 7 May 2026.
+
+#### PR A — Reconcile region naming (foundation) — shipped
+
+Done in this PR. Cross-checking VoteScot's existing constituency `region:` tags against the official Wikipedia / Boundaries Scotland mapping surfaced more drift than the original "merge two regions" assumption: 5 constituencies were also miscategorised independently of the merge (Rutherglen and Cambuslang belonged in Glasgow not Central Scotland; East Kilbride and Hamilton/Larkhall/Stonehouse belonged in South Scotland; Edinburgh South Western and Edinburgh Southern belonged in Edinburgh and Lothians East not Lothians West; Midlothian South/Tweeddale/Lauderdale belonged in South Scotland; Moray belonged in Highlands and Islands not North East Scotland). All 16 relocations applied and the per-region totals now match the official 9/9/8/8/9/10/10/10 = 73 distribution. Astro redirects send the two legacy slugs (`central-scotland`, `edinburgh-and-lothians-west`) to the merged `central-scotland-and-lothians-west` region.
+
+#### PR B — Regional surfaces source from regional list candidates — shipped
+
+Done in this PR. Loader API refactor, `/candidates/region/[id]` rewritten with party-grouped lists ordered by `listPosition`, `/candidates/regional/[id]` profile route added (sibling rather than aggregated — 339 candidate slugs collide between the constituency and regional trees, mostly because the same person stands on both ballots, so a single route was unworkable). Party positions fanned out to 393 of 589 regional candidates via the extended `apply-party-positions.ts`. ~~The `fix-incumbents.ts` extension to flag sitting regional MSPs is split into a small follow-up PR.~~ Done. `scripts/fix-incumbents-regional.ts` cross-references regional candidates against the union of session-6 constituency-status and region-status records (a sitting MSP is "incumbent" on any party list regardless of which seat they hold), flagging 69 sitting MSPs across 589 regional candidate files.
+
+#### PR C — Quiz results grouped by party, not individual — shipped
+
+Done in this PR. `QuizEngine` now branches on mode for both data and rendering: regional mode takes `RegionalCandidate[]` from `loadRegionalCandidates()`, groups them by party, computes one match score per party (positions are party-level), and renders party blocks ordered by score with each block listing that party's regional list candidates in `listPosition` order linked to `/candidates/regional/{id}`. The per-issue breakdown shows once per party. Parties with no captured positions render at the bottom with "No quiz positions" instead of a misleading 0%. Constituency mode left untouched; the analogous refactor for `/quiz` shipped as PR E below.
+
+#### PR E — Quiz constituency results grouped by party — shipped
+
+Done in this PR. `QuizEngine` constituency mode now uses the same party-block layout as regional mode: candidates filtered by `selected` constituency are grouped by party, one match score is computed per party from a representative candidate's positions, and party blocks are rendered ordered by score with each block listing the party's constituency candidates alphabetically by name linked to `/candidates/{id}`. The per-issue breakdown shows once per party; the same-party-identical-score disclaimers (both the results-page banner and the question-answering banner) were dropped from constituency mode since the new layout makes the same point structurally. The previous per-candidate "ranked individuals" view, including bios and individual percentage scores, is gone — the structurally flat list of names with optional incumbent badges matches the regional layout.
+
+#### PR D — Map view toggle (constituency ↔ region) — shipped
+
+Done in this PR. `ConstituencyMap.tsx` gained a two-button segmented control ("Constituency" / "Region", default constituency so the existing flow is unchanged for users who never toggle). In region view the 73 polygons are recoloured by their parent region using a fixed 8-colour palette (Set2-derived, hand-assigned per region id to keep adjacent regions visually distinct), per-polygon stroke is reduced to 0.5 to imply the dissolve, the legend swaps to list region names with their colour swatch, and clicks navigate to `/candidates/region/{id}` with a region-name-only tooltip. No dissolves done in JS — recolouring is sufficient and avoids pulling in Turf. Wiring on `index.astro` threads a `constituencyId → regionId` map and the 8 regions into the component using the existing `loadRegions()` / `slugifyConstituency` plumbing from PR A. The projection toggle is hidden in region view to keep the two visual encodings from competing.
+
+#### Deferred — per-region polling
+
+The polls page already shows national-regional vote intent via the constituency/regional toggle. Per-region polling trends would need a different data source — the Wikipedia tracker has only thin per-region breakdowns. Revisit after the four PRs above land if there is time before 7 May; otherwise post-election.
+
+#### Carried follow-ups
+
+None outstanding. The constituency-mode quiz refactor flagged here previously shipped as PR E above.
 
 ### Must-fix if time allows before 7 May
 
-- [ ] **Schema-validate party and manifesto YAMLs.** `scripts/validate-data.ts` currently only validates candidates, constituencies, and questions. A typo like `nhs: 3` in a party file would silently propagate to every candidate of that party. Add `schemas/party.schema.json` and `schemas/manifesto-registry.schema.json` and wire them into `validate-data.ts` alongside the existing loops. Range-check position values 0–2.
-- [ ] **Stub-bio enrichment pass.** Many candidates have `bio` fields that are just "Party X candidate for Y" — stubs carried over from the retired Democracy Club sync. Grep for bios under ~80 characters; prioritise candidates with `quizCandidate: true` since they surface on the quiz results page. Pull real bios from party websites, WhoCanIVoteFor, or Wikipedia; the existing bio-fact-check agent pattern works well for this (see the 17 April audit run).
-- [ ] **Replace Democracy Club API URLs in candidate `sources`.** Every candidate file cites `candidates.democracyclub.org.uk/api/next/parties/PP*` — that's a party registration API, not a biographical source for the individual. Credibility risk if a claim is challenged. Swap in at least one per-candidate bio source (Wikipedia, TheyWorkForYou, Scottish Parliament member page, or official party bio). Can be done opportunistically alongside the stub-bio enrichment.
+- [x] **Stub-bio enrichment pass.** Three-stage pass closed the must-fix:
+  1. `scripts/cross-copy-bios.ts` lifted substantive constituency bios onto 193 same-name regional list entries.
+  2. PR #55 wrote bios for the 15 list-only sitting MSPs (Harvie, Greer, Chapman, Ruskell, Burgess, MacKay, plus Lennon, Bibby, Sweeney, O'Kane, McNeill, Findlay, Baker, Regan, Balfour) sourced from Parliament.scot member pages.
+  3. PRs #56–#60 ran a research pass on the remaining 317 quiz-surfacing stubs via WhoCanIVoteFor candidate pages, party-specific candidate sites, news, council websites, and Wikipedia. Outcome: 200 confident bios with citation, 116 honest "we have not identified independent biographical sources for this candidate beyond the party listing" templates (the right answer for paper candidates whose only public footprint is a listing-page entry), and 1 already-substantive bio left untouched. Five pre-existing bios were corrected as a side-effect (Herdman councillor mis-claim caught by the pilot, plus Brodie, Stalker, Heggie, Ghani in batch 2).
+- [x] **Replace Democracy Club API URLs in candidate `sources`.** 704 major-six candidate files now cite the official party website (PR #53). The 262 long-tail candidates also got per-candidate sources where available via the bio research pass — Parliament.scot, WhoCanIVoteFor, council profiles, party candidate pages, news articles. Where no per-candidate source could be identified, the existing party_website source remains alongside the honest stub.
 
 ### Nice-to-have before 7 May
 
-- [ ] **Additional news sources.** News block currently sources BBC Scotland Politics only. `scripts/sync-news.ts` `SOURCES` array supports any RSS 2.0 feed — candidates worth adding: Ballot Box Scotland (https://ballotbox.scot/feed/), Guardian Scotland politics. Weigh trust vs breadth.
-- [ ] **Matching engine edge-case tests.** `tests/matching.test.ts` does not cover: voter answer for a `questionId` not present in candidate `positions` (silent 0% path at `src/lib/matching.ts:25`); all-answers/all-positions at value 0 (only the value-2 case is tested); tie-order stability between same-party candidates. Added tests would prevent regressions in the 20 days before and during election coverage.
-- [ ] **Pollster name unification.** `data/polls.json` shows "Ipsos MORI" and "Savanta ComRes" as separate pollsters from "Ipsos" and "Savanta"; both are predecessor brand names. Either normalise at scrape time in `scripts/sync-polls.ts` or map at render time in the polls chart.
+- [x] **Additional news sources.** Added Ballot Box Scotland (https://ballotbox.scot/feed/) and Guardian Scotland politics (https://www.theguardian.com/politics/scotland/rss) to `scripts/sync-news.ts` `SOURCES` alongside BBC Scotland Politics.
+
+### Watch — between now and 7 May
+
+- [ ] **Re-parse manifestos if any party publishes amendments.** All six parties have manifestos parsed and applied. Run `/sync-manifestos` once before polling day to catch any late edits — Scottish Labour's 13 April launch was reparsed on 18 April after a redirect masked it initially, but the same vigilance applies to all parties in the final week.
 
 ### Post-election cleanup (after 7 May)
 
@@ -91,9 +132,10 @@ The regional questionnaire shipped on 26 April 2026 but only covers the quiz sur
 - [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning.
 - [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
 - [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
-- [ ] **Re-parse Scottish Labour positions after manifesto revisions.** The 18 April parse reflects the 13 April manifesto launch version. If Labour publishes amendments before polling day, `/sync-manifestos` will pick them up — but watch for stance drift around tax and equality where the language is under active scrutiny.
 
 ## What shipped before 7 May (archived task list)
+
+~~Consolidate the constituency and regional quizzes into one tabbed view.~~ Done. `/quiz` now asks the 8 questions once and renders both ballots in a tabbed result view ("Constituency ballot" / "Regional list"). One postcode lookup (or browse pick) resolves both `selectedConstituencyId` and `selectedRegionId` via the constituency-to-region map. `/quiz/regional` was retired and redirects to `/quiz`, with inbound `?region=` links pre-selecting the regional tab. The duplicate "Regional" header tab was dropped; navigation is now Map / Candidates / Quiz / Guide. `QuizEngine` was refactored from a discriminated-mode component into one component holding both result views, with the party-block computation extracted into a shared `buildPartyBlocks()` helper.
 
 ### Critical — data accuracy
 
@@ -188,20 +230,16 @@ The regional questionnaire shipped on 26 April 2026 but only covers the quiz sur
     ┌─────────────────────────────────────────────────┐
     │      NEXT UP (see "Next up" section above)      │
     │                                                 │
-    │  Must-fix if time allows:                       │
-    │  • Schema-validate party + manifesto YAMLs      │
-    │  • Enrich ~70 quiz-candidate stub bios          │
-    │  • Replace Democracy Club API source URLs       │
+    │  Must-fix and nice-to-have: all closed.         │
     │                                                 │
-    │  Nice-to-have:                                  │
-    │  • Add Ballot Box Scotland / Guardian news RSS  │
-    │  • Matching engine edge-case tests              │
-    │  • Pollster name unification                    │
+    │  Watch:                                         │
+    │  • Re-run /sync-manifestos if any party amends  │
     │                                                 │
     │  Post-election:                                 │
     │  • "How we did" projection retrospective        │
     │  • Retire dead populate-projections default     │
     │  • yaml.stringify lineWidth in fan-out script   │
+    │  • Deep-freeze data caches (or decide not to)   │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐

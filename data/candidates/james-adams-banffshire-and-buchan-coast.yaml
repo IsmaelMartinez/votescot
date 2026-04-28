@@ -7,11 +7,11 @@ accent: "#005EA5"
 constituency: banffshire-and-buchan-coast
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Banffshire and Buchan Coast.
+bio: Standing for the Scottish Conservatives in Banffshire and Buchan Coast. We have not identified independent biographical sources for this candidate beyond the party listing.
 highlights:
-  - Conservative and Unionist Party candidate for Banffshire and Buchan Coast in the 2026 Scottish Parliament election
+  - Standing for the Scottish Conservatives in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
 positions:
   independence: 0

@@ -7,13 +7,16 @@ accent: "#0a7f91"
 constituency: midlothian-north
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Midlothian North.
+bio: Pal Chidambaram is an investment and financial management professional who has previously worked as an economic policy advisor at the Bank of England. He is also on the Reform UK Edinburgh and Lothians East regional list.
 highlights:
-  - Reform UK candidate for Midlothian North in the 2026 Scottish Parliament
-    election
+  - Reform UK candidate for Midlothian North and on the Edinburgh and Lothians East regional list
+  - Background in investment and financial management
+  - Former economic policy advisor at the Bank of England
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124612/pal-chidambaram
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

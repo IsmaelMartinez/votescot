@@ -1,0 +1,17 @@
+id: peter-ashby
+name: Peter Ashby
+party: Workers Party of Britain
+partyShort: Workers
+color: "#c41230"
+accent: "#8b0d22"
+region: north-east-scotland
+regionLabel: North East Scotland
+listPosition: 1
+ballotPaperId: sp.r.north-east-scotland.2026-05-07
+isIncumbent: false
+bio: Workers Party of Britain regional list candidate for North East Scotland.
+highlights:
+  - Workers Party of Britain regional list candidate for North East Scotland in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
+    type: party_website

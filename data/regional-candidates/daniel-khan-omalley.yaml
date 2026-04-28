@@ -1,0 +1,37 @@
+id: daniel-khan-omalley
+name: Daniel Khan-O'Malley
+party: Liberal Democrats
+partyShort: Lib Dem
+color: "#FAA61A"
+accent: "#B8860B"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 1
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Human rights activist and health advocate. Secured £8.8m funding for diabetes treatment at Diabetes Scotland. Former community councillor for Merchant City.
+highlights:
+  - Secured £8.8m funding for national diabetes treatment
+  - Former community councillor for Merchant City and Trongate
+sources:
+  - url: https://www.scotlibdems.org.uk/
+    type: party_website
+positions:
+  independence: 0
+  nhs: 2
+  housing: 1
+  climate: 1
+  tax: 1
+  economy: 1
+  education: 1
+  equality: 2
+stances:
+  independence: Oppose independence. Back a written constitution for a federal United Kingdom and a new bespoke UK-EU customs union.
+  nhs: A 10-year NHS and care workforce plan, new neighbourhood health teams giving every GP practice the equivalent of an extra clinical staff member, walk-in mental health services and a Fair Deal for Rural Healthcare.
+  housing: Return housebuilding to 25,000 new homes annually, create key worker housing, and replace the SNP's housing strategy with a new holistic data-driven approach.
+  climate: Support net zero by 2045 with a programme for net zero new towns featuring rail links, district heating and 20-minute neighbourhoods.
+  tax: Where funds allow, lift tax thresholds in line with inflation and begin to close the tax differential with England in a balanced way that protects public services.
+  economy: Reform business rates to stop sudden tax hikes on successful employers and help people upskill through new Job Transition Loans worth up to £5,000.
+  education: Hire 2,000 more pupil support assistants, roll out speech and language therapy and make every school a smartphone-free environment.
+  equality: Strong defence of LGBT+ and trans rights. Ban all forms of conversion therapies and practices, working in partnership with the UK Government.
+quizCandidate: true

@@ -7,12 +7,16 @@ accent: "#0a7f91"
 constituency: stirling
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Stirling.
+bio: Rachael Wright is an Operations Director in manufacturing with experience in the rural sector. She is also Reform UK's third-placed candidate on the Mid Scotland and Fife regional list. Her campaign focuses on protecting women and girls, community safety, local services and economic opportunity in the Stirling area.
 highlights:
-  - Reform UK candidate for Stirling in the 2026 Scottish Parliament election
+  - Reform UK candidate for Stirling and on the Mid Scotland and Fife regional list (position 3)
+  - Operations Director in manufacturing with rural-sector experience
+  - Campaigns on community safety, local services and women's safety
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124615/rachael-wright
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

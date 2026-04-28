@@ -1,0 +1,17 @@
+id: abu-meron
+name: Abu Meron
+party: Workers Party of Britain
+partyShort: Workers
+color: "#c41230"
+accent: "#8b0d22"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 2
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Workers Party of Britain regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Workers Party of Britain regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
+    type: party_website

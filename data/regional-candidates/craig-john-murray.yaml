@@ -1,0 +1,18 @@
+id: craig-john-murray
+name: Craig John Murray
+party: Alliance to Liberate Scotland
+partyShort: Alliance to Liberate Scotland
+color: "#666666"
+accent: "#444444"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 1
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Former British Ambassador to Uzbekistan (2002-2004). Exposed human rights violations under the Karimov regime. Author and human rights campaigner.
+highlights:
+  - Former British Ambassador to Uzbekistan (2002-2004)
+  - Exposed human rights violations; author and human rights campaigner
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
+    type: party_website

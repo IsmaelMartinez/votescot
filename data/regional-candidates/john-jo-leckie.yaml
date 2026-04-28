@@ -1,0 +1,17 @@
+id: john-jo-leckie
+name: John Jo Leckie
+party: Abolish the Scottish Parliament Party
+partyShort: Abolish the Scottish Parliament Party
+color: "#666666"
+accent: "#444444"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 1
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Abolish the Scottish Parliament Party regional list candidate for Central Scotland and Lothians West.
+highlights:
+  - Abolish the Scottish Parliament Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP6673/
+    type: party_website

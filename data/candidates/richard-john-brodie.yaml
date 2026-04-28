@@ -7,12 +7,16 @@ accent: "#B8860B"
 constituency: clydesdale
 isIncumbent: false
 quizCandidate: true
-bio: Dumfries and Galloway councillor for Annandale South.
+bio: Richard John Brodie is a Liberal Democrat councillor for Annandale South on Dumfries and Galloway Council, elected in 2017 and re-elected in 2022. He has stood in Dumfriesshire at the 2016 and 2021 Holyrood elections and is also on the Lib Dem South Scotland regional list for 2026.
 highlights:
-  - Dumfries and Galloway councillor for Annandale South
+  - Liberal Democrat councillor for Annandale South ward, Dumfries and Galloway Council (elected 2017, re-elected 2022)
+  - Stood for Lib Dems in Dumfriesshire at Holyrood 2016 and 2021
+  - Liberal Democrats constituency candidate for Clydesdale and on the South Scotland regional list
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/2243/richard-john-brodie
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 2

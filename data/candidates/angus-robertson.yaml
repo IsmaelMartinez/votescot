@@ -17,7 +17,7 @@ highlights:
   - Former SNP Westminster leader (2007-2017)
   - No candidate has ever won >40% in this constituency
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP102/
+  - url: https://www.snp.org/
     type: party_website
 positions:
   independence: 2

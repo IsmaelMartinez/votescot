@@ -7,12 +7,13 @@ accent: "#8B0000"
 constituency: mid-fife-and-glenrothes
 isIncumbent: false
 quizCandidate: true
-bio: Labour Party candidate for Mid Fife and Glenrothes.
+bio: Standing for the Labour Party in Mid Fife and Glenrothes. We have not
+  identified independent biographical sources for this candidate beyond the
+  party listing.
 highlights:
-  - Labour Party candidate for Mid Fife and Glenrothes in the 2026 Scottish
-    Parliament election
+  - Standing for the Labour Party in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP53/
+  - url: https://scottishlabour.org.uk/
     type: party_website
 positions:
   independence: 0

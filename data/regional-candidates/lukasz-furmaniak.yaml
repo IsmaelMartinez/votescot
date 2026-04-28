@@ -1,0 +1,18 @@
+id: lukasz-furmaniak
+name: Lukasz Furmaniak
+party: Scottish Libertarian Party
+partyShort: Libertarian
+color: "#f5d442"
+accent: "#b89e30"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 999
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Scottish Libertarian Party regional list candidate for Central Scotland and Lothians West.
+highlights:
+  - Scottish Libertarian Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP15208/
+    type: party_website
+textColor: "#333"

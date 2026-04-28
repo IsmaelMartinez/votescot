@@ -1,0 +1,17 @@
+id: morgwn-davies
+name: Morgwn Davies
+party: Independent
+partyShort: Ind
+color: "#888888"
+accent: "#555555"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 999
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Former community councillor and ex-Alba candidate. Campaigns against council parking charges in East Lothian.
+highlights:
+  - Former community councillor; campaigns against parking charges
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
+    type: party_website

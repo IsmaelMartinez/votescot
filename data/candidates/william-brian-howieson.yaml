@@ -7,12 +7,11 @@ accent: "#B8860B"
 constituency: cumbernauld-and-kilsyth
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Cumbernauld and Kilsyth.
+bio: Standing for Liberal Democrats in Cumbernauld and Kilsyth. We have not identified independent biographical sources for this candidate beyond the party listing.
 highlights:
-  - Liberal Democrats candidate for Cumbernauld and Kilsyth in the 2026 Scottish
-    Parliament election
+  - Standing for Liberal Democrats in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
 positions:
   independence: 0

@@ -142,27 +142,88 @@ export function loadRegions(): Region[] {
 let candidatesByRegionCache: ReadonlyMap<string, readonly Candidate[]> | null = null;
 
 function buildCandidatesByRegion(): ReadonlyMap<string, readonly Candidate[]> {
-  const constituencyToRegion = new Map<string, string>();
+  const constituencyToRegionId = new Map<string, string>();
   for (const c of loadConstituencies()) {
-    if (c.region) constituencyToRegion.set(c.id, c.region);
+    if (c.region?.trim()) constituencyToRegionId.set(c.id, slugifyConstituency(c.region.trim()));
   }
   const grouped = new Map<string, Candidate[]>();
   for (const cand of loadCandidates()) {
-    const region = constituencyToRegion.get(cand.constituency);
-    if (!region) continue;
-    let bucket = grouped.get(region);
+    const regionId = constituencyToRegionId.get(cand.constituency);
+    if (!regionId) continue;
+    let bucket = grouped.get(regionId);
     if (!bucket) {
       bucket = [];
-      grouped.set(region, bucket);
+      grouped.set(regionId, bucket);
     }
     bucket.push(cand);
   }
   return new Map(Array.from(grouped, ([k, v]) => [k, Object.freeze(v) as readonly Candidate[]]));
 }
 
-export function loadCandidatesByRegion(regionName: string): Candidate[] {
+export function loadCandidatesByRegion(regionId: string): Candidate[] {
   if (!candidatesByRegionCache) candidatesByRegionCache = buildCandidatesByRegion();
-  return [...(candidatesByRegionCache.get(regionName) ?? [])];
+  return [...(candidatesByRegionCache.get(regionId) ?? [])];
+}
+
+export interface RegionalCandidate {
+  id: string;
+  name: string;
+  party: string;
+  partyShort: string;
+  color: string;
+  accent: string;
+  textColor?: string;
+  region: string;
+  regionLabel: string;
+  listPosition: number;
+  ballotPaperId?: string;
+  isIncumbent: boolean;
+  quizCandidate?: boolean;
+  bio: string;
+  positions?: CandidatePosition;
+  stances?: Record<string, string>;
+  highlights: string[];
+  sources: CandidateSource[];
+}
+
+let regionalCandidatesCache: readonly RegionalCandidate[] | null = null;
+
+export function loadRegionalCandidates(): RegionalCandidate[] {
+  if (!regionalCandidatesCache) {
+    const dir = path.resolve(process.cwd(), "data/regional-candidates");
+    if (!fs.existsSync(dir)) {
+      regionalCandidatesCache = Object.freeze([]);
+    } else {
+      const files = fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"));
+      regionalCandidatesCache = Object.freeze(
+        files.map((f) => loadYaml<RegionalCandidate>(path.join("data/regional-candidates", f)))
+      );
+    }
+  }
+  return [...regionalCandidatesCache];
+}
+
+let regionalCandidatesByRegionCache: ReadonlyMap<string, readonly RegionalCandidate[]> | null = null;
+
+function buildRegionalCandidatesByRegion(): ReadonlyMap<string, readonly RegionalCandidate[]> {
+  const grouped = new Map<string, RegionalCandidate[]>();
+  for (const cand of loadRegionalCandidates()) {
+    let bucket = grouped.get(cand.region);
+    if (!bucket) {
+      bucket = [];
+      grouped.set(cand.region, bucket);
+    }
+    bucket.push(cand);
+  }
+  for (const bucket of grouped.values()) {
+    bucket.sort((a, b) => a.listPosition - b.listPosition);
+  }
+  return new Map(Array.from(grouped, ([k, v]) => [k, Object.freeze(v) as readonly RegionalCandidate[]]));
+}
+
+export function loadRegionalCandidatesByRegion(regionId: string): RegionalCandidate[] {
+  if (!regionalCandidatesByRegionCache) regionalCandidatesByRegionCache = buildRegionalCandidatesByRegion();
+  return [...(regionalCandidatesByRegionCache.get(regionId) ?? [])];
 }
 
 let questionsCache: readonly QuizQuestion[] | null = null;

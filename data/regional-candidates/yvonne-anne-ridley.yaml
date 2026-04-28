@@ -1,0 +1,18 @@
+id: yvonne-anne-ridley
+name: Yvonne Anne Ridley
+party: Workers Party of Britain
+partyShort: Workers
+color: "#c41230"
+accent: "#8b0d22"
+region: glasgow
+regionLabel: Glasgow
+listPosition: 1
+ballotPaperId: sp.r.glasgow.2026-05-07
+isIncumbent: false
+bio: Journalist captured by the Taliban in 2001. Worked for Sunday Times, Daily Mirror, Observer. Converted to Islam in 2003. Standing for the Workers Party of Britain.
+highlights:
+  - Veteran journalist captured by the Taliban in 2001; global headlines
+  - Worked for Sunday Times, Daily Mirror, Observer, and News of the World
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11382/
+    type: party_website

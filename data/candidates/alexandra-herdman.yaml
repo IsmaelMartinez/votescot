@@ -7,14 +7,21 @@ accent: "#005EA5"
 constituency: hamilton-larkhall-and-stonehouse
 isIncumbent: false
 quizCandidate: true
-bio: Conservative councillor on South Lanarkshire Council for East Kilbride
-  South. Stood as Conservative candidate for Airdrie and Shotts at the 2024
-  general election.
+bio: Senior Policy Manager at Logistics UK with over eight years of experience
+  in policy and public affairs across the Scottish and UK parliaments. Holds an
+  MSc in Global Challenges from the University of Edinburgh and a BA in British
+  Politics and Legislative Studies from the University of Hull. She specialises
+  in net zero and modal shift policy in transport and logistics.
 highlights:
-  - South Lanarkshire councillor for East Kilbride South
+  - Senior Policy Manager at Logistics UK
+  - MSc Global Challenges (Edinburgh); BA British Politics and Legislative
+    Studies (Hull)
+  - Policy specialism in net zero and modal shift in transport and logistics
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://events.greenfleet.net/gf-scotland/speaker/alexandra-herdman
+    type: campaign_site
 positions:
   independence: 0
   nhs: 1

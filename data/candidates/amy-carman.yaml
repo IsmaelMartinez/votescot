@@ -7,13 +7,20 @@ accent: "#B8860B"
 constituency: glasgow-baillieston-and-shettleston
 isIncumbent: false
 quizCandidate: true
-bio: Liberal Democrats candidate for Glasgow Baillieston and Shettleston.
+bio: Glasgow Liberal Democrat candidate who describes herself as a "lifelong
+  Liberal" and a local campaigner. Her campaign focuses on rising household
+  bills, GP wait times and educational standards. She also stands at position 6
+  on the Lib Dem Glasgow regional list.
 highlights:
-  - Liberal Democrats candidate for Glasgow Baillieston and Shettleston in the
-    2026 Scottish Parliament election
+  - Glasgow Liberal Democrats local campaigner
+  - Constituency candidate for Glasgow Baillieston and Shettleston; also on the
+    Glasgow regional list
+  - Campaign priorities — household bills, GP wait times, educational standards
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
+  - url: https://www.glasgowlibdems.org.uk/glasgow-baillieston-and-shettleston
+    type: campaign_site
 positions:
   independence: 0
   nhs: 2

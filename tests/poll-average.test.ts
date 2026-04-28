@@ -1,10 +1,11 @@
 import { describe, it, expect } from "vitest";
 import {
   rollingAverage,
+  rangeOverWindow,
   swingFrom,
   BASELINE_2021_CONSTITUENCY,
   type PollEntry,
-} from "../scripts/lib/poll-average.ts";
+} from "../src/lib/poll-average";
 
 function makePoll(overrides: Partial<PollEntry>): PollEntry {
   return {
@@ -61,6 +62,48 @@ describe("rollingAverage", () => {
     );
     const { pollsUsed } = rollingAverage(polls, 3);
     expect(pollsUsed).toHaveLength(3);
+  });
+});
+
+describe("rangeOverWindow", () => {
+  it("returns min and max across the window per party", () => {
+    const polls = [
+      makePoll({ date: "2026-04-01", snp: 40 }),
+      makePoll({ date: "2026-03-15", snp: 32 }),
+      makePoll({ date: "2026-03-01", snp: 36 }),
+    ];
+    const { ranges } = rangeOverWindow(polls, 3);
+    expect(ranges.snp).toEqual({ min: 32, max: 40 });
+  });
+
+  it("equates min and max when only one poll has a value for that party", () => {
+    const polls = [
+      makePoll({ date: "2026-04-01", snp: 40, alba: null }),
+      makePoll({ date: "2026-03-15", snp: 35, alba: 5 }),
+    ];
+    const { ranges } = rangeOverWindow(polls, 5);
+    expect(ranges.alba).toEqual({ min: 5, max: 5 });
+  });
+
+  it("returns 0,0 when every poll in the window is null for a party", () => {
+    const polls = [
+      makePoll({ date: "2026-04-01", snp: 40, alba: null }),
+      makePoll({ date: "2026-03-15", snp: 35, alba: null }),
+    ];
+    const { ranges } = rangeOverWindow(polls, 5);
+    expect(ranges.alba).toEqual({ min: 0, max: 0 });
+  });
+
+  it("uses the most recent windowSize polls (sorted by mid-date)", () => {
+    const polls = [
+      makePoll({ date: "2026-04-01", endDate: "2026-04-05", snp: 40 }),
+      makePoll({ date: "2026-03-01", endDate: "2026-03-05", snp: 32 }),
+      makePoll({ date: "2026-02-01", endDate: "2026-02-05", snp: 50 }),
+    ];
+    const { ranges, pollsUsed } = rangeOverWindow(polls, 2);
+    expect(pollsUsed).toHaveLength(2);
+    // Oldest 50% should be excluded; range comes from the two most recent.
+    expect(ranges.snp).toEqual({ min: 32, max: 40 });
   });
 });
 

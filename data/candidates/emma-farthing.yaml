@@ -12,7 +12,7 @@ bio: Experienced Lib Dem candidate. Has contested multiple Scottish elections
 highlights:
   - Veteran Lib Dem candidate since 2011 across multiple constituencies
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP90/
+  - url: https://www.scotlibdems.org.uk/
     type: party_website
 positions:
   independence: 0

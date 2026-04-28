@@ -7,13 +7,16 @@ accent: "#005EA5"
 constituency: paisley
 isIncumbent: false
 quizCandidate: true
-bio: Conservative and Unionist Party candidate for Paisley.
+bio: Satbir Gill stood for the Conservatives in the 2024 UK general election in Cumbernauld and Kirkintilloch, polling 1,939 votes (4th of 6), and contested a 2025 East Dunbartonshire council by-election in Kirkintilloch East and North and Twechar.
 highlights:
-  - Conservative and Unionist Party candidate for Paisley in the 2026 Scottish
-    Parliament election
+  - Conservative and Unionist Party candidate for Paisley
+  - Stood for Conservatives in Cumbernauld and Kirkintilloch at the 2024 UK general election (4th of 6)
+  - Contested the 2025 Kirkintilloch East and North and Twechar council by-election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/117122/satbir-gill
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

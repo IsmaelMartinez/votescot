@@ -7,13 +7,20 @@ accent: "#0a7f91"
 constituency: kilmarnock-and-irvine-valley
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Kilmarnock and Irvine Valley.
+bio: Born and educated in Kilmarnock, she graduated with honours from the
+  University of Glasgow, qualified as a solicitor and spent over twenty years
+  as a principal in private practice. She joined Reform UK in December 2024
+  after retiring, and has volunteered teaching English as a foreign language
+  internationally and on her local community council.
 highlights:
-  - Reform UK candidate for Kilmarnock and Irvine Valley in the 2026 Scottish
-    Parliament election
+  - Retired solicitor; over 20 years as a principal in private practice
+  - Honours graduate of the University of Glasgow
+  - Joined Reform UK in December 2024
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://reformuk.scot/scottish-constituencies/kilmarnock-and-irvine-valley/
+    type: party_candidate_page
 positions:
   independence: 0
   nhs: 1

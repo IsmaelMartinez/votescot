@@ -7,13 +7,19 @@ accent: "#0a7f91"
 constituency: edinburgh-northern
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Edinburgh Northern.
+bio: Born and raised in Ontario, Canada, he studied Film Production and
+  Screenwriting at York University in Toronto and has lived in Edinburgh for
+  seven years. He works as a Pupil Support Assistant at a local primary school
+  and is an elected Unison shop steward.
 highlights:
-  - Reform UK candidate for Edinburgh Northern in the 2026 Scottish Parliament
-    election
+  - Pupil Support Assistant at an Edinburgh primary school
+  - Elected shop steward for Unison
+  - Studied Film Production and Screenwriting at York University, Toronto
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/124599/andrew-mclaughlin
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1

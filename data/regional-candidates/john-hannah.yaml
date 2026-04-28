@@ -1,0 +1,17 @@
+id: john-hannah
+name: John Hannah
+party: Independence for Scotland Party
+partyShort: Independence for Scotland Party
+color: "#666666"
+accent: "#444444"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 1
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Independence for Scotland Party regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Independence for Scotland Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP11433/
+    type: party_website

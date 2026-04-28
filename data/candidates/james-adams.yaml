@@ -7,11 +7,11 @@ accent: "#005EA5"
 constituency: kilmarnock-and-irvine-valley
 isIncumbent: false
 quizCandidate: true
-bio: Kilmarnock Conservative councillor.
+bio: Standing for the Scottish Conservatives in Kilmarnock and Irvine Valley. We have not identified independent biographical sources for this candidate beyond the party listing.
 highlights:
-  - Kilmarnock councillor
+  - Standing for the Scottish Conservatives in the 2026 Scottish Parliament election.
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP52/
+  - url: https://www.scottishconservatives.com/
     type: party_website
 positions:
   independence: 0
@@ -23,24 +23,11 @@ positions:
   education: 1
   equality: 0
 stances:
-  independence: Strong opposition to independence. Stand up for Scotland's place
-    in the Union and stop another independence referendum.
-  nhs: Focus on faster GP appointments and reducing waiting lists by increasing
-    NHS capacity for procedures. Efficiency-led NHS reform rather than new
-    spending commitments.
-  housing: Market-led housing policy. Scrap SNP rent controls, stop costly
-    housebuilding regulations, and abolish tax on buying a primary home (Land
-    and Buildings Transaction Tax reform).
-  climate: Scrap the SNP's 2045 net zero target and drop policies that impose
-    costs on households to meet it. Back the oil and gas industry and scrap
-    carbon pricing schemes.
-  tax: Cut income tax — raise the point at which you start paying in line with
-    inflation, uprate the Higher Rate threshold, and lower income tax to 19p in
-    the £1 for low- and middle-income households.
-  economy: Make economic growth the number one policy objective. Cut regulation,
-    introduce Scottish Business Zones, and oppose tax rises and new taxes.
-  education: Raise school standards. Empower headteachers and reduce bureaucracy
-    to lift Scotland back up international rankings.
-  equality: Socially conservative. Guarantee every woman has access to single-sex
-    wards, affirm biological sex under the Equality Act, and oppose the
-    Non-Binary Equality Action Plan.
+  independence: Strong opposition to independence. Stand up for Scotland's place in the Union and stop another independence referendum.
+  nhs: Focus on faster GP appointments and reducing waiting lists by increasing NHS capacity for procedures. Efficiency-led NHS reform rather than new spending commitments.
+  housing: Market-led housing policy. Scrap SNP rent controls, stop costly housebuilding regulations, and abolish tax on buying a primary home (Land and Buildings Transaction Tax reform).
+  climate: Scrap the SNP's 2045 net zero target and drop policies that impose costs on households to meet it. Back the oil and gas industry and scrap carbon pricing schemes.
+  tax: Cut income tax — raise the point at which you start paying in line with inflation, uprate the Higher Rate threshold, and lower income tax to 19p in the £1 for low- and middle-income households.
+  economy: Make economic growth the number one policy objective. Cut regulation, introduce Scottish Business Zones, and oppose tax rises and new taxes.
+  education: Raise school standards. Empower headteachers and reduce bureaucracy to lift Scotland back up international rankings.
+  equality: Socially conservative. Guarantee every woman has access to single-sex wards, affirm biological sex under the Equality Act, and oppose the Non-Binary Equality Action Plan.

@@ -1,0 +1,40 @@
+id: neil-benny
+name: Neil Benny
+party: Conservative and Unionist Party
+partyShort: Tory
+color: "#0087DC"
+accent: "#005EA5"
+region: central-scotland-and-lothians-west
+regionLabel: Central Scotland and Lothians West
+listPosition: 3
+ballotPaperId: sp.r.central-scotland-and-lothians-west.2026-05-07
+isIncumbent: false
+bio: Scottish Conservative regional list candidate for Central Scotland and Lothians West and constituency candidate for Falkirk West. Neil Benny stood for the Conservatives in Stirling and Strathallan at the 2024 UK general election and contested Falkirk East at the 2021 Scottish Parliament election, alongside two Stirling council bids.
+highlights:
+  - Stood for the Scottish Conservatives in Stirling and Strathallan at the 2024 UK general election
+  - Contested Falkirk East at the 2021 Scottish Parliament election (3rd place)
+  - Stood in Stirling West at the 2017 and 2022 council elections
+sources:
+  - url: https://www.scottishconservatives.com/
+    type: party_website
+  - url: https://whocanivotefor.co.uk/person/22502/neil-benny/
+    type: whocanivotefor
+positions:
+  independence: 0
+  nhs: 1
+  housing: 0
+  climate: 0
+  tax: 0
+  economy: 0
+  education: 1
+  equality: 0
+stances:
+  independence: Strong opposition to independence. Stand up for Scotland's place in the Union and stop another independence referendum.
+  nhs: Focus on faster GP appointments and reducing waiting lists by increasing NHS capacity for procedures. Efficiency-led NHS reform rather than new spending commitments.
+  housing: Market-led housing policy. Scrap SNP rent controls, stop costly housebuilding regulations, and abolish tax on buying a primary home (Land and Buildings Transaction Tax reform).
+  climate: Scrap the SNP's 2045 net zero target and drop policies that impose costs on households to meet it. Back the oil and gas industry and scrap carbon pricing schemes.
+  tax: Cut income tax — raise the point at which you start paying in line with inflation, uprate the Higher Rate threshold, and lower income tax to 19p in the £1 for low- and middle-income households.
+  economy: Make economic growth the number one policy objective. Cut regulation, introduce Scottish Business Zones, and oppose tax rises and new taxes.
+  education: Raise school standards. Empower headteachers and reduce bureaucracy to lift Scotland back up international rankings.
+  equality: Socially conservative. Guarantee every woman has access to single-sex wards, affirm biological sex under the Equality Act, and oppose the Non-Binary Equality Action Plan.
+quizCandidate: true

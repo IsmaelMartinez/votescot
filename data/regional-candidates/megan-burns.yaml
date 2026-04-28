@@ -1,0 +1,17 @@
+id: megan-burns
+name: Megan Burns
+party: Independent Green Voice
+partyShort: Green
+color: "#00A651"
+accent: "#007A3D"
+region: edinburgh-and-lothians-east
+regionLabel: Edinburgh and Lothians East
+listPosition: 1
+ballotPaperId: sp.r.edinburgh-and-lothians-east.2026-05-07
+isIncumbent: false
+bio: Independent Green Voice regional list candidate for Edinburgh and Lothians East.
+highlights:
+  - Independent Green Voice regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
+sources:
+  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP293/
+    type: party_website

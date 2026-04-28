@@ -1,0 +1,22 @@
+id: louise-mcdaid
+name: Louise McDaid
+party: Socialist Labour Party
+partyShort: SLP
+color: "#DC241F"
+accent: "#8B0000"
+region: west-scotland
+regionLabel: West Scotland
+listPosition: 2
+ballotPaperId: sp.r.west-scotland.2026-05-07
+isIncumbent: false
+bio: Socialist Labour Party regional list candidate (2nd place) for West Scotland. Louise McDaid is a former UNISON local government branch secretary with more than two decades of experience in local government, who has previously stood for the party in Central Ayrshire and North Ayrshire and Arran at UK general elections.
+highlights:
+  - Former UNISON Local Government Branch Secretary with over 20 years in local government
+  - Stood for Socialist Labour in Central Ayrshire at the 2024 UK general election
+  - Previously contested North Ayrshire and Arran at the 2010 UK general election
+sources:
+  - url: https://www.socialist-labour-party.org.uk/
+    type: party_website
+  - url: https://whocanivotefor.co.uk/person/3263/louise-mcdaid/
+    type: whocanivotefor
+quizCandidate: false

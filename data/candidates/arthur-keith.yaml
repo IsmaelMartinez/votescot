@@ -7,13 +7,21 @@ accent: "#0a7f91"
 constituency: dundee-city-west
 isIncumbent: false
 quizCandidate: true
-bio: Reform UK candidate for Dundee City West.
+bio: Born in Dundee, he joined the Army at 15 as a Junior Soldier in Aberdeen
+  and rose to Regimental Sergeant Major of 1st Battalion The Black Watch. After
+  leaving the military he worked as a security professional in conflict zones
+  from 2005 to 2015 and now runs a small soft-services facilities management
+  business. He previously stood as an All for Unity candidate for North East
+  Scotland in 2021.
 highlights:
-  - Reform UK candidate for Dundee City West in the 2026 Scottish Parliament
-    election
+  - Former Regimental Sergeant Major, 1st Battalion The Black Watch
+  - Security professional in conflict zones, 2005–2015; small business owner
+  - All for Unity candidate, North East Scotland region, 2021 Holyrood election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP7931/
+  - url: https://www.reformparty.uk/
     type: party_website
+  - url: https://whocanivotefor.co.uk/person/73430/arthur-keith
+    type: whocanivotefor
 positions:
   independence: 0
   nhs: 1
