@@ -236,9 +236,14 @@ export function loadQuestions(): QuizQuestion[] {
   return [...questionsCache];
 }
 
+let resourcesCache: readonly ResourceSection[] | null = null;
+
 export function loadResources(): ResourceSection[] {
-  const data = loadYaml<{ sections: ResourceSection[] }>("data/resources.yaml");
-  return data.sections;
+  if (!resourcesCache) {
+    const data = loadYaml<{ sections: ResourceSection[] }>("data/resources.yaml");
+    resourcesCache = Object.freeze(data.sections);
+  }
+  return [...resourcesCache];
 }
 
 export interface Party {

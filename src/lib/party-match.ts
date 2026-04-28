@@ -1,21 +1,27 @@
-// Each list is the set of full party-name strings that should map to the
-// party-id key. Match is case-insensitive but full-string: a candidate party
-// of "Socialist Labour Party" no longer leaks onto "scottish-labour" the way
+// Map of full party-name strings (lower-cased) to canonical party id.
+// Match is case-insensitive but full-string: a candidate party of
+// "Socialist Labour Party" no longer leaks onto "scottish-labour" the way
 // the earlier substring-match did, which had let Scottish Labour's positions,
 // stances and party_website fan out onto SLP candidate files.
-export const PARTY_MATCH_MAP: Record<string, string[]> = {
-  "scottish-national-party": ["scottish national party (snp)", "scottish national party", "snp"],
-  "scottish-labour": ["labour party", "scottish labour party", "labour and co-operative party"],
-  "scottish-conservatives": ["conservative and unionist party", "scottish conservative and unionist party"],
-  "scottish-liberal-democrats": ["liberal democrats", "scottish liberal democrats"],
-  "scottish-green-party": ["scottish green party"],
-  "reform-uk": ["reform uk"],
-};
+//
+// Using a Map (rather than a plain object) sidesteps prototype-key collisions:
+// a candidate party literally named "constructor" or "__proto__" would
+// resolve via the Object prototype with a plain-object lookup.
+const PARTY_NAME_TO_ID = new Map<string, string>([
+  ["scottish national party (snp)", "scottish-national-party"],
+  ["scottish national party", "scottish-national-party"],
+  ["snp", "scottish-national-party"],
+  ["labour party", "scottish-labour"],
+  ["scottish labour party", "scottish-labour"],
+  ["labour and co-operative party", "scottish-labour"],
+  ["conservative and unionist party", "scottish-conservatives"],
+  ["scottish conservative and unionist party", "scottish-conservatives"],
+  ["liberal democrats", "scottish-liberal-democrats"],
+  ["scottish liberal democrats", "scottish-liberal-democrats"],
+  ["scottish green party", "scottish-green-party"],
+  ["reform uk", "reform-uk"],
+]);
 
 export function matchPartyId(candidatePartyName: string): string | undefined {
-  const lower = candidatePartyName.trim().toLowerCase();
-  for (const [partyId, names] of Object.entries(PARTY_MATCH_MAP)) {
-    if (names.includes(lower)) return partyId;
-  }
-  return undefined;
+  return PARTY_NAME_TO_ID.get(candidatePartyName.trim().toLowerCase());
 }
