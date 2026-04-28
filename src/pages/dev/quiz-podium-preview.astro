@@ -1,0 +1,163 @@
+---
+import QuizPodium from "../../components/QuizPodium";
+import type { PartyBlock, TopTie } from "../../lib/quiz-helpers";
+
+interface MockOptions {
+  party: string;
+  partyShort: string;
+  color: string;
+  accent?: string;
+  percentage: number;
+  rank: number;
+  hasPositions?: boolean;
+}
+
+function mkBlock(opts: MockOptions): PartyBlock {
+  const breakdown = opts.hasPositions === false
+    ? []
+    : [
+        { questionId: "independence", diff: 0 },
+        { questionId: "nhs", diff: 0 },
+      ];
+  return {
+    party: opts.party,
+    partyShort: opts.partyShort,
+    color: opts.color,
+    accent: opts.accent ?? opts.color,
+    candidates: [
+      { id: `${opts.partyShort.toLowerCase()}-1`, name: `${opts.partyShort} Candidate`, isIncumbent: false },
+    ],
+    positions: {},
+    match: { percentage: opts.percentage, breakdown },
+    rank: opts.rank,
+  };
+}
+
+const SNP = (pct: number, rank: number) => mkBlock({ party: "SNP", partyShort: "SNP", color: "#FDF38E", accent: "#9B870C", percentage: pct, rank });
+const Lab = (pct: number, rank: number) => mkBlock({ party: "Labour", partyShort: "Labour", color: "#DC241F", percentage: pct, rank });
+const Grn = (pct: number, rank: number) => mkBlock({ party: "Greens", partyShort: "Green", color: "#74B72E", percentage: pct, rank });
+const Lib = (pct: number, rank: number) => mkBlock({ party: "Lib Dem", partyShort: "Lib Dem", color: "#FAA61A", percentage: pct, rank });
+const Con = (pct: number, rank: number) => mkBlock({ party: "Conservative", partyShort: "Cons", color: "#0087DC", percentage: pct, rank });
+const Ref = (pct: number, rank: number) => mkBlock({ party: "Reform", partyShort: "Reform", color: "#12B6CF", percentage: pct, rank });
+
+interface Scenario {
+  title: string;
+  description: string;
+  blocks: PartyBlock[];
+  tie: TopTie;
+  expected: string;
+}
+
+const scenarios: Scenario[] = [
+  {
+    title: "1. Outright winner with 2nd and 3rd",
+    description: "Three distinct percentages. Classic 1-2-3 podium.",
+    blocks: [SNP(81, 1), Lab(75, 2), Lib(50, 3), Con(40, 4)],
+    tie: { count: 1, topPercentage: 81, noClearLeader: false },
+    expected: "Three blocks: 1ST tall (SNP 81%), 2ND medium (Labour 75%), 3RD short (Lib Dem 50%).",
+  },
+  {
+    title: "2. Outright winner with 2nd only",
+    description: "Only two parties have positions.",
+    blocks: [SNP(81, 1), Lab(75, 2)],
+    tie: { count: 1, topPercentage: 81, noClearLeader: false },
+    expected: "Two blocks: 1ST tall (SNP), 2ND medium (Labour). No 3rd slot.",
+  },
+  {
+    title: "3. Tied 2nd (the bug scenario)",
+    description: "Lib Dem leads. Labour and SNP tied at 75%. Conservative below.",
+    blocks: [Lib(81, 1), Lab(75, 2), SNP(75, 2), Con(50, 4)],
+    tie: { count: 1, topPercentage: 81, noClearLeader: false },
+    expected: "Four blocks: 1ST tall (Lib Dem 81%), TIED #2 medium (Labour 75%), TIED #2 medium (SNP 75%), 3RD short (Cons 50%).",
+  },
+  {
+    title: "4. 2-way tie at #1 with 3rd",
+    description: "SNP and Greens tie at 71%. Labour at 54% sits as rank 3.",
+    blocks: [SNP(71, 1), Grn(71, 1), Lab(54, 3)],
+    tie: { count: 2, topPercentage: 71, noClearLeader: false },
+    expected: "Three blocks: TIED #1 tall (SNP), TIED #1 tall (Greens), 2ND medium (Labour 54%). NB: 'Labour' becomes the 2nd tier visually because dense ranking groups it as the second distinct percentage.",
+  },
+  {
+    title: "5. 3-way tie at #1",
+    description: "Three parties locked at 63%, none other have positions.",
+    blocks: [SNP(63, 1), Grn(63, 1), Lab(63, 1)],
+    tie: { count: 3, topPercentage: 63, noClearLeader: false },
+    expected: "Three tall TIED #1 blocks side by side. No other slots.",
+  },
+  {
+    title: "6. Tied #1 plus tied #2",
+    description: "Greens and SNP tied at 80%; Labour and Lib Dem tied at 60%.",
+    blocks: [Grn(80, 1), SNP(80, 1), Lab(60, 3), Lib(60, 3)],
+    tie: { count: 2, topPercentage: 80, noClearLeader: false },
+    expected: "Four blocks: TIED #1 tall (Greens 80%), TIED #1 tall (SNP 80%), TIED #2 medium (Labour 60%), TIED #2 medium (Lib Dem 60%).",
+  },
+  {
+    title: "7. Suppressed: 4-way tie at #1",
+    description: "Four parties at the same top percentage. Podium hides; banner is shown by parent.",
+    blocks: [SNP(50, 1), Grn(50, 1), Lab(50, 1), Lib(50, 1)],
+    tie: { count: 4, topPercentage: 50, noClearLeader: true },
+    expected: "Empty (component returns null).",
+  },
+  {
+    title: "8. Suppressed: top score is 0%",
+    description: "User's answers don't align with any party.",
+    blocks: [SNP(0, 1), Lab(0, 1)],
+    tie: { count: 0, topPercentage: 0, noClearLeader: true },
+    expected: "Empty (component returns null).",
+  },
+  {
+    title: "9. Suppressed: only one positioned party",
+    description: "Single positioned party leaves nothing to compare against.",
+    blocks: [SNP(75, 1)],
+    tie: { count: 1, topPercentage: 75, noClearLeader: false },
+    expected: "Empty (component returns null because positioned.length < 2).",
+  },
+  {
+    title: "10. Five-tier overflow capped at 5 blocks",
+    description: "Lots of distinct ranks; cap MAX_BLOCKS at 5.",
+    blocks: [SNP(90, 1), Lab(80, 2), Grn(70, 3), Lib(60, 4), Con(50, 5), Ref(40, 6)],
+    tie: { count: 1, topPercentage: 90, noClearLeader: false },
+    expected: "Three blocks (top three tiers): 1ST (SNP 90%), 2ND (Labour 80%), 3RD (Greens 70%). Lib Dem and below are cut off — only top three tiers participate.",
+  },
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>QuizPodium preview · VoteScot dev</title>
+    <style>
+      body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 24px auto; padding: 0 16px; color: #1a1a2e; background: #faf8f5; }
+      h1 { font-size: 22px; margin-bottom: 4px; }
+      h2 { font-size: 15px; margin-top: 32px; margin-bottom: 4px; }
+      p { margin: 4px 0; font-size: 13px; color: #555; line-height: 1.5; }
+      .expected { color: #2d8a4e; font-style: italic; }
+      .scenario { padding: 12px 0 20px; border-bottom: 1px solid #e8e4df; margin-bottom: 8px; }
+      .stage { background: #fff; border: 1px solid #e8e4df; border-radius: 8px; padding: 12px; margin-top: 12px; }
+      .answered { font-size: 11px; color: #888; margin-bottom: 12px; }
+      .banner { font-size: 12px; color: #b45309; background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+      .below-note { font-size: 11px; color: #888; text-align: center; padding: 8px; border: 1px dashed #ddd; border-radius: 6px; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>QuizPodium component preview</h1>
+    <p>Dev-only page rendering the actual React component with mock data for every state. Compare each rendered SVG against the "Expected" line below it.</p>
+
+    {scenarios.map((s) => (
+      <section class="scenario">
+        <h2>{s.title}</h2>
+        <p>{s.description}</p>
+        <p class="expected">Expected: {s.expected}</p>
+        <div class="stage">
+          <div class="answered">Based on 8 of 8 questions answered. The more you answer, the better the match.</div>
+          {s.tie.noClearLeader && (
+            <div class="banner">
+              No clear leader from your answers. Try answering more questions for a sharper match.
+            </div>
+          )}
+          <QuizPodium blocks={s.blocks} tie={s.tie} />
+          <div class="below-note">[card list would appear here below the podium]</div>
+        </div>
+      </section>
+    ))}
+  </body>
+</html>
