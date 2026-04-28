@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import ErrorBoundary from "./ErrorBoundary";
+import { PARTY_THEMES_BY_SHORT } from "../lib/party-config";
 
 interface PollEntry {
   date: string;
@@ -27,15 +28,11 @@ interface Props {
   data: PollsData;
 }
 
-const PARTIES = [
-  { key: "snp" as keyof PollEntry, label: "SNP", color: "#9B870C" },
-  { key: "lab" as keyof PollEntry, label: "Labour", color: "#DC241F" },
-  { key: "con" as keyof PollEntry, label: "Conservative", color: "#0087DC" },
-  { key: "reform" as keyof PollEntry, label: "Reform", color: "#12B6CF" },
-  { key: "green" as keyof PollEntry, label: "Green", color: "#00A651" },
-  { key: "libdem" as keyof PollEntry, label: "Lib Dem", color: "#FAA61A" },
-  { key: "alba" as keyof PollEntry, label: "Alba", color: "#005EB8" },
-] as const;
+const PARTIES = (["snp", "lab", "con", "reform", "green", "libdem", "alba"] as const).map((short) => ({
+  key: short as keyof PollEntry,
+  label: PARTY_THEMES_BY_SHORT[short].label,
+  color: PARTY_THEMES_BY_SHORT[short].color,
+}));
 
 const CHART_W = 800;
 const CHART_H = 260;
