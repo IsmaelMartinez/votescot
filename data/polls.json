@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-04-27T08:54:15.316Z",
+  "lastUpdated": "2026-04-28T08:52:43.054Z",
   "constituency": [
+    {
+      "date": "2026-04-17",
+      "endDate": "2026-04-23",
+      "pollster": "Survation",
+      "client": "Diffley Parntership",
+      "sampleSize": 1012,
+      "snp": 38,
+      "con": 12,
+      "lab": 18,
+      "libdem": 10,
+      "green": 2,
+      "alba": null,
+      "reform": 20,
+      "others": 1
+    },
     {
       "date": "2026-04-14",
       "endDate": "2026-04-21",
@@ -2013,6 +2028,21 @@
     }
   ],
   "regional": [
+    {
+      "date": "2026-04-17",
+      "endDate": "2026-04-23",
+      "pollster": "Survation",
+      "client": "Diffley Partnership",
+      "sampleSize": 1002,
+      "snp": 29,
+      "con": 12,
+      "lab": 17,
+      "libdem": 9,
+      "green": 12,
+      "alba": null,
+      "reform": 19,
+      "others": 2
+    },
     {
       "date": "2026-04-14",
       "endDate": "2026-04-21",
