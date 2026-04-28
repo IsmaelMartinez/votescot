@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 27 April 2026 (audit: bio enrichment closed; only watch + post-election items remain)
+Last updated: 28 April 2026 (post-audit: all 1,026 candidate slots cross-checked against authoritative sources; only post-election items remain)
 
 ## What's live now
 
@@ -124,14 +124,16 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
 
 ### Watch — between now and 7 May
 
-- [ ] **Re-parse manifestos if any party publishes amendments.** All six parties have manifestos parsed and applied. Run `/sync-manifestos` once before polling day to catch any late edits — Scottish Labour's 13 April launch was reparsed on 18 April after a redirect masked it initially, but the same vigilance applies to all parties in the final week.
+All six manifestos re-checked on 28 April (`/sync-manifestos` returned no amendments since 17–18 April). The SNP page shows a 28 April CMS timestamp but no content changelog (the four regional supplementary docs uploaded 24–27 April are companion documents, not amendments). Conservatives' supplementary "rural manifesto" (22 April) is companion policy detail, not an amendment to the parsed file. No further action unless a party publishes an actual revision in the final week.
+
+A region-by-region audit of all 589 regional list candidates and all 437 constituency candidates against the official Statement of Persons Nominated, WhoCanIVoteFor, party websites, Wikipedia, and parliament.scot was completed on 28 April. Names, party assignments, list ordering, regional assignments, and incumbent flags were all confirmed. Two systemic issues were fixed in PR #70: every Independent Green Voice candidate had been branded as Scottish Greens, and 12 `listPosition` outliers had drifted from the dominant convention. PR #71 fixed a homepage region-card mismatch (cards displayed constituency candidate counts but linked to a regional-list page).
 
 ### Post-election cleanup (after 7 May)
 
 - [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site.
-- [ ] **Retire the dead projection default.** `scripts/populate-projections.ts` still carries a `defaultProjection` template but every constituency has an explicit override. Either delete the default and make missing overrides a hard error, or keep it as a fallback with a loud warning.
-- [ ] **`yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts`** to match `populate-projections.ts` and stop the YAML line-rewrap churn that makes candidate-file diffs hard to audit on manifesto updates.
 - [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
+
+The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts` and retiring the `populate-projections.ts` default — are already done. `apply-party-positions.ts:60` and `sync-regional-candidates.ts:112` both pass `{ lineWidth: 0 }`; `populate-projections.ts` was replaced by `scripts/project-from-polls.ts` and no `defaultProjection` template references remain anywhere.
 
 ## What shipped before 7 May (archived task list)
 
@@ -231,14 +233,13 @@ None outstanding. The constituency-mode quiz refactor flagged here previously sh
     │      NEXT UP (see "Next up" section above)      │
     │                                                 │
     │  Must-fix and nice-to-have: all closed.         │
+    │  Pre-election candidate audit complete.         │
     │                                                 │
     │  Watch:                                         │
     │  • Re-run /sync-manifestos if any party amends  │
     │                                                 │
     │  Post-election:                                 │
     │  • "How we did" projection retrospective        │
-    │  • Retire dead populate-projections default     │
-    │  • yaml.stringify lineWidth in fan-out script   │
     │  • Deep-freeze data caches (or decide not to)   │
     └─────────────────────────────────────────────────┘
 
