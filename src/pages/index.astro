@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import NewsList from "../components/NewsList.astro";
-import { loadConstituencies, loadNews, loadRegions, loadCandidatesByRegion } from "../lib/data";
+import { loadConstituencies, loadNews, loadRegions, loadRegionalCandidatesByRegion } from "../lib/data";
 import { slugifyConstituency } from "../lib/slugify";
 
 const constituencies = loadConstituencies();
@@ -31,7 +31,7 @@ const constituencyRegions: Record<string, string> = Object.fromEntries(
 const regions = baseRegions.map((r) => ({
   ...r,
   constituencyCount: constituencies.filter((c) => c.region?.trim() === r.name).length,
-  candidateCount: loadCandidatesByRegion(r.id).length,
+  candidateCount: loadRegionalCandidatesByRegion(r.id).length,
 }));
 
 const news = loadNews();
@@ -59,7 +59,7 @@ const news = loadNews();
     <section class="my-6">
       <h3 class="font-heading text-base font-black mb-1">Browse by region</h3>
       <p class="font-body text-xs text-gray-500 leading-snug mb-3">
-        Scotland's regional list ballot is split into 8 regions. Pick yours to see every candidate standing across its constituencies.
+        Scotland's regional list ballot is split into 8 regions. Pick yours to see every party's regional list candidates.
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {regions.map((r) => (
@@ -69,7 +69,7 @@ const news = loadNews();
           >
             <div class="font-heading text-sm font-bold text-votescot-dark leading-tight">{r.name}</div>
             <div class="font-body text-xs text-gray-500 leading-snug mt-0.5">
-              {r.constituencyCount} constituencies · {r.candidateCount} candidates
+              {r.constituencyCount} constituencies · {r.candidateCount} list candidates
             </div>
           </a>
         ))}
