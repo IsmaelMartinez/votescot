@@ -98,16 +98,16 @@ function formatDate(iso: string): string {
         results are in, each party's regional vote total is divided by the total number of seats (both constituency
         and regional) that party has already won in that region, plus one. The party with the highest result after
         that division gets the next seat, and the calculation repeats until all seven regional seats in that region
-        are filled. The "plus one" is the key part — it means a party that already holds several seats needs a much
+        are filled. The "plus one" is the key part. A party that already holds several seats needs a much
         larger regional vote to win additional list seats, which is how the system balances things out.
       </p>
 
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Key Dates</h3>
       <div class="bg-white rounded-md p-2.5 border border-votescot-border mb-3">
         <div class="font-body text-xs text-gray-600 leading-relaxed">
-          <strong>20 April 2026</strong> — Voter registration deadline.<br />
-          <strong>21 April 2026</strong> — Postal vote application deadline.<br />
-          <strong>7 May 2026</strong> — Election day. Polling stations are open from 7am to 10pm.
+          <strong>20 April 2026</strong>: Voter registration deadline.<br />
+          <strong>21 April 2026</strong>: Postal vote application deadline.<br />
+          <strong>7 May 2026</strong>: Election day. Polling stations are open from 7am to 10pm.
         </div>
       </div>
 
@@ -115,13 +115,13 @@ function formatDate(iso: string): string {
       <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
         You can vote if you are aged 16 or over on polling day, registered to vote, and live in Scotland.
         Unlike UK general elections, Scottish Parliament elections extend the vote to EU citizens and
-        Commonwealth citizens resident in Scotland — you do not need to be a British citizen.
+        Commonwealth citizens resident in Scotland. You do not need to be a British citizen.
       </p>
 
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Do I Need ID?</h3>
       <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
         Unlike UK general elections, you do NOT need to show photo ID to vote at the Scottish Parliament election.
-        You do not even need to bring your polling card — you just need to be registered and turn up at your
+        You do not even need to bring your polling card. You just need to be registered and turn up at your
         polling station. Photo ID requirements apply only to UK Parliament elections.
       </p>
 
@@ -135,7 +135,7 @@ function formatDate(iso: string): string {
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where to Vote</h3>
       <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
         Your polling station is assigned based on your address and will be printed on your polling card, which
-        arrives by post before the election. If you have lost your polling card, do not worry — you can still vote
+        arrives by post before the election. If you have lost your polling card, do not worry: you can still vote
         as long as you are registered.
       </p>
 
@@ -143,7 +143,7 @@ function formatDate(iso: string): string {
         <a href="https://www.gov.uk/register-to-vote" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
           <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
             <div class="font-body text-[13px] font-bold text-blue-600">Register to Vote</div>
-            <div class="font-body text-xs text-gray-500">Register online at GOV.UK — takes about 5 minutes</div>
+            <div class="font-body text-xs text-gray-500">Register online at GOV.UK. Takes about 5 minutes.</div>
           </div>
         </a>
         <a href="https://www.electoralcommission.org.uk/i-am-a/voter/your-election-information" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
@@ -172,7 +172,7 @@ function formatDate(iso: string): string {
       {pollsUsed.length > 0 ? (
         <div class="bg-white border border-votescot-border rounded-md p-3 mb-4">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-            Polling average — last {pollsUsed.length} polls
+            Polling average · last {pollsUsed.length} polls
             {avgWindowOldest && avgWindowNewest ? ` · ${formatDate(avgWindowOldest)} – ${formatDate(avgWindowNewest)}` : ""}
           </div>
           <div class="flex gap-1 flex-wrap">
@@ -346,15 +346,6 @@ function formatDate(iso: string): string {
             <div class="font-body text-xs text-gray-500">Reform UK Scotland policies</div>
           </div>
         </a>
-        <a href="https://www.albaparty.org/manifesto" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
-          <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
-            <div class="flex items-center justify-between mb-0.5">
-              <span class="font-body text-[13px] font-bold" style="color:#005EB8">Alba Party</span>
-              <span class="font-body text-xs text-gray-300">↗</span>
-            </div>
-            <div class="font-body text-xs text-gray-500">Alba Party manifesto</div>
-          </div>
-        </a>
       </div>
 
       <div class="mt-2.5 p-2.5 bg-white rounded border border-votescot-border">
@@ -386,14 +377,14 @@ function formatDate(iso: string): string {
         Each question has three options scored on a 0–2 scale. When you answer, the tool compares your
         responses to each candidate's recorded positions and calculates a match percentage based on the
         difference across all answered questions. The more questions you answer, the more accurate the match.
-        No data is stored — the entire quiz runs in your browser only.
+        No data is stored. The entire quiz runs in your browser only.
       </p>
 
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Where the Data Comes From</h3>
       <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
         Candidate details (names, parties, constituencies) are sourced from
         <a href="https://democracyclub.org.uk/" class="text-blue-600 underline">Democracy Club</a> via their public API.
-        Party policy positions are taken from the published 2026 Holyrood manifestos of the SNP, Scottish Greens, Scottish Liberal Democrats, Scottish Conservatives, and Reform UK. Scottish Labour has not yet published a 2026 manifesto, so their positions are derived from the party's current platform and will be refreshed when the manifesto drops.
+        Party policy positions are taken from the published 2026 Holyrood manifestos of the SNP, Scottish Greens, Scottish Labour, Scottish Liberal Democrats, Scottish Conservatives, and Reform UK.
         Opinion poll data is aggregated from Wikipedia's
         <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" class="text-blue-600 underline">polling tracker</a>,
         which compiles British Polling Council member surveys.
@@ -415,7 +406,7 @@ function formatDate(iso: string): string {
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">How to Report Errors</h3>
       <p class="font-body text-[12.5px] text-gray-600 leading-snug mb-3">
         If you find a mistake, please <a href="https://github.com/ismaelmartinez/votescot/issues" class="text-blue-600 underline">open an issue on GitHub</a>.
-        You can also submit a pull request — data lives in the <code class="bg-gray-100 px-1 rounded text-xs">data/</code> directory as YAML files.
+        You can also submit a pull request. Data lives in the <code class="bg-gray-100 px-1 rounded text-xs">data/</code> directory as YAML files.
       </p>
 
       <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2 mt-4">Data Sources</h3>
@@ -428,7 +419,7 @@ function formatDate(iso: string): string {
         </a>
         <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election" target="_blank" rel="noopener noreferrer" class="block no-underline text-inherit">
           <div class="bg-white rounded-md p-2.5 border border-votescot-border hover:border-votescot-gold transition-colors">
-            <div class="font-body text-[13px] font-bold text-blue-600">Wikipedia — Polling Tracker</div>
+            <div class="font-body text-[13px] font-bold text-blue-600">Wikipedia · Polling Tracker</div>
             <div class="font-body text-xs text-gray-500">Opinion poll data from BPC member surveys</div>
           </div>
         </a>

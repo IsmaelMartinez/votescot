@@ -337,7 +337,7 @@ function QuizEngineInner(props: Props) {
     <div className="py-3.5">
       <div className="flex items-center justify-between mb-1 flex-wrap gap-1.5">
         <h2 className="font-heading text-lg font-black m-0">
-          Vote Compass{selectedConstituency ? ` — ${selectedConstituency.name}` : ""}
+          Vote Compass{selectedConstituency ? ` · ${selectedConstituency.name}` : ""}
         </h2>
         <button
           onClick={reset}
@@ -348,7 +348,7 @@ function QuizEngineInner(props: Props) {
       </div>
       <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-3">
         Answer 8 questions about what matters to you. We'll match you to the candidates closest to your
-        views on both the constituency and regional ballots. No data is stored — this runs entirely in your browser.
+        views on both the constituency and regional ballots. No data is stored. This runs entirely in your browser.
       </p>
       <div className="flex flex-col gap-3">
         {questions.map((q, qi) => (

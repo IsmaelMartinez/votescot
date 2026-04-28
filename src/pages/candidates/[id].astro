@@ -24,7 +24,7 @@ const regionName = constituency?.region;
 const regionId = regionName ? slugifyConstituency(regionName) : null;
 ---
 
-<Base title={candidate.name} description={`${candidate.name} (${candidate.party}) — candidate for ${constituencyName}${regionName ? `, ${regionName} region` : ""} in the 2026 Scottish Parliament election`}>
+<Base title={candidate.name} description={`${candidate.name} (${candidate.party}), candidate for ${constituencyName}${regionName ? `, ${regionName} region` : ""} in the 2026 Scottish Parliament election`}>
   <Header slot="header" currentTab="candidates" />
 
   <div class="py-3.5">

@@ -15,7 +15,7 @@ const questions = loadQuestions();
 const externalSources = candidate.sources?.filter((s) => typeof s?.url === "string" && !s.url.includes("candidates.democracyclub.org.uk")) ?? [];
 ---
 
-<Base title={candidate.name} description={`${candidate.name} (${candidate.party}) — regional list candidate for ${candidate.regionLabel} in the 2026 Scottish Parliament election`}>
+<Base title={candidate.name} description={`${candidate.name} (${candidate.party}), regional list candidate for ${candidate.regionLabel} in the 2026 Scottish Parliament election`}>
   <Header slot="header" currentTab="candidates" />
 
   <div class="py-3.5">

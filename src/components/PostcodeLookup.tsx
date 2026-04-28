@@ -106,7 +106,7 @@ function PostcodeLookupInner({ knownConstituencies, basePath }: Props) {
       )}
       {result?.found && !result.covered && (
         <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-md font-body text-sm">
-          You're in <strong>{result.constituencyName}</strong>. We couldn't match this to our data — the constituency name may differ from our records.
+          You're in <strong>{result.constituencyName}</strong>. We couldn't match this to our data. The constituency name may differ from our records.
           Try <a href="https://whocanivotefor.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">WhoCanIVoteFor</a> for your candidates.
         </div>
       )}
