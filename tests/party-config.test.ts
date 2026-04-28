@@ -9,13 +9,17 @@ import {
 } from "../src/lib/party-config";
 
 describe("party-config", () => {
-  test("each identifier set has unique values", () => {
+  test("each identifier, colour, and label is unique across parties", () => {
     const ids = PARTY_THEMES.map((t) => t.id);
     const shorts = PARTY_THEMES.map((t) => t.short);
     const longs = PARTY_THEMES.map((t) => t.long);
+    const colors = PARTY_THEMES.map((t) => t.color);
+    const labels = PARTY_THEMES.map((t) => t.label);
     expect(new Set(ids).size).toBe(ids.length);
     expect(new Set(shorts).size).toBe(shorts.length);
     expect(new Set(longs).size).toBe(longs.length);
+    expect(new Set(colors).size).toBe(colors.length);
+    expect(new Set(labels).size).toBe(labels.length);
   });
 
   test("indexes contain every theme exactly once", () => {

@@ -80,10 +80,8 @@ export const PARTY_THEMES: readonly PartyTheme[] = [
   },
 ] as const;
 
-function indexBy(key: keyof Pick<PartyTheme, "id" | "short" | "long">): Record<string, PartyTheme> {
-  const out: Record<string, PartyTheme> = {};
-  for (const t of PARTY_THEMES) out[t[key]] = t;
-  return out;
+function indexBy(key: "id" | "short" | "long"): Record<string, PartyTheme> {
+  return Object.fromEntries(PARTY_THEMES.map((t) => [t[key], t]));
 }
 
 export const PARTY_THEMES_BY_ID: Record<string, PartyTheme> = indexBy("id");
