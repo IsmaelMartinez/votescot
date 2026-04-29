@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T08:49:28.373Z",
+  "lastUpdated": "2026-04-29T13:10:29.764Z",
   "constituency": [
     {
       "date": "2026-04-17",
@@ -4052,6 +4052,88 @@
       "alba": null,
       "reform": null,
       "others": 6
+    }
+  ],
+  "mrp": [
+    {
+      "date": "2026-03-31",
+      "endDate": "2026-04-13",
+      "pollster": "JL Partners",
+      "client": "The Telegraph",
+      "sampleSize": 2018,
+      "seats": {
+        "snp": 67,
+        "con": 10,
+        "lab": 19,
+        "green": 7,
+        "libdem": 9,
+        "reform": 17
+      },
+      "majority": "3"
+    },
+    {
+      "date": "2026-02-04",
+      "endDate": "2026-04-12",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 5124,
+      "seats": {
+        "snp": 56,
+        "con": 12,
+        "lab": 17,
+        "green": 8,
+        "libdem": 14,
+        "reform": 22
+      },
+      "majority": "SNP -9"
+    },
+    {
+      "date": "2026-03-23",
+      "endDate": "2026-04-08",
+      "pollster": "YouGov",
+      "client": "N/A",
+      "sampleSize": 3925,
+      "seats": {
+        "snp": 67,
+        "con": 7,
+        "lab": 15,
+        "green": 11,
+        "libdem": 9,
+        "reform": 20
+      },
+      "majority": "3"
+    },
+    {
+      "date": "2026-03-13",
+      "endDate": "2026-03-31",
+      "pollster": "Electoral Calculus / FindOutNow",
+      "client": "The National",
+      "sampleSize": 4105,
+      "seats": {
+        "snp": 67,
+        "con": 9,
+        "lab": 17,
+        "green": 14,
+        "libdem": 8,
+        "reform": 14
+      },
+      "majority": "3"
+    },
+    {
+      "date": "2021-05-06",
+      "endDate": "2021-05-06",
+      "pollster": "2021 Scottish Parliament election",
+      "client": "",
+      "sampleSize": 64,
+      "seats": {
+        "snp": 31,
+        "con": 22,
+        "lab": 8,
+        "green": 4,
+        "libdem": 0,
+        "reform": null
+      },
+      "majority": ""
     }
   ]
 }

@@ -29,6 +29,23 @@ interface PollEntry {
   others: number | null;
 }
 
+interface MrpEntry {
+  date: string;
+  endDate: string;
+  pollster: string;
+  client: string;
+  sampleSize: number | null;
+  seats: {
+    snp: number | null;
+    con: number | null;
+    lab: number | null;
+    green: number | null;
+    libdem: number | null;
+    reform: number | null;
+  };
+  majority: string;
+}
+
 function stripTags(html: string): string {
   return html
     .replace(/<[^>]+>/g, " ")
@@ -291,6 +308,131 @@ function parseTable(tableHtml: string): PollEntry[] {
   return results;
 }
 
+interface MrpColMap {
+  date: number;
+  pollster: number;
+  client: number;
+  sample: number;
+  snp: number;
+  con: number;
+  lab: number;
+  green: number;
+  libdem: number;
+  reform: number;
+  majority: number;
+}
+
+function buildMrpColMap(headerRows: string[]): MrpColMap | null {
+  const order: string[] = [];
+  for (const row of headerRows) {
+    for (const m of row.matchAll(/<th([^>]*)>([\s\S]*?)<\/th>/gi)) {
+      const t = stripTags(m[2]).toLowerCase();
+      if (["snp", "con", "lab", "grn", "green", "ld", "lib dem", "lib dems", "ref", "reform", "majority"].includes(t)) {
+        order.push(t);
+      }
+    }
+  }
+
+  if (order.length < 7) return null;
+
+  const map: Partial<MrpColMap> = { date: 0, pollster: 1, client: 2, sample: 3 };
+  let colIdx = 4;
+  for (const p of order) {
+    const key: keyof MrpColMap | null =
+      p === "snp" ? "snp" :
+      p === "con" ? "con" :
+      p === "lab" ? "lab" :
+      p === "grn" || p === "green" ? "green" :
+      p === "ld" || p === "lib dem" || p === "lib dems" ? "libdem" :
+      p === "ref" || p === "reform" ? "reform" :
+      p === "majority" ? "majority" :
+      null;
+    if (key && map[key] === undefined) {
+      map[key] = colIdx;
+      colIdx++;
+    }
+  }
+
+  const required: (keyof MrpColMap)[] = ["date", "pollster", "client", "sample", "snp", "con", "lab", "green", "libdem", "reform", "majority"];
+  for (const k of required) {
+    if (map[k] === undefined) return null;
+  }
+  return map as MrpColMap;
+}
+
+function parseSeatCount(val: string): number | null {
+  const clean = val.trim();
+  if (clean === "–" || clean === "-" || clean === "" || clean === "N/A") return null;
+  const n = parseInt(clean, 10);
+  return isNaN(n) ? null : n;
+}
+
+function parseMrpTable(tableHtml: string): MrpEntry[] {
+  const rows = tableHtml.split(/<tr[\s>]/);
+  const results: MrpEntry[] = [];
+  const headerRows: string[] = [];
+  const dataRows: string[] = [];
+
+  for (const row of rows) {
+    if (!row.trim()) continue;
+    if (/<th[^>]*>/i.test(row)) headerRows.push(row);
+    else if (/<td[^>]*>/i.test(row)) dataRows.push(row);
+  }
+
+  const colMap = buildMrpColMap(headerRows);
+  if (!colMap) {
+    console.warn("  Could not build MRP column map from headers");
+    return results;
+  }
+
+  const rowspanCarries: Array<{ html: string; rowsRemaining: number } | null> = [];
+
+  for (const row of dataRows) {
+    const rawCells = extractCells(row);
+    if (rawCells.length < 5) continue;
+
+    const colspanMatch = row.match(/colspan="(\d+)"/);
+    if (colspanMatch && parseInt(colspanMatch[1]) > 5) continue;
+
+    const cells = expandRowWithRowspans(rawCells, rowspanCarries);
+    if (cells.length < 10) continue;
+
+    const getCellText = (idx: number): string => {
+      if (idx >= cells.length) return "";
+      return stripTags(cells[idx]);
+    };
+
+    const dateCellHtml = cells[colMap.date] || "";
+    const endDate = extractEndDate(dateCellHtml);
+    if (!endDate) continue;
+
+    const dateText = stripTags(dateCellHtml);
+    const startDate = parseStartDate(dateText, endDate);
+
+    const pollsterName = getCellText(colMap.pollster);
+    const normalizedPollster = POLLSTER_ALIASES[pollsterName] ?? pollsterName;
+
+    results.push({
+      date: startDate,
+      endDate,
+      pollster: normalizedPollster,
+      client: getCellText(colMap.client),
+      sampleSize: parseSampleSize(getCellText(colMap.sample)),
+      seats: {
+        snp: parseSeatCount(getCellText(colMap.snp)),
+        con: parseSeatCount(getCellText(colMap.con)),
+        lab: parseSeatCount(getCellText(colMap.lab)),
+        green: parseSeatCount(getCellText(colMap.green)),
+        libdem: parseSeatCount(getCellText(colMap.libdem)),
+        reform: parseSeatCount(getCellText(colMap.reform)),
+      },
+      majority: getCellText(colMap.majority),
+    });
+  }
+
+  return results;
+}
+
 function extractWikitables(html: string): string[] {
   const tables: string[] = [];
   let searchFrom = 0;
@@ -342,8 +484,8 @@ async function main() {
   const tables = extractWikitables(html);
   console.log(`Found ${tables.length} wikitable(s)`);
 
-  if (tables.length < 2) {
-    throw new Error(`Expected at least 2 wikitables, found ${tables.length}`);
+  if (tables.length < 3) {
+    throw new Error(`Expected at least 3 wikitables (constituency, regional, MRP), found ${tables.length}`);
   }
 
   console.log("Parsing constituency table...");
@@ -353,6 +495,10 @@ async function main() {
   console.log("Parsing regional table...");
   const regional = parseTable(tables[1]);
   console.log(`  Extracted ${regional.length} regional polls`);
+
+  console.log("Parsing MRP seat-projection table...");
+  const mrp = parseMrpTable(tables[2]);
+  console.log(`  Extracted ${mrp.length} MRP rows`);
 
   // Guard against silent parse failure: if Wikipedia renames a party column,
   // buildColMap returns null, parseTable returns [], and we'd write an empty
@@ -366,10 +512,19 @@ async function main() {
     );
   }
 
+  const MIN_MRP_ROWS = 2;
+  if (mrp.length < MIN_MRP_ROWS) {
+    throw new Error(
+      `Unexpectedly few MRP rows parsed (mrp=${mrp.length}). ` +
+        `Check for Wikipedia schema changes before writing to ${OUTPUT_PATH}.`
+    );
+  }
+
   const output = {
     lastUpdated: new Date().toISOString(),
     constituency,
     regional,
+    mrp,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
