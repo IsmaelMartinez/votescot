@@ -25,7 +25,7 @@ positions:
   tax: 0
   economy: 0
   education: 1
-  equality: 0
+  equality: 1
 stances:
   independence: Strong opposition to independence. Stand up for Scotland's place in the Union and stop another independence referendum.
   nhs: Focus on faster GP appointments and reducing waiting lists by increasing NHS capacity for procedures. Efficiency-led NHS reform rather than new spending commitments.
@@ -34,5 +34,6 @@ stances:
   tax: Cut income tax — raise the point at which you start paying in line with inflation, uprate the Higher Rate threshold, and lower income tax to 19p in the £1 for low- and middle-income households.
   economy: Make economic growth the number one policy objective. Cut regulation, introduce Scottish Business Zones, and oppose tax rises and new taxes.
   education: Raise school standards. Empower headteachers and reduce bureaucracy to lift Scotland back up international rankings.
-  equality: Socially conservative. Guarantee every woman has access to single-sex wards, affirm biological sex under the Equality Act, and oppose the Non-Binary Equality Action Plan.
+  equality: Voted in favour of the Gender Recognition Reform (Scotland) Bill at Stage 3 in December 2022, one of only two Conservative MSPs to break with the party line on that vote. On the wider 2026 equality agenda follows the party position on single-sex wards and biological sex under the Equality Act and opposes the Non-Binary Equality Action Plan.
 quizCandidate: true
+quizPositionsLocked: true
