@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 29 April 2026 (cross-reference pass surfaced 4 voter-impacting position mismatches, 1 factually-wrong bio, 9 wobbly projections, and 356 source-URL hygiene items)
+Last updated: 29 April 2026 (six pre-election tracks captured: 4 incumbent overrides, 5 implausible projection re-sources, 4 wobbly calibrations, 4 bio fixes, 356 URL hygiene items, and the polls-chart "race view" enhancement)
 
 ## What's live now
 
