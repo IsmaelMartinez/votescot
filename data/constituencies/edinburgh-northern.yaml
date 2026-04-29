@@ -4,16 +4,16 @@ region: Edinburgh and Lothians East
 boundaryYear: 2026
 description: Edinburgh Northern constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: libdem
-competitiveness: competitive
+projection: snp
+competitiveness: toss-up
 topParties:
-  - party: libdem
-    share: 35
-    status: could-win
   - party: snp
-    share: 28
+    share: 26
+    status: could-win
+  - party: libdem
+    share: 24
     status: could-win
   - party: labour
-    share: 20
+    share: 17
     status: might-win
-projectionSource: Ballot Box Scotland notional results; Lib Dem incumbency advantage
+projectionSource: "April 2026 MRPs and projections disagree on the leader. More in Common's April 2026 Holyrood MRP gave the Lib Dems 27 and the SNP 20 (a 7-point Lib Dem lead). Electoral Calculus / Find Out Now's early-April 2026 Scotland MRP put the SNP on 30, Lib Dems on 20 and Labour on 19. Ballot Box Scotland's earlier 2026 projection had SNP 28.6 / LibDem 23.5 / Reform 14.1 with Labour and Greens tied on 12.2. The modal call across the three sources is SNP narrowly ahead with the Lib Dems within touching distance and Labour as a possible third — a toss-up, not a clear Lib Dem lead. Reform polls in the low teens here but does not break into the top three on any of the constituency-level projections cited."

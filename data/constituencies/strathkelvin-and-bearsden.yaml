@@ -4,16 +4,16 @@ region: West Scotland
 boundaryYear: 2026
 description: Strathkelvin and Bearsden constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: competitive
+projection: libdem
+competitiveness: toss-up
 topParties:
-  - party: snp
+  - party: libdem
     share: 33
     status: could-win
-  - party: labour
-    share: 24
+  - party: snp
+    share: 32
     status: could-win
-  - party: libdem
-    share: 16
+  - party: labour
+    share: 14
     status: might-win
-projectionSource: Ballot Box Scotland notional results with national polling swing
+projectionSource: "More in Common's April 2026 Holyrood MRP (fieldwork 4 Feb to 12 April 2026) explicitly flags Strathkelvin and Bearsden as a Liberal Democrat gain from the SNP, citing the suburban Lib Dem revival anchored by Ben Langmead's 2024 Bearsden South by-election win. The Scottish Daily Express tactical-voting guide drawing on April 2026 MRP data shows SNP 37 percent and Lib Dem 31 percent in this seat. YouGov's April 2026 Scotland MRP and Electoral Calculus's 7 April 2026 Scotland MRP both still project an SNP hold, leaving the seat genuinely contested. The 2021 notional baseline on the new boundaries is SNP 45.5 / Con 20.7 / Lab 18.4 / LibDem 14.4. With the Conservative vote collapsing nationally from ~21 percent to ~10 percent the 2021 second-placed Tories drop out of the top three; Labour holds steady on national share and inherits third place in this affluent suburban seat."
