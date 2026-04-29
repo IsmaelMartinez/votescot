@@ -8,7 +8,11 @@ textColor: "#333"
 constituency: almond-valley
 isIncumbent: true
 quizCandidate: true
-bio: Cabinet Secretary for Justice and Home Affairs since 2023 and MSP for Almond Valley since 2007. A former social worker by profession, Constance has held multiple cabinet roles including Education, Communities, and Social Security. She also serves as the SNP's Business Convener (party chair) since 2023, overseeing party management and election campaigns.
+bio: Cabinet Secretary for Justice and Home Affairs since 2023 and MSP for
+  Almond Valley since 2007. A former social worker by profession, Constance has
+  held multiple cabinet roles including Education, Communities, and Social
+  Security. She also serves as the SNP's Business Convener (party chair) since
+  2023, overseeing party management and election campaigns.
 highlights:
   - Cabinet Secretary for Justice and Home Affairs since 2023
   - SNP Business Convener (party chair) since November 2023
@@ -28,11 +32,26 @@ positions:
   education: 2
   equality: 2
 stances:
-  independence: Support independence. An SNP majority at this election is framed as a mandate for a referendum. Independence cited as essential to Scotland's future prosperity.
-  nhs: Significant NHS investment. Expand GP walk-in clinics, shorten waiting times, deliver more operations and community diagnostics. NHS described as Scotland's most precious public service.
-  housing: Build 110,000 affordable homes by 2032 (70% social rent), create a new housing agency, retain the rent control framework, and provide deposit support of up to £10,000 for first-time buyers.
-  climate: Continue the transition to net zero by 2045 with a focus on Scotland's renewable energy wealth. Interim 2030 climate targets were dropped in 2024; emphasis is on energy costs and a just transition.
-  tax: Keep Scotland's progressive income tax, the fairest and most progressive in the UK. Introduce a mansion tax on properties valued above £1m from 2028.
-  economy: Grow the economy while protecting public services. Unlock £20 billion of pension fund investment, back a just transition, and use Scotland's renewable energy wealth to cut costs for households and businesses.
-  education: A transformational national expansion of childcare from 9 months to the end of primary school, 52 weeks a year. Protect free university tuition and free school lunches.
-  equality: Uphold and protect the human rights of trans people within devolved powers. Scotland is the first country in the world to incorporate LGBTQI+ education in schools. Strong commitment to equality across all groups.
+  independence: Support independence. An SNP majority at this election is framed
+    as a mandate for a referendum. Independence cited as essential to Scotland's
+    future prosperity.
+  nhs: Significant NHS investment. Expand GP walk-in clinics, shorten waiting
+    times, deliver more operations and community diagnostics. NHS described as
+    Scotland's most precious public service.
+  housing: Build 110,000 affordable homes by 2032 (70% social rent), create a new
+    housing agency, retain the rent control framework, and provide deposit
+    support of up to £10,000 for first-time buyers.
+  climate: Continue the transition to net zero by 2045 with a focus on Scotland's
+    renewable energy wealth. Interim 2030 climate targets were dropped in 2024;
+    emphasis is on energy costs and a just transition.
+  tax: Keep Scotland's progressive income tax, the fairest and most progressive in
+    the UK. Introduce a mansion tax on properties valued above £1m from 2028.
+  economy: Grow the economy while protecting public services. Unlock £20 billion
+    of pension fund investment, back a just transition, and use Scotland's
+    renewable energy wealth to cut costs for households and businesses.
+  education: A transformational national expansion of childcare from 9 months to
+    the end of primary school, 52 weeks a year. Protect free university tuition
+    and free school lunches.
+  equality: Uphold and protect the human rights of trans people within devolved
+    powers. Scotland is the first country in the world to incorporate LGBTQI+
+    education in schools. Strong commitment to equality across all groups.

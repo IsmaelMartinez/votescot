@@ -7,12 +7,16 @@ accent: "#B8860B"
 constituency: fife-north-east
 isIncumbent: true
 quizCandidate: true
-bio: Former Leader of the Scottish Liberal Democrats (2011-2021) and MSP for North East Fife since 2016. Former MP for Dunfermline and West Fife (2006-2010). Chief Executive of the Scottish Liberal Democrats (1997-1999).
+bio: Former Leader of the Scottish Liberal Democrats (2011-2021) and MSP for
+  North East Fife since 2016. Former MP for Dunfermline and West Fife
+  (2006-2010). Chief Executive of the Scottish Liberal Democrats (1997-1999).
 highlights:
   - Leader of the Scottish Liberal Democrats (2011-2021)
-  - MSP for North East Fife since 2016; former MP for Dunfermline and West Fife (2006-2010)
+  - MSP for North East Fife since 2016; former MP for Dunfermline and West Fife
+    (2006-2010)
   - Chief Executive of the Scottish Liberal Democrats (1997-1999)
-  - Secured new funding for colleges and extra childcare support during leadership
+  - Secured new funding for colleges and extra childcare support during
+    leadership
 sources:
   - url: https://www.scotlibdems.org.uk/
     type: party_website
@@ -26,11 +30,22 @@ positions:
   education: 1
   equality: 2
 stances:
-  independence: Oppose independence. Back a written constitution for a federal United Kingdom and a new bespoke UK-EU customs union.
-  nhs: A 10-year NHS and care workforce plan, new neighbourhood health teams giving every GP practice the equivalent of an extra clinical staff member, walk-in mental health services and a Fair Deal for Rural Healthcare.
-  housing: Return housebuilding to 25,000 new homes annually, create key worker housing, and replace the SNP's housing strategy with a new holistic data-driven approach.
-  climate: Support net zero by 2045 with a programme for net zero new towns featuring rail links, district heating and 20-minute neighbourhoods.
-  tax: Where funds allow, lift tax thresholds in line with inflation and begin to close the tax differential with England in a balanced way that protects public services.
-  economy: Reform business rates to stop sudden tax hikes on successful employers and help people upskill through new Job Transition Loans worth up to £5,000.
-  education: Hire 2,000 more pupil support assistants, roll out speech and language therapy and make every school a smartphone-free environment.
-  equality: Strong defence of LGBT+ and trans rights. Ban all forms of conversion therapies and practices, working in partnership with the UK Government.
+  independence: Oppose independence. Back a written constitution for a federal
+    United Kingdom and a new bespoke UK-EU customs union.
+  nhs: A 10-year NHS and care workforce plan, new neighbourhood health teams
+    giving every GP practice the equivalent of an extra clinical staff member,
+    walk-in mental health services and a Fair Deal for Rural Healthcare.
+  housing: Return housebuilding to 25,000 new homes annually, create key worker
+    housing, and replace the SNP's housing strategy with a new holistic
+    data-driven approach.
+  climate: Support net zero by 2045 with a programme for net zero new towns
+    featuring rail links, district heating and 20-minute neighbourhoods.
+  tax: Where funds allow, lift tax thresholds in line with inflation and begin to
+    close the tax differential with England in a balanced way that protects
+    public services.
+  economy: Reform business rates to stop sudden tax hikes on successful employers
+    and help people upskill through new Job Transition Loans worth up to £5,000.
+  education: Hire 2,000 more pupil support assistants, roll out speech and
+    language therapy and make every school a smartphone-free environment.
+  equality: Strong defence of LGBT+ and trans rights. Ban all forms of conversion
+    therapies and practices, working in partnership with the UK Government.

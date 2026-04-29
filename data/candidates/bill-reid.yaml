@@ -7,7 +7,11 @@ accent: "#0a7f91"
 constituency: angus-south
 isIncumbent: false
 quizCandidate: true
-bio: Brought up on a farm in Angus and trained at agricultural college before joining the Army, where he served as a surveyor and retired as a Regimental Sergeant Major. After leaving the military he retrained and worked in London's finance sector, then ran his own business in Manchester before returning to Scotland.
+bio: Brought up on a farm in Angus and trained at agricultural college before
+  joining the Army, where he served as a surveyor and retired as a Regimental
+  Sergeant Major. After leaving the military he retrained and worked in
+  London's finance sector, then ran his own business in Manchester before
+  returning to Scotland.
 highlights:
   - Retired Regimental Sergeant Major
   - Worked in London's finance sector after retraining as a surveyor
@@ -27,11 +31,25 @@ positions:
   education: 0
   equality: 0
 stances:
-  independence: Oppose independence. Strong unionist position rejecting another referendum as a distraction from Scotland's day-to-day problems.
-  nhs: NHS Scotland stays free at the point of need and funded by general taxation, but needs major reform. A workforce plan to train more doctors and nurses and a shift to prevention.
-  housing: Repeal SNP tenancy regulations and introduce a Rent-To-Buy model for young people, first-time buyers and working families. Restore a local connection requirement for social housing.
-  climate: Scrap all SNP Net Zero related targets, subsidies and quangos. End the ban on new nuclear in Scotland and rehabilitate North Sea gas as the primary energy system.
-  tax: Cut income tax. Scrap Scotland's six income tax bands, mirror the rUK three bands at 1p below each, and aim for a 3p variation below rUK within the first five years.
-  economy: Cut £7.5bn of spending — £1bn from ideological Net Zero projects and £6.5bn from 132 quangos — to fund a new deal for Scotland that rewards work and aspiration.
-  education: Direct school-leavers into trades via technical colleges rather than universities. Ban mobile phones in classrooms and give headteachers discretion over budgets and recruitment.
-  equality: Socially conservative. Criticises existing gender policies as "woke" and argues the SNP has not protected women and girls in Scotland.
+  independence: Oppose independence. Strong unionist position rejecting another
+    referendum as a distraction from Scotland's day-to-day problems.
+  nhs: NHS Scotland stays free at the point of need and funded by general
+    taxation, but needs major reform. A workforce plan to train more doctors and
+    nurses and a shift to prevention.
+  housing: Repeal SNP tenancy regulations and introduce a Rent-To-Buy model for
+    young people, first-time buyers and working families. Restore a local
+    connection requirement for social housing.
+  climate: Scrap all SNP Net Zero related targets, subsidies and quangos. End the
+    ban on new nuclear in Scotland and rehabilitate North Sea gas as the primary
+    energy system.
+  tax: Cut income tax. Scrap Scotland's six income tax bands, mirror the rUK three
+    bands at 1p below each, and aim for a 3p variation below rUK within the
+    first five years.
+  economy: Cut £7.5bn of spending — £1bn from ideological Net Zero projects and
+    £6.5bn from 132 quangos — to fund a new deal for Scotland that rewards work
+    and aspiration.
+  education: Direct school-leavers into trades via technical colleges rather than
+    universities. Ban mobile phones in classrooms and give headteachers
+    discretion over budgets and recruitment.
+  equality: Socially conservative. Criticises existing gender policies as "woke"
+    and argues the SNP has not protected women and girls in Scotland.
