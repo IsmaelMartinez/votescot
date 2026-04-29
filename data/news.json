@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T12:51:24.668Z",
+  "lastUpdated": "2026-04-29T18:48:50.761Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Farage reported to parliament’s standards watchdog over undeclared £5m donation – as it happened",
+      "description": "<p>Farage was given £5m by the Thai-based billionaire Christopher Harborne shortly before announcing he would stand in the 2024 general election</p><ul><li><p><a href=\"https://www.theguardian.com/politics/2026/apr/29/revealed-nigel-farage-was-given-undisclosed-5m-by-crypto-billionaire-in-2024\">Exclusive: Farage was given undisclosed £5m by crypto billionaire in 2024</a></p></li></ul><p>Here is the running order for PMQs.</p><p><strong>Nigel Farage</strong> was given £5m by the crypto billionaire Christopher Harborne shortly before announcing he would stand in the 2024 British general election, <strong>Anna Isaac</strong> reports.</p> <a href=\"https://www.theguardian.com/politics/live/2026/apr/29/pmqs-live-keir-starmer-kemi-badenoch-uk-politics-latest-news-updates\">Continue reading...</a>",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/29/pmqs-live-keir-starmer-kemi-badenoch-uk-politics-latest-news-updates",
+      "publishedAt": "2026-04-29T16:33:55.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "What did Scottish party leaders do before politics?",
+      "description": "Reform's Malcolm Offord bought six boats with a fortune made in banking - but other leaders had a life before politics too.",
+      "url": "https://www.bbc.com/news/articles/cy42l4ey98eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-29T13:26:19.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Reform’s Scottish leader called ‘tone deaf’ after boasting about his houses, cars and yachts",
       "description": "<p>SNP leader John Swinney suggests Malcolm Offord and other leaders should publish tax returns before 7 May</p><ul><li><p><a href=\"https://viewer.gutools.co.uk/politics/live/2026/apr/29/pmqs-live-keir-starmer-kemi-badenoch-uk-politics-latest-news-updates\">UK politics live – latest updates</a></p></li></ul><p>The <a href=\"https://www.theguardian.com/politics/2026/jan/15/multimillionaire-leader-reform-scotland-net-worth-malcolm-offord\">leader of Reform UK</a> in Scotland, Malcolm Offord, has been dismissed as “tone deaf” and “entitled” after he boasted in a televised election debate about the number of cars, houses and boats he owned.</p><p>Responding to the row on Wednesday morning, the SNP leader, John Swinney, proposed that all party leaders should publish their tax returns before the election on 7 May.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/29/reform-scottish-leader-malcolm-offord-called-tone-deaf-boasting-cars-houses-yachts\">Continue reading...</a>",
@@ -209,20 +223,6 @@
       "description": "<p>John Swinney unveils his party’s manifesto, saying cost of living is the ‘defining issue’ for voters on 7 May</p><p>The SNP will cap supermarket prices for essential goods such as bread and milk if it retains power, John Swinney has pledged, after describing the cost of living as “the defining issue of this election”.</p><p>With polls pointing to a fifth Holyrood term for the Scottish National party, its leader said he would use devolved public health powers to fix prices on 20 to 50 items such as bread, milk, cheese, eggs, rice and chicken because their rising cost was “impacting our nation’s nutrition”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/16/snp-pledges-cap-prices-bread-milk-scotland-parliamentary-election\">Continue reading...</a>",
       "url": "https://www.theguardian.com/politics/2026/apr/16/snp-pledges-cap-prices-bread-milk-scotland-parliamentary-election",
       "publishedAt": "2026-04-16T14:38:30.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "The SNP's manifesto pledges analysed",
-      "description": "We have analysed some of the policies in the Scottish National Party's manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/c0q998dzwz2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-16T13:12:42.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Scottish Labour leader says claim he tried to do Reform deal is ‘desperate lie’",
-      "description": "<p>Anas Sarwar says there have been ‘no stitch-ups, no deals, no backroom chats with Reform’ over Holyrood elections</p><p></p><p>Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the rightwing party to keep the Scottish National party out of power.</p><p>Offord made the claim on Channel 4’s Scottish leaders’ debate on Tuesday evening, alleging the Scottish Labour leader came “bouncing up” to him at an event in December last year, suggesting they “work together to remove the SNP”.</p> <a href=\"https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie\">Continue reading...</a>",
-      "url": "https://www.theguardian.com/politics/2026/apr/15/scottish-labour-leader-anas-sarwar-reform-deal-claim-desperate-lie",
-      "publishedAt": "2026-04-15T16:42:13.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
