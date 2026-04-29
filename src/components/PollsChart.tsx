@@ -425,8 +425,21 @@ function MrpRow({ row }: { row: MrpEntry }) {
     seats: row.seats[short] ?? 0,
   }));
   const totalKnown = segments.reduce((acc, s) => acc + s.seats, 0);
-  const others = Math.max(0, TOTAL_SEATS - totalKnown);
+  // Only show an "others" segment when every named party has a seat count.
+  // If any are null (e.g. a pre-Reform MRP), the missing seats belong to that
+  // party rather than to "others".
+  const allKnown = MRP_PARTY_ORDER.every(({ short }) => row.seats[short] !== null);
+  const others = allKnown ? Math.max(0, TOTAL_SEATS - totalKnown) : 0;
   const majorityPct = (MAJORITY / TOTAL_SEATS) * 100;
+
+  // Render "majority N" only for non-negative integer majorities. Wikipedia
+  // also uses strings like "SNP -9" (9 seats short) for hung-parliament
+  // projections — those should pass through verbatim.
+  const majorityLabel = row.majority
+    ? /^\d+$/.test(row.majority)
+      ? `majority ${row.majority}`
+      : row.majority
+    : "";
 
   return (
     <div>
@@ -436,7 +449,7 @@ function MrpRow({ row }: { row: MrpEntry }) {
           {row.endDate}
           {row.client && row.client !== "N/A" ? ` · ${row.client}` : ""}
           {row.sampleSize ? ` · n=${row.sampleSize.toLocaleString()}` : ""}
-          {row.majority ? ` · ${row.majority === "3" || /^-?\d+$/.test(row.majority) ? `majority ${row.majority}` : row.majority}` : ""}
+          {majorityLabel ? ` · ${majorityLabel}` : ""}
         </span>
       </div>
       <div className="relative h-6 bg-gray-100 rounded overflow-hidden border border-gray-200">

@@ -496,8 +496,18 @@ async function main() {
   const regional = parseTable(tables[1]);
   console.log(`  Extracted ${regional.length} regional polls`);
 
+  // Locate the MRP table by header signature ("majority" column) rather than
+  // a fixed index, so a future Wikipedia table insertion doesn't silently
+  // make us parse the wrong table.
+  const mrpTableIdx = tables.findIndex((t) => /<th[^>]*>[^<]*majority[^<]*<\/th>/i.test(t));
+  if (mrpTableIdx === -1) {
+    throw new Error("Could not find MRP seat-projection table (no wikitable with a 'Majority' column)");
+  }
+  if (mrpTableIdx !== 2) {
+    console.warn(`  MRP table found at index ${mrpTableIdx} (expected 2). Wikipedia may have rearranged tables.`);
+  }
   console.log("Parsing MRP seat-projection table...");
-  const mrp = parseMrpTable(tables[2]);
+  const mrp = parseMrpTable(tables[mrpTableIdx]);
   console.log(`  Extracted ${mrp.length} MRP rows`);
 
   // Guard against silent parse failure: if Wikipedia renames a party column,
@@ -512,7 +522,7 @@ async function main() {
     );
   }
 
-  const MIN_MRP_ROWS = 2;
+  const MIN_MRP_ROWS = 3;
   if (mrp.length < MIN_MRP_ROWS) {
     throw new Error(
       `Unexpectedly few MRP rows parsed (mrp=${mrp.length}). ` +
