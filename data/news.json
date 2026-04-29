@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T18:50:39.199Z",
+  "lastUpdated": "2026-04-29T07:07:00.500Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,27 @@
     }
   ],
   "items": [
+    {
+      "title": "Independence the priority for Alliance to Liberate Scotland",
+      "description": "The party is hoping to maximise the number of pro-independence MSPs returned to Holyrood.",
+      "url": "https://www.bbc.com/news/articles/c2480r0n6q2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-29T05:02:42.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "How the changing face of farming is reflected in Scotland's election",
+      "description": "The rural vote is a significant, but often overlooked, constituency in the Scottish Parliament election.",
+      "url": "https://www.bbc.com/news/articles/c70d0y2514yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-29T05:01:56.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Reform's Scottish leader says he owns six houses, six boats and five cars",
+      "description": "Malcolm Offord was criticised as \"entitled\" during an STV leaders debate ahead of next week's election.",
+      "url": "https://www.bbc.com/news/articles/cn0pl271kzyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-28T21:30:36.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Poll Analysis: Survation 17th – 23rd of April 2026",
       "description": "Overlapping with the BBS poll, a second Survation paints a slightly better picture for the SNP and Greens, versus a poorer Conservative and Reform seat tally. Beware the margin of error though!",
@@ -126,27 +147,6 @@
       "url": "https://ballotbox.scot/survation-april-2026/",
       "publishedAt": "2026-04-23T08:00:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Starmer admits No 10 asked about job for aide Matthew Doyle",
-      "description": "The prime minister was questioned at PMQs about allegations that Downing Street had asked about a diplomat role for the then-communications chief.",
-      "url": "https://www.bbc.com/news/articles/cq59xx6n3j7o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-22T13:13:14.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "STV staff to strike on Scottish election results day",
-      "description": "Members of both the National Union of Journalists (NUJ) and Bectu are set to walk out on Friday 8 May.",
-      "url": "https://www.bbc.com/news/articles/clyxrl7prkzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-22T13:06:44.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Lib Dem leader signals party could back Sarwar as first minister",
-      "description": "Alex Cole-Hamilton says he would have an \"obligation\" to remove the SNP from power if the opportunity arose.",
-      "url": "https://www.bbc.com/news/articles/c2d8w09k4wko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-22T09:08:50.000Z",
-      "source": "BBC News"
     },
     {
       "title": "How Reform is exposing the reality of Scotland’s views on immigration and identity",
