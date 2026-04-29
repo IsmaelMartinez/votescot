@@ -8,6 +8,7 @@ textColor: "#333"
 constituency: perthshire-south-and-kinross-shire
 isIncumbent: true
 quizCandidate: true
+quizPositionsLocked: true
 bio: MSP for Perthshire South and Kinross-shire since 2021. Minister for
   Agriculture and Connectivity since February 2024. Hill farmer who founded
   Perth Farmers' Market in 1996.
@@ -28,7 +29,7 @@ positions:
   tax: 2
   economy: 1
   education: 2
-  equality: 2
+  equality: 1
 stances:
   independence: Support independence. An SNP majority at this election is framed
     as a mandate for a referendum. Independence cited as essential to Scotland's

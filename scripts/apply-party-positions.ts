@@ -46,6 +46,17 @@ function applyToDir(dir: string, parties: Map<string, PartyData>, force: boolean
       continue;
     }
 
+    // Always skip candidates whose positions have been hand-curated to
+    // override the party default — even under --force. Used for sitting
+    // MSPs whose voting record diverges from the party-default position
+    // (e.g. GRR rebels, McNeill on rent controls). Without this guard a
+    // /sync-manifestos --force run after a manifesto amendment would
+    // silently wipe the override.
+    if (data.quizPositionsLocked === true) {
+      result.skipped++;
+      continue;
+    }
+
     const partyId = matchPartyId(String(data.party ?? ""));
     const party = partyId ? parties.get(partyId) : undefined;
     if (!party) {

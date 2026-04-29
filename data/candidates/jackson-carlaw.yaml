@@ -7,6 +7,7 @@ accent: "#005EA5"
 constituency: eastwood
 isIncumbent: true
 quizCandidate: true
+quizPositionsLocked: true
 bio: Former Leader of the Scottish Conservatives (February-July 2020) and Deputy
   Leader (2011-2019) under Ruth Davidson. MSP since 2007; elected for Eastwood
   in 2016.

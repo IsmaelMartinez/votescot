@@ -8,6 +8,7 @@ textColor: "#333"
 constituency: cunninghame-north
 isIncumbent: true
 quizCandidate: true
+quizPositionsLocked: true
 bio: One of Scotland's longest-serving MSPs, in parliament since 1999. Convener
   of the Finance and Public Administration Committee. Won Cunninghame North in
   2007 by just 48 votes.

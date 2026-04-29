@@ -16,6 +16,7 @@
     "ballotPaperId": { "type": "string" },
     "isIncumbent": { "type": "boolean" },
     "quizCandidate": { "type": "boolean" },
+    "quizPositionsLocked": { "type": "boolean" },
     "bio": { "type": "string", "minLength": 1 },
     "positions": {
       "type": "object",
