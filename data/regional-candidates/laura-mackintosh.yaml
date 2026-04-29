@@ -13,5 +13,5 @@ bio: Equality Party regional list candidate for Edinburgh and Lothians East.
 highlights:
   - Equality Party regional list candidate for Edinburgh and Lothians East in the 2026 Scottish Parliament election
 sources:
-  - url: https://whocanivotefor.co.uk/parties/PP17964/equality-party
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:17964/equality-party
+    type: whocanivotefor

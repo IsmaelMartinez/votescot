@@ -11,5 +11,5 @@ bio: Scottish Common Party candidate for Glasgow Cathcart and Pollok.
 highlights:
   - Scottish Common Party candidate for Glasgow Cathcart and Pollok in the 2026 Scottish Parliament election
 sources:
-  - url: https://whocanivotefor.co.uk/parties/PP17976/scottish-common-party
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:17976/scottish-common-party
+    type: whocanivotefor

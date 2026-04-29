@@ -18,6 +18,6 @@ highlights:
   - Left the Scottish Conservatives to sit as an Independent in 2025
 sources:
   - url: https://whocanivotefor.co.uk/parties/ynmp-party:2/independent
-    type: party_website
+    type: whocanivotefor
   - url: https://www.parliament.scot/msps/current-and-previous-msps/jeremy-balfour
     type: parliament_profile

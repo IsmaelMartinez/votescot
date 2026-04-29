@@ -13,5 +13,5 @@ bio: Independent Green Voice regional list candidate for Mid Scotland and Fife.
 highlights:
   - Independent Green Voice regional list candidate for Mid Scotland and Fife in the 2026 Scottish Parliament election
 sources:
-  - url: https://whocanivotefor.co.uk/parties/PP293/independent-green-voice
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:293/independent-green-voice
+    type: whocanivotefor
