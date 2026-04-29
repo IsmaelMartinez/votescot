@@ -4,16 +4,16 @@ region: Glasgow
 boundaryYear: 2026
 description: Glasgow Kelvin and Maryhill constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: competitive
+projection: green
+competitiveness: toss-up
 topParties:
+  - party: green
+    share: 27
+    status: could-win
   - party: snp
-    share: 32
+    share: 26
     status: could-win
   - party: labour
-    share: 24
+    share: 21
     status: could-win
-  - party: green
-    share: 18
-    status: could-win
-projectionSource: Ballot Box Scotland notional results; Green vote share from 2022 council results
+projectionSource: "More in Common's 2026 Holyrood MRP (fieldwork 24 March to 10 April 2026, published 20 April 2026) projects Scottish Greens 27 / SNP 26 / Labour 21 in Glasgow Kelvin and Maryhill, calling the seat a Green pickup. YouGov's MRP for the 2026 Holyrood election (fieldwork 23 March to 8 April 2026) shows the SNP retaining the seat by a wafer-thin margin over the Greens, with Labour third — implying Green support also in the high-20s. Ballot Box Scotland's SP26 Glasgow region preview and Greens party profile both flag Kelvin and Maryhill as the strongest Green constituency target outside Edinburgh given the Hillhead/Partick East/Kelvindale base and the Glasgow University student vote. The two leading April MRPs disagree on the winner by ~1 point; the modal call is a Green-favoured three-way toss-up."

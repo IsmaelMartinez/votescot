@@ -4,16 +4,16 @@ region: Glasgow
 boundaryYear: 2026
 description: Glasgow Southside constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: labour
+projection: snp
 competitiveness: competitive
 topParties:
-  - party: labour
-    share: 33
-    status: could-win
   - party: snp
+    share: 34
+    status: could-win
+  - party: labour
     share: 30
     status: could-win
-  - party: reform
-    share: 12
+  - party: green
+    share: 16
     status: might-win
-projectionSource: Ballot Box Scotland notional results; Glasgow council vote trends
+projectionSource: "April 2026 MRPs converge on an SNP hold with Labour clear second and Greens credible third on the constituency vote. More in Common's Holyrood MRP (fieldwork 4 Feb to 10 April 2026) places Glasgow Southside within five points of a Labour gain with the SNP narrowly ahead. YouGov's first 2026 MRP (23 March to 8 April 2026) is more bullish for the SNP, putting the SNP 19 points clear of Labour. Ballot Box Scotland's SP26 Glasgow Region Preview frames the seat as an SNP/Labour battle on the constituency vote with the Scottish Greens (Holly Bruce) credible third given the seat aggregates some of Scotland's strongest Green wards. Reform is not credibly top-three here on any published April 2026 projection."

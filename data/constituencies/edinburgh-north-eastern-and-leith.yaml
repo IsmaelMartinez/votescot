@@ -4,16 +4,16 @@ region: Edinburgh and Lothians East
 boundaryYear: 2026
 description: Edinburgh North Eastern and Leith constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: competitive
+projection: green
+competitiveness: toss-up
 topParties:
-  - party: snp
-    share: 32
+  - party: green
+    share: 26
     status: could-win
   - party: labour
-    share: 27
+    share: 25
     status: could-win
-  - party: green
-    share: 16
-    status: might-win
-projectionSource: Ballot Box Scotland notional results with national polling swing
+  - party: snp
+    share: 24
+    status: could-win
+projectionSource: "More in Common 2026 Holyrood MRP (April 2026) projects a three-way knife-edge with Greens 26 / Labour 25 / SNP 24 — all within two points — and names the seat as one of two constituency Green wins alongside Glasgow Kelvin and Maryhill. YouGov's first 2026 Holyrood MRP (fieldwork 23 March to 8 April 2026) gives the Greens only Edinburgh Central and otherwise has the SNP holding Edinburgh seats; Electoral Calculus's April 2026 Scotland MRP shows SNP winning 7 of 8 constituencies in the Edinburgh and Lothians East region. The Ballot Box Scotland 2021 notional places this seat as a notional SNP hold for Ben Macpherson. Aggregating these, the seat is best described as a Green/Labour/SNP toss-up."
