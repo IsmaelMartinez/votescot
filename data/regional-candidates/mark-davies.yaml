@@ -17,7 +17,7 @@ highlights:
 sources:
   - url: https://www.reformparty.uk/
     type: party_website
-  - url: https://whocanivotefor.co.uk/person/123125/mark-davies/
+  - url: https://whocanivotefor.co.uk/person/123125/mark-davies
     type: whocanivotefor
 positions:
   independence: 0
