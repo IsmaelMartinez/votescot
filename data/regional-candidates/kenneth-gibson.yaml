@@ -26,7 +26,7 @@ positions:
   tax: 2
   economy: 1
   education: 2
-  equality: 2
+  equality: 1
 stances:
   independence: Support independence. An SNP majority at this election is framed as a mandate for a referendum. Independence cited as essential to Scotland's future prosperity.
   nhs: Significant NHS investment. Expand GP walk-in clinics, shorten waiting times, deliver more operations and community diagnostics. NHS described as Scotland's most precious public service.
@@ -35,5 +35,5 @@ stances:
   tax: Keep Scotland's progressive income tax, the fairest and most progressive in the UK. Introduce a mansion tax on properties valued above £1m from 2028.
   economy: Grow the economy while protecting public services. Unlock £20 billion of pension fund investment, back a just transition, and use Scotland's renewable energy wealth to cut costs for households and businesses.
   education: A transformational national expansion of childcare from 9 months to the end of primary school, 52 weeks a year. Protect free university tuition and free school lunches.
-  equality: Uphold and protect the human rights of trans people within devolved powers. Scotland is the first country in the world to incorporate LGBTQI+ education in schools. Strong commitment to equality across all groups.
+  equality: Voted against the Gender Recognition Reform (Scotland) Bill at Stage 3 in December 2022, one of nine SNP MSPs to break with party leadership on that vote. More cautious than the SNP mainstream on self-identification; otherwise broadly aligned with party equality commitments including LGBTQI+ inclusive education.
 quizCandidate: true
