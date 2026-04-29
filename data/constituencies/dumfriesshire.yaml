@@ -4,16 +4,16 @@ region: South Scotland
 boundaryYear: 2026
 description: Dumfriesshire constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: conservative
-competitiveness: competitive
+projection: snp
+competitiveness: toss-up
 topParties:
-  - party: conservative
-    share: 30
-    status: could-win
   - party: snp
-    share: 24
+    share: 26
+    status: could-win
+  - party: conservative
+    share: 25
     status: could-win
   - party: reform
-    share: 18
-    status: might-win
-projectionSource: Ballot Box Scotland notional results adjusted for Reform UK vote share
+    share: 24
+    status: could-win
+projectionSource: "Calibrated from late-April 2026 MRPs. YouGov MRP (fieldwork 23 March to 8 April 2026) puts Dumfriesshire at SNP 33 / Con 24 / Reform 22, flagging it as one of only two seats where Reform sits within ten points of the leader. JL Partners MRP (31 March to 13 April 2026, for The Telegraph) goes further and projects Reform actually winning Dumfriesshire as one of three Reform constituency gains. More in Common's April 2026 MRP lists Dumfriesshire among the five seats the SNP is expected to take from the Conservatives. Electoral Calculus / Find Out Now (13 to 31 March 2026) shows the SNP winning the vast majority of constituencies. The modal read is a tight three-way contest with SNP narrowly ahead, Conservatives clinging on as the traditional incumbent vote, and Reform surging into clear contention; YouGov's 33/24/22 was tightened to 26/25/24 to reflect late-April convergence and Reform momentum in the Borders and Dumfries and Galloway."

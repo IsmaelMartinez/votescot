@@ -4,16 +4,16 @@ region: South Scotland
 boundaryYear: 2026
 description: Ayr constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: competitive
+projection: reform
+competitiveness: toss-up
 topParties:
+  - party: reform
+    share: 29
+    status: could-win
   - party: snp
-    share: 30
+    share: 27
     status: could-win
   - party: conservative
     share: 24
     status: could-win
-  - party: reform
-    share: 18
-    status: could-win
-projectionSource: Ballot Box Scotland notional results; three-way Conservative-Reform-SNP split
+projectionSource: "More in Common Holyrood MRP (fieldwork 4 February to 10 April 2026, published April 2026) projects Ayr as a Reform UK gain with Reform on 29.1, SNP on 27.0, Conservative on 23.6, Labour on 15.0 and Lib Dem on 3.8. This is one of only two constituencies (with Banffshire and Buchan Coast) that More in Common's MRP awards directly to Reform. Ballot Box Scotland's notional 2021 analysis still classes Ayr as the most marginal seat in Scotland (SNP majority 0.4 percent), and YouGov's April 2026 Holyrood MRP does not flag Ayr among Reform's strongest targets — the call leans on the More in Common constituency-level shares as the most recent published numbers. With a 2.1-point Reform lead over the SNP and 5.5 points over the Conservatives, this is a textbook three-way toss-up."

@@ -4,16 +4,16 @@ region: North East Scotland
 boundaryYear: 2026
 description: Banffshire and Buchan Coast constituency for the 2026 Scottish Parliament election.
 context: Data synced from Democracy Club.
-projection: snp
-competitiveness: safe
+projection: reform
+competitiveness: toss-up
 topParties:
-  - party: snp
-    share: 40
-    status: will-win
-  - party: conservative
-    share: 20
-    status: might-win
   - party: reform
-    share: 16
-    status: might-win
-projectionSource: Historical results and national polling; strong SNP incumbency
+    share: 28
+    status: could-win
+  - party: snp
+    share: 27
+    status: could-win
+  - party: conservative
+    share: 22
+    status: could-win
+projectionSource: "Calibrated from the More in Common 2026 Holyrood MRP (fieldwork 24 March to 10 April 2026), which projects Reform to gain Banffshire and Buchan Coast from the SNP and shows Reform polling above 25 percent across the north-east; the Ballot Box Scotland constituency model (April 2026), which narrowly projects Reform to take the seat and identifies it as Reform's single best constituency target in Scotland; the YouGov 23 March to 8 April 2026 MRP, which is more SNP-favourable in the north-east and keeps the SNP narrowly ahead; and the 2021 notional baseline on the new 2026 boundaries (SNP 45.2 / Con 42.9, SNP majority 1.9 percent). Electoral Calculus (April 2026) is a contrary outlier projecting no Reform constituency wins. Modal call: a narrow Reform lead with all three parties bunched in the mid-20s."
