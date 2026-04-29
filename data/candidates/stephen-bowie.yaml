@@ -11,5 +11,5 @@ bio: Alliance to Liberate Scotland candidate for Aberdeen Donside.
 highlights:
   - Alliance to Liberate Scotland candidate for Aberdeen Donside in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP18280/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:18280/alliance-to-liberate-scotland
+    type: whocanivotefor

@@ -17,7 +17,7 @@ highlights:
 sources:
   - url: https://www.snp.org/
     type: party_website
-  - url: https://whocanivotefor.co.uk/person/21071/michael-frederick-hutchison/
+  - url: https://whocanivotefor.co.uk/person/21071/michael-frederick-hutchison
     type: whocanivotefor
 textColor: "#333"
 positions:

@@ -11,5 +11,5 @@ bio: Independent candidate for Banffshire and Buchan Coast.
 highlights:
   - Independent candidate for Banffshire and Buchan Coast in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/ynmp-party:2/independent
+    type: whocanivotefor

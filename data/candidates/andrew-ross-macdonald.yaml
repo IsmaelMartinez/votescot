@@ -11,5 +11,5 @@ bio: Alliance to Liberate Scotland and Sovereignty candidate for Caithness, Suth
 highlights:
   - Alliance to Liberate Scotland and Sovereignty candidate for Caithness, Sutherland and Ross
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/joint-party:12666-18280/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/joint-party:12666-18280/alliance-to-liberate-scotland-and-sovereignty
+    type: whocanivotefor

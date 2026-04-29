@@ -13,5 +13,5 @@ bio: Abolish the Scottish Parliament Party regional list candidate for Central S
 highlights:
   - Abolish the Scottish Parliament Party regional list candidate for Central Scotland and Lothians West in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP6673/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:6673/abolish-the-scottish-parliament-party
+    type: whocanivotefor

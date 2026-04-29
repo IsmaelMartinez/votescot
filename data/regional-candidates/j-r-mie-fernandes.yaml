@@ -17,7 +17,7 @@ highlights:
 sources:
   - url: https://www.snp.org/
     type: party_website
-  - url: https://whocanivotefor.co.uk/person/84949/jeremie-fernandes/
+  - url: https://whocanivotefor.co.uk/person/84949/jeremie-fernandes
     type: whocanivotefor
 textColor: "#333"
 positions:

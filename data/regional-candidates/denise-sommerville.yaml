@@ -13,5 +13,5 @@ bio: University of Glasgow politics student and community association vice chair
 highlights:
   - Glasgow University politics student; pledged to return 20% of salary to community
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/ynmp-party:2/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/ynmp-party:2/independent
+    type: whocanivotefor

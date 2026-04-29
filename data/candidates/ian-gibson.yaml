@@ -11,5 +11,5 @@ bio: Alliance for Democracy and Freedom candidate for Cunninghame North.
 highlights:
   - Alliance for Democracy and Freedom candidate for Cunninghame North in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP10288/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:10288/alliance-for-democracy-and-freedom
+    type: whocanivotefor

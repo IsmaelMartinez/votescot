@@ -11,5 +11,5 @@ bio: British Unionist Party candidate for Bathgate.
 highlights:
   - British Unionist Party candidate for Bathgate in the 2026 Scottish Parliament election
 sources:
-  - url: http://candidates.democracyclub.org.uk/api/next/parties/PP2834/
-    type: party_website
+  - url: https://whocanivotefor.co.uk/parties/party:2834/british-unionist-party
+    type: whocanivotefor
