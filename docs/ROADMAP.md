@@ -1,6 +1,6 @@
 # VoteScot Roadmap
 
-Last updated: 29 April 2026 (cross-reference pass surfaced 4 voter-impacting position mismatches, 1 factually-wrong bio, 9 wobbly projections, and 356 source-URL hygiene items)
+Last updated: 30 April 2026 (six pre-election tracks shipped as PRs #74–#79: 4 incumbent overrides + lock flag, 5 projection re-sources, 4 projection calibrations, 4 bio fixes, 356 URL hygiene items, polls-chart race view)
 
 ## What's live now
 
@@ -132,57 +132,36 @@ A second cross-reference pass on 29 April compared assigned positions against Th
 
 ### Pre-election fixes (do before 7 May)
 
-- [ ] **Override 4 incumbents whose party-default position substantively misleads.** Voter-facing — a quiz user relying on the displayed score would be wrong about how the candidate actually votes:
-  - `data/regional-candidates/jackson-carlaw.yaml` and `data/candidates/jackson-carlaw.yaml`: voted *for* GRR Bill in 2022 (one of two Tory MSPs who did). Override `equality: 0` (party default) to `1` with a per-candidate stance note.
-  - `data/regional-candidates/sandesh-gulhane.yaml` and `data/candidates/sandesh-gulhane.yaml`: voted *for* GRR Bill. Same fix as Carlaw.
-  - `data/candidates/kenneth-gibson.yaml` (and regional file): one of nine SNP MSPs who voted *against* GRR. Override `equality: 2` to `1` plus stance note.
-  - `data/regional-candidates/pauline-mcneill.yaml`: long-standing public champion of statutory rent controls (lodged a Member's Bill on it), which contradicts the Scottish Labour 2026 "no new rent controls" line our `housing: 1` encodes. Override to `housing: 2` plus stance note.
-  - Lower-priority companion: `data/candidates/jim-fairlie.yaml` abstained on GRR; keep `equality: 2` but add a per-candidate stance note acknowledging the abstention.
-
-- [ ] **Re-source 5 implausible constituency projections.** Each of these has the *winner* wrong against the latest MRPs and BBS, not just shares wobbly:
-  - `data/constituencies/glasgow-southside.yaml` — currently Labour 33 / SNP 30 / Reform 12. None of YouGov, Electoral Calculus, More in Common, or BBS has Labour winning Sturgeon's old seat; BBS frames it as an SNP/Green battleground. Re-source to SNP-leaning toss-up with Greens second.
-  - `data/constituencies/strathkelvin-and-bearsden.yaml` — Lib Dems aren't even in top-3; More in Common explicitly names this as a Lib Dem gain from SNP. Re-source as SNP/LibDem marginal.
-  - `data/constituencies/glasgow-kelvin-and-maryhill.yaml` — Greens at 18% (third); MRPs put Greens as the strongest pickup outside Edinburgh Central. Bump Greens into high-20s / low-30s.
-  - `data/constituencies/edinburgh-north-eastern-and-leith.yaml` — Greens at 16%; More in Common has them winning. Re-source as a 3-way SNP/Lab/Green toss-up.
-  - `data/constituencies/edinburgh-northern.yaml` — LibDem 7-point lead too high; tighten to a toss-up similar to Edinburgh Central.
-
-- [ ] **Calibrate 4 wobbly projections.** Defensible direction but shares need adjusting:
-  - `data/constituencies/ayr.yaml` — bump Reform to low-20s, mark `toss-up`.
-  - `data/constituencies/banffshire-and-buchan-coast.yaml` — Reform should be mid-20s; downgrade `safe` to `competitive`.
-  - `data/constituencies/eastwood.yaml` — Tory 30% looks high vs national 8-12%; SNP/Con/Lab three-way more honest.
-  - `data/constituencies/dumfriesshire.yaml` — tighten to a Con/SNP/Reform marginal in the mid-20s for each.
-
-- [ ] **Fix 1 factually-wrong bio + 3 stale framings.**
-  - `data/candidates/angela-constance.yaml` — bio says "MSP for Almond Valley since 2007" but Almond Valley didn't exist until 2011 (she was MSP for Livingston 2007–2011). Edit to "MSP for Almond Valley since 2011 (and previously MSP for Livingston from 2007)."
-  - `data/candidates/alexander-burnett.yaml` — claims current "Scottish Conservative Chief Whip and Vice-Chairman for campaigning"; he held that role 2022–2025 (Tim Eagle has it since September 2025). Reframe as former.
-  - `data/candidates/stephen-gethins.yaml` — highlight says "Lecturer in international relations at St Andrews"; he's actually Professor of Practice. Promote.
-  - `data/candidates/shirley-anne-somerville.yaml` — "MSP since 2007" framing glosses a 2011–2016 gap. Reframe.
-
-- [ ] **Source URL hygiene (mechanical, ~1 hour).**
-  - Strip trailing slash from ~94 `whocanivotefor.co.uk/person/<id>/<slug>/` URLs across `data/candidates/` and `data/regional-candidates/`. The site 404s on the trailing-slash form. Pure normalisation, no editorial judgement needed.
-  - Replace ~262 stale `candidates.democracyclub.org.uk/api/next/parties/<id>/` API URLs with proper party homepages or per-candidate WhoCanIVoteFor pages. The PR #53 cleanup covered the 704 major-party files; this is the long-tail (UKIP, Independent Green Voice, Workers Party, ISP, Liberal Party, Scottish Rural Party, Alliance to Liberate Scotland, plus Independents).
+All six pre-election tracks shipped 29–30 April 2026 as PRs #74–#79. Detailed entries moved to the "What shipped" archive below.
 
 ### Post-election cleanup (after 7 May)
 
-- [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site.
-- [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor.
-- [ ] **Polls chart: tell more of the story (Wikipedia "race" view).** Today's `PollsChart.tsx` draws one straight-line-between-points series per party over a 12-month window, with no smoothing, no 2021 baseline, no per-poll dots, and no seat projection. Wikipedia's [opinion polling page](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election) gives the same data more story: each poll is a translucent dot, a smoothed trend line per party rides over the dot cloud, the 2021 result is a horizontal reference line, and a separate MRP seat-projection table answers the "what does that mean in seats" question. The user feedback that the current chart "only shows one layer" maps onto exactly that gap — we plot the trend without the volume, the dispersion, or the seat consequence.
-
-  The recommended scope is a single PR that keeps the hand-rolled SVG and adds three layers in `src/components/PollsChart.tsx`: per-poll dots (radius scaled by `sampleSize`, opacity ~0.4) drawn under the existing party lines so dispersion is visible at a glance; a smoothed trend line per party computed via a centred 30-day rolling mean (pure function in a new `src/lib/polls-smoothing.ts`, ~30 lines, easy to unit-test against the existing fixtures); and a dashed horizontal reference line per party at its 2021 result (SNP 47.7% / 40.3%, baselines from the same Wikipedia article) with a small label at the right edge. The existing straight-segment line drops to a thin "raw" overlay or is removed once the smoothed line is in.
-
-  As a second layer, add an "MRP seat projections" panel below the chart. The authoritative MRP rows live in a third Wikipedia table on the polling page that `sync-polls.ts` does not currently scrape. Extend it to parse that table (pollster, fieldwork dates, SNP/Lab/Con/LD/Green/Reform/Alba seat counts, with 65 as the majority threshold), persist it to `data/polls.json` under a new top-level `mrp:` key (additive, no breaking change for existing readers), and render it as a small horizontal stacked bar per pollster sorted newest-first, with a vertical "65 = majority" marker. Three or four most-recent rows is enough.
-
-  Open decisions to settle in the PR description before coding. Smoothing window: 30-day centred rolling mean is the simplest defensible choice; LOESS would be nicer but is more code than the hand-rolled SVG ethos invites. Whether to keep the constituency/regional toggle as one chart or stack both vertically (Wikipedia stacks them — useful when comparing list-vs-constituency divergence for Greens / Reform). Whether the 2021 baseline lines should be on by default or behind a "show baselines" toggle (seven dashed lines may visually overload). Whether the MRP panel lives on the existing `/polls` page or graduates to its own `/polls/seats` route; current preference is one page, one scroll. None of these need a chart library.
-
-  Files touched: `src/components/PollsChart.tsx` (chart layers, MRP panel), new `src/lib/polls-smoothing.ts` (pure rolling-mean), `scripts/sync-polls.ts` (third-table parser, additive `mrp:` field plus a `MIN_MRP_ROWS` guard so a Wikipedia rename also fails CI loudly), `data/polls.json` schema (add `mrp:` array), and a unit test alongside the existing parser tests. Out of scope: per-region polling trends (already deferred — Wikipedia's per-region breakdowns are too thin), pollster house-effect adjustment, and any chart-library swap.
+- [ ] **"How we did" projection retrospective.** Publish a page comparing each constituency's projected top-3 shares against the actual result. Call out the wins, the misses, and the methodology behind the calls. Strongest credibility asset for any 2027+ version of the site. Natural day-after-results task.
+- [ ] **Sunset the site a few weeks after polling day.** VoteScot is ephemeral by design — built for one election, archived after. The plan is to take the live site offline once the retrospective has had a chance to settle (mid-May to early June), leaving a single static landing page that links to a Wayback Machine snapshot taken a few days before polling day. Open questions: which snapshot date to anchor on (probably 6 May, the eve of poll), whether to keep the GitHub repo public as a frozen reference (yes — it has the methodology and is the citation surface for the retrospective), and whether to redirect inbound traffic from the old `/quiz` and `/candidates/*` routes to the snapshot or to the landing page. Submit URL via [Save Page Now](https://web.archive.org/save/), confirm full crawl coverage (map TopoJSON, party YAMLs, polls JSON, all candidate pages), then replace the site with the landing page. No new infrastructure required — GitHub Pages can serve a one-page `index.html` indefinitely.
+- [ ] **Blog post: ephemeral websites with AI.** Short retrospective piece on why the "build for one event, archive after" pattern is more viable now than it used to be — drafting copy, sourcing data, fanning out party positions to candidate files, and shipping accessibility/performance polish were all collapsed into days of solo work because the AI coding assistant absorbed the throwaway labour that previously made ephemeral sites uneconomical. Concrete examples from this build: the manifesto parser that runs once per election cycle, the per-candidate bio research pass that wrote 200 confident bios with citations, the same-day fix-and-ship loop on the projection re-sources after the cross-reference audit. Frame it as "the industry can do this now, and election-information sites are an obvious fit." 800–1,200 words. Publish on a personal blog or as a GitHub repo `POSTMORTEM.md`. Not new ground philosophically (throwaway prototypes have always been a thing) but newly cheap.
+- [ ] **Deep-freeze the data caches** (or don't — current shallow freeze matches the existing pattern across all six cached loaders in `src/lib/data.ts`). If deepening, do all six consistently in a single refactor. Lower priority given the planned sunset.
 
 The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 })` in `apply-party-positions.ts` and retiring the `populate-projections.ts` default — are already done. `apply-party-positions.ts:60` and `sync-regional-candidates.ts:112` both pass `{ lineWidth: 0 }`; `populate-projections.ts` was replaced by `scripts/project-from-polls.ts` and no `defaultProjection` template references remain anywhere.
 
 ## What shipped before 7 May (archived task list)
 
-~~Consolidate the constituency and regional quizzes into one tabbed view.~~ Done. `/quiz` now asks the 8 questions once and renders both ballots in a tabbed result view ("Constituency ballot" / "Regional list"). One postcode lookup (or browse pick) resolves both `selectedConstituencyId` and `selectedRegionId` via the constituency-to-region map. `/quiz/regional` was retired and redirects to `/quiz`, with inbound `?region=` links pre-selecting the regional tab. The duplicate "Regional" header tab was dropped; navigation is now Map / Candidates / Quiz / Guide. `QuizEngine` was refactored from a discriminated-mode component into one component holding both result views, with the party-block computation extracted into a shared `buildPartyBlocks()` helper.
+### Pre-election final pass (shipped 29–30 April 2026)
+
+~~Override 4 incumbents whose party-default position substantively misleads.~~ Done in PR #74. Carlaw and Gulhane (`equality: 0 → 1`) voted *for* the Gender Recognition Reform (Scotland) Bill at Stage 3 in December 2022, breaking with the Conservative line. Gibson (`equality: 2 → 1`) voted *against*, one of nine SNP rebels. McNeill (`housing: 1 → 2`) is a long-standing public champion of statutory rent controls, lodging the Fair Rents (Scotland) Bill as a Member's Bill in 2019 — diverges from Scottish Labour's 2026 "no new rent controls" line. Fairlie kept his SNP-default `equality` but is now flagged as a GRR abstainer in his stance text (later bumped to `equality: 1` for consistency with Gibson). The PR also added a new `quizPositionsLocked: true` schema field that `apply-party-positions.ts` respects even under `--force`, so a future `/sync-manifestos` run after a manifesto amendment cannot silently wipe these overrides.
+
+~~Re-source 5 implausible constituency projections.~~ Done in PR #75. Each had the *winner* wrong against April 2026 MRPs: Glasgow Southside (was Labour 33 / SNP 30 / Reform 12 → SNP 34 / Lab 30 / Green 16 competitive), Strathkelvin and Bearsden (was SNP 33 with LibDems missing top-3 → LibDem 33 / SNP 32 / Lab 14 toss-up per More in Common), Glasgow Kelvin and Maryhill (Greens at 18 → 27, Green-favoured toss-up), Edinburgh North Eastern and Leith (Greens at 16 → 26, three-way toss-up per More in Common), Edinburgh Northern (LibDem 7-pt lead tightened to a Con/SNP/LibDem toss-up). Every `projectionSource` paragraph now cites the specific MRPs that informed the call.
+
+~~Calibrate 4 wobbly projections.~~ Done in PR #76. Direction was defensible on each but shares needed adjusting: Ayr (now Reform 29 / SNP 27 / Con 24 toss-up per More in Common's headline), Banffshire and Buchan Coast (downgraded from `safe` SNP to a Reform 28 / SNP 27 / Con 22 toss-up — Reform's strongest Scottish target per BBS), Eastwood (Tory 30 was too high; three April 2026 MRPs converge on an SNP gain, now SNP 35 / Con 24 / Lab 16), Dumfriesshire (tightened YouGov's 33/24/22 to a 26/25/24 SNP/Con/Reform toss-up reflecting JL Partners and late-April convergence).
+
+~~Fix 1 factually-wrong bio + 3 stale framings.~~ Done in PR #77. Constance: "MSP for Almond Valley since 2007" corrected to "since 2011" (constituency didn't exist before then; she was MSP for Livingston 2007–2011). Burnett: Chief Whip and Vice-Chairman role reframed as former (held 2022–2025; Tim Eagle has it since September 2025). Gethins: highlight "Lecturer in international relations at St Andrews" promoted to "Professor of Practice in International Relations". Somerville: "MSP since 2007" reworded to spell out the 2011–2016 gap (Lothians regional 2007–2011, Dunfermline since 2016). Edits applied to both `data/candidates/` and `data/regional-candidates/` where applicable.
+
+~~Source URL hygiene (mechanical).~~ Done in PR #78. Stripped trailing slashes from 94 `whocanivotefor.co.uk/person/<id>/<slug>/` URLs (the trailing-slash form 404s). Replaced 262 stale `candidates.democracyclub.org.uk/api/next/parties/<id>/` API URLs with the official party homepage where one was known (UKIP, Workers Party, Liberal Party, Animal Welfare Party, Scottish Family Party, Christian Party, Scottish Socialist Party, TUSC, Communist Party, Independence for Scotland Party, Freedom Alliance, Heritage Party, Advance UK, Scottish Libertarian Party). The follow-up review caught that the WhoCanIVoteFor party-page fallback URLs needed `/parties/party:<id>/<slug>` not `/parties/<PP_id>/<slug>` (the latter 404s) and that Workers Party of Britain is mid-migration to `workerspartygb.org`; both fixed before merge.
+
+~~Polls chart "race view" enhancement.~~ Done in PR #79. `/guide#polls` now renders per-poll dots scaled by sample size, a 30-day centred rolling-mean smoothed trend per party (new pure helper in `src/lib/polls-smoothing.ts` with 5 unit tests), dashed 2021 baseline reference lines with a "show 2021 baselines" checkbox, and a 5-year time window from May 2021. Replaced the binary constituency/regional toggle with a three-way **Constituency vote / Regional vote / Seat projection (MRP)** flip. The MRP option renders horizontal stacked bars per recent MRP (newest-first) with a vertical 65-seat majority marker. `scripts/sync-polls.ts` extended to parse the third Wikipedia table (MRP seat projections) into an additive `mrp:` array on `data/polls.json`, with a header-signature lookup so a future Wikipedia table insertion fails loudly instead of silently parsing the wrong table.
 
 ### Critical — data accuracy
+
+~~Consolidate the constituency and regional quizzes into one tabbed view.~~ Done. `/quiz` now asks the 8 questions once and renders both ballots in a tabbed result view ("Constituency ballot" / "Regional list"). One postcode lookup (or browse pick) resolves both `selectedConstituencyId` and `selectedRegionId` via the constituency-to-region map. `/quiz/regional` was retired and redirects to `/quiz`, with inbound `?region=` links pre-selecting the regional tab. The duplicate "Regional" header tab was dropped; navigation is now Map / Candidates / Quiz / Guide. `QuizEngine` was refactored from a discriminated-mode component into one component holding both result views, with the party-block computation extracted into a shared `buildPartyBlocks()` helper.
 
 ~~Enrich high-profile candidates with real bios.~~ Done. 13 candidates (Swinney, Sarwar, Baillie, Fraser, Gilruth, McAllan, Somerville, Bibby, Gallacher, Rennie, Slater, Constance, Thewliss, Macpherson) have substantive bios and highlights. Factual accuracy verified via code review.
 
@@ -236,8 +215,8 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
   ─────────────────────────────────────────────────────────────
 
   TODAY                                           ELECTION
-  18 Apr                                           7 May
-    │              19 days remaining                  │
+  30 Apr                                           7 May
+    │              7 days remaining                   │
     ▼                                                ▼
     ┌─────────────────────────────────────────────────┐
     │           WHAT'S DONE (ship-ready)              │
@@ -245,15 +224,18 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
     │  ✅ Vote compass quiz (8 policy areas)          │
     │  ✅ 434 candidates / 73 constituencies          │
     │  ✅ Interactive map + postcode lookup            │
-    │  ✅ Polling trends (132 polls, daily sync)      │
+    │  ✅ Polling trends (race view, MRP seats panel) │
     │  ✅ Constituency projections (all 73 overridden)│
     │  ✅ How-to-Vote guide                           │
     │  ✅ Party pages                                 │
     │  ✅ Latest news on homepage (BBC RSS, 3x/day)   │
     │  ✅ 6/6 manifestos parsed with verbatim quotes  │
     │  ✅ 78 sitting MSPs flagged as incumbents       │
+    │  ✅ 5 incumbent position overrides + lock flag  │
+    │  ✅ 9 projections re-sourced/calibrated         │
+    │  ✅ 4 bio fixes + 356 source URLs cleaned       │
     │  ✅ Accessibility & performance optimised       │
-    │  ✅ 45 tests passing                            │
+    │  ✅ 107 tests passing                           │
     │  ✅ Dependencies updated                        │
     └─────────────────────────────────────────────────┘
 
@@ -273,22 +255,19 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
-    │      NEXT UP (see "Next up" section above)      │
+    │      NEXT UP                                    │
     │                                                 │
-    │  Pre-election fixes (do before 7 May):          │
-    │  • 4 incumbent position overrides (GRR rebels)  │
-    │  • 5 implausible projections to re-source       │
-    │  • 4 wobbly projections to calibrate            │
-    │  • 4 bio fixes (Constance / Burnett / others)   │
-    │  • URL hygiene: ~94 trailing slashes,           │
-    │    ~262 legacy DC API URLs                      │
+    │  Pre-election: nothing scheduled. All six       │
+    │  tracks shipped 29–30 Apr (PRs #74–#79).        │
     │                                                 │
     │  Watch:                                         │
     │  • Re-run /sync-manifestos if any party amends  │
     │                                                 │
     │  Post-election:                                 │
     │  • "How we did" projection retrospective        │
-    │  • Deep-freeze data caches (or decide not to)   │
+    │  • Sunset the site (Wayback snapshot + landing) │
+    │  • Blog post: ephemeral websites with AI        │
+    │  • Deep-freeze data caches (lower priority)     │
     └─────────────────────────────────────────────────┘
 
     ┌─────────────────────────────────────────────────┐
@@ -305,14 +284,15 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
   ─────────────────────────────────────────────────────────────
 
     ┌─────────────────────────────────────────────────┐
-    │  No concrete post-election plans. The site      │
-    │  was built for this election. Ideas that        │
-    │  would only happen if there's energy for it:    │
+    │  The site is ephemeral by design. Plan:         │
     │                                                 │
-    │  ? Multi-election support (locals 2027, etc.)   │
-    │  ? MSP voting record vs promises tracker        │
-    │  ? Community contributions via Decap CMS        │
-    │  ? Custom domain (votescot.scot)                │
-    │  ? Plausible analytics                          │
+    │  Days 1–3: "How we did" retrospective           │
+    │  Weeks 2–4: Wayback Machine snapshot + sunset   │
+    │             (replace site with landing page     │
+    │             linking to the snapshot)            │
+    │  Sometime: Blog post on ephemeral sites + AI    │
+    │                                                 │
+    │  Repo stays public as a frozen reference and    │
+    │  citation surface for the retrospective.        │
     └─────────────────────────────────────────────────┘
 ```
