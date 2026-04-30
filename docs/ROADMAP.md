@@ -159,11 +159,9 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
 
 ~~Polls chart "race view" enhancement.~~ Done in PR #79. `/guide#polls` now renders per-poll dots scaled by sample size, a 30-day centred rolling-mean smoothed trend per party (new pure helper in `src/lib/polls-smoothing.ts` with 5 unit tests), dashed 2021 baseline reference lines with a "show 2021 baselines" checkbox, and a 5-year time window from May 2021. Replaced the binary constituency/regional toggle with a three-way **Constituency vote / Regional vote / Seat projection (MRP)** flip. The MRP option renders horizontal stacked bars per recent MRP (newest-first) with a vertical 65-seat majority marker. `scripts/sync-polls.ts` extended to parse the third Wikipedia table (MRP seat projections) into an additive `mrp:` array on `data/polls.json`, with a header-signature lookup so a future Wikipedia table insertion fails loudly instead of silently parsing the wrong table.
 
-### Earlier shipped work
+### Critical — data accuracy
 
 ~~Consolidate the constituency and regional quizzes into one tabbed view.~~ Done. `/quiz` now asks the 8 questions once and renders both ballots in a tabbed result view ("Constituency ballot" / "Regional list"). One postcode lookup (or browse pick) resolves both `selectedConstituencyId` and `selectedRegionId` via the constituency-to-region map. `/quiz/regional` was retired and redirects to `/quiz`, with inbound `?region=` links pre-selecting the regional tab. The duplicate "Regional" header tab was dropped; navigation is now Map / Candidates / Quiz / Guide. `QuizEngine` was refactored from a discriminated-mode component into one component holding both result views, with the party-block computation extracted into a shared `buildPartyBlocks()` helper.
-
-### Critical — data accuracy
 
 ~~Enrich high-profile candidates with real bios.~~ Done. 13 candidates (Swinney, Sarwar, Baillie, Fraser, Gilruth, McAllan, Somerville, Bibby, Gallacher, Rennie, Slater, Constance, Thewliss, Macpherson) have substantive bios and highlights. Factual accuracy verified via code review.
 
@@ -286,7 +284,7 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
   ─────────────────────────────────────────────────────────────
 
     ┌─────────────────────────────────────────────────┐
-    │  The site is ephemeral by design. Plan:          │
+    │  The site is ephemeral by design. Plan:         │
     │                                                 │
     │  Days 1–3: "How we did" retrospective           │
     │  Weeks 2–4: Wayback Machine snapshot + sunset   │
