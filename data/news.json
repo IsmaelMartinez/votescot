@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T07:12:13.897Z",
+  "lastUpdated": "2026-05-01T12:39:10.930Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,6 +16,13 @@
   ],
   "items": [
     {
+      "title": "Trump to remove whisky tariffs after King's visit",
+      "description": "The US president said he would lift restrictions on Scotland's ability to work with the state of Kentucky on whisky and bourbon.",
+      "url": "https://www.bbc.com/news/articles/cjrp3pew2d5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-01T07:52:56.000Z",
+      "source": "BBC News"
+    },
+    {
       "title": "Will 'scunnered' voters decide Scotland's election?",
       "description": "Pollsters say there are plenty of undecided voters - but few have a positive view of politicians.",
       "url": "https://www.bbc.com/news/articles/c62erp11n80o?at_medium=RSS&at_campaign=rss",
@@ -23,17 +30,17 @@
       "source": "BBC News"
     },
     {
-      "title": "Trump to remove whisky tariffs after King's visit",
-      "description": "The US president said he would lift restrictions on Scotland's ability to work with the state of Kentucky on whisky and bourbon.",
-      "url": "https://www.bbc.com/news/articles/cjrp3pew2d5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-30T21:45:57.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Will Reform dominate the local and devolved elections? – podcast",
       "description": "Pippa Crerar is joined by the election analyst Prof Rob Ford to look at the upcoming local and devolved elections. Will Reform dominate across England? Can the Greens remove Labour’s longstanding hold over London? And will the nationalists win in Scotland and Wales? Continue reading...",
       "url": "https://www.theguardian.com/politics/audio/2026/apr/30/will-reform-dominate-local-devolved-elections-podcast",
       "publishedAt": "2026-04-30T16:21:29.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Polanski criticised for reposting comment suggesting police arresting Golders Greens suspect used excessive force – as it happened",
+      "description": "Home Office minister says ‘the Green Party has hit a new low’ after party leader’s repost on X On BBC Radio Merseyside the presenter, Tony Snell, put it to Kemi Badenoch that Merseyside was a lost cause for the Tories. He said that Nigel Farage, the Reform UK leader, had been on the programme yesterday. He said that Farage argued that Scousers were down to earth and the Tories they were seen as “aloof and remote”.Badenoch said no one had ever described her as aloof and remote. When it was put to her that Farage was talking about the party, she said the Tories were the party of working people. Labour were only interested in welfare, she claimed.Nigel Farage can say as much as he wants that he’s the one who’s down to earth. Someone just gave him a £5m gift to the other day. I don’t know what’s down to earth about that.Who gets £5m is a gift. If I got £50,000 as a gift, I think people would raise their eyebrows. That’s a hundred times that. And he forgot to register it. He forgot that he’d been given £5m. I don’t think that’s down to earth. So I’m not going to be taking any lessons from Nigel Farage. Continue reading...",
+      "url": "https://www.theguardian.com/politics/live/2026/apr/30/local-election-campaign-labour-reform-conservatives-tories-greens-lib-dems-latest-news-updates",
+      "publishedAt": "2026-04-30T15:55:41.000Z",
       "source": "The Guardian — Scotland politics"
     },
     {
@@ -217,13 +224,6 @@
       "url": "https://www.bbc.com/news/articles/cyv1m396n3eo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-17T05:15:18.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "Badenoch calls Farage an ‘opportunist’ after he urges Scottish nationalists to back Reform",
-      "description": "Tory leader criticises Farage for saying that holding another independence vote ‘probably quite reasonable’Kemi Badenoch, the leader of the Conservative party, has accused Nigel Farage of being an opportunist who does not believe in unionism after he urged Scottish nationalists to back Reform.Farage said earlier this week he believed “genuine nationalists” would not support the Scottish National party’s bid to rejoin the EU, and urged them to vote Reform in the Holyrood election on 7 May. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/16/badenoch-calls-farage-an-opportunist-after-he-urges-scottish-nationalists-to-back-reform",
-      "publishedAt": "2026-04-16T18:17:58.000Z",
-      "source": "The Guardian — Scotland politics"
     }
   ]
 }
