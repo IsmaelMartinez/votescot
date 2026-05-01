@@ -55,10 +55,16 @@ function decodeEntities(text: string): string {
 }
 
 function decode(text: string): string {
-  const stripped = text
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/<[^>]+>/g, "");
-  return decodeEntities(stripped).replace(/\s+/g, " ").trim();
+  // Order matters: strip CDATA first, then decode entities, then strip tags.
+  // Decoding entities before tag-stripping ensures input like `&lt;script&gt;`
+  // becomes `<script>` so the tag stripper can remove it. Stripping tags
+  // first would leave the encoded form intact and only sanitise it after,
+  // which CodeQL flags as `js/incomplete-multi-character-sanitization`.
+  // Doubly-encoded input like `&amp;lt;script&amp;gt;` decodes once to the
+  // literal text `&lt;script&gt;`, which contains no real tags to strip.
+  const withoutCdata = text.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1");
+  const decoded = decodeEntities(withoutCdata);
+  return decoded.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 }
 
 function extractTag(xml: string, tag: string): string {
