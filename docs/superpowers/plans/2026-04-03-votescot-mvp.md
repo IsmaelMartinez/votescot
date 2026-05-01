@@ -1,5 +1,7 @@
 # VoteScot MVP Implementation Plan
 
+> **Status (2026-05-01):** The BYOK DeepDive component is removed. The component was built but never wired into a candidate page. The `DeepDive.tsx` entry in File Structure (line 33), the Task 7 implementation block (around line 1539), and the Task 8 wiring step (around line 1625) are kept here for historical context only — do not execute these steps. Treat any `DeepDive` / `votescot-api-key` mention below as describing what *existed*, not what's in the codebase today.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Build a static vote compass site for the 2026 Scottish Parliament election (Edinburgh Central MVP) from an existing React prototype, using Astro 5 with React islands.
