@@ -32,20 +32,33 @@ interface NewsItem {
   source: string;
 }
 
+const NAMED_ENTITIES: Record<string, string> = {
+  "&amp;": "&",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&quot;": '"',
+  "&apos;": "'",
+};
+
+function decodeEntities(text: string): string {
+  // Single-pass replacement avoids double-decoding (e.g. &amp;lt; should stay
+  // "&lt;" not become "<") and keeps numeric/hex/named entities consistent.
+  return text.replace(
+    /&(?:#(\d+)|#x([0-9a-fA-F]+)|amp|lt|gt|quot|apos|#39);/g,
+    (match, dec, hex) => {
+      if (dec !== undefined) return String.fromCharCode(parseInt(dec, 10));
+      if (hex !== undefined) return String.fromCharCode(parseInt(hex, 16));
+      if (match === "&#39;") return "'";
+      return NAMED_ENTITIES[match] ?? match;
+    },
+  );
+}
+
 function decode(text: string): string {
-  return text
+  const stripped = text
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
-    .replace(/\s+/g, " ")
-    .trim();
+    .replace(/<[^>]+>/g, "");
+  return decodeEntities(stripped).replace(/\s+/g, " ").trim();
 }
 
 function extractTag(xml: string, tag: string): string {

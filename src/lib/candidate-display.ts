@@ -37,8 +37,19 @@ export const PROJECTION_STATUS_CLASSES: Record<ProjectionStatus, string> = {
 /** Democracy Club's per-candidate page is the import source, not a useful link to surface. */
 const DEMOCRACY_CLUB_CANDIDATE_HOST = "candidates.democracyclub.org.uk";
 
+function hostnameOf(url: string): string | null {
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+
 export function filterExternalSources(sources: CandidateSource[] | undefined): CandidateSource[] {
-  return (sources ?? []).filter(
-    (s) => typeof s?.url === "string" && !s.url.includes(DEMOCRACY_CLUB_CANDIDATE_HOST),
-  );
+  return (sources ?? []).filter((s) => {
+    if (typeof s?.url !== "string") return false;
+    const host = hostnameOf(s.url);
+    if (host === null) return false;
+    return host !== DEMOCRACY_CLUB_CANDIDATE_HOST;
+  });
 }
