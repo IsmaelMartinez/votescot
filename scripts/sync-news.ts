@@ -43,12 +43,13 @@ const NAMED_ENTITIES: Record<string, string> = {
 function decodeEntities(text: string): string {
   // Single-pass replacement avoids double-decoding (e.g. &amp;lt; should stay
   // "&lt;" not become "<") and keeps numeric/hex/named entities consistent.
+  // `String.fromCodePoint` handles non-BMP characters (emoji etc.) correctly,
+  // unlike `String.fromCharCode` which truncates to 16 bits.
   return text.replace(
-    /&(?:#(\d+)|#x([0-9a-fA-F]+)|amp|lt|gt|quot|apos|#39);/g,
+    /&(?:#(\d+)|#x([0-9a-fA-F]+)|amp|lt|gt|quot|apos);/g,
     (match, dec, hex) => {
-      if (dec !== undefined) return String.fromCharCode(parseInt(dec, 10));
-      if (hex !== undefined) return String.fromCharCode(parseInt(hex, 16));
-      if (match === "&#39;") return "'";
+      if (dec !== undefined) return String.fromCodePoint(parseInt(dec, 10));
+      if (hex !== undefined) return String.fromCodePoint(parseInt(hex, 16));
       return NAMED_ENTITIES[match] ?? match;
     },
   );
