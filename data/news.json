@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T12:39:10.930Z",
+  "lastUpdated": "2026-05-01T18:40:17.904Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Whisky tariffs deal sparks political squabble over who claims credit",
+      "description": "Party leaders quickly changed their campaign plans after Donald Trump's announcement on the tariffs deal.",
+      "url": "https://www.bbc.com/news/articles/cg5p7yg82jro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-01T15:34:51.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "End of Trump tariffs on whisky sparks row between Scottish parties over claiming credit",
+      "description": "First minister John Swinney says he played significant role but Labour rejects claim and accuses SNP of hypocrisyDonald Trump’s announcement that he will lift punishing US tariffs on scotch whisky has been overshadowed by a row between rival Scottish party leaders over claiming credit for the decision.The whisky industry and business leaders were delighted by the US president’s announcement on his Truth Social network on Thursday that he would end the tariffs to mark the visit by King Charles and Queen Camilla. Continue reading...",
+      "url": "https://www.theguardian.com/uk-news/2026/may/01/end-trump-tariffs-scotch-whisky-row-between-scottish-parties-claiming-credit",
+      "publishedAt": "2026-05-01T14:33:20.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Trump to remove whisky tariffs after King's visit",
       "description": "The US president said he would lift restrictions on Scotland's ability to work with the state of Kentucky on whisky and bourbon.",
@@ -156,13 +170,6 @@
       "source": "The Guardian — Scotland politics"
     },
     {
-      "title": "Polling day to mark launch of new voting system for blind people",
-      "description": "An improved system to safeguard the anonymous vote will be used across Scotland on 7 May.",
-      "url": "https://www.bbc.com/news/articles/cp86g90n2qqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-23T22:13:08.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Are parties being upfront about Scotland's finances?",
       "description": "Can Holyrood afford to pay for the spending promises being outlined in the election campaign?",
       "url": "https://www.bbc.com/news/articles/cp8648vqp1ro?at_medium=RSS&at_campaign=rss",
@@ -216,13 +223,6 @@
       "description": "We have analysed some of the policies in the Scottish Lib Dems' manifesto for the 2026 Holyrood election.",
       "url": "https://www.bbc.com/news/articles/ckg0p7ew4kqo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-17T14:16:48.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Nine seats that could decide Scotland's election",
-      "description": "The key battlegrounds which could tell us how May's election will go across Scotland.",
-      "url": "https://www.bbc.com/news/articles/cyv1m396n3eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-17T05:15:18.000Z",
       "source": "BBC News"
     }
   ]
