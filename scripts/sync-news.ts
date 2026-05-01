@@ -32,20 +32,50 @@ interface NewsItem {
   source: string;
 }
 
+const NAMED_ENTITIES: Record<string, string> = {
+  "&amp;": "&",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&quot;": '"',
+  "&apos;": "'",
+};
+
+function decodeEntities(text: string): string {
+  // Single-pass replacement avoids double-decoding (e.g. &amp;lt; should stay
+  // "&lt;" not become "<") and keeps numeric/hex/named entities consistent.
+  // `String.fromCodePoint` handles non-BMP characters (emoji etc.) correctly,
+  // unlike `String.fromCharCode` which truncates to 16 bits.
+  return text.replace(
+    /&(?:#(\d+)|#x([0-9a-fA-F]+)|amp|lt|gt|quot|apos);/g,
+    (match, dec, hex) => {
+      if (dec !== undefined) return String.fromCodePoint(parseInt(dec, 10));
+      if (hex !== undefined) return String.fromCodePoint(parseInt(hex, 16));
+      return NAMED_ENTITIES[match] ?? match;
+    },
+  );
+}
+
+function stripTags(text: string): string {
+  // Loop until stable so nested patterns like `<scr<script>ipt>` are fully
+  // removed — a single regex pass would reduce that to `<script>`. CodeQL
+  // flags single-pass tag stripping as `js/incomplete-multi-character-sanitization`.
+  let prev: string;
+  let out = text;
+  do {
+    prev = out;
+    out = out.replace(/<[^>]*>/g, "");
+  } while (out !== prev);
+  return out;
+}
+
 function decode(text: string): string {
-  return text
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
-    .replace(/\s+/g, " ")
-    .trim();
+  // Order: strip CDATA, decode entities, strip tags. Decoding entities first
+  // ensures `&lt;script&gt;` becomes `<script>` so the tag stripper can remove
+  // it; doubly-encoded input like `&amp;lt;script&amp;gt;` decodes once to the
+  // literal text `&lt;script&gt;`, which contains no tags to strip.
+  const withoutCdata = text.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1");
+  const decoded = decodeEntities(withoutCdata);
+  return stripTags(decoded).replace(/\s+/g, " ").trim();
 }
 
 function extractTag(xml: string, tag: string): string {
