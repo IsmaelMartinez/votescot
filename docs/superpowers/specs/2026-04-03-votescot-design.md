@@ -1,5 +1,7 @@
 # VoteScot Design Spec
 
+> **Status (2026-05-01):** The BYOK Anthropic "AI deep dive" feature described below was removed. The `DeepDive.tsx` component was built but never wired into a candidate page, and the BYOK pattern triggered a recurring CodeQL clear-text-storage alert. References to it in this spec are kept for historical context only.
+
 An open-source, privacy-first vote compass for the 2026 Scottish Parliament election. Helps voters find their constituency, take a values-based quiz to match with candidates, compare candidate positions side-by-side, and access curated research resources.
 
 ## Decisions

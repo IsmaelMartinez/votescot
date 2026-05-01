@@ -197,7 +197,7 @@ The two cleanup items previously listed here — `yaml.stringify({ lineWidth: 0 
 
 ### Low priority
 
-~~Add React error boundaries around interactive components.~~ Done. ErrorBoundary component wraps all 7 Astro island components (QuizEngine, CandidateComparison, CandidatesSearch, PollsChart, PostcodeLookup, DeepDive, ConstituencyMap).
+~~Add React error boundaries around interactive components.~~ Done. ErrorBoundary component wraps all 6 Astro island components (QuizEngine, CandidateComparison, CandidatesSearch, PollsChart, PostcodeLookup, ConstituencyMap).
 
 ~~Add tests for slug derivation logic, React components, and the manifesto parsing pipeline.~~ Done. Added api-retry and data-cache test suites (11 new tests, 34 total). Slug tests already existed.
 
