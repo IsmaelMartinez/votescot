@@ -15,19 +15,7 @@ interface Props {
 }
 
 function DeepDiveInner({ candidate }: Props) {
-  const [apiKey, setApiKey] = useState(() => {
-    if (typeof window !== "undefined") {
-      // BYOK: the user-supplied Anthropic key is stored in sessionStorage so
-      // it persists for the tab only and is cleared when the tab closes. The
-      // UI explicitly tells the user "Your key stays in this tab only" — we
-      // never transmit it to a votescot server. sessionStorage is the
-      // narrowest browser-only persistence available; encrypting it client
-      // side would require a key that itself lives in the same browser, so
-      // it offers no real protection.
-      return sessionStorage.getItem("votescot-api-key") || "";
-    }
-    return "";
-  });
+  const [apiKey, setApiKey] = useState("");
   const [analysis, setAnalysis] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -43,11 +31,6 @@ function DeepDiveInner({ candidate }: Props) {
       return;
     }
 
-    // codeql[js/clear-text-storage-of-sensitive-data]: BYOK pattern — the key
-    // is user-supplied at runtime and intentionally persisted to
-    // sessionStorage (tab-scoped) so the user does not have to re-paste it
-    // for every analysis in the same session. See note above.
-    sessionStorage.setItem("votescot-api-key", apiKey);
     setLoading(true);
     setError(null);
     setAnalysis("");
