@@ -70,53 +70,60 @@ function PostcodeLookupInner({ knownConstituencies, basePath }: Props) {
     }
   }
 
+  const inputId = React.useId();
   return (
     <div className="bg-white rounded-lg p-4 border border-votescot-border">
-      <label className="block font-heading font-bold text-base mb-2">
+      <label htmlFor={inputId} className="block font-heading font-bold text-base mb-2">
         Enter your postcode
       </label>
       <div className="flex gap-2">
         <input
+          id={inputId}
           type="text"
+          autoComplete="postal-code"
+          inputMode="text"
           value={postcode}
           onChange={(e) => { setPostcode(e.target.value); setResult(null); }}
           onKeyDown={(e) => e.key === "Enter" && lookup()}
           placeholder="e.g. EH1 1BB"
-          className="flex-1 px-3 py-2 border border-gray-300 rounded-md font-body text-sm focus:outline-none focus:border-votescot-gold"
+          className="flex-1 px-3 py-2 border border-gray-500 rounded-md font-body text-sm focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold-text focus:border-votescot-gold-text"
         />
         <button
           onClick={lookup}
           disabled={loading}
-          className="px-4 py-2 bg-votescot-dark text-white rounded-md font-body text-sm font-bold hover:bg-gray-800 transition-colors disabled:opacity-50"
+          className="px-4 py-2 bg-votescot-dark text-white rounded-md font-body text-sm font-bold hover:bg-gray-800 transition-colors disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold-text"
+          aria-label={loading ? "Looking up postcode" : "Find constituency for this postcode"}
         >
           {loading ? "..." : "Find"}
         </button>
       </div>
-      {result?.found && result.covered && (
-        <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-md font-body text-sm">
-          You're in <strong>{result.constituencyName}</strong>!{" "}
-          <a href={`${basePath}quiz?constituency=${result.constituencyId}`} className="text-blue-600 underline font-semibold">
-            Take the vote compass →
-          </a>{" "}
-          or{" "}
-          <a href={`${basePath}candidates/constituency/${result.constituencyId}`} className="text-blue-600 underline font-semibold">
-            see your candidates →
-          </a>
-        </div>
-      )}
-      {result?.found && !result.covered && (
-        <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-md font-body text-sm">
-          You're in <strong>{result.constituencyName}</strong>. We couldn't match this to our data. The constituency name may differ from our records.
-          Try <a href="https://whocanivotefor.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">WhoCanIVoteFor</a> for your candidates.
-        </div>
-      )}
-      {result && !result.found && (
-        <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-md font-body text-sm">
-          Couldn't find that postcode. Check the format (e.g. EH1 1BB) and try again, or use{" "}
-          <a href="https://boundaries.scot" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Boundaries Scotland</a>.
-        </div>
-      )}
-      <div className="mt-2 font-body text-xs text-gray-400">
+      <div role="status" aria-live="polite">
+        {result?.found && result.covered && (
+          <div className="mt-3 p-3 bg-green-50 border border-green-700 rounded-md font-body text-sm text-gray-900">
+            You're in <strong>{result.constituencyName}</strong>!{" "}
+            <a href={`${basePath}quiz?constituency=${result.constituencyId}`} className="text-blue-700 underline font-semibold">
+              Take the vote compass <span aria-hidden="true">→</span>
+            </a>{" "}
+            or{" "}
+            <a href={`${basePath}candidates/constituency/${result.constituencyId}`} className="text-blue-700 underline font-semibold">
+              see your candidates <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        )}
+        {result?.found && !result.covered && (
+          <div className="mt-3 p-3 bg-amber-50 border border-amber-700 rounded-md font-body text-sm text-gray-900">
+            You're in <strong>{result.constituencyName}</strong>. We couldn't match this to our data. The constituency name may differ from our records.
+            Try <a href="https://whocanivotefor.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">WhoCanIVoteFor</a> for your candidates.
+          </div>
+        )}
+        {result && !result.found && (
+          <div className="mt-3 p-3 bg-red-50 border border-red-700 rounded-md font-body text-sm text-gray-900">
+            Couldn't find that postcode. Check the format (e.g. EH1 1BB) and try again, or use{" "}
+            <a href="https://boundaries.scot" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Boundaries Scotland</a>.
+          </div>
+        )}
+      </div>
+      <div className="mt-2 font-body text-xs text-gray-700">
         Postcode lookup via <a href="https://mapit.mysociety.org/" target="_blank" rel="noopener noreferrer" className="underline">MapIt</a> using 2026 boundary data (SPCF)
       </div>
     </div>

@@ -57,19 +57,20 @@ export default function PartyResultCard({ block: p, isWinner, showTiedPill, isRe
             <div
               className="font-body text-xl font-black"
               style={{ color: scoreColor(p.match.percentage), background: "#fff", padding: "0 8px", borderRadius: 4 }}
+              aria-label={`Match score ${p.match.percentage} percent`}
             >
               {p.match.percentage}%
             </div>
           ) : (
-            <div className="font-body text-xs opacity-80">No quiz positions</div>
+            <div className="font-body text-xs opacity-95">No quiz positions</div>
           )}
-          <span className="font-body text-sm opacity-70" aria-hidden="true">{expanded ? "▴" : "▾"}</span>
+          <span className="font-body text-sm opacity-90" aria-hidden="true">{expanded ? "▴" : "▾"}</span>
         </div>
       </button>
 
       {hasPositions && (
         <div className="px-3 pt-2 pb-1">
-          <div className="w-full h-1.5 bg-votescot-border rounded-full overflow-hidden">
+          <div className="w-full h-1.5 bg-gray-300 rounded-full overflow-hidden" role="presentation">
             <div
               className="h-full rounded-full transition-all duration-700"
               style={{ width: `${p.match.percentage}%`, background: scoreColor(p.match.percentage) }}
@@ -84,16 +85,19 @@ export default function PartyResultCard({ block: p, isWinner, showTiedPill, isRe
             <div className="flex flex-wrap gap-1 mb-2.5">
               {p.match.breakdown.map(({ questionId, diff }) => {
                 const q = questions.find((qq) => qq.id === questionId);
+                const label = diff === 0 ? "Aligned" : diff === 1 ? "Partial match" : "Differs";
                 return (
                   <span
                     key={questionId}
                     className="font-body text-xs px-1.5 py-0.5 rounded-full font-semibold"
                     style={{
                       background: diff === 0 ? "#e8f5e9" : diff === 1 ? "#fff8e1" : "#fce4ec",
-                      color: diff === 0 ? "#2d8a4e" : diff === 1 ? "#c4940a" : "#c0392b",
+                      color: diff === 0 ? "#1f7a3f" : diff === 1 ? "#8a6708" : "#a02a1f",
                     }}
                   >
-                    {diff === 0 ? "✓" : diff === 1 ? "~" : "✗"} {q?.area}
+                    <span aria-hidden="true">{diff === 0 ? "✓" : diff === 1 ? "~" : "✗"} </span>
+                    <span className="sr-only">{label} on </span>
+                    {q?.area}
                   </span>
                 );
               })}
@@ -102,13 +106,13 @@ export default function PartyResultCard({ block: p, isWinner, showTiedPill, isRe
 
           <ol className="m-0 p-0 list-none">
             {visibleCandidates.map((c) => (
-              <li key={c.id} className="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
+              <li key={c.id} className="flex items-center gap-2 py-1 border-b border-gray-200 last:border-0">
                 {isRegionalTab && (
-                  <span className="font-body text-xs font-bold text-gray-400 w-5 text-right shrink-0">{c.listPosition}</span>
+                  <span className="font-body text-xs font-bold text-gray-700 w-5 text-right shrink-0">{c.listPosition}</span>
                 )}
                 <a
                   href={`${profileBase}${c.id}`}
-                  className="font-body text-[13px] text-gray-700 no-underline hover:text-votescot-gold flex-1"
+                  className="font-body text-[13px] text-gray-800 underline hover:text-votescot-gold-text flex-1"
                 >
                   {c.name}
                 </a>
@@ -123,7 +127,7 @@ export default function PartyResultCard({ block: p, isWinner, showTiedPill, isRe
             <button
               type="button"
               onClick={() => setShowAllCandidates(true)}
-              className="w-full text-center font-body text-xs text-gray-500 hover:text-gray-800 cursor-pointer pt-1.5 mt-1.5 border-t border-gray-100 bg-transparent"
+              className="w-full text-center font-body text-xs text-gray-700 hover:text-gray-900 cursor-pointer pt-1.5 mt-1.5 border-t border-gray-200 bg-transparent min-h-6"
             >
               + {hiddenCount} more
             </button>

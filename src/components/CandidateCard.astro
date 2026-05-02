@@ -9,18 +9,18 @@ interface Props {
 const { candidate, basePath } = Astro.props;
 ---
 
-<a href={`${basePath}candidates/${candidate.id}`} class="block bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit relative">
+<a href={`${basePath}candidates/${candidate.id}`} class="block bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold-text transition-colors no-underline text-inherit relative">
   {candidate.isIncumbent && (
     <span class="absolute -top-1.5 right-2 bg-gray-800 text-white text-xs px-1 py-0.5 rounded-md tracking-wider uppercase font-bold">
       Incumbent
     </span>
   )}
   <div class="flex items-center gap-2 mb-1">
-    <div class="w-2.5 h-2.5 rounded-full shrink-0" style={`background: ${candidate.textColor ? candidate.accent : candidate.color}; border: 2px solid ${candidate.accent}`} />
+    <div class="w-2.5 h-2.5 rounded-full shrink-0" aria-hidden="true" style={`background: ${candidate.textColor ? candidate.accent : candidate.color}; border: 2px solid ${candidate.accent}`} />
     <div>
       <div class="font-heading font-black text-sm">{candidate.name}</div>
-      <div class="font-body text-xs text-gray-400">{candidate.party}</div>
+      <div class="font-body text-xs text-gray-700">{candidate.party}</div>
     </div>
   </div>
-  <p class="font-body text-xs text-gray-500 leading-snug line-clamp-2 m-0">{candidate.bio}</p>
+  <p class="font-body text-xs text-gray-600 leading-snug line-clamp-2 m-0">{candidate.bio}</p>
 </a>

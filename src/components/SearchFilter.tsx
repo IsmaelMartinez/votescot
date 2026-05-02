@@ -18,6 +18,8 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
   const [activeIndex, setActiveIndex] = useState(-1);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const listboxId = React.useId();
+  const optionId = (i: number) => `${listboxId}-opt-${i}`;
 
   const MAX_RESULTS = 10;
   const normalizedQuery = query.trim().toLowerCase();
@@ -91,16 +93,21 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
         aria-label={placeholder}
         aria-expanded={open && filtered.length > 0}
         aria-haspopup="listbox"
+        aria-controls={open && filtered.length > 0 ? listboxId : undefined}
+        aria-activedescendant={open && activeIndex >= 0 ? optionId(activeIndex) : undefined}
+        role="combobox"
         autoComplete="off"
-        className="w-full bg-white border border-votescot-border rounded-lg px-3.5 py-2.5 font-body text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-votescot-gold transition-colors"
+        className="w-full bg-white border border-votescot-border rounded-lg px-3.5 py-2.5 font-body text-sm text-gray-800 placeholder-gray-600 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold-text focus:border-votescot-gold-text transition-colors"
       />
       {open && filtered.length > 0 && (
         <ul
+          id={listboxId}
           role="listbox"
-          className="absolute z-50 left-0 right-0 mt-1 bg-white border border-votescot-border rounded-lg shadow-md overflow-hidden"
+          className="absolute z-50 left-0 right-0 mt-1 bg-white border border-gray-700 rounded-lg shadow-md overflow-hidden"
         >
           {filtered.map((item, i) => (
             <li
+              id={optionId(i)}
               key={item.id}
               role="option"
               aria-selected={i === activeIndex}
@@ -112,14 +119,14 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
               className="px-3.5 py-2.5 cursor-pointer font-body text-sm flex items-baseline justify-between gap-3"
               style={{
                 background: i === activeIndex ? "#1a1a2e" : "white",
-                color: i === activeIndex ? "#fff" : "#333",
+                color: i === activeIndex ? "#fff" : "#1f2937",
               }}
             >
               <span className="font-bold truncate">{item.label}</span>
               {item.sublabel && (
                 <span
                   className="shrink-0 text-xs"
-                  style={{ color: i === activeIndex ? "#c4940a" : "#9ca3af" }}
+                  style={{ color: i === activeIndex ? "#f5d97a" : "#4b5563" }}
                 >
                   {item.sublabel}
                 </span>
@@ -127,7 +134,7 @@ export default function SearchFilter({ placeholder = "Search…", items, onSelec
             </li>
           ))}
           {hasMore && (
-            <li className="px-3.5 py-2 border-t border-votescot-border bg-gray-50 font-body text-xs text-gray-400 text-center">
+            <li className="px-3.5 py-2 border-t border-votescot-border bg-gray-50 font-body text-xs text-gray-700 text-center">
               {allFiltered.length - MAX_RESULTS} more result{allFiltered.length - MAX_RESULTS !== 1 ? "s" : ""}. Refine your search.
             </li>
           )}

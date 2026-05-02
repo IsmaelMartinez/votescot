@@ -42,6 +42,7 @@ const sortedCandidates = [...partyCandidates].sort((a, b) =>
     <div class="flex items-center gap-2 mb-2">
       <div
         class="w-3 h-3 rounded-full"
+        aria-hidden="true"
         style={`background: ${color}; border: 2px solid ${accent}`}
       />
       <h2 class="font-heading text-lg font-black m-0">{party.name}</h2>
@@ -52,15 +53,16 @@ const sortedCandidates = [...partyCandidates].sort((a, b) =>
         href={manifestoUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block font-body text-xs text-blue-600 bg-blue-50 px-2.5 py-1 rounded no-underline hover:bg-blue-100 mb-3.5"
+        class="inline-block font-body text-xs text-blue-700 bg-blue-50 px-2.5 py-1 rounded underline hover:bg-blue-100 mb-3.5"
       >
-        {manifestoPublished ? "Read the 2026 manifesto ↗" : "View party manifesto page ↗"}
+        {manifestoPublished ? "Read the 2026 manifesto" : "View party manifesto page"}
+        <span aria-hidden="true"> ↗</span>
       </a>
     )}
 
     {party.stances && (
       <>
-        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mb-2">
+        <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-700 mb-2">
           Policy Positions
         </h3>
         <div class="flex flex-col gap-1.5">
@@ -68,13 +70,10 @@ const sortedCandidates = [...partyCandidates].sort((a, b) =>
             const q = questions.find((q) => q.id === key);
             return (
               <div class="bg-white rounded-md p-2.5 border border-votescot-border">
-                <div
-                  class="font-body text-xs font-bold uppercase tracking-widest mb-0.5"
-                  style={`color: ${accent}`}
-                >
+                <div class="font-body text-xs font-bold uppercase tracking-widest mb-0.5 text-votescot-gold-text">
                   {q?.area || key}
                 </div>
-                <div class="font-body text-[13px] text-gray-700 leading-snug">{stance}</div>
+                <div class="font-body text-[13px] text-gray-800 leading-snug">{stance}</div>
               </div>
             );
           })}
@@ -82,14 +81,14 @@ const sortedCandidates = [...partyCandidates].sort((a, b) =>
       </>
     )}
 
-    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-500 mt-4 mb-2">
+    <h3 class="font-body text-[13px] font-black uppercase tracking-wider text-gray-700 mt-4 mb-2">
       Candidates ({partyCandidates.length})
     </h3>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {sortedCandidates.map((c) => (
         <div>
-          <div class="font-body text-xs text-gray-400 mb-1">{constituencyMap.get(c.constituency) || c.constituency}</div>
+          <div class="font-body text-xs text-gray-700 mb-1">{constituencyMap.get(c.constituency) || c.constituency}</div>
           <CandidateCard candidate={c} basePath={base} />
         </div>
       ))}

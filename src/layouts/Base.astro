@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL;
     <title>{title} | VoteScot</title>
   </head>
   <body class="bg-votescot-paper text-gray-900 font-body min-h-screen flex flex-col">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-votescot-dark focus:text-white focus:px-4 focus:py-2 focus:rounded focus:font-body focus:text-sm focus:font-bold">Skip to content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-votescot-dark focus:text-white focus:px-4 focus:py-2 focus:rounded focus:font-body focus:text-sm focus:font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold">Skip to content</a>
     <slot name="header" />
     <main id="main-content" class="max-w-[920px] mx-auto w-full px-3 flex-1">
       <slot />
@@ -28,4 +28,11 @@ const base = import.meta.env.BASE_URL;
 
 <style is:global>
   @import "../styles/global.css";
+
+  /* WCAG 2.4.7 — visible focus everywhere a default outline was suppressed. */
+  :where(button, a, input, select, textarea, summary, [role="tab"], [role="radio"], [role="option"]):focus-visible {
+    outline: 2px solid var(--color-votescot-gold-text);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 </style>

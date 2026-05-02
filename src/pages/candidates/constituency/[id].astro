@@ -33,27 +33,27 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
   <div class="py-3.5">
     <div class="mb-4">
-      <a href={`${base}candidates`} class="font-body text-xs text-gray-400 no-underline hover:text-gray-600">← All constituencies</a>
+      <a href={`${base}candidates`} class="font-body text-xs text-gray-700 underline hover:text-gray-900"><span aria-hidden="true">← </span>All constituencies</a>
     </div>
 
     <h2 class="font-heading text-lg font-black mb-0.5">{constituency.name}</h2>
-    <p class="font-body text-xs text-gray-400 leading-snug mb-1">{constituency.context}</p>
-    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+    <p class="font-body text-xs text-gray-700 leading-snug mb-1">{constituency.context}</p>
+    <p class="font-body text-[12.5px] text-gray-700 leading-snug mb-4">
       {candidates.length} candidates confirmed for 7 May 2026.
     </p>
 
     {constituency.topParties && constituency.topParties.length > 0 && (
       <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
-          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">Projection</div>
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-700">Projection</div>
           {constituency.competitiveness && (
-            <span class={`font-body text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
+            <span class={`font-body text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-700"}`}>
               {competitivenessLabel[constituency.competitiveness] ?? constituency.competitiveness}
             </span>
           )}
         </div>
 
-        <div class="flex gap-1 mb-2.5 h-2 rounded overflow-hidden">
+        <div class="flex gap-1 mb-2.5 h-2 rounded overflow-hidden" role="presentation" aria-hidden="true">
           {constituency.topParties.map((p: any) => (
             <div
               class="h-full rounded-sm"
@@ -68,11 +68,12 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
             <div class="flex items-center gap-1">
               <div
                 class="w-2 h-2 rounded-full shrink-0"
+                aria-hidden="true"
                 style={`background: var(--color-${p.party}, #cbd5e1)`}
               />
               <span class="font-body text-xs font-bold capitalize">{p.party}</span>
-              <span class="font-body text-xs text-gray-400">{p.share}%</span>
-              <span class={`font-body text-xs ${statusColor[p.status] ?? "text-gray-500"}`}>
+              <span class="font-body text-xs text-gray-700">{p.share}%</span>
+              <span class={`font-body text-xs ${statusColor[p.status] ?? "text-gray-700"}`}>
                 · {statusLabel[p.status] ?? p.status}
               </span>
             </div>
@@ -80,7 +81,7 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
         </div>
 
         {constituency.projectionSource && (
-          <p class="font-body text-xs text-gray-400 mt-2 leading-snug">
+          <p class="font-body text-xs text-gray-700 mt-2 leading-snug">
             Basis: {constituency.projectionSource}. These are estimates, not predictions.
           </p>
         )}
@@ -89,7 +90,7 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
     {quizCandidates.length > 0 && (
       <div class="mb-4">
-        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-700 mb-2">
           Quiz candidates · included in vote compass matching
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -102,7 +103,7 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
     {otherCandidates.length > 0 && (
       <div>
-        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+        <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-700 mb-2">
           {quizCandidates.length > 0 ? "Other candidates" : "Candidates"}
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -115,7 +116,7 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
     {quizCandidates.length > 1 && (
       <details class="mt-5 mb-6 bg-white border border-votescot-border rounded-lg">
-        <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold transition-colors">
+        <summary class="px-4 py-3 cursor-pointer font-heading font-bold text-sm hover:text-votescot-gold-text transition-colors">
           Compare candidates side by side
         </summary>
         <div class="px-4 pb-4">
@@ -125,8 +126,8 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
     )}
 
     <div class="mt-6 text-center">
-      <a href={`${base}quiz?constituency=${constituency.id}`} class="inline-block px-4 py-2 bg-votescot-gold text-white rounded-lg font-body text-sm font-bold no-underline hover:opacity-90">
-        Take the vote compass for {constituency.name} →
+      <a href={`${base}quiz?constituency=${constituency.id}`} class="inline-block px-4 py-2 bg-votescot-gold text-votescot-dark rounded-lg font-body text-sm font-bold no-underline hover:bg-votescot-gold-text hover:text-white">
+        Take the vote compass for {constituency.name} <span aria-hidden="true">→</span>
       </a>
     </div>
   </div>

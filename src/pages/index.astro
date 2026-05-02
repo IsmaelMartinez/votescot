@@ -42,7 +42,7 @@ const news = loadNews();
 
   <div class="py-6">
     <h2 class="font-heading text-2xl font-black mb-2">Navigate the noise</h2>
-    <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
+    <p class="font-body text-sm text-gray-700 leading-relaxed mb-4">
       Scotland votes on 7 May 2026. Find your constituency, discover which
       candidates align with your values, and access the research you need to make an informed choice.
     </p>
@@ -56,19 +56,19 @@ const news = loadNews();
       regions={mapRegions}
     />
 
-    <section class="my-6">
-      <h3 class="font-heading text-base font-black mb-1">Browse by region</h3>
-      <p class="font-body text-xs text-gray-500 leading-snug mb-3">
+    <section class="my-6" aria-labelledby="browse-region-heading">
+      <h3 id="browse-region-heading" class="font-heading text-base font-black mb-1">Browse by region</h3>
+      <p class="font-body text-xs text-gray-700 leading-snug mb-3">
         Scotland's regional list ballot is split into 8 regions. Pick yours to see every party's regional list candidates.
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {regions.map((r) => (
           <a
             href={`${base}candidates/region/${r.id}`}
-            class="block bg-white border border-votescot-border rounded-lg px-3 py-2 no-underline hover:border-votescot-gold transition-colors"
+            class="block bg-white border border-votescot-border rounded-lg px-3 py-2 no-underline hover:border-votescot-gold-text transition-colors"
           >
             <div class="font-heading text-sm font-bold text-votescot-dark leading-tight">{r.name}</div>
-            <div class="font-body text-xs text-gray-500 leading-snug mt-0.5">
+            <div class="font-body text-xs text-gray-700 leading-snug mt-0.5">
               {r.constituencyCount} constituencies · {r.candidateCount} list candidates
             </div>
           </a>

@@ -41,14 +41,14 @@ const partyBlocks = Array.from(byParty.entries())
 
   <div class="py-3.5">
     <div class="mb-4">
-      <a href={`${base}candidates`} class="font-body text-xs text-gray-400 no-underline hover:text-gray-600">← All constituencies</a>
+      <a href={`${base}candidates`} class="font-body text-xs text-gray-700 underline hover:text-gray-900"><span aria-hidden="true">← </span>All constituencies</a>
     </div>
 
     <h2 class="font-heading text-lg font-black mb-0.5">{region.name}</h2>
-    <p class="font-body text-xs text-gray-400 leading-snug mb-1">
+    <p class="font-body text-xs text-gray-700 leading-snug mb-1">
       Regional list ballot. Covers {regionConstituencies.length} constituencies: {regionConstituencies.map((c) => c.name).join(", ")}.
     </p>
-    <p class="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+    <p class="font-body text-[12.5px] text-gray-700 leading-snug mb-4">
       {candidates.length} candidates ordered by party list position. The regional ballot allocates 7 MSPs per region by D'Hondt against these ordered lists.
     </p>
 
@@ -60,13 +60,13 @@ const partyBlocks = Array.from(byParty.entries())
             style={`background: ${p.textColor ? p.accent : p.color}; color: ${p.textColor ?? "#fff"}`}
           >
             <div class="font-heading font-black text-sm">{p.party}</div>
-            <div class="font-body text-xs opacity-80">· {p.candidates.length} {p.candidates.length === 1 ? "candidate" : "candidates"}</div>
+            <div class="font-body text-xs opacity-90">· {p.candidates.length} {p.candidates.length === 1 ? "candidate" : "candidates"}</div>
           </div>
           <ol class="m-0 px-3 py-2 list-none">
             {p.candidates.map((c) => (
-              <li class="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
-                <span class="font-body text-xs font-bold text-gray-400 w-5 text-right shrink-0">{c.listPosition}</span>
-                <a href={`${base}candidates/regional/${c.id}`} class="font-body text-[13px] text-gray-700 no-underline hover:text-votescot-gold flex-1">{c.name}</a>
+              <li class="flex items-center gap-2 py-1 border-b border-gray-200 last:border-0">
+                <span class="font-body text-xs font-bold text-gray-700 w-5 text-right shrink-0">{c.listPosition}</span>
+                <a href={`${base}candidates/regional/${c.id}`} class="font-body text-[13px] text-gray-800 underline hover:text-votescot-gold-text flex-1">{c.name}</a>
                 {c.isIncumbent && (
                   <span class="bg-gray-800 text-white text-[10px] px-1 py-0.5 rounded uppercase tracking-wider font-bold">Incumbent</span>
                 )}
@@ -78,8 +78,8 @@ const partyBlocks = Array.from(byParty.entries())
     </div>
 
     <div class="mt-6 text-center">
-      <a href={`${base}quiz?region=${region.id}`} class="inline-block px-4 py-2 bg-votescot-gold text-white rounded-lg font-body text-sm font-bold no-underline hover:opacity-90">
-        Take the regional vote compass for {region.name} →
+      <a href={`${base}quiz?region=${region.id}`} class="inline-block px-4 py-2 bg-votescot-gold text-votescot-dark rounded-lg font-body text-sm font-bold no-underline hover:bg-votescot-gold-text hover:text-white">
+        Take the regional vote compass for {region.name} <span aria-hidden="true">→</span>
       </a>
     </div>
   </div>

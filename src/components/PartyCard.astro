@@ -16,22 +16,23 @@ const { party, candidateCount, manifestoUrl, manifestoPublished, color, accent, 
 
 <a
   href={`${basePath}candidates/party/${party.id}`}
-  class="block bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold transition-colors no-underline text-inherit"
+  class="block bg-white rounded-lg p-3 border border-votescot-border hover:border-votescot-gold-text transition-colors no-underline text-inherit"
 >
   <div class="flex items-center gap-2 mb-1">
     <div
       class="w-2.5 h-2.5 rounded-full shrink-0"
+      aria-hidden="true"
       style={`background: ${color}; border: 2px solid ${accent}`}
     />
     <div>
       <div class="font-heading font-black text-sm">{party.name}</div>
-      <div class="font-body text-xs text-gray-400">
+      <div class="font-body text-xs text-gray-700">
         {candidateCount} candidate{candidateCount !== 1 ? "s" : ""}
       </div>
     </div>
   </div>
   {manifestoUrl && (
-    <div class="font-body text-xs text-blue-600 mt-1 truncate">
+    <div class="font-body text-xs text-blue-700 mt-1 truncate">
       {manifestoPublished ? "2026 manifesto published" : "Manifesto not yet published"}
     </div>
   )}

@@ -12,11 +12,11 @@ export default function ViewToggle() {
   }
 
   const base = "px-3.5 py-1.5 font-body text-xs font-medium uppercase tracking-wider transition-colors";
-  const activeStyle = "bg-votescot-gold text-gray-900 font-bold";
-  const inactiveStyle = "bg-white text-gray-400 hover:text-gray-600";
+  const activeStyle = "bg-votescot-gold text-votescot-dark font-bold";
+  const inactiveStyle = "bg-white text-gray-700 hover:text-gray-900";
 
   return (
-    <div className="flex border border-votescot-border rounded-lg overflow-hidden mb-4">
+    <div role="group" aria-label="Browse candidates by" className="flex border border-gray-500 rounded-lg overflow-hidden mb-4">
       <button
         type="button"
         aria-pressed={active === "constituency"}

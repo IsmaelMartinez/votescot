@@ -8,7 +8,7 @@
  * - else:  red  (weak match)
  */
 export function scoreColor(percentage: number): string {
-  if (percentage >= 70) return "#2d8a4e";
-  if (percentage >= 40) return "#c4940a";
+  if (percentage >= 70) return "#1f7a3f";
+  if (percentage >= 40) return "#8a6708";
   return "#c0392b";
 }

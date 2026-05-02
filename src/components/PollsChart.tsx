@@ -50,11 +50,23 @@ interface Props {
 
 type View = "constituency" | "regional" | "mrp";
 
+// Dark, AA-compliant variants used for any text label (tooltips, axis ticks).
+const PARTY_TEXT_COLOR: Record<string, string> = {
+  snp: "#7a6b00",
+  lab: "#c41e1a",
+  con: "#005a99",
+  libdem: "#9a6a00",
+  green: "#007a3d",
+  alba: "#005EB8",
+  reform: "#0a7d90",
+};
+
 const PARTIES = (["snp", "lab", "con", "reform", "green", "libdem", "alba"] as const).map((short) => ({
   key: short as keyof PollEntry,
   short,
   label: PARTY_THEMES_BY_SHORT[short].label,
   color: PARTY_THEMES_BY_SHORT[short].color,
+  textColor: PARTY_TEXT_COLOR[short],
 }));
 
 const CHART_W = 800;
@@ -180,7 +192,7 @@ function PollsChartInner({ data }: Props) {
               "px-3 py-1 font-body text-xs font-medium rounded uppercase tracking-wide transition-colors",
               view === t
                 ? "bg-votescot-dark text-votescot-paper"
-                : "bg-white border border-votescot-border text-gray-500 hover:border-gray-400",
+                : "bg-white border border-gray-500 text-gray-800 hover:border-votescot-gold-text",
             ].join(" ")}
           >
             {t === "constituency" ? "Constituency vote" : t === "regional" ? "Regional vote" : "Seat projection (MRP)"}
@@ -224,7 +236,7 @@ function PollsChartInner({ data }: Props) {
                     stroke="#e5e7eb"
                     strokeWidth={v === 0 ? 1 : 0.5}
                   />
-                  <text x={PAD_LEFT - 4} y={yPos(v) + 4} textAnchor="end" fontSize={12} fill="#9ca3af">
+                  <text x={PAD_LEFT - 4} y={yPos(v) + 4} textAnchor="end" fontSize={12} fill="#4b5563">
                     {v}%
                   </text>
                 </g>
@@ -238,7 +250,7 @@ function PollsChartInner({ data }: Props) {
                   y={CHART_H - 6}
                   textAnchor="middle"
                   fontSize={12}
-                  fill="#9ca3af"
+                  fill="#4b5563"
                 >
                   {yearLabel(t)}
                 </text>
@@ -339,18 +351,18 @@ function PollsChartInner({ data }: Props) {
                   transform: tooltip.x / CHART_W > 0.7 ? "translateX(-110%)" : undefined,
                 }}
               >
-                <div className="font-bold text-gray-700 mb-1">{tooltip.poll.pollster}</div>
-                <div className="text-gray-400 mb-1.5">
+                <div className="font-bold text-gray-900 mb-1">{tooltip.poll.pollster}</div>
+                <div className="text-gray-700 mb-1.5">
                   {tooltip.poll.endDate}
                   {tooltip.poll.sampleSize ? ` · n=${tooltip.poll.sampleSize.toLocaleString()}` : ""}
                 </div>
-                {PARTIES.map(({ key, label, color }) => {
+                {PARTIES.map(({ key, label, textColor }) => {
                   const val = tooltip.poll[key];
                   if (val === null) return null;
                   return (
                     <div key={String(key)} className="flex justify-between gap-3">
-                      <span style={{ color }}>{label}</span>
-                      <span className="font-medium text-gray-700">{val}%</span>
+                      <span style={{ color: textColor }} className="font-bold">{label}</span>
+                      <span className="font-medium text-gray-900">{val}%</span>
                     </div>
                   );
                 })}
@@ -362,12 +374,12 @@ function PollsChartInner({ data }: Props) {
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
             {PARTIES.map(({ key, label, color }) => (
               <div key={String(key)} className="flex items-center gap-1.5">
-                <span className="inline-block rounded-full" style={{ width: 10, height: 10, background: color }} />
-                <span className="font-body text-xs text-gray-600">{label}</span>
+                <span className="inline-block rounded-full" aria-hidden="true" style={{ width: 10, height: 10, background: color }} />
+                <span className="font-body text-xs text-gray-800">{label}</span>
               </div>
             ))}
           </div>
-          <p className="font-body text-xs text-gray-500 mt-2">
+          <p className="font-body text-xs text-gray-700 mt-2">
             Each dot is one poll, sized by sample. The thicker line is a 30-day centred rolling mean. Dashed lines mark each party's 2021 result.
           </p>
         </>
@@ -387,7 +399,7 @@ const MRP_PARTY_ORDER: Array<{ short: keyof MrpEntry["seats"]; label: string; co
 function MrpPanel({ mrp }: { mrp: MrpEntry[] }) {
   if (mrp.length === 0) {
     return (
-      <div className="bg-white border border-votescot-border rounded-md p-4 font-body text-xs text-gray-500">
+      <div className="bg-white border border-votescot-border rounded-md p-4 font-body text-xs text-gray-700">
         No MRP seat projections published yet.
       </div>
     );
@@ -397,7 +409,7 @@ function MrpPanel({ mrp }: { mrp: MrpEntry[] }) {
 
   return (
     <div className="bg-white border border-votescot-border rounded-md p-3">
-      <p className="font-body text-xs text-gray-500 mb-3">
+      <p className="font-body text-xs text-gray-700 mb-3">
         Most recent MRP seat projections. Vertical line marks 65 seats — the majority threshold in a 129-seat parliament.
       </p>
       <div className="flex flex-col gap-3">
@@ -408,8 +420,8 @@ function MrpPanel({ mrp }: { mrp: MrpEntry[] }) {
       <div className="flex flex-wrap gap-x-4 gap-y-1 mt-3">
         {MRP_PARTY_ORDER.map(({ short, label, color }) => (
           <div key={short} className="flex items-center gap-1.5">
-            <span className="inline-block rounded-full" style={{ width: 10, height: 10, background: color }} />
-            <span className="font-body text-xs text-gray-600">{label}</span>
+            <span className="inline-block rounded-full" aria-hidden="true" style={{ width: 10, height: 10, background: color }} />
+            <span className="font-body text-xs text-gray-800">{label}</span>
           </div>
         ))}
       </div>
@@ -444,15 +456,15 @@ function MrpRow({ row }: { row: MrpEntry }) {
   return (
     <div>
       <div className="flex justify-between items-baseline mb-1 font-body text-xs">
-        <span className="font-bold text-gray-700">{row.pollster}</span>
-        <span className="text-gray-400">
+        <span className="font-bold text-gray-900">{row.pollster}</span>
+        <span className="text-gray-700">
           {row.endDate}
           {row.client && row.client !== "N/A" ? ` · ${row.client}` : ""}
           {row.sampleSize ? ` · n=${row.sampleSize.toLocaleString()}` : ""}
           {majorityLabel ? ` · ${majorityLabel}` : ""}
         </span>
       </div>
-      <div className="relative h-6 bg-gray-100 rounded overflow-hidden border border-gray-200">
+      <div className="relative h-6 bg-gray-100 rounded overflow-hidden border border-gray-500">
         {segments.map((seg, i) => {
           const widthPct = (seg.seats / TOTAL_SEATS) * 100;
           const leftPct = (segments.slice(0, i).reduce((a, s) => a + s.seats, 0) / TOTAL_SEATS) * 100;

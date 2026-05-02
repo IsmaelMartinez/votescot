@@ -391,12 +391,15 @@ function ConstituencyMapInner({
     <div className="flex flex-col gap-3">
       {/* Postcode search */}
       <div className="bg-white rounded-lg p-4 border border-votescot-border">
-        <label className="block font-heading font-bold text-base mb-2">
+        <label htmlFor="map-postcode" className="block font-heading font-bold text-base mb-2">
           Find your constituency by postcode
         </label>
         <div className="flex gap-2">
           <input
+            id="map-postcode"
             type="text"
+            autoComplete="postal-code"
+            inputMode="text"
             value={postcode}
             onChange={(e) => {
               setPostcode(e.target.value);
@@ -404,54 +407,57 @@ function ConstituencyMapInner({
             }}
             onKeyDown={(e) => e.key === "Enter" && lookupPostcode()}
             placeholder="e.g. EH1 1BB"
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-md font-body text-sm focus:outline-none focus:border-votescot-gold"
+            className="flex-1 px-3 py-2 border border-gray-500 rounded-md font-body text-sm focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold-text focus:border-votescot-gold-text"
           />
           <button
             onClick={lookupPostcode}
             disabled={postcodeLoading}
-            className="px-4 py-2 bg-votescot-dark text-white rounded-md font-body text-sm font-bold hover:bg-gray-800 transition-colors disabled:opacity-50"
+            className="px-4 py-2 bg-votescot-dark text-white rounded-md font-body text-sm font-bold hover:bg-gray-800 transition-colors disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-votescot-gold-text"
+            aria-label={postcodeLoading ? "Looking up postcode" : "Find constituency for this postcode"}
           >
             {postcodeLoading ? "..." : "Find"}
           </button>
         </div>
 
-        {postcodeResult?.found && (
-          <div
-            className={`mt-3 p-3 rounded-md font-body text-sm ${
-              postcodeResult.covered
-                ? "bg-green-50 border border-green-200"
-                : "bg-amber-50 border border-amber-200"
-            }`}
-          >
-            You're in <strong>{postcodeResult.constituencyName}</strong>.{" "}
-            {postcodeResult.covered ? (
-              <>
-                <a
-                  href={`${basePath}candidates/constituency/${postcodeResult.slug}`}
-                  className="text-blue-600 underline font-semibold"
-                >
-                  See your candidates →
-                </a>
-              </>
-            ) : (
-              "We don't have candidate data for this constituency yet. Check WhoCanIVoteFor.co.uk."
-            )}
-          </div>
-        )}
-        {postcodeResult && !postcodeResult.found && (
-          <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-md font-body text-sm">
-            Couldn't find that postcode. Check the format (e.g. EH1 1BB) and try again.
-          </div>
-        )}
+        <div role="status" aria-live="polite">
+          {postcodeResult?.found && (
+            <div
+              className={`mt-3 p-3 rounded-md font-body text-sm text-gray-900 ${
+                postcodeResult.covered
+                  ? "bg-green-50 border border-green-700"
+                  : "bg-amber-50 border border-amber-700"
+              }`}
+            >
+              You're in <strong>{postcodeResult.constituencyName}</strong>.{" "}
+              {postcodeResult.covered ? (
+                <>
+                  <a
+                    href={`${basePath}candidates/constituency/${postcodeResult.slug}`}
+                    className="text-blue-700 underline font-semibold"
+                  >
+                    See your candidates <span aria-hidden="true">→</span>
+                  </a>
+                </>
+              ) : (
+                "We don't have candidate data for this constituency yet. Check WhoCanIVoteFor.co.uk."
+              )}
+            </div>
+          )}
+          {postcodeResult && !postcodeResult.found && (
+            <div className="mt-3 p-3 bg-red-50 border border-red-700 rounded-md font-body text-sm text-gray-900">
+              Couldn't find that postcode. Check the format (e.g. EH1 1BB) and try again.
+            </div>
+          )}
+        </div>
       </div>
 
       {/* View toggle + Projection toggle + Legend */}
-      <div className="flex flex-wrap items-center gap-4 font-body text-xs text-gray-600">
+      <div className="flex flex-wrap items-center gap-4 font-body text-xs text-gray-800">
         {hasRegionData && (
           <div
             role="group"
             aria-label="Map view"
-            className="inline-flex rounded-full border border-gray-300 overflow-hidden text-xs font-bold"
+            className="inline-flex rounded-full border border-gray-500 overflow-hidden text-xs font-bold"
           >
             <button
               onClick={() => setViewMode("constituency")}
@@ -459,7 +465,7 @@ function ConstituencyMapInner({
               className={`px-3 py-1.5 transition-colors ${
                 viewMode === "constituency"
                   ? "bg-votescot-dark text-white"
-                  : "bg-white text-gray-600 hover:bg-gray-50"
+                  : "bg-white text-gray-800 hover:bg-gray-100"
               }`}
             >
               Constituency
@@ -467,10 +473,10 @@ function ConstituencyMapInner({
             <button
               onClick={() => setViewMode("region")}
               aria-pressed={viewMode === "region"}
-              className={`px-3 py-1.5 border-l border-gray-300 transition-colors ${
+              className={`px-3 py-1.5 border-l border-gray-500 transition-colors ${
                 viewMode === "region"
                   ? "bg-votescot-dark text-white"
-                  : "bg-white text-gray-600 hover:bg-gray-50"
+                  : "bg-white text-gray-800 hover:bg-gray-100"
               }`}
             >
               Region
@@ -481,10 +487,11 @@ function ConstituencyMapInner({
         {hasProjections && viewMode === "constituency" && (
           <button
             onClick={() => setShowProjections(!showProjections)}
+            aria-pressed={showProjections}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-colors ${
               showProjections
                 ? "bg-votescot-dark text-white border-votescot-dark"
-                : "bg-white text-gray-600 border-gray-300 hover:border-votescot-gold"
+                : "bg-white text-gray-800 border-gray-500 hover:border-votescot-gold-text"
             }`}
           >
             {showProjections ? "Hide projections" : "Show projections"}
@@ -514,7 +521,7 @@ function ConstituencyMapInner({
                 {PARTY_LABELS[party] ?? party}
               </span>
             ))}
-            <span className="text-gray-400 ml-1">Opacity = competitiveness</span>
+            <span className="text-gray-700 ml-1">Opacity = competitiveness</span>
           </>
         ) : (
           <>
@@ -539,25 +546,25 @@ function ConstituencyMapInner({
       {/* Map */}
       <div className="relative rounded-lg overflow-hidden border border-votescot-border" style={{ height: "520px" }}>
         {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
-            <div className="font-body text-sm text-gray-500">Loading constituency boundaries…</div>
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-50 z-10" role="status">
+            <div className="font-body text-sm text-gray-800">Loading constituency boundaries…</div>
           </div>
         )}
         {error && (
-          <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-10">
-            <div className="font-body text-sm text-red-600">{error}</div>
+          <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-10" role="alert">
+            <div className="font-body text-sm text-red-700">{error}</div>
           </div>
         )}
 
         {/* Floating tooltip for uncovered constituency click */}
         {tooltip && (
-          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-[1000] bg-white border border-gray-300 rounded-md px-3 py-2 font-body text-sm shadow-md max-w-xs text-center">
+          <div role="status" aria-live="polite" className="absolute top-3 left-1/2 -translate-x-1/2 z-[1000] bg-white border border-gray-700 rounded-md px-3 py-2 font-body text-sm shadow-md max-w-xs text-center text-gray-900">
             <strong>{tooltip.name}</strong>: candidate data coming soon.{" "}
             <a
               href="https://whocanivotefor.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline"
+              className="text-blue-700 underline"
             >
               WhoCanIVoteFor
             </a>
@@ -590,7 +597,7 @@ function ConstituencyMapInner({
         </MapContainer>
       </div>
 
-      <div className="font-body text-xs text-gray-400">
+      <div className="font-body text-xs text-gray-700">
         Boundaries: 2026 Scottish Parliament constituencies (SPCF) via{" "}
         <a
           href="https://mapit.mysociety.org/"

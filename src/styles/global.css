@@ -5,11 +5,19 @@
 @theme {
   --color-votescot-dark: #1a1a2e;
   --color-votescot-gold: #c4940a;
+  --color-votescot-gold-text: #8a6708;
   --color-votescot-paper: #f5f2ed;
-  --color-votescot-border: #e8e4df;
-  --color-match-good: #2d8a4e;
-  --color-match-partial: #c4940a;
+  --color-votescot-border: #c9c2b8;
+  --color-match-good: #1f7a3f;
+  --color-match-partial: #8a6708;
   --color-match-poor: #c0392b;
+  --color-party-snp-text: #7a6b00;
+  --color-party-lab-text: #c41e1a;
+  --color-party-con-text: #005a99;
+  --color-party-libdem-text: #9a6a00;
+  --color-party-green-text: #007a3d;
+  --color-party-reform-text: #0a7d90;
+  --color-party-alba-text: #005EB8;
   --font-heading: "Crimson Pro Variable", Georgia, serif;
   --font-body: "Source Sans 3 Variable", sans-serif;
 }

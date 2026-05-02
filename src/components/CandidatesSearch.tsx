@@ -27,7 +27,7 @@ function CandidatesSearchInner({ items, knownConstituencies, basePath }: Props) 
         label="Enter your postcode to find your constituency's candidates"
         onResolved={(id) => { window.location.href = `${basePath}candidates/constituency/${id}`; }}
       />
-      <p className="font-body text-xs text-gray-500 mb-2">Or search by name:</p>
+      <p className="font-body text-xs text-gray-700 mb-2">Or search by name:</p>
       <SearchFilter
         placeholder="Search by constituency or candidate name…"
         items={items}
