@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02T12:35:15.600Z",
+  "lastUpdated": "2026-05-02T18:34:43.748Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "The big issues and key flashpoints from Scotland's election campaign",
+      "description": "BBC Scotland political editor Glenn Campbell examines what we have learned during the Holyrood election campaign.",
+      "url": "https://www.bbc.com/news/articles/cddqdvdeqrlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-02T08:19:18.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Whisky tariffs deal sparks political squabble over who claims credit",
       "description": "Party leaders quickly changed their campaign plans after Donald Trump's announcement on the tariffs deal.",
@@ -217,13 +224,6 @@
       "url": "https://ballotbox.scot/more-in-common-april-2026/",
       "publishedAt": "2026-04-17T16:30:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "The Lib Dems' manifesto pledges analysed",
-      "description": "We have analysed some of the policies in the Scottish Lib Dems' manifesto for the 2026 Holyrood election.",
-      "url": "https://www.bbc.com/news/articles/ckg0p7ew4kqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-17T14:16:48.000Z",
-      "source": "BBC News"
     }
   ]
 }
