@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-03T07:07:52.614Z",
+  "lastUpdated": "2026-05-03T12:34:45.993Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "SNP's free childcare plans branded a 'gimmick' in education debate",
+      "description": "Plans from the SNP to roll out more free childcare have been criticised by the Labour and Conservative parties.",
+      "url": "https://www.bbc.com/news/articles/cz02r3e3v5do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-03T12:11:16.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Nature haven 'trashed' after four-year wait for protection decision",
+      "description": "Activists claim developers are damaging the area while NatureScot considers whether or not to designate it a protected site.",
+      "url": "https://www.bbc.com/news/articles/cvgzl329lqlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-03T08:14:19.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "The big issues and key flashpoints from Scotland's election campaign",
       "description": "BBC Scotland political editor Glenn Campbell examines what we have learned during the Holyrood election campaign.",
@@ -210,20 +224,6 @@
       "url": "https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity",
       "publishedAt": "2026-04-19T10:00:39.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "‘Things could go backwards’: Kezia Dugdale on safety, LGBTQ+ rights and the future of Stonewall",
-      "description": "Exclusive: Former Scottish Labour leader says she feels more scared as a lesbian today and calls for a kinder debate on transgender issuesKezia Dugdale, the former leader of Scottish Labour, says she is now “quite scared” as a lesbian in Britain and has started to feel nervous holding her wife’s hand in public.Speaking to the Guardian in Edinburgh on the announcement of her appointment as the chair of Stonewall, the LGBTQ+ charity, she said it was “completely possible” gay rights in the UK could be eroded with the rise of rightwing populism. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/19/things-could-go-backwards-kezia-dugdale-on-safety-lgbtq-rights-and-the-future-of-stonewall",
-      "publishedAt": "2026-04-19T06:00:34.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: More in Common 24th of March – 10th of April 2026",
-      "description": "An outlier pollster for the SNP, Greens (both low) and Lib Dems (notably high) nonetheless still translates, via the SNP's constituency dominance, into an expected Pro-Independence majority in the chamber.",
-      "url": "https://ballotbox.scot/more-in-common-april-2026/",
-      "publishedAt": "2026-04-17T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
     }
   ]
 }
