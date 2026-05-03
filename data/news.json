@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-03T12:34:45.993Z",
+  "lastUpdated": "2026-05-03T18:35:13.678Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Poll Analysis: Norstat 27th – 30th of April 2026",
+      "description": "A weaker than average poll for the SNP and best in a while for the Conservatives could suggest a majority remains an unlikely result on Thursday.",
+      "url": "https://ballotbox.scot/norstat-april-2026-2/",
+      "publishedAt": "2026-05-03T16:30:00.000Z",
+      "source": "Ballot Box Scotland"
+    },
     {
       "title": "SNP's free childcare plans branded a 'gimmick' in education debate",
       "description": "Plans from the SNP to roll out more free childcare have been criticised by the Labour and Conservative parties.",
@@ -217,13 +224,6 @@
       "url": "https://ballotbox.scot/survation-april-2026/",
       "publishedAt": "2026-04-23T08:00:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "How Reform is exposing the reality of Scotland’s views on immigration and identity",
-      "description": "Once a progressive outlier, Scotland is facing a political reckoning as Reform benefits from growing social divisionIt’s Monday evening in Aberdeen, and George Preston is wearing his union flag suit to the Reform UK rally. He joined the party in 2024 as it gained ground in the north-east of Scotland with its first councillor defections from the Scottish Conservatives.Now Preston is out leafleting for the party that polls suggest is vying with Scottish Labour to become the official opposition to the Scottish National party in the Holyrood elections on 7 May. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/19/how-reform-is-exposing-the-reality-of-scotlands-views-on-immigration-and-identity",
-      "publishedAt": "2026-04-19T10:00:39.000Z",
-      "source": "The Guardian — Scotland politics"
     }
   ]
 }
