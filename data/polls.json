@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-05-02T08:33:29.207Z",
+  "lastUpdated": "2026-05-03T08:37:00.082Z",
   "constituency": [
+    {
+      "date": "2026-04-27",
+      "endDate": "2026-04-30",
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "sampleSize": 1002,
+      "snp": 36,
+      "con": 14,
+      "lab": 20,
+      "libdem": 11,
+      "green": 1,
+      "alba": null,
+      "reform": 16,
+      "others": null
+    },
     {
       "date": "2026-04-17",
       "endDate": "2026-04-23",
@@ -2029,6 +2044,21 @@
   ],
   "regional": [
     {
+      "date": "2026-04-27",
+      "endDate": "2026-04-30",
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "sampleSize": 1002,
+      "snp": 28,
+      "con": 14,
+      "lab": 17,
+      "libdem": 12,
+      "green": 10,
+      "alba": null,
+      "reform": 17,
+      "others": null
+    },
+    {
       "date": "2026-04-17",
       "endDate": "2026-04-23",
       "pollster": "Survation",
@@ -4055,6 +4085,22 @@
     }
   ],
   "mrp": [
+    {
+      "date": "2026-04-16",
+      "endDate": "2026-04-21",
+      "pollster": "Stonehaven",
+      "client": "N/A",
+      "sampleSize": 3379,
+      "seats": {
+        "snp": 66,
+        "con": 7,
+        "lab": 13,
+        "green": 14,
+        "libdem": 8,
+        "reform": 21
+      },
+      "majority": "2"
+    },
     {
       "date": "2026-03-31",
       "endDate": "2026-04-13",
