@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-03T18:35:13.678Z",
+  "lastUpdated": "2026-05-04T07:21:00.689Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,13 @@
     }
   ],
   "items": [
+    {
+      "title": "Parties gear up for final week of campaigning ahead of election",
+      "description": "On Thursday, voters will head to their polling stations to choose who they want to lead the next Scottish government.",
+      "url": "https://www.bbc.com/news/articles/c0m2v44v9pjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-03T18:52:03.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Poll Analysis: Norstat 27th – 30th of April 2026",
       "description": "A weaker than average poll for the SNP and best in a while for the Conservatives could suggest a majority remains an unlikely result on Thursday.",
@@ -217,13 +224,6 @@
       "url": "https://www.bbc.com/news/articles/cew79ezknrlo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-23T11:49:08.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "BBS Exclusive Poll Analysis: Survation 14th – 21st of April 2026",
-      "description": "This BBS-commissioned poll is surprisingly poor for the SNP, but still has a small Pro-Independence majority. Nonetheless, John Swinney will be hoping this is an outlier.",
-      "url": "https://ballotbox.scot/survation-april-2026/",
-      "publishedAt": "2026-04-23T08:00:00.000Z",
-      "source": "Ballot Box Scotland"
     }
   ]
 }
