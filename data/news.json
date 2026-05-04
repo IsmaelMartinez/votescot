@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T12:53:16.419Z",
+  "lastUpdated": "2026-05-04T18:51:31.364Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,6 +16,20 @@
   ],
   "items": [
     {
+      "title": "Reform UK plan to set up migrant detention centres in Green-voting areas condemned by other parties – as it happened",
+      "description": "Nigel Farage’s party proposed to place detention centres in places that vote for Green council leaders or MPsKeir Starmer has said that Europe has to face up to the fact that its alliance with the US is under strain.He made the remark in public comments during the plenary session at the European Political Community summit in Yerevan in Armenia.And both of those are impacting all of us in a very material way.In the United Kingdom, if you look at the economic forecast now and compare it to the economic forecast just three or four months ago, they are in materially different places, and this is going to play out with our electorates in all of our countries.Reform are now openly threatening voters and not only that they’re threatening them with a power they don’t actually have. This is absolutely pathetic. People across Scotland are proud of the fact that this is a welcoming country that shows solidarity to people who need it.Reform are essentially saying ‘If you don’t vote the way we want you to, we will punish you’. I think the people of Scotland and voters across the UK are not going to take kindly to that kind of Donald Trumpesque threat.Reform know that absolutely bombed last week. The only thing they’ve got to move on to are open threats, not against the Greens but against voters across the country. It’s really quite sinister. This is exactly the kind of politics you see in Donald Trump’s America. People across Scotland are going to reject that on Thursday. Continue reading...",
+      "url": "https://www.theguardian.com/politics/live/2026/may/04/local-election-uk-keir-starmer-ukraine-eu-loan-deal-latest-news-updates",
+      "publishedAt": "2026-05-04T16:10:17.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Parties hit the road for final week of campaigning",
+      "description": "On Thursday, voters will head to their polling stations to choose who they want to lead the next Scottish government.",
+      "url": "https://www.bbc.com/news/articles/c0m2v44v9pjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-04T13:19:54.000Z",
+      "source": "BBC News"
+    },
+    {
       "title": "Hundreds more prisoners released early but jails still full",
       "description": "New data shows more than 600 prisoners have been released early from Scotland's jails since November but it has done little to ease overcrowding.",
       "url": "https://www.bbc.com/news/articles/czd24z7563no?at_medium=RSS&at_campaign=rss",
@@ -28,13 +42,6 @@
       "url": "https://www.theguardian.com/commentisfree/2026/may/04/scotland-election-reform-threat",
       "publishedAt": "2026-05-04T09:00:19.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Parties gear up for final week of campaigning ahead of election",
-      "description": "On Thursday, voters will head to their polling stations to choose who they want to lead the next Scottish government.",
-      "url": "https://www.bbc.com/news/articles/c0m2v44v9pjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-03T18:52:03.000Z",
-      "source": "BBC News"
     },
     {
       "title": "Poll Analysis: Norstat 27th – 30th of April 2026",
@@ -217,13 +224,6 @@
       "url": "https://www.theguardian.com/politics/2026/apr/24/this-election-is-all-to-play-for-can-scottish-labour-leader-defy-political-gravity",
       "publishedAt": "2026-04-24T05:00:32.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Are parties being upfront about Scotland's finances?",
-      "description": "Can Holyrood afford to pay for the spending promises being outlined in the election campaign?",
-      "url": "https://www.bbc.com/news/articles/cp8648vqp1ro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-23T22:11:51.000Z",
-      "source": "BBC News"
     }
   ]
 }
