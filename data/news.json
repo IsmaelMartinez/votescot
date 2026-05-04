@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T07:21:00.689Z",
+  "lastUpdated": "2026-05-04T12:53:16.419Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Hundreds more prisoners released early but jails still full",
+      "description": "New data shows more than 600 prisoners have been released early from Scotland's jails since November but it has done little to ease overcrowding.",
+      "url": "https://www.bbc.com/news/articles/czd24z7563no?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-04T12:13:15.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Reform’s toxic thinking has infected Scottish politics – this week’s Holyrood elections will tell us how badly | Jasmeen Kanwal",
+      "description": "For so long, the Scottish government has made a point of welcoming migrants. But I now see troubling changes in my countryJasmeen Kanwal is an educator and writer who lives in EdinburghAs Scotland prepares to elect a new parliament on 7 May, immigration is dominating the political discourse as never before. Reform UK, a party whose top three policies are “stop the boats”, “secure and defend our borders” and “deport illegal migrants” is now polling in second place behind the SNP in many recent surveys. Its success here seems illogical. Immigration, after all, is not devolved to the Scottish parliament. But as I’ve learned from my experience as an immigrant in Scotland, Holyrood’s position on immigration matters.In Westminster, the Labour government’s approach to Reform’s toxic, distorted narrative on immigration has been not to challenge it but instead to accept it as the starting point for its own hardline anti-immigrant agenda. If this thinking were to infect Holyrood, it would be disastrous for Scotland. Continue reading...",
+      "url": "https://www.theguardian.com/commentisfree/2026/may/04/scotland-election-reform-threat",
+      "publishedAt": "2026-05-04T09:00:19.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Parties gear up for final week of campaigning ahead of election",
       "description": "On Thursday, voters will head to their polling stations to choose who they want to lead the next Scottish government.",
@@ -209,20 +223,6 @@
       "description": "Can Holyrood afford to pay for the spending promises being outlined in the election campaign?",
       "url": "https://www.bbc.com/news/articles/cp8648vqp1ro?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-23T22:11:51.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Global Counsel, lobbying firm set up by Mandelson, went bust owing £4.5m just before his arrest – as it happened",
-      "description": "Firm went bust in February amid fallout from the scandal over Mandelson’s links to Jeffrey EpsteinLittle says in March she had a meeting when she asked to see the Foreign Office’s documentation about the decision to grant Mandelson vetting. She said she was asking because this was documentation covered by the humble address. She said was told that “that information would not be forthcoming”.In the middle of March, I have a meeting with Sir Olly and a senior member of his team, and this is after the point that I’ve been told that this summary document exists.I specifically ask to see this document and any decision-making audit trail around those judgments at the time. It was made clear to me that that information would not be forthcoming.I took the very unusual judgment that I should directly request the information from UK Security Vetting.And I did that because I go back to my responsibilities, to discharge the humble address, which is a responsibility that is unique to me and I take very seriously. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/apr/23/keir-starmer-peter-mandelson-vetting-cat-little-olly-robbins-vet-uk-politics-latest-news-updates",
-      "publishedAt": "2026-04-23T16:48:21.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish election 2026: Who should I vote for? Compare party policies",
-      "description": "Explore the policies of the main parties in Scotland and compare where they stand on key issues with this interactive guide.",
-      "url": "https://www.bbc.com/news/articles/cew79ezknrlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-23T11:49:08.000Z",
       "source": "BBC News"
     }
   ]
