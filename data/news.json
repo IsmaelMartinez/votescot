@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-05T12:47:38.762Z",
+  "lastUpdated": "2026-05-05T18:48:14.796Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Badenoch defends seeking a ban on pro-Palestine marches but not Tommy Robinson ones – as it happened",
+      "description": "Tory leader says the protests are ‘not the same’Kemi Badenoch has questioned whether the undisclosed £5m donation given to Nigel Farage by a crypto billionaire shows that he has been “bought”.In an interview with the Today programme this morning, the Conservative leader asked whether the donation was linked to Farage’s support for cryptocurrencies, and she said the donation showed why Farage could not be trusted as a political leader.Let’s see, I believe that people should look at the character of an individual.You look at Nigel Farage’s fishy £5m. I think that’s a very, very concerning story. No one gets £5m directly. This was not for his party. He kept it a secret. What was that money for? Who’s bought him?Well, I don’t understand why somebody who works in crypto gives this sort of personal gift, as Farage calls it, and then all of a sudden Farage is promoting crypto.He should have declared it. We’ve already made a report to the standards committee. He should have declared it because those are the rules in this country. Continue reading...",
+      "url": "https://www.theguardian.com/politics/live/2026/may/05/keir-starmer-uk-antisemitism-summit-golders-green-terror-latest-news-updates",
+      "publishedAt": "2026-05-05T16:30:37.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Council apology after envelopes say photo ID needed for election",
+      "description": "The envelopes incorrectly say photo identification will be needed to vote in the Scottish Parliament elections.",
+      "url": "https://www.bbc.com/news/articles/crep83j7nwro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-05T14:25:00.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "It's been a Holyrood election of disputed claims - BBC Verify fact-checked them",
       "description": "BBC Verify has been fact-checking the political parties and seen some questionable claims at the forefront of the debate.",
@@ -210,20 +224,6 @@
       "url": "https://www.bbc.com/news/articles/cly0g184l9ro?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-04-28T05:00:29.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "No 10 publishes previously confidential memo to refute claim that Starmer misled MPs over Mandelson appointment – as it happened",
-      "description": "Speaker Sir Lindsay Hoyle earlier confirmed that MPs will decide whether to let inquiry into Keir Starmer’s statements over Peter Mandelson proceedDowning Street has said that the UK is “in a good position” to handle the global supply problems caused by the Iran war not being resolved.Speaking at the morning lobby briefing, the PM’s spokesperson said:We remain focused on a long-term, permanent solution to the crisis. As a result of the forward-planning, the government undertook over the past few months, the UK is in a good position.We’re ramping up planning for all different potential impacts on the UK economy and consumers, and that means focusing on a live monitoring of stock levels and what plans are in place for addressing supply chain disruption.Even Boris Johnson didn’t block his MPs voting for scrutiny. Labour MPs must be given a free vote on any motion to refer Starmer to the privileges committee, not forced into being accomplices to a cover-up.If Keir Starmer has misled the House and the public, he must be held to the same standard that we should expect of any prime minister. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates",
-      "publishedAt": "2026-04-27T17:13:10.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Free bus travel to first-homes fund: what Scottish parties are promising on the campaign trail",
-      "description": "Advent of Reform has radically altered the dynamics of the campaign and parties are responding accordinglyPolls predict a gravity-defying fifth term at Holyrood for the Scottish National party – albeit on a much reduced vote share – but the advent of Reform UK has radically altered the dynamics of the election campaign. The manifesto pledges set out below reveal how established parties are responding, however, a lack of engagement with an estimated £5bn hole in Scottish government finances by the end of the decade has prompted economists at the independent Fraser of Allander Institute (FAI) to accuse all parties of “a collective bout of fiscal denial”. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/27/what-scottish-parties-promising-campaign-elections-snp-reform-labour-green-lib-dem-conservative",
-      "publishedAt": "2026-04-27T13:00:11.000Z",
-      "source": "The Guardian — Scotland politics"
     }
   ]
 }
