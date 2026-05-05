@@ -264,9 +264,8 @@ function QuizEngineInner(props: Props) {
 
         <div className="mt-3.5 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
           A starting point, not a verdict. Explore the{" "}
-          <a href={`${basePath}candidates`} className="text-votescot-gold">candidate profiles</a>, read the{" "}
-          <a href={`${basePath}guide#resources`} className="text-votescot-gold">party manifestos</a>, and{" "}
-          <a href={`${basePath}guide#resources`} className="text-votescot-gold">compare with other guides and quizzes</a>{" "}
+          <a href={`${basePath}candidates`} className="text-votescot-gold">candidate profiles</a>, or read{" "}
+          <a href={`${basePath}guide#resources`} className="text-votescot-gold">party manifestos and other guides</a>{" "}
           to broaden the picture.
         </div>
       </div>
