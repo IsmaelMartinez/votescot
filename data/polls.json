@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T08:52:57.574Z",
+  "lastUpdated": "2026-05-05T06:41:35.529Z",
   "constituency": [
     {
       "date": "2026-04-27",
@@ -17,10 +17,25 @@
       "others": null
     },
     {
+      "date": "2026-03-03",
+      "endDate": "2026-04-26",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 4124,
+      "snp": 35,
+      "con": 13,
+      "lab": 17,
+      "libdem": 13,
+      "green": 2,
+      "alba": null,
+      "reform": 19,
+      "others": 2
+    },
+    {
       "date": "2026-04-17",
       "endDate": "2026-04-23",
       "pollster": "Survation",
-      "client": "Diffley Parntership",
+      "client": "Diffley Partnership",
       "sampleSize": 1012,
       "snp": 38,
       "con": 12,
@@ -2057,6 +2072,21 @@
       "alba": null,
       "reform": 17,
       "others": null
+    },
+    {
+      "date": "2026-03-03",
+      "endDate": "2026-04-26",
+      "pollster": "More in Common",
+      "client": "N/A",
+      "sampleSize": 4124,
+      "snp": 26,
+      "con": 11,
+      "lab": 15,
+      "libdem": 12,
+      "green": 11,
+      "alba": null,
+      "reform": 22,
+      "others": 4
     },
     {
       "date": "2026-04-17",
