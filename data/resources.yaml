@@ -54,6 +54,28 @@ sections:
         url: "https://www.electoralcommission.org.uk/news-and-views/media-centre/scottish-parliament-election-2026-media-guide"
         description: "How AMS and D'Hondt work. Two ballot papers explained. Spending rules."
 
+  - title: "Compare with other guides and quizzes"
+    icon: "compare"
+    items:
+      - name: "BBC News, Compare party policies"
+        url: "https://www.bbc.co.uk/news/articles/cew79ezknrlo"
+        description: "BBC's policy comparison guide for the 2026 Holyrood election. Browse the main parties side by side on cost of living, NHS, economy, immigration and more. A reference rather than a matcher: it shows what parties promise, but doesn't score you."
+      - name: "iSideWith UK, Scottish 2026"
+        url: "https://uk.isidewith.com/elections/2026"
+        description: "Weighted quiz with low/medium/high importance toggles per question. Produces percentage matches against Scottish parties. Methodology disclosure is limited."
+      - name: "Vote Compass UK"
+        url: "https://votecompass.uk/"
+        description: "Run by Vox Pop Labs (the team behind CBC and ABC Vote Compass). Likert-scale propositions; party positions are coded from manifestos and validated with parties. Places you on a 2D ideological map."
+      - name: "Who Should You Vote For?"
+        url: "https://www.whoshouldyouvotefor.com/"
+        description: "Long-running blind agree/disagree quiz. Party labels are hidden until the result, so you answer on policy alone."
+      - name: "Vote for Policies"
+        url: "https://voteforpolicies.org.uk/"
+        description: "Pick policies blind across topics. No algorithm and no weighting: it just counts which party's policies you preferred most. Policy summaries are sent to parties for verification."
+      - name: "Electoral Calculus, Plot My Position"
+        url: "https://www.electoralcalculus.co.uk/survey2d.html"
+        description: "Places you on economic and international/national axes alongside party-supporter averages. UK-wide rather than Scotland-specific."
+
   - title: "Open data & APIs"
     icon: "data"
     items:
