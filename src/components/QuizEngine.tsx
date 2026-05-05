@@ -119,9 +119,15 @@ function QuizEngineInner(props: Props) {
     return (
       <div className="py-3.5">
         <h2 className="font-heading text-lg font-black mb-1">Vote Compass</h2>
-        <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-4">
+        <p className="font-body text-[12.5px] text-gray-500 leading-snug mb-3">
           Select your constituency to get started. We'll match you on both the constituency and regional ballots.
         </p>
+
+        <div className="mb-4 p-2.5 bg-votescot-paper rounded border border-votescot-border font-body text-[12px] text-gray-500 leading-snug">
+          One tool among several. Positions come from published party platforms and don't capture every local candidate factor. Read manifestos and{" "}
+          <a href={`${basePath}guide#resources`} className="text-votescot-gold">compare with other guides and quizzes</a>{" "}
+          before you decide.
+        </div>
 
         <PostcodeInput
           knownConstituencies={knownConstituencies}
@@ -257,9 +263,11 @@ function QuizEngineInner(props: Props) {
         </div>
 
         <div className="mt-3.5 p-3 bg-votescot-dark rounded-lg font-body text-xs text-gray-300 leading-relaxed text-center">
-          This is a starting point, not a verdict. Explore the{" "}
-          <a href={`${basePath}candidates`} className="text-votescot-gold">candidate profiles</a> and{" "}
-          <a href={`${basePath}resources`} className="text-votescot-gold">independent resources</a> to dig deeper.
+          A starting point, not a verdict. Explore the{" "}
+          <a href={`${basePath}candidates`} className="text-votescot-gold">candidate profiles</a>, read the{" "}
+          <a href={`${basePath}guide#resources`} className="text-votescot-gold">party manifestos</a>, and{" "}
+          <a href={`${basePath}guide#resources`} className="text-votescot-gold">compare with other guides and quizzes</a>{" "}
+          to broaden the picture.
         </div>
       </div>
     );
