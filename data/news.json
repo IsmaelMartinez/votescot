@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T18:51:31.364Z",
+  "lastUpdated": "2026-05-05T07:04:54.204Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "It's been a Holyrood election of disputed claims - BBC Verify fact-checked them",
+      "description": "BBC Verify has been fact-checking the political parties and seen some questionable claims at the forefront of the debate.",
+      "url": "https://www.bbc.com/news/articles/c893xz9yw7eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-05T05:09:32.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Next Scottish government faces ‘really difficult’ spending choices, economists say",
+      "description": "Parties&nbsp;accused of ‘fiscal denial’ and failing to tell voters the scale of the challengeThe next Scottish government will need to make “really difficult” spending decisions soon after taking power, including tackling its large public sector pay bill, senior economists have said.Economists with the Fraser of Allander Institute, at the University of Strathclyde, believe the manifestos published by Scotland’s political parties during the campaign failed to tell voters about the true scale of the challenge. Continue reading...",
+      "url": "https://www.theguardian.com/politics/2026/may/05/next-scottish-government-must-make-really-difficult-spending-decisions",
+      "publishedAt": "2026-05-05T04:00:42.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Reform UK plan to set up migrant detention centres in Green-voting areas condemned by other parties – as it happened",
       "description": "Nigel Farage’s party proposed to place detention centres in places that vote for Green council leaders or MPsKeir Starmer has said that Europe has to face up to the fact that its alliance with the US is under strain.He made the remark in public comments during the plenary session at the European Political Community summit in Yerevan in Armenia.And both of those are impacting all of us in a very material way.In the United Kingdom, if you look at the economic forecast now and compare it to the economic forecast just three or four months ago, they are in materially different places, and this is going to play out with our electorates in all of our countries.Reform are now openly threatening voters and not only that they’re threatening them with a power they don’t actually have. This is absolutely pathetic. People across Scotland are proud of the fact that this is a welcoming country that shows solidarity to people who need it.Reform are essentially saying ‘If you don’t vote the way we want you to, we will punish you’. I think the people of Scotland and voters across the UK are not going to take kindly to that kind of Donald Trumpesque threat.Reform know that absolutely bombed last week. The only thing they’ve got to move on to are open threats, not against the Greens but against voters across the country. It’s really quite sinister. This is exactly the kind of politics you see in Donald Trump’s America. People across Scotland are going to reject that on Thursday. Continue reading...",
@@ -209,20 +223,6 @@
       "description": "Advent of Reform has radically altered the dynamics of the campaign and parties are responding accordinglyPolls predict a gravity-defying fifth term at Holyrood for the Scottish National party – albeit on a much reduced vote share – but the advent of Reform UK has radically altered the dynamics of the election campaign. The manifesto pledges set out below reveal how established parties are responding, however, a lack of engagement with an estimated £5bn hole in Scottish government finances by the end of the decade has prompted economists at the independent Fraser of Allander Institute (FAI) to accuse all parties of “a collective bout of fiscal denial”. Continue reading...",
       "url": "https://www.theguardian.com/politics/2026/apr/27/what-scottish-parties-promising-campaign-elections-snp-reform-labour-green-lib-dem-conservative",
       "publishedAt": "2026-04-27T13:00:11.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scotland's population is shifting - could it affect the election outcome?",
-      "description": "Changing populations mean that Scotland's electoral map has been redrawn - which could influence how parties campaign, and how the election plays out.",
-      "url": "https://www.bbc.com/news/articles/cpvxej8ly8yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-04-24T22:08:33.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "‘This election is all to play for’: Can the Scottish Labour leader defy political gravity in May?",
-      "description": "Anas Sarwar speaks to the Guardian about why he thinks the polls are wrong and how he hopes to end the SNP’s near 20-year dominance at HolyroodAnas Sarwar says he is certain he can pull off one of the greatest escape acts of modern British politics. It is 14 days until the Holyrood election, and the polls consistently show Scottish Labour is in a battle simply to come second, never mind win.Those polls are wrong, Sarwar says, and in two weeks plans to prove it. Claiming to be “more than happy” with his party’s underdog status, the Scottish Labour leader insists the media are too obsessed by polling numbers. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/24/this-election-is-all-to-play-for-can-scottish-labour-leader-defy-political-gravity",
-      "publishedAt": "2026-04-24T05:00:32.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
