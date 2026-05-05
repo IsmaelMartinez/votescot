@@ -7,8 +7,8 @@ const WIKI_URL =
   "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Scottish_Parliament_election";
 const OUTPUT_PATH = path.join(process.cwd(), "data/polls.json");
 
-// Normalize pollster names: map predecessor brands to current names
-const POLLSTER_ALIASES: Record<string, string> = {
+// Normalize pollster names: map predecessor brands to current names.
+export const POLLSTER_ALIASES: Readonly<Record<string, string>> = {
   "Ipsos MORI": "Ipsos",
   "Savanta ComRes": "Savanta",
 };
@@ -16,7 +16,7 @@ const POLLSTER_ALIASES: Record<string, string> = {
 // Normalize client names: fix typos that appear in the Wikipedia source so
 // the same commissioning client doesn't split into multiple brand strings
 // when grouping or charting.
-const CLIENT_ALIASES: Record<string, string> = {
+export const CLIENT_ALIASES: Readonly<Record<string, string>> = {
   "Diffley Parntership": "Diffley Partnership",
 };
 
