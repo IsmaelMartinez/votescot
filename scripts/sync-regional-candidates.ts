@@ -42,6 +42,7 @@ interface RegionalCandidateYaml {
   listPosition: number;
   ballotPaperId: string;
   isIncumbent: boolean;
+  quizCandidate: boolean;
   bio: string;
   highlights: string[];
   sources: { url: string; type: string }[];
@@ -93,6 +94,10 @@ function buildYaml(c: Candidacy, ballot: Ballot, id: string): RegionalCandidateY
     listPosition: c.party_list_position ?? (partyName === "Independent" ? 999 : 1),
     ballotPaperId: ballot.ballot_paper_id,
     isIncumbent: false,
+    // Default to false; apply-party-positions.ts flips this to true once a
+    // party YAML with positions is matched. Writing it explicitly keeps the
+    // field shape consistent with constituency candidates.
+    quizCandidate: false,
     bio: `${partyName} regional list candidate for ${ballot.post.label}.`,
     highlights: [
       `${partyName} regional list candidate for ${ballot.post.label} in the 2026 Scottish Parliament election`,

@@ -13,6 +13,13 @@ const POLLSTER_ALIASES: Record<string, string> = {
   "Savanta ComRes": "Savanta",
 };
 
+// Normalize client names: fix typos that appear in the Wikipedia source so
+// the same commissioning client doesn't split into multiple brand strings
+// when grouping or charting.
+const CLIENT_ALIASES: Record<string, string> = {
+  "Diffley Parntership": "Diffley Partnership",
+};
+
 interface PollEntry {
   date: string;
   endDate: string;
@@ -287,12 +294,14 @@ function parseTable(tableHtml: string): PollEntry[] {
 
     const pollsterName = getCellText(colMap.pollster);
     const normalizedPollster = POLLSTER_ALIASES[pollsterName] ?? pollsterName;
+    const clientName = getCellText(colMap.client);
+    const normalizedClient = CLIENT_ALIASES[clientName] ?? clientName;
 
     results.push({
       date: startDate,
       endDate,
       pollster: normalizedPollster,
-      client: getCellText(colMap.client),
+      client: normalizedClient,
       sampleSize: parseSampleSize(getCellText(colMap.sample)),
       snp: parsePercent(getCellText(colMap.snp)),
       con: parsePercent(getCellText(colMap.con)),
@@ -411,12 +420,14 @@ function parseMrpTable(tableHtml: string): MrpEntry[] {
 
     const pollsterName = getCellText(colMap.pollster);
     const normalizedPollster = POLLSTER_ALIASES[pollsterName] ?? pollsterName;
+    const clientName = getCellText(colMap.client);
+    const normalizedClient = CLIENT_ALIASES[clientName] ?? clientName;
 
     results.push({
       date: startDate,
       endDate,
       pollster: normalizedPollster,
-      client: getCellText(colMap.client),
+      client: normalizedClient,
       sampleSize: parseSampleSize(getCellText(colMap.sample)),
       seats: {
         snp: parseSeatCount(getCellText(colMap.snp)),
