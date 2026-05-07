@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T07:18:37.263Z",
+  "lastUpdated": "2026-05-07T12:57:30.244Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,11 +16,25 @@
   ],
   "items": [
     {
+      "title": "STV’s Scotland election coverage to be hit by strike action over pay",
+      "description": "About 120 journalists and broadcast staff expected to protest about pay freeze as STV invests in new radio stationUK politics live – latest updatesCoverage of Scotland’s election counts by STV, the commercial broadcaster, is expected to be heavily hit by strike action in an escalating dispute over pay.The National Union of Journalists and the technical union Bectu have targeted STV’s election reporting for their second strike this year in protest at its decision to impose a company-wide pay freeze after a significant fall in revenues. Continue reading...",
+      "url": "https://www.theguardian.com/media/2026/may/07/stv-scotland-election-coverage-hit-strike-action-pay",
+      "publishedAt": "2026-05-07T11:46:46.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
       "title": "Voting under way for the 2026 Holyrood election",
       "description": "Polling stations will remain open until 22:00, though the first results are not expected until Friday afternoon.",
       "url": "https://www.bbc.com/news/articles/ckgprglgj4zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-07T07:06:24.000Z",
+      "publishedAt": "2026-05-07T08:43:57.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "SP26: Final Ballot Box Scotland Projection",
+      "description": "The polls are now open, and all that's left for parties to do is get their own supporters to actually cast their ballot. In the meantime, here's a run through the most likely outcomes.",
+      "url": "https://ballotbox.scot/sp26-final-projection/",
+      "publishedAt": "2026-05-07T07:30:00.000Z",
+      "source": "Ballot Box Scotland"
     },
     {
       "title": "Thursday briefing: ​Five things to look out for in today’s local and parliamentary elections",
@@ -210,20 +224,6 @@
       "url": "https://www.bbc.com/news/articles/cjrp3pew2d5o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-05-01T07:52:56.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "Will 'scunnered' voters decide Scotland's election?",
-      "description": "Pollsters say there are plenty of undecided voters - but few have a positive view of politicians.",
-      "url": "https://www.bbc.com/news/articles/c62erp11n80o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-01T05:20:17.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Will Reform dominate the local and devolved elections? – podcast",
-      "description": "Pippa Crerar is joined by the election analyst Prof Rob Ford to look at the upcoming local and devolved elections. Will Reform dominate across England? Can the Greens remove Labour’s longstanding hold over London? And will the nationalists win in Scotland and Wales? Continue reading...",
-      "url": "https://www.theguardian.com/politics/audio/2026/apr/30/will-reform-dominate-local-devolved-elections-podcast",
-      "publishedAt": "2026-04-30T16:21:29.000Z",
-      "source": "The Guardian — Scotland politics"
     }
   ]
 }
