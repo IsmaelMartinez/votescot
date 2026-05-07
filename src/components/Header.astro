@@ -1,15 +1,20 @@
 ---
+import { loadElectionState } from "../lib/data";
+
 interface Props {
   currentTab?: string;
 }
 
 const { currentTab } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const state = loadElectionState();
+const showResults = state.phase !== "forecast";
 
 const tabs = [
   { id: "map", label: "Map", href: base },
   { id: "candidates", label: "Candidates", href: `${base}candidates` },
   { id: "quiz", label: "Quiz", href: `${base}quiz` },
+  ...(showResults ? [{ id: "results", label: "Results", href: `${base}results` }] : []),
   { id: "guide", label: "Guide", href: `${base}guide` },
 ];
 ---

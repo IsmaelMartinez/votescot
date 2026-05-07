@@ -22,6 +22,9 @@ export function validateData(): { valid: boolean; errors: string[] } {
   const questionsSchema = loadJson("schemas/questions.schema.json");
   const partySchema = loadJson("schemas/party.schema.json");
   const manifestoRegistrySchema = loadJson("schemas/manifesto-registry.schema.json");
+  const resultsConstituencySchema = loadJson("schemas/results-constituency.schema.json");
+  const resultsRegionalSchema = loadJson("schemas/results-regional.schema.json");
+  const electionStateSchema = loadJson("schemas/election-state.schema.json");
 
   const validateCandidate = ajv.compile(candidateSchema);
   const validateRegionalCandidate = ajv.compile(regionalCandidateSchema);
@@ -29,6 +32,9 @@ export function validateData(): { valid: boolean; errors: string[] } {
   const validateQuestions = ajv.compile(questionsSchema);
   const validateParty = ajv.compile(partySchema);
   const validateManifestoRegistry = ajv.compile(manifestoRegistrySchema);
+  const validateResultsConstituency = ajv.compile(resultsConstituencySchema);
+  const validateResultsRegional = ajv.compile(resultsRegionalSchema);
+  const validateElectionState = ajv.compile(electionStateSchema);
 
   // Validate candidates
   const candidateDir = "data/candidates";
@@ -82,6 +88,37 @@ export function validateData(): { valid: boolean; errors: string[] } {
   const manifestoRegistryData = loadYaml("data/manifestos/registry.yaml");
   if (!validateManifestoRegistry(manifestoRegistryData)) {
     errors.push(`manifestos/registry.yaml: ${ajv.errorsText(validateManifestoRegistry.errors)}`);
+  }
+
+  // Validate election state
+  const electionStatePath = "data/election-state.yaml";
+  if (fs.existsSync(electionStatePath)) {
+    const data = loadYaml(electionStatePath);
+    if (!validateElectionState(data)) {
+      errors.push(`election-state.yaml: ${ajv.errorsText(validateElectionState.errors)}`);
+    }
+  }
+
+  // Validate constituency results
+  const resultsConstituencyDir = "data/results/constituencies";
+  if (fs.existsSync(resultsConstituencyDir)) {
+    for (const file of fs.readdirSync(resultsConstituencyDir).filter((f) => f.endsWith(".yaml"))) {
+      const data = loadYaml(path.join(resultsConstituencyDir, file));
+      if (!validateResultsConstituency(data)) {
+        errors.push(`results/constituencies/${file}: ${ajv.errorsText(validateResultsConstituency.errors)}`);
+      }
+    }
+  }
+
+  // Validate regional results
+  const resultsRegionalDir = "data/results/regional";
+  if (fs.existsSync(resultsRegionalDir)) {
+    for (const file of fs.readdirSync(resultsRegionalDir).filter((f) => f.endsWith(".yaml"))) {
+      const data = loadYaml(path.join(resultsRegionalDir, file));
+      if (!validateResultsRegional(data)) {
+        errors.push(`results/regional/${file}: ${ajv.errorsText(validateResultsRegional.errors)}`);
+      }
+    }
   }
 
   return { valid: errors.length === 0, errors };

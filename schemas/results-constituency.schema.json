@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "partial", "declared"]
+    },
+    "declaredAt": { "type": ["string", "null"], "format": "date-time" },
+    "turnout": {
+      "type": ["object", "null"],
+      "required": ["valid", "electorate"],
+      "properties": {
+        "valid": { "type": "integer", "minimum": 0 },
+        "rejected": { "type": "integer", "minimum": 0 },
+        "electorate": { "type": "integer", "minimum": 0 },
+        "percent": { "type": "number", "minimum": 0, "maximum": 100 }
+      },
+      "additionalProperties": false
+    },
+    "winner": { "type": ["string", "null"] },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["party", "candidate", "votes"],
+        "properties": {
+          "party": { "type": "string" },
+          "candidate": { "type": "string" },
+          "votes": { "type": "integer", "minimum": 0 },
+          "share": { "type": "number", "minimum": 0, "maximum": 100 },
+          "isIncumbent": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "majority": {
+      "type": ["object", "null"],
+      "required": ["votes", "share"],
+      "properties": {
+        "votes": { "type": "integer" },
+        "share": { "type": "number" },
+        "over": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "source": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,333 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import {
+  loadElectionState,
+  loadConstituencies,
+  loadConstituencyResults,
+  loadRegionalResults,
+  loadAccuracyReport,
+} from "../lib/data";
+import { PARTY_THEMES_BY_LONG, PARTY_THEMES_BY_SHORT, PARTY_COLORS_BY_SHORT } from "../lib/party-config";
+
+const state = loadElectionState();
+const constituencies = loadConstituencies();
+const constituencyResults = Array.from(loadConstituencyResults().values());
+const regionalResults = Array.from(loadRegionalResults().values());
+const report = loadAccuracyReport();
+
+const declaredCount = constituencyResults.filter((r) => r.status === "declared").length;
+const regionsDeclared = regionalResults.filter((r) => r.status === "declared").length;
+const totalConstituencies = constituencyResults.length;
+const totalRegions = regionalResults.length;
+
+const phaseCopy: Record<string, string> = {
+  "forecast": "Forecast period — polls have not yet opened.",
+  "polls-open": "Polls are open. Results begin overnight after polls close.",
+  "counting": "Polls have closed. Counting under way; first declarations expected soon.",
+  "partial": `${declaredCount} of ${totalConstituencies} constituencies declared, ${regionsDeclared} of ${totalRegions} regions declared.`,
+  "final": `All ${totalConstituencies} constituencies and ${totalRegions} regions declared.`,
+};
+
+const constituencyById = new Map(constituencies.map((c) => [c.id, c]));
+
+const declared = constituencyResults
+  .filter((r) => r.status === "declared")
+  .sort((a, b) => (a.declaredAt ?? "").localeCompare(b.declaredAt ?? ""))
+  .map((r) => ({
+    ...r,
+    name: constituencyById.get(r.id)?.name ?? r.id,
+    region: constituencyById.get(r.id)?.region ?? "",
+    competitiveness: constituencyById.get(r.id)?.competitiveness,
+    forecast: constituencyById.get(r.id)?.projection,
+  }));
+
+const surprises = declared.filter(
+  (r) => r.forecast && r.winner && r.forecast !== r.winner,
+);
+
+function partyLabel(p: string): string {
+  return PARTY_THEMES_BY_LONG[p]?.label ?? PARTY_THEMES_BY_SHORT[p]?.label ?? p;
+}
+
+function partyColor(p: string): string {
+  return PARTY_THEMES_BY_LONG[p]?.color ?? PARTY_COLORS_BY_SHORT[p] ?? "#cbd5e1";
+}
+
+const pollsters = report?.pollsters ?? [];
+const constituencyPollsterScores = pollsters.filter((p: any) => p.ballot === "constituency");
+const regionalPollsterScores = pollsters.filter((p: any) => p.ballot === "regional");
+
+// Best-by-pollster summary: average MAE across each pollster's last week, ballot-aware.
+function bestByPollster(scores: any[]): { pollster: string; mae: number; rmse: number; n: number }[] {
+  const bucket = new Map<string, { sumMae: number; sumRmse: number; n: number }>();
+  for (const s of scores) {
+    const key = s.pollster;
+    const cur = bucket.get(key) ?? { sumMae: 0, sumRmse: 0, n: 0 };
+    cur.sumMae += s.mae;
+    cur.sumRmse += s.rmse;
+    cur.n += 1;
+    bucket.set(key, cur);
+  }
+  return Array.from(bucket, ([pollster, v]) => ({
+    pollster,
+    mae: v.sumMae / v.n,
+    rmse: v.sumRmse / v.n,
+    n: v.n,
+  })).sort((a, b) => a.mae - b.mae);
+}
+
+const constituencyLeague = bestByPollster(constituencyPollsterScores);
+const regionalLeague = bestByPollster(regionalPollsterScores);
+const mrps = report?.mrps ?? [];
+const projection = report?.votescotProjection ?? null;
+
+const showResults = state.phase === "partial" || state.phase === "final";
+---
+
+<Base
+  title="Results & Forecast Accuracy"
+  description="Live results from the 2026 Scottish Parliament election and how the polls compared."
+>
+  <Header slot="header" currentTab="results" />
+
+  <div class="py-6">
+    <h2 class="font-heading text-2xl font-black mb-2">Results & accuracy</h2>
+    <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
+      {phaseCopy[state.phase] ?? phaseCopy["polls-open"]}
+      {state.lastUpdated && (
+        <span class="block text-xs text-gray-400 mt-1">
+          Last updated {new Date(state.lastUpdated).toLocaleString("en-GB")}
+        </span>
+      )}
+    </p>
+
+    {!showResults && (
+      <div class="bg-votescot-dark text-votescot-paper rounded-lg p-4 mb-6">
+        <h3 class="font-heading text-base font-bold mb-1">Results pending</h3>
+        <p class="font-body text-xs leading-relaxed">
+          This page will populate once results begin to declare. Until then,
+          browse the
+          <a href="/" class="text-votescot-gold underline">forecast map</a>
+          or read the
+          <a href="/guide" class="text-votescot-gold underline">polling overview</a>.
+        </p>
+      </div>
+    )}
+
+    {showResults && report?.national?.constituency && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-2">National vote share</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Aggregated from {declaredCount} declared constituencies. Updates as more declare.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {Object.entries(report.national.constituency).map(([party, share]) => (
+            <div class="rounded-md p-2.5" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}; color: white`}>
+              <div class="font-body text-xs font-bold uppercase tracking-widest opacity-90">{partyLabel(party)}</div>
+              <div class="font-heading text-xl font-black">{(share as number).toFixed(1)}%</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {showResults && report?.seatTotals && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-2">Seats won</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Constituency seats plus regional list seats. 65 needed for a majority.
+        </p>
+        <div class="flex h-3 mb-3 rounded overflow-hidden">
+          {Object.entries(report.seatTotals)
+            .filter(([, n]) => (n as number) > 0)
+            .map(([party, n]) => (
+              <div
+                class="h-full"
+                style={`flex: ${n as number}; background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}`}
+                title={`${partyLabel(party)}: ${n}`}
+              />
+            ))}
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {Object.entries(report.seatTotals).map(([party, n]) => (
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}`} />
+              <span class="font-body text-sm font-bold">{partyLabel(party)}</span>
+              <span class="font-body text-sm text-gray-500">{n as number}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {showResults && projection && projection.totalSeats > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-2">VoteScot's per-seat hit rate</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          How often the constituency YAML projection picked the actual winner,
+          across {projection.totalSeats} declared seats.
+        </p>
+        <div class="font-heading text-3xl font-black mb-3">
+          {(projection.hitRate * 100).toFixed(1)}%
+          <span class="font-body text-sm font-normal text-gray-500 ml-2">
+            ({projection.correctWinners} of {projection.totalSeats})
+          </span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+          {Object.entries(projection.byCompetitiveness).map(([bucket, v]) => {
+            const stats = v as { total: number; correct: number; hitRate: number };
+            return (
+              <div class="bg-gray-50 rounded p-2">
+                <div class="font-body font-bold uppercase tracking-wider text-gray-500">{bucket}</div>
+                <div class="font-heading text-base font-black">{(stats.hitRate * 100).toFixed(0)}%</div>
+                <div class="text-gray-400">{stats.correct}/{stats.total}</div>
+              </div>
+            );
+          })}
+        </div>
+        <p class="font-body text-xs text-gray-500 mt-3">
+          Mean absolute error on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
+        </p>
+      </section>
+    )}
+
+    {showResults && constituencyLeague.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-1">Pollster league table — constituency vote</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Average mean-absolute-error across each pollster's polls. Lower is better.
+        </p>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
+              <th class="py-1.5">Rank</th>
+              <th>Pollster</th>
+              <th class="text-right">Polls</th>
+              <th class="text-right">MAE</th>
+              <th class="text-right">RMSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {constituencyLeague.map((row, i) => (
+              <tr class="border-t border-votescot-border">
+                <td class="py-1.5 font-body font-bold text-gray-400">{i + 1}</td>
+                <td class="font-body font-bold">{row.pollster}</td>
+                <td class="text-right text-gray-500">{row.n}</td>
+                <td class="text-right font-mono">{row.mae.toFixed(2)}</td>
+                <td class="text-right font-mono text-gray-500">{row.rmse.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )}
+
+    {showResults && regionalLeague.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-1">Pollster league table — regional list vote</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Same average-MAE methodology, scored against actual regional list shares.
+        </p>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
+              <th class="py-1.5">Rank</th>
+              <th>Pollster</th>
+              <th class="text-right">Polls</th>
+              <th class="text-right">MAE</th>
+              <th class="text-right">RMSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {regionalLeague.map((row, i) => (
+              <tr class="border-t border-votescot-border">
+                <td class="py-1.5 font-body font-bold text-gray-400">{i + 1}</td>
+                <td class="font-body font-bold">{row.pollster}</td>
+                <td class="text-right text-gray-500">{row.n}</td>
+                <td class="text-right font-mono">{row.mae.toFixed(2)}</td>
+                <td class="text-right font-mono text-gray-500">{row.rmse.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )}
+
+    {showResults && mrps.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-1">MRP seat forecasts vs actual</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          MRPs are the only public forecasts that give per-seat predictions. Total seat error sums |predicted − actual| across all parties.
+        </p>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
+              <th class="py-1.5">Rank</th>
+              <th>Pollster</th>
+              <th>Client</th>
+              <th class="text-right">Total error</th>
+              <th class="text-right">Per-party MAE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mrps.map((m: any, i: number) => (
+              <tr class="border-t border-votescot-border">
+                <td class="py-1.5 font-body font-bold text-gray-400">{i + 1}</td>
+                <td class="font-body font-bold">{m.pollster}</td>
+                <td class="text-gray-500 text-xs">{m.client}</td>
+                <td class="text-right font-mono">{m.totalSeatError}</td>
+                <td class="text-right font-mono text-gray-500">{m.seatMae.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )}
+
+    {showResults && surprises.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-2">Forecast misses</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Seats where the actual winner differed from the VoteScot forecast.
+        </p>
+        <ul class="flex flex-col gap-1.5">
+          {surprises.map((s) => (
+            <li class="flex items-center justify-between bg-gray-50 rounded p-2 text-sm">
+              <span class="font-body font-bold">{s.name}</span>
+              <span class="text-xs">
+                <span class="text-gray-500">forecast </span>
+                <span class="font-bold" style={`color: ${partyColor(s.forecast!)}`}>{partyLabel(s.forecast!)}</span>
+                <span class="text-gray-400 mx-2">→</span>
+                <span class="font-bold" style={`color: ${partyColor(s.winner!)}`}>{partyLabel(s.winner!)}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {showResults && declared.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-2">Declared constituencies</h3>
+        <ul class="flex flex-col gap-1">
+          {declared.map((r) => (
+            <li class="flex items-center justify-between text-sm border-b border-votescot-border last:border-0 py-1.5">
+              <a href={`/candidates/constituency/${r.id}`} class="font-body font-bold no-underline text-gray-900 hover:text-votescot-gold">{r.name}</a>
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full" style={`background: ${partyColor(r.winner!)}`} />
+                <span class="font-body text-xs">{partyLabel(r.winner!)}</span>
+                {r.majority && (
+                  <span class="font-mono text-xs text-gray-400">+{r.majority.votes.toLocaleString()}</span>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+
+  <Footer slot="footer" />
+</Base>

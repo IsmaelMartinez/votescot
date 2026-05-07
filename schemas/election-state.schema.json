@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["phase", "pollDay"],
+  "properties": {
+    "phase": {
+      "type": "string",
+      "enum": ["forecast", "polls-open", "counting", "partial", "final"],
+      "description": "Drives whether the site shows forecasts or actual results."
+    },
+    "pollDay": {
+      "type": "string",
+      "format": "date",
+      "description": "Polling day (2026-05-07)."
+    },
+    "lastUpdated": { "type": ["string", "null"], "format": "date-time" },
+    "constituenciesDeclared": { "type": "integer", "minimum": 0 },
+    "regionsDeclared": { "type": "integer", "minimum": 0 },
+    "summary": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

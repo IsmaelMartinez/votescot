@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-05-07T23:12:59.178Z",
+  "pollDay": "2026-05-07",
+  "constituenciesDeclared": 0,
+  "regionsDeclared": 0,
+  "national": {
+    "constituency": null,
+    "regional": null
+  },
+  "seatTotals": null,
+  "pollsters": [],
+  "mrps": [],
+  "votescotProjection": {
+    "totalSeats": 0,
+    "correctWinners": 0,
+    "hitRate": 0,
+    "byCompetitiveness": {},
+    "perSeat": [],
+    "shareMae": 0
+  }
+}
