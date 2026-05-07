@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T12:57:30.244Z",
+  "lastUpdated": "2026-05-07T18:53:36.865Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,18 +16,32 @@
   ],
   "items": [
     {
-      "title": "STV’s Scotland election coverage to be hit by strike action over pay",
-      "description": "About 120 journalists and broadcast staff expected to protest about pay freeze as STV invests in new radio stationUK politics live – latest updatesCoverage of Scotland’s election counts by STV, the commercial broadcaster, is expected to be heavily hit by strike action in an escalating dispute over pay.The National Union of Journalists and the technical union Bectu have targeted STV’s election reporting for their second strike this year in protest at its decision to impose a company-wide pay freeze after a significant fall in revenues. Continue reading...",
-      "url": "https://www.theguardian.com/media/2026/may/07/stv-scotland-election-coverage-hit-strike-action-pay",
-      "publishedAt": "2026-05-07T11:46:46.000Z",
+      "title": "STV staff to strike on election results day",
+      "description": "Reporters and some technical staff will not broadcast any election coverage in a dispute over a pay freeze.",
+      "url": "https://www.bbc.com/news/articles/cn4p8d7ex1zo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-07T17:06:08.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "2026 election results: latest from local, Scottish and Welsh votes",
+      "description": "From the devolved parliaments in Scotland and Wales to councils and mayoralties across England, our results tracker will show what has happened in your area as results come in. Polls close at 10pm, with the first results expected at around midnight. Check back later for live updates Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
+      "publishedAt": "2026-05-07T15:00:00.000Z",
       "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Voting under way for the 2026 Holyrood election",
       "description": "Polling stations will remain open until 22:00, though the first results are not expected until Friday afternoon.",
       "url": "https://www.bbc.com/news/articles/ckgprglgj4zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-07T08:43:57.000Z",
+      "publishedAt": "2026-05-07T14:19:07.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "STV’s Scotland election coverage to be hit by strike action over pay",
+      "description": "About 120 journalists and broadcast staff expected to protest about pay freeze as STV invests in new radio stationCoverage of Scotland’s election counts by STV, the commercial broadcaster, is expected to be heavily hit by strike action in an escalating dispute over pay.The National Union of Journalists and the technical union Bectu have targeted STV’s election reporting for their second strike this year in protest at its decision to impose a company-wide pay freeze after a significant fall in revenues. Continue reading...",
+      "url": "https://www.theguardian.com/media/2026/may/07/stv-scotland-election-coverage-hit-strike-action-pay",
+      "publishedAt": "2026-05-07T11:46:46.000Z",
+      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "SP26: Final Ballot Box Scotland Projection",
@@ -156,13 +170,6 @@
       "source": "The Guardian — Scotland politics"
     },
     {
-      "title": "Parties hit the road for final week of campaigning",
-      "description": "On Thursday, voters will head to their polling stations to choose who they want to lead the next Scottish government.",
-      "url": "https://www.bbc.com/news/articles/c0m2v44v9pjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-04T13:19:54.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Hundreds more prisoners released early but jails still full",
       "description": "New data shows more than 600 prisoners have been released early from Scotland's jails since November but it has done little to ease overcrowding.",
       "url": "https://www.bbc.com/news/articles/czd24z7563no?at_medium=RSS&at_campaign=rss",
@@ -217,13 +224,6 @@
       "url": "https://www.theguardian.com/uk-news/2026/may/01/end-trump-tariffs-scotch-whisky-row-between-scottish-parties-claiming-credit",
       "publishedAt": "2026-05-01T14:33:20.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Trump to remove whisky tariffs after King's visit",
-      "description": "The US president said he would lift restrictions on Scotland's ability to work with the state of Kentucky on whisky and bourbon.",
-      "url": "https://www.bbc.com/news/articles/cjrp3pew2d5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-01T07:52:56.000Z",
-      "source": "BBC News"
     }
   ]
 }
