@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-06T18:52:37.127Z",
+  "lastUpdated": "2026-05-07T07:18:37.263Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,20 @@
     }
   ],
   "items": [
+    {
+      "title": "Voting under way for the 2026 Holyrood election",
+      "description": "Polling stations will remain open until 22:00, though the first results are not expected until Friday afternoon.",
+      "url": "https://www.bbc.com/news/articles/ckgprglgj4zo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-07T07:06:24.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Thursday briefing: ​Five things to look out for in today’s local and parliamentary elections",
+      "description": "In today’s newsletter: As voters cast their ballots from Wales to Westminster, long‑established political loyalties face their toughest test in decades, with parties old and new vying to reshape the national landscapeMillions of Britons head to the polls today. From the Scottish Highlands to the Isle of Wight, swathes of the country will elect local councillors and representatives in national parliaments. Officially, the mundane functioning of everyday life is on the ballot: bin collections, road maintenance and community services.But many commentators are expecting a political earthquake, where the end of a system dominated by two parties is truly crystalised for the first time, and the survival of Keir Starmer as British prime minister is called into question.UK politics | Nigel Farage’s income since he was elected as an MP has reached £2m on top of his parliamentary salary, analysis of the register of MPs has shown.US news | A federal judge has unsealed an alleged suicide note written by Jeffrey Epstein, the first time the document has been made public.Cost of living | Fertiliser shortages caused by the Iran war have driven up costs for UK farmers by up to 70% and will have a “dramatic” impact on food prices globally next year, according to one of Britain’s most powerful property and farming companies.World news | Three people with suspected hantavirus, including a British expedition guide, have been medically evacuated from cruise ship MV Hondius.Middle East | The United Arab Emirates’ ruling royal family is benefiting from tens of millions in EU subsidies to grow crops destined for the Gulf, it can be revealed. Continue reading...",
+      "url": "https://www.theguardian.com/world/2026/may/07/thursday-briefing-five-things-to-look-out-for-in-todays-local-and-parliamentary-elections",
+      "publishedAt": "2026-05-07T05:34:08.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
     {
       "title": "Poll Analysis: Survation MRP 20th of April – 5th of May 2026",
       "description": "A third major poll release on the eve of poll continues great news for the Greens, as well as suggesting a relatively strong SNP result. It's the strongest of the bunch for the Conservatives but weakest for the Lib Dems too.",
@@ -209,20 +223,6 @@
       "description": "Pippa Crerar is joined by the election analyst Prof Rob Ford to look at the upcoming local and devolved elections. Will Reform dominate across England? Can the Greens remove Labour’s longstanding hold over London? And will the nationalists win in Scotland and Wales? Continue reading...",
       "url": "https://www.theguardian.com/politics/audio/2026/apr/30/will-reform-dominate-local-devolved-elections-podcast",
       "publishedAt": "2026-04-30T16:21:29.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Polanski criticised for reposting comment suggesting police arresting Golders Greens suspect used excessive force – as it happened",
-      "description": "Home Office minister says ‘the Green Party has hit a new low’ after party leader’s repost on X On BBC Radio Merseyside the presenter, Tony Snell, put it to Kemi Badenoch that Merseyside was a lost cause for the Tories. He said that Nigel Farage, the Reform UK leader, had been on the programme yesterday. He said that Farage argued that Scousers were down to earth and the Tories they were seen as “aloof and remote”.Badenoch said no one had ever described her as aloof and remote. When it was put to her that Farage was talking about the party, she said the Tories were the party of working people. Labour were only interested in welfare, she claimed.Nigel Farage can say as much as he wants that he’s the one who’s down to earth. Someone just gave him a £5m gift to the other day. I don’t know what’s down to earth about that.Who gets £5m is a gift. If I got £50,000 as a gift, I think people would raise their eyebrows. That’s a hundred times that. And he forgot to register it. He forgot that he’d been given £5m. I don’t think that’s down to earth. So I’m not going to be taking any lessons from Nigel Farage. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/apr/30/local-election-campaign-labour-reform-conservatives-tories-greens-lib-dems-latest-news-updates",
-      "publishedAt": "2026-04-30T15:55:41.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "‘Reform is an acute threat to Scottish self-government,’ says John Swinney",
-      "description": "Polling puts Reform, led in Scotland by former peer Malcolm Offord, neck and neck with Labour for second placeReform UK represents an acute threat to Scottish self government, John Swinney has warned, adding that nationalist victories in Scotland and Wales in May could “irrevocably change” the dynamics of constitutional debate across the UK.While the Scottish National party enjoys a comfortable polling lead ahead of the Holyrood elections next Thursday, recent polling has put Reform, led in Scotland by the millionaire and former Conservative peer Malcolm Offord, neck and neck with Scottish Labour for second place. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/apr/30/reform-is-an-acute-threat-to-scottish-self-government-says-john-swinney",
-      "publishedAt": "2026-04-30T06:00:11.000Z",
       "source": "The Guardian — Scotland politics"
     }
   ]
