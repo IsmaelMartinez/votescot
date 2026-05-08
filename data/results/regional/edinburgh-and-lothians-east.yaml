@@ -2,7 +2,11 @@ id: edinburgh-and-lothians-east
 name: Edinburgh and Lothians East
 status: declared
 declaredAt: 2026-05-08T20:03:41.765Z
-turnout: null
+turnout:
+  valid: 319584
+  rejected: 702
+  electorate: 564571
+  percent: 56.73
 results: []
 seatsAwarded:
   - party: con

@@ -2,7 +2,11 @@ id: south-scotland
 name: South Scotland
 status: declared
 declaredAt: 2026-05-08T20:03:41.769Z
-turnout: null
+turnout:
+  valid: 322545
+  rejected: 865
+  electorate: 607900
+  percent: 53.2
 results: []
 seatsAwarded:
   - party: lab

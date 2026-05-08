@@ -1,8 +1,31 @@
 id: strathkelvin-and-bearsden
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:56:12.268Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Adam Harley
+    votes: 15697
+    share: 39.46
+  - party: snp
+    candidate: Denis Johnston
+    votes: 13125
+    share: 33
+  - party: lab
+    candidate: Colette McDiarmid
+    votes: 4678
+    share: 11.76
+  - party: reform
+    candidate: Faten Hameed
+    votes: 4154
+    share: 10.44
+  - party: con
+    candidate: Pam Gosal
+    votes: 2122
+    share: 5.33
+majority:
+  votes: 2572
+  share: 6.46
+  over: snp
+source: Democracy Club
