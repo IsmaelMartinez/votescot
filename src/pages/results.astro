@@ -11,12 +11,22 @@ import {
 } from "../lib/data";
 import { PARTY_THEMES_BY_LONG, PARTY_THEMES_BY_SHORT, PARTY_COLORS_BY_SHORT } from "../lib/party-config";
 import { partyKey } from "../lib/accuracy";
+import pollsData from "../../data/polls.json";
+import { rollingAverage, rangeOverWindow, type PollEntry, type PartyKey } from "../lib/poll-average";
 
 const state = loadElectionState();
 const constituencies = loadConstituencies();
 const constituencyResults = Array.from(loadConstituencyResults().values());
 const regionalResults = Array.from(loadRegionalResults().values());
 const report = loadAccuracyReport();
+
+const POLL_WINDOW = 10;
+const constituencyPolls = (pollsData.constituency || []) as PollEntry[];
+const { shares: pollAvgShares, pollsUsed: pollWindow } = rollingAverage(
+  constituencyPolls,
+  POLL_WINDOW,
+);
+const { ranges: pollRanges } = rangeOverWindow(constituencyPolls, POLL_WINDOW);
 
 const declaredCount = constituencyResults.filter((r) => r.status === "declared").length;
 const regionsDeclared = regionalResults.filter((r) => r.status === "declared").length;
@@ -120,25 +130,70 @@ const showResults = state.phase === "partial" || state.phase === "final";
       </div>
     )}
 
-    {showResults && report?.national?.constituency && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-2">National vote share</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
-          Aggregated from {declaredCount} declared constituencies. Updates as more declare.
-        </p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {Object.entries(report.national.constituency)
-            .filter(([party, share]) => party !== "alba" && (share as number) > 0)
-            .sort(([, a], [, b]) => (b as number) - (a as number))
-            .map(([party, share]) => (
-            <div class="rounded-md p-2.5" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}; color: white`}>
-              <div class="font-body text-xs font-bold uppercase tracking-widest opacity-90">{partyLabel(party)}</div>
-              <div class="font-heading text-xl font-black">{(share as number).toFixed(1)}%</div>
-            </div>
-          ))}
-        </div>
-      </section>
-    )}
+    {showResults && report?.national?.constituency && (() => {
+      const actualEntries = Object.entries(report.national.constituency)
+        .filter(([party, share]) => party !== "alba" && ((share as number) > 0 || (pollAvgShares[party as PartyKey] ?? 0) > 0))
+        .map(([party, share]) => ({
+          party,
+          actual: share as number,
+          poll: pollAvgShares[party as PartyKey] ?? 0,
+          range: pollRanges[party as PartyKey] ?? { min: 0, max: 0 },
+        }))
+        .sort((a, b) => b.actual - a.actual);
+      const maxShare = Math.max(
+        1,
+        ...actualEntries.map((e) => Math.max(e.actual, e.poll, e.range.max)),
+      );
+      return (
+        <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+          <h3 class="font-heading text-base font-bold mb-2">National vote share vs polling</h3>
+          <p class="font-body text-xs text-gray-500 mb-3">
+            Aggregated from {declaredCount} declared constituencies (coloured bars) compared with the polling average from the last {pollWindow.length} polls (grey bars). Updates as more declare.
+          </p>
+          <div class="flex flex-col gap-2.5">
+            {actualEntries.map(({ party, actual, poll, range }) => {
+              const actualPct = (actual / maxShare) * 100;
+              const pollPct = (poll / maxShare) * 100;
+              const delta = actual - poll;
+              return (
+                <div class="grid grid-cols-[3.5rem_1fr_5rem] gap-2 items-center">
+                  <div class="font-body text-xs font-bold uppercase tracking-wider text-gray-600 text-right">
+                    {partyLabel(party)}
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <div class="relative h-3.5 bg-gray-50 rounded-sm overflow-hidden" title={`Actual ${actual.toFixed(1)}%`}>
+                      <div
+                        class="absolute inset-y-0 left-0 rounded-sm"
+                        style={`width:${actualPct}%;background:${PARTY_COLORS_BY_SHORT[party] ?? "#94a3b8"}`}
+                      />
+                    </div>
+                    <div class="relative h-2.5 bg-gray-50 rounded-sm overflow-hidden" title={`Polling average ${poll.toFixed(1)}% (range ${range.min}–${range.max}%)`}>
+                      <div
+                        class="absolute inset-y-0 left-0 bg-gray-300 rounded-sm"
+                        style={`width:${pollPct}%`}
+                      />
+                    </div>
+                  </div>
+                  <div class="text-right font-mono text-xs leading-tight">
+                    <div class="font-bold text-gray-800">{actual.toFixed(1)}%</div>
+                    <div class="text-gray-400">poll {poll.toFixed(1)}%</div>
+                    {poll > 0 && (
+                      <div class={`text-[10px] ${delta >= 0 ? "text-emerald-600" : "text-rose-600"}`}>
+                        {delta >= 0 ? "+" : ""}{delta.toFixed(1)}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div class="flex items-center gap-3 mt-3 font-body text-[11px] text-gray-500">
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2.5 rounded-sm bg-votescot-dark" /> Actual</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2 rounded-sm bg-gray-300" /> Polling average (last {pollWindow.length} polls)</span>
+          </div>
+        </section>
+      );
+    })()}
 
     {showResults && report?.seatTotals && (
       <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
