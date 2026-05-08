@@ -40,8 +40,8 @@
       "type": ["object", "null"],
       "required": ["votes", "share"],
       "properties": {
-        "votes": { "type": "integer" },
-        "share": { "type": "number" },
+        "votes": { "type": "integer", "minimum": 0 },
+        "share": { "type": "number", "minimum": 0 },
         "over": { "type": "string" }
       },
       "additionalProperties": false

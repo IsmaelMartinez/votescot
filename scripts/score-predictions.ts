@@ -69,6 +69,7 @@ interface ConstituencyProjection {
   id: string;
   projection?: string;
   competitiveness?: string;
+  topParties?: { party: string; share: number }[];
 }
 
 function readYamlFiles<T>(dir: string): T[] {
@@ -106,6 +107,7 @@ function main(): void {
     id: c.id,
     projection: c.projection,
     competitiveness: c.competitiveness,
+    topParties: c.topParties,
   }));
   const constituencyResults = readYamlFiles<ConstituencyResultFile>("data/results/constituencies");
   const regionalResults = readYamlFiles<RegionalResultFile>("data/results/regional");
@@ -242,14 +244,7 @@ function computeProjectionShareMae(
   projections: ConstituencyProjection[],
   results: ConstituencyResultFile[],
 ): number {
-  const projById = new Map<string, ConstituencyProjection & { topParties?: { party: string; share: number }[] }>();
-  // Re-read to pick up topParties (kept off the trimmed projection type above).
-  for (const p of projections) {
-    const raw = yaml.parse(
-      fs.readFileSync(path.resolve(`data/constituencies/${p.id}.yaml`), "utf-8"),
-    );
-    projById.set(p.id, { ...p, topParties: raw.topParties });
-  }
+  const projById = new Map(projections.map((p) => [p.id, p]));
   let totalAbs = 0;
   let n = 0;
   for (const r of results) {
