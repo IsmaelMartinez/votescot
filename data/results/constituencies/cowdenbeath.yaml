@@ -1,0 +1,35 @@
+id: cowdenbeath
+status: declared
+declaredAt: 2026-05-08T13:56:19.989Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: David John Barratt
+    votes: 11994
+    share: 44.32
+  - party: lab
+    candidate: Fiona Sword
+    votes: 6307
+    share: 23.31
+  - party: reform
+    candidate: Mark Davies
+    votes: 4708
+    share: 17.4
+  - party: con
+    candidate: Darren Watt
+    votes: 2201
+    share: 8.13
+  - party: libdem
+    candidate: James Stuart Calder
+    votes: 1547
+    share: 5.72
+  - party: alliance-to-liberate-scotland-and-sovereignty
+    candidate: Laurie Moffat
+    votes: 304
+    share: 1.12
+majority:
+  votes: 5687
+  share: 21.01
+  over: lab
+source: Democracy Club

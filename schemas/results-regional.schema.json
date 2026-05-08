@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "name", "status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "partial", "declared"]
+    },
+    "declaredAt": { "type": ["string", "null"], "format": "date-time" },
+    "turnout": {
+      "type": ["object", "null"],
+      "required": ["valid", "electorate"],
+      "properties": {
+        "valid": { "type": "integer", "minimum": 0 },
+        "rejected": { "type": "integer", "minimum": 0 },
+        "electorate": { "type": "integer", "minimum": 0 },
+        "percent": { "type": "number", "minimum": 0, "maximum": 100 }
+      },
+      "additionalProperties": false
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["party", "votes"],
+        "properties": {
+          "party": { "type": "string" },
+          "votes": { "type": "integer", "minimum": 0 },
+          "share": { "type": "number", "minimum": 0, "maximum": 100 },
+          "listSeats": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "seatsAwarded": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["party", "candidate", "listPosition"],
+        "properties": {
+          "party": { "type": "string" },
+          "candidate": { "type": "string" },
+          "listPosition": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "source": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

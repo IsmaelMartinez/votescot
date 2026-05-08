@@ -1,0 +1,35 @@
+id: edinburgh-eastern-musselburgh-and-tranent
+status: declared
+declaredAt: 2026-05-08T13:56:19.996Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: Kate Campbell
+    votes: 14083
+    share: 44.73
+  - party: lab
+    candidate: Katherine Sangster
+    votes: 9097
+    share: 28.9
+  - party: reform
+    candidate: Angela Ross
+    votes: 4120
+    share: 13.09
+  - party: libdem
+    candidate: Alan Grant
+    votes: 2057
+    share: 6.53
+  - party: con
+    candidate: Tim Jones
+    votes: 1819
+    share: 5.78
+  - party: alliance-to-liberate-scotland
+    candidate: Joe Smith
+    votes: 305
+    share: 0.97
+majority:
+  votes: 4986
+  share: 15.83
+  over: lab
+source: Democracy Club

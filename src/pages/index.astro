@@ -4,12 +4,29 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConstituencyMap from "../components/ConstituencyMap.tsx";
 import NewsList from "../components/NewsList.astro";
-import { loadConstituencies, loadNews, loadRegions, loadRegionalCandidatesByRegion } from "../lib/data";
+import {
+  loadConstituencies,
+  loadNews,
+  loadRegions,
+  loadRegionalCandidatesByRegion,
+  loadConstituencyResults,
+  loadElectionState,
+} from "../lib/data";
 import { slugifyConstituency } from "../lib/slugify";
 
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
 const base = import.meta.env.BASE_URL;
+
+const state = loadElectionState();
+const resultsCallout = (() => {
+  if (state.phase === "forecast") return false;
+  const results = loadConstituencyResults();
+  for (const r of results.values()) {
+    if (r.status === "declared") return true;
+  }
+  return false;
+})();
 
 const projections = constituencies
   .filter((c) => c.projection)
@@ -43,9 +60,14 @@ const news = loadNews();
   <div class="py-6">
     <h2 class="font-heading text-2xl font-black mb-2">Navigate the noise</h2>
     <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
-      Scotland votes on 7 May 2026. Find your constituency, discover which
-      candidates align with your values, and access the research you need to make an informed choice.
+      Scotland votes on 7 May 2026. Find your constituency, discover which candidates align with your values, and access the research you need to make an informed choice.
     </p>
+
+    {resultsCallout && (
+      <p class="font-body text-xs text-gray-500 leading-snug mb-3">
+        Election results are landing. <a href={`${base}results`} class="text-votescot-gold underline">See the live results section.</a>
+      </p>
+    )}
 
     <ConstituencyMap
       client:only="react"

@@ -311,3 +311,213 @@ export function loadNews(): NewsFeed {
   }
   return newsCache;
 }
+
+export type ElectionPhase =
+  | "forecast"
+  | "polls-open"
+  | "counting"
+  | "partial"
+  | "final";
+
+export interface ElectionState {
+  phase: ElectionPhase;
+  pollDay: string;
+  lastUpdated: string | null;
+  constituenciesDeclared: number;
+  regionsDeclared: number;
+  summary: string | null;
+}
+
+let electionStateCache: Readonly<ElectionState> | null = null;
+
+export function loadElectionState(): ElectionState {
+  if (!electionStateCache) {
+    const filePath = path.resolve(process.cwd(), "data/election-state.yaml");
+    if (!fs.existsSync(filePath)) {
+      electionStateCache = Object.freeze({
+        phase: "forecast",
+        pollDay: "2026-05-07",
+        lastUpdated: null,
+        constituenciesDeclared: 0,
+        regionsDeclared: 0,
+        summary: null,
+      });
+    } else {
+      const data = yaml.parse(fs.readFileSync(filePath, "utf-8")) as ElectionState;
+      electionStateCache = Object.freeze({
+        constituenciesDeclared: 0,
+        regionsDeclared: 0,
+        lastUpdated: null,
+        summary: null,
+        ...data,
+      });
+    }
+  }
+  return electionStateCache;
+}
+
+/** True once at least one result is in (used to switch UI from forecast to results). */
+export function resultsAvailable(): boolean {
+  const phase = loadElectionState().phase;
+  return phase === "partial" || phase === "final";
+}
+
+export type ResultStatus = "pending" | "partial" | "declared";
+
+export interface ResultEntry {
+  party: string;
+  candidate: string;
+  votes: number;
+  share?: number;
+  isIncumbent?: boolean;
+}
+
+export interface ConstituencyResult {
+  id: string;
+  status: ResultStatus;
+  declaredAt: string | null;
+  turnout: {
+    valid: number;
+    rejected?: number;
+    electorate: number;
+    percent?: number;
+  } | null;
+  winner: string | null;
+  results: ResultEntry[];
+  majority: { votes: number; share: number; over?: string } | null;
+  source: string | null;
+}
+
+export interface RegionalSeatAward {
+  party: string;
+  candidate: string;
+  listPosition: number;
+}
+
+export interface RegionalResultEntry {
+  party: string;
+  votes: number;
+  share?: number;
+  listSeats?: number;
+}
+
+export interface RegionalResult {
+  id: string;
+  name: string;
+  status: ResultStatus;
+  declaredAt: string | null;
+  turnout: ConstituencyResult["turnout"];
+  results: RegionalResultEntry[];
+  seatsAwarded: RegionalSeatAward[];
+  source: string | null;
+}
+
+let constituencyResultsCache: ReadonlyMap<string, ConstituencyResult> | null = null;
+
+export function loadConstituencyResults(): Map<string, ConstituencyResult> {
+  if (!constituencyResultsCache) {
+    const dir = path.resolve(process.cwd(), "data/results/constituencies");
+    const map = new Map<string, ConstituencyResult>();
+    if (fs.existsSync(dir)) {
+      for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"))) {
+        const data = loadYaml<ConstituencyResult>(path.join("data/results/constituencies", f));
+        map.set(data.id, data);
+      }
+    }
+    constituencyResultsCache = map;
+  }
+  return new Map(constituencyResultsCache);
+}
+
+export function loadConstituencyResult(id: string): ConstituencyResult | null {
+  return loadConstituencyResults().get(id) ?? null;
+}
+
+let regionalResultsCache: ReadonlyMap<string, RegionalResult> | null = null;
+
+export function loadRegionalResults(): Map<string, RegionalResult> {
+  if (!regionalResultsCache) {
+    const dir = path.resolve(process.cwd(), "data/results/regional");
+    const map = new Map<string, RegionalResult>();
+    if (fs.existsSync(dir)) {
+      for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".yaml"))) {
+        const data = loadYaml<RegionalResult>(path.join("data/results/regional", f));
+        map.set(data.id, data);
+      }
+    }
+    regionalResultsCache = map;
+  }
+  return new Map(regionalResultsCache);
+}
+
+export interface AccuracyReport {
+  generatedAt: string;
+  pollDay: string;
+  national: {
+    constituency: NationalActual | null;
+    regional: NationalActual | null;
+  };
+  pollsters: PollsterScore[];
+  mrps: MrpScore[];
+  votescotProjection: VotescotProjectionScore | null;
+}
+
+export interface NationalActual {
+  snp: number;
+  con: number;
+  lab: number;
+  libdem: number;
+  green: number;
+  reform: number;
+  alba: number;
+}
+
+export interface PollsterScore {
+  pollster: string;
+  client: string;
+  ballot: "constituency" | "regional";
+  date: string;
+  endDate: string;
+  shares: Partial<NationalActual>;
+  mae: number;
+  rmse: number;
+  errors: Partial<NationalActual>;
+}
+
+export interface MrpScore {
+  pollster: string;
+  client: string;
+  date: string;
+  endDate: string;
+  predicted: { snp: number; con: number; lab: number; libdem: number; green: number; reform: number; alba?: number };
+  actual: { snp: number; con: number; lab: number; libdem: number; green: number; reform: number; alba: number };
+  seatMae: number;
+  totalSeatError: number;
+}
+
+export interface VotescotProjectionScore {
+  totalSeats: number;
+  correctWinners: number;
+  hitRate: number;
+  byCompetitiveness: Record<string, { total: number; correct: number; hitRate: number }>;
+  shareMae: number;
+  perSeat: Array<{
+    id: string;
+    predictedWinner: string | null;
+    actualWinner: string | null;
+    correct: boolean;
+    competitiveness: string | null;
+  }>;
+}
+
+let accuracyReportCache: Readonly<AccuracyReport> | null = null;
+
+export function loadAccuracyReport(): AccuracyReport | null {
+  if (accuracyReportCache) return accuracyReportCache;
+  const reportPath = path.resolve(process.cwd(), "data/accuracy-report.json");
+  if (!fs.existsSync(reportPath)) return null;
+  accuracyReportCache = Object.freeze(
+    JSON.parse(fs.readFileSync(reportPath, "utf-8")) as AccuracyReport,
+  );
+  return accuracyReportCache;
+}

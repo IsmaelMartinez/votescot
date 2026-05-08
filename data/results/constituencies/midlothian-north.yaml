@@ -1,0 +1,31 @@
+id: midlothian-north
+status: declared
+declaredAt: 2026-05-08T13:56:20.002Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: Colin Beattie
+    votes: 11250
+    share: 38.89
+  - party: labour-and-co-operative-party
+    candidate: Caitlin Stott
+    votes: 8754
+    share: 30.26
+  - party: reform
+    candidate: Pal Chidambaram
+    votes: 4506
+    share: 15.58
+  - party: libdem
+    candidate: Jenny Claire Marr Butler
+    votes: 2387
+    share: 8.25
+  - party: con
+    candidate: Phil Doggart
+    votes: 2032
+    share: 7.02
+majority:
+  votes: 2496
+  share: 8.63
+  over: labour-and-co-operative-party
+source: Democracy Club

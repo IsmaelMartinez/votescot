@@ -1,0 +1,35 @@
+id: dundee-city-west
+status: declared
+declaredAt: 2026-05-08T11:54:53.034Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: Heather Anderson
+    votes: 12722
+    share: 49.1
+  - party: lab
+    candidate: Michael Marra
+    votes: 6365
+    share: 24.56
+  - party: reform
+    candidate: Arthur Keith
+    votes: 3315
+    share: 12.79
+  - party: libdem
+    candidate: Daniel Coleman
+    votes: 1980
+    share: 7.64
+  - party: con
+    candidate: Abi Brooks
+    votes: 881
+    share: 3.4
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Jim McFarlane
+    votes: 649
+    share: 2.5
+majority:
+  votes: 6357
+  share: 24.54
+  over: lab
+source: Democracy Club

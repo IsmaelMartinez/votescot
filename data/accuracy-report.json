@@ -1,0 +1,3740 @@
+{
+  "generatedAt": "2026-05-08T13:56:28.655Z",
+  "pollDay": "2026-05-07",
+  "constituenciesDeclared": 17,
+  "regionsDeclared": 0,
+  "national": {
+    "constituency": {
+      "snp": 40.57,
+      "con": 13.6,
+      "lab": 13.73,
+      "libdem": 9.33,
+      "green": 0.21,
+      "reform": 16.26,
+      "alba": 0
+    },
+    "regional": null
+  },
+  "seatTotals": null,
+  "pollsters": [
+    {
+      "pollster": "Find Out Now",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-05-01",
+      "endDate": "2026-05-06",
+      "sampleSize": 2001,
+      "shares": {
+        "snp": 41,
+        "con": 10,
+        "lab": 15,
+        "libdem": 12,
+        "green": 1,
+        "reform": 17
+      },
+      "errors": {
+        "snp": 0.42994632611512174,
+        "con": -3.598980958291145,
+        "lab": 1.2681952292299492,
+        "libdem": 2.674244156296611,
+        "green": 0.7933609868156035,
+        "reform": 0.7410588888525993
+      },
+      "mae": 1.58,
+      "rmse": 1.96
+    },
+    {
+      "pollster": "Survation",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-04-20",
+      "endDate": "2026-05-05",
+      "sampleSize": 5025,
+      "shares": {
+        "snp": 39,
+        "con": 12,
+        "lab": 19,
+        "libdem": 10,
+        "green": 2,
+        "reform": 17
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": -1.5989809582911452,
+        "lab": 5.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 0.7410588888525993
+      },
+      "mae": 1.94,
+      "rmse": 2.48
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2025-08-21",
+      "endDate": "2025-09-01",
+      "sampleSize": 1104,
+      "shares": {
+        "snp": 37,
+        "con": 12,
+        "lab": 17,
+        "libdem": 12,
+        "green": 5,
+        "reform": 16,
+        "alba": 0
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": -1.5989809582911452,
+        "lab": 3.268195229229949,
+        "libdem": 2.674244156296611,
+        "green": 4.793360986815603,
+        "reform": -0.2589411111474007,
+        "alba": 0
+      },
+      "mae": 2.31,
+      "rmse": 2.83
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2026-04-27",
+      "endDate": "2026-04-30",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 36,
+        "con": 14,
+        "lab": 20,
+        "libdem": 11,
+        "green": 1,
+        "reform": 16
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 6.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 0.7933609868156035,
+        "reform": -0.2589411111474007
+      },
+      "mae": 2.33,
+      "rmse": 3.26
+    },
+    {
+      "pollster": "Survation",
+      "client": "Diffley Partnership",
+      "ballot": "constituency",
+      "date": "2026-02-20",
+      "endDate": "2026-02-25",
+      "sampleSize": 1017,
+      "shares": {
+        "snp": 37,
+        "con": 12,
+        "lab": 18,
+        "libdem": 9,
+        "green": 6,
+        "reform": 17,
+        "alba": 0
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": -1.5989809582911452,
+        "lab": 4.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 5.793360986815603,
+        "reform": 0.7410588888525993,
+        "alba": 0
+      },
+      "mae": 2.33,
+      "rmse": 3.11
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2026-03-26",
+      "endDate": "2026-03-31",
+      "sampleSize": 1038,
+      "shares": {
+        "snp": 39,
+        "con": 11,
+        "lab": 15,
+        "libdem": 10,
+        "green": 7,
+        "reform": 15
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": -2.598980958291145,
+        "lab": 1.2681952292299492,
+        "libdem": 0.674244156296611,
+        "green": 6.793360986815603,
+        "reform": -1.2589411111474007
+      },
+      "mae": 2.36,
+      "rmse": 3.14
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2026-04-25",
+      "endDate": "2026-05-05",
+      "sampleSize": 6453,
+      "shares": {
+        "snp": 39,
+        "con": 10,
+        "lab": 18,
+        "libdem": 11,
+        "green": 2,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": -3.598980958291145,
+        "lab": 4.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 1.7410588888525993
+      },
+      "mae": 2.44,
+      "rmse": 2.67
+    },
+    {
+      "pollster": "Survation",
+      "client": "Diffley Partnership",
+      "ballot": "constituency",
+      "date": "2026-04-17",
+      "endDate": "2026-04-23",
+      "sampleSize": 1012,
+      "shares": {
+        "snp": 38,
+        "con": 12,
+        "lab": 18,
+        "libdem": 10,
+        "green": 2,
+        "reform": 20
+      },
+      "errors": {
+        "snp": -2.5700536738848783,
+        "con": -1.5989809582911452,
+        "lab": 4.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 3.7410588888525993
+      },
+      "mae": 2.44,
+      "rmse": 2.74
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Sky News",
+      "ballot": "constituency",
+      "date": "2026-03-23",
+      "endDate": "2026-04-08",
+      "sampleSize": 3925,
+      "shares": {
+        "snp": 41,
+        "con": 8,
+        "lab": 18,
+        "libdem": 10,
+        "green": 2,
+        "reform": 19
+      },
+      "errors": {
+        "snp": 0.42994632611512174,
+        "con": -5.598980958291145,
+        "lab": 4.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 2.7410588888525993
+      },
+      "mae": 2.58,
+      "rmse": 3.19
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-03-03",
+      "endDate": "2026-04-26",
+      "sampleSize": 4124,
+      "shares": {
+        "snp": 35,
+        "con": 13,
+        "lab": 17,
+        "libdem": 13,
+        "green": 2,
+        "reform": 19
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 3.268195229229949,
+        "libdem": 3.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 2.7410588888525993
+      },
+      "mae": 2.94,
+      "rmse": 3.32
+    },
+    {
+      "pollster": "Survation",
+      "client": "Ballot Box Scotland",
+      "ballot": "constituency",
+      "date": "2026-04-14",
+      "endDate": "2026-04-21",
+      "sampleSize": 1008,
+      "shares": {
+        "snp": 35,
+        "con": 13,
+        "lab": 20,
+        "libdem": 10,
+        "green": 1,
+        "reform": 20
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 6.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 0.7933609868156035,
+        "reform": 3.7410588888525993
+      },
+      "mae": 2.94,
+      "rmse": 3.78
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2026-01-08",
+      "endDate": "2026-01-12",
+      "sampleSize": 835,
+      "shares": {
+        "snp": 34,
+        "con": 13,
+        "lab": 16,
+        "libdem": 9,
+        "green": 8,
+        "reform": 19,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 2.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 7.793360986815603,
+        "reform": 2.7410588888525993,
+        "alba": 1
+      },
+      "mae": 3.04,
+      "rmse": 4.11
+    },
+    {
+      "pollster": "Survation",
+      "client": "Diffley Partnership",
+      "ballot": "constituency",
+      "date": "2025-04-16",
+      "endDate": "2025-04-22",
+      "sampleSize": 1005,
+      "shares": {
+        "snp": 36,
+        "con": 13,
+        "lab": 22,
+        "libdem": 9,
+        "green": 5,
+        "reform": 14,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 8.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 4.793360986815603,
+        "reform": -2.2589411111474007,
+        "alba": 1
+      },
+      "mae": 3.12,
+      "rmse": 4.12
+    },
+    {
+      "pollster": "Survation",
+      "client": "Scotland in Union",
+      "ballot": "constituency",
+      "date": "2025-09-04",
+      "endDate": "2025-09-16",
+      "sampleSize": 2051,
+      "shares": {
+        "snp": 37,
+        "con": 11,
+        "lab": 20,
+        "libdem": 7,
+        "green": 5,
+        "reform": 18,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": -2.598980958291145,
+        "lab": 6.268195229229949,
+        "libdem": -2.325755843703389,
+        "green": 4.793360986815603,
+        "reform": 1.7410588888525993,
+        "alba": 1
+      },
+      "mae": 3.19,
+      "rmse": 3.61
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2026-05-01",
+      "endDate": "2026-05-04",
+      "sampleSize": 1225,
+      "shares": {
+        "snp": 35,
+        "con": 11,
+        "lab": 20,
+        "libdem": 11,
+        "green": 2,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 6.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 1.7410588888525993
+      },
+      "mae": 3.27,
+      "rmse": 3.79
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2025-01-11",
+      "endDate": "2025-01-14",
+      "sampleSize": 1026,
+      "shares": {
+        "snp": 35,
+        "con": 15,
+        "lab": 18,
+        "libdem": 11,
+        "green": 6,
+        "reform": 14,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 4.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 5.793360986815603,
+        "reform": -2.2589411111474007,
+        "alba": 2
+      },
+      "mae": 3.28,
+      "rmse": 3.72
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2025-05-27",
+      "endDate": "2025-05-30",
+      "sampleSize": 1007,
+      "shares": {
+        "snp": 33,
+        "con": 13,
+        "lab": 19,
+        "libdem": 8,
+        "green": 7,
+        "reform": 18,
+        "alba": 0
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 5.268195229229949,
+        "libdem": -1.325755843703389,
+        "green": 6.793360986815603,
+        "reform": 1.7410588888525993,
+        "alba": 0
+      },
+      "mae": 3.33,
+      "rmse": 4.41
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-01-24",
+      "endDate": "2026-02-04",
+      "sampleSize": 1017,
+      "shares": {
+        "snp": 35,
+        "con": 11,
+        "lab": 18,
+        "libdem": 10,
+        "green": 5,
+        "reform": 19
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 4.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 4.793360986815603,
+        "reform": 2.7410588888525993
+      },
+      "mae": 3.44,
+      "rmse": 3.81
+    },
+    {
+      "pollster": "Survation",
+      "client": "Quantum Communications",
+      "ballot": "constituency",
+      "date": "2025-03-06",
+      "endDate": "2025-03-13",
+      "sampleSize": 1012,
+      "shares": {
+        "snp": 34,
+        "con": 12,
+        "lab": 23,
+        "libdem": 8,
+        "green": 4,
+        "reform": 17,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 9.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 3.7933609868156037,
+        "reform": 0.7410588888525993,
+        "alba": 1
+      },
+      "mae": 3.47,
+      "rmse": 4.62
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2024-12-04",
+      "endDate": "2024-12-06",
+      "sampleSize": 1013,
+      "shares": {
+        "snp": 37,
+        "con": 14,
+        "lab": 21,
+        "libdem": 10,
+        "green": 5,
+        "reform": 12
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 0.40101904170885483,
+        "lab": 7.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 4.793360986815603,
+        "reform": -4.258941111147401
+      },
+      "mae": 3.49,
+      "rmse": 4.23
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2026-01-13",
+      "endDate": "2026-01-16",
+      "sampleSize": 1016,
+      "shares": {
+        "snp": 35,
+        "con": 11,
+        "lab": 19,
+        "libdem": 9,
+        "green": 7,
+        "reform": 17
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 5.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 6.793360986815603,
+        "reform": 0.7410588888525993
+      },
+      "mae": 3.55,
+      "rmse": 4.33
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2025-11-27",
+      "endDate": "2025-12-03",
+      "sampleSize": 1061,
+      "shares": {
+        "snp": 35,
+        "con": 11,
+        "lab": 16,
+        "libdem": 9,
+        "green": 9,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 2.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 8.793360986815603,
+        "reform": 1.7410588888525993
+      },
+      "mae": 3.55,
+      "rmse": 4.53
+    },
+    {
+      "pollster": "Lord Ashcroft Polls",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-02-20",
+      "endDate": "2026-03-06",
+      "sampleSize": 2089,
+      "shares": {
+        "snp": 39,
+        "con": 9,
+        "lab": 12,
+        "libdem": 10,
+        "green": 11,
+        "reform": 14
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": -4.598980958291145,
+        "lab": -1.7318047707700508,
+        "libdem": 0.674244156296611,
+        "green": 10.793360986815603,
+        "reform": -2.2589411111474007
+      },
+      "mae": 3.6,
+      "rmse": 4.98
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-02-04",
+      "endDate": "2026-04-12",
+      "sampleSize": 5124,
+      "shares": {
+        "snp": 33,
+        "con": 12,
+        "lab": 18,
+        "libdem": 12,
+        "green": 1,
+        "reform": 21
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 4.268195229229949,
+        "libdem": 2.674244156296611,
+        "green": 0.7933609868156035,
+        "reform": 4.741058888852599
+      },
+      "mae": 3.61,
+      "rmse": 4.25
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2025-05-02",
+      "endDate": "2025-05-05",
+      "sampleSize": 1020,
+      "shares": {
+        "snp": 33,
+        "con": 11,
+        "lab": 19,
+        "libdem": 11,
+        "green": 5,
+        "reform": 19,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 5.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 4.793360986815603,
+        "reform": 2.7410588888525993,
+        "alba": 1
+      },
+      "mae": 3.66,
+      "rmse": 4.24
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "Alba Party",
+      "ballot": "constituency",
+      "date": "2025-10-01",
+      "endDate": "2025-10-08",
+      "sampleSize": 1165,
+      "shares": {
+        "snp": 35,
+        "con": 8,
+        "lab": 17,
+        "libdem": 10,
+        "green": 9,
+        "reform": 16,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -5.598980958291145,
+        "lab": 3.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 8.793360986815603,
+        "reform": -0.2589411111474007,
+        "alba": 2
+      },
+      "mae": 3.74,
+      "rmse": 4.7
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2025-04-07",
+      "endDate": "2025-04-11",
+      "sampleSize": 1417,
+      "shares": {
+        "snp": 35,
+        "con": 12,
+        "lab": 14,
+        "libdem": 12,
+        "green": 9,
+        "reform": 12,
+        "alba": 3
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 0.2681952292299492,
+        "libdem": 2.674244156296611,
+        "green": 8.793360986815603,
+        "reform": -4.258941111147401,
+        "alba": 3
+      },
+      "mae": 3.74,
+      "rmse": 4.56
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-04-30",
+      "endDate": "2026-05-04",
+      "sampleSize": null,
+      "shares": {
+        "snp": 32,
+        "con": 13,
+        "lab": 20,
+        "libdem": 13,
+        "green": 2,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 6.268195229229949,
+        "libdem": 3.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": 1.7410588888525993
+      },
+      "mae": 3.77,
+      "rmse": 4.71
+    },
+    {
+      "pollster": "Survation",
+      "client": "Holyrood Sources",
+      "ballot": "constituency",
+      "date": "2025-01-07",
+      "endDate": "2025-01-13",
+      "sampleSize": 1024,
+      "shares": {
+        "snp": 35,
+        "con": 14,
+        "lab": 22,
+        "libdem": 8,
+        "green": 6,
+        "reform": 13,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 5.793360986815603,
+        "reform": -3.2589411111474007,
+        "alba": 2
+      },
+      "mae": 3.8,
+      "rmse": 4.62
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2024-12-17",
+      "endDate": "2024-12-24",
+      "sampleSize": 1774,
+      "shares": {
+        "snp": 35,
+        "con": 15,
+        "lab": 19,
+        "libdem": 9,
+        "green": 7,
+        "reform": 11,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 5.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 6.793360986815603,
+        "reform": -5.258941111147401,
+        "alba": 2
+      },
+      "mae": 3.8,
+      "rmse": 4.45
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "Scot Goes Pop",
+      "ballot": "constituency",
+      "date": "2026-04-15",
+      "endDate": "2026-04-20",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 35,
+        "con": 9,
+        "lab": 14,
+        "libdem": 10,
+        "green": 12,
+        "reform": 16
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -4.598980958291145,
+        "lab": 0.2681952292299492,
+        "libdem": 0.674244156296611,
+        "green": 11.793360986815603,
+        "reform": -0.2589411111474007
+      },
+      "mae": 3.86,
+      "rmse": 5.65
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2026-02-19",
+      "endDate": "2026-02-25",
+      "sampleSize": 1096,
+      "shares": {
+        "snp": 36,
+        "con": 9,
+        "lab": 20,
+        "libdem": 10,
+        "green": 7,
+        "reform": 16
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": -4.598980958291145,
+        "lab": 6.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 6.793360986815603,
+        "reform": -0.2589411111474007
+      },
+      "mae": 3.86,
+      "rmse": 4.62
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2025-12-11",
+      "endDate": "2025-12-19",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 34,
+        "con": 9,
+        "lab": 14,
+        "libdem": 9,
+        "green": 9,
+        "reform": 21,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -4.598980958291145,
+        "lab": 0.2681952292299492,
+        "libdem": -0.32575584370338895,
+        "green": 8.793360986815603,
+        "reform": 4.741058888852599,
+        "alba": 2
+      },
+      "mae": 3.9,
+      "rmse": 4.9
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2025-09-15",
+      "endDate": "2025-09-21",
+      "sampleSize": 1282,
+      "shares": {
+        "snp": 33,
+        "con": 10,
+        "lab": 14,
+        "libdem": 11,
+        "green": 10,
+        "reform": 19,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 0.2681952292299492,
+        "libdem": 1.674244156296611,
+        "green": 9.793360986815603,
+        "reform": 2.7410588888525993,
+        "alba": 2
+      },
+      "mae": 3.95,
+      "rmse": 5.08
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "Sunday Herald",
+      "ballot": "constituency",
+      "date": "2025-01-15",
+      "endDate": "2025-01-20",
+      "sampleSize": 1334,
+      "shares": {
+        "snp": 34,
+        "con": 13,
+        "lab": 20,
+        "libdem": 9,
+        "green": 9,
+        "reform": 13,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 6.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 8.793360986815603,
+        "reform": -3.2589411111474007,
+        "alba": 2
+      },
+      "mae": 3.97,
+      "rmse": 5
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2026-03-30",
+      "endDate": "2026-04-01",
+      "sampleSize": 1006,
+      "shares": {
+        "snp": 34,
+        "con": 11,
+        "lab": 19,
+        "libdem": 10,
+        "green": 8,
+        "reform": 15
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 5.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 7.793360986815603,
+        "reform": -1.2589411111474007
+      },
+      "mae": 4.03,
+      "rmse": 4.84
+    },
+    {
+      "pollster": "Survation",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-02-15",
+      "endDate": "2023-02-17",
+      "sampleSize": 1034,
+      "shares": {
+        "snp": 43,
+        "con": 17,
+        "lab": 29,
+        "libdem": 8,
+        "green": 1,
+        "alba": 1
+      },
+      "errors": {
+        "snp": 2.4299463261151217,
+        "con": 3.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 0.7933609868156035,
+        "alba": 1
+      },
+      "mae": 4.04,
+      "rmse": 6.51
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2026-02-10",
+      "endDate": "2026-02-13",
+      "sampleSize": 1001,
+      "shares": {
+        "snp": 35,
+        "con": 10,
+        "lab": 17,
+        "libdem": 8,
+        "green": 8,
+        "reform": 19
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 3.268195229229949,
+        "libdem": -1.325755843703389,
+        "green": 7.793360986815603,
+        "reform": 2.7410588888525993
+      },
+      "mae": 4.05,
+      "rmse": 4.56
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-01-30",
+      "endDate": "2026-02-10",
+      "sampleSize": 1035,
+      "shares": {
+        "snp": 33,
+        "con": 11,
+        "lab": 19,
+        "libdem": 11,
+        "green": 6,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 5.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 5.793360986815603,
+        "reform": 1.7410588888525993
+      },
+      "mae": 4.11,
+      "rmse": 4.68
+    },
+    {
+      "pollster": "YouGov",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-01-08",
+      "endDate": "2026-01-14",
+      "sampleSize": 1113,
+      "shares": {
+        "snp": 34,
+        "con": 10,
+        "lab": 15,
+        "libdem": 10,
+        "green": 9,
+        "reform": 20
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 1.2681952292299492,
+        "libdem": 0.674244156296611,
+        "green": 8.793360986815603,
+        "reform": 3.7410588888525993
+      },
+      "mae": 4.11,
+      "rmse": 4.99
+    },
+    {
+      "pollster": "Find Out Now / Electoral Calculus",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2026-03-13",
+      "endDate": "2026-03-31",
+      "sampleSize": 4105,
+      "shares": {
+        "snp": 34,
+        "con": 10,
+        "lab": 18,
+        "libdem": 10,
+        "green": 9,
+        "reform": 15
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 4.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 8.793360986815603,
+        "reform": -1.2589411111474007
+      },
+      "mae": 4.19,
+      "rmse": 5.06
+    },
+    {
+      "pollster": "Survation",
+      "client": "The Herald",
+      "ballot": "constituency",
+      "date": "2025-09-22",
+      "endDate": "2025-10-14",
+      "sampleSize": 2043,
+      "shares": {
+        "snp": 34,
+        "con": 10,
+        "lab": 18,
+        "libdem": 8,
+        "green": 7,
+        "reform": 22,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 4.268195229229949,
+        "libdem": -1.325755843703389,
+        "green": 6.793360986815603,
+        "reform": 5.741058888852599,
+        "alba": 1
+      },
+      "mae": 4.19,
+      "rmse": 4.72
+    },
+    {
+      "pollster": "Survation",
+      "client": "Diffley Partnership",
+      "ballot": "constituency",
+      "date": "2026-03-16",
+      "endDate": "2026-03-23",
+      "sampleSize": 1060,
+      "shares": {
+        "snp": 35,
+        "con": 11,
+        "lab": 19,
+        "libdem": 8,
+        "green": 8,
+        "reform": 19
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 5.268195229229949,
+        "libdem": -1.325755843703389,
+        "green": 7.793360986815603,
+        "reform": 2.7410588888525993
+      },
+      "mae": 4.22,
+      "rmse": 4.75
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2023-09-08",
+      "endDate": "2023-09-13",
+      "sampleSize": 1103,
+      "shares": {
+        "snp": 41,
+        "con": 16,
+        "lab": 28,
+        "libdem": 8,
+        "green": 3
+      },
+      "errors": {
+        "snp": 0.42994632611512174,
+        "con": 2.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 4.24,
+      "rmse": 6.62
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Sky News",
+      "ballot": "constituency",
+      "date": "2023-03-09",
+      "endDate": "2023-03-13",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 43,
+        "con": 15,
+        "lab": 26,
+        "libdem": 8,
+        "green": 4
+      },
+      "errors": {
+        "snp": 2.4299463261151217,
+        "con": 1.4010190417088548,
+        "lab": 12.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 3.7933609868156037
+      },
+      "mae": 4.24,
+      "rmse": 5.91
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2022-06-29",
+      "endDate": "2022-07-01",
+      "sampleSize": 1010,
+      "shares": {
+        "snp": 47,
+        "con": 17,
+        "lab": 22,
+        "libdem": 9,
+        "green": 3
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 3.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 2.7933609868156037
+      },
+      "mae": 4.24,
+      "rmse": 5.08
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2022-02-01",
+      "endDate": "2022-02-04",
+      "sampleSize": 1014,
+      "shares": {
+        "snp": 44,
+        "con": 19,
+        "lab": 22,
+        "libdem": 8,
+        "green": 3
+      },
+      "errors": {
+        "snp": 3.4299463261151217,
+        "con": 5.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 4.24,
+      "rmse": 4.88
+    },
+    {
+      "pollster": "Find Out Now",
+      "client": "The National",
+      "ballot": "constituency",
+      "date": "2026-02-13",
+      "endDate": "2026-02-19",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 36,
+        "con": 7,
+        "lab": 12,
+        "libdem": 9,
+        "green": 10,
+        "reform": 21,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": -6.598980958291145,
+        "lab": -1.7318047707700508,
+        "libdem": -0.32575584370338895,
+        "green": 9.793360986815603,
+        "reform": 4.741058888852599,
+        "alba": 2
+      },
+      "mae": 4.25,
+      "rmse": 5.21
+    },
+    {
+      "pollster": "More in Common",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2026-03-24",
+      "endDate": "2026-04-10",
+      "sampleSize": 1008,
+      "shares": {
+        "snp": 32,
+        "con": 12,
+        "lab": 19,
+        "libdem": 11,
+        "green": 7,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 5.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 6.793360986815603,
+        "reform": 1.7410588888525993
+      },
+      "mae": 4.27,
+      "rmse": 5.09
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2025-09-22",
+      "endDate": "2025-09-25",
+      "sampleSize": 1010,
+      "shares": {
+        "snp": 34,
+        "con": 10,
+        "lab": 17,
+        "libdem": 11,
+        "green": 7,
+        "reform": 20
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 3.268195229229949,
+        "libdem": 1.674244156296611,
+        "green": 6.793360986815603,
+        "reform": 3.7410588888525993
+      },
+      "mae": 4.27,
+      "rmse": 4.65
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2023-05-15",
+      "endDate": "2023-05-21",
+      "sampleSize": 1090,
+      "shares": {
+        "snp": 42,
+        "con": 17,
+        "lab": 28,
+        "libdem": 7,
+        "green": 4,
+        "alba": 1
+      },
+      "errors": {
+        "snp": 1.4299463261151217,
+        "con": 3.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 3.7933609868156037,
+        "alba": 1
+      },
+      "mae": 4.37,
+      "rmse": 6.3
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2025-06-12",
+      "endDate": "2025-06-18",
+      "sampleSize": 1066,
+      "shares": {
+        "snp": 34,
+        "con": 10,
+        "lab": 23,
+        "libdem": 9,
+        "green": 9,
+        "reform": 14,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 9.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 8.793360986815603,
+        "reform": -2.2589411111474007,
+        "alba": 1
+      },
+      "mae": 4.55,
+      "rmse": 5.68
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2025-06-13",
+      "endDate": "2025-06-19",
+      "sampleSize": 1178,
+      "shares": {
+        "snp": 32,
+        "con": 10,
+        "lab": 20,
+        "libdem": 10,
+        "green": 8,
+        "reform": 17
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 6.268195229229949,
+        "libdem": 0.674244156296611,
+        "green": 7.793360986815603,
+        "reform": 0.7410588888525993
+      },
+      "mae": 4.61,
+      "rmse": 5.59
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2023-08-03",
+      "endDate": "2023-08-08",
+      "sampleSize": 1086,
+      "shares": {
+        "snp": 41,
+        "con": 14,
+        "lab": 31,
+        "libdem": 7,
+        "green": 3
+      },
+      "errors": {
+        "snp": 0.42994632611512174,
+        "con": 0.40101904170885483,
+        "lab": 17.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 4.64,
+      "rmse": 7.9
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2023-02-17",
+      "endDate": "2023-02-20",
+      "sampleSize": 1017,
+      "shares": {
+        "snp": 42,
+        "con": 18,
+        "lab": 28,
+        "libdem": 8,
+        "green": 2
+      },
+      "errors": {
+        "snp": 1.4299463261151217,
+        "con": 4.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 1.7933609868156035
+      },
+      "mae": 4.64,
+      "rmse": 6.78
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2023-01-23",
+      "endDate": "2023-01-26",
+      "sampleSize": 1088,
+      "shares": {
+        "snp": 44,
+        "con": 17,
+        "lab": 26,
+        "libdem": 7,
+        "green": 2
+      },
+      "errors": {
+        "snp": 3.4299463261151217,
+        "con": 3.401019041708855,
+        "lab": 12.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 1.7933609868156035
+      },
+      "mae": 4.64,
+      "rmse": 6.04
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2022-04-26",
+      "endDate": "2022-04-29",
+      "sampleSize": 1009,
+      "shares": {
+        "snp": 42,
+        "con": 19,
+        "lab": 24,
+        "libdem": 7,
+        "green": 4
+      },
+      "errors": {
+        "snp": 1.4299463261151217,
+        "con": 5.401019041708855,
+        "lab": 10.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 3.7933609868156037
+      },
+      "mae": 4.64,
+      "rmse": 5.59
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2021-11-09",
+      "endDate": "2021-11-12",
+      "sampleSize": 1781,
+      "shares": {
+        "snp": 47,
+        "con": 20,
+        "lab": 19,
+        "libdem": 8,
+        "green": 4
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 6.401019041708855,
+        "lab": 5.268195229229949,
+        "libdem": -1.325755843703389,
+        "green": 3.7933609868156037
+      },
+      "mae": 4.64,
+      "rmse": 5.02
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2023-04-17",
+      "endDate": "2023-04-20",
+      "sampleSize": 1032,
+      "shares": {
+        "snp": 38,
+        "con": 16,
+        "lab": 30,
+        "libdem": 10,
+        "green": 2
+      },
+      "errors": {
+        "snp": -2.5700536738848783,
+        "con": 2.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 1.7933609868156035
+      },
+      "mae": 4.74,
+      "rmse": 7.49
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2022-05-18",
+      "endDate": "2022-05-23",
+      "sampleSize": 1115,
+      "shares": {
+        "snp": 47,
+        "con": 18,
+        "lab": 23,
+        "libdem": 7,
+        "green": 2
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 4.401019041708855,
+        "lab": 9.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 1.7933609868156035
+      },
+      "mae": 4.84,
+      "rmse": 5.57
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2021-11-18",
+      "endDate": "2021-11-22",
+      "sampleSize": 1060,
+      "shares": {
+        "snp": 48,
+        "con": 21,
+        "lab": 19,
+        "libdem": 7,
+        "green": 2
+      },
+      "errors": {
+        "snp": 7.429946326115122,
+        "con": 7.401019041708855,
+        "lab": 5.268195229229949,
+        "libdem": -2.325755843703389,
+        "green": 1.7933609868156035
+      },
+      "mae": 4.84,
+      "rmse": 5.41
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2021-09-06",
+      "endDate": "2021-09-10",
+      "sampleSize": 2003,
+      "shares": {
+        "snp": 46,
+        "con": 22,
+        "lab": 18,
+        "libdem": 7,
+        "green": 4
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 8.401019041708855,
+        "lab": 4.268195229229949,
+        "libdem": -2.325755843703389,
+        "green": 3.7933609868156037
+      },
+      "mae": 4.84,
+      "rmse": 5.26
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2022-08-17",
+      "endDate": "2022-08-19",
+      "sampleSize": 1133,
+      "shares": {
+        "snp": 45,
+        "con": 19,
+        "lab": 22,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 4.429946326115122,
+        "con": 5.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 4.86,
+      "rmse": 5.45
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "Alba Party",
+      "ballot": "constituency",
+      "date": "2022-10-07",
+      "endDate": "2022-10-11",
+      "sampleSize": 1018,
+      "shares": {
+        "snp": 45,
+        "con": 15,
+        "lab": 28,
+        "libdem": 6,
+        "green": 3,
+        "alba": 3
+      },
+      "errors": {
+        "snp": 4.429946326115122,
+        "con": 1.4010190417088548,
+        "lab": 14.26819522922995,
+        "libdem": -3.325755843703389,
+        "green": 2.7933609868156037,
+        "alba": 3
+      },
+      "mae": 4.87,
+      "rmse": 6.49
+    },
+    {
+      "pollster": "JL Partners",
+      "client": "The Telegraph",
+      "ballot": "constituency",
+      "date": "2026-03-31",
+      "endDate": "2026-04-13",
+      "sampleSize": 2018,
+      "shares": {
+        "snp": 32,
+        "con": 10,
+        "lab": 20,
+        "libdem": 9,
+        "green": 9,
+        "reform": 18
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": -3.598980958291145,
+        "lab": 6.268195229229949,
+        "libdem": -0.32575584370338895,
+        "green": 8.793360986815603,
+        "reform": 1.7410588888525993
+      },
+      "mae": 4.88,
+      "rmse": 5.86
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2025-02-25",
+      "endDate": "2025-03-03",
+      "sampleSize": 1178,
+      "shares": {
+        "snp": 33,
+        "con": 11,
+        "lab": 21,
+        "libdem": 7,
+        "green": 9,
+        "reform": 17
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -2.598980958291145,
+        "lab": 7.268195229229949,
+        "libdem": -2.325755843703389,
+        "green": 8.793360986815603,
+        "reform": 0.7410588888525993
+      },
+      "mae": 4.88,
+      "rmse": 5.78
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2024-10-30",
+      "endDate": "2024-11-01",
+      "sampleSize": 1013,
+      "shares": {
+        "snp": 33,
+        "con": 15,
+        "lab": 23,
+        "libdem": 10,
+        "green": 6,
+        "reform": 11
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 9.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 5.793360986815603,
+        "reform": -5.258941111147401
+      },
+      "mae": 4.99,
+      "rmse": 5.87
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2022-11-28",
+      "endDate": "2022-12-05",
+      "sampleSize": 1045,
+      "shares": {
+        "snp": 50,
+        "con": 14,
+        "lab": 24,
+        "libdem": 7,
+        "green": 3
+      },
+      "errors": {
+        "snp": 9.429946326115122,
+        "con": 0.40101904170885483,
+        "lab": 10.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 5.04,
+      "rmse": 6.45
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2023-02-10",
+      "endDate": "2023-02-15",
+      "sampleSize": 1239,
+      "shares": {
+        "snp": 39,
+        "con": 17,
+        "lab": 28,
+        "libdem": 8,
+        "green": 5
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 3.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 4.793360986815603
+      },
+      "mae": 5.07,
+      "rmse": 6.96
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2022-12-06",
+      "endDate": "2022-12-09",
+      "sampleSize": 1090,
+      "shares": {
+        "snp": 50,
+        "con": 13,
+        "lab": 25,
+        "libdem": 7,
+        "green": 2
+      },
+      "errors": {
+        "snp": 9.429946326115122,
+        "con": -0.5989809582911452,
+        "lab": 11.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 1.7933609868156035
+      },
+      "mae": 5.08,
+      "rmse": 6.71
+    },
+    {
+      "pollster": "BMG",
+      "client": "The Herald",
+      "ballot": "constituency",
+      "date": "2022-03-25",
+      "endDate": "2022-03-31",
+      "sampleSize": 1012,
+      "shares": {
+        "snp": 44,
+        "con": 21,
+        "lab": 22,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 3.4299463261151217,
+        "con": 7.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.11,
+      "rmse": 5.85
+    },
+    {
+      "pollster": "Survation",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-03-29",
+      "endDate": "2023-04-03",
+      "sampleSize": 1001,
+      "shares": {
+        "snp": 38,
+        "con": 16,
+        "lab": 27,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": -2.5700536738848783,
+        "con": 2.401019041708855,
+        "lab": 13.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 5.14,
+      "rmse": 6.96
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2022-11-22",
+      "endDate": "2022-11-25",
+      "sampleSize": 1239,
+      "shares": {
+        "snp": 50,
+        "con": 15,
+        "lab": 23,
+        "libdem": 8,
+        "green": 5
+      },
+      "errors": {
+        "snp": 9.429946326115122,
+        "con": 1.4010190417088548,
+        "lab": 9.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 4.793360986815603
+      },
+      "mae": 5.24,
+      "rmse": 6.35
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "Scot Goes Pop",
+      "ballot": "constituency",
+      "date": "2023-03-07",
+      "endDate": "2023-03-10",
+      "sampleSize": 1013,
+      "shares": {
+        "snp": 39,
+        "con": 14,
+        "lab": 31,
+        "libdem": 8,
+        "green": 6
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 0.40101904170885483,
+        "lab": 17.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 5.793360986815603
+      },
+      "mae": 5.27,
+      "rmse": 8.2
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-10-04",
+      "endDate": "2023-10-05",
+      "sampleSize": 1094,
+      "shares": {
+        "snp": 35,
+        "con": 20,
+        "lab": 29,
+        "libdem": 10,
+        "green": 3,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 6.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 2.7933609868156037,
+        "alba": 1
+      },
+      "mae": 5.28,
+      "rmse": 7.24
+    },
+    {
+      "pollster": "Opinium",
+      "client": "Tony Blair Institute",
+      "ballot": "constituency",
+      "date": "2023-09-05",
+      "endDate": "2023-09-14",
+      "sampleSize": 1004,
+      "shares": {
+        "snp": 42,
+        "con": 20,
+        "lab": 26,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 1.4299463261151217,
+        "con": 6.401019041708855,
+        "lab": 12.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.36,
+      "rmse": 6.99
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-01-14",
+      "endDate": "2022-01-18",
+      "sampleSize": 1004,
+      "shares": {
+        "snp": 47,
+        "con": 19,
+        "lab": 22,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 5.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.36,
+      "rmse": 5.93
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2021-11-22",
+      "endDate": "2021-11-29",
+      "sampleSize": 1107,
+      "shares": {
+        "snp": 52,
+        "con": 19,
+        "lab": 17,
+        "libdem": 5,
+        "green": 3
+      },
+      "errors": {
+        "snp": 11.429946326115122,
+        "con": 5.401019041708855,
+        "lab": 3.268195229229949,
+        "libdem": -4.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 5.44,
+      "rmse": 6.28
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2021-06-16",
+      "endDate": "2021-06-24",
+      "sampleSize": 1287,
+      "shares": {
+        "snp": 46,
+        "con": 24,
+        "lab": 19,
+        "libdem": 6,
+        "green": 3
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 10.401019041708855,
+        "lab": 5.268195229229949,
+        "libdem": -3.325755843703389,
+        "green": 2.7933609868156037
+      },
+      "mae": 5.44,
+      "rmse": 6.07
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2024-01-23",
+      "endDate": "2024-01-25",
+      "sampleSize": 1029,
+      "shares": {
+        "snp": 35,
+        "con": 16,
+        "lab": 31,
+        "libdem": 8,
+        "green": 5,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 17.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 4.793360986815603,
+        "alba": 2
+      },
+      "mae": 5.56,
+      "rmse": 7.79
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-09-30",
+      "endDate": "2022-10-04",
+      "sampleSize": 1029,
+      "shares": {
+        "snp": 47,
+        "con": 17,
+        "lab": 25,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 3.401019041708855,
+        "lab": 11.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.61,
+      "rmse": 6.74
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-06-23",
+      "endDate": "2022-06-28",
+      "sampleSize": 1029,
+      "shares": {
+        "snp": 46,
+        "con": 18,
+        "lab": 25,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 4.401019041708855,
+        "lab": 11.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.61,
+      "rmse": 6.66
+    },
+    {
+      "pollster": "Opinium",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2024-09-05",
+      "endDate": "2024-09-11",
+      "sampleSize": 1028,
+      "shares": {
+        "snp": 32,
+        "con": 12,
+        "lab": 25,
+        "libdem": 8,
+        "green": 7,
+        "reform": 12
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 11.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 6.793360986815603,
+        "reform": -4.258941111147401
+      },
+      "mae": 5.64,
+      "rmse": 6.7
+    },
+    {
+      "pollster": "Survation",
+      "client": "Scotland in Union",
+      "ballot": "constituency",
+      "date": "2022-12-22",
+      "endDate": "2023-01-01",
+      "sampleSize": 1025,
+      "shares": {
+        "snp": 44,
+        "con": 16,
+        "lab": 29,
+        "libdem": 8,
+        "green": 1,
+        "reform": 1,
+        "alba": 1
+      },
+      "errors": {
+        "snp": 3.4299463261151217,
+        "con": 2.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 0.7933609868156035,
+        "reform": -15.2589411111474,
+        "alba": 1
+      },
+      "mae": 5.64,
+      "rmse": 8.34
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2023-11-20",
+      "endDate": "2023-11-26",
+      "sampleSize": 1004,
+      "shares": {
+        "snp": 39,
+        "con": 15,
+        "lab": 27,
+        "libdem": 8,
+        "green": 4,
+        "reform": 1,
+        "alba": 3
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 1.4010190417088548,
+        "lab": 13.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 3.7933609868156037,
+        "reform": -15.2589411111474,
+        "alba": 3
+      },
+      "mae": 5.66,
+      "rmse": 7.91
+    },
+    {
+      "pollster": "YouGov",
+      "client": "The Times",
+      "ballot": "constituency",
+      "date": "2022-09-30",
+      "endDate": "2022-10-04",
+      "sampleSize": 1067,
+      "shares": {
+        "snp": 49,
+        "con": 13,
+        "lab": 26,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 8.429946326115122,
+        "con": -0.5989809582911452,
+        "lab": 12.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.66,
+      "rmse": 7.48
+    },
+    {
+      "pollster": "YouGov",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-04-26",
+      "endDate": "2024-04-29",
+      "sampleSize": 1043,
+      "shares": {
+        "snp": 36,
+        "con": 16,
+        "lab": 32,
+        "libdem": 9,
+        "green": 3
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 2.7933609868156037
+      },
+      "mae": 5.67,
+      "rmse": 8.58
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Fabians",
+      "ballot": "constituency",
+      "date": "2023-10-02",
+      "endDate": "2023-10-06",
+      "sampleSize": 1028,
+      "shares": {
+        "snp": 37,
+        "con": 20,
+        "lab": 29,
+        "libdem": 9,
+        "green": 3
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 6.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 2.7933609868156037
+      },
+      "mae": 5.67,
+      "rmse": 7.68
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2023-06-09",
+      "endDate": "2023-06-13",
+      "sampleSize": 1200,
+      "shares": {
+        "snp": 37,
+        "con": 15,
+        "lab": 29,
+        "libdem": 8,
+        "green": 7
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 1.4010190417088548,
+        "lab": 15.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 6.793360986815603
+      },
+      "mae": 5.67,
+      "rmse": 7.69
+    },
+    {
+      "pollster": "Survation",
+      "client": "Progress Scotland",
+      "ballot": "constituency",
+      "date": "2024-11-01",
+      "endDate": "2024-11-15",
+      "sampleSize": 3016,
+      "shares": {
+        "snp": 32,
+        "con": 14,
+        "lab": 27,
+        "libdem": 9,
+        "green": 6,
+        "reform": 10
+      },
+      "errors": {
+        "snp": -8.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 13.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 5.793360986815603,
+        "reform": -6.258941111147401
+      },
+      "mae": 5.77,
+      "rmse": 7.33
+    },
+    {
+      "pollster": "Ipsos",
+      "client": "STV News",
+      "ballot": "constituency",
+      "date": "2024-01-25",
+      "endDate": "2024-01-31",
+      "sampleSize": 1005,
+      "shares": {
+        "snp": 39,
+        "con": 14,
+        "lab": 30,
+        "libdem": 7,
+        "green": 4,
+        "reform": 1,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 0.40101904170885483,
+        "lab": 16.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 3.7933609868156037,
+        "reform": -15.2589411111474,
+        "alba": 1
+      },
+      "mae": 5.8,
+      "rmse": 8.63
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2023-02-15",
+      "endDate": "2023-02-17",
+      "sampleSize": 1008,
+      "shares": {
+        "snp": 43,
+        "con": 17,
+        "lab": 30,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 2.4299463261151217,
+        "con": 3.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 8.42
+    },
+    {
+      "pollster": "Survation",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-02-01",
+      "endDate": "2023-02-07",
+      "sampleSize": 1070,
+      "shares": {
+        "snp": 43,
+        "con": 17,
+        "lab": 29,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 2.4299463261151217,
+        "con": 3.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 8
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2023-01-10",
+      "endDate": "2023-01-12",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 46,
+        "con": 17,
+        "lab": 27,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 3.401019041708855,
+        "lab": 13.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 7.4
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-12-16",
+      "endDate": "2022-12-21",
+      "sampleSize": 1048,
+      "shares": {
+        "snp": 44,
+        "con": 18,
+        "lab": 28,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 3.4299463261151217,
+        "con": 4.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 7.69
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-04-26",
+      "endDate": "2022-05-03",
+      "sampleSize": 1010,
+      "shares": {
+        "snp": 46,
+        "con": 18,
+        "lab": 25,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 4.401019041708855,
+        "lab": 11.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 6.73
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Economist",
+      "ballot": "constituency",
+      "date": "2022-02-24",
+      "endDate": "2022-02-28",
+      "sampleSize": 1866,
+      "shares": {
+        "snp": 47,
+        "con": 21,
+        "lab": 22,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": 6.429946326115122,
+        "con": 7.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.86,
+      "rmse": 6.45
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2023-03-28",
+      "endDate": "2023-03-30",
+      "sampleSize": 1089,
+      "shares": {
+        "snp": 37,
+        "con": 17,
+        "lab": 30,
+        "libdem": 8,
+        "green": 5
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 3.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 4.793360986815603
+      },
+      "mae": 5.87,
+      "rmse": 7.92
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2023-06-09",
+      "endDate": "2023-06-14",
+      "sampleSize": 1018,
+      "shares": {
+        "snp": 40,
+        "con": 16,
+        "lab": 33,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": -0.5700536738848783,
+        "con": 2.401019041708855,
+        "lab": 19.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 5.89,
+      "rmse": 9.74
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2023-04-27",
+      "endDate": "2023-05-03",
+      "sampleSize": 1009,
+      "shares": {
+        "snp": 39,
+        "con": 19,
+        "lab": 30,
+        "libdem": 9
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 5.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": -0.32575584370338895
+      },
+      "mae": 5.89,
+      "rmse": 8.61
+    },
+    {
+      "pollster": "Survation",
+      "client": "Scotland in Union",
+      "ballot": "constituency",
+      "date": "2024-08-27",
+      "endDate": "2024-08-29",
+      "sampleSize": 1021,
+      "shares": {
+        "snp": 31,
+        "con": 12,
+        "lab": 30,
+        "libdem": 9,
+        "green": 6,
+        "reform": 9,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -9.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 16.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 5.793360986815603,
+        "reform": -7.258941111147401,
+        "alba": 1
+      },
+      "mae": 5.97,
+      "rmse": 7.98
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-09-02",
+      "endDate": "2023-09-04",
+      "sampleSize": 1100,
+      "shares": {
+        "snp": 39,
+        "con": 16,
+        "lab": 30,
+        "libdem": 8,
+        "reform": 3,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 2.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": -1.325755843703389,
+        "reform": -13.2589411111474,
+        "alba": 1
+      },
+      "mae": 5.97,
+      "rmse": 8.67
+    },
+    {
+      "pollster": "YouGov",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-03-25",
+      "endDate": "2024-04-02",
+      "sampleSize": 1100,
+      "shares": {
+        "snp": 34,
+        "con": 15,
+        "lab": 32,
+        "libdem": 9,
+        "green": 4
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 18.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 3.7933609868156037
+      },
+      "mae": 6.07,
+      "rmse": 8.87
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2023-06-12",
+      "endDate": "2023-06-15",
+      "sampleSize": 1007,
+      "shares": {
+        "snp": 36,
+        "con": 13,
+        "lab": 32,
+        "libdem": 9,
+        "green": 7
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 18.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 6.793360986815603
+      },
+      "mae": 6.11,
+      "rmse": 8.96
+    },
+    {
+      "pollster": "Survation",
+      "client": "Scotland in Union",
+      "ballot": "constituency",
+      "date": "2022-09-28",
+      "endDate": "2022-09-29",
+      "sampleSize": 1011,
+      "shares": {
+        "snp": 45,
+        "con": 14,
+        "lab": 30,
+        "libdem": 6
+      },
+      "errors": {
+        "snp": 4.429946326115122,
+        "con": 0.40101904170885483,
+        "lab": 16.26819522922995,
+        "libdem": -3.325755843703389
+      },
+      "mae": 6.11,
+      "rmse": 8.6
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2022-03-10",
+      "endDate": "2022-03-16",
+      "sampleSize": 1008,
+      "shares": {
+        "snp": 46,
+        "con": 20,
+        "lab": 24,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 6.401019041708855,
+        "lab": 10.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 6.11,
+      "rmse": 6.73
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2021-10-22",
+      "endDate": "2021-10-28",
+      "sampleSize": 1005,
+      "shares": {
+        "snp": 48,
+        "con": 20,
+        "lab": 22,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 7.429946326115122,
+        "con": 6.401019041708855,
+        "lab": 8.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 6.11,
+      "rmse": 6.52
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2021-09-03",
+      "endDate": "2021-09-09",
+      "sampleSize": 1016,
+      "shares": {
+        "snp": 48,
+        "con": 22,
+        "lab": 20,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 7.429946326115122,
+        "con": 8.401019041708855,
+        "lab": 6.268195229229949,
+        "libdem": -2.325755843703389
+      },
+      "mae": 6.11,
+      "rmse": 6.53
+    },
+    {
+      "pollster": "Survation",
+      "client": "Progress Scotland",
+      "ballot": "constituency",
+      "date": "2024-09-10",
+      "endDate": "2024-09-13",
+      "sampleSize": 2059,
+      "shares": {
+        "snp": 31,
+        "con": 13,
+        "lab": 31,
+        "libdem": 8,
+        "green": 6,
+        "reform": 9,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -9.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 17.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 5.793360986815603,
+        "reform": -7.258941111147401,
+        "alba": 1
+      },
+      "mae": 6.12,
+      "rmse": 8.27
+    },
+    {
+      "pollster": "Norstat",
+      "client": "Sunday Times",
+      "ballot": "constituency",
+      "date": "2024-04-09",
+      "endDate": "2024-04-12",
+      "sampleSize": 1086,
+      "shares": {
+        "snp": 35,
+        "con": 17,
+        "lab": 30,
+        "libdem": 10,
+        "green": 5
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 3.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 4.793360986815603
+      },
+      "mae": 6.14,
+      "rmse": 8.13
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-06-26",
+      "endDate": "2024-06-27",
+      "sampleSize": 1200,
+      "shares": {
+        "snp": 33,
+        "con": 14,
+        "lab": 34,
+        "libdem": 8,
+        "green": 3,
+        "reform": 6,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 20.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 2.7933609868156037,
+        "reform": -10.2589411111474,
+        "alba": 1
+      },
+      "mae": 6.23,
+      "rmse": 9.13
+    },
+    {
+      "pollster": "Survation",
+      "client": "Ballot Box Scotland",
+      "ballot": "constituency",
+      "date": "2024-06-21",
+      "endDate": "2024-06-25",
+      "sampleSize": 1022,
+      "shares": {
+        "snp": 33,
+        "con": 14,
+        "lab": 37,
+        "libdem": 8,
+        "green": 4,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 23.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 3.7933609868156037,
+        "alba": 1
+      },
+      "mae": 6.23,
+      "rmse": 10.13
+    },
+    {
+      "pollster": "Norstat",
+      "client": "Sunday Times",
+      "ballot": "constituency",
+      "date": "2024-04-30",
+      "endDate": "2024-05-03",
+      "sampleSize": 1086,
+      "shares": {
+        "snp": 34,
+        "con": 14,
+        "lab": 33,
+        "libdem": 9,
+        "green": 5
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 19.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 4.793360986815603
+      },
+      "mae": 6.27,
+      "rmse": 9.36
+    },
+    {
+      "pollster": "Norstat",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2024-01-22",
+      "endDate": "2024-01-25",
+      "sampleSize": 1007,
+      "shares": {
+        "snp": 36,
+        "con": 16,
+        "lab": 31,
+        "libdem": 7,
+        "green": 5
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 17.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 4.793360986815603
+      },
+      "mae": 6.27,
+      "rmse": 8.41
+    },
+    {
+      "pollster": "Survation",
+      "client": "Ballot Box Scotland",
+      "ballot": "constituency",
+      "date": "2022-03-24",
+      "endDate": "2022-03-28",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 46,
+        "con": 20,
+        "lab": 25,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": 5.429946326115122,
+        "con": 6.401019041708855,
+        "lab": 11.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 6.36,
+      "rmse": 7.12
+    },
+    {
+      "pollster": "Opinium",
+      "client": "Sky News",
+      "ballot": "constituency",
+      "date": "2021-09-02",
+      "endDate": "2021-09-08",
+      "sampleSize": 1014,
+      "shares": {
+        "snp": 51,
+        "con": 21,
+        "lab": 18,
+        "libdem": 6
+      },
+      "errors": {
+        "snp": 10.429946326115122,
+        "con": 7.401019041708855,
+        "lab": 4.268195229229949,
+        "libdem": -3.325755843703389
+      },
+      "mae": 6.36,
+      "rmse": 6.94
+    },
+    {
+      "pollster": "Survation",
+      "client": "True North",
+      "ballot": "constituency",
+      "date": "2023-08-15",
+      "endDate": "2023-08-18",
+      "sampleSize": 1022,
+      "shares": {
+        "snp": 39,
+        "con": 16,
+        "lab": 34,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 2.401019041708855,
+        "lab": 20.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 6.39,
+      "rmse": 10.26
+    },
+    {
+      "pollster": "Norstat",
+      "client": "Sunday Times",
+      "ballot": "constituency",
+      "date": "2024-08-20",
+      "endDate": "2024-08-22",
+      "sampleSize": 1011,
+      "shares": {
+        "snp": 33,
+        "con": 12,
+        "lab": 30,
+        "libdem": 8,
+        "green": 5,
+        "reform": 9
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": -1.5989809582911452,
+        "lab": 16.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 4.793360986815603,
+        "reform": -7.258941111147401
+      },
+      "mae": 6.47,
+      "rmse": 8.18
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2023-10-20",
+      "endDate": "2023-10-25",
+      "sampleSize": 1200,
+      "shares": {
+        "snp": 34,
+        "con": 14,
+        "lab": 32,
+        "libdem": 9,
+        "green": 7
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 0.40101904170885483,
+        "lab": 18.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 6.793360986815603
+      },
+      "mae": 6.47,
+      "rmse": 9.2
+    },
+    {
+      "pollster": "Survation",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-06-23",
+      "endDate": "2023-06-28",
+      "sampleSize": 1891,
+      "shares": {
+        "snp": 38,
+        "con": 17,
+        "lab": 33,
+        "libdem": 10
+      },
+      "errors": {
+        "snp": -2.5700536738848783,
+        "con": 3.401019041708855,
+        "lab": 19.26819522922995,
+        "libdem": 0.674244156296611
+      },
+      "mae": 6.48,
+      "rmse": 9.87
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-03-31",
+      "endDate": "2023-04-01",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 38,
+        "con": 18,
+        "lab": 28,
+        "libdem": 10,
+        "green": 3,
+        "reform": 2
+      },
+      "errors": {
+        "snp": -2.5700536738848783,
+        "con": 4.401019041708855,
+        "lab": 14.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 2.7933609868156037,
+        "reform": -14.2589411111474
+      },
+      "mae": 6.49,
+      "rmse": 8.57
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-06-01",
+      "endDate": "2024-06-02",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 33,
+        "con": 17,
+        "lab": 32,
+        "libdem": 9,
+        "green": 2,
+        "reform": 4,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 3.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 1.7933609868156035,
+        "reform": -12.2589411111474,
+        "alba": 2
+      },
+      "mae": 6.52,
+      "rmse": 8.95
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-06-03",
+      "endDate": "2023-06-05",
+      "sampleSize": 1395,
+      "shares": {
+        "snp": 36,
+        "con": 21,
+        "lab": 29,
+        "libdem": 8,
+        "green": 2,
+        "reform": 2,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 7.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -14.2589411111474,
+        "alba": 1
+      },
+      "mae": 6.52,
+      "rmse": 8.6
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-04-30",
+      "endDate": "2023-05-02",
+      "sampleSize": 1295,
+      "shares": {
+        "snp": 36,
+        "con": 18,
+        "lab": 32,
+        "libdem": 8,
+        "green": 2,
+        "reform": 2,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 4.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -14.2589411111474,
+        "alba": 1
+      },
+      "mae": 6.52,
+      "rmse": 9.13
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2024-06-21",
+      "endDate": "2024-06-25",
+      "sampleSize": 1042,
+      "shares": {
+        "snp": 37,
+        "con": 14,
+        "lab": 35,
+        "libdem": 8
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 0.40101904170885483,
+        "lab": 21.26819522922995,
+        "libdem": -1.325755843703389
+      },
+      "mae": 6.64,
+      "rmse": 10.81
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-05-08",
+      "endDate": "2024-05-09",
+      "sampleSize": 1078,
+      "shares": {
+        "snp": 33,
+        "con": 15,
+        "lab": 35,
+        "libdem": 9,
+        "green": 3
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 21.26819522922995,
+        "libdem": -0.32575584370338895,
+        "green": 2.7933609868156037
+      },
+      "mae": 6.67,
+      "rmse": 10.19
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-03-02",
+      "endDate": "2023-03-05",
+      "sampleSize": 1050,
+      "shares": {
+        "snp": 40,
+        "con": 20,
+        "lab": 29,
+        "libdem": 7,
+        "green": 2,
+        "reform": 2
+      },
+      "errors": {
+        "snp": -0.5700536738848783,
+        "con": 6.401019041708855,
+        "lab": 15.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -14.2589411111474
+      },
+      "mae": 6.77,
+      "rmse": 9
+    },
+    {
+      "pollster": "YouGov",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-06-03",
+      "endDate": "2024-06-07",
+      "sampleSize": 1068,
+      "shares": {
+        "snp": 34,
+        "con": 13,
+        "lab": 35,
+        "libdem": 10,
+        "green": 5
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": -0.5989809582911452,
+        "lab": 21.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 4.793360986815603
+      },
+      "mae": 6.78,
+      "rmse": 10.19
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-08-05",
+      "endDate": "2023-08-06",
+      "sampleSize": 1050,
+      "shares": {
+        "snp": 36,
+        "con": 19,
+        "lab": 32,
+        "libdem": 8,
+        "green": 2,
+        "reform": 1,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 5.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -15.2589411111474,
+        "alba": 1
+      },
+      "mae": 6.8,
+      "rmse": 9.43
+    },
+    {
+      "pollster": "Norstat",
+      "client": "Sunday Times",
+      "ballot": "constituency",
+      "date": "2024-06-11",
+      "endDate": "2024-06-14",
+      "sampleSize": 1050,
+      "shares": {
+        "snp": 34,
+        "con": 16,
+        "lab": 32,
+        "libdem": 8,
+        "green": 6
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 5.793360986815603
+      },
+      "mae": 6.87,
+      "rmse": 9.14
+    },
+    {
+      "pollster": "YouGov",
+      "client": "Scottish Elections Study",
+      "ballot": "constituency",
+      "date": "2024-02-21",
+      "endDate": "2024-02-28",
+      "sampleSize": 1178,
+      "shares": {
+        "snp": 34,
+        "con": 15,
+        "lab": 32,
+        "libdem": 8,
+        "green": 7
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 1.4010190417088548,
+        "lab": 18.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 6.793360986815603
+      },
+      "mae": 6.87,
+      "rmse": 9.24
+    },
+    {
+      "pollster": "Panelbase",
+      "client": "The Sunday Times",
+      "ballot": "constituency",
+      "date": "2023-10-02",
+      "endDate": "2023-10-05",
+      "sampleSize": 1022,
+      "shares": {
+        "snp": 35,
+        "con": 16,
+        "lab": 31,
+        "libdem": 7,
+        "green": 7
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 17.26819522922995,
+        "libdem": -2.325755843703389,
+        "green": 6.793360986815603
+      },
+      "mae": 6.87,
+      "rmse": 8.79
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2023-03-28",
+      "endDate": "2023-03-31",
+      "sampleSize": 1009,
+      "shares": {
+        "snp": 39,
+        "con": 19,
+        "lab": 32,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": -1.5700536738848783,
+        "con": 5.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 6.89,
+      "rmse": 9.63
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-07-01",
+      "endDate": "2023-07-02",
+      "sampleSize": 1030,
+      "shares": {
+        "snp": 33,
+        "con": 21,
+        "lab": 30,
+        "libdem": 10,
+        "green": 2,
+        "reform": 2,
+        "alba": 1
+      },
+      "errors": {
+        "snp": -7.570053673884878,
+        "con": 7.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": 0.674244156296611,
+        "green": 1.7933609868156035,
+        "reform": -14.2589411111474,
+        "alba": 1
+      },
+      "mae": 7,
+      "rmse": 9.14
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-03-10",
+      "endDate": "2024-03-11",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 35,
+        "con": 18,
+        "lab": 31,
+        "libdem": 5,
+        "green": 3,
+        "reform": 4,
+        "alba": 3
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 4.401019041708855,
+        "lab": 17.26819522922995,
+        "libdem": -4.325755843703389,
+        "green": 2.7933609868156037,
+        "reform": -12.2589411111474,
+        "alba": 3
+      },
+      "mae": 7.09,
+      "rmse": 8.74
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2023-10-29",
+      "endDate": "2023-10-30",
+      "sampleSize": 1092,
+      "shares": {
+        "snp": 34,
+        "con": 22,
+        "lab": 30,
+        "libdem": 8,
+        "green": 2,
+        "reform": 2,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 8.401019041708855,
+        "lab": 16.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -14.2589411111474,
+        "alba": 2
+      },
+      "mae": 7.23,
+      "rmse": 9.19
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-02-03",
+      "endDate": "2024-02-04",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 35,
+        "con": 18,
+        "lab": 33,
+        "libdem": 8,
+        "green": 3,
+        "reform": 1,
+        "alba": 3
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 4.401019041708855,
+        "lab": 19.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 2.7933609868156037,
+        "reform": -15.2589411111474,
+        "alba": 3
+      },
+      "mae": 7.37,
+      "rmse": 9.81
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-04-06",
+      "endDate": "2024-04-07",
+      "sampleSize": 1000,
+      "shares": {
+        "snp": 34,
+        "con": 21,
+        "lab": 32,
+        "libdem": 6,
+        "green": 2,
+        "reform": 3,
+        "alba": 2
+      },
+      "errors": {
+        "snp": -6.570053673884878,
+        "con": 7.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -3.325755843703389,
+        "green": 1.7933609868156035,
+        "reform": -13.2589411111474,
+        "alba": 2
+      },
+      "mae": 7.52,
+      "rmse": 9.45
+    },
+    {
+      "pollster": "Redfield & Wilton",
+      "client": "N/A",
+      "ballot": "constituency",
+      "date": "2024-01-09",
+      "endDate": "2024-01-11",
+      "sampleSize": 1040,
+      "shares": {
+        "snp": 37,
+        "con": 18,
+        "lab": 32,
+        "libdem": 8,
+        "green": 3,
+        "reform": 1
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 4.401019041708855,
+        "lab": 18.26819522922995,
+        "libdem": -1.325755843703389,
+        "green": 2.7933609868156037,
+        "reform": -15.2589411111474
+      },
+      "mae": 7.6,
+      "rmse": 10.07
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2024-06-14",
+      "endDate": "2024-06-18",
+      "sampleSize": 1069,
+      "shares": {
+        "snp": 36,
+        "con": 16,
+        "lab": 35,
+        "libdem": 7
+      },
+      "errors": {
+        "snp": -4.570053673884878,
+        "con": 2.401019041708855,
+        "lab": 21.26819522922995,
+        "libdem": -2.325755843703389
+      },
+      "mae": 7.64,
+      "rmse": 11
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2023-10-06",
+      "endDate": "2023-10-11",
+      "sampleSize": 1002,
+      "shares": {
+        "snp": 37,
+        "con": 18,
+        "lab": 33,
+        "libdem": 6
+      },
+      "errors": {
+        "snp": -3.5700536738848783,
+        "con": 4.401019041708855,
+        "lab": 19.26819522922995,
+        "libdem": -3.325755843703389
+      },
+      "mae": 7.64,
+      "rmse": 10.18
+    },
+    {
+      "pollster": "Savanta",
+      "client": "The Scotsman",
+      "ballot": "constituency",
+      "date": "2024-05-03",
+      "endDate": "2024-05-08",
+      "sampleSize": 1080,
+      "shares": {
+        "snp": 35,
+        "con": 18,
+        "lab": 35,
+        "libdem": 6
+      },
+      "errors": {
+        "snp": -5.570053673884878,
+        "con": 4.401019041708855,
+        "lab": 21.26819522922995,
+        "libdem": -3.325755843703389
+      },
+      "mae": 8.64,
+      "rmse": 11.33
+    }
+  ],
+  "mrps": [],
+  "votescotProjection": {
+    "totalSeats": 17,
+    "correctWinners": 14,
+    "hitRate": 0.8235294117647058,
+    "byCompetitiveness": {
+      "competitive": {
+        "total": 10,
+        "correct": 10,
+        "hitRate": 1
+      },
+      "toss-up": {
+        "total": 1,
+        "correct": 0,
+        "hitRate": 0
+      },
+      "safe": {
+        "total": 6,
+        "correct": 4,
+        "hitRate": 0.6666666666666666
+      }
+    },
+    "perSeat": [
+      {
+        "id": "aberdeen-central",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "aberdeen-deeside-and-north-kincardine",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "banffshire-and-buchan-coast",
+        "predictedWinner": "reform",
+        "actualWinner": "snp",
+        "correct": false,
+        "competitiveness": "toss-up"
+      },
+      {
+        "id": "carrick-cumnock-and-doon-valley",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "cowdenbeath",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "dundee-city-east",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "safe"
+      },
+      {
+        "id": "dundee-city-west",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "safe"
+      },
+      {
+        "id": "edinburgh-eastern-musselburgh-and-tranent",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "edinburgh-south-western",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "kilmarnock-and-irvine-valley",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "midlothian-north",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "na-h-eileanan-an-iar",
+        "predictedWinner": "snp",
+        "actualWinner": "lab",
+        "correct": false,
+        "competitiveness": "safe"
+      },
+      {
+        "id": "orkney-islands",
+        "predictedWinner": "libdem",
+        "actualWinner": "libdem",
+        "correct": true,
+        "competitiveness": "safe"
+      },
+      {
+        "id": "paisley",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "perthshire-north",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "safe"
+      },
+      {
+        "id": "perthshire-south-and-kinross-shire",
+        "predictedWinner": "snp",
+        "actualWinner": "snp",
+        "correct": true,
+        "competitiveness": "competitive"
+      },
+      {
+        "id": "shetland-islands",
+        "predictedWinner": "libdem",
+        "actualWinner": "snp",
+        "correct": false,
+        "competitiveness": "safe"
+      }
+    ],
+    "shareMae": 5.94
+  }
+}

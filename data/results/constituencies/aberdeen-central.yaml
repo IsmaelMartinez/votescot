@@ -1,0 +1,31 @@
+id: aberdeen-central
+status: declared
+declaredAt: 2026-05-08T13:29:58.246Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: Jack Middleton
+    votes: 11974
+    share: 44.08
+  - party: lab
+    candidate: Jenny Laing
+    votes: 5002
+    share: 18.41
+  - party: reform
+    candidate: James Wyllie
+    votes: 3936
+    share: 14.49
+  - party: con
+    candidate: Stewart Whyte
+    votes: 3688
+    share: 13.58
+  - party: libdem
+    candidate: Yi-Pei Chou Turvey
+    votes: 2563
+    share: 9.44
+majority:
+  votes: 6972
+  share: 25.67
+  over: lab
+source: Democracy Club

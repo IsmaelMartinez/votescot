@@ -1,0 +1,31 @@
+id: perthshire-north
+status: declared
+declaredAt: 2026-05-08T13:29:58.263Z
+turnout: null
+winner: snp
+results:
+  - party: snp
+    candidate: John Ramsay Swinney
+    votes: 16414
+    share: 45.36
+  - party: con
+    candidate: Murdo Fraser
+    votes: 10171
+    share: 28.11
+  - party: reform
+    candidate: Kenneth Morton
+    votes: 4620
+    share: 12.77
+  - party: libdem
+    candidate: Claire McLaren
+    votes: 2741
+    share: 7.57
+  - party: lab
+    candidate: Angela Bailey
+    votes: 2240
+    share: 6.19
+majority:
+  votes: 6243
+  share: 17.25
+  over: con
+source: Democracy Club

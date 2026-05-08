@@ -4,13 +4,24 @@ import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import CandidateCard from "../../../components/CandidateCard.astro";
 import CandidateComparison from "../../../components/CandidateComparison.tsx";
-import { loadCandidates, loadConstituencies, loadQuestions } from "../../../lib/data";
+import {
+  loadCandidates,
+  loadConstituencies,
+  loadQuestions,
+  loadConstituencyResult,
+  loadElectionState,
+  type ConstituencyResult,
+} from "../../../lib/data";
 import {
   COMPETITIVENESS_LABELS as competitivenessLabel,
   COMPETITIVENESS_BADGE_CLASSES as competitivenessColor,
   PROJECTION_STATUS_LABELS as statusLabel,
   PROJECTION_STATUS_CLASSES as statusColor,
 } from "../../../lib/candidate-display";
+import { PARTY_THEMES_BY_LONG, PARTY_THEMES_BY_SHORT, PARTY_COLORS_BY_SHORT } from "../../../lib/party-config";
+import { closestPollForConstituency } from "../../../lib/accuracy";
+import pollsData from "../../../../data/polls.json";
+import type { PollEntry } from "../../../lib/poll-average";
 
 export function getStaticPaths() {
   const constituencies = loadConstituencies();
@@ -26,6 +37,31 @@ const base = import.meta.env.BASE_URL;
 const questions = loadQuestions();
 const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
+
+const state = loadElectionState();
+const showResultOverride = Astro.url.searchParams.get("view") === "results";
+const result = loadConstituencyResult(constituency.id);
+const showResult =
+  showResultOverride &&
+  result?.status === "declared" &&
+  state.phase !== "forecast";
+const resultAvailable =
+  result?.status === "declared" && state.phase !== "forecast";
+
+const constituencyPolls = (pollsData.constituency || []) as PollEntry[];
+const closestPoll = showResult && result
+  ? closestPollForConstituency(
+      { id: result.id, status: result.status, winner: result.winner, results: result.results },
+      constituencyPolls,
+    )
+  : null;
+
+function partyLabel(p: string): string {
+  return PARTY_THEMES_BY_LONG[p]?.label ?? PARTY_THEMES_BY_SHORT[p]?.label ?? p;
+}
+function partyColor(p: string): string {
+  return PARTY_THEMES_BY_LONG[p]?.color ?? PARTY_COLORS_BY_SHORT[p] ?? "#cbd5e1";
+}
 ---
 
 <Base title={`${constituency.name} Candidates`} description={`Candidates standing in ${constituency.name} for the 2026 Scottish Parliament election`}>
@@ -42,10 +78,84 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
       {candidates.length} candidates confirmed for 7 May 2026.
     </p>
 
-    {constituency.topParties && constituency.topParties.length > 0 && (
+    {showResult && result && result.results.length > 0 && (
+      <div class="mb-5 rounded-lg border-2 border-votescot-gold bg-white p-3">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-votescot-gold">Result · declared</div>
+          {result.declaredAt && (
+            <span class="font-body text-xs text-gray-400">
+              {new Date(result.declaredAt).toLocaleString("en-GB", { dateStyle: "short", timeStyle: "short" })}
+            </span>
+          )}
+        </div>
+
+        {result.winner && (
+          <div class="mb-3 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full" style={`background: ${partyColor(result.winner)}`} />
+            <span class="font-heading text-base font-black">{partyLabel(result.winner)} wins</span>
+            {result.majority && (
+              <span class="font-body text-xs text-gray-500">
+                · majority {result.majority.votes.toLocaleString()} ({result.majority.share.toFixed(1)} pts)
+              </span>
+            )}
+          </div>
+        )}
+
+        <div class="flex gap-1 mb-2.5 h-2 rounded overflow-hidden">
+          {result.results.map((r) => (
+            <div
+              class="h-full"
+              style={`width: ${r.share ?? 0}%; background: ${partyColor(r.party)}`}
+              title={`${partyLabel(r.party)}: ${r.votes.toLocaleString()} (${(r.share ?? 0).toFixed(1)}%)`}
+            />
+          ))}
+        </div>
+
+        <table class="w-full text-xs">
+          <tbody>
+            {result.results.map((r) => (
+              <tr class="border-t border-votescot-border">
+                <td class="py-1 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full" style={`background: ${partyColor(r.party)}`} />
+                  <span class="font-body font-bold">{partyLabel(r.party)}</span>
+                  <span class="text-gray-500">{r.candidate}</span>
+                </td>
+                <td class="text-right font-mono">{r.votes.toLocaleString()}</td>
+                <td class="text-right font-mono text-gray-500 w-12">{(r.share ?? 0).toFixed(1)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {result.turnout && (
+          <p class="font-body text-xs text-gray-500 mt-2 leading-snug">
+            Turnout {result.turnout.percent?.toFixed(1) ?? "—"}% · {result.turnout.valid.toLocaleString()} valid votes
+          </p>
+        )}
+
+        {closestPoll && (
+          <p class="font-body text-xs text-gray-500 mt-1 leading-snug">
+            Closest national poll on the winning party's share:
+            <strong> {closestPoll.pollster}</strong>
+            {closestPoll.client && closestPoll.client !== "N/A" ? ` (${closestPoll.client})` : ""}
+            — off by {closestPoll.absError.toFixed(1)} pts.
+          </p>
+        )}
+
+        <div class="mt-2 text-right">
+          <a href={`./${constituency.id}`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
+            Back to forecast
+          </a>
+        </div>
+      </div>
+    )}
+
+    {!showResult && constituency.topParties && constituency.topParties.length > 0 && (
       <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
-          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">Projection</div>
+          <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">
+            Projection
+          </div>
           {constituency.competitiveness && (
             <span class={`font-body text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
               {competitivenessLabel[constituency.competitiveness] ?? constituency.competitiveness}
@@ -82,6 +192,12 @@ const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
         {constituency.projectionSource && (
           <p class="font-body text-xs text-gray-400 mt-2 leading-snug">
             Basis: {constituency.projectionSource}. These are estimates, not predictions.
+          </p>
+        )}
+
+        {resultAvailable && (
+          <p class="font-body text-xs text-gray-500 mt-1 leading-snug">
+            Result declared. <a href={`?view=results`} class="text-votescot-gold underline">See the live result.</a>
           </p>
         )}
       </div>
