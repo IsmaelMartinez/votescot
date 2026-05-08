@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T12:48:04.081Z",
+  "lastUpdated": "2026-05-08T18:46:47.619Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,11 +16,95 @@
   ],
   "items": [
     {
-      "title": "Elections 2026 live: ‘I’m not going to walk away,’ says Starmer as Farage hails ‘historic shift in British politics’",
-      "description": "The Reform UK leader said Labour is being ‘wiped out by Reform in many of their traditional areas’ as results paint a bleak picture for the prime minister2026 election results: latest from local, Scottish and Welsh votesWe’re getting statements from some of the political parties now as we wait for results.For the Conservatives, party chairman Kevin Hollinrake said:We have run an energetic and positive campaign, showcasing that we have a clear plan to get Britain working again and that we have the team to deliver it... We know that so soon after a historic general election defeat and contesting wards won during the Party’s polling highs, that this will be a difficult set of elections for us. But we will continue to rebuild and to show the public that we have changed, to demonstrate that only this new Conservative party is a credible alternative.People are deeply disappointed with a Labour government that has been too timid to fix the country, but they are also appalled by the rise of Reform and Nigel Farage’s Trump-style politics. While those on the extremes of the right and the left want to burn everything down, Liberal Democrats want to fix what’s broken. Every Liberal Democrat local champion elected today will fight tirelessly for the communities they serve.I’ve travelled across England and Wales and I’m hearing the same everywhere I go – confidence that we will win more councillors than ever before. The news from the doorstep is that we will be taking seats from not just Labour but the Tories and Lib Dems too, from all across the country. Voters are responding to the fact that Greens are the only party taking the cost-of-living crisis seriously, with real plans to cut bills, reduce rents and provide genuinely affordable homes, as well as tackling the climate and nature crisis.Throughout this election, we have heard a clear appetite for change. People want a government that will stand up for Wales and focus relentlessly on the key issues affecting their lives. People have told us they have been inspired by Rhun ap Iorwerth’s leadership and driven by a desire for a positive alternative to Reform UK’s chaos and division. Continue reading...",
+      "title": "Elections 2026 live: Labour suffers historic defeat in Wales as Reform surges in English council elections and Greens make gains",
+      "description": "Welsh Labour leader and first minister Eluned Morgan loses seat with party pushed into third place behind Plaid Cymru and Reform2026 election results: latest from local, Scottish and Welsh votesWe’re getting statements from some of the political parties now as we wait for results.For the Conservatives, party chairman Kevin Hollinrake said:We have run an energetic and positive campaign, showcasing that we have a clear plan to get Britain working again and that we have the team to deliver it... We know that so soon after a historic general election defeat and contesting wards won during the Party’s polling highs, that this will be a difficult set of elections for us. But we will continue to rebuild and to show the public that we have changed, to demonstrate that only this new Conservative party is a credible alternative.People are deeply disappointed with a Labour government that has been too timid to fix the country, but they are also appalled by the rise of Reform and Nigel Farage’s Trump-style politics. While those on the extremes of the right and the left want to burn everything down, Liberal Democrats want to fix what’s broken. Every Liberal Democrat local champion elected today will fight tirelessly for the communities they serve.I’ve travelled across England and Wales and I’m hearing the same everywhere I go – confidence that we will win more councillors than ever before. The news from the doorstep is that we will be taking seats from not just Labour but the Tories and Lib Dems too, from all across the country. Voters are responding to the fact that Greens are the only party taking the cost-of-living crisis seriously, with real plans to cut bills, reduce rents and provide genuinely affordable homes, as well as tackling the climate and nature crisis.Throughout this election, we have heard a clear appetite for change. People want a government that will stand up for Wales and focus relentlessly on the key issues affecting their lives. People have told us they have been inspired by Rhun ap Iorwerth’s leadership and driven by a desire for a positive alternative to Reform UK’s chaos and division. Continue reading...",
       "url": "https://www.theguardian.com/politics/live/2026/may/07/elections-2026-local-scotland-wales-reform-green-labour-conservatives-live-news-updates",
-      "publishedAt": "2026-05-08T12:44:45.000Z",
+      "publishedAt": "2026-05-08T18:46:06.000Z",
       "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "2026 elections mapped: how Labour lost ground in different directions",
+      "description": "Keir Starmer’s party lost out to Reform and the Greens, with no respite in Scotland, Wales or England. These maps show the scale of the historic resultsElection 2026 live: latest news updatesFull results from England, Scotland and WalesLabour has suffered heavy losses across England, Scotland and Wales, losing ground to opponents on the left and the right in a fragmented political system.The graphics below show where Labour’s losses were most severe, and how the electoral landscape has changed as a result. Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/08/2026-elections-mapped-labour-reform-uk-greens-scotland-wales-england-local",
+      "publishedAt": "2026-05-08T18:43:36.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "SNP lose UK's largest constituency to Lib Dems",
+      "description": "Former minister Maree Todd had been aiming to retain Caithness, Sutherland and Ross.",
+      "url": "https://www.bbc.com/news/articles/clyp5n4yn2eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T18:42:01.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "John Swinney declares victory for SNP in Holyrood elections",
+      "description": "Scottish Labour leader, Anas Sarwar, concedes his party was comprehensively beatenElection 2026 live: latest news updatesFull results from England, Scotland and WalesJohn Swinney, the Scottish National party leader, has declared victory in the Holyrood elections after the first handful of results confirmed Labour had been comprehensively beaten.Speaking to the BBC after holding his own seat of Perthshire North, Swinney said he was “absolutely certain the SNP is going to be the leading party coming out of this election”. Continue reading...",
+      "url": "https://www.theguardian.com/politics/2026/may/08/john-swinney-declares-victory-for-snp-in-holyrood-elections",
+      "publishedAt": "2026-05-08T17:39:34.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "2026 election results: latest from local, Scottish and Welsh votes",
+      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaLatest news updates and analysis from election night Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
+      "publishedAt": "2026-05-08T17:33:17.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Conservative 'blue wall' holds firm in south of Scotland",
+      "description": "The Scottish Conservatives retain three seats and the SNP one across the Borders and Dumfries and Galloway.",
+      "url": "https://www.bbc.com/news/articles/cn7pvrm07gjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T17:19:14.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Greens oust SNP's Robertson as they win first Holyrood constituencies",
+      "description": "The party is hopeful of securing its best ever Holyrood election result after taking seats in Glasgow and Edinburgh.",
+      "url": "https://www.bbc.com/news/articles/c78k79xm2mzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T17:11:38.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "SNP narrowly beats Reform in Banffshire and Buchan Coast",
+      "description": "The SNP wins included a narrow victory for Karen Adam over Reform in Banffshire and Buchan Coast.",
+      "url": "https://www.bbc.com/news/articles/c4gvmzezyn8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T16:58:19.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Reform UK gains at Labour’s expense in local elections – podcast",
+      "description": "It has been a crushing set of local and devolved elections for Labour, with Reform UK making huge gains across the country and the Greens winning in London. Keir Starmer is under pressure to announce a timeline for his departure – yet he insists he will not walk away Continue reading...",
+      "url": "https://www.theguardian.com/politics/audio/2026/may/08/reform-uk-gains-at-labours-expense-in-local-elections-podcast",
+      "publishedAt": "2026-05-08T16:53:51.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "John Swinney among SNP winners in Perthshire and Dundee",
+      "description": "Scotland's first minister emerged victorious in his constituency, which was among a number of SNP wins in the region.",
+      "url": "https://www.bbc.com/news/articles/cpvprrxy3rpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T16:51:58.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "SNP lose Western Isles seat it had held for 19 years",
+      "description": "Alasdair Allan first won the seat for the party in 2007.",
+      "url": "https://www.bbc.com/news/articles/ckgp28y4kklo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T15:51:12.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Lib Dems lose stronghold Shetland seat to SNP",
+      "description": "The SNP's Hannah Goodlad triumphs over Lib Dem candidate Emma Macdonald.",
+      "url": "https://www.bbc.com/news/articles/c1e2gn05w8go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T14:01:24.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "SNP's Westminster leader Stephen Flynn wins seat at Holyrood",
+      "description": "The party's Westminster leader will have to resign from the UK Parliament to take up his place at Holyrood.",
+      "url": "https://www.bbc.com/news/articles/cp8pvyy4pq1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T13:43:36.000Z",
+      "source": "BBC News"
     },
     {
       "title": "STV news strike takes election coverage off air",
@@ -35,13 +119,6 @@
       "url": "https://www.bbc.com/news/articles/cqlpyvy7925o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-05-08T10:29:27.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "2026 election results: latest from local, Scottish and Welsh votes",
-      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaLatest news updates and analysis from election night Continue reading...",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
-      "publishedAt": "2026-05-08T08:52:47.000Z",
-      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Friday briefing: What the local election results tell us so far",
@@ -70,13 +147,6 @@
       "url": "https://www.theguardian.com/politics/2026/may/07/polls-close-elections-england-scotland-wales-labour-reform-greens-lib-dems-conservatives",
       "publishedAt": "2026-05-07T21:00:26.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Polls close in 2026 Scottish Parliament election",
-      "description": "Polling stations closed at 22:00, however the first results are not expected until Friday afternoon.",
-      "url": "https://www.bbc.com/news/articles/ckgprglgj4zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-07T21:00:08.000Z",
-      "source": "BBC News"
     },
     {
       "title": "STV’s Scotland election coverage to be hit by strike action over pay",
@@ -135,20 +205,6 @@
       "source": "Ballot Box Scotland"
     },
     {
-      "title": "New GP walk-in clinic treats 183 patients in five weeks",
-      "description": "The facility at Lochee Med­ical Centre in Dundee is part of a network of clinics where patients have access to GP-led care without an appointment.",
-      "url": "https://www.bbc.com/news/articles/c3w28z78zd8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-06T10:18:13.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Border politics - how similar jobs in the same firm deliver different tax bills",
-      "description": "Workers in southern Scotland can find themselves paying more tax than colleagues who live south of the border.",
-      "url": "https://www.bbc.com/news/articles/c3r2w4r113xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-06T05:25:57.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Holyrood election outcome is anything but certain on final day of campaigning",
       "description": "In the volatile politics of 2026, it is probably best to prepare for a range of possible scenarios, writes BBC Scotland political editor Glenn Campbell.",
       "url": "https://www.bbc.com/news/articles/c4g934ep151o?at_medium=RSS&at_campaign=rss",
@@ -168,62 +224,6 @@
       "url": "https://www.theguardian.com/commentisfree/2026/may/06/labour-collapse-union-nigel-farage-uk-elections",
       "publishedAt": "2026-05-06T05:00:02.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Badenoch defends seeking a ban on pro-Palestine marches but not Tommy Robinson ones – as it happened",
-      "description": "Tory leader says the protests are ‘not the same’Kemi Badenoch has questioned whether the undisclosed £5m donation given to Nigel Farage by a crypto billionaire shows that he has been “bought”.In an interview with the Today programme this morning, the Conservative leader asked whether the donation was linked to Farage’s support for cryptocurrencies, and she said the donation showed why Farage could not be trusted as a political leader.Let’s see, I believe that people should look at the character of an individual.You look at Nigel Farage’s fishy £5m. I think that’s a very, very concerning story. No one gets £5m directly. This was not for his party. He kept it a secret. What was that money for? Who’s bought him?Well, I don’t understand why somebody who works in crypto gives this sort of personal gift, as Farage calls it, and then all of a sudden Farage is promoting crypto.He should have declared it. We’ve already made a report to the standards committee. He should have declared it because those are the rules in this country. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/may/05/keir-starmer-uk-antisemitism-summit-golders-green-terror-latest-news-updates",
-      "publishedAt": "2026-05-05T16:30:37.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Council apology after envelopes say photo ID needed for election",
-      "description": "The envelopes incorrectly say photo identification will be needed to vote in the Scottish Parliament elections.",
-      "url": "https://www.bbc.com/news/articles/crep83j7nwro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-05T14:25:00.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "It's been a Holyrood election of disputed claims - BBC Verify fact-checked them",
-      "description": "BBC Verify has been fact-checking the political parties and seen some questionable claims at the forefront of the debate.",
-      "url": "https://www.bbc.com/news/articles/c893xz9yw7eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-05T05:09:32.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Next Scottish government faces ‘really difficult’ spending choices, economists say",
-      "description": "Parties&nbsp;accused of ‘fiscal denial’ and failing to tell voters the scale of the challengeThe next Scottish government will need to make “really difficult” spending decisions soon after taking power, including tackling its large public sector pay bill, senior economists have said.Economists with the Fraser of Allander Institute, at the University of Strathclyde, believe the manifestos published by Scotland’s political parties during the campaign failed to tell voters about the true scale of the challenge. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/may/05/next-scottish-government-must-make-really-difficult-spending-decisions",
-      "publishedAt": "2026-05-05T04:00:42.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Reform UK plan to set up migrant detention centres in Green-voting areas condemned by other parties – as it happened",
-      "description": "Nigel Farage’s party proposed to place detention centres in places that vote for Green council leaders or MPsKeir Starmer has said that Europe has to face up to the fact that its alliance with the US is under strain.He made the remark in public comments during the plenary session at the European Political Community summit in Yerevan in Armenia.And both of those are impacting all of us in a very material way.In the United Kingdom, if you look at the economic forecast now and compare it to the economic forecast just three or four months ago, they are in materially different places, and this is going to play out with our electorates in all of our countries.Reform are now openly threatening voters and not only that they’re threatening them with a power they don’t actually have. This is absolutely pathetic. People across Scotland are proud of the fact that this is a welcoming country that shows solidarity to people who need it.Reform are essentially saying ‘If you don’t vote the way we want you to, we will punish you’. I think the people of Scotland and voters across the UK are not going to take kindly to that kind of Donald Trumpesque threat.Reform know that absolutely bombed last week. The only thing they’ve got to move on to are open threats, not against the Greens but against voters across the country. It’s really quite sinister. This is exactly the kind of politics you see in Donald Trump’s America. People across Scotland are going to reject that on Thursday. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/may/04/local-election-uk-keir-starmer-ukraine-eu-loan-deal-latest-news-updates",
-      "publishedAt": "2026-05-04T16:10:17.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Reform’s toxic thinking has infected Scottish politics – this week’s Holyrood elections will tell us how badly | Jasmeen Kanwal",
-      "description": "For so long, the Scottish government has made a point of welcoming migrants. But I now see troubling changes in my countryJasmeen Kanwal is an educator and writer who lives in EdinburghAs Scotland prepares to elect a new parliament on 7 May, immigration is dominating the political discourse as never before. Reform UK, a party whose top three policies are “stop the boats”, “secure and defend our borders” and “deport illegal migrants” is now polling in second place behind the SNP in many recent surveys. Its success here seems illogical. Immigration, after all, is not devolved to the Scottish parliament. But as I’ve learned from my experience as an immigrant in Scotland, Holyrood’s position on immigration matters.In Westminster, the Labour government’s approach to Reform’s toxic, distorted narrative on immigration has been not to challenge it but instead to accept it as the starting point for its own hardline anti-immigrant agenda. If this thinking were to infect Holyrood, it would be disastrous for Scotland. Continue reading...",
-      "url": "https://www.theguardian.com/commentisfree/2026/may/04/scotland-election-reform-threat",
-      "publishedAt": "2026-05-04T09:00:19.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: Norstat 27th – 30th of April 2026",
-      "description": "A weaker than average poll for the SNP and best in a while for the Conservatives could suggest a majority remains an unlikely result on Thursday.",
-      "url": "https://ballotbox.scot/norstat-april-2026-2/",
-      "publishedAt": "2026-05-03T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "The big issues and key flashpoints from Scotland's election campaign",
-      "description": "BBC Scotland political editor Glenn Campbell examines what we have learned during the Holyrood election campaign.",
-      "url": "https://www.bbc.com/news/articles/cddqdvdeqrlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-02T08:19:18.000Z",
-      "source": "BBC News"
     }
   ]
 }
