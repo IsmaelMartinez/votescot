@@ -129,6 +129,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {Object.entries(report.national.constituency)
             .filter(([party, share]) => party !== "alba" && (share as number) > 0)
+            .sort(([, a], [, b]) => (b as number) - (a as number))
             .map(([party, share]) => (
             <div class="rounded-md p-2.5" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}; color: white`}>
               <div class="font-body text-xs font-bold uppercase tracking-widest opacity-90">{partyLabel(party)}</div>

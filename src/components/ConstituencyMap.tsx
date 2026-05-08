@@ -735,8 +735,11 @@ function ConstituencyMapInner({
         {viewMode === "region"
           ? " Click any area to view that region's list candidates."
           : " Click a constituency to view candidates."}
-        {viewMode === "constituency" && showProjections && (
+        {viewMode === "constituency" && displayMode === "forecast" && (
           <> Projections are estimates based on notional results, not predictions.</>
+        )}
+        {viewMode === "constituency" && displayMode === "results" && (
+          <> Results from Democracy Club. Pending seats are greyed out.</>
         )}
       </div>
     </div>
