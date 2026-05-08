@@ -1,8 +1,31 @@
 id: orkney-islands
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T12:19:49.648Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Liam Scott McArthur
+    votes: 7221
+    share: 70.22
+  - party: snp
+    candidate: Robert Fraser Leslie
+    votes: 1661
+    share: 16.15
+  - party: reform
+    candidate: John William Coupland
+    votes: 844
+    share: 8.21
+  - party: con
+    candidate: Jamie Halcro Johnston
+    votes: 358
+    share: 3.48
+  - party: lab
+    candidate: Mike Macleod
+    votes: 199
+    share: 1.94
+majority:
+  votes: 5560
+  share: 54.07
+  over: snp
+source: Democracy Club
