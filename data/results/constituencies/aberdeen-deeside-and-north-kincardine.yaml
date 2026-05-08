@@ -1,8 +1,35 @@
 id: aberdeen-deeside-and-north-kincardine
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:19.982Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Stephen Mark Flynn
+    votes: 11788
+    share: 34.11
+  - party: con
+    candidate: Liam Kerr
+    votes: 10544
+    share: 30.51
+  - party: reform
+    candidate: Duncan Massey
+    votes: 6113
+    share: 17.69
+  - party: libdem
+    candidate: Mel Sullivan
+    votes: 2880
+    share: 8.33
+  - party: lab
+    candidate: Matthew Lee
+    votes: 2805
+    share: 8.12
+  - party: ind
+    candidate: Iris Alexandra Leask
+    votes: 431
+    share: 1.25
+majority:
+  votes: 1244
+  share: 3.6
+  over: con
+source: Democracy Club

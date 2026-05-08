@@ -1,8 +1,35 @@
 id: banffshire-and-buchan-coast
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:19.984Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Karen Adam
+    votes: 10374
+    share: 35.17
+  - party: reform
+    candidate: Conrad Strachan Ritchie
+    votes: 10010
+    share: 33.93
+  - party: con
+    candidate: James Adams
+    votes: 6348
+    share: 21.52
+  - party: libdem
+    candidate: Leslie Tarr
+    votes: 1162
+    share: 3.94
+  - party: lab
+    candidate: Brooke Ritchie
+    votes: 1049
+    share: 3.56
+  - party: ind
+    candidate: N D R McLennan
+    votes: 555
+    share: 1.88
+majority:
+  votes: 364
+  share: 1.24
+  over: reform
+source: Democracy Club

@@ -1,8 +1,35 @@
 id: na-h-eileanan-an-iar
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:20.004Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: lab
+results:
+  - party: lab
+    candidate: Donald MacKinnon
+    votes: 4665
+    share: 37.72
+  - party: snp
+    candidate: Alasdair Allan
+    votes: 4511
+    share: 36.48
+  - party: reform
+    candidate: Malcolm Ivor McTaggart
+    votes: 1625
+    share: 13.14
+  - party: libdem
+    candidate: Jamie Dobson
+    votes: 812
+    share: 6.57
+  - party: con
+    candidate: George MacPherson
+    votes: 594
+    share: 4.8
+  - party: alliance-to-liberate-scotland-and-sovereignty
+    candidate: Kenny Mackenzie
+    votes: 159
+    share: 1.29
+majority:
+  votes: 154
+  share: 1.24
+  over: snp
+source: Democracy Club

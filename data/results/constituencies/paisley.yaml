@@ -1,8 +1,43 @@
 id: paisley
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:20.011Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: George Adam
+    votes: 13164
+    share: 42.6
+  - party: labour-and-co-operative-party
+    candidate: Neil Bibby
+    votes: 10136
+    share: 32.8
+  - party: reform
+    candidate: Alec Leishman
+    votes: 4620
+    share: 14.95
+  - party: libdem
+    candidate: James Kenyon
+    votes: 1073
+    share: 3.47
+  - party: con
+    candidate: Satbir Gill
+    votes: 940
+    share: 3.04
+  - party: ind
+    candidate: William Wallace
+    votes: 458
+    share: 1.48
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Sinead Daly
+    votes: 297
+    share: 0.96
+  - party: freedom-alliance
+    candidate: Mark Turnbull
+    votes: 212
+    share: 0.69
+majority:
+  votes: 3028
+  share: 9.8
+  over: labour-and-co-operative-party
+source: Democracy Club

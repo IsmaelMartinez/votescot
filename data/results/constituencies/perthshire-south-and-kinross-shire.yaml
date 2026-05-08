@@ -1,8 +1,31 @@
 id: perthshire-south-and-kinross-shire
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:20.014Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Jim Fairlie
+    votes: 14707
+    share: 40.39
+  - party: con
+    candidate: Roz McCall
+    votes: 9646
+    share: 26.49
+  - party: reform
+    candidate: Helen McDade
+    votes: 5128
+    share: 14.08
+  - party: libdem
+    candidate: Amanda Clark
+    votes: 4329
+    share: 11.89
+  - party: lab
+    candidate: Luke Thomson
+    votes: 2599
+    share: 7.14
+majority:
+  votes: 5061
+  share: 13.9
+  over: con
+source: Democracy Club

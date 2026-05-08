@@ -1,8 +1,31 @@
 id: edinburgh-south-western
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:56:19.998Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Simita Kumar
+    votes: 11727
+    share: 36.18
+  - party: lab
+    candidate: Catriona Munro
+    votes: 8438
+    share: 26.04
+  - party: con
+    candidate: Sue Webber
+    votes: 4636
+    share: 14.3
+  - party: reform
+    candidate: Cameron Rose
+    votes: 3936
+    share: 12.14
+  - party: libdem
+    candidate: Andy Williamson
+    votes: 3672
+    share: 11.33
+majority:
+  votes: 3289
+  share: 10.14
+  over: lab
+source: Democracy Club
