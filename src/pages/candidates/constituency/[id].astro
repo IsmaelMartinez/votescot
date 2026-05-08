@@ -19,7 +19,7 @@ import {
   PROJECTION_STATUS_CLASSES as statusColor,
 } from "../../../lib/candidate-display";
 import { PARTY_THEMES_BY_LONG, PARTY_THEMES_BY_SHORT, PARTY_COLORS_BY_SHORT } from "../../../lib/party-config";
-import { closestPollForConstituency } from "../../../lib/accuracy";
+import { closestPollForConstituency, partyKey } from "../../../lib/accuracy";
 import pollsData from "../../../../data/polls.json";
 import type { PollEntry } from "../../../lib/poll-average";
 
@@ -53,6 +53,14 @@ const closestPoll = resultAvailable && result
     )
   : null;
 
+const forecastVerdict = (() => {
+  if (!resultAvailable || !result?.winner || !constituency.projection) return null;
+  const f = partyKey(constituency.projection);
+  const w = partyKey(result.winner);
+  if (!f || !w) return null;
+  return { correct: f === w, forecast: constituency.projection };
+})();
+
 function partyLabel(p: string): string {
   return PARTY_THEMES_BY_LONG[p]?.label ?? PARTY_THEMES_BY_SHORT[p]?.label ?? p;
 }
@@ -76,7 +84,7 @@ function partyColor(p: string): string {
     </p>
 
     {resultAvailable && result && (
-      <div data-panel="result" class="mb-5 rounded-lg border-2 border-votescot-gold bg-white p-3 hidden">
+      <div data-panel="result" class="mb-5 rounded-lg border-2 border-votescot-gold bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-votescot-gold">Result · declared</div>
           {result.declaredAt && (
@@ -85,6 +93,17 @@ function partyColor(p: string): string {
             </span>
           )}
         </div>
+
+        {forecastVerdict && (
+          <div class={`mb-3 inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-body text-xs font-bold ${forecastVerdict.correct ? "bg-green-100 text-green-700" : "bg-rose-100 text-rose-700"}`}>
+            <span>{forecastVerdict.correct ? "✓ Forecast correct" : "✗ Forecast missed"}</span>
+            {!forecastVerdict.correct && (
+              <span class="font-normal text-rose-600">
+                — predicted {partyLabel(forecastVerdict.forecast)}
+              </span>
+            )}
+          </div>
+        )}
 
         {result.winner && (
           <div class="mb-3 flex items-center gap-2">
@@ -140,15 +159,15 @@ function partyColor(p: string): string {
         )}
 
         <div class="mt-2 text-right">
-          <a data-toggle="forecast" href={`${base}candidates/constituency/${constituency.id}`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
-            Back to forecast
+          <a data-toggle="forecast" href={`${base}candidates/constituency/${constituency.id}?view=forecast`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
+            See pre-election forecast
           </a>
         </div>
       </div>
     )}
 
     {constituency.topParties && constituency.topParties.length > 0 && (
-      <div data-panel="forecast" class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
+      <div data-panel="forecast" class={`mb-5 rounded-lg border border-votescot-border bg-white p-3 ${resultAvailable ? "hidden" : ""}`}>
         <div class="flex items-center justify-between mb-2.5">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">
             Projection
@@ -194,7 +213,7 @@ function partyColor(p: string): string {
 
         {resultAvailable && (
           <p class="font-body text-xs text-gray-500 mt-1 leading-snug">
-            Result declared. <a data-toggle="results" href={`${base}candidates/constituency/${constituency.id}?view=results`} class="text-votescot-gold underline">See the live result.</a>
+            <a data-toggle="results" href={`${base}candidates/constituency/${constituency.id}`} class="text-votescot-gold underline">Back to live result</a>.
           </p>
         )}
       </div>
@@ -207,26 +226,26 @@ function partyColor(p: string): string {
           if (!result) return;
           var forecast = document.querySelector('[data-panel="forecast"]');
           var params = new URLSearchParams(window.location.search);
-          var showResult = params.get("view") === "results" || !forecast;
-          function show(toResults) {
-            if (toResults) {
-              result.classList.remove("hidden");
-              if (forecast) forecast.classList.add("hidden");
-            } else {
+          var showForecast = params.get("view") === "forecast" && forecast;
+          function show(toForecast) {
+            if (toForecast) {
               result.classList.add("hidden");
               if (forecast) forecast.classList.remove("hidden");
+            } else {
+              result.classList.remove("hidden");
+              if (forecast) forecast.classList.add("hidden");
             }
           }
-          show(showResult);
+          show(showForecast);
           document.querySelectorAll('[data-toggle]').forEach(function (link) {
             link.addEventListener("click", function (e) {
               e.preventDefault();
-              var toResults = link.getAttribute("data-toggle") === "results";
+              var toForecast = link.getAttribute("data-toggle") === "forecast";
               var url = new URL(window.location.href);
-              if (toResults) url.searchParams.set("view", "results");
+              if (toForecast) url.searchParams.set("view", "forecast");
               else url.searchParams.delete("view");
               history.replaceState({}, "", url.toString());
-              show(toResults);
+              show(toForecast);
             });
           });
         })();
