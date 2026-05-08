@@ -63,6 +63,7 @@ interface RegionalResultFile {
   name: string;
   status: "pending" | "partial" | "declared";
   results: { party: string; votes: number; share?: number; listSeats?: number }[];
+  seatsAwarded?: { party: string; candidate: string; listPosition: number }[];
 }
 
 interface ConstituencyProjection {
@@ -91,6 +92,15 @@ function totalSeatsByParty(regional: RegionalResultFile[], constituency: Constit
   }
   for (const r of regional) {
     if (r.status !== "declared") continue;
+    // Prefer seatsAwarded (one entry per d'Hondt-allocated seat).
+    if (Array.isArray(r.seatsAwarded) && r.seatsAwarded.length > 0) {
+      for (const award of r.seatsAwarded) {
+        const k = partyKey(award.party);
+        if (k) totals[k]++;
+      }
+      continue;
+    }
+    // Fall back to results[].listSeats if seatsAwarded is absent.
     for (const e of r.results) {
       const k = partyKey(e.party);
       if (k && e.listSeats) totals[k] += e.listSeats;
@@ -203,7 +213,7 @@ function main(): void {
       constituency: constituencyActual ? roundShares(constituencyActual) : null,
       regional: regionalActual ? roundShares(regionalActual) : null,
     },
-    seatTotals: allDeclared ? seatTotals : null,
+    seatTotals,
     pollsters: pollsterScores,
     mrps: mrpScores,
     votescotProjection: {
