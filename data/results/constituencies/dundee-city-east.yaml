@@ -1,8 +1,39 @@
 id: dundee-city-east
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:29:58.254Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Stephen Gethins
+    votes: 12969
+    share: 48.85
+  - party: labour-and-co-operative-party
+    candidate: Cheryl-Ann Cruickshank
+    votes: 4792
+    share: 18.05
+  - party: reform
+    candidate: Mark Simpson
+    votes: 4135
+    share: 15.57
+  - party: libdem
+    candidate: Tanvir Ahmad
+    votes: 2086
+    share: 7.86
+  - party: con
+    candidate: Jack Cruickshanks
+    votes: 1999
+    share: 7.53
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Donald MacLeod
+    votes: 361
+    share: 1.36
+  - party: workers-party-of-britain
+    candidate: Peter Ashby
+    votes: 209
+    share: 0.79
+majority:
+  votes: 8177
+  share: 30.8
+  over: labour-and-co-operative-party
+source: Democracy Club

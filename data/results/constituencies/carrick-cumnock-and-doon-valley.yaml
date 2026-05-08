@@ -1,8 +1,39 @@
 id: carrick-cumnock-and-doon-valley
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:29:58.251Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Katie Hagmann
+    votes: 9610
+    share: 33.3
+  - party: reform
+    candidate: Andrew Scott
+    votes: 6888
+    share: 23.87
+  - party: lab
+    candidate: Carol Ann Mochan
+    votes: 6671
+    share: 23.11
+  - party: con
+    candidate: Tracey Clark
+    votes: 3680
+    share: 12.75
+  - party: libdem
+    candidate: Jack Clark
+    votes: 1187
+    share: 4.11
+  - party: ind
+    candidate: Alison Hewett
+    votes: 413
+    share: 1.43
+  - party: ind
+    candidate: Sean Davis
+    votes: 412
+    share: 1.43
+majority:
+  votes: 2722
+  share: 9.43
+  over: reform
+source: Democracy Club

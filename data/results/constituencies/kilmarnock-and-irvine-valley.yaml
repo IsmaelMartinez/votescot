@@ -1,8 +1,35 @@
 id: kilmarnock-and-irvine-valley
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:29:58.259Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Alan Brown
+    votes: 11919
+    share: 40.85
+  - party: lab
+    candidate: Ewan Macphee
+    votes: 7458
+    share: 25.56
+  - party: reform
+    candidate: Anne Millar
+    votes: 5441
+    share: 18.65
+  - party: con
+    candidate: James Adams
+    votes: 2780
+    share: 9.53
+  - party: libdem
+    candidate: Michael Gregori
+    votes: 1169
+    share: 4.01
+  - party: alliance-to-liberate-scotland
+    candidate: Garry Campbell McClay
+    votes: 407
+    share: 1.4
+majority:
+  votes: 4461
+  share: 15.29
+  over: lab
+source: Democracy Club

@@ -1,8 +1,43 @@
 id: shetland-islands
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T13:29:58.265Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Hannah Mary Goodlad
+    votes: 5453
+    share: 47.37
+  - party: libdem
+    candidate: Emma Macdonald
+    votes: 3963
+    share: 34.43
+  - party: green
+    candidate: Alex Armitage
+    votes: 949
+    share: 8.24
+  - party: reform
+    candidate: Vic Currie
+    votes: 725
+    share: 6.3
+  - party: lab
+    candidate: John Erskine
+    votes: 169
+    share: 1.47
+  - party: con
+    candidate: Douglas Barnett
+    votes: 137
+    share: 1.19
+  - party: alliance-to-liberate-scotland-and-sovereignty
+    candidate: Brian Nugent
+    votes: 65
+    share: 0.56
+  - party: ind
+    candidate: Peter Tait
+    votes: 50
+    share: 0.43
+majority:
+  votes: 1490
+  share: 12.94
+  over: libdem
+source: Democracy Club
