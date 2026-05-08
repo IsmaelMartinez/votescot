@@ -1,8 +1,31 @@
 id: dunfermline
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.190Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Shirley-Anne Somerville
+    votes: 14206
+    share: 41.63
+  - party: lab
+    candidate: Joe Long
+    votes: 8769
+    share: 25.7
+  - party: reform
+    candidate: Otto Inglis
+    votes: 5093
+    share: 14.92
+  - party: libdem
+    candidate: Lauren Buchanan-Quigley
+    votes: 3849
+    share: 11.28
+  - party: con
+    candidate: Thomas Heald
+    votes: 2209
+    share: 6.47
+majority:
+  votes: 5437
+  share: 15.93
+  over: lab
+source: Democracy Club

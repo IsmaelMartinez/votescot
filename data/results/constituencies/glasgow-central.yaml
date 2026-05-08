@@ -1,8 +1,31 @@
 id: glasgow-central
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.213Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Alison Thewliss
+    votes: 15085
+    share: 57.44
+  - party: lab
+    candidate: Vonnie Sandlan
+    votes: 5094
+    share: 19.4
+  - party: reform
+    candidate: Paul Bennie
+    votes: 3988
+    share: 15.18
+  - party: libdem
+    candidate: Paul Donald Kennedy
+    votes: 1262
+    share: 4.81
+  - party: con
+    candidate: Naveed Asghar
+    votes: 835
+    share: 3.18
+majority:
+  votes: 9991
+  share: 38.04
+  over: lab
+source: Democracy Club

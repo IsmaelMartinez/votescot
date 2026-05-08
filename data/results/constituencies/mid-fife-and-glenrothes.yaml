@@ -1,8 +1,31 @@
 id: mid-fife-and-glenrothes
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.224Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Jenny Gilruth
+    votes: 12461
+    share: 48.45
+  - party: reform
+    candidate: Sacha Haworth
+    votes: 4827
+    share: 18.77
+  - party: lab
+    candidate: Afifa Khanam
+    votes: 3970
+    share: 15.44
+  - party: libdem
+    candidate: Ed Scotcher
+    votes: 3047
+    share: 11.85
+  - party: con
+    candidate: Niamh Heald
+    votes: 1414
+    share: 5.5
+majority:
+  votes: 7634
+  share: 29.68
+  over: reform
+source: Democracy Club

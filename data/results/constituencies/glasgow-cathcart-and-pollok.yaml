@@ -1,8 +1,39 @@
 id: glasgow-cathcart-and-pollok
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.211Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Zen Ghani
+    votes: 14270
+    share: 44.35
+  - party: lab
+    candidate: Anas Sarwar
+    votes: 9107
+    share: 28.3
+  - party: reform
+    candidate: Kim Schmulian
+    votes: 5320
+    share: 16.53
+  - party: libdem
+    candidate: Peter Michael McLaughlin
+    votes: 1407
+    share: 4.37
+  - party: con
+    candidate: Kyle Park
+    votes: 1325
+    share: 4.12
+  - party: workers-party-of-britain
+    candidate: Yvonne Anne Ridley
+    votes: 586
+    share: 1.82
+  - party: scottish-common-party
+    candidate: Adnan Zafar Rafiq
+    votes: 163
+    share: 0.51
+majority:
+  votes: 5163
+  share: 16.05
+  over: lab
+source: Democracy Club

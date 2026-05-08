@@ -1,8 +1,31 @@
 id: fife-north-east
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.204Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Willie Rennie
+    votes: 21350
+    share: 63.72
+  - party: snp
+    candidate: John Beare
+    votes: 7876
+    share: 23.51
+  - party: reform
+    candidate: William Docherty
+    votes: 2524
+    share: 7.53
+  - party: con
+    candidate: Edward Sheasby
+    votes: 936
+    share: 2.79
+  - party: lab
+    candidate: Elizabeth Carr-Ellis
+    votes: 818
+    share: 2.44
+majority:
+  votes: 13474
+  share: 40.21
+  over: snp
+source: Democracy Club

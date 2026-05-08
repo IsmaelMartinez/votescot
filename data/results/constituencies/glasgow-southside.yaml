@@ -1,8 +1,43 @@
 id: glasgow-southside
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.217Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: green
+results:
+  - party: green
+    candidate: Holly Bruce
+    votes: 14048
+    share: 36.49
+  - party: snp
+    candidate: Kaukab Stewart
+    votes: 10947
+    share: 28.43
+  - party: lab
+    candidate: Rashid Hussain
+    votes: 7300
+    share: 18.96
+  - party: reform
+    candidate: Gordon Millar
+    votes: 3019
+    share: 7.84
+  - party: con
+    candidate: Ross Hutton
+    votes: 1383
+    share: 3.59
+  - party: libdem
+    candidate: Rachel Mary Byrne Park
+    votes: 1143
+    share: 2.97
+  - party: scottish-common-party
+    candidate: Kamran Butt
+    votes: 512
+    share: 1.33
+  - party: ind
+    candidate: Arzoo Waqqar Abdullah
+    votes: 147
+    share: 0.38
+majority:
+  votes: 3101
+  share: 8.06
+  over: snp
+source: Democracy Club

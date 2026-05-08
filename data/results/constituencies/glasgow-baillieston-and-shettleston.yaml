@@ -1,8 +1,31 @@
 id: glasgow-baillieston-and-shettleston
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.210Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: David Linden
+    votes: 12075
+    share: 44.69
+  - party: reform
+    candidate: Thomas Jordan Kerr
+    votes: 6972
+    share: 25.8
+  - party: labour-and-co-operative-party
+    candidate: Pauline McNeill
+    votes: 5885
+    share: 21.78
+  - party: libdem
+    candidate: Amy Carman
+    votes: 1082
+    share: 4
+  - party: con
+    candidate: John Murray
+    votes: 1006
+    share: 3.72
+majority:
+  votes: 5103
+  share: 18.89
+  over: reform
+source: Democracy Club

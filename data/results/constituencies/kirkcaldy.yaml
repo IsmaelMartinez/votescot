@@ -1,8 +1,31 @@
 id: kirkcaldy
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.223Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: David Herd Torrance
+    votes: 12230
+    share: 43.29
+  - party: labour-and-co-operative-party
+    candidate: Claire Baker
+    votes: 7483
+    share: 26.49
+  - party: reform
+    candidate: Julie MacDougall
+    votes: 5484
+    share: 19.41
+  - party: libdem
+    candidate: Fraser John Ashmore Graham
+    votes: 1607
+    share: 5.69
+  - party: con
+    candidate: Heather Greig
+    votes: 1445
+    share: 5.12
+majority:
+  votes: 4747
+  share: 16.8
+  over: labour-and-co-operative-party
+source: Democracy Club

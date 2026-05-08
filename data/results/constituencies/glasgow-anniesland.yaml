@@ -1,8 +1,31 @@
 id: glasgow-anniesland
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.209Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Colm Merrick
+    votes: 13821
+    share: 44.71
+  - party: lab
+    candidate: Eunis Jassemi
+    votes: 9162
+    share: 29.64
+  - party: reform
+    candidate: Sean O'Hagan
+    votes: 4839
+    share: 15.65
+  - party: libdem
+    candidate: James Douglas Speirs
+    votes: 1688
+    share: 5.46
+  - party: con
+    candidate: Sandesh Gulhane
+    votes: 1404
+    share: 4.54
+majority:
+  votes: 4659
+  share: 15.07
+  over: lab
+source: Democracy Club

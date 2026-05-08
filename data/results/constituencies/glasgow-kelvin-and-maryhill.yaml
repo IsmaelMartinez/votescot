@@ -1,8 +1,39 @@
 id: glasgow-kelvin-and-maryhill
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:09:50.215Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Bob Doris
+    votes: 11174
+    share: 32.76
+  - party: green
+    candidate: Iris Duane
+    votes: 9003
+    share: 26.39
+  - party: lab
+    candidate: James Adams
+    votes: 7531
+    share: 22.08
+  - party: reform
+    candidate: Aimee Hope Alexander
+    votes: 3592
+    share: 10.53
+  - party: libdem
+    candidate: Daniel Khan-O'Malley
+    votes: 1374
+    share: 4.03
+  - party: con
+    candidate: Daniel Bowman
+    votes: 1309
+    share: 3.84
+  - party: scottish-common-party
+    candidate: Thomas Adkins
+    votes: 130
+    share: 0.38
+majority:
+  votes: 2171
+  share: 6.37
+  over: green
+source: Democracy Club
