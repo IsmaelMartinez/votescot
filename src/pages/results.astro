@@ -329,10 +329,7 @@ const sankey = (() => {
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
           {(["safe", "competitive", "marginal", "toss-up"] as const).map((bucket) => {
-            const stats = projection.byCompetitiveness?.[bucket] as
-              | { total: number; correct: number; hitRate: number }
-              | undefined;
-            if (!stats) return null;
+            const stats = projection.byCompetitiveness[bucket];
             return (
               <div class="bg-gray-50 rounded p-2">
                 <div class="font-body font-bold uppercase tracking-wider text-gray-500">{bucket}</div>
