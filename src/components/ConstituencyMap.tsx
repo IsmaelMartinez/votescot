@@ -44,6 +44,15 @@ interface RegionInfo {
   name: string;
 }
 
+interface RegionResultInfo {
+  id: string;
+  status: "pending" | "partial" | "declared";
+  /** Long-form party keys (snp/labour/conservative/...). */
+  seats?: string[];
+  source?: string | null;
+  manualEntry?: boolean;
+}
+
 interface Props {
   knownConstituencies: string[];
   basePath: string;
@@ -53,6 +62,8 @@ interface Props {
   constituencyRegions?: Record<string, string>;
   /** Region id -> human-readable region name. */
   regions?: RegionInfo[];
+  /** Per-region d'Hondt list seat allocation, in award order. */
+  regionResults?: RegionResultInfo[];
 }
 
 type DisplayMode = "coverage" | "forecast" | "results";
@@ -135,6 +146,7 @@ function ConstituencyMapInner({
   results,
   constituencyRegions,
   regions,
+  regionResults,
 }: Props) {
   const [features, setFeatures] = useState<ConstituencyFeature[]>([]);
   const [loading, setLoading] = useState(true);
@@ -163,6 +175,17 @@ function ConstituencyMapInner({
   }, [regions]);
 
   const hasRegionData = !!constituencyRegions && !!regions?.length;
+
+  const regionResultsById = React.useMemo(() => {
+    const map = new Map<string, RegionResultInfo>();
+    if (regionResults) for (const r of regionResults) map.set(r.id, r);
+    return map;
+  }, [regionResults]);
+
+  const hasAnyRegionalSeats = React.useMemo(
+    () => (regionResults ?? []).some((r) => (r.seats?.length ?? 0) > 0),
+    [regionResults],
+  );
 
   const projectionMap = React.useMemo(() => {
     const map = new Map<string, ProjectionInfo>();
@@ -606,7 +629,7 @@ function ConstituencyMapInner({
           </div>
         )}
 
-        {viewMode === "region" && hasRegionData ? (
+        {viewMode === "region" && hasRegionData && !hasAnyRegionalSeats ? (
           <>
             {regions!.map((r) => (
               <span key={r.id} className="flex items-center gap-1.5">
@@ -618,6 +641,8 @@ function ConstituencyMapInner({
               </span>
             ))}
           </>
+        ) : viewMode === "region" && hasRegionData && hasAnyRegionalSeats ? (
+          <span className="text-gray-400">List seats below — click a region tile for candidates.</span>
         ) : displayMode === "results" && hasResults ? (
           <>
             {resultLegendParties.map((party) => (
@@ -721,7 +746,52 @@ function ConstituencyMapInner({
         </MapContainer>
       </div>
 
-      <div className="font-body text-xs text-gray-400">
+      {viewMode === "region" && hasAnyRegionalSeats && regions && (
+        <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {regions.map((r) => {
+            const rr = regionResultsById.get(r.id);
+            const seats = rr?.seats ?? [];
+            const cells = Array.from({ length: 7 }, (_, i) => seats[i] ?? null);
+            const counts = seats.reduce<Record<string, number>>((acc, p) => {
+              acc[p] = (acc[p] ?? 0) + 1;
+              return acc;
+            }, {});
+            const sortedCounts = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            return (
+              <div key={r.id} className="bg-white border border-votescot-border rounded-md p-2.5">
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <div className="font-body text-sm font-bold text-votescot-dark">{r.name}</div>
+                  <div className="font-body text-[10px] uppercase tracking-wider text-gray-400">
+                    {rr?.manualEntry ? "manual" : rr?.source === "Democracy Club" ? "DC" : rr?.status === "pending" || !seats.length ? "pending" : ""}
+                  </div>
+                </div>
+                <div className="flex gap-0.5 mb-1.5">
+                  {cells.map((party, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 h-3 rounded-sm"
+                      style={{
+                        background: party ? PARTY_COLORS[party] ?? "#94a3b8" : "#e5e7eb",
+                        opacity: party ? 0.9 : 0.6,
+                      }}
+                      title={party ? PARTY_LABELS[party] ?? party : "Pending"}
+                    />
+                  ))}
+                </div>
+                <div className="font-body text-[11px] text-gray-500 leading-snug">
+                  {seats.length === 0
+                    ? "Awaiting declaration"
+                    : sortedCounts
+                        .map(([p, n]) => `${PARTY_LABELS[p] ?? p} ${n}`)
+                        .join(" · ")}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      <div className="font-body text-xs text-gray-400 mt-3">
         Boundaries: 2026 Scottish Parliament constituencies (SPCF) via{" "}
         <a
           href="https://mapit.mysociety.org/"

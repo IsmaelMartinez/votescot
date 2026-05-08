@@ -10,6 +10,7 @@ import {
   loadRegions,
   loadRegionalCandidatesByRegion,
   loadConstituencyResults,
+  loadRegionalResults,
   loadElectionState,
 } from "../lib/data";
 import { slugifyConstituency } from "../lib/slugify";
@@ -51,6 +52,16 @@ const mapResults = resultsByConstituency
         })),
     }))
   : undefined;
+
+const regionalResultsAll =
+  state.phase !== "forecast" ? Array.from(loadRegionalResults().values()) : [];
+const mapRegionResults = regionalResultsAll.map((r) => ({
+  id: r.id,
+  status: r.status,
+  seats: (r.seatsAwarded ?? []).map((s) => shortToLong(s.party) ?? s.party),
+  source: r.source,
+  manualEntry: r.manualEntry === true,
+}));
 
 const projections = constituencies
   .filter((c) => c.projection)
@@ -99,6 +110,7 @@ const news = loadNews();
       basePath={base}
       projections={projections}
       results={mapResults}
+      regionResults={mapRegionResults}
       constituencyRegions={constituencyRegions}
       regions={mapRegions}
     />
