@@ -36,6 +36,14 @@ interface DcCandidacyResult {
   is_winner?: boolean | null;
 }
 
+interface DcBallotResults {
+  num_turnout_reported?: number | null;
+  turnout_percentage?: number | null;
+  num_spoilt_ballots?: number | null;
+  total_electorate?: number | null;
+  source?: string | null;
+}
+
 interface DcBallot {
   ballot_paper_id: string;
   post: { id: string; label: string; slug: string };
@@ -43,11 +51,12 @@ interface DcBallot {
   candidacies: Array<{
     person: { id: number; name: string };
     party: { ec_id: string; name: string };
+    party_list_position?: number | null;
     elected: boolean | null;
     result: DcCandidacyResult | null;
   }>;
   winner_count: number;
-  results: unknown | null;
+  results: DcBallotResults | null;
   cancelled: boolean;
 }
 
@@ -203,9 +212,15 @@ async function main(): Promise<void> {
   let regionalWithResults = 0;
   for (const b of ballots) {
     if (b.cancelled || !ballotIsRegional(b)) continue;
-    const agg = aggregate(b);
-    if (!agg.declared) continue;
+
+    // Regional ballots don't carry per-candidacy votes — voters pick a party.
+    // The signal that the d'Hondt allocation has run is `candidacy.elected`
+    // being set on the winning list candidates. DC stores ballot-level turnout
+    // (turnout, spoilt, electorate) at b.results once the count is in.
+    const elected = b.candidacies.filter((c) => c.elected === true);
+    if (elected.length === 0) continue;
     regionalWithResults++;
+
     const id = b.post.slug;
     const filePath = path.resolve(`data/results/regional/${id}.yaml`);
     if (!fs.existsSync(filePath)) {
@@ -215,17 +230,49 @@ async function main(): Promise<void> {
       );
       continue;
     }
+
+    const seatsAwarded = elected
+      .filter((c) => (c.party_list_position ?? 0) >= 1)
+      .slice()
+      .sort(
+        (a, c) =>
+          (a.party_list_position as number) - (c.party_list_position as number),
+      )
+      .map((c) => ({
+        party: partyKey(c.party.ec_id, c.party.name),
+        candidate: c.person.name,
+        listPosition: c.party_list_position as number,
+      }));
+    if (seatsAwarded.length === 0) {
+      console.warn(
+        `[sync-results] Region ${id} has elected candidates but no list ` +
+          `positions; skipping until DC fills them in.`,
+      );
+      continue;
+    }
+
+    const ballotResults = b.results ?? {};
+    const turnoutReported = ballotResults.num_turnout_reported ?? null;
+    const spoilt = ballotResults.num_spoilt_ballots ?? 0;
+    const electorate = ballotResults.total_electorate ?? null;
+    const turnoutPct = ballotResults.turnout_percentage ?? null;
+    const turnout =
+      turnoutReported != null && electorate != null
+        ? {
+            valid: Math.max(0, turnoutReported - spoilt),
+            rejected: spoilt,
+            electorate,
+            ...(turnoutPct != null ? { percent: turnoutPct } : {}),
+          }
+        : null;
+
     const existing = yaml.parse(fs.readFileSync(filePath, "utf-8"));
-    // Regional schema does not allow `winner`/`majority`/`candidate` fields.
     const merged = {
       ...existing,
       status: "declared",
       declaredAt: existing.declaredAt ?? new Date().toISOString(),
-      results: agg.results.map((r) => ({
-        party: r.party,
-        votes: r.votes,
-        share: r.share,
-      })),
+      ...(turnout ? { turnout } : {}),
+      seatsAwarded,
       source: "Democracy Club",
     };
     fs.writeFileSync(filePath, yaml.stringify(merged));
