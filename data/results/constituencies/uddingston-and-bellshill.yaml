@@ -1,8 +1,31 @@
 id: uddingston-and-bellshill
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.603Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Steven Bonnar
+    votes: 11966
+    share: 41.49
+  - party: lab
+    candidate: Mark Griffin
+    votes: 8382
+    share: 29.07
+  - party: reform
+    candidate: George William Hobbins
+    votes: 5646
+    share: 19.58
+  - party: con
+    candidate: Meghan Gallacher
+    votes: 1750
+    share: 6.07
+  - party: libdem
+    candidate: Ben Munnoch
+    votes: 1094
+    share: 3.79
+majority:
+  votes: 3584
+  share: 12.42
+  over: lab
+source: Democracy Club

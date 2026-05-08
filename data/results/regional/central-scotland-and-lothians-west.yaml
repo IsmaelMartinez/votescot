@@ -1,8 +1,33 @@
 id: central-scotland-and-lothians-west
 name: Central Scotland and Lothians West
-status: pending
-declaredAt: null
-turnout: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.604Z
+turnout:
+  valid: 282755
+  rejected: 775
+  electorate: 559730
+  percent: 50.65
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Meghan Gallacher
+    listPosition: 1
+  - party: lab
+    candidate: Mark Griffin
+    listPosition: 1
+  - party: reform
+    candidate: Graham Simpson
+    listPosition: 1
+  - party: green
+    candidate: Gillian Audrey MacKay
+    listPosition: 1
+  - party: lab
+    candidate: Jenny Young
+    listPosition: 2
+  - party: reform
+    candidate: Mandy Lindsay
+    listPosition: 2
+  - party: reform
+    candidate: Amanda Bland
+    listPosition: 3
+source: Democracy Club

@@ -1,8 +1,35 @@
 id: rutherglen-and-cambuslang
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.602Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Clare Haughey
+    votes: 14969
+    share: 44.18
+  - party: labour-and-co-operative-party
+    candidate: Monica Lennon
+    votes: 9125
+    share: 26.93
+  - party: reform
+    candidate: Allan Lyons
+    votes: 6168
+    share: 18.2
+  - party: libdem
+    candidate: Patrick Logue
+    votes: 1833
+    share: 5.41
+  - party: con
+    candidate: Annie Wells
+    votes: 1321
+    share: 3.9
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Chris Sermanni
+    votes: 467
+    share: 1.38
+majority:
+  votes: 5844
+  share: 17.25
+  over: labour-and-co-operative-party
+source: Democracy Club

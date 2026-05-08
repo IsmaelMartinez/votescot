@@ -1,8 +1,35 @@
 id: east-kilbride
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.580Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Collette Stevenson
+    votes: 14339
+    share: 42.41
+  - party: lab
+    candidate: Joe Fagan
+    votes: 9395
+    share: 27.79
+  - party: reform
+    candidate: Tim Kelly
+    votes: 5683
+    share: 16.81
+  - party: con
+    candidate: Brian Whittle
+    votes: 2251
+    share: 6.66
+  - party: libdem
+    candidate: Leigh Butler
+    votes: 1424
+    share: 4.21
+  - party: ind
+    candidate: Kristofer Keane
+    votes: 716
+    share: 2.12
+majority:
+  votes: 4944
+  share: 14.62
+  over: lab
+source: Democracy Club

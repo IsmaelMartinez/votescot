@@ -1,8 +1,35 @@
 id: falkirk-east-and-linlithgow
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.586Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Martyn Day
+    votes: 14465
+    share: 38.55
+  - party: lab
+    candidate: Siobhan Paterson
+    votes: 9030
+    share: 24.07
+  - party: reform
+    candidate: Amanda Bland
+    votes: 7906
+    share: 21.07
+  - party: con
+    candidate: Lewis Stein
+    votes: 2861
+    share: 7.62
+  - party: libdem
+    candidate: Paul McGarry
+    votes: 2501
+    share: 6.67
+  - party: ind
+    candidate: Ian Wallace El-Paget
+    votes: 759
+    share: 2.02
+majority:
+  votes: 5435
+  share: 14.48
+  over: lab
+source: Democracy Club

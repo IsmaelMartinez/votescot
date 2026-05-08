@@ -1,8 +1,35 @@
 id: hamilton-larkhall-and-stonehouse
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.595Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Alex Kerr
+    votes: 11825
+    share: 37.83
+  - party: lab
+    candidate: Davy Russell
+    votes: 9120
+    share: 29.18
+  - party: reform
+    candidate: John McNamee
+    votes: 7193
+    share: 23.01
+  - party: con
+    candidate: Alexandra Herdman
+    votes: 1617
+    share: 5.17
+  - party: libdem
+    candidate: Michael John Weatherhead
+    votes: 1156
+    share: 3.7
+  - party: alliance-for-democracy-and-freedom
+    candidate: David Ballantine
+    votes: 348
+    share: 1.11
+majority:
+  votes: 2705
+  share: 8.65
+  over: lab
+source: Democracy Club

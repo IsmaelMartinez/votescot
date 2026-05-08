@@ -1,8 +1,35 @@
 id: falkirk-west
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:24:43.586Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Gary Bouse
+    votes: 14896
+    share: 41.25
+  - party: reform
+    candidate: Richard Fairley
+    votes: 8160
+    share: 22.6
+  - party: lab
+    candidate: Paul Godzik
+    votes: 7859
+    share: 21.76
+  - party: con
+    candidate: Neil Benny
+    votes: 2297
+    share: 6.36
+  - party: libdem
+    candidate: Lucy Anne Elizabeth Smith
+    votes: 2037
+    share: 5.64
+  - party: ind
+    candidate: Stuart James McArthur
+    votes: 865
+    share: 2.4
+majority:
+  votes: 6736
+  share: 18.65
+  over: reform
+source: Democracy Club
