@@ -10,6 +10,7 @@ import {
   loadAccuracyReport,
 } from "../lib/data";
 import { PARTY_THEMES_BY_LONG, PARTY_THEMES_BY_SHORT, PARTY_COLORS_BY_SHORT } from "../lib/party-config";
+import { partyKey } from "../lib/accuracy";
 
 const state = loadElectionState();
 const constituencies = loadConstituencies();
@@ -43,9 +44,12 @@ const declared = constituencyResults
     forecast: constituencyById.get(r.id)?.projection,
   }));
 
-const surprises = declared.filter(
-  (r) => r.forecast && r.winner && r.forecast !== r.winner,
-);
+const surprises = declared.filter((r) => {
+  if (!r.forecast || !r.winner) return false;
+  const f = partyKey(r.forecast);
+  const w = partyKey(r.winner);
+  return f != null && w != null && f !== w;
+});
 
 function partyLabel(p: string): string {
   return PARTY_THEMES_BY_LONG[p]?.label ?? PARTY_THEMES_BY_SHORT[p]?.label ?? p;

@@ -154,6 +154,8 @@ function main(): void {
   pollsterScores.sort((a, b) => (a.mae as number) - (b.mae as number));
 
   const allDeclared =
+    constituencyResults.length > 0 &&
+    regionalResults.length > 0 &&
     constituencyResults.every((r) => r.status === "declared") &&
     regionalResults.every((r) => r.status === "declared");
 

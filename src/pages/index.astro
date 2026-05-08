@@ -19,45 +19,23 @@ const knownConstituencies = constituencies.map((c) => c.id);
 const base = import.meta.env.BASE_URL;
 
 const state = loadElectionState();
-const showForecastOverride = Astro.url.searchParams.get("view") === "forecast";
-const useResults = !showForecastOverride && (state.phase === "partial" || state.phase === "final");
-const results = useResults ? loadConstituencyResults() : null;
-
-// When results are available, recolor the map by actual winner. Pending
-// constituencies fall back to the forecast so the map keeps coverage.
-const projections = constituencies.map((c) => {
-  const r = results?.get(c.id);
-  if (r?.status === "declared" && r.winner) {
-    const top = [...(r.results ?? [])]
-      .sort((a, b) => (b.share ?? 0) - (a.share ?? 0))
-      .slice(0, 3)
-      .map((entry) => ({
-        party: entry.party,
-        share: Number((entry.share ?? 0).toFixed(1)),
-        status: "will-win" as const,
-      }));
-    return {
-      id: c.id,
-      projection: r.winner,
-      competitiveness: "safe" as const,
-      topParties: top,
-      isResult: true,
-    };
+const resultsCallout = (() => {
+  if (state.phase === "forecast") return false;
+  const results = loadConstituencyResults();
+  for (const r of results.values()) {
+    if (r.status === "declared") return true;
   }
-  if (c.projection) {
-    return {
-      id: c.id,
-      projection: c.projection,
-      competitiveness: c.competitiveness,
-      topParties: c.topParties,
-    };
-  }
-  return null;
-}).filter((p): p is NonNullable<typeof p> => p !== null);
+  return false;
+})();
 
-const declaredCount = results
-  ? Array.from(results.values()).filter((r) => r.status === "declared").length
-  : 0;
+const projections = constituencies
+  .filter((c) => c.projection)
+  .map((c) => ({
+    id: c.id,
+    projection: c.projection,
+    competitiveness: c.competitiveness,
+    topParties: c.topParties,
+  }));
 
 const baseRegions = loadRegions();
 const mapRegions = baseRegions.map((r) => ({ id: r.id, name: r.name }));
@@ -80,23 +58,16 @@ const news = loadNews();
   <Header slot="header" currentTab="map" />
 
   <div class="py-6">
-    <h2 class="font-heading text-2xl font-black mb-2">
-      {useResults ? "Live results" : "Navigate the noise"}
-    </h2>
+    <h2 class="font-heading text-2xl font-black mb-2">Navigate the noise</h2>
     <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
-      {useResults ? (
-        <>
-          {declaredCount} of {constituencies.length} constituencies declared.
-          Map shows actual winners (declared) and forecasts (pending).
-          {" "}
-          <a href="/results" class="text-votescot-gold underline">See pollster accuracy →</a>
-          {" · "}
-          <a href="?view=forecast" class="text-gray-500 underline">Show pre-election forecast</a>
-        </>
-      ) : (
-        <>Scotland votes on 7 May 2026. Find your constituency, discover which candidates align with your values, and access the research you need to make an informed choice.</>
-      )}
+      Scotland votes on 7 May 2026. Find your constituency, discover which candidates align with your values, and access the research you need to make an informed choice.
     </p>
+
+    {resultsCallout && (
+      <p class="font-body text-xs text-gray-500 leading-snug mb-3">
+        Election results are landing. <a href={`${base}results`} class="text-votescot-gold underline">See the live results section.</a>
+      </p>
+    )}
 
     <ConstituencyMap
       client:only="react"

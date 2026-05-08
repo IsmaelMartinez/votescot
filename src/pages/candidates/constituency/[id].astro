@@ -39,12 +39,14 @@ const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
 const state = loadElectionState();
-const showForecastOverride = Astro.url.searchParams.get("view") === "forecast";
+const showResultOverride = Astro.url.searchParams.get("view") === "results";
 const result = loadConstituencyResult(constituency.id);
 const showResult =
-  !showForecastOverride &&
+  showResultOverride &&
   result?.status === "declared" &&
   state.phase !== "forecast";
+const resultAvailable =
+  result?.status === "declared" && state.phase !== "forecast";
 
 const constituencyPolls = (pollsData.constituency || []) as PollEntry[];
 const closestPoll = showResult && result
@@ -141,18 +143,18 @@ function partyColor(p: string): string {
         )}
 
         <div class="mt-2 text-right">
-          <a href={`?view=forecast`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
-            See pre-election forecast
+          <a href={`./${constituency.id}`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
+            Back to forecast
           </a>
         </div>
       </div>
     )}
 
-    {(!showResult || showForecastOverride) && constituency.topParties && constituency.topParties.length > 0 && (
+    {!showResult && constituency.topParties && constituency.topParties.length > 0 && (
       <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">
-            {showForecastOverride && result?.status === "declared" ? "Pre-election forecast" : "Projection"}
+            Projection
           </div>
           {constituency.competitiveness && (
             <span class={`font-body text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${competitivenessColor[constituency.competitiveness] ?? "bg-gray-100 text-gray-600"}`}>
@@ -190,6 +192,12 @@ function partyColor(p: string): string {
         {constituency.projectionSource && (
           <p class="font-body text-xs text-gray-400 mt-2 leading-snug">
             Basis: {constituency.projectionSource}. These are estimates, not predictions.
+          </p>
+        )}
+
+        {resultAvailable && (
+          <p class="font-body text-xs text-gray-500 mt-1 leading-snug">
+            Result declared. <a href={`?view=results`} class="text-votescot-gold underline">See the live result.</a>
           </p>
         )}
       </div>
