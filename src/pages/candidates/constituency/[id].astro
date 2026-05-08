@@ -39,17 +39,14 @@ const quizCandidates = candidates.filter((c: any) => c.quizCandidate);
 const otherCandidates = candidates.filter((c: any) => !c.quizCandidate);
 
 const state = loadElectionState();
-const showResultOverride = Astro.url.searchParams.get("view") === "results";
 const result = loadConstituencyResult(constituency.id);
-const showResult =
-  showResultOverride &&
-  result?.status === "declared" &&
-  state.phase !== "forecast";
 const resultAvailable =
-  result?.status === "declared" && state.phase !== "forecast";
+  result?.status === "declared" &&
+  result.results.length > 0 &&
+  state.phase !== "forecast";
 
 const constituencyPolls = (pollsData.constituency || []) as PollEntry[];
-const closestPoll = showResult && result
+const closestPoll = resultAvailable && result
   ? closestPollForConstituency(
       { id: result.id, status: result.status, winner: result.winner, results: result.results },
       constituencyPolls,
@@ -78,8 +75,8 @@ function partyColor(p: string): string {
       {candidates.length} candidates confirmed for 7 May 2026.
     </p>
 
-    {showResult && result && result.results.length > 0 && (
-      <div class="mb-5 rounded-lg border-2 border-votescot-gold bg-white p-3">
+    {resultAvailable && result && (
+      <div data-panel="result" class="mb-5 rounded-lg border-2 border-votescot-gold bg-white p-3 hidden">
         <div class="flex items-center justify-between mb-2.5">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-votescot-gold">Result · declared</div>
           {result.declaredAt && (
@@ -143,15 +140,15 @@ function partyColor(p: string): string {
         )}
 
         <div class="mt-2 text-right">
-          <a href={`./${constituency.id}`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
+          <a data-toggle="forecast" href={`${base}candidates/constituency/${constituency.id}`} class="font-body text-xs text-gray-400 underline hover:text-votescot-gold">
             Back to forecast
           </a>
         </div>
       </div>
     )}
 
-    {!showResult && constituency.topParties && constituency.topParties.length > 0 && (
-      <div class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
+    {constituency.topParties && constituency.topParties.length > 0 && (
+      <div data-panel="forecast" class="mb-5 rounded-lg border border-votescot-border bg-white p-3">
         <div class="flex items-center justify-between mb-2.5">
           <div class="font-body text-xs font-bold uppercase tracking-widest text-gray-400">
             Projection
@@ -197,10 +194,43 @@ function partyColor(p: string): string {
 
         {resultAvailable && (
           <p class="font-body text-xs text-gray-500 mt-1 leading-snug">
-            Result declared. <a href={`?view=results`} class="text-votescot-gold underline">See the live result.</a>
+            Result declared. <a data-toggle="results" href={`${base}candidates/constituency/${constituency.id}?view=results`} class="text-votescot-gold underline">See the live result.</a>
           </p>
         )}
       </div>
+    )}
+
+    {resultAvailable && (
+      <script is:inline>
+        (function () {
+          var result = document.querySelector('[data-panel="result"]');
+          if (!result) return;
+          var forecast = document.querySelector('[data-panel="forecast"]');
+          var params = new URLSearchParams(window.location.search);
+          var showResult = params.get("view") === "results" || !forecast;
+          function show(toResults) {
+            if (toResults) {
+              result.classList.remove("hidden");
+              if (forecast) forecast.classList.add("hidden");
+            } else {
+              result.classList.add("hidden");
+              if (forecast) forecast.classList.remove("hidden");
+            }
+          }
+          show(showResult);
+          document.querySelectorAll('[data-toggle]').forEach(function (link) {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              var toResults = link.getAttribute("data-toggle") === "results";
+              var url = new URL(window.location.href);
+              if (toResults) url.searchParams.set("view", "results");
+              else url.searchParams.delete("view");
+              history.replaceState({}, "", url.toString());
+              show(toResults);
+            });
+          });
+        })();
+      </script>
     )}
 
     {quizCandidates.length > 0 && (
