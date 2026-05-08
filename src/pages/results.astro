@@ -98,6 +98,38 @@ const mrps = report?.mrps ?? [];
 const projection = report?.votescotProjection ?? null;
 
 const showResults = state.phase === "partial" || state.phase === "final";
+
+// Pre-election VoteScot constituency-seat forecast: sum each party's
+// projected wins across the 73 constituencies. Regional list is excluded
+// because we don't carry a regional pre-election forecast in YAML.
+const forecastConstituencySeats: Record<string, number> = {};
+for (const c of constituencies) {
+  const key = c.projection ? partyKey(c.projection) : null;
+  if (!key) continue;
+  forecastConstituencySeats[key] = (forecastConstituencySeats[key] ?? 0) + 1;
+}
+
+const HEADLINE_PARTY_ORDER: string[] = ["snp", "lab", "reform", "con", "libdem", "green"];
+
+const headlineRows = HEADLINE_PARTY_ORDER
+  .map((party) => {
+    const actualShare = (report?.national?.constituency?.[party] as number | undefined) ?? 0;
+    const pollShare = pollAvgShares[party as PartyKey] ?? 0;
+    const actualSeats = (report?.seatTotals?.[party] as number | undefined) ?? 0;
+    const forecastSeats = forecastConstituencySeats[party] ?? 0;
+    return { party, actualShare, pollShare, actualSeats, forecastSeats };
+  })
+  .filter((r) => r.actualShare > 0 || r.pollShare > 0 || r.actualSeats > 0 || r.forecastSeats > 0);
+
+const maxShareForRow = Math.max(
+  1,
+  ...headlineRows.map((r) => Math.max(r.actualShare, r.pollShare)),
+);
+const maxSeatsForRow = Math.max(
+  1,
+  ...headlineRows.map((r) => Math.max(r.actualSeats, r.forecastSeats)),
+);
+const totalActualSeats = headlineRows.reduce((s, r) => s + r.actualSeats, 0);
 ---
 
 <Base
@@ -130,137 +162,104 @@ const showResults = state.phase === "partial" || state.phase === "final";
       </div>
     )}
 
-    {showResults && report?.national?.constituency && (() => {
-      const actualEntries = Object.entries(report.national.constituency)
-        .filter(([party, share]) => party !== "alba" && ((share as number) > 0 || (pollAvgShares[party as PartyKey] ?? 0) > 0))
-        .map(([party, share]) => ({
-          party,
-          actual: share as number,
-          poll: pollAvgShares[party as PartyKey] ?? 0,
-          range: pollRanges[party as PartyKey] ?? { min: 0, max: 0 },
-        }))
-        .sort((a, b) => b.actual - a.actual);
-      const maxShare = Math.max(
-        1,
-        ...actualEntries.map((e) => Math.max(e.actual, e.poll, e.range.max)),
-      );
-      return (
-        <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-          <h3 class="font-heading text-base font-bold mb-2">National vote share vs polling</h3>
-          <p class="font-body text-xs text-gray-500 mb-3">
-            Aggregated from {declaredCount} declared constituencies (coloured bars) compared with the polling average from the last {pollWindow.length} polls (grey bars). Updates as more declare.
-          </p>
-          <div class="flex flex-col gap-2.5">
-            {actualEntries.map(({ party, actual, poll, range }) => {
-              const actualPct = (actual / maxShare) * 100;
-              const pollPct = (poll / maxShare) * 100;
-              const delta = actual - poll;
-              return (
-                <div class="grid grid-cols-[3.5rem_1fr_5rem] gap-2 items-center">
-                  <div class="font-body text-xs font-bold uppercase tracking-wider text-gray-600 text-right">
-                    {partyLabel(party)}
+    {showResults && headlineRows.length > 0 && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-1">Results vs forecast</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Each row: actual share and seats compared with the polling average ({pollWindow.length} polls) and the VoteScot pre-election forecast (constituency only).
+        </p>
+        <div class="grid grid-cols-[2.75rem_1fr_4rem_1fr_3.25rem] gap-2 items-center mb-2 font-body text-[10px] uppercase tracking-wider text-gray-400">
+          <div></div>
+          <div>Vote share</div>
+          <div class="text-right">%</div>
+          <div>Seats</div>
+          <div class="text-right">N</div>
+        </div>
+        <div class="flex flex-col gap-2">
+          {headlineRows.map(({ party, actualShare, pollShare, actualSeats, forecastSeats }) => {
+            const actualSharePct = (actualShare / maxShareForRow) * 100;
+            const pollSharePct = (pollShare / maxShareForRow) * 100;
+            const actualSeatsPct = (actualSeats / maxSeatsForRow) * 100;
+            const forecastSeatsPct = (forecastSeats / maxSeatsForRow) * 100;
+            const seatDelta = actualSeats - forecastSeats;
+            const colour = PARTY_COLORS_BY_SHORT[party] ?? "#94a3b8";
+            return (
+              <div class="grid grid-cols-[2.75rem_1fr_4rem_1fr_3.25rem] gap-2 items-center">
+                <div class="font-body text-xs font-bold uppercase tracking-wider text-gray-700 text-right">
+                  {partyLabel(party)}
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <div class="h-3 bg-gray-50 rounded-sm overflow-hidden">
+                    <div class="h-full rounded-sm" style={`width:${actualSharePct}%;background:${colour}`} />
                   </div>
-                  <div class="flex flex-col gap-0.5">
-                    <div class="relative h-3.5 bg-gray-50 rounded-sm overflow-hidden" title={`Actual ${actual.toFixed(1)}%`}>
-                      <div
-                        class="absolute inset-y-0 left-0 rounded-sm"
-                        style={`width:${actualPct}%;background:${PARTY_COLORS_BY_SHORT[party] ?? "#94a3b8"}`}
-                      />
-                    </div>
-                    <div class="relative h-2.5 bg-gray-50 rounded-sm overflow-hidden" title={`Polling average ${poll.toFixed(1)}% (range ${range.min}–${range.max}%)`}>
-                      <div
-                        class="absolute inset-y-0 left-0 bg-gray-300 rounded-sm"
-                        style={`width:${pollPct}%`}
-                      />
-                    </div>
-                  </div>
-                  <div class="text-right font-mono text-xs leading-tight">
-                    <div class="font-bold text-gray-800">{actual.toFixed(1)}%</div>
-                    <div class="text-gray-400">poll {poll.toFixed(1)}%</div>
-                    {poll > 0 && (
-                      <div class={`text-[10px] ${delta >= 0 ? "text-emerald-600" : "text-rose-600"}`}>
-                        {delta >= 0 ? "+" : ""}{delta.toFixed(1)}
-                      </div>
-                    )}
+                  <div class="h-2 bg-gray-50 rounded-sm overflow-hidden">
+                    <div class="h-full bg-gray-300 rounded-sm" style={`width:${pollSharePct}%`} />
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          <div class="flex items-center gap-3 mt-3 font-body text-[11px] text-gray-500">
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2.5 rounded-sm bg-votescot-dark" /> Actual</span>
-            <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2 rounded-sm bg-gray-300" /> Polling average (last {pollWindow.length} polls)</span>
-          </div>
-        </section>
-      );
-    })()}
-
-    {showResults && report?.seatTotals && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-2">Seats won</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
-          Constituency seats plus regional list seats. 65 needed for a majority.
-        </p>
-        <div class="flex h-3 mb-3 rounded overflow-hidden">
-          {Object.entries(report.seatTotals)
-            .filter(([party, n]) => party !== "alba" && (n as number) > 0)
-            .map(([party, n]) => (
-              <div
-                class="h-full"
-                style={`flex: ${n as number}; background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}`}
-                title={`${partyLabel(party)}: ${n}`}
-              />
-            ))}
+                <div class="text-right font-mono text-[11px] leading-tight">
+                  <div class="font-bold text-gray-800">{actualShare.toFixed(1)}</div>
+                  <div class="text-gray-400">{pollShare.toFixed(1)}</div>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <div class="h-3 bg-gray-50 rounded-sm overflow-hidden">
+                    <div class="h-full rounded-sm" style={`width:${actualSeatsPct}%;background:${colour}`} />
+                  </div>
+                  <div class="h-2 bg-gray-50 rounded-sm overflow-hidden">
+                    <div class="h-full bg-gray-300 rounded-sm" style={`width:${forecastSeatsPct}%`} />
+                  </div>
+                </div>
+                <div class="text-right font-mono text-[11px] leading-tight">
+                  <div class="font-bold text-gray-800">{actualSeats}</div>
+                  <div class="text-gray-400">{forecastSeats}</div>
+                  {forecastSeats > 0 && (
+                    <div class={`text-[10px] ${seatDelta >= 0 ? "text-emerald-600" : "text-rose-600"}`}>
+                      {seatDelta >= 0 ? "+" : ""}{seatDelta}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {Object.entries(report.seatTotals)
-            .filter(([party, n]) => party !== "alba" && (n as number) > 0)
-            .map(([party, n]) => (
-            <div class="flex items-center gap-2">
-              <div class="w-3 h-3 rounded-full" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}`} />
-              <span class="font-body text-sm font-bold">{partyLabel(party)}</span>
-              <span class="font-body text-sm text-gray-500">{n as number}</span>
-            </div>
-          ))}
+        <div class="flex flex-wrap items-center gap-3 mt-3 font-body text-[11px] text-gray-500">
+          <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2.5 rounded-sm bg-votescot-dark" /> Actual</span>
+          <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-2 rounded-sm bg-gray-300" /> Polling avg / pre-election forecast</span>
+          <span class="text-gray-400 ml-auto">{totalActualSeats} of 129 seats declared · 65 for majority</span>
         </div>
       </section>
     )}
 
     {showResults && projection && projection.totalSeats > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-2">VoteScot's per-seat hit rate</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
-          How often VoteScot's pre-election projection picked the actual winner,
-          across {projection.totalSeats} declared seats.
-        </p>
-        <div class="font-heading text-3xl font-black mb-3">
-          {(projection.hitRate * 100).toFixed(1)}%
-          <span class="font-body text-sm font-normal text-gray-500 ml-2">
-            ({projection.correctWinners} of {projection.totalSeats})
-          </span>
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          VoteScot's per-seat hit rate · {(projection.hitRate * 100).toFixed(1)}% ({projection.correctWinners}/{projection.totalSeats})
+        </summary>
+        <div class="mt-3">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+            {Object.entries(projection.byCompetitiveness).map(([bucket, v]) => {
+              const stats = v as { total: number; correct: number; hitRate: number };
+              return (
+                <div class="bg-gray-50 rounded p-2">
+                  <div class="font-body font-bold uppercase tracking-wider text-gray-500">{bucket}</div>
+                  <div class="font-heading text-base font-black">{(stats.hitRate * 100).toFixed(0)}%</div>
+                  <div class="text-gray-400">{stats.correct}/{stats.total}</div>
+                </div>
+              );
+            })}
+          </div>
+          <p class="font-body text-xs text-gray-500 mt-3">
+            Mean absolute error on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
+          </p>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-          {Object.entries(projection.byCompetitiveness).map(([bucket, v]) => {
-            const stats = v as { total: number; correct: number; hitRate: number };
-            return (
-              <div class="bg-gray-50 rounded p-2">
-                <div class="font-body font-bold uppercase tracking-wider text-gray-500">{bucket}</div>
-                <div class="font-heading text-base font-black">{(stats.hitRate * 100).toFixed(0)}%</div>
-                <div class="text-gray-400">{stats.correct}/{stats.total}</div>
-              </div>
-            );
-          })}
-        </div>
-        <p class="font-body text-xs text-gray-500 mt-3">
-          Mean absolute error on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
-        </p>
-      </section>
+      </details>
     )}
 
     {showResults && constituencyLeague.length > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-1">Pollster league table — constituency vote</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          Pollster league — constituency vote ({constituencyLeague.length} pollsters)
+        </summary>
+        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
           How far each pollster's predicted vote shares were from the actual result, in percentage points. Lower is better.
         </p>
         <details class="mb-3 text-xs text-gray-600">
@@ -294,14 +293,16 @@ const showResults = state.phase === "partial" || state.phase === "final";
             ))}
           </tbody>
         </table>
-      </section>
+      </details>
     )}
 
     {showResults && regionalLeague.length > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-1">Pollster league table — regional list vote</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
-          Same methodology as above, scored against actual regional list shares.
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          Pollster league — regional list vote ({regionalLeague.length} pollsters)
+        </summary>
+        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
+          Same methodology, scored against actual regional list shares.
         </p>
         <table class="w-full text-sm">
           <thead>
@@ -325,13 +326,15 @@ const showResults = state.phase === "partial" || state.phase === "final";
             ))}
           </tbody>
         </table>
-      </section>
+      </details>
     )}
 
     {showResults && mrps.length > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-1">MRP seat forecasts vs actual</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          MRP seat forecasts vs actual ({mrps.length})
+        </summary>
+        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
           MRPs are the only public forecasts that give per-seat predictions. Total seat error sums |predicted − actual| across all parties.
         </p>
         <table class="w-full text-sm">
@@ -356,13 +359,15 @@ const showResults = state.phase === "partial" || state.phase === "final";
             ))}
           </tbody>
         </table>
-      </section>
+      </details>
     )}
 
     {showResults && surprises.length > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-2">Forecast misses</h3>
-        <p class="font-body text-xs text-gray-500 mb-3">
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          Forecast misses ({surprises.length})
+        </summary>
+        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
           Seats where the actual winner differed from the VoteScot forecast.
         </p>
         <ul class="flex flex-col gap-1.5">
@@ -378,13 +383,15 @@ const showResults = state.phase === "partial" || state.phase === "final";
             </li>
           ))}
         </ul>
-      </section>
+      </details>
     )}
 
     {showResults && declared.length > 0 && (
-      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
-        <h3 class="font-heading text-base font-bold mb-2">Declared constituencies</h3>
-        <ul class="flex flex-col gap-1">
+      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+          Declared constituencies ({declared.length})
+        </summary>
+        <ul class="flex flex-col gap-1 mt-3">
           {declared.map((r) => (
             <li class="flex items-center justify-between text-sm border-b border-votescot-border last:border-0 py-1.5">
               <a href={`/candidates/constituency/${r.id}`} class="font-body font-bold no-underline text-gray-900 hover:text-votescot-gold">{r.name}</a>
@@ -398,7 +405,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
             </li>
           ))}
         </ul>
-      </section>
+      </details>
     )}
   </div>
 
