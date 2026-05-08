@@ -127,7 +127,9 @@ const showResults = state.phase === "partial" || state.phase === "final";
           Aggregated from {declaredCount} declared constituencies. Updates as more declare.
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {Object.entries(report.national.constituency).map(([party, share]) => (
+          {Object.entries(report.national.constituency)
+            .filter(([party, share]) => party !== "alba" && (share as number) > 0)
+            .map(([party, share]) => (
             <div class="rounded-md p-2.5" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}; color: white`}>
               <div class="font-body text-xs font-bold uppercase tracking-widest opacity-90">{partyLabel(party)}</div>
               <div class="font-heading text-xl font-black">{(share as number).toFixed(1)}%</div>
@@ -145,7 +147,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
         </p>
         <div class="flex h-3 mb-3 rounded overflow-hidden">
           {Object.entries(report.seatTotals)
-            .filter(([, n]) => (n as number) > 0)
+            .filter(([party, n]) => party !== "alba" && (n as number) > 0)
             .map(([party, n]) => (
               <div
                 class="h-full"
@@ -155,7 +157,9 @@ const showResults = state.phase === "partial" || state.phase === "final";
             ))}
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {Object.entries(report.seatTotals).map(([party, n]) => (
+          {Object.entries(report.seatTotals)
+            .filter(([party, n]) => party !== "alba" && (n as number) > 0)
+            .map(([party, n]) => (
             <div class="flex items-center gap-2">
               <div class="w-3 h-3 rounded-full" style={`background: ${PARTY_COLORS_BY_SHORT[party] ?? "#e5e7eb"}`} />
               <span class="font-body text-sm font-bold">{partyLabel(party)}</span>
@@ -170,7 +174,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
       <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
         <h3 class="font-heading text-base font-bold mb-2">VoteScot's per-seat hit rate</h3>
         <p class="font-body text-xs text-gray-500 mb-3">
-          How often the constituency YAML projection picked the actual winner,
+          How often VoteScot's pre-election projection picked the actual winner,
           across {projection.totalSeats} declared seats.
         </p>
         <div class="font-heading text-3xl font-black mb-3">
@@ -192,7 +196,8 @@ const showResults = state.phase === "partial" || state.phase === "final";
           })}
         </div>
         <p class="font-body text-xs text-gray-500 mt-3">
-          Mean absolute error on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
+          <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">Mean absolute error</abbr>
+          on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
         </p>
       </section>
     )}
@@ -201,7 +206,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
       <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
         <h3 class="font-heading text-base font-bold mb-1">Pollster league table — constituency vote</h3>
         <p class="font-body text-xs text-gray-500 mb-3">
-          Average mean-absolute-error across each pollster's polls. Lower is better.
+          How far each pollster's predicted vote shares were from the actual result, in percentage points. Lower is better. Hover the column headers for a plain-English definition.
         </p>
         <table class="w-full text-sm">
           <thead>
@@ -209,8 +214,12 @@ const showResults = state.phase === "partial" || state.phase === "final";
               <th class="py-1.5">Rank</th>
               <th>Pollster</th>
               <th class="text-right">Polls</th>
-              <th class="text-right">MAE</th>
-              <th class="text-right">RMSE</th>
+              <th class="text-right">
+                <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">MAE</abbr>
+              </th>
+              <th class="text-right">
+                <abbr title="Root Mean Squared Error — penalises big misses more heavily than small ones. RMSE noticeably higher than MAE means the pollster had at least one large error." class="cursor-help underline decoration-dotted">RMSE</abbr>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -232,7 +241,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
       <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
         <h3 class="font-heading text-base font-bold mb-1">Pollster league table — regional list vote</h3>
         <p class="font-body text-xs text-gray-500 mb-3">
-          Same average-MAE methodology, scored against actual regional list shares.
+          Same methodology as above, scored against actual regional list shares.
         </p>
         <table class="w-full text-sm">
           <thead>
@@ -240,8 +249,12 @@ const showResults = state.phase === "partial" || state.phase === "final";
               <th class="py-1.5">Rank</th>
               <th>Pollster</th>
               <th class="text-right">Polls</th>
-              <th class="text-right">MAE</th>
-              <th class="text-right">RMSE</th>
+              <th class="text-right">
+                <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">MAE</abbr>
+              </th>
+              <th class="text-right">
+                <abbr title="Root Mean Squared Error — penalises big misses more heavily than small ones. RMSE noticeably higher than MAE means the pollster had at least one large error." class="cursor-help underline decoration-dotted">RMSE</abbr>
+              </th>
             </tr>
           </thead>
           <tbody>
