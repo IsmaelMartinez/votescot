@@ -1,8 +1,39 @@
 id: moray
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T14:28:03.997Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Laura Mitchell
+    votes: 12636
+    share: 38.54
+  - party: con
+    candidate: Tim Eagle
+    votes: 9936
+    share: 30.3
+  - party: reform
+    candidate: Max Bannerman
+    votes: 5440
+    share: 16.59
+  - party: lab
+    candidate: David Blair
+    votes: 2395
+    share: 7.3
+  - party: libdem
+    candidate: Morven May MacCallum
+    votes: 2064
+    share: 6.3
+  - party: alliance-to-liberate-scotland
+    candidate: Allan Duffy
+    votes: 210
+    share: 0.64
+  - party: advance-uk
+    candidate: Les Durance
+    votes: 106
+    share: 0.32
+majority:
+  votes: 2700
+  share: 8.24
+  over: con
+source: Democracy Club

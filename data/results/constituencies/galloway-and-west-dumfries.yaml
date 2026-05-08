@@ -1,8 +1,31 @@
 id: galloway-and-west-dumfries
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T14:28:03.994Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: con
+results:
+  - party: con
+    candidate: Finlay Carson
+    votes: 11502
+    share: 38.34
+  - party: snp
+    candidate: Emma Harper
+    votes: 9903
+    share: 33.01
+  - party: reform
+    candidate: Senga Beresford
+    votes: 4674
+    share: 15.58
+  - party: lab
+    candidate: Jack McConnel
+    votes: 2544
+    share: 8.48
+  - party: libdem
+    candidate: Tracey Warman
+    votes: 1380
+    share: 4.6
+majority:
+  votes: 1599
+  share: 5.33
+  over: snp
+source: Democracy Club

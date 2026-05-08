@@ -1,8 +1,35 @@
 id: dumfriesshire
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T14:28:03.988Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: con
+results:
+  - party: con
+    candidate: Craig Hoy
+    votes: 11370
+    share: 34.84
+  - party: snp
+    candidate: Stephen Thompson
+    votes: 10262
+    share: 31.44
+  - party: reform
+    candidate: David Kirkwood
+    votes: 5783
+    share: 17.72
+  - party: lab
+    candidate: Linda Jane Dorward
+    votes: 3364
+    share: 10.31
+  - party: libdem
+    candidate: Iain William McDonald
+    votes: 1660
+    share: 5.09
+  - party: scottish-common-party
+    candidate: Paul Adkins
+    votes: 200
+    share: 0.61
+majority:
+  votes: 1108
+  share: 3.4
+  over: snp
+source: Democracy Club

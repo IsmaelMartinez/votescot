@@ -1,8 +1,35 @@
 id: glasgow-easterhouse-and-springburn
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T14:28:03.995Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Ivan McKee
+    votes: 11926
+    share: 46.22
+  - party: labour-and-co-operative-party
+    candidate: Paul John Sweeney
+    votes: 6772
+    share: 26.25
+  - party: reform
+    candidate: Audrey Dempsey
+    votes: 5309
+    share: 20.58
+  - party: libdem
+    candidate: Nicholas Christopher Moohan
+    votes: 788
+    share: 3.05
+  - party: con
+    candidate: Josephine MacLeod
+    votes: 706
+    share: 2.74
+  - party: scottish-common-party
+    candidate: Kenneth Nwosu
+    votes: 301
+    share: 1.17
+majority:
+  votes: 5154
+  share: 19.97
+  over: labour-and-co-operative-party
+source: Democracy Club
