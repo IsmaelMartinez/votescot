@@ -32,6 +32,13 @@ interface ProjectionInfo {
   topParties?: { party: string; share: number; status: string }[];
 }
 
+interface ResultInfo {
+  id: string;
+  status: "pending" | "partial" | "declared";
+  winner?: string | null;
+  topShares?: { party: string; share: number }[];
+}
+
 interface RegionInfo {
   id: string;
   name: string;
@@ -41,11 +48,14 @@ interface Props {
   knownConstituencies: string[];
   basePath: string;
   projections?: ProjectionInfo[];
+  results?: ResultInfo[];
   /** Map of constituency id (== topojson slug) to region id slug. */
   constituencyRegions?: Record<string, string>;
   /** Region id -> human-readable region name. */
   regions?: RegionInfo[];
 }
+
+type DisplayMode = "coverage" | "forecast" | "results";
 
 // Scotland roughly: lat 54.6–60.9, lon -7.6–-0.7
 const SCOTLAND_CENTER: [number, number] = [57.2, -4.0];
@@ -122,6 +132,7 @@ function ConstituencyMapInner({
   knownConstituencies,
   basePath,
   projections,
+  results,
   constituencyRegions,
   regions,
 }: Props) {
@@ -138,7 +149,11 @@ function ConstituencyMapInner({
   } | null>(null);
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ name: string; slug: string; covered: boolean } | null>(null);
-  const [showProjections, setShowProjections] = useState(!!projections?.length);
+  const hasProjections = projections && projections.length > 0;
+  const hasResults = !!results?.some((r) => r.status === "declared");
+  const [displayMode, setDisplayMode] = useState<DisplayMode>(
+    hasResults ? "results" : hasProjections ? "forecast" : "coverage"
+  );
   const [viewMode, setViewMode] = useState<"constituency" | "region">("constituency");
 
   const regionsById = React.useMemo(() => {
@@ -159,7 +174,15 @@ function ConstituencyMapInner({
     return map;
   }, [projections]);
 
-  const hasProjections = projections && projections.length > 0;
+  const resultMap = React.useMemo(() => {
+    const map = new Map<string, ResultInfo>();
+    if (results) {
+      for (const r of results) {
+        map.set(r.id, r);
+      }
+    }
+    return map;
+  }, [results]);
 
   useEffect(() => {
     fetch(`${basePath}constituencies.topojson`)
@@ -206,7 +229,26 @@ function ConstituencyMapInner({
         };
       }
 
-      if (showProjections && hasProjections) {
+      if (displayMode === "results" && hasResults) {
+        const res = resultMap.get(slug);
+        if (res?.status === "declared" && res.winner) {
+          const partyColor = PARTY_COLORS[res.winner] ?? COLOR_UNCOVERED;
+          return {
+            fillColor: partyColor,
+            fillOpacity: 0.75,
+            color: "#333",
+            weight: 0.8,
+          };
+        }
+        return {
+          fillColor: COLOR_UNCOVERED,
+          fillOpacity: 0.2,
+          color: "#6b7280",
+          weight: 0.8,
+        };
+      }
+
+      if (displayMode === "forecast" && hasProjections) {
         const proj = projectionMap.get(slug);
         if (proj?.projection) {
           const partyColor = PARTY_COLORS[proj.projection] ?? COLOR_UNCOVERED;
@@ -236,9 +278,11 @@ function ConstituencyMapInner({
     [
       knownConstituencies,
       highlightSlug,
-      showProjections,
+      displayMode,
       hasProjections,
+      hasResults,
       projectionMap,
+      resultMap,
       viewMode,
       hasRegionData,
       constituencyRegions,
@@ -255,7 +299,33 @@ function ConstituencyMapInner({
         const regionId = constituencyRegions?.[slug];
         const regionName = (regionId && regionsById.get(regionId)) || "Unknown region";
         tooltipHtml = `<strong>${regionName}</strong><br/><span style="font-size:12px;color:#16a34a">Click to see regional list candidates</span>`;
-      } else if (showProjections && hasProjections) {
+      } else if (displayMode === "results" && hasResults) {
+        const res = resultMap.get(slug);
+        if (res?.status === "declared" && res.winner) {
+          const partyLabel = PARTY_LABELS[res.winner] ?? res.winner;
+          const proj = projectionMap.get(slug);
+          const verdict = proj?.projection
+            ? proj.projection === res.winner
+              ? `<span style="color:#16a34a"> ✓ forecast hit</span>`
+              : `<span style="color:#dc2626"> ✗ forecast missed (${PARTY_LABELS[proj.projection] ?? proj.projection})</span>`
+            : "";
+          const topSharesHtml = res.topShares
+            ? res.topShares
+                .slice(0, 3)
+                .map(
+                  (tp) =>
+                    `<span style="color:${PARTY_COLORS[tp.party] ?? "#666"}">${PARTY_LABELS[tp.party] ?? tp.party} ${tp.share.toFixed(1)}%</span>`
+                )
+                .join(" · ")
+            : "";
+          tooltipHtml = `<strong>${name}</strong><br/><span style="font-size:12px">${partyLabel} wins${verdict}</span>`;
+          if (topSharesHtml) {
+            tooltipHtml += `<br/><span style="font-size:11px">${topSharesHtml}</span>`;
+          }
+        } else {
+          tooltipHtml = `<strong>${name}</strong><br/><span style="font-size:12px;color:#9ca3af">Result pending</span>`;
+        }
+      } else if (displayMode === "forecast" && hasProjections) {
         const proj = projectionMap.get(slug);
         if (proj?.projection) {
           const partyLabel = PARTY_LABELS[proj.projection] ?? proj.projection;
@@ -323,9 +393,11 @@ function ConstituencyMapInner({
       basePath,
       highlightSlug,
       styleFeature,
-      showProjections,
+      displayMode,
       hasProjections,
+      hasResults,
       projectionMap,
+      resultMap,
       viewMode,
       hasRegionData,
       constituencyRegions,
@@ -384,8 +456,18 @@ function ConstituencyMapInner({
     return Array.from(seen).sort();
   }, [projections]);
 
-  // Force GeoJSON re-render when projection mode, view mode, or highlight changes
-  const geoJsonKey = `${viewMode}-${showProjections ? "proj" : "data"}-${highlightSlug ?? "none"}`;
+  // Derive winning parties present in declared results for the legend
+  const resultLegendParties = React.useMemo(() => {
+    if (!results) return [];
+    const seen = new Set<string>();
+    for (const r of results) {
+      if (r.status === "declared" && r.winner) seen.add(r.winner);
+    }
+    return Array.from(seen).sort();
+  }, [results]);
+
+  // Force GeoJSON re-render when display mode, view mode, or highlight changes
+  const geoJsonKey = `${viewMode}-${displayMode}-${highlightSlug ?? "none"}`;
 
   return (
     <div className="flex flex-col gap-3">
@@ -478,17 +560,50 @@ function ConstituencyMapInner({
           </div>
         )}
 
-        {hasProjections && viewMode === "constituency" && (
-          <button
-            onClick={() => setShowProjections(!showProjections)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-colors ${
-              showProjections
-                ? "bg-votescot-dark text-white border-votescot-dark"
-                : "bg-white text-gray-600 border-gray-300 hover:border-votescot-gold"
-            }`}
+        {viewMode === "constituency" && (hasProjections || hasResults) && (
+          <div
+            role="group"
+            aria-label="Map overlay"
+            className="inline-flex rounded-full border border-gray-300 overflow-hidden text-xs font-bold"
           >
-            {showProjections ? "Hide projections" : "Show projections"}
-          </button>
+            <button
+              onClick={() => setDisplayMode("coverage")}
+              aria-pressed={displayMode === "coverage"}
+              className={`px-3 py-1.5 transition-colors ${
+                displayMode === "coverage"
+                  ? "bg-votescot-dark text-white"
+                  : "bg-white text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Coverage
+            </button>
+            {hasProjections && (
+              <button
+                onClick={() => setDisplayMode("forecast")}
+                aria-pressed={displayMode === "forecast"}
+                className={`px-3 py-1.5 border-l border-gray-300 transition-colors ${
+                  displayMode === "forecast"
+                    ? "bg-votescot-dark text-white"
+                    : "bg-white text-gray-600 hover:bg-gray-50"
+                }`}
+              >
+                Forecast
+              </button>
+            )}
+            {hasResults && (
+              <button
+                onClick={() => setDisplayMode("results")}
+                aria-pressed={displayMode === "results"}
+                className={`px-3 py-1.5 border-l border-gray-300 transition-colors ${
+                  displayMode === "results"
+                    ? "bg-votescot-gold text-white"
+                    : "bg-white text-gray-600 hover:bg-gray-50"
+                }`}
+              >
+                Results
+              </button>
+            )}
+          </div>
         )}
 
         {viewMode === "region" && hasRegionData ? (
@@ -503,7 +618,23 @@ function ConstituencyMapInner({
               </span>
             ))}
           </>
-        ) : showProjections && hasProjections ? (
+        ) : displayMode === "results" && hasResults ? (
+          <>
+            {resultLegendParties.map((party) => (
+              <span key={party} className="flex items-center gap-1.5">
+                <span
+                  className="w-3 h-3 rounded-sm inline-block"
+                  style={{ background: PARTY_COLORS[party] ?? "#666", opacity: 0.8 }}
+                />
+                {PARTY_LABELS[party] ?? party}
+              </span>
+            ))}
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_UNCOVERED, opacity: 0.5 }} />
+              Pending
+            </span>
+          </>
+        ) : displayMode === "forecast" && hasProjections ? (
           <>
             {legendParties.map((party) => (
               <span key={party} className="flex items-center gap-1.5">

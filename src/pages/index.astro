@@ -13,20 +13,44 @@ import {
   loadElectionState,
 } from "../lib/data";
 import { slugifyConstituency } from "../lib/slugify";
+import { PARTY_THEMES_BY_SHORT } from "../lib/party-config";
 
 const constituencies = loadConstituencies();
 const knownConstituencies = constituencies.map((c) => c.id);
 const base = import.meta.env.BASE_URL;
 
 const state = loadElectionState();
+const resultsByConstituency =
+  state.phase !== "forecast" ? loadConstituencyResults() : null;
 const resultsCallout = (() => {
-  if (state.phase === "forecast") return false;
-  const results = loadConstituencyResults();
-  for (const r of results.values()) {
+  if (!resultsByConstituency) return false;
+  for (const r of resultsByConstituency.values()) {
     if (r.status === "declared") return true;
   }
   return false;
 })();
+
+// Map uses long-form party keys (snp/labour/conservative). Result YAMLs store
+// short keys (snp/lab/con). Translate when surfacing results to the map.
+function shortToLong(key: string | null | undefined): string | undefined {
+  if (!key) return undefined;
+  return PARTY_THEMES_BY_SHORT[key]?.long ?? key;
+}
+
+const mapResults = resultsByConstituency
+  ? Array.from(resultsByConstituency.values()).map((r) => ({
+      id: r.id,
+      status: r.status,
+      winner: shortToLong(r.winner),
+      topShares: (r.results ?? [])
+        .filter((entry) => entry.share != null)
+        .slice(0, 3)
+        .map((entry) => ({
+          party: shortToLong(entry.party) ?? entry.party,
+          share: entry.share as number,
+        })),
+    }))
+  : undefined;
 
 const projections = constituencies
   .filter((c) => c.projection)
@@ -74,6 +98,7 @@ const news = loadNews();
       knownConstituencies={knownConstituencies}
       basePath={base}
       projections={projections}
+      results={mapResults}
       constituencyRegions={constituencyRegions}
       regions={mapRegions}
     />
