@@ -1,8 +1,39 @@
 id: clackmannanshire-and-dunblane
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.708Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Keith James Brown
+    votes: 12222
+    share: 37.76
+  - party: lab
+    candidate: Suzanne Grahame
+    votes: 7958
+    share: 24.59
+  - party: reform
+    candidate: Mike Collier
+    votes: 5181
+    share: 16.01
+  - party: con
+    candidate: Alexander Stewart
+    votes: 3592
+    share: 11.1
+  - party: libdem
+    candidate: Sally Pattle
+    votes: 1841
+    share: 5.69
+  - party: alliance-to-liberate-scotland
+    candidate: Eva Margaret Comrie
+    votes: 1228
+    share: 3.79
+  - party: ind
+    candidate: Luca Scacchi
+    votes: 345
+    share: 1.07
+majority:
+  votes: 4264
+  share: 13.17
+  over: lab
+source: Democracy Club

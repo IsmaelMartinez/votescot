@@ -1,8 +1,35 @@
 id: angus-north-and-mearns
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.695Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Dawn Black
+    votes: 11308
+    share: 38.99
+  - party: con
+    candidate: Tracey Smith
+    votes: 8058
+    share: 27.79
+  - party: reform
+    candidate: Laurie Carnie
+    votes: 4844
+    share: 16.7
+  - party: libdem
+    candidate: Martyn John Knights
+    votes: 2647
+    share: 9.13
+  - party: lab
+    candidate: Simon Peter Watson
+    votes: 1676
+    share: 5.78
+  - party: ind
+    candidate: David Allen Neill
+    votes: 468
+    share: 1.61
+majority:
+  votes: 3250
+  share: 11.2
+  over: con
+source: Democracy Club

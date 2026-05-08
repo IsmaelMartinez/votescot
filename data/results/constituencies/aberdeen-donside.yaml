@@ -1,8 +1,35 @@
 id: aberdeen-donside
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.685Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Jackie Dunbar
+    votes: 11760
+    share: 38.56
+  - party: reform
+    candidate: Claudia Leith
+    votes: 7029
+    share: 23.05
+  - party: con
+    candidate: Hannah Powell
+    votes: 4496
+    share: 14.74
+  - party: lab
+    candidate: Lynn Thomson
+    votes: 3907
+    share: 12.81
+  - party: libdem
+    candidate: Michael John Turvey
+    votes: 2823
+    share: 9.26
+  - party: alliance-to-liberate-scotland
+    candidate: Stephen Bowie
+    votes: 481
+    share: 1.58
+majority:
+  votes: 4731
+  share: 15.51
+  over: reform
+source: Democracy Club

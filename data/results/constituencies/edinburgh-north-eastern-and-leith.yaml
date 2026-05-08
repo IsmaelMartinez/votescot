@@ -1,8 +1,35 @@
 id: edinburgh-north-eastern-and-leith
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.734Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Ben MacPherson
+    votes: 13630
+    share: 35.85
+  - party: green
+    candidate: Kate Nevens
+    votes: 10559
+    share: 27.77
+  - party: lab
+    candidate: Oliver Philip Thomas
+    votes: 7894
+    share: 20.76
+  - party: reform
+    candidate: David Lees
+    votes: 2746
+    share: 7.22
+  - party: libdem
+    candidate: Liss Owen
+    votes: 1895
+    share: 4.98
+  - party: con
+    candidate: Haris Young
+    votes: 1297
+    share: 3.41
+majority:
+  votes: 3071
+  share: 8.08
+  over: green
+source: Democracy Club

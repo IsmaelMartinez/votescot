@@ -1,8 +1,31 @@
 id: coatbridge-and-chryston
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.712Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Fulton James MacGregor
+    votes: 14458
+    share: 49.11
+  - party: lab
+    candidate: Kieron Higgins
+    votes: 7682
+    share: 26.09
+  - party: reform
+    candidate: Mandy Lindsay
+    votes: 5145
+    share: 17.48
+  - party: con
+    candidate: Andy Bruce
+    votes: 1109
+    share: 3.77
+  - party: libdem
+    candidate: Daniel Richard Hugh Mancini
+    votes: 1048
+    share: 3.56
+majority:
+  votes: 6776
+  share: 23.02
+  over: lab
+source: Democracy Club

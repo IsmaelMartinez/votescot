@@ -1,8 +1,29 @@
 id: mid-scotland-and-fife
 name: Mid Scotland and Fife
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.767Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Murdo Fraser
+    listPosition: 1
+  - party: lab
+    candidate: Claire Baker
+    listPosition: 1
+  - party: reform
+    candidate: Helen McDade
+    listPosition: 1
+  - party: green
+    candidate: Mark Ruskell
+    listPosition: 1
+  - party: con
+    candidate: Stephen Kerr
+    listPosition: 2
+  - party: lab
+    candidate: Joe Long
+    listPosition: 2
+  - party: reform
+    candidate: Julie MacDougall
+    listPosition: 2
+source: Democracy Club

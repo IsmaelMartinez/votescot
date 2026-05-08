@@ -1,8 +1,35 @@
 id: edinburgh-southern
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.739Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: lab
+results:
+  - party: lab
+    candidate: Daniel Guy Johnson
+    votes: 16963
+    share: 42.88
+  - party: snp
+    candidate: Deidre Leanne Brock
+    votes: 12000
+    share: 30.33
+  - party: con
+    candidate: Marie-Clair Munro
+    votes: 3421
+    share: 8.65
+  - party: libdem
+    candidate: Jane Patricia Alliston Pickard
+    votes: 3334
+    share: 8.43
+  - party: reform
+    candidate: Charles Turner
+    votes: 3317
+    share: 8.38
+  - party: edinburgh-east-lothian-people
+    candidate: Marc Richard Wilkinson
+    votes: 524
+    share: 1.32
+majority:
+  votes: 4963
+  share: 12.55
+  over: snp
+source: Democracy Club

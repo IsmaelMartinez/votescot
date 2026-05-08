@@ -1,8 +1,31 @@
 id: aberdeenshire-east
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.688Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Gillian Anne Martin
+    votes: 11624
+    share: 33.4
+  - party: con
+    candidate: Douglas Lumsden
+    votes: 10681
+    share: 30.69
+  - party: reform
+    candidate: John Crawley
+    votes: 7008
+    share: 20.14
+  - party: libdem
+    candidate: David Ronald Evans
+    votes: 3999
+    share: 11.49
+  - party: lab
+    candidate: Janine Langler
+    votes: 1487
+    share: 4.27
+majority:
+  votes: 943
+  share: 2.71
+  over: con
+source: Democracy Club

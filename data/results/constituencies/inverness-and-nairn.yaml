@@ -1,8 +1,39 @@
 id: inverness-and-nairn
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.745Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Emma Roddick
+    votes: 11162
+    share: 30.39
+  - party: libdem
+    candidate: Neil Alexander
+    votes: 10735
+    share: 29.22
+  - party: ind
+    candidate: Fergus Ewing
+    votes: 7840
+    share: 21.34
+  - party: reform
+    candidate: Fred Campbell
+    votes: 3791
+    share: 10.32
+  - party: lab
+    candidate: Shaun Alexander Fraser
+    votes: 1723
+    share: 4.69
+  - party: con
+    candidate: Ruraidh Stewart
+    votes: 1372
+    share: 3.74
+  - party: advance-uk
+    candidate: Steve Skerrett
+    votes: 110
+    share: 0.3
+majority:
+  votes: 427
+  share: 1.17
+  over: libdem
+source: Democracy Club

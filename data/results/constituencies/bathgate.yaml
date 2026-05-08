@@ -1,8 +1,35 @@
 id: bathgate
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.703Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Pauline Stafford
+    votes: 13594
+    share: 40.74
+  - party: lab
+    candidate: Jenny Young
+    votes: 8007
+    share: 24
+  - party: reform
+    candidate: David McLennan
+    votes: 7511
+    share: 22.51
+  - party: con
+    candidate: Peter Heggie
+    votes: 2091
+    share: 6.27
+  - party: libdem
+    candidate: Stephen John Harte
+    votes: 1937
+    share: 5.81
+  - party: british-unionist-party
+    candidate: Gus Ferguson
+    votes: 227
+    share: 0.68
+majority:
+  votes: 5587
+  share: 16.74
+  over: lab
+source: Democracy Club

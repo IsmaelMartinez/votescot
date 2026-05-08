@@ -1,8 +1,29 @@
 id: north-east-scotland
 name: North East Scotland
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.768Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Liam Kerr
+    listPosition: 1
+  - party: lab
+    candidate: Michael Marra
+    listPosition: 1
+  - party: libdem
+    candidate: Yi-Pei Chou Turvey
+    listPosition: 1
+  - party: reform
+    candidate: Duncan Massey
+    listPosition: 1
+  - party: green
+    candidate: Maggie Chapman
+    listPosition: 1
+  - party: con
+    candidate: Douglas Lumsden
+    listPosition: 2
+  - party: reform
+    candidate: Mark Simpson
+    listPosition: 2
+source: Democracy Club

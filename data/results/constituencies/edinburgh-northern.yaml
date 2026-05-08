@@ -1,8 +1,39 @@
 id: edinburgh-northern
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.736Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Sanne Dijkstra-Downie
+    votes: 12972
+    share: 34.58
+  - party: snp
+    candidate: Euan Hyslop
+    votes: 10479
+    share: 27.94
+  - party: green
+    candidate: Kayleigh Ferguson Kinross-O'Neill
+    votes: 5289
+    share: 14.1
+  - party: lab
+    candidate: Eleanor Ryan-Saha
+    votes: 3744
+    share: 9.98
+  - party: reform
+    candidate: Andrew McLaughlin
+    votes: 2867
+    share: 7.64
+  - party: con
+    candidate: Christopher Cowdy
+    votes: 1900
+    share: 5.07
+  - party: workers-party-of-britain
+    candidate: Abu Meron
+    votes: 258
+    share: 0.69
+majority:
+  votes: 2493
+  share: 6.64
+  over: snp
+source: Democracy Club

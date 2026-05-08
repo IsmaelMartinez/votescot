@@ -1,8 +1,39 @@
 id: airdrie
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.692Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Neil Gray
+    votes: 10711
+    share: 42.03
+  - party: lab
+    candidate: Suzanne MacLeod
+    votes: 6201
+    share: 24.33
+  - party: reform
+    candidate: Graham Simpson
+    votes: 5821
+    share: 22.84
+  - party: con
+    candidate: Euan Blockley
+    votes: 1145
+    share: 4.49
+  - party: libdem
+    candidate: Edward John Thornley
+    votes: 660
+    share: 2.59
+  - party: ind
+    candidate: Brendan O'Donnell
+    votes: 505
+    share: 1.98
+  - party: british-unionist-party
+    candidate: John Jo Leckie
+    votes: 441
+    share: 1.73
+majority:
+  votes: 4510
+  share: 17.7
+  over: lab
+source: Democracy Club

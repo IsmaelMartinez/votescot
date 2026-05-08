@@ -1,8 +1,39 @@
 id: argyll-and-bute
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.698Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Jenni Minto
+    votes: 11019
+    share: 39.99
+  - party: libdem
+    candidate: Alan Reid
+    votes: 8468
+    share: 30.73
+  - party: reform
+    candidate: Amanda Hampsey
+    votes: 3678
+    share: 13.35
+  - party: lab
+    candidate: Callum George
+    votes: 1740
+    share: 6.31
+  - party: con
+    candidate: Peter Wallace
+    votes: 1703
+    share: 6.18
+  - party: ind
+    candidate: Tommy Macpherson
+    votes: 769
+    share: 2.79
+  - party: ind
+    candidate: Mick Rice
+    votes: 179
+    share: 0.65
+majority:
+  votes: 2551
+  share: 9.26
+  over: libdem
+source: Democracy Club

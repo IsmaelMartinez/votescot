@@ -1,8 +1,35 @@
 id: clydebank-and-milngavie
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.710Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Marie A McNair
+    votes: 12126
+    share: 38.57
+  - party: lab
+    candidate: Callum McNally
+    votes: 7929
+    share: 25.22
+  - party: reform
+    candidate: Andy White
+    votes: 4510
+    share: 14.34
+  - party: libdem
+    candidate: Ben Langmead
+    votes: 4419
+    share: 14.05
+  - party: con
+    candidate: Alix Mathieson
+    votes: 1810
+    share: 5.76
+  - party: scottish-common-party
+    candidate: Claire Gallagher
+    votes: 647
+    share: 2.06
+majority:
+  votes: 4197
+  share: 13.35
+  over: lab
+source: Democracy Club

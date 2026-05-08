@@ -1,8 +1,31 @@
 id: clydesdale
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.711Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Mairi McAllan
+    votes: 13006
+    share: 36.31
+  - party: lab
+    candidate: Lynsey Hamilton
+    votes: 8618
+    share: 24.06
+  - party: reform
+    candidate: Dan Clarke
+    votes: 7898
+    share: 22.05
+  - party: con
+    candidate: Julie Pirone
+    votes: 4344
+    share: 12.13
+  - party: libdem
+    candidate: Richard John Brodie
+    votes: 1957
+    share: 5.46
+majority:
+  votes: 4388
+  share: 12.25
+  over: lab
+source: Democracy Club

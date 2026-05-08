@@ -1,8 +1,55 @@
 id: edinburgh-central
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.730Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: green
+results:
+  - party: green
+    candidate: Lorna Jane Slater
+    votes: 12680
+    share: 35.98
+  - party: lab
+    candidate: James William Dalgleish
+    votes: 8098
+    share: 22.98
+  - party: snp
+    candidate: Angus Robertson
+    votes: 7702
+    share: 21.86
+  - party: con
+    candidate: Jo Mowat
+    votes: 2262
+    share: 6.42
+  - party: libdem
+    candidate: Charles Dundas
+    votes: 2168
+    share: 6.15
+  - party: reform
+    candidate: Gary Neill
+    votes: 1876
+    share: 5.32
+  - party: ind
+    candidate: Bonnie Prince Bob
+    votes: 176
+    share: 0.5
+  - party: alliance-to-liberate-scotland
+    candidate: Craig John Murray
+    votes: 150
+    share: 0.43
+  - party: scottish-libertarian-party
+    candidate: Tam Laird
+    votes: 56
+    share: 0.16
+  - party: ind
+    candidate: Robert Neill Pownall
+    votes: 41
+    share: 0.12
+  - party: ind
+    candidate: Chris Creighton
+    votes: 32
+    share: 0.09
+majority:
+  votes: 4582
+  share: 13
+  over: lab
+source: Democracy Club

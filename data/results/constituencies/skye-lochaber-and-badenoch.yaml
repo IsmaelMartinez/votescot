@@ -1,8 +1,35 @@
 id: skye-lochaber-and-badenoch
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.764Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Andrew Phillip Baxter
+    votes: 15223
+    share: 38.88
+  - party: snp
+    candidate: Eilidh Munro
+    votes: 14273
+    share: 36.45
+  - party: reform
+    candidate: Jon Whitton
+    votes: 4669
+    share: 11.93
+  - party: con
+    candidate: Helen Crawford
+    votes: 2731
+    share: 6.98
+  - party: lab
+    candidate: Isla McCay
+    votes: 1751
+    share: 4.47
+  - party: alliance-to-liberate-scotland
+    candidate: Laura Hansler
+    votes: 506
+    share: 1.29
+majority:
+  votes: 950
+  share: 2.43
+  over: snp
+source: Democracy Club

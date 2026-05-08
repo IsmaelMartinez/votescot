@@ -1,8 +1,39 @@
 id: caithness-sutherland-and-ross
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.705Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: David Green
+    votes: 14666
+    share: 48.04
+  - party: snp
+    candidate: Maree Todd
+    votes: 9574
+    share: 31.36
+  - party: reform
+    candidate: Steven Welsh
+    votes: 3900
+    share: 12.78
+  - party: con
+    candidate: Donald MacKenzie
+    votes: 1117
+    share: 3.66
+  - party: lab
+    candidate: Eva Kestner
+    votes: 894
+    share: 2.93
+  - party: alliance-to-liberate-scotland-and-sovereignty
+    candidate: Andrew Ross MacDonald
+    votes: 264
+    share: 0.86
+  - party: advance-uk
+    candidate: Matt Sheppard
+    votes: 112
+    share: 0.37
+majority:
+  votes: 5092
+  share: 16.68
+  over: snp
+source: Democracy Club

@@ -1,8 +1,35 @@
 id: edinburgh-north-western
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.737Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: libdem
+results:
+  - party: libdem
+    candidate: Alex Cole-Hamilton
+    votes: 22959
+    share: 57.2
+  - party: snp
+    candidate: Lyn Ann Jardine
+    votes: 9943
+    share: 24.77
+  - party: reform
+    candidate: David Thomson
+    votes: 3342
+    share: 8.33
+  - party: lab
+    candidate: Irshad Ahmed
+    votes: 1879
+    share: 4.68
+  - party: con
+    candidate: Rachel Cairns
+    votes: 1749
+    share: 4.36
+  - party: workers-party-of-britain
+    candidate: David Henry
+    votes: 268
+    share: 0.67
+majority:
+  votes: 13016
+  share: 32.43
+  over: snp
+source: Democracy Club

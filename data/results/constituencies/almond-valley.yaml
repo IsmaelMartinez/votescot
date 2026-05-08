@@ -1,8 +1,31 @@
 id: almond-valley
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.693Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Angela Constance
+    votes: 16944
+    share: 46.03
+  - party: lab
+    candidate: Jordan Stokoe
+    votes: 8035
+    share: 21.83
+  - party: reform
+    candidate: Malcom Kevin Jones
+    votes: 6831
+    share: 18.56
+  - party: con
+    candidate: Damian Doran-Timson
+    votes: 2501
+    share: 6.79
+  - party: libdem
+    candidate: Caron Marianne Lindsay
+    votes: 2501
+    share: 6.79
+majority:
+  votes: 8909
+  share: 24.2
+  over: lab
+source: Democracy Club

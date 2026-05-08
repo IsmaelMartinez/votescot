@@ -1,8 +1,35 @@
 id: cunninghame-north
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.720Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Kenneth Gibson
+    votes: 11814
+    share: 39.19
+  - party: lab
+    candidate: Matthew McGowan
+    votes: 6022
+    share: 19.98
+  - party: reform
+    candidate: Mike Mann
+    votes: 5404
+    share: 17.93
+  - party: con
+    candidate: Ronnie Stalker
+    votes: 4904
+    share: 16.27
+  - party: libdem
+    candidate: Christine Margaret Murdoch
+    votes: 1592
+    share: 5.28
+  - party: alliance-for-democracy-and-freedom
+    candidate: Ian Gibson
+    votes: 411
+    share: 1.36
+majority:
+  votes: 5792
+  share: 19.21
+  over: lab
+source: Democracy Club

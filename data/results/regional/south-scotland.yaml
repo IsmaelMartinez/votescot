@@ -1,8 +1,29 @@
 id: south-scotland
 name: South Scotland
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.769Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: lab
+    candidate: Carol Ann Mochan
+    listPosition: 1
+  - party: libdem
+    candidate: Duncan Angus Melville Dunlop
+    listPosition: 1
+  - party: reform
+    candidate: Jamie Alexander Langan
+    listPosition: 1
+  - party: green
+    candidate: Laura Moodie
+    listPosition: 1
+  - party: lab
+    candidate: Joe Fagan
+    listPosition: 2
+  - party: reform
+    candidate: David Kirkwood
+    listPosition: 2
+  - party: reform
+    candidate: Senga Beresford
+    listPosition: 3
+source: Democracy Club

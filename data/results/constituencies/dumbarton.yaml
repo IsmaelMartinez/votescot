@@ -1,8 +1,39 @@
 id: dumbarton
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.722Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: lab
+results:
+  - party: lab
+    candidate: Jackie Baillie
+    votes: 12747
+    share: 39.81
+  - party: snp
+    candidate: Sophie Traynor
+    votes: 10961
+    share: 34.23
+  - party: reform
+    candidate: David Smith
+    votes: 5040
+    share: 15.74
+  - party: con
+    candidate: Gary Mulvaney
+    votes: 1368
+    share: 4.27
+  - party: libdem
+    candidate: Elaine Ford
+    votes: 1196
+    share: 3.73
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Lynda Hannah McEwan
+    votes: 356
+    share: 1.11
+  - party: ind
+    candidate: Andrew Joseph Muir
+    votes: 355
+    share: 1.11
+majority:
+  votes: 1786
+  share: 5.58
+  over: snp
+source: Democracy Club

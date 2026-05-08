@@ -1,8 +1,29 @@
 id: glasgow
 name: Glasgow
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.766Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: lab
+    candidate: Anas Sarwar
+    listPosition: 1
+  - party: reform
+    candidate: Thomas Jordan Kerr
+    listPosition: 1
+  - party: green
+    candidate: Patrick Harvie
+    listPosition: 1
+  - party: lab
+    candidate: Pauline McNeill
+    listPosition: 2
+  - party: reform
+    candidate: Kim Schmulian
+    listPosition: 2
+  - party: lab
+    candidate: Paul John Sweeney
+    listPosition: 3
+  - party: green
+    candidate: Iris Duane
+    listPosition: 3
+source: Democracy Club

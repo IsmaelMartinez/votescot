@@ -1,8 +1,31 @@
 id: angus-south
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.697Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Lloyd Melville
+    votes: 13289
+    share: 42.34
+  - party: con
+    candidate: Angus Macmillan Douglas
+    votes: 6681
+    share: 21.29
+  - party: reform
+    candidate: Bill Reid
+    votes: 5583
+    share: 17.79
+  - party: lab
+    candidate: Heather Doran
+    votes: 3344
+    share: 10.65
+  - party: libdem
+    candidate: Isobel Knights
+    votes: 2488
+    share: 7.93
+majority:
+  votes: 6608
+  share: 21.05
+  over: con
+source: Democracy Club

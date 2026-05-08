@@ -1,8 +1,39 @@
 id: ayr
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.700Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Siobhian Brown
+    votes: 12848
+    share: 36.4
+  - party: con
+    candidate: Sharon Dowey
+    votes: 8448
+    share: 23.94
+  - party: lab
+    candidate: Brian McGinley
+    votes: 6394
+    share: 18.12
+  - party: reform
+    candidate: Andrew Fleming Russell
+    votes: 5355
+    share: 15.17
+  - party: libdem
+    candidate: Desmond Buchanan
+    votes: 1427
+    share: 4.04
+  - party: ind
+    candidate: Denise Sommerville
+    votes: 742
+    share: 2.1
+  - party: scottish-common-party
+    candidate: Muhammad Tufail
+    votes: 78
+    share: 0.22
+majority:
+  votes: 4400
+  share: 12.46
+  over: con
+source: Democracy Club

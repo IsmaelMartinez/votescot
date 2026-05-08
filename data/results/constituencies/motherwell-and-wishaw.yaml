@@ -1,8 +1,39 @@
 id: motherwell-and-wishaw
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.751Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Clare Adamson
+    votes: 11962
+    share: 43.75
+  - party: lab
+    candidate: Ayeshah Khan
+    votes: 6447
+    share: 23.58
+  - party: reform
+    candidate: Duncan MacMillan
+    votes: 5692
+    share: 20.82
+  - party: con
+    candidate: Bob Burgess
+    votes: 1638
+    share: 5.99
+  - party: libdem
+    candidate: Jenni Lang
+    votes: 979
+    share: 3.58
+  - party: ind
+    candidate: Dominic James Alderson
+    votes: 328
+    share: 1.2
+  - party: alliance-to-liberate-scotland
+    candidate: Greig Duncan McArthur
+    votes: 298
+    share: 1.09
+majority:
+  votes: 5515
+  share: 20.17
+  over: lab
+source: Democracy Club

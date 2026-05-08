@@ -1,8 +1,31 @@
 id: aberdeenshire-west
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.690Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: con
+results:
+  - party: con
+    candidate: Alexander Burnett
+    votes: 15897
+    share: 42.92
+  - party: snp
+    candidate: Fatima Joji
+    votes: 10113
+    share: 27.3
+  - party: reform
+    candidate: Jo Hart
+    votes: 5467
+    share: 14.76
+  - party: libdem
+    candidate: Jeff Goodhall
+    votes: 3995
+    share: 10.79
+  - party: lab
+    candidate: Kate Blake
+    votes: 1569
+    share: 4.24
+majority:
+  votes: 5784
+  share: 15.62
+  over: snp
+source: Democracy Club

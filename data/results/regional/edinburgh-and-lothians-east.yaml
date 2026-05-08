@@ -1,8 +1,29 @@
 id: edinburgh-and-lothians-east
 name: Edinburgh and Lothians East
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T20:03:41.765Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Miles Briggs
+    listPosition: 1
+  - party: lab
+    candidate: Irshad Ahmed
+    listPosition: 1
+  - party: reform
+    candidate: Angela Ross
+    listPosition: 1
+  - party: lab
+    candidate: Katherine Sangster
+    listPosition: 2
+  - party: green
+    candidate: Kate Nevens
+    listPosition: 2
+  - party: green
+    candidate: Q Manivannan
+    listPosition: 3
+  - party: green
+    candidate: Kayleigh Ferguson Kinross-O'Neill
+    listPosition: 4
+source: Democracy Club
