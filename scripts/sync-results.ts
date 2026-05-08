@@ -267,6 +267,12 @@ async function main(): Promise<void> {
         : null;
 
     const existing = yaml.parse(fs.readFileSync(filePath, "utf-8"));
+    if (existing?.manualEntry === true) {
+      console.log(
+        `[sync-results] Region ${id} marked manualEntry: true — preserving hand-entered data.`,
+      );
+      continue;
+    }
     const merged = {
       ...existing,
       status: "declared",

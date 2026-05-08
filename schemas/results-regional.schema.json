@@ -48,7 +48,8 @@
         "additionalProperties": false
       }
     },
-    "source": { "type": ["string", "null"] }
+    "source": { "type": ["string", "null"] },
+    "manualEntry": { "type": "boolean" }
   },
   "additionalProperties": false
 }

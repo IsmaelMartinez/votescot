@@ -410,6 +410,7 @@ export interface RegionalResult {
   results: RegionalResultEntry[];
   seatsAwarded: RegionalSeatAward[];
   source: string | null;
+  manualEntry?: boolean;
 }
 
 let constituencyResultsCache: ReadonlyMap<string, ConstituencyResult> | null = null;
