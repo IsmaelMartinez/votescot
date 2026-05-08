@@ -164,10 +164,13 @@ const sankey = (() => {
   const COL_W = 80;
   const GAP_PX = 4;
 
+  // Both columns and the ribbons share a single flow height so that left and
+  // right blocks line up even when one side has more parties than the other.
+  const maxParties = Math.max(forecastTotals.size, actualTotals.size);
+  const flowH = H - Math.max(0, (maxParties - 1) * GAP_PX);
+
   function buildColumn(totals: Map<string, number>): { party: string; total: number; y0: number; y1: number }[] {
     const entries = Array.from(totals.entries()).sort((a, b) => b[1] - a[1]);
-    const sumGap = Math.max(0, (entries.length - 1) * GAP_PX);
-    const flowH = H - sumGap;
     let y = 0;
     return entries.map(([party, total]) => {
       const h = (total / totalMisses) * flowH;
@@ -179,7 +182,6 @@ const sankey = (() => {
 
   const left = buildColumn(forecastTotals);
   const right = buildColumn(actualTotals);
-  const leftIdx = new Map(left.map((b) => [b.party, b]));
   const rightIdx = new Map(right.map((b) => [b.party, b]));
 
   // Walk transitions in display order (forecast top → bottom, then within each
@@ -199,8 +201,6 @@ const sankey = (() => {
     for (const t of transitions) {
       const lY = leftCursor.get(fromParty) ?? lb.y0;
       const rY = rightCursor.get(t.to) ?? 0;
-      const sumGap = Math.max(0, (left.length - 1) * GAP_PX);
-      const flowH = H - sumGap;
       const slice = (t.count / totalMisses) * flowH;
       ribbons.push({
         from: fromParty,
