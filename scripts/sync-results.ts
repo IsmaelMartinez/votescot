@@ -232,13 +232,24 @@ async function main(): Promise<void> {
     }
 
     const seatsAwarded = elected
+      .filter((c) => (c.party_list_position ?? 0) >= 1)
       .slice()
-      .sort((a, c) => (a.party_list_position ?? 0) - (c.party_list_position ?? 0))
+      .sort(
+        (a, c) =>
+          (a.party_list_position as number) - (c.party_list_position as number),
+      )
       .map((c) => ({
         party: partyKey(c.party.ec_id, c.party.name),
         candidate: c.person.name,
-        listPosition: c.party_list_position ?? 0,
+        listPosition: c.party_list_position as number,
       }));
+    if (seatsAwarded.length === 0) {
+      console.warn(
+        `[sync-results] Region ${id} has elected candidates but no list ` +
+          `positions; skipping until DC fills them in.`,
+      );
+      continue;
+    }
 
     const ballotResults = b.results ?? {};
     const turnoutReported = ballotResults.num_turnout_reported ?? null;
