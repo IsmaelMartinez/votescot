@@ -1,8 +1,29 @@
 id: west-scotland
 name: West Scotland
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.602Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Russell Findlay
+    listPosition: 1
+  - party: reform
+    candidate: Malcolm Offord
+    listPosition: 1
+  - party: green
+    candidate: Ross Greer
+    listPosition: 1
+  - party: lab
+    candidate: Neil Bibby
+    listPosition: 2
+  - party: reform
+    candidate: David Smith
+    listPosition: 2
+  - party: green
+    candidate: Cara McKee
+    listPosition: 2
+  - party: lab
+    candidate: Katy Clark
+    listPosition: 3
+source: Democracy Club

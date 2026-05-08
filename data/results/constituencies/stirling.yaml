@@ -1,8 +1,31 @@
 id: stirling
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.598Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Alyn Edward Smith
+    votes: 13608
+    share: 42.35
+  - party: con
+    candidate: Stephen Kerr
+    votes: 6166
+    share: 19.19
+  - party: lab
+    candidate: Kainde Manji
+    votes: 5124
+    share: 15.95
+  - party: reform
+    candidate: Rachael Wright
+    votes: 4908
+    share: 15.28
+  - party: libdem
+    candidate: Jill Reilly
+    votes: 2324
+    share: 7.23
+majority:
+  votes: 7442
+  share: 23.16
+  over: con
+source: Democracy Club

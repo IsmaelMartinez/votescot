@@ -1,8 +1,35 @@
 id: renfrewshire-west-and-levern-valley
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.595Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Tom Arthur
+    votes: 13819
+    share: 40.39
+  - party: labour-and-co-operative-party
+    candidate: Paul O'Kane
+    votes: 10548
+    share: 30.83
+  - party: reform
+    candidate: Jamie McGuire
+    votes: 5844
+    share: 17.08
+  - party: con
+    candidate: Farooq Choudhry
+    votes: 2016
+    share: 5.89
+  - party: libdem
+    candidate: Ross Stalker
+    votes: 1610
+    share: 4.71
+  - party: alliance-for-democracy-and-freedom
+    candidate: Ken Thomson
+    votes: 374
+    share: 1.09
+majority:
+  votes: 3271
+  share: 9.56
+  over: labour-and-co-operative-party
+source: Democracy Club

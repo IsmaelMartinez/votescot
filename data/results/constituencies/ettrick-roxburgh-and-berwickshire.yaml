@@ -1,8 +1,39 @@
 id: ettrick-roxburgh-and-berwickshire
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.578Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: con
+results:
+  - party: con
+    candidate: Rachael Hamilton
+    votes: 13483
+    share: 44.8
+  - party: snp
+    candidate: John Redpath
+    votes: 8206
+    share: 27.26
+  - party: reform
+    candidate: Jamie Alexander Langan
+    votes: 3569
+    share: 11.86
+  - party: libdem
+    candidate: Ray Georgeson
+    votes: 2358
+    share: 7.83
+  - party: lab
+    candidate: Kaymarie Hughes
+    votes: 1577
+    share: 5.24
+  - party: ind
+    candidate: James Robert Anderson
+    votes: 740
+    share: 2.46
+  - party: alliance-to-liberate-scotland
+    candidate: Terry Howson
+    votes: 165
+    share: 0.55
+majority:
+  votes: 5277
+  share: 17.54
+  over: snp
+source: Democracy Club

@@ -1,8 +1,31 @@
 id: midlothian-south-tweeddale-and-lauderdale
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.590Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Calum Kerr
+    votes: 14091
+    share: 40.86
+  - party: con
+    candidate: Keith Cockburn
+    votes: 6930
+    share: 20.1
+  - party: libdem
+    candidate: Duncan Angus Melville Dunlop
+    votes: 4649
+    share: 13.48
+  - party: lab
+    candidate: Daniel Coleman
+    votes: 4614
+    share: 13.38
+  - party: reform
+    candidate: Carolyn Grant
+    votes: 4199
+    share: 12.18
+majority:
+  votes: 7161
+  share: 20.76
+  over: con
+source: Democracy Club

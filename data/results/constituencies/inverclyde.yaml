@@ -1,8 +1,31 @@
 id: inverclyde
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.587Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Stuart McMillan
+    votes: 14193
+    share: 44.32
+  - party: lab
+    candidate: Francesca Brennan
+    votes: 8876
+    share: 27.72
+  - party: reform
+    candidate: Malcolm Offord
+    votes: 5649
+    share: 17.64
+  - party: libdem
+    candidate: Jamie Gillan Greene
+    votes: 1954
+    share: 6.1
+  - party: con
+    candidate: Ted Runciman
+    votes: 1351
+    share: 4.22
+majority:
+  votes: 5317
+  share: 16.6
+  over: lab
+source: Democracy Club

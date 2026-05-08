@@ -1,8 +1,31 @@
 id: eastwood
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.569Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Kirsten Frances Oswald
+    votes: 12722
+    share: 33.23
+  - party: con
+    candidate: Jackson Carlaw
+    votes: 11990
+    share: 31.32
+  - party: lab
+    candidate: Kayleigh Quinn
+    votes: 8368
+    share: 21.86
+  - party: reform
+    candidate: John Mooney
+    votes: 3453
+    share: 9.02
+  - party: libdem
+    candidate: Euan Robert Davidson
+    votes: 1748
+    share: 4.57
+majority:
+  votes: 732
+  share: 1.91
+  over: con
+source: Democracy Club

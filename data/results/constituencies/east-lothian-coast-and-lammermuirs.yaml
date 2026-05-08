@@ -1,8 +1,35 @@
 id: east-lothian-coast-and-lammermuirs
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.568Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Paul McLennan
+    votes: 11677
+    share: 32.74
+  - party: lab
+    candidate: Martin Whitfield
+    votes: 11259
+    share: 31.57
+  - party: con
+    candidate: Miles Briggs
+    votes: 4719
+    share: 13.23
+  - party: reform
+    candidate: Nigel Douglas
+    votes: 4611
+    share: 12.93
+  - party: libdem
+    candidate: Tim McKay
+    votes: 2802
+    share: 7.86
+  - party: ind
+    candidate: Morgwn Davies
+    votes: 597
+    share: 1.67
+majority:
+  votes: 418
+  share: 1.17
+  over: lab
+source: Democracy Club

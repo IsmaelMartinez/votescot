@@ -1,8 +1,35 @@
 id: renfrewshire-north-and-cardonald
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-08T21:39:46.595Z
 turnout: null
-winner: null
-results: []
-majority: null
-source: null
+winner: snp
+results:
+  - party: snp
+    candidate: Michelle Simone Campbell
+    votes: 14300
+    share: 40.87
+  - party: lab
+    candidate: Mike McKirdy
+    votes: 9424
+    share: 26.93
+  - party: reform
+    candidate: Moira Ramage
+    votes: 7083
+    share: 20.24
+  - party: con
+    candidate: Jack Hall
+    votes: 1929
+    share: 5.51
+  - party: libdem
+    candidate: Grant Robert Toghill
+    votes: 1642
+    share: 4.69
+  - party: trade-unionist-and-socialist-coalition
+    candidate: Jim Halfpenny
+    votes: 610
+    share: 1.74
+majority:
+  votes: 4876
+  share: 13.94
+  over: lab
+source: Democracy Club

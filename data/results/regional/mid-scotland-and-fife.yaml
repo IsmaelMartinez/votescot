@@ -2,7 +2,11 @@ id: mid-scotland-and-fife
 name: Mid Scotland and Fife
 status: declared
 declaredAt: 2026-05-08T20:03:41.767Z
-turnout: null
+turnout:
+  valid: 286018
+  rejected: 699
+  electorate: 533163
+  percent: 53.78
 results: []
 seatsAwarded:
   - party: con
