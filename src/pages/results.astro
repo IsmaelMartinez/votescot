@@ -73,11 +73,20 @@ const pollsters = report?.pollsters ?? [];
 const constituencyPollsterScores = pollsters.filter((p: any) => p.ballot === "constituency");
 const regionalPollsterScores = pollsters.filter((p: any) => p.ballot === "regional");
 
+// Some pollsters are co-published under joint bylines but score the same data.
+const POLLSTER_ALIASES: Record<string, string> = {
+  "Find Out Now / Electoral Calculus": "Find Out Now",
+};
+
+function canonicalPollster(name: string): string {
+  return POLLSTER_ALIASES[name] ?? name;
+}
+
 // Best-by-pollster summary: average MAE across each pollster's last week, ballot-aware.
 function bestByPollster(scores: any[]): { pollster: string; mae: number; rmse: number; n: number }[] {
   const bucket = new Map<string, { sumMae: number; sumRmse: number; n: number }>();
   for (const s of scores) {
-    const key = s.pollster;
+    const key = canonicalPollster(s.pollster);
     const cur = bucket.get(key) ?? { sumMae: 0, sumRmse: 0, n: 0 };
     cur.sumMae += s.mae;
     cur.sumRmse += s.rmse;
@@ -130,6 +139,85 @@ const maxSeatsForRow = Math.max(
   ...headlineRows.map((r) => Math.max(r.actualSeats, r.forecastSeats)),
 );
 const totalActualSeats = headlineRows.reduce((s, r) => s + r.actualSeats, 0);
+
+// Forecast misses → flow data. Each surprise has forecast party + actual party.
+// Build per-(forecast,actual) counts, plus per-side totals for stacking.
+type FlowKey = string; // `${forecast}>${actual}`
+const flowCounts = new Map<FlowKey, number>();
+const forecastTotals = new Map<string, number>();
+const actualTotals = new Map<string, number>();
+for (const s of surprises) {
+  const f = partyKey(s.forecast!);
+  const a = partyKey(s.winner!);
+  if (!f || !a) continue;
+  const key = `${f}>${a}`;
+  flowCounts.set(key, (flowCounts.get(key) ?? 0) + 1);
+  forecastTotals.set(f, (forecastTotals.get(f) ?? 0) + 1);
+  actualTotals.set(a, (actualTotals.get(a) ?? 0) + 1);
+}
+
+const sankey = (() => {
+  const totalMisses = surprises.length;
+  if (totalMisses === 0) return null;
+  const W = 360;
+  const H = Math.max(160, totalMisses * 14);
+  const COL_W = 80;
+  const GAP_PX = 4;
+
+  // Both columns and the ribbons share a single flow height so that left and
+  // right blocks line up even when one side has more parties than the other.
+  const maxParties = Math.max(forecastTotals.size, actualTotals.size);
+  const flowH = H - Math.max(0, (maxParties - 1) * GAP_PX);
+
+  function buildColumn(totals: Map<string, number>): { party: string; total: number; y0: number; y1: number }[] {
+    const entries = Array.from(totals.entries()).sort((a, b) => b[1] - a[1]);
+    let y = 0;
+    return entries.map(([party, total]) => {
+      const h = (total / totalMisses) * flowH;
+      const r = { party, total, y0: y, y1: y + h };
+      y = r.y1 + GAP_PX;
+      return r;
+    });
+  }
+
+  const left = buildColumn(forecastTotals);
+  const right = buildColumn(actualTotals);
+  const rightIdx = new Map(right.map((b) => [b.party, b]));
+
+  // Walk transitions in display order (forecast top → bottom, then within each
+  // forecast bucket, by destination ranking). Each transition consumes a slice
+  // off the top of both src and dst remaining heights.
+  const leftCursor = new Map(left.map((b) => [b.party, b.y0]));
+  const rightCursor = new Map(right.map((b) => [b.party, b.y0]));
+
+  type Ribbon = { from: string; to: string; count: number; ly0: number; ly1: number; ry0: number; ry1: number };
+  const ribbons: Ribbon[] = [];
+  for (const lb of left) {
+    const fromParty = lb.party;
+    const transitions = Array.from(flowCounts.entries())
+      .filter(([key]) => key.startsWith(`${fromParty}>`))
+      .map(([key, count]) => ({ to: key.split(">")[1], count }))
+      .sort((a, b) => (rightIdx.get(a.to)?.y0 ?? 0) - (rightIdx.get(b.to)?.y0 ?? 0));
+    for (const t of transitions) {
+      const lY = leftCursor.get(fromParty) ?? lb.y0;
+      const rY = rightCursor.get(t.to) ?? 0;
+      const slice = (t.count / totalMisses) * flowH;
+      ribbons.push({
+        from: fromParty,
+        to: t.to,
+        count: t.count,
+        ly0: lY,
+        ly1: lY + slice,
+        ry0: rY,
+        ry1: rY + slice,
+      });
+      leftCursor.set(fromParty, lY + slice);
+      rightCursor.set(t.to, rY + slice);
+    }
+  }
+
+  return { W, H, COL_W, left, right, ribbons };
+})();
 ---
 
 <Base
@@ -241,10 +329,7 @@ const totalActualSeats = headlineRows.reduce((s, r) => s + r.actualSeats, 0);
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
           {(["safe", "competitive", "marginal", "toss-up"] as const).map((bucket) => {
-            const stats = projection.byCompetitiveness?.[bucket] as
-              | { total: number; correct: number; hitRate: number }
-              | undefined;
-            if (!stats) return null;
+            const stats = projection.byCompetitiveness[bucket];
             return (
               <div class="bg-gray-50 rounded p-2">
                 <div class="font-body font-bold uppercase tracking-wider text-gray-500">{bucket}</div>
@@ -260,80 +345,63 @@ const totalActualSeats = headlineRows.reduce((s, r) => s + r.actualSeats, 0);
       </section>
     )}
 
-    {showResults && constituencyLeague.length > 0 && (
-      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
-        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
-          Pollster league — constituency vote ({constituencyLeague.length} pollsters)
-        </summary>
-        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
-          How far each pollster's predicted vote shares were from the actual result, in percentage points. Lower is better.
-        </p>
-        <details class="mb-3 text-xs text-gray-600">
-          <summary class="cursor-pointer font-body font-bold text-votescot-gold hover:underline">What do MAE and RMSE mean?</summary>
-          <div class="mt-2 leading-relaxed font-body">
-            <p class="mb-1.5"><strong>MAE (Mean Absolute Error)</strong> is the average gap, in percentage points, between predicted and actual party shares. It tells you the typical miss.</p>
-            <p>
-              <strong>RMSE (Root Mean Squared Error)</strong> punishes big errors more heavily than small ones, so a pollster with one giant miss scores worse on RMSE than on MAE. When RMSE is noticeably higher than MAE, it means at least one party was badly wrong.
-            </p>
-          </div>
+    {showResults && (constituencyLeague.length > 0 || regionalLeague.length > 0) && (() => {
+      const maxMae = Math.max(
+        1,
+        ...constituencyLeague.map((r) => r.mae),
+        ...regionalLeague.map((r) => r.mae),
+      );
+      const renderLeague = (rows: { pollster: string; mae: number; rmse: number; n: number }[]) =>
+        rows.map((row, i) => {
+          const widthPct = (row.mae / maxMae) * 100;
+          const rmsePct = Math.min(100, (row.rmse / maxMae) * 100);
+          return (
+            <div class="grid grid-cols-[1.25rem_1fr_3.5rem] gap-2 items-center text-xs py-0.5">
+              <div class="font-body font-bold text-gray-400 text-right">{i + 1}</div>
+              <div class="flex flex-col gap-0.5">
+                <div class="font-body font-bold text-gray-700 leading-tight">{row.pollster}</div>
+                <div class="relative h-2.5 bg-gray-50 rounded-sm overflow-hidden">
+                  <div class="h-full rounded-sm bg-votescot-dark" style={`width:${widthPct}%`} title={`MAE ${row.mae.toFixed(2)}`} />
+                  <div class="absolute top-0 bottom-0 w-px bg-rose-500" style={`left:${rmsePct}%`} title={`RMSE ${row.rmse.toFixed(2)}`} />
+                </div>
+              </div>
+              <div class="text-right font-mono text-[11px] text-gray-500 leading-tight">
+                <div>{row.mae.toFixed(2)}</div>
+                <div class="text-gray-400">n={row.n}</div>
+              </div>
+            </div>
+          );
+        });
+      return (
+        <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
+          <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
+            Pollster accuracy ({constituencyLeague.length + regionalLeague.length} entries)
+          </summary>
+          <p class="font-body text-xs text-gray-500 mt-3 mb-2">
+            Mean absolute error in percentage points (lower is better). Bar = MAE; thin red tick = RMSE.
+          </p>
+          {constituencyLeague.length > 0 && (
+            <>
+              <h4 class="font-body text-[11px] font-bold uppercase tracking-wider text-gray-500 mt-3 mb-1.5">Constituency vote</h4>
+              <div>{renderLeague(constituencyLeague)}</div>
+            </>
+          )}
+          {regionalLeague.length > 0 && (
+            <>
+              <h4 class="font-body text-[11px] font-bold uppercase tracking-wider text-gray-500 mt-3 mb-1.5">Regional list vote</h4>
+              <div>{renderLeague(regionalLeague)}</div>
+            </>
+          )}
+          <details class="mt-3 text-xs text-gray-600">
+            <summary class="cursor-pointer font-body font-bold text-votescot-gold hover:underline">What do MAE and RMSE mean?</summary>
+            <div class="mt-2 leading-relaxed font-body">
+              <p class="mb-1.5"><strong>MAE</strong> is the average gap, in percentage points, between predicted and actual party shares.</p>
+              <p><strong>RMSE</strong> punishes big errors more heavily than small ones, so a pollster with one giant miss scores worse on RMSE than on MAE.</p>
+            </div>
+          </details>
         </details>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
-              <th class="py-1.5">Rank</th>
-              <th>Pollster</th>
-              <th class="text-right">Polls</th>
-              <th class="text-right">MAE</th>
-              <th class="text-right">RMSE</th>
-            </tr>
-          </thead>
-          <tbody>
-            {constituencyLeague.map((row, i) => (
-              <tr class="border-t border-votescot-border">
-                <td class="py-1.5 font-body font-bold text-gray-400">{i + 1}</td>
-                <td class="font-body font-bold">{row.pollster}</td>
-                <td class="text-right text-gray-500">{row.n}</td>
-                <td class="text-right font-mono">{row.mae.toFixed(2)}</td>
-                <td class="text-right font-mono text-gray-500">{row.rmse.toFixed(2)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </details>
-    )}
-
-    {showResults && regionalLeague.length > 0 && (
-      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
-        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
-          Pollster league — regional list vote ({regionalLeague.length} pollsters)
-        </summary>
-        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
-          Same methodology, scored against actual regional list shares.
-        </p>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
-              <th class="py-1.5">Rank</th>
-              <th>Pollster</th>
-              <th class="text-right">Polls</th>
-              <th class="text-right">MAE</th>
-              <th class="text-right">RMSE</th>
-            </tr>
-          </thead>
-          <tbody>
-            {regionalLeague.map((row, i) => (
-              <tr class="border-t border-votescot-border">
-                <td class="py-1.5 font-body font-bold text-gray-400">{i + 1}</td>
-                <td class="font-body font-bold">{row.pollster}</td>
-                <td class="text-right text-gray-500">{row.n}</td>
-                <td class="text-right font-mono">{row.mae.toFixed(2)}</td>
-                <td class="text-right font-mono text-gray-500">{row.rmse.toFixed(2)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </details>
-    )}
+      );
+    })()}
 
     {showResults && mrps.length > 0 && (
       <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
@@ -368,50 +436,72 @@ const totalActualSeats = headlineRows.reduce((s, r) => s + r.actualSeats, 0);
       </details>
     )}
 
-    {showResults && surprises.length > 0 && (
-      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
-        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
-          Forecast misses ({surprises.length})
-        </summary>
-        <p class="font-body text-xs text-gray-500 mt-3 mb-2">
-          Seats where the actual winner differed from the VoteScot forecast.
+    {showResults && sankey && (
+      <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
+        <h3 class="font-heading text-base font-bold mb-1">Forecast misses ({surprises.length})</h3>
+        <p class="font-body text-xs text-gray-500 mb-3">
+          Where the seats VoteScot forecast incorrectly ended up. Left column = predicted winner; right column = actual winner; ribbon thickness = number of seats.
         </p>
-        <ul class="flex flex-col gap-1.5">
-          {surprises.map((s) => (
-            <li class="flex items-center justify-between bg-gray-50 rounded p-2 text-sm">
-              <span class="font-body font-bold">{s.name}</span>
-              <span class="text-xs">
-                <span class="text-gray-500">forecast </span>
-                <span class="font-bold" style={`color: ${partyColor(s.forecast!)}`}>{partyLabel(s.forecast!)}</span>
-                <span class="text-gray-400 mx-2">→</span>
-                <span class="font-bold" style={`color: ${partyColor(s.winner!)}`}>{partyLabel(s.winner!)}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </details>
-    )}
-
-    {showResults && declared.length > 0 && (
-      <details class="mb-3 bg-white border border-votescot-border rounded-lg p-3">
-        <summary class="cursor-pointer font-body text-sm font-bold text-gray-700">
-          Declared constituencies ({declared.length})
-        </summary>
-        <ul class="flex flex-col gap-1 mt-3">
-          {declared.map((r) => (
-            <li class="flex items-center justify-between text-sm border-b border-votescot-border last:border-0 py-1.5">
-              <a href={`/candidates/constituency/${r.id}`} class="font-body font-bold no-underline text-gray-900 hover:text-votescot-gold">{r.name}</a>
-              <span class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full" style={`background: ${partyColor(r.winner!)}`} />
-                <span class="font-body text-xs">{partyLabel(r.winner!)}</span>
-                {r.majority && (
-                  <span class="font-mono text-xs text-gray-400">+{r.majority.votes.toLocaleString()}</span>
-                )}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </details>
+        <div class="overflow-x-auto">
+          <svg viewBox={`0 0 ${sankey.W} ${sankey.H + 20}`} width="100%" preserveAspectRatio="xMinYMin meet" role="img" aria-label="Forecast vs actual seat flow">
+            <g transform="translate(0,10)">
+              {sankey.ribbons.map((r) => {
+                const x1 = sankey.COL_W;
+                const x2 = sankey.W - sankey.COL_W;
+                const cx = (x1 + x2) / 2;
+                const d = `M ${x1},${r.ly0} C ${cx},${r.ly0} ${cx},${r.ry0} ${x2},${r.ry0} L ${x2},${r.ry1} C ${cx},${r.ry1} ${cx},${r.ly1} ${x1},${r.ly1} Z`;
+                return (
+                  <path
+                    d={d}
+                    fill={partyColor(r.from)}
+                    fill-opacity="0.35"
+                    stroke={partyColor(r.from)}
+                    stroke-opacity="0.5"
+                    stroke-width="0.5"
+                  >
+                    <title>{`${partyLabel(r.from)} → ${partyLabel(r.to)}: ${r.count} seat${r.count === 1 ? "" : "s"}`}</title>
+                  </path>
+                );
+              })}
+              {sankey.left.map((b) => (
+                <>
+                  <rect x="0" y={b.y0} width={sankey.COL_W - 4} height={Math.max(2, b.y1 - b.y0)} fill={partyColor(b.party)} rx="2" />
+                  <text x={sankey.COL_W - 8} y={(b.y0 + b.y1) / 2 + 3} text-anchor="end" font-size="10" font-family="ui-sans-serif" fill="#fff" font-weight="700">
+                    {partyLabel(b.party)} {b.total}
+                  </text>
+                </>
+              ))}
+              {sankey.right.map((b) => (
+                <>
+                  <rect x={sankey.W - sankey.COL_W + 4} y={b.y0} width={sankey.COL_W - 4} height={Math.max(2, b.y1 - b.y0)} fill={partyColor(b.party)} rx="2" />
+                  <text x={sankey.W - sankey.COL_W + 8} y={(b.y0 + b.y1) / 2 + 3} text-anchor="start" font-size="10" font-family="ui-sans-serif" fill="#fff" font-weight="700">
+                    {partyLabel(b.party)} {b.total}
+                  </text>
+                </>
+              ))}
+            </g>
+          </svg>
+        </div>
+        <div class="flex justify-between font-body text-[10px] uppercase tracking-wider text-gray-400 mt-1">
+          <span>Forecast</span>
+          <span>Actual</span>
+        </div>
+        <details class="mt-3 text-xs text-gray-600">
+          <summary class="cursor-pointer font-body font-bold text-votescot-gold hover:underline">List of seats</summary>
+          <ul class="flex flex-col gap-1.5 mt-2">
+            {surprises.map((s) => (
+              <li class="flex items-center justify-between bg-gray-50 rounded p-2 text-sm">
+                <a href={`/candidates/constituency/${s.id}`} class="font-body font-bold no-underline text-gray-900 hover:text-votescot-gold">{s.name}</a>
+                <span class="text-xs">
+                  <span class="font-bold" style={`color: ${partyColor(s.forecast!)}`}>{partyLabel(s.forecast!)}</span>
+                  <span class="text-gray-400 mx-2">→</span>
+                  <span class="font-bold" style={`color: ${partyColor(s.winner!)}`}>{partyLabel(s.winner!)}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </section>
     )}
   </div>
 

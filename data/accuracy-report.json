@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T21:56:18.133Z",
+  "generatedAt": "2026-05-08T22:52:17.131Z",
   "pollDay": "2026-05-07",
   "constituenciesDeclared": 73,
   "regionsDeclared": 7,
@@ -15,7 +15,15 @@
     },
     "regional": null
   },
-  "seatTotals": null,
+  "seatTotals": {
+    "snp": 57,
+    "con": 11,
+    "lab": 17,
+    "libdem": 9,
+    "green": 13,
+    "reform": 15,
+    "alba": 0
+  },
   "pollsters": [
     {
       "pollster": "More in Common",
