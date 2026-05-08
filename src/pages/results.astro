@@ -196,8 +196,7 @@ const showResults = state.phase === "partial" || state.phase === "final";
           })}
         </div>
         <p class="font-body text-xs text-gray-500 mt-3">
-          <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">Mean absolute error</abbr>
-          on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
+          Mean absolute error on top-three party shares: <strong>{projection.shareMae?.toFixed(1) ?? "—"}</strong> percentage points.
         </p>
       </section>
     )}
@@ -206,20 +205,25 @@ const showResults = state.phase === "partial" || state.phase === "final";
       <section class="mb-6 bg-white border border-votescot-border rounded-lg p-4">
         <h3 class="font-heading text-base font-bold mb-1">Pollster league table — constituency vote</h3>
         <p class="font-body text-xs text-gray-500 mb-3">
-          How far each pollster's predicted vote shares were from the actual result, in percentage points. Lower is better. Hover the column headers for a plain-English definition.
+          How far each pollster's predicted vote shares were from the actual result, in percentage points. Lower is better.
         </p>
+        <details class="mb-3 text-xs text-gray-600">
+          <summary class="cursor-pointer font-body font-bold text-votescot-gold hover:underline">What do MAE and RMSE mean?</summary>
+          <div class="mt-2 leading-relaxed font-body">
+            <p class="mb-1.5"><strong>MAE (Mean Absolute Error)</strong> is the average gap, in percentage points, between predicted and actual party shares. It tells you the typical miss.</p>
+            <p>
+              <strong>RMSE (Root Mean Squared Error)</strong> punishes big errors more heavily than small ones, so a pollster with one giant miss scores worse on RMSE than on MAE. When RMSE is noticeably higher than MAE, it means at least one party was badly wrong.
+            </p>
+          </div>
+        </details>
         <table class="w-full text-sm">
           <thead>
             <tr class="text-left text-xs text-gray-400 uppercase tracking-wider">
               <th class="py-1.5">Rank</th>
               <th>Pollster</th>
               <th class="text-right">Polls</th>
-              <th class="text-right">
-                <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">MAE</abbr>
-              </th>
-              <th class="text-right">
-                <abbr title="Root Mean Squared Error — penalises big misses more heavily than small ones. RMSE noticeably higher than MAE means the pollster had at least one large error." class="cursor-help underline decoration-dotted">RMSE</abbr>
-              </th>
+              <th class="text-right">MAE</th>
+              <th class="text-right">RMSE</th>
             </tr>
           </thead>
           <tbody>
@@ -249,12 +253,8 @@ const showResults = state.phase === "partial" || state.phase === "final";
               <th class="py-1.5">Rank</th>
               <th>Pollster</th>
               <th class="text-right">Polls</th>
-              <th class="text-right">
-                <abbr title="Mean Absolute Error — average gap, in percentage points, between predicted and actual party shares. Lower is better." class="cursor-help underline decoration-dotted">MAE</abbr>
-              </th>
-              <th class="text-right">
-                <abbr title="Root Mean Squared Error — penalises big misses more heavily than small ones. RMSE noticeably higher than MAE means the pollster had at least one large error." class="cursor-help underline decoration-dotted">RMSE</abbr>
-              </th>
+              <th class="text-right">MAE</th>
+              <th class="text-right">RMSE</th>
             </tr>
           </thead>
           <tbody>
