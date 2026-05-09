@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T21:00:17.045Z",
+  "lastUpdated": "2026-05-09T07:00:39.201Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,17 +16,80 @@
   ],
   "items": [
     {
-      "title": "Elections 2026 live: Labour suffers historic defeat in Wales as Reform surges in English council elections and Greens make gains",
-      "description": "Welsh Labour leader and first minister Eluned Morgan loses seat with party pushed into third place behind Plaid Cymru and Reform2026 election results: latest from local, Scottish and Welsh votes2026 elections mapped: how Labour lost ground in different directionsWe’re getting statements from some of the political parties now as we wait for results.For the Conservatives, party chairman Kevin Hollinrake said:We have run an energetic and positive campaign, showcasing that we have a clear plan to get Britain working again and that we have the team to deliver it... We know that so soon after a historic general election defeat and contesting wards won during the Party’s polling highs, that this will be a difficult set of elections for us. But we will continue to rebuild and to show the public that we have changed, to demonstrate that only this new Conservative party is a credible alternative.People are deeply disappointed with a Labour government that has been too timid to fix the country, but they are also appalled by the rise of Reform and Nigel Farage’s Trump-style politics. While those on the extremes of the right and the left want to burn everything down, Liberal Democrats want to fix what’s broken. Every Liberal Democrat local champion elected today will fight tirelessly for the communities they serve.I’ve travelled across England and Wales and I’m hearing the same everywhere I go – confidence that we will win more councillors than ever before. The news from the doorstep is that we will be taking seats from not just Labour but the Tories and Lib Dems too, from all across the country. Voters are responding to the fact that Greens are the only party taking the cost-of-living crisis seriously, with real plans to cut bills, reduce rents and provide genuinely affordable homes, as well as tackling the climate and nature crisis.Throughout this election, we have heard a clear appetite for change. People want a government that will stand up for Wales and focus relentlessly on the key issues affecting their lives. People have told us they have been inspired by Rhun ap Iorwerth’s leadership and driven by a desire for a positive alternative to Reform UK’s chaos and division. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/may/07/elections-2026-local-scotland-wales-reform-green-labour-conservatives-live-news-updates",
-      "publishedAt": "2026-05-08T20:56:54.000Z",
+      "title": "Historic win for SNP but change and challenges ahead at Holyrood",
+      "description": "John Swinney will return as first minister after a fifth Scottish election victory for the SNP.",
+      "url": "https://www.bbc.com/news/articles/c9364lvpz2lo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T06:55:53.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "2026 election results: latest from local, Scottish and Welsh votes",
+      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaElections mapped: how Labour lost ground in different directions Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
+      "publishedAt": "2026-05-09T06:45:17.000Z",
       "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "2026 elections mapped: how Labour lost ground in different directions",
+      "description": "Keir Starmer’s party lost out to Reform and the Greens, with no respite in Scotland, Wales or England. These maps show the scale of the historic resultsFull results from England, Scotland and WalesLabour has suffered heavy losses across England, Scotland and Wales, losing ground to opponents on the left and the right in a fragmented political system.The graphics below show where Labour’s losses were most severe, and how the electoral landscape has changed as a result. Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/08/2026-elections-mapped-labour-reform-uk-greens-scotland-wales-england-local",
+      "publishedAt": "2026-05-09T06:34:08.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Scottish election 2026: Results in maps and charts",
+      "description": "A guide to how the 2026 Holyrood election panned out.",
+      "url": "https://www.bbc.com/news/articles/c3e2v4n20xlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T01:17:22.000Z",
+      "source": "BBC News"
     },
     {
       "title": "Greens oust SNP's Robertson as they win first Holyrood constituencies",
       "description": "The party has secured its best ever election result after taking seats across the country.",
       "url": "https://www.bbc.com/news/articles/c78k79xm2mzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-08T20:54:47.000Z",
+      "publishedAt": "2026-05-09T01:00:11.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "SNP wins Scottish election as Reform and Labour tie for second",
+      "description": "John Swinney's party finished comfortably ahead of its rivals, but short of an overall majority.",
+      "url": "https://www.bbc.com/news/articles/ckgp5ryv4qno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T00:55:02.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "John Swinney urges Starmer to show Scotland ‘greater respect’ after SNP victory",
+      "description": "Scottish Labour leader, Anas Sarwar, concedes his party was comprehensively beaten in election as count puts his party on 17 seats, a tie with ReformElection 2026 live: latest news updatesFull results from England, Scotland and WalesJohn Swinney, the Scottish National party leader, has challenged Keir Starmer to show “greater respect” to the Scottish government after winning the Holyrood elections by a comfortable margin.The Scottish National party secured a record fifth term in office on Friday after securing 58 of Holyrood’s 129 seats. Continue reading...",
+      "url": "https://www.theguardian.com/politics/2026/may/08/john-swinney-declares-victory-for-snp-in-holyrood-elections",
+      "publishedAt": "2026-05-09T00:36:59.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Reform wins 17 seats at Holyrood",
+      "description": "Nigel Farage's party secured MSPs in a number of regional lists across Scotland.",
+      "url": "https://www.bbc.com/news/articles/cewpgkrrn05o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T00:34:55.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Labour suffers historic defeat in Wales as Reform surges in English council elections and Greens make gains – as it happened",
+      "description": "Welsh Labour leader and first minister Eluned Morgan loses seat with party pushed into third place behind Plaid Cymru and ReformThis liveblog is now closed. Read the Guardian’s report on the elections here and find all our election coverage here.2026 election results: latest from local, Scottish and Welsh votes2026 elections mapped: how Labour lost ground in different directionsWe’re getting statements from some of the political parties now as we wait for results.For the Conservatives, party chairman Kevin Hollinrake said:We have run an energetic and positive campaign, showcasing that we have a clear plan to get Britain working again and that we have the team to deliver it... We know that so soon after a historic general election defeat and contesting wards won during the Party’s polling highs, that this will be a difficult set of elections for us. But we will continue to rebuild and to show the public that we have changed, to demonstrate that only this new Conservative party is a credible alternative.People are deeply disappointed with a Labour government that has been too timid to fix the country, but they are also appalled by the rise of Reform and Nigel Farage’s Trump-style politics. While those on the extremes of the right and the left want to burn everything down, Liberal Democrats want to fix what’s broken. Every Liberal Democrat local champion elected today will fight tirelessly for the communities they serve.I’ve travelled across England and Wales and I’m hearing the same everywhere I go – confidence that we will win more councillors than ever before. The news from the doorstep is that we will be taking seats from not just Labour but the Tories and Lib Dems too, from all across the country. Voters are responding to the fact that Greens are the only party taking the cost-of-living crisis seriously, with real plans to cut bills, reduce rents and provide genuinely affordable homes, as well as tackling the climate and nature crisis.Throughout this election, we have heard a clear appetite for change. People want a government that will stand up for Wales and focus relentlessly on the key issues affecting their lives. People have told us they have been inspired by Rhun ap Iorwerth’s leadership and driven by a desire for a positive alternative to Reform UK’s chaos and division. Continue reading...",
+      "url": "https://www.theguardian.com/politics/live/2026/may/07/elections-2026-local-scotland-wales-reform-green-labour-conservatives-live-news-updates",
+      "publishedAt": "2026-05-08T23:07:14.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "SNP lose seats in capital but hold on in Lothians and Fife",
+      "description": "In Fife the SNP have held onto every constituency but across the Firth in Edinburgh there is a very different picture.",
+      "url": "https://www.bbc.com/news/articles/c0j2z7e9yyqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T21:20:21.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Veteran Fergus Ewing finishes third as SNP take Inverness and Nairn",
+      "description": "Emma Roddick held the constituency seat for the SNP.",
+      "url": "https://www.bbc.com/news/articles/clyp5n4yn2eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-08T21:16:42.000Z",
       "source": "BBC News"
     },
     {
@@ -37,31 +100,10 @@
       "source": "BBC News"
     },
     {
-      "title": "Reform wins 15 seats at Holyrood",
-      "description": "Nigel Farage's party has secured its first elected MSPs in Fife, Edinburgh and the north east.",
-      "url": "https://www.bbc.com/news/articles/cewpgkrrn05o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-08T20:39:18.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "SNP lose seats in capital but hold on in Lothians and Fife",
-      "description": "In Fife the SNP have held onto every constituency but across the Firth in Edinburgh there is a very different picture.",
-      "url": "https://www.bbc.com/news/articles/c0j2z7e9yyqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-08T20:26:07.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "SNP narrowly beats Reform in Banffshire and Buchan Coast",
       "description": "The SNP wins included a narrow victory for Karen Adam over Reform in Banffshire and Buchan Coast.",
       "url": "https://www.bbc.com/news/articles/c4gvmzezyn8o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-05-08T20:22:26.000Z",
-      "source": "BBC News"
-    },
-    {
-      "title": "Veteran Fergus Ewing finishes third as SNP take Inverness and Nairn",
-      "description": "Emma Roddick held the constituency seat for the SNP.",
-      "url": "https://www.bbc.com/news/articles/clyp5n4yn2eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-08T20:03:02.000Z",
       "source": "BBC News"
     },
     {
@@ -70,27 +112,6 @@
       "url": "https://www.bbc.com/news/articles/cn7pvrm07gjo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-05-08T19:57:23.000Z",
       "source": "BBC News"
-    },
-    {
-      "title": "2026 elections mapped: how Labour lost ground in different directions",
-      "description": "Keir Starmer’s party lost out to Reform and the Greens, with no respite in Scotland, Wales or England. These maps show the scale of the historic resultsElection 2026 live: latest news updatesFull results from England, Scotland and WalesLabour has suffered heavy losses across England, Scotland and Wales, losing ground to opponents on the left and the right in a fragmented political system.The graphics below show where Labour’s losses were most severe, and how the electoral landscape has changed as a result. Continue reading...",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/08/2026-elections-mapped-labour-reform-uk-greens-scotland-wales-england-local",
-      "publishedAt": "2026-05-08T19:33:45.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "2026 election results: latest from local, Scottish and Welsh votes",
-      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaElections mapped: how Labour lost ground in different directionsLatest news updates and analysis from election night Continue reading...",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
-      "publishedAt": "2026-05-08T19:02:24.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "John Swinney declares victory for SNP in Holyrood elections",
-      "description": "Scottish Labour leader, Anas Sarwar, concedes his party was comprehensively beatenElection 2026 live: latest news updatesFull results from England, Scotland and WalesJohn Swinney, the Scottish National party leader, has declared victory in the Holyrood elections after the first handful of results confirmed Labour had been comprehensively beaten.Speaking to the BBC after holding his own seat of Perthshire North, Swinney said he was “absolutely certain the SNP is going to be the leading party coming out of this election”. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/may/08/john-swinney-declares-victory-for-snp-in-holyrood-elections",
-      "publishedAt": "2026-05-08T17:39:34.000Z",
-      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "Reform UK gains at Labour’s expense in local elections – podcast",
@@ -149,13 +170,6 @@
       "source": "The Guardian — Scotland politics"
     },
     {
-      "title": "Six things to watch out for in the Scottish election",
-      "description": "Results are expected to be announced across the country from early on Friday afternoon.",
-      "url": "https://www.bbc.com/news/articles/cn4pyrnmplgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-08T05:08:09.000Z",
-      "source": "BBC News"
-    },
-    {
       "title": "Nine seats that could decide Scotland's election",
       "description": "The key battlegrounds which could tell us how May's election will go across Scotland.",
       "url": "https://www.bbc.com/news/articles/cyv1m396n3eo?at_medium=RSS&at_campaign=rss",
@@ -209,20 +223,6 @@
       "description": "Final day polling is coming thick and fast, none of it good for Labour. The probable best of the bunch for the SNP still has them short of a majority, but another strong result for the Greens.",
       "url": "https://ballotbox.scot/yougov-may-2026/",
       "publishedAt": "2026-05-06T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Lib Dems accuse Badenoch of being willing to ‘put Farage in No 10’ after she hints she would approve council pacts – as it happened",
-      "description": "Conservative leader says her party ‘are willing to work with people who will help deliver Conservative policies’Labour has criticised Zack Polanski for saying he was concerned about how the suspect in the Golders Green stabbings was treated when he was arrested by the police.Referring to what Polanski said about this in his Today interview this morning (see 9.33am), a Labour party spokesperson said:Our brave police ran towards a suspected terrorist and tackled him while he was still carrying a knife and before they could handcuff him.The fact that Zack Polanski is still sympathising with this individual is utterly astounding. For the Green party leader to be litigating the case for the defence against the police shows whose side he is truly on.The latest unemployment figures for February showed a fall, interest rates were expected to come down, the markets were pricing in a couple of cuts during the course of the year.The truth is, with the effect of the Iran war, we can’t count on any of that at the moment. There is likely to be an effect on prices, which feeds through from energy costs, and there may well be labour market implications. Continue reading...",
-      "url": "https://www.theguardian.com/politics/live/2026/may/06/local-elections-labour-starmer-greens-polanski-red-cross-reform-tories-conservatives-lib-dems-latest-news-updates",
-      "publishedAt": "2026-05-06T16:20:49.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: Ipsos 1st – 4th of May 2026",
-      "description": "The final Ipsos poll of the campaign is good news for Reform, the Greens and Lib Dems, but bad for the SNP, Labour and Conservatives; nonetheless, there'd be a clear Pro-Independence majority.",
-      "url": "https://ballotbox.scot/ipsos-may-2026/",
-      "publishedAt": "2026-05-06T11:30:00.000Z",
       "source": "Ballot Box Scotland"
     }
   ]
