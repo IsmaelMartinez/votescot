@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T12:37:47.061Z",
+  "lastUpdated": "2026-05-09T18:36:20.221Z",
   "sources": [
     {
       "name": "BBC News",
@@ -15,6 +15,34 @@
     }
   ],
   "items": [
+    {
+      "title": "SNP leader John Swinney rules out Holyrood talks with Reform UK",
+      "description": "The nationalists secured 58 seats in their fifth consecutive election win, but that is short of an overall majority.",
+      "url": "https://www.bbc.com/news/articles/cddpevvv97jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T16:30:54.000Z",
+      "source": "BBC News"
+    },
+    {
+      "title": "Swinney keen to work with fellow nationalist devolved leaders in UK",
+      "description": "SNP leader wants to ensure voices of Scotland, Wales and Northern Ireland ‘are heard loud and clear’John Swinney has said he plans to work with the nationalist first ministers in Wales and Northern Ireland in a coordinated opposition to Labour’s policies on the cost of living and UK government spending.The Scottish National party leader said he had spoken to Michelle O’Neill, the Sinn Féin first minister of Northern Ireland, on Friday night after she had called to congratulate him on his party’s “emphatic” victory in the Holyrood elections. Continue reading...",
+      "url": "https://www.theguardian.com/politics/2026/may/09/swinney-keen-to-work-with-fellow-nationalist-devolved-leaders-in-uk",
+      "publishedAt": "2026-05-09T16:24:42.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "2026 election results: latest from local, Scottish and Welsh votes",
+      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaElections mapped: how Labour lost ground in different directions Continue reading...",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
+      "publishedAt": "2026-05-09T15:02:06.000Z",
+      "source": "The Guardian — Scotland politics"
+    },
+    {
+      "title": "Eight of the biggest casualties of the Holyrood election",
+      "description": "From government ministers to a former party leader, 22 MSPs lost their seats in the Scottish Parliament.",
+      "url": "https://www.bbc.com/news/articles/clypq73qeg5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T13:34:35.000Z",
+      "source": "BBC News"
+    },
     {
       "title": "Scottish election 2026: Results in maps and charts",
       "description": "A guide to how the 2026 Holyrood election panned out.",
@@ -34,13 +62,6 @@
       "description": "Public frustration gave the SNP a muted victory, while Labour tied with Reform for second and the Greens claimed a ‘seismic’ resultLong before the final votes were counted in Scotland, veteran Labour politicians said it was a defeat made in Downing Street.When the Scottish Labour leader, Anas Sarwar, strode into the Glasgow count arena on Friday afternoon flanked by sombre-faced activists, the scene was a mirror image to the same venue in 2024, when his resurgent party won 36 seats from the Scottish National party, playing a significant part in Keir Starmer’s landslide victory. Continue reading...",
       "url": "https://www.theguardian.com/politics/2026/may/09/starmers-unpopularity-was-insurmountable-for-scottish-labour-and-a-boon-for-reform",
       "publishedAt": "2026-05-09T06:50:54.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "2026 election results: latest from local, Scottish and Welsh votes",
-      "description": "From devolved parliaments in Scotland and Wales to councils and mayoralties in England, find out what happened in your areaElections mapped: how Labour lost ground in different directions Continue reading...",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales",
-      "publishedAt": "2026-05-09T06:45:17.000Z",
       "source": "The Guardian — Scotland politics"
     },
     {
@@ -203,27 +224,6 @@
       "url": "https://ballotbox.scot/sp26-final-projection/",
       "publishedAt": "2026-05-07T07:30:00.000Z",
       "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "Thursday briefing: ​Five things to look out for in today’s local and parliamentary elections",
-      "description": "In today’s newsletter: As voters cast their ballots from Wales to Westminster, long‑established political loyalties face their toughest test in decades, with parties old and new vying to reshape the national landscapeMillions of Britons head to the polls today. From the Scottish Highlands to the Isle of Wight, swathes of the country will elect local councillors and representatives in national parliaments. Officially, the mundane functioning of everyday life is on the ballot: bin collections, road maintenance and community services.But many commentators are expecting a political earthquake, where the end of a system dominated by two parties is truly crystalised for the first time, and the survival of Keir Starmer as British prime minister is called into question.UK politics | Nigel Farage’s income since he was elected as an MP has reached £2m on top of his parliamentary salary, analysis of the register of MPs has shown.US news | A federal judge has unsealed an alleged suicide note written by Jeffrey Epstein, the first time the document has been made public.Cost of living | Fertiliser shortages caused by the Iran war have driven up costs for UK farmers by up to 70% and will have a “dramatic” impact on food prices globally next year, according to one of Britain’s most powerful property and farming companies.World news | Three people with suspected hantavirus, including a British expedition guide, have been medically evacuated from cruise ship MV Hondius.Middle East | The United Arab Emirates’ ruling royal family is benefiting from tens of millions in EU subsidies to grow crops destined for the Gulf, it can be revealed. Continue reading...",
-      "url": "https://www.theguardian.com/world/2026/may/07/thursday-briefing-five-things-to-look-out-for-in-todays-local-and-parliamentary-elections",
-      "publishedAt": "2026-05-07T05:34:08.000Z",
-      "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: Survation MRP 20th of April – 5th of May 2026",
-      "description": "A third major poll release on the eve of poll continues great news for the Greens, as well as suggesting a relatively strong SNP result. It's the strongest of the bunch for the Conservatives but weakest for the Lib Dems too.",
-      "url": "https://ballotbox.scot/survation-may-2026/",
-      "publishedAt": "2026-05-06T18:30:00.000Z",
-      "source": "Ballot Box Scotland"
-    },
-    {
-      "title": "‘I am losing faith’: disaffected Scottish voters may deny SNP a majority",
-      "description": "This Holyrood election is the most unpredictable in years, with Labour claiming it is pulling in the don’t knowsIt was supposed to be a carefully choreographed walkabout for John Swinney through his party’s target seat of Hamilton. Instead, the Scottish National party leader was confronted by angry voters, including his own.Natasha Kelly, 35, railed against the local council’s failure to improve the damp council flat that had left her 13- and eight-year-old boys with chronic asthma. Continue reading...",
-      "url": "https://www.theguardian.com/politics/2026/may/06/disaffected-scottish-voters-may-deny-snp-fifth-term",
-      "publishedAt": "2026-05-06T18:03:10.000Z",
-      "source": "The Guardian — Scotland politics"
     }
   ]
 }
