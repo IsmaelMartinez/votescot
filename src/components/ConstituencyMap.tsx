@@ -751,12 +751,12 @@ function ConstituencyMapInner({
           {regions.map((r) => {
             const rr = regionResultsById.get(r.id);
             const seats = rr?.seats ?? [];
-            const cells = Array.from({ length: 7 }, (_, i) => seats[i] ?? null);
             const counts = seats.reduce<Record<string, number>>((acc, p) => {
               acc[p] = (acc[p] ?? 0) + 1;
               return acc;
             }, {});
-            const sortedCounts = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            const grouped = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            const pendingCells = Math.max(0, 7 - seats.length);
             return (
               <div key={r.id} className="bg-white border border-votescot-border rounded-md p-2.5">
                 <div className="flex items-baseline justify-between mb-1.5">
@@ -765,23 +765,31 @@ function ConstituencyMapInner({
                     {rr?.manualEntry ? "manual" : rr?.source === "Democracy Club" ? "DC" : rr?.status === "pending" || !seats.length ? "pending" : ""}
                   </div>
                 </div>
-                <div className="flex gap-0.5 mb-1.5">
-                  {cells.map((party, i) => (
+                <div className="flex gap-0.5 mb-1.5 h-3">
+                  {grouped.map(([party, n]) => (
                     <div
-                      key={i}
-                      className="flex-1 h-3 rounded-sm"
+                      key={party}
+                      className="rounded-sm"
                       style={{
-                        background: party ? PARTY_COLORS[party] ?? "#94a3b8" : "#e5e7eb",
-                        opacity: party ? 0.9 : 0.6,
+                        flex: n,
+                        background: PARTY_COLORS[party] ?? "#94a3b8",
+                        opacity: 0.9,
                       }}
-                      title={party ? PARTY_LABELS[party] ?? party : "Pending"}
+                      title={`${PARTY_LABELS[party] ?? party}: ${n}`}
                     />
                   ))}
+                  {pendingCells > 0 && (
+                    <div
+                      className="rounded-sm"
+                      style={{ flex: pendingCells, background: "#e5e7eb", opacity: 0.6 }}
+                      title="Pending"
+                    />
+                  )}
                 </div>
                 <div className="font-body text-[11px] text-gray-500 leading-snug">
                   {seats.length === 0
                     ? "Awaiting declaration"
-                    : sortedCounts
+                    : grouped
                         .map(([p, n]) => `${PARTY_LABELS[p] ?? p} ${n}`)
                         .join(" · ")}
                 </div>
