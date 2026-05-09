@@ -1,8 +1,29 @@
 id: highlands-and-islands
 name: Highlands and Islands
-status: pending
-declaredAt: null
+status: declared
+declaredAt: 2026-05-09T05:53:05.901Z
 turnout: null
 results: []
-seatsAwarded: []
-source: null
+seatsAwarded:
+  - party: con
+    candidate: Tim Eagle
+    listPosition: 1
+  - party: libdem
+    candidate: Morven May MacCallum
+    listPosition: 1
+  - party: reform
+    candidate: Vic Currie
+    listPosition: 1
+  - party: green
+    candidate: Ariane Burgess
+    listPosition: 1
+  - party: snp
+    candidate: Maree Todd
+    listPosition: 1
+  - party: reform
+    candidate: Max Bannerman
+    listPosition: 2
+  - party: green
+    candidate: Kristopher Leask
+    listPosition: 2
+source: Democracy Club
