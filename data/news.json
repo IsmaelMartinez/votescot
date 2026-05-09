@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T07:00:39.201Z",
+  "lastUpdated": "2026-05-09T12:37:47.061Z",
   "sources": [
     {
       "name": "BBC News",
@@ -16,11 +16,25 @@
   ],
   "items": [
     {
+      "title": "Scottish election 2026: Results in maps and charts",
+      "description": "A guide to how the 2026 Holyrood election panned out.",
+      "url": "https://www.bbc.com/news/articles/c3e2v4n20xlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-09T08:49:13.000Z",
+      "source": "BBC News"
+    },
+    {
       "title": "Historic win for SNP but change and challenges ahead at Holyrood",
       "description": "John Swinney will return as first minister after a fifth Scottish election victory for the SNP.",
       "url": "https://www.bbc.com/news/articles/c9364lvpz2lo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-09T06:55:53.000Z",
+      "publishedAt": "2026-05-09T07:41:40.000Z",
       "source": "BBC News"
+    },
+    {
+      "title": "The SNP may have won again but Scottish politics has been upended",
+      "description": "Public frustration gave the SNP a muted victory, while Labour tied with Reform for second and the Greens claimed a ‘seismic’ resultLong before the final votes were counted in Scotland, veteran Labour politicians said it was a defeat made in Downing Street.When the Scottish Labour leader, Anas Sarwar, strode into the Glasgow count arena on Friday afternoon flanked by sombre-faced activists, the scene was a mirror image to the same venue in 2024, when his resurgent party won 36 seats from the Scottish National party, playing a significant part in Keir Starmer’s landslide victory. Continue reading...",
+      "url": "https://www.theguardian.com/politics/2026/may/09/starmers-unpopularity-was-insurmountable-for-scottish-labour-and-a-boon-for-reform",
+      "publishedAt": "2026-05-09T06:50:54.000Z",
+      "source": "The Guardian — Scotland politics"
     },
     {
       "title": "2026 election results: latest from local, Scottish and Welsh votes",
@@ -35,13 +49,6 @@
       "url": "https://www.theguardian.com/politics/ng-interactive/2026/may/08/2026-elections-mapped-labour-reform-uk-greens-scotland-wales-england-local",
       "publishedAt": "2026-05-09T06:34:08.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Scottish election 2026: Results in maps and charts",
-      "description": "A guide to how the 2026 Holyrood election panned out.",
-      "url": "https://www.bbc.com/news/articles/c3e2v4n20xlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-09T01:17:22.000Z",
-      "source": "BBC News"
     },
     {
       "title": "Greens oust SNP's Robertson as they win first Holyrood constituencies",
@@ -217,13 +224,6 @@
       "url": "https://www.theguardian.com/politics/2026/may/06/disaffected-scottish-voters-may-deny-snp-fifth-term",
       "publishedAt": "2026-05-06T18:03:10.000Z",
       "source": "The Guardian — Scotland politics"
-    },
-    {
-      "title": "Poll Analysis: YouGov MRP 25th of April – 5th of May 2026",
-      "description": "Final day polling is coming thick and fast, none of it good for Labour. The probable best of the bunch for the SNP still has them short of a majority, but another strong result for the Greens.",
-      "url": "https://ballotbox.scot/yougov-may-2026/",
-      "publishedAt": "2026-05-06T16:30:00.000Z",
-      "source": "Ballot Box Scotland"
     }
   ]
 }
