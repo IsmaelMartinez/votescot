@@ -1,8 +1,6 @@
 name: Sync News
 
 on:
-  schedule:
-    - cron: "15 6,12,18 * * *"
   workflow_dispatch:
 
 permissions:

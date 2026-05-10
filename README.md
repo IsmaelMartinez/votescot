@@ -1,6 +1,8 @@
 # VoteScot
 
-An open-source vote compass for the 2026 Scottish Parliament election. VoteScot helps voters discover which parties and candidates best match their views by answering a short quiz on key policy topics.
+> **Project complete — archive pending.** The 2026 Scottish Parliament election has passed, so VoteScot has finished its run. The repository will be archived in the coming weeks. Scheduled data syncs (news, polls, repo-butler) have been turned off; the deployed site remains available as a read-only record.
+
+An open-source vote compass for the 2026 Scottish Parliament election. VoteScot helped voters discover which parties and candidates best matched their views by answering a short quiz on key policy topics.
 
 Built with Astro 6, React islands, and YAML-driven candidate data. Deployed to GitHub Pages.
 

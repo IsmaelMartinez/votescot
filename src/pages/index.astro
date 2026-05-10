@@ -93,9 +93,15 @@ const news = loadNews();
   <Header slot="header" currentTab="map" />
 
   <div class="py-6">
+    <div class="mb-4 p-3 bg-votescot-gold/10 border-l-4 border-votescot-gold rounded">
+      <p class="font-body text-sm text-votescot-dark leading-relaxed">
+        <strong>Project complete.</strong> The 2026 Scottish Parliament election has passed and VoteScot has finished its run. This site will remain online as a read-only record and the source repository will be archived in the coming weeks.
+      </p>
+    </div>
+
     <h2 class="font-heading text-2xl font-black mb-2">Navigate the noise</h2>
     <p class="font-body text-sm text-gray-600 leading-relaxed mb-4">
-      Scotland votes on 7 May 2026. Find your constituency, discover which candidates align with your values, and access the research you need to make an informed choice.
+      Scotland voted on 7 May 2026. Find your constituency, discover which candidates aligned with your values, and access the research used during the campaign.
     </p>
 
     {resultsCallout && (
