@@ -17,7 +17,7 @@
     "score:predictions": "tsx scripts/score-predictions.ts"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.7",
+    "@astrojs/react": "^6.0.1",
     "@fontsource-variable/crimson-pro": "^5.2.8",
     "@fontsource-variable/source-sans-3": "^5.2.9",
     "@tailwindcss/vite": "^4.3.3",
